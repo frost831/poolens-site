@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>SplashLens Stats</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --ink: #0f172a;
+      --muted: #64748b;
+      --line: #dbe4ee;
+      --sky: #0284c7;
+      --green: #16a34a;
+      --amber: #d97706;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.45;
+    }
+    main { max-width: 1180px; margin: 0 auto; padding: 28px 18px 48px; }
+    header { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; margin-bottom: 22px; }
+    h1 { margin: 0; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.05; letter-spacing: 0; }
+    p { margin: 0; color: var(--muted); }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, .06);
+    }
+    .auth { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; max-width: 520px; }
+    input {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 10px 12px;
+      font: inherit;
+      color: var(--ink);
+      background: #fff;
+    }
+    button {
+      border: 0;
+      border-radius: 6px;
+      padding: 10px 14px;
+      background: var(--sky);
+      color: #fff;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 16px; }
+    .metric { min-height: 112px; }
+    .label { color: var(--muted); font-size: .76rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+    .value { margin-top: 8px; font-size: 2rem; font-weight: 900; letter-spacing: 0; }
+    .source { margin-top: 6px; font-size: .78rem; color: var(--muted); }
+    .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    th, td { border-bottom: 1px solid var(--line); padding: 9px 0; text-align: left; font-size: .9rem; }
+    th { color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; }
+    td:last-child, th:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+    .caveats { display: grid; gap: 6px; margin-top: 12px; }
+    .caveats div { color: #92400e; background: #fffbeb; border: 1px solid #fde68a; border-radius: 6px; padding: 8px 10px; font-size: .84rem; }
+    .status { min-height: 24px; margin: 12px 0; color: var(--muted); }
+    @media (max-width: 860px) {
+      header, .columns { grid-template-columns: 1fr; display: grid; }
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .auth { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>SplashLens Stats</h1>
+        <p id="generated">Protected owner view</p>
+      </div>
+      <form class="auth" id="auth-form">
+        <input id="token" type="password" autocomplete="current-password" placeholder="Stats bearer token">
+        <button type="submit">Load</button>
+      </form>
+    </header>
+
+    <div class="status" id="status"></div>
+
+    <section class="grid" id="metrics"></section>
+
+    <section class="columns">
+      <div class="panel">
+        <div class="label">Top Events - 30 Days</div>
+        <table>
+          <thead><tr><th>Event</th><th>Count</th></tr></thead>
+          <tbody id="top-events"></tbody>
+        </table>
+      </div>
+      <div class="panel">
+        <div class="label">Top Manual Code Searches - 30 Days</div>
+        <table>
+          <thead><tr><th>Query</th><th>Count</th></tr></thead>
+          <tbody id="top-queries"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="columns" style="margin-top:16px">
+      <div class="panel">
+        <div class="label">Scans By Mode - 30 Days</div>
+        <table>
+          <thead><tr><th>Mode</th><th>Count</th></tr></thead>
+          <tbody id="scans-by-mode"></tbody>
+        </table>
+      </div>
+      <div class="panel">
+        <div class="label">Daily Activity Proxy - 14 Days</div>
+        <table>
+          <thead><tr><th>Day</th><th>User-Agent Proxy</th></tr></thead>
+          <tbody id="daily"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-top:16px">
+      <div class="label">Source Caveats</div>
+      <div class="caveats" id="caveats"></div>
+    </section>
+  </main>
+
+  <script>
+    const metricDefs = [
+      ['events7d', 'Events', 'Last 7 days', 'events table'],
+      ['pageViews30d', 'Page views', 'Last 30 days', 'site_page_view events'],
+      ['scanStarts30d', 'AI scan starts', 'Last 30 days', 'ai_scan_started events'],
+      ['partSnapResults30d', 'PartSnap results', 'Last 30 days', 'partsnap_result events'],
+      ['affiliateClicks30d', 'Affiliate clicks', 'Last 30 days', 'affiliate_click events'],
+      ['subscribersTotal', 'Waitlist emails', 'Total', 'subscribers table'],
+      ['subscribers30d', 'New waitlist emails', 'Last 30 days', 'subscribers table'],
+      ['events30d', 'Total events', 'Last 30 days', 'events table'],
+    ];
+
+    const form = document.getElementById('auth-form');
+    const tokenInput = document.getElementById('token');
+    const statusEl = document.getElementById('status');
+
+    tokenInput.value = localStorage.getItem('splashlens-stats-token') || '';
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      loadStats(tokenInput.value.trim());
+    });
+
+    if (tokenInput.value) loadStats(tokenInput.value);
+
+    async function loadStats(token) {
+      statusEl.textContent = 'Loading...';
+      const res = await fetch('/api/stats', {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok || !data.ok) {
+        statusEl.textContent = data.error || `Stats failed (${res.status})`;
+        return;
+      }
+
+      localStorage.setItem('splashlens-stats-token', token);
+      statusEl.textContent = '';
+      document.getElementById('generated').textContent = `Generated ${new Date(data.generatedAt).toLocaleString()}`;
+      renderMetrics(data.metrics || {});
+      renderRows('top-events', data.topEvents, row => [row.event, row.count]);
+      renderRows('top-queries', data.topManualQueries, row => [`${row.query}${row.brand ? ` (${row.brand})` : ''}`, row.count]);
+      renderRows('scans-by-mode', data.scansByMode, row => [row.mode, row.count]);
+      renderRows('daily', data.dailyProxy, row => [row.day, row.user_agent_proxy]);
+      document.getElementById('caveats').innerHTML = (data.sources?.caveats || []).map(text => `<div>${escapeHtml(text)}</div>`).join('');
+    }
+
+    function renderMetrics(metrics) {
+      document.getElementById('metrics').innerHTML = metricDefs.map(([key, label, range, source]) => `
+        <article class="panel metric">
+          <div class="label">${label}</div>
+          <div class="value">${Number(metrics[key] || 0).toLocaleString()}</div>
+          <div class="source">${range} - ${source}</div>
+        </article>
+      `).join('');
+    }
+
+    function renderRows(id, rows, map) {
+      const body = document.getElementById(id);
+      const safeRows = Array.isArray(rows) ? rows : [];
+      body.innerHTML = safeRows.length
+        ? safeRows.map(row => {
+            const [left, right] = map(row);
+            return `<tr><td>${escapeHtml(left || 'unknown')}</td><td>${Number(right || 0).toLocaleString()}</td></tr>`;
+          }).join('')
+        : '<tr><td colspan="2">No data yet</td></tr>';
+    }
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+    }
+  </script>
+</body>
+</html>

@@ -80,9 +80,9 @@ This is acceptable for a fast season web launch, but it is not a real subscripti
 
 ### P0 - AI Cost Abuse Risk
 
-The 10-scan limit is client-side. Anyone can clear storage or call `/api/scan` directly. If adoption hits, API cost can run ahead of revenue.
+Immediate fix added in the PoolLens source repo: `/api/scan` now has exact-origin CORS, image size checks, fail-closed AI key handling, optional Cloudflare Rate Limiting, optional KV monthly metering, and a production fail-closed path when no server metering binding is present.
 
-Next fix: Cloudflare Turnstile or server-side scan metering by anonymous device/session/IP with D1 or Durable Objects.
+Next fix: bind `SCAN_USAGE_KV` and `SCAN_RATE_LIMITER` in the `poolens` Cloudflare Pages project, then consider Turnstile or account-based entitlement before paid traffic scales.
 
 ### P1 - Blog/SEO Layer Has Drift
 
@@ -99,8 +99,8 @@ This is not launch-blocking for the app, but it is trust debt and AEO/SEO drift.
 
 Route Ready is correctly positioned as free pilot, but some copy implies certificates and verification flows that are not built:
 
-- `splashlens.com/verify` is referenced.
-- Certificate language is stronger than the actual product state.
+- The public Route Ready page has been tightened to say certificate and verification flows are planned, not live.
+- Keep future copy in that posture until the module content and verification endpoint are actually built.
 
 Recommended: keep Route Ready as "planned certificate / pilot feedback" until content and verification are built.
 

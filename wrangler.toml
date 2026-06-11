@@ -1,0 +1,8 @@
+name = "poolens-site"
+compatibility_date = "2026-06-11"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "SUBSCRIBERS_DB"
+database_name = "splashlens-subscribers"
+database_id = "f474defb-4337-42ec-b143-7b37fc949761"

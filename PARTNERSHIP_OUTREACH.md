@@ -20,7 +20,7 @@ Pitch angle: "Co-market to your users. We make their techs smarter at the pad; y
 
 Hi [Name],
 
-Quick context: I run SplashLens (splashlens.com) — a free-core PWA for pool service technicians. 500+ error codes across 13 brands, chemical dosing calculators, SLAM tracker, filter procedures, and optional online AI scanner support for equipment displays and parts lookup. No account is required for the core field tools.
+Quick context: I run SplashLens (splashlens.com) — a free-core PWA for pool service technicians. It has 180+ current equipment/error-code entries, chemical dosing calculators, SLAM tracker, filter procedures, and optional online AI scanner support for equipment displays and parts lookup. No account is required for the core field tools.
 
 I've been watching how Skimmer's users talk about their workflow. Skimmer owns the office layer — billing, routing, invoicing, CRM. SplashLens owns the pad layer — what the tech pulls out when they're staring at an E05 on a Pentair heater.
 
@@ -57,7 +57,7 @@ hello@splashlens.com
 
 Hi [Name],
 
-I built SplashLens (splashlens.com) — free-core field reference for pool techs. 500+ error codes, chemical dosing, optional online AI scanner support, and a SLAM tracker. No app download or account is required for the core tools; manual tools cache for offline use after first load.
+I built SplashLens (splashlens.com) — free-core field reference for pool techs. It has 180+ current equipment/error-code entries, chemical dosing, optional online AI scanner support, and a SLAM tracker. No app download or account is required for the core tools; manual tools cache for offline use after first load.
 
 Pool Brain owns the business layer for service companies. SplashLens is what the tech uses at the equipment pad — completely separate, completely complementary.
 
@@ -88,7 +88,7 @@ splashlens.com | hello@splashlens.com
 
 Hi [Name],
 
-I run SplashLens (splashlens.com), a free-core PWA for pool service technicians — 500+ error codes, chemical dosing calculators, optional online AI scanner support, filter guides, and service checklists. 300+ blog posts indexed on Google for pool tech keywords. No account is required for the core tools.
+I run SplashLens (splashlens.com), a free-core PWA for pool service technicians — 180+ current equipment/error-code entries, chemical dosing calculators, optional online AI scanner support, filter guides, and service checklists. No account is required for the core tools.
 
 Jobber's pool service customers run routes through your platform. Their techs use SplashLens at the equipment pad. These are the same people.
 
@@ -116,7 +116,7 @@ SplashLens | splashlens.com | hello@splashlens.com
 
 Hi,
 
-I built SplashLens (splashlens.com) — a free offline PWA for pool service technicians. 500+ equipment error codes across 13 major brands, chemical dosing calculators, AI scanner, SLAM tracker, filter guides, and service checklists.
+I built SplashLens (splashlens.com) — a free offline PWA for pool service technicians. It has 180+ current equipment/error-code entries, chemical dosing calculators, AI scanner, SLAM tracker, filter guides, and service checklists.
 
 The core field tools are free, require no account, and cache for offline use after the first load — designed for the tech at the equipment pad without a signal.
 

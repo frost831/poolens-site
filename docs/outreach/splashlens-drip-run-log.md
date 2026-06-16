@@ -21,3 +21,9 @@ Updated future SplashLens outreach language to include founder credibility: Josh
 ## Outreach copy update - 2026-06-15 21:10:43 -05:00
 
 Added solo-operator agility story to future SplashLens outreach: Joshua used and liked useful pieces of existing CRMs and pool programs, but they moved too slowly for what a solo pool operator needed, so SplashLens was built to move faster and adapt when real field needs show up. Added guardrail to keep this broad and fair, without naming or attacking specific software.
+
+## New outreach batch - 2026-06-16 08:25:31 -05:00
+
+Moved active work to proper outreach branch outreach/splashlens-drip-20260616; no emergency-backup branch usage for this batch. Preflight: connected Gmail sender frost@belowzeromedia.com; searched last 7 days for SplashLens replies, bounces, unsubscribe/remove language, and delivery failures; none found. Live checks returned HTTP 200 for https://app.splashlens.com and https://splashlens.com.
+
+Sent three one-to-one plain-text outreach emails: service@phta.org, contact@pooldial.com, contact@pooloperators.club. Copy included founder pool-sales-to-service-company background, solo-operator agility story, free/no-account app framing, and reference-not-diagnosis caveats. No social/forum posts and no BCC batching.

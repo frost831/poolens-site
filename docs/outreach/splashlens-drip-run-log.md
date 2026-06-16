@@ -33,3 +33,11 @@ Sent three one-to-one plain-text outreach emails: service@phta.org, contact@pool
 Preflight: live HTTP checks returned 200 for https://splashlens.com and https://app.splashlens.com. Visible site copy still used 180+ current entries and did not show visible 500+ claims or fake testimonial names. Gmail last-7-day search found no SplashLens replies, bounces, unsubscribe/remove-me requests, complaints, or delivery failures.
 
 Verified current public contact paths and sent five one-to-one plain-text outreach emails: jmcclain@kenilworth.com, info@poolservice.software, admin@carecraft.com, info@thepoolspashow.com, info@westernshow.com. Copy stayed conservative: free no-account reference app, 180+ current entries, possible matches, verification notes, not a diagnosis tool, no official partnership or endorsement claims, and founder pool-sales-to-service background with solo-operator agility framing where appropriate.
+
+## Controlled outreach drip - 2026-06-16 09:21:30 -05:00
+
+Preflight for this run again returned HTTP 200 for https://splashlens.com and https://app.splashlens.com. Visible site copy still used 180+ current entries and did not show visible 500+ claims or fake testimonial names. Gmail last-7-day search again found no inbound SplashLens replies, unsubscribe/remove-me requests, complaints, or new delivery failures beyond the already-known Poolonomics bounce.
+
+Verified sendable public contact paths and sent five one-to-one plain-text outreach emails: hello@unitedaquagroup.com, inquiries@poolscouts.com, service@poolwerx.com, admin@carecraft.com, info@poolservice.software. Copy stayed conservative: free no-account reference app, 180+ current entries, possible matches, verification notes, not a diagnosis tool, no official partnership or endorsement claims, and founder sales-to-service-company plus solo-operator agility context where it fit.
+
+Post-send audit found the outreach branch already contained an earlier same-day 2026-06-16 drip batch that was not reflected in the automation memory. That earlier branch state already included same-day sends to admin@carecraft.com and info@poolservice.software, so this run created duplicate same-day resends to those two recipients only. Queue notes were updated to record the duplicate risk and hold any follow-up until 2026-06-23 or later.

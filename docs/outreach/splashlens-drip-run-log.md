@@ -13,3 +13,7 @@
 Sent seven individual SplashLens outreach emails from frost@belowzeromedia.com after live app/site check returned 200 for https://app.splashlens.com and https://splashlens.com. Recipients: editor@poolspamarketing.com, deependfrank@gmail.com, info@unitedpoolassociation.org, office@chlorinekingpools.com, poolenvy@poolenvywi.com, talkingpools@gmail.com, ruleyourpool@gmail.com.
 
 Send boundary: free/no-account app offered now; free reviewer access for extended scanner/PartSnap flow offered on reply only because local entitlement admin secrets were not present in this shell. Copy included conservative reference-not-diagnosis framing and no paid-placement/sponsorship ask.
+
+## Outreach copy update - 2026-06-15 21:07:35 -05:00
+
+Updated future SplashLens outreach language to include founder credibility: Joshua started in the pool industry in sales, then moved into his own pool service company, so SplashLens is grounded in real service/counter lookup friction. Added optional media/podcast/association/creator note that Joshua has been highlighted in industry magazines for tech-forward thinking in the pool space, with guardrails not to frame it as an award, endorsement, partnership, or hard proof unless exact publication names/links are included.

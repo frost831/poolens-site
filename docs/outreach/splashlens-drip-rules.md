@@ -38,6 +38,9 @@ Before sending any daily batch:
 - Use plain text.
 - Link only once unless the recipient clearly needs both app and site.
 - No fake urgency.
+- Include concise founder context in future outreach when it fits: Joshua started in the pool industry in sales, then moved into his own pool service company, so SplashLens comes from real service/counter lookup friction.
+- For media, podcast, association, and creator/editorial targets, it is acceptable to add that Joshua has been highlighted in industry magazines for tech-forward thinking in the pool space.
+- Do not present the magazine note as an award, endorsement, partnership, or hard proof unless exact publication names/links are included in the message.
 - No "official," "endorsed," "partnered," or manufacturer/distributor affiliation claims.
 - No "diagnoses," "guarantees," or "tells you what to replace."
 - Say "reference app," "possible matches," "verification notes," and "qualified tech/manual verification."

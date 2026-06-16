@@ -50,3 +50,7 @@
 ## Offer Language Used
 
 All emails used a conservative free-access frame: SplashLens is a free, no-account reference app now; free reviewer access for the extended scanner / PartSnap flow is available on reply. No activation links were generated locally because the entitlement admin secret was not present in this shell.
+
+## Founder Context For Future Waves
+
+Future outreach should add that Joshua started in the pool industry in sales, then moved into his own pool service company, so SplashLens is grounded in real service/counter lookup friction. For media, podcast, association, and creator/editorial targets, it can also mention that Joshua has been highlighted in industry magazines for tech-forward thinking in the pool space. Keep that note modest until exact magazine names or links are included.

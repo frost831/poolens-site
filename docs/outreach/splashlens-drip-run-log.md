@@ -27,3 +27,9 @@ Added solo-operator agility story to future SplashLens outreach: Joshua used and
 Moved active work to proper outreach branch outreach/splashlens-drip-20260616; no emergency-backup branch usage for this batch. Preflight: connected Gmail sender frost@belowzeromedia.com; searched last 7 days for SplashLens replies, bounces, unsubscribe/remove language, and delivery failures; none found. Live checks returned HTTP 200 for https://app.splashlens.com and https://splashlens.com.
 
 Sent three one-to-one plain-text outreach emails: service@phta.org, contact@pooldial.com, contact@pooloperators.club. Copy included founder pool-sales-to-service-company background, solo-operator agility story, free/no-account app framing, and reference-not-diagnosis caveats. No social/forum posts and no BCC batching.
+
+## Controlled outreach drip - 2026-06-16 09:22:00 -05:00
+
+Preflight: live HTTP checks returned 200 for https://splashlens.com and https://app.splashlens.com. Visible site copy still used 180+ current entries and did not show visible 500+ claims or fake testimonial names. Gmail last-7-day search found no SplashLens replies, bounces, unsubscribe/remove-me requests, complaints, or delivery failures.
+
+Verified current public contact paths and sent five one-to-one plain-text outreach emails: jmcclain@kenilworth.com, info@poolservice.software, admin@carecraft.com, info@thepoolspashow.com, info@westernshow.com. Copy stayed conservative: free no-account reference app, 180+ current entries, possible matches, verification notes, not a diagnosis tool, no official partnership or endorsement claims, and founder pool-sales-to-service background with solo-operator agility framing where appropriate.

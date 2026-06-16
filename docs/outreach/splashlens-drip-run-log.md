@@ -17,3 +17,7 @@ Send boundary: free/no-account app offered now; free reviewer access for extende
 ## Outreach copy update - 2026-06-15 21:07:35 -05:00
 
 Updated future SplashLens outreach language to include founder credibility: Joshua started in the pool industry in sales, then moved into his own pool service company, so SplashLens is grounded in real service/counter lookup friction. Added optional media/podcast/association/creator note that Joshua has been highlighted in industry magazines for tech-forward thinking in the pool space, with guardrails not to frame it as an award, endorsement, partnership, or hard proof unless exact publication names/links are included.
+
+## Outreach copy update - 2026-06-15 21:10:43 -05:00
+
+Added solo-operator agility story to future SplashLens outreach: Joshua used and liked useful pieces of existing CRMs and pool programs, but they moved too slowly for what a solo pool operator needed, so SplashLens was built to move faster and adapt when real field needs show up. Added guardrail to keep this broad and fair, without naming or attacking specific software.

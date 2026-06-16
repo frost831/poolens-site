@@ -22,9 +22,11 @@ Outreach verdict: send the first wave from `frost@belowzeromedia.com` as "Joshua
 
 SplashLens is a free pool equipment reference app for service calls, counter questions, and homeowner-safe lookup. It has no account requirement, no card requirement, manual lookup tools, photo-assisted scan flows, and a current public corpus of 180+ pool equipment/error-code entries.
 
-Founder context to include where it fits naturally: "I started in the pool industry in sales, then moved into my own pool service company, so SplashLens came from the real lookup friction around service calls, counter questions, and homeowner confusion. I have also been highlighted in industry magazines for tech-forward thinking in the pool space."
+Founder context to include where it fits naturally: "I started in the pool industry in sales, then moved into my own pool service company, so SplashLens came from the real lookup friction around service calls, counter questions, and homeowner confusion. I used and liked pieces of the CRMs and pool programs already out there, but they could not move fast enough for a solo pool operator. I wanted something faster and more agile, so I built it myself and can ship changes when a real field need shows up. I have also been highlighted in industry magazines for tech-forward thinking in the pool space."
 
 Use the magazine/tech-forward note lightly until exact publication names or links are attached. Do not call it an award, endorsement, or media validation unless the supporting source is included.
+
+Use the CRM/program comparison as a founder-market-fit point, not a competitor attack. Do not name or criticize specific software unless there is a documented, fair comparison. Prefer "useful pieces, but too slow/heavy for a solo operator" over "bad tools."
 
 Use these phrases:
 
@@ -33,6 +35,8 @@ Use these phrases:
 - "Possible part matches, with verification against the equipment label/manual still required."
 - "Built to reduce repeat lookup friction during pool season."
 - "Built from first-hand pool industry experience: sales first, then my own service company."
+- "I used useful pieces of existing CRMs and pool programs, but they moved too slowly for what a solo pool operator needs in the field."
+- "I wanted faster iteration, so I built SplashLens to be agile enough to change when a real field need shows up."
 - "I have also been highlighted in industry magazines for tech-forward thinking in the pool space." Use only when the recipient is media, podcast, association, or creator/editorial.
 - "Brand-neutral and not affiliated with Pentair, Hayward, Jandy, Leslie's, PoolCorp, or other manufacturers/distributors."
 - "Some outbound retailer links may become affiliate links; recommendations should not depend on affiliate status."
@@ -69,6 +73,8 @@ I built SplashLens, a free no-account reference app for pool equipment error cod
 
 I started in the pool industry in sales, then moved into my own pool service company, so this came from the real lookup friction around service calls, counter questions, and homeowner confusion.
 
+I used and liked useful pieces of the CRMs and pool programs already out there, but they could not move fast enough for what a solo pool operator needed in the field. I wanted something faster and more agile, so I built SplashLens myself and can ship changes when a real need shows up.
+
 I have also been highlighted in industry magazines for tech-forward thinking in the pool space, which is part of why I wanted to send this to [Publication] rather than just drop a generic software pitch.
 
 The goal is simple: help techs, counter teams, and pool owners find the right starting point faster without pretending an app can replace a qualified diagnosis. The current public corpus covers 180+ equipment/error-code entries, and the scan flow is intentionally framed as "possible matches" with verification notes.
@@ -90,6 +96,8 @@ I wanted to float a practical segment idea for [Podcast]: the information gap te
 
 I started in the pool industry in sales, then moved into my own pool service company, so that gap is personal to me.
 
+I used and liked useful pieces of the CRMs and pool programs already out there, but they felt too slow and heavy for a solo pool operator who needed faster answers and faster iteration. SplashLens is my answer to that: a tool I can improve quickly when a real field need appears.
+
 I have also been highlighted in industry magazines for tech-forward thinking in the pool space, so I think there is a useful conversation here about practical tech that field teams can actually test.
 
 I built SplashLens as a free reference app for that moment: error-code lookup, equipment notes, and possible part matches with explicit verification language. It is not positioned as a repair diagnosis tool, just a faster field reference.
@@ -108,6 +116,8 @@ Hi [Name],
 I follow your pool troubleshooting content and wanted to share a free tool for a possible test or teardown.
 
 I started in the pool industry in sales, then moved into my own pool service company, and built this around the lookup friction I kept seeing around equipment, codes, and parts.
+
+I used and liked pieces of the CRMs and pool programs out there, but they could not move fast enough for what a solo pool operator needed. I built SplashLens so I could keep it practical and change it quickly when field feedback shows a real gap.
 
 I have also been highlighted in industry magazines for tech-forward thinking in the pool space, and I would value a real technical critique before pushing this wider.
 
@@ -130,6 +140,8 @@ I built SplashLens as a free pool equipment reference app that may be useful for
 
 I started in the pool industry in sales, then moved into my own pool service company, so I built this from the practical side of what techs, counter teams, and owners run into.
 
+I used and liked useful pieces of existing CRMs and pool programs, but they could not move fast enough for a solo pool operator. SplashLens is intentionally smaller and more agile, so real service feedback can turn into product changes quickly.
+
 I have also been highlighted in industry magazines for tech-forward thinking in the pool space, but I am keeping this ask practical: would this be useful enough to share with service members?
 
 It is designed for quick lookup of equipment error codes and possible part references, with conservative language around verification and no repair guarantees. No account or payment card is required.
@@ -149,6 +161,8 @@ I am trying to find the right contact for a free pool equipment reference app ca
 
 I started in the pool industry in sales, then moved into my own pool service company, so the tool is grounded in real service/counter lookup friction rather than a generic software pitch.
 
+I used and liked pieces of existing CRMs and pool programs, but they were not agile enough for the speed I wanted as a solo operator. SplashLens is built so useful feedback can turn into product changes quickly.
+
 It helps techs and pool owners look up equipment error codes and possible part matches before they call or visit a counter. It is brand-neutral, does not imply any distributor partnership, and uses verification language instead of telling users what to replace.
 
 Would there be someone on your pro, training, or branch support team who evaluates free tools like this?
@@ -160,11 +174,11 @@ Best,
 
 Creator DM:
 
-Hi [Name] - I came up through pool sales and then my own service company, and built a free pool equipment/code lookup app from that field friction. It is framed as a reference tool, not a diagnosis tool. Open to a quick look?
+Hi [Name] - I came up through pool sales and then my own service company, and built a free pool equipment/code lookup app because the bigger CRMs/programs moved too slowly for a solo operator. It is framed as a reference tool, not a diagnosis tool. Open to a quick look?
 
 Admin DM:
 
-Hi [Name] - I came up through pool sales and then my own service company, and built a free no-account pool equipment/code reference app from that field friction. Before posting anything, I wanted to ask whether a feedback request would be allowed in the group. I would disclose that I built it and avoid promotional claims.
+Hi [Name] - I came up through pool sales and then my own service company, and built a free no-account pool equipment/code reference app because the bigger CRMs/programs moved too slowly for a solo operator. Before posting anything, I wanted to ask whether a feedback request would be allowed in the group. I would disclose that I built it and avoid promotional claims.
 
 Forum/Reddit reply shape:
 

@@ -54,3 +54,5 @@ All emails used a conservative free-access frame: SplashLens is a free, no-accou
 ## Founder Context For Future Waves
 
 Future outreach should add that Joshua started in the pool industry in sales, then moved into his own pool service company, so SplashLens is grounded in real service/counter lookup friction. For media, podcast, association, and creator/editorial targets, it can also mention that Joshua has been highlighted in industry magazines for tech-forward thinking in the pool space. Keep that note modest until exact magazine names or links are included.
+
+Also include the solo-operator agility angle where useful: Joshua used and liked pieces of existing CRMs and pool programs, but they moved too slowly for what a one-person pool operator needed, so he built SplashLens to be faster and agile enough to change when field feedback shows a real need. Keep this broad and fair; do not name or attack specific software.

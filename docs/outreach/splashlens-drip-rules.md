@@ -8,7 +8,7 @@
 
 ## Daily Send Boundary
 
-- Maximum 3 cold emails per weekday.
+- Maximum 5 cold emails per weekday.
 - Send one-to-one only. Do not use BCC batches.
 - Do not send to Facebook groups, Reddit threads, forums, or community admins without authenticated-account review and group-rule confirmation.
 - Do not send to `needs-verification` rows until a current public contact path is verified.
@@ -57,7 +57,16 @@ Before sending any daily batch:
 
 1. `queued` Tier 1 and Tier 2 media/blog/creator/association rows.
 2. Newly verified media/blog/creator/association contacts.
-3. Second-wave software/training/buying-group contacts only after one-pager/proof exists.
+3. Newly researched pool podcasts, pool magazines, pool publications, pool bloggers, creator/tech educators, associations, training groups, and trade-show/media contacts with current public contact paths.
+4. Second-wave software/training/buying-group contacts only after the message is framed as feedback/resource routing, not a partnership claim.
+
+## Queue Expansion
+
+- Every weekday run should try to keep at least 15 future eligible prospects in `queued` or `needs-verification`.
+- If fewer than 5 sendable rows are available, research more public contacts before sending.
+- Prefer official contact pages, podcast pages, publication staff/contact pages, association pages, and clearly public business emails.
+- Do not use scraped personal emails, private social profiles, or stale snippets as sendable contacts without verification.
+- Add newly found prospects to `docs/outreach/splashlens-drip-queue.csv` with source URL, segment, status, and notes.
 
 ## Output Expected From Each Run
 
@@ -65,4 +74,5 @@ Before sending any daily batch:
 - Recipient list.
 - Any suppressions/bounces/replies found.
 - Queue rows changed.
+- Newly found prospects added.
 - Any blockers.

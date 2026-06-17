@@ -49,3 +49,11 @@ Preflight: live HTTP checks returned 200 for https://app.splashlens.com and http
 No follow-up emails were sent. The 13 first-wave 2026-06-11 rows all have `next_send_after=2026-06-18`, except Poolonomics which is already marked bounced, so the queue source of truth blocked the 2026-06-17 follow-up send.
 
 Queue expansion added five verified future prospects with public source URLs and notes: Florida Swimming Pool Association Education (Education@FSPA.com), NESPA Update Newsletter / Association Route (info@nespapool.org), Pool Operation Management (info@pooloperationmanagement.com), Pool Training Academy (info@pooltrainingacademy.com), and National Plasterers Council (mail@npconline.org). All were added as queued for 2026-06-18 or later; no social/forum posts and no unverified-row sends occurred.
+
+## Controlled outreach drip - 2026-06-17 09:20:15 -05:00
+
+Preflight: live HTTP checks returned 200 for https://splashlens.com and https://app.splashlens.com. Visible site copy still used 180+ current entries and did not show visible 500+ claims or fake testimonial names. Gmail last-7-day searches found no inbound SplashLens replies, bounces, unsubscribe/remove-me requests, complaints, or new delivery failures beyond the already-known Poolonomics bounce from 2026-06-11.
+
+Sent five one-to-one plain-text outreach emails after re-verifying current public contact paths and checking Gmail for prior sends to the same addresses: Education@FSPA.com, info@nespapool.org, info@pooloperationmanagement.com, info@pooltrainingacademy.com, and commercial@lesl.com. Copy stayed conservative: free no-account reference app, 180+ current entries, possible matches, verification notes, not a diagnosis tool, no official partnership or endorsement claims, and founder sales-to-service-company context where it fit.
+
+Queue updated to mark the five rows above as sent with `last_sent_at=2026-06-17` and `next_send_after=2026-06-24`. National Plasterers Council remains queued for a future verified run; no social/forum posts and no sends to suppressed, replied, bounced, community-held, hold-proof-needed, needs-contact, or unverified rows occurred.

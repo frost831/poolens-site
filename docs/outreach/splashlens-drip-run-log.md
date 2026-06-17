@@ -41,3 +41,11 @@ Preflight for this run again returned HTTP 200 for https://splashlens.com and ht
 Verified sendable public contact paths and sent five one-to-one plain-text outreach emails: hello@unitedaquagroup.com, inquiries@poolscouts.com, service@poolwerx.com, admin@carecraft.com, info@poolservice.software. Copy stayed conservative: free no-account reference app, 180+ current entries, possible matches, verification notes, not a diagnosis tool, no official partnership or endorsement claims, and founder sales-to-service-company plus solo-operator agility context where it fit.
 
 Post-send audit found the outreach branch already contained an earlier same-day 2026-06-16 drip batch that was not reflected in the automation memory. That earlier branch state already included same-day sends to admin@carecraft.com and info@poolservice.software, so this run created duplicate same-day resends to those two recipients only. Queue notes were updated to record the duplicate risk and hold any follow-up until 2026-06-23 or later.
+
+## Follow-up heartbeat - 2026-06-17 04:45:04 -05:00
+
+Preflight: live HTTP checks returned 200 for https://app.splashlens.com and https://splashlens.com. Gmail last-7-day checks found no inbound SplashLens replies, no unsubscribe/remove-me requests, no complaints, and no new delivery failures beyond the already-known Poolonomics bounce from 2026-06-11.
+
+No follow-up emails were sent. The 13 first-wave 2026-06-11 rows all have `next_send_after=2026-06-18`, except Poolonomics which is already marked bounced, so the queue source of truth blocked the 2026-06-17 follow-up send.
+
+Queue expansion added five verified future prospects with public source URLs and notes: Florida Swimming Pool Association Education (Education@FSPA.com), NESPA Update Newsletter / Association Route (info@nespapool.org), Pool Operation Management (info@pooloperationmanagement.com), Pool Training Academy (info@pooltrainingacademy.com), and National Plasterers Council (mail@npconline.org). All were added as queued for 2026-06-18 or later; no social/forum posts and no unverified-row sends occurred.

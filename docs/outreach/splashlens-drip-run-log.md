@@ -66,6 +66,14 @@ Verified and sent four new one-to-one plain-text outreach emails to support@payt
 
 Post-send audit found the queue and run log had been updated by a separate same-day 09:20 CT batch while this run was in progress. That earlier batch had already sent commercial@lesl.com along with Education@FSPA.com, info@nespapool.org, info@pooloperationmanagement.com, and info@pooltrainingacademy.com. As a result, this run created one duplicate same-day resend to commercial@lesl.com only. Queue notes were updated to record the duplicate risk. Everything Under the Sun Expo / FSPA stayed unsent because its queue note still requires a one-pager and screenshots before outreach.
 
+## Controlled outreach drip - 2026-06-18 09:22:00 -05:00
+
+Preflight: live HTTP checks returned 200 for https://splashlens.com and https://app.splashlens.com. Visible site copy still used 180+ current entries, did not show visible 500+ claims, and the homepage "testimonial" section was still only illustrative field-scenario copy, not fake named testimonials. Gmail last-7-day checks found no SplashLens unsubscribe/remove-me requests, complaints, negative replies, or new delivery failures beyond the already-known Poolonomics bounce from 2026-06-11. Queue reconciliation marked Pool Office Manager and Florida Swimming Pool Association Education as `replied` after automated acknowledgements on 2026-06-17.
+
+This run sent five one-to-one plain-text outreach emails: mail@npconline.org, client.services@poolspapatio.com, info@aquatictraininginstitute.com, info@ncpoolschool.com, and sales@getskimmer.com. Copy stayed conservative: free no-account reference app, 180+ current entries, possible matches, verification notes, not a diagnosis tool, no official partnership or endorsement claims, and founder pool-sales-to-service-company context where it fit.
+
+Post-send audit found that a separate same-day 09:20 CT batch had already sent mail@npconline.org and client.services@poolspapatio.com, so this run created duplicate same-day resends to those two recipients only. That overlapping batch also independently sent info@watershape.org, info@heritagepsg.com, and ATC@poolapprenticeship.com before this run's queue patch landed. Queue notes were updated to reflect the duplicate risk, unique new sent rows were added for Aquatic Training Institute, NC Pool School, and Skimmer, and future queue coverage was restored with verified queued rows for Space Coast Pool School / CPOCertified and Pool Certs.
+
 ## Controlled outreach drip - 2026-06-18 09:21:13 -05:00
 
 Preflight: live HTTP checks returned 200 for https://splashlens.com and https://app.splashlens.com. Visible site copy still used 180+ current entries and did not show visible 500+ claims or fake testimonial names.

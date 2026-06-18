@@ -65,3 +65,13 @@ Preflight: live HTTP checks again returned 200 for https://splashlens.com and ht
 Verified and sent four new one-to-one plain-text outreach emails to support@paythepoolman.com, help@poolofficemanager.com, team@poolbrain.com, and christi@mpire-group.com, plus one resend to commercial@lesl.com. Copy stayed conservative: free no-account reference app, 180+ current entries, possible matches, verification notes, not a diagnosis tool, no official partnership or endorsement claims, and founder sales-to-service-company context where it fit.
 
 Post-send audit found the queue and run log had been updated by a separate same-day 09:20 CT batch while this run was in progress. That earlier batch had already sent commercial@lesl.com along with Education@FSPA.com, info@nespapool.org, info@pooloperationmanagement.com, and info@pooltrainingacademy.com. As a result, this run created one duplicate same-day resend to commercial@lesl.com only. Queue notes were updated to record the duplicate risk. Everything Under the Sun Expo / FSPA stayed unsent because its queue note still requires a one-pager and screenshots before outreach.
+
+## Controlled outreach drip - 2026-06-18 09:21:13 -05:00
+
+Preflight: live HTTP checks returned 200 for https://splashlens.com and https://app.splashlens.com. Visible site copy still used 180+ current entries and did not show visible 500+ claims or fake testimonial names.
+
+Gmail last-7-day checks found no SplashLens-specific bounces, unsubscribe/remove-me requests, complaints, or delivery failures. Two auto-replies did arrive from prior SplashLens outreach: Education@FSPA.com sent an intermittent-monitoring auto reply, and techsupport@poolofficemanager.com sent an automated acknowledgement. Queue status was updated to `replied` for those two rows.
+
+Only one row was already sendable at the start of the run, so queue expansion verified four more current public contact paths before sending: info@watershape.org (Watershape University / WaterShapes), client.services@poolspapatio.com (Pool Spa Patio Expo), info@heritagepsg.com (Heritage Pool Supply Group), and ATC@POOLAPPRENTICESHIP.COM (Pool & Spa Apprenticeship and Training Committee).
+
+Sent five one-to-one plain-text outreach emails: mail@npconline.org, info@watershape.org, client.services@poolspapatio.com, info@heritagepsg.com, and ATC@POOLAPPRENTICESHIP.COM. Copy stayed conservative: free no-account reference app, 180+ current entries, possible matches, verification notes, not a diagnosis tool, and no official partnership, sponsorship, certification, or endorsement claims.

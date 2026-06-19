@@ -218,6 +218,7 @@
     display: flex; align-items: center; justify-content: center;
     flex-wrap: wrap; gap: 14px; margin-bottom: 52px;
   }
+  .mobile-ai-quick { display: none; }
   .field-photo-grid {
     max-width: 1060px;
     margin: 0 auto 34px;
@@ -419,6 +420,13 @@
     font-size: .7rem; font-weight: 700; letter-spacing: .05em;
     padding: 3px 10px; border-radius: 100px;
   }
+  .feature-mobile-toggle {
+    display: none;
+    color: var(--sky);
+    font-size: .76rem;
+    font-weight: 800;
+    margin-top: 12px;
+  }
 
   .bridge-band {
     background: #f8fafc;
@@ -499,6 +507,7 @@
 
   /* COMPETITOR TABLE */
   .comp-wrap { overflow-x: auto; }
+  .comp-swipe-hint { display: none; }
   .comp-table {
     width: 100%; border-collapse: collapse;
     border-radius: var(--radius); overflow: hidden;
@@ -669,11 +678,136 @@
 
   @media (max-width: 768px) {
     .nav-links { display: none; }
+    section { padding: 56px 18px; }
+    .hero { padding: 54px 18px 44px; }
+    .hero h1 { font-size: clamp(2rem, 12vw, 3rem); }
+    .hero-sub { margin-bottom: 24px; }
+    .hero-actions {
+      flex-direction: column;
+      align-items: stretch;
+      max-width: 342px;
+      margin: 0 auto 28px;
+    }
+    .hero-actions .btn-primary,
+    .hero-actions .app-store-badge {
+      width: 100%;
+      min-height: 52px;
+      justify-content: center;
+    }
+    .hero-actions .app-store-badge svg { width: 24px; height: 24px; }
+    .hero-actions .app-store-badge span { font-size: 13px; }
+    .hero-actions .app-store-badge small { font-size: 7.6px; }
+    .mobile-ai-quick {
+      display: block;
+      padding: 24px 18px;
+      background: #0f172a;
+      color: white;
+    }
+    .mobile-ai-quick .ai-visual {
+      min-height: 0;
+      padding: 18px;
+      max-width: 342px;
+      margin: 0 auto;
+      gap: 12px;
+    }
+    .mobile-ai-quick .ai-scan-demo {
+      width: 136px;
+      height: 136px;
+    }
+    .mobile-ai-quick-title {
+      max-width: 342px;
+      margin: 0 auto 14px;
+      color: #e0f2fe;
+      font-size: .92rem;
+      line-height: 1.45;
+      text-align: center;
+    }
     .field-photo-grid { grid-template-columns: 1fr; }
     .field-photo { min-height: 246px; }
     .ai-inner { grid-template-columns: 1fr; gap: 40px; }
     .steps::before { display: none; }
     .bridge-panel, .authority-grid { grid-template-columns: 1fr; }
+    .feature-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .feature-card {
+      cursor: pointer;
+      padding: 16px;
+      border-radius: var(--radius-sm);
+      transform: none !important;
+    }
+    .feature-card .feature-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .feature-card h3 {
+      margin-bottom: 0;
+      padding-right: 34px;
+      position: relative;
+    }
+    .feature-card h3::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--sky-xlight);
+      color: var(--sky-dark);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 900;
+    }
+    .feature-card.is-open h3::after { content: "-"; }
+    .feature-card p,
+    .feature-card .feature-badge {
+      display: none;
+    }
+    .feature-card.is-open p,
+    .feature-card.is-open .feature-badge {
+      display: inline-block;
+    }
+    .feature-card.is-open p { display: block; margin-top: 10px; }
+    .feature-mobile-toggle { display: block; }
+    .comp-swipe-hint {
+      display: block;
+      margin: -30px 0 12px;
+      color: var(--sky-dark);
+      font-size: .82rem;
+      font-weight: 800;
+      text-align: center;
+    }
+    .comp-wrap {
+      margin: 0 -18px;
+      padding: 0 18px 8px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .comp-table {
+      min-width: 760px;
+      font-size: .82rem;
+    }
+    .comp-table th,
+    .comp-table td {
+      padding: 12px 14px;
+    }
+    .cta-section { padding: 56px 18px; }
+    .cta-section .btn-primary {
+      width: 100%;
+      max-width: 342px;
+      justify-content: center;
+    }
+    footer {
+      text-align: left;
+      font-size: .82rem;
+      line-height: 1.55;
+    }
   }
 </style>
 </head>
@@ -754,13 +888,28 @@
   </div>
 </div>
 
+<!-- MOBILE AI QUICK LOOK -->
+<section class="mobile-ai-quick" aria-label="SplashLens scanner demo">
+  <p class="mobile-ai-quick-title">That feeling when the code appears before the escalation call: this is the stop-level relief SplashLens is built for.</p>
+  <div class="ai-visual">
+    <div class="ai-scan-demo">
+      <div class="ai-scan-inner">E05</div>
+    </div>
+    <div class="ai-scan-label">Scanning Hayward display...</div>
+    <div class="ai-result-mock">
+      <div class="ai-result-code">HAYWARD TRISTAR - E05</div>
+      <div class="ai-result-text">Possible motor thermal overload. Check voltage, inspect ventilation, and verify against manufacturer procedure.</div>
+    </div>
+  </div>
+</section>
+
 <!-- FIELD POSITIONING -->
 <section class="bridge-band">
   <div class="container">
     <div class="bridge-panel">
       <div>
         <h2 class="bridge-title">One brand for cleaner stops and more time back.</h2>
-        <p class="bridge-copy">SplashLens is the field reference layer for the moment a tech is standing at a pad with a fault, a customer waiting, and no time for vague web results: code lookup, dosing math, dictated service notes, scanner workflows, and offline manual tools in one place.</p>
+        <p class="bridge-copy">SplashLens is the field reference layer for the moment a tech is standing at a pad with a fault, a customer waiting, and no time for vague web results: code lookup, dosing math, dictated service notes, scanner workflows, and offline manual tools in one place. Handle it before the call and look like the tech who came prepared.</p>
       </div>
       <div class="authority-grid" aria-label="SplashLens service authority pillars">
         <div class="authority-cell"><strong>Field rescue</strong><span>Code lookup, dosing math, SLAM tracking, voice-friendly service notes, and offline manual tools for the bad stop.</span></div>
@@ -970,6 +1119,7 @@
     <h2 class="section-title">We are not trying to be<br>another route platform</h2>
     <p class="section-sub">The big platforms are built for scheduling, billing, CRM, and management. SplashLens is the free field layer a tech opens when a stop is stuck.</p>
 
+    <div class="comp-swipe-hint" aria-hidden="true">Swipe to compare SplashLens against route platforms</div>
     <div class="comp-wrap">
       <table class="comp-table">
         <thead>
@@ -1338,6 +1488,51 @@
           href: link.href || ''
         });
       });
+      var featureCards = Array.prototype.slice.call(document.querySelectorAll('.feature-card'));
+      var mobileFeatureQuery = window.matchMedia('(max-width: 768px)');
+      function setFeatureCardState(card, isOpen) {
+        card.classList.toggle('is-open', isOpen);
+        card.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        var toggle = card.querySelector('.feature-mobile-toggle');
+        if (toggle) toggle.textContent = isOpen ? 'Tap to collapse' : 'Tap to expand';
+      }
+      function syncFeatureCards() {
+        featureCards.forEach(function (card) {
+          if (!card.querySelector('.feature-mobile-toggle')) {
+            var toggle = document.createElement('span');
+            toggle.className = 'feature-mobile-toggle';
+            toggle.textContent = 'Tap to expand';
+            card.appendChild(toggle);
+          }
+          if (mobileFeatureQuery.matches) {
+            card.setAttribute('role', 'button');
+            card.setAttribute('tabindex', '0');
+            if (!card.hasAttribute('aria-expanded')) setFeatureCardState(card, false);
+          } else {
+            card.removeAttribute('role');
+            card.removeAttribute('tabindex');
+            card.removeAttribute('aria-expanded');
+            card.classList.remove('is-open');
+          }
+        });
+      }
+      featureCards.forEach(function (card) {
+        card.addEventListener('click', function (event) {
+          if (!mobileFeatureQuery.matches || event.target.closest('a')) return;
+          setFeatureCardState(card, !card.classList.contains('is-open'));
+        });
+        card.addEventListener('keydown', function (event) {
+          if (!mobileFeatureQuery.matches || (event.key !== 'Enter' && event.key !== ' ')) return;
+          event.preventDefault();
+          setFeatureCardState(card, !card.classList.contains('is-open'));
+        });
+      });
+      syncFeatureCards();
+      if (mobileFeatureQuery.addEventListener) {
+        mobileFeatureQuery.addEventListener('change', syncFeatureCards);
+      } else if (mobileFeatureQuery.addListener) {
+        mobileFeatureQuery.addListener(syncFeatureCards);
+      }
       var routeReadyForm = document.getElementById('route-ready-form');
       var routeReadyStatus = document.getElementById('route-ready-status');
       if (routeReadyForm) {

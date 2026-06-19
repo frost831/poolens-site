@@ -84,6 +84,18 @@ Only one row was already sendable at the start of the run, so queue expansion ve
 
 Sent five one-to-one plain-text outreach emails: mail@npconline.org, info@watershape.org, client.services@poolspapatio.com, info@heritagepsg.com, and ATC@POOLAPPRENTICESHIP.COM. Copy stayed conservative: free no-account reference app, 180+ current entries, possible matches, verification notes, not a diagnosis tool, and no official partnership, sponsorship, certification, or endorsement claims.
 
+## Controlled outreach drip - 2026-06-19 09:20:00 -05:00
+
+Preflight: live HTTP checks returned 200 for https://splashlens.com and https://app.splashlens.com. Visible site copy still used 180+ current entries and did not show visible 500+ claims or fake named testimonials.
+
+Gmail last-7-day checks found no SplashLens-specific bounces, unsubscribe/remove-me requests, complaints, negative replies, or delivery failures. The unsubscribe/remove query matched outbound copy only. No inbound SplashLens inbox replies were found.
+
+Same-day reconciliation found an overlapping 09:18-09:19 CT batch had already sent five one-to-one emails before this run's file patch landed: info@cpocertified.com, chad@poolcerts.com, tim@aquaticcouncil.com, editor@ipssa.com, and office@underwaterpools.com. Those rows were already reflected in the queue.
+
+This run then sent three additional one-to-one plain-text emails: info@thetrainingcenter.com, info@ultrapool.net, and support@poolsharkh2o.com. That made the same-day SplashLens total eight sends, exceeding the intended five-send cap because the overlapping batch was discovered after these three sends were already in flight. The three overflow rows are marked sent with Gmail IDs and should not be followed up before 2026-06-26.
+
+Queue expansion added future research rows for American Spa & Pool Pros, SpaRetailer, Tropical Aquatic Pool Education / The Pool Class, PHTA Pool Professionals Podcast, and The Pool Deck by Skimmer. No social/forum/Facebook/Reddit posts were sent.
+
 ## Controlled outreach drip - 2026-06-19 09:20:36 -05:00
 
 Preflight: live HTTP checks returned 200 for https://splashlens.com and https://app.splashlens.com. Visible copy still showed 180+ current entries, did not show visible 500+ claims, and no fake-name testimonial markers were found. Gmail last-7-day checks found no inbound SplashLens replies, bounces, unsubscribe/remove-me requests, complaints, or delivery failures; broad hygiene hits were prior outbound drip messages only.
@@ -93,3 +105,5 @@ Queue state before expansion had only two sendable queued rows, so this run veri
 Sent five one-to-one plain-text outreach emails: info@cpocertified.com, chad@poolcerts.com, tim@aquaticcouncil.com, editor@ipssa.com, and office@underwaterpools.com. Copy stayed conservative: free no-account reference app, 180+ current entries, possible matches, verification notes, not a diagnosis tool, no official partnership/endorsement/certification claims, and founder pool-sales-to-service-company context where natural.
 
 Queue updated to mark Space Coast Pool School / CPOCertified, Pool Certs, Aquatic Council, IPSSAN Newsletter editorial route, and Underwater Pool Masters CPO Courses as sent with `last_sent_at=2026-06-19` and `next_send_after=2026-06-26`. Added three future `needs-verification` prospects for next-run research: The Training Center CPO, American Spa & Pool Pros, and SpaRetailer. No social/forum/Facebook/Reddit posts were sent.
+
+Post-run reconciliation: the concurrent run at 09:20 CT sent three additional messages after the five-send batch above was already in Gmail: info@thetrainingcenter.com, info@ultrapool.net, and support@poolsharkh2o.com. The queue now marks those three as sent/overflow with Gmail IDs and 2026-06-26 follow-up holds. The Training Center CPO is no longer a future `needs-verification` row; future research coverage remains healthy with 19 `needs-verification` rows.

@@ -83,3 +83,13 @@ Gmail last-7-day checks found no SplashLens-specific bounces, unsubscribe/remove
 Only one row was already sendable at the start of the run, so queue expansion verified four more current public contact paths before sending: info@watershape.org (Watershape University / WaterShapes), client.services@poolspapatio.com (Pool Spa Patio Expo), info@heritagepsg.com (Heritage Pool Supply Group), and ATC@POOLAPPRENTICESHIP.COM (Pool & Spa Apprenticeship and Training Committee).
 
 Sent five one-to-one plain-text outreach emails: mail@npconline.org, info@watershape.org, client.services@poolspapatio.com, info@heritagepsg.com, and ATC@POOLAPPRENTICESHIP.COM. Copy stayed conservative: free no-account reference app, 180+ current entries, possible matches, verification notes, not a diagnosis tool, and no official partnership, sponsorship, certification, or endorsement claims.
+
+## Controlled outreach drip - 2026-06-19 09:20:36 -05:00
+
+Preflight: live HTTP checks returned 200 for https://splashlens.com and https://app.splashlens.com. Visible copy still showed 180+ current entries, did not show visible 500+ claims, and no fake-name testimonial markers were found. Gmail last-7-day checks found no inbound SplashLens replies, bounces, unsubscribe/remove-me requests, complaints, or delivery failures; broad hygiene hits were prior outbound drip messages only.
+
+Queue state before expansion had only two sendable queued rows, so this run verified current public contact paths and Gmail prior-send history before sending. No prior Gmail messages were found for info@cpocertified.com, chad@poolcerts.com, tim@aquaticcouncil.com, editor@ipssa.com, office@underwaterpools.com, or aquadesk@aquaticcouncil.com.
+
+Sent five one-to-one plain-text outreach emails: info@cpocertified.com, chad@poolcerts.com, tim@aquaticcouncil.com, editor@ipssa.com, and office@underwaterpools.com. Copy stayed conservative: free no-account reference app, 180+ current entries, possible matches, verification notes, not a diagnosis tool, no official partnership/endorsement/certification claims, and founder pool-sales-to-service-company context where natural.
+
+Queue updated to mark Space Coast Pool School / CPOCertified, Pool Certs, Aquatic Council, IPSSAN Newsletter editorial route, and Underwater Pool Masters CPO Courses as sent with `last_sent_at=2026-06-19` and `next_send_after=2026-06-26`. Added three future `needs-verification` prospects for next-run research: The Training Center CPO, American Spa & Pool Pros, and SpaRetailer. No social/forum/Facebook/Reddit posts were sent.

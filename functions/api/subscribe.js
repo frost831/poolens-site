@@ -10,6 +10,53 @@ const DEFAULT_ALLOWED_ORIGINS = [
 const RATE_WINDOW_SECONDS = 60 * 60;
 const RATE_LIMIT_PER_IP = 8;
 
+function notifyConfig(env) {
+  return {
+    apiKey: (env.SENDGRID_API_KEY || '').trim(),
+    from: (env.SENDGRID_FROM || env.FLAGSHIP_NOTIFY_FROM || 'hello@splashlens.com').trim(),
+    to: (env.SPLASHLENS_NOTIFY_TO || env.FLAGSHIP_NOTIFY_TO || env.LEAD_NOTIFY_TO || env.ADMIN_EMAIL || '').trim(),
+  };
+}
+
+async function sendSignupAlert(env, record) {
+  const config = notifyConfig(env);
+  if (!config.apiKey || !config.from || !config.to) {
+    return { sent: false, reason: 'missing_sendgrid_config' };
+  }
+
+  const response = await fetch('https://api.sendgrid.com/v3/mail/send', {
+    method: 'POST',
+    headers: {
+      authorization: `Bearer ${config.apiKey}`,
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify({
+      personalizations: [{
+        to: [{ email: config.to }],
+        subject: `[SplashLens] New marketing signup: ${record.email}`,
+      }],
+      from: { email: config.from, name: 'SplashLens Alerts' },
+      reply_to: { email: record.email },
+      categories: ['splashlens', 'marketing-signup'],
+      content: [{
+        type: 'text/plain',
+        value: [
+          'New SplashLens marketing signup',
+          '',
+          `Email: ${record.email}`,
+          `Source: ${record.source}`,
+          `Path: ${record.path}`,
+          `Referrer: ${record.referrer}`,
+          `Country: ${record.country}`,
+          `Created: ${record.createdAt}`,
+        ].join('\n'),
+      }],
+    }),
+  });
+
+  return { sent: response.ok, status: response.status };
+}
+
 function allowedOrigins(env) {
   return (env.SPLASHLENS_ALLOWED_ORIGINS || DEFAULT_ALLOWED_ORIGINS.join(','))
     .split(',')
@@ -106,13 +153,32 @@ export async function onRequestPost({ request, env }) {
   }
 
   const source = (body.source || 'route-ready').slice(0, 50);
+  const record = {
+    email,
+    source,
+    path: (body.path || '').slice(0, 300),
+    referrer: (request.headers.get('Referer') || body.referrer || '').slice(0, 500),
+    country: (request.cf?.country || request.headers.get('CF-IPCountry') || '').slice(0, 10),
+    createdAt: new Date().toISOString(),
+  };
 
   try {
-    await env.SUBSCRIBERS_DB.prepare(
+    const result = await env.SUBSCRIBERS_DB.prepare(
       'INSERT OR IGNORE INTO subscribers (email, source) VALUES (?, ?)'
     ).bind(email, source).run();
 
-    return json(request, env, 200, { ok: true, message: "You're on the list." });
+    let alert = { sent: false, skipped: true };
+    if (Number(result?.meta?.changes || 0) > 0) {
+      alert = await sendSignupAlert(env, record);
+      console.log('Subscribe alert:', JSON.stringify({ email, source, alert }));
+    }
+
+    return json(request, env, 200, {
+      ok: true,
+      message: "You're on the list.",
+      alertQueued: Boolean(alert.sent),
+      emailConfigured: alert.reason !== 'missing_sendgrid_config',
+    });
   } catch (err) {
     console.error('Subscribe error:', err);
     return json(request, env, 500, { ok: false, error: 'Database error' });

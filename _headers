@@ -1,28 +1,28 @@
 /*
-  Content-Security-Policy: default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://splashlens.com https://app.splashlens.com https://static.cloudflareinsights.com; worker-src 'self'; manifest-src 'self'; form-action 'self' mailto:
-  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  X-Frame-Options: DENY
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: camera=(), microphone=(), geolocation=()
+ Content-Security-Policy: default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://splashlens.com https://app.splashlens.com https://static.cloudflareinsights.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com; worker-src 'self'; manifest-src 'self'; form-action 'self' mailto:
+ Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+ X-Frame-Options: DENY
+ X-Content-Type-Options: nosniff
+ Referrer-Policy: strict-origin-when-cross-origin
+ Permissions-Policy: camera=(), microphone=(), geolocation=()
 
 /blog/*
-  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+ Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
 /favicon.svg
-  Cache-Control: public, max-age=2592000
+ Cache-Control: public, max-age=2592000
 
 /*.html
-  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+ Cache-Control: public, max-age=3600, stale-while-revalidate=86400
 
 /sitemap.xml
-  Cache-Control: public, max-age=3600, s-maxage=3600, must-revalidate
-  Content-Type: application/xml; charset=UTF-8
+ Cache-Control: public, max-age=3600, s-maxage=3600, must-revalidate
+ Content-Type: application/xml; charset=UTF-8
 
 /robots.txt
-  Cache-Control: public, max-age=300, s-maxage=300, must-revalidate
-  Content-Type: text/plain; charset=UTF-8
+ Cache-Control: public, max-age=300, s-maxage=300, must-revalidate
+ Content-Type: text/plain; charset=UTF-8
 
 /llms.txt
-  Cache-Control: public, max-age=300, s-maxage=300, must-revalidate
-  Content-Type: text/plain; charset=UTF-8
+ Cache-Control: public, max-age=300, s-maxage=300, must-revalidate
+ Content-Type: text/plain; charset=UTF-8

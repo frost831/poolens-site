@@ -1,4 +1,4 @@
-﻿# SplashLens
+# SplashLens
 
 > Free-core field reference tool for pool service technicians. 180+ current equipment error-code entries, chemical dosing calculators, online AI scanner, multi-day SLAM tracker, and pool care reference guides. Manual tools work offline after first load; AI scanner requires internet.
 
@@ -6,7 +6,7 @@
 
 SplashLens is a Progressive Web App (PWA) that works like a native app on any phone, tablet, or laptop with no download and no account. Pool technicians open it once, it caches the manual field tools to the device, and those manual tools work without signal after first load. Online AI scanner features require internet. PartSnap Pro web checkout may be offered for extended scanner use on one device while account-based entitlement is being built.
 
-It is not a route management tool. It is not billing software. It is a field reference tool â€” the manual every tech should have in their pocket but doesn't.
+It is not a route management tool. It is not billing software. It is a field reference tool - the manual every tech should have in their pocket but doesn't.
 
 ## Who It's For
 
@@ -36,7 +36,7 @@ Two camera modes powered by Claude Haiku (Vision API):
 - Cyanuric Acid (stabilizer)
 - Salt (sodium chloride)
 - SLAM calculator: CYA-based FC target for green pool, black algae, and mustard algae treatment
-- Covers pool volumes 1,000â€“100,000 gallons
+- Covers pool volumes 1,000-100,000 gallons
 
 ### SLAM Multi-Day Tracker
 Start a SLAM (Shock Level and Maintain) treatment and track it through completion:
@@ -85,9 +85,9 @@ Start a SLAM (Shock Level and Maintain) treatment and track it through completio
 
 - **Architecture**: Vanilla JavaScript + CSS, no framework, no build step
 - **Hosting**: Cloudflare Pages (CDN)
-- **AI backend**: Cloudflare Pages Functions â†’ Anthropic API (Claude Haiku)
+- **AI backend**: Cloudflare Pages Functions to Anthropic API (Claude Haiku)
 - **Offline**: Service Worker cache-first strategy
-- **Storage**: localStorage only â€” no backend, no accounts
+- **Storage**: localStorage only - no backend, no accounts
 - **Installation**: Add to Home Screen on iOS/Android, or use directly in browser
 
 ## URLs
@@ -110,7 +110,7 @@ Start a SLAM (Shock Level and Maintain) treatment and track it through completio
 
 ## Competitive Positioning
 
-SplashLens is not Skimmer, Pool Brain, or Jobber. Those are route management platforms with billing, invoicing, and CRM. SplashLens is the field reference tool â€” the thing you pull out at the equipment pad to diagnose a fault, calculate a dose, or look up a filter procedure.
+SplashLens is not Skimmer, Pool Brain, or Jobber. Those are route management platforms with billing, invoicing, and CRM. SplashLens is the field reference tool - the thing you pull out at the equipment pad to diagnose a fault, calculate a dose, or look up a filter procedure.
 
 Most pool techs who use Skimmer or Pool Brain still have no standardized field reference. SplashLens fills that gap, free, offline, and without asking for their credit card.
 

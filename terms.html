@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,305 +9,306 @@
 <link rel="canonical" href="https://splashlens.com/terms.html">
 <link rel="icon" href="https://app.splashlens.com/favicon.svg" type="image/svg+xml">
 <style>
-  :root {
-    --sky: #0284c7;
-    --sky-dark: #0369a1;
-    --sky-light: #e0f2fe;
-    --sky-xlight: #f0f9ff;
-    --green: #16a34a;
-    --amber: #d97706;
-    --amber-light: #fef3c7;
-    --slate: #0f172a;
-    --slate-mid: #334155;
-    --slate-soft: #64748b;
-    --border: #e2e8f0;
-    --white: #ffffff;
-    --radius: 14px;
-    --radius-sm: 8px;
-    --card-shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.04);
-  }
+ :root {
+ --sky: #0284c7;
+ --sky-dark: #0369a1;
+ --sky-light: #e0f2fe;
+ --sky-xlight: #f0f9ff;
+ --green: #16a34a;
+ --amber: #d97706;
+ --amber-light: #fef3c7;
+ --slate: #0f172a;
+ --slate-mid: #334155;
+ --slate-soft: #64748b;
+ --border: #e2e8f0;
+ --white: #ffffff;
+ --radius: 14px;
+ --radius-sm: 8px;
+ --card-shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.04);
+ }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
 
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    background: var(--white);
-    color: var(--slate);
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
+ body {
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+ background: var(--white);
+ color: var(--slate);
+ line-height: 1.6;
+ overflow-x: hidden;
+ }
 
-  /* NAV */
-  nav {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(255,255,255,.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    padding: 0 24px;
-  }
-  .nav-inner {
-    max-width: 1100px; margin: 0 auto;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 60px;
-  }
-  .nav-logo {
-    display: flex; align-items: center; gap: 10px;
-    font-weight: 700; font-size: 1.15rem; color: var(--sky-dark);
-    text-decoration: none;
-  }
-  .nav-logo svg { width: 32px; height: 32px; }
-  .nav-links { display: flex; align-items: center; gap: 28px; }
-  .nav-links a {
-    color: var(--slate-mid); text-decoration: none; font-size: .9rem; font-weight: 500;
-    transition: color .2s;
-  }
-  .nav-links a:hover { color: var(--sky); }
-  .nav-cta {
-    background: var(--sky); color: var(--white) !important;
-    padding: 8px 20px; border-radius: 100px;
-    transition: background .2s !important;
-  }
-  .nav-cta:hover { background: var(--sky-dark) !important; }
+ /* NAV */
+ nav {
+ position: sticky; top: 0; z-index: 100;
+ background: rgba(255,255,255,.92);
+ backdrop-filter: blur(12px);
+ border-bottom: 1px solid var(--border);
+ padding: 0 24px;
+ }
+ .nav-inner {
+ max-width: 1100px; margin: 0 auto;
+ display: flex; align-items: center; justify-content: space-between;
+ height: 60px;
+ }
+ .nav-logo {
+ display: flex; align-items: center; gap: 10px;
+ font-weight: 700; font-size: 1.15rem; color: var(--sky-dark);
+ text-decoration: none;
+ }
+ .nav-logo svg { width: 32px; height: 32px; }
+ .nav-links { display: flex; align-items: center; gap: 28px; }
+ .nav-links a {
+ color: var(--slate-mid); text-decoration: none; font-size: .9rem; font-weight: 500;
+ transition: color .2s;
+ }
+ .nav-links a:hover { color: var(--sky); }
+ .nav-cta {
+ background: var(--sky); color: var(--white) !important;
+ padding: 8px 20px; border-radius: 100px;
+ transition: background .2s !important;
+ }
+ .nav-cta:hover { background: var(--sky-dark) !important; }
 
-  /* PAGE HEADER */
-  .page-header {
-    background: linear-gradient(160deg, var(--sky-dark) 0%, var(--sky) 100%);
-    padding: 60px 24px;
-    text-align: center;
-  }
-  .page-header h1 {
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    font-weight: 800; color: white;
-    margin-bottom: 12px;
-  }
-  .page-header p {
-    color: rgba(255,255,255,.85); font-size: 1rem;
-  }
+ /* PAGE HEADER */
+ .page-header {
+ background: linear-gradient(160deg, var(--sky-dark) 0%, var(--sky) 100%);
+ padding: 60px 24px;
+ text-align: center;
+ }
+ .page-header h1 {
+ font-size: clamp(1.8rem, 4vw, 2.8rem);
+ font-weight: 800; color: white;
+ margin-bottom: 12px;
+ }
+ .page-header p {
+ color: rgba(255,255,255,.85); font-size: 1rem;
+ }
 
-  /* CONTENT */
-  .content-wrap {
-    max-width: 760px; margin: 0 auto;
-    padding: 60px 24px 80px;
-  }
-  .effective-date {
-    display: inline-block;
-    background: var(--sky-xlight); color: var(--sky-dark);
-    border: 1px solid var(--sky-light);
-    padding: 6px 16px; border-radius: 100px;
-    font-size: .82rem; font-weight: 600;
-    margin-bottom: 40px;
-  }
+ /* CONTENT */
+ .content-wrap {
+ max-width: 760px; margin: 0 auto;
+ padding: 60px 24px 80px;
+ }
+ .effective-date {
+ display: inline-block;
+ background: var(--sky-xlight); color: var(--sky-dark);
+ border: 1px solid var(--sky-light);
+ padding: 6px 16px; border-radius: 100px;
+ font-size: .82rem; font-weight: 600;
+ margin-bottom: 40px;
+ }
 
-  .policy-section { margin-bottom: 40px; }
-  .policy-section h2 {
-    font-size: 1.2rem; font-weight: 700;
-    color: var(--slate); margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--sky-light);
-  }
-  .policy-section p {
-    font-size: .95rem; color: var(--slate-mid);
-    line-height: 1.75; margin-bottom: 12px;
-  }
-  .policy-section p:last-child { margin-bottom: 0; }
-  .policy-section ul {
-    margin: 12px 0 12px 20px;
-    display: flex; flex-direction: column; gap: 8px;
-  }
-  .policy-section ul li {
-    font-size: .95rem; color: var(--slate-mid); line-height: 1.6;
-  }
+ .policy-section { margin-bottom: 40px; }
+ .policy-section h2 {
+ font-size: 1.2rem; font-weight: 700;
+ color: var(--slate); margin-bottom: 12px;
+ padding-bottom: 8px;
+ border-bottom: 2px solid var(--sky-light);
+ }
+ .policy-section p {
+ font-size: .95rem; color: var(--slate-mid);
+ line-height: 1.75; margin-bottom: 12px;
+ }
+ .policy-section p:last-child { margin-bottom: 0; }
+ .policy-section ul {
+ margin: 12px 0 12px 20px;
+ display: flex; flex-direction: column; gap: 8px;
+ }
+ .policy-section ul li {
+ font-size: .95rem; color: var(--slate-mid); line-height: 1.6;
+ }
 
-  .highlight-box {
-    background: var(--sky-xlight);
-    border: 1px solid var(--sky-light);
-    border-left: 4px solid var(--sky);
-    border-radius: var(--radius-sm);
-    padding: 20px 24px;
-    margin-bottom: 32px;
-  }
-  .highlight-box p {
-    font-size: .95rem; color: var(--sky-dark); font-weight: 500; line-height: 1.6;
-    margin: 0;
-  }
+ .highlight-box {
+ background: var(--sky-xlight);
+ border: 1px solid var(--sky-light);
+ border-left: 4px solid var(--sky);
+ border-radius: var(--radius-sm);
+ padding: 20px 24px;
+ margin-bottom: 32px;
+ }
+ .highlight-box p {
+ font-size: .95rem; color: var(--sky-dark); font-weight: 500; line-height: 1.6;
+ margin: 0;
+ }
 
-  .warning-box {
-    background: var(--amber-light);
-    border: 1px solid #fcd34d;
-    border-left: 4px solid var(--amber);
-    border-radius: var(--radius-sm);
-    padding: 20px 24px;
-    margin-bottom: 32px;
-  }
-  .warning-box p {
-    font-size: .95rem; color: #92400e; font-weight: 500; line-height: 1.6;
-    margin: 0;
-  }
+ .warning-box {
+ background: var(--amber-light);
+ border: 1px solid #fcd34d;
+ border-left: 4px solid var(--amber);
+ border-radius: var(--radius-sm);
+ padding: 20px 24px;
+ margin-bottom: 32px;
+ }
+ .warning-box p {
+ font-size: .95rem; color: #92400e; font-weight: 500; line-height: 1.6;
+ margin: 0;
+ }
 
-  footer {
-    background: var(--slate); color: #94a3b8; padding: 32px 24px;
-    text-align: center; font-size: .85rem;
-  }
-  footer a { color: #7dd3fc; text-decoration: none; }
-  footer .container { max-width: 1100px; margin: 0 auto; }
+ footer {
+ background: var(--slate); color: #94a3b8; padding: 32px 24px;
+ text-align: center; font-size: .85rem;
+ }
+ footer a { color: #7dd3fc; text-decoration: none; }
+ footer .container { max-width: 1100px; margin: 0 auto; }
 
-  @media (max-width: 768px) {
-    .nav-links { display: none; }
-  }
+ @media (max-width: 768px) {
+ .nav-links { display: none; }
+ }
 </style>
+<script src="/ga4.js" defer></script>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <div class="nav-inner">
-    <a href="/" class="nav-logo">
-      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="32" height="32" rx="8" fill="#0284c7"/>
-        <path d="M6 20 Q10 12 16 16 Q22 20 26 12" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-        <circle cx="16" cy="10" r="3" fill="#7dd3fc"/>
-        <path d="M10 24h12" stroke="white" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-      SplashLens
-    </a>
-    <div class="nav-links">
-      <a href="/#features">Features</a>
-      <a href="/#how">How It Works</a>
-      <a href="/blog/">Blog</a>
-      <a href="https://app.splashlens.com" target="_blank" class="nav-cta">Open App -></a>
-    </div>
-  </div>
+ <div class="nav-inner">
+ <a href="/" class="nav-logo">
+ <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+ <rect width="32" height="32" rx="8" fill="#0284c7"/>
+ <path d="M6 20 Q10 12 16 16 Q22 20 26 12" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+ <circle cx="16" cy="10" r="3" fill="#7dd3fc"/>
+ <path d="M10 24h12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+ </svg>
+ SplashLens
+ </a>
+ <div class="nav-links">
+ <a href="/#features">Features</a>
+ <a href="/#how">How It Works</a>
+ <a href="/blog/">Blog</a>
+ <a href="https://app.splashlens.com" target="_blank" class="nav-cta">Open App -></a>
+ </div>
+ </div>
 </nav>
 
 <!-- PAGE HEADER -->
 <div class="page-header">
-  <h1>Terms of Service</h1>
-  <p>Simple terms for a free-core field tool. Read the chemical safety section - it matters.</p>
+ <h1>Terms of Service</h1>
+ <p>Simple terms for a free-core field tool. Read the chemical safety section - it matters.</p>
 </div>
 
 <!-- CONTENT -->
 <div class="content-wrap">
 
-  <div class="effective-date">Effective Date: May 26, 2026</div>
+ <div class="effective-date">Effective Date: May 26, 2026</div>
 
-  <div class="highlight-box">
-    <p>Short version: SplashLens is a free-core reference tool provided as-is. The manual field tools are free for personal pool work and pool service businesses. Paid PartSnap Pro checkout may be offered on the web for extended online AI scanner access on one device while account-based entitlement is being built. Dosing calculations, AI scanner output, and error code information are reference guides - they do not substitute for professional judgment, licensed service technicians, calibrated testing, or manufacturer service manuals. You are responsible for your own chemical handling and safety.</p>
-  </div>
+ <div class="highlight-box">
+ <p>Short version: SplashLens is a free-core reference tool provided as-is. The manual field tools are free for personal pool work and pool service businesses. Paid PartSnap Pro checkout may be offered on the web for extended online AI scanner access on one device while account-based entitlement is being built. Dosing calculations, AI scanner output, and error code information are reference guides - they do not substitute for professional judgment, licensed service technicians, calibrated testing, or manufacturer service manuals. You are responsible for your own chemical handling and safety.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>1. Acceptance of Terms</h2>
-    <p>By accessing or using SplashLens (available at <strong>https://app.splashlens.com</strong> and this marketing site at <strong>https://splashlens.com</strong>), you agree to these Terms of Service. If you do not agree, do not use the app.</p>
-    <p>SplashLens is operated by SplashLens. Contact: <a href="mailto:hello@splashlens.com">hello@splashlens.com</a>.</p>
-  </div>
+ <div class="policy-section">
+ <h2>1. Acceptance of Terms</h2>
+ <p>By accessing or using SplashLens (available at <strong>https://app.splashlens.com</strong> and this marketing site at <strong>https://splashlens.com</strong>), you agree to these Terms of Service. If you do not agree, do not use the app.</p>
+ <p>SplashLens is operated by SplashLens. Contact: <a href="mailto:hello@splashlens.com">hello@splashlens.com</a>.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>2. Free-Core Use - Personal and Commercial</h2>
-    <p>SplashLens manual field tools are free to use for both personal and commercial purposes. Pool service businesses, independent technicians, service companies, and individual pool owners are welcome to use those tools without charge. Online AI scanner access may have free monthly limits and optional paid web upgrades.</p>
-    <p>You may not: resell access to SplashLens, represent SplashLens as your own product, scrape or systematically extract SplashLens data for commercial redistribution, or use SplashLens in any way that violates applicable law.</p>
-  </div>
+ <div class="policy-section">
+ <h2>2. Free-Core Use - Personal and Commercial</h2>
+ <p>SplashLens manual field tools are free to use for both personal and commercial purposes. Pool service businesses, independent technicians, service companies, and individual pool owners are welcome to use those tools without charge. Online AI scanner access may have free monthly limits and optional paid web upgrades.</p>
+ <p>You may not: resell access to SplashLens, represent SplashLens as your own product, scrape or systematically extract SplashLens data for commercial redistribution, or use SplashLens in any way that violates applicable law.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>2A. Paid Web Checkout</h2>
-    <p>PartSnap Pro, if purchased, is handled through Stripe checkout on the web. Stripe is responsible for processing payment card details. Store-distributed native wrappers may not include the same web checkout flow; paid access inside native app stores may require Apple In-App Purchase, Google Play Billing, or another policy-compliant flow.</p>
-    <p>Current web checkout access is device-local while account-based entitlement and cross-device subscription sync are being built. Do not rely on it as proof that a server-side account system exists.</p>
-  </div>
+ <div class="policy-section">
+ <h2>2A. Paid Web Checkout</h2>
+ <p>PartSnap Pro, if purchased, is handled through Stripe checkout on the web. Stripe is responsible for processing payment card details. Store-distributed native wrappers may not include the same web checkout flow; paid access inside native app stores may require Apple In-App Purchase, Google Play Billing, or another policy-compliant flow.</p>
+ <p>Current web checkout access is device-local while account-based entitlement and cross-device subscription sync are being built. Do not rely on it as proof that a server-side account system exists.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>2B. Parts Search and Affiliate Links</h2>
-    <p>SplashLens may show third-party parts search links for convenience. We do not guarantee price, fit, availability, shipping, or seller quality. If an approved affiliate tag is configured later, SplashLens may earn a commission and will disclose that relationship near the links.</p>
-  </div>
+ <div class="policy-section">
+ <h2>2B. Parts Search and Affiliate Links</h2>
+ <p>SplashLens may show third-party parts search links for convenience. We do not guarantee price, fit, availability, shipping, or seller quality. If an approved affiliate tag is configured later, SplashLens may earn a commission and will disclose that relationship near the links.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>3. Chemical Dosing Calculations - Reference Only</h2>
-    <div class="warning-box">
-      <p>Dosing calculations in SplashLens are reference guides based on standard pool chemistry formulas. Pool conditions vary. Always verify critical chemical additions with a licensed pool professional or certified pool operator for safety-critical situations. Never add chemicals without confirming current water test readings with a calibrated test kit.</p>
-    </div>
-    <p>SplashLens provides chemical dosing calculators as educational reference tools. The accuracy of any calculation depends on:</p>
-    <ul>
-      <li>The accuracy of your pool volume measurement</li>
-      <li>The accuracy of your current water chemistry readings</li>
-      <li>The actual concentration of the chemical products you use</li>
-      <li>Site-specific conditions that a reference tool cannot account for</li>
-    </ul>
-    <p>SplashLens makes no warranty that dosing calculations will be accurate for your specific pool. We accept no liability for damage to pool equipment, surfaces, or injury to persons arising from reliance on SplashLens calculations without independent professional verification.</p>
-  </div>
+ <div class="policy-section">
+ <h2>3. Chemical Dosing Calculations - Reference Only</h2>
+ <div class="warning-box">
+ <p>Dosing calculations in SplashLens are reference guides based on standard pool chemistry formulas. Pool conditions vary. Always verify critical chemical additions with a licensed pool professional or certified pool operator for safety-critical situations. Never add chemicals without confirming current water test readings with a calibrated test kit.</p>
+ </div>
+ <p>SplashLens provides chemical dosing calculators as educational reference tools. The accuracy of any calculation depends on:</p>
+ <ul>
+ <li>The accuracy of your pool volume measurement</li>
+ <li>The accuracy of your current water chemistry readings</li>
+ <li>The actual concentration of the chemical products you use</li>
+ <li>Site-specific conditions that a reference tool cannot account for</li>
+ </ul>
+ <p>SplashLens makes no warranty that dosing calculations will be accurate for your specific pool. We accept no liability for damage to pool equipment, surfaces, or injury to persons arising from reliance on SplashLens calculations without independent professional verification.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>4. Error Code Information - Reference Only</h2>
-    <p>Error code information in SplashLens is derived from manufacturer documentation, published service bulletins, and field experience contributed by pool professionals. It is provided as a field reference to help technicians quickly identify likely causes of fault codes.</p>
-    <p>Error code reference guides in SplashLens are not a substitute for official manufacturer service manuals. For definitive diagnosis and repair procedures, always consult the current manufacturer service documentation for the specific equipment model and firmware version you are servicing. Manufacturer documentation supersedes SplashLens reference data in all cases.</p>
-  </div>
+ <div class="policy-section">
+ <h2>4. Error Code Information - Reference Only</h2>
+ <p>Error code information in SplashLens is derived from manufacturer documentation, published service bulletins, and field experience contributed by pool professionals. It is provided as a field reference to help technicians quickly identify likely causes of fault codes.</p>
+ <p>Error code reference guides in SplashLens are not a substitute for official manufacturer service manuals. For definitive diagnosis and repair procedures, always consult the current manufacturer service documentation for the specific equipment model and firmware version you are servicing. Manufacturer documentation supersedes SplashLens reference data in all cases.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>5. Chemical Safety - Your Responsibility</h2>
-    <p>Pool chemicals are hazardous. You are solely responsible for:</p>
-    <ul>
-      <li>Reading and following all chemical manufacturer safety instructions, SDS sheets, and label directions</li>
-      <li>Wearing appropriate personal protective equipment (PPE) when handling chemicals</li>
-      <li>Proper storage, transport, and disposal of pool chemicals</li>
-      <li>Ensuring chemicals are never mixed in ways that create dangerous reactions</li>
-      <li>Compliance with all local, state, and federal regulations governing chemical handling</li>
-    </ul>
-    <p>The Chemical Safety Guide in SplashLens is a reference tool. It does not replace proper training, SDS documentation from the chemical manufacturer, or applicable regulatory requirements.</p>
-  </div>
+ <div class="policy-section">
+ <h2>5. Chemical Safety - Your Responsibility</h2>
+ <p>Pool chemicals are hazardous. You are solely responsible for:</p>
+ <ul>
+ <li>Reading and following all chemical manufacturer safety instructions, SDS sheets, and label directions</li>
+ <li>Wearing appropriate personal protective equipment (PPE) when handling chemicals</li>
+ <li>Proper storage, transport, and disposal of pool chemicals</li>
+ <li>Ensuring chemicals are never mixed in ways that create dangerous reactions</li>
+ <li>Compliance with all local, state, and federal regulations governing chemical handling</li>
+ </ul>
+ <p>The Chemical Safety Guide in SplashLens is a reference tool. It does not replace proper training, SDS documentation from the chemical manufacturer, or applicable regulatory requirements.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>6. Disclaimer of Warranties</h2>
-    <p>SplashLens is provided "as is" and "as available" without warranty of any kind, express or implied. We do not warrant that:</p>
-    <ul>
-      <li>The app will be error-free, uninterrupted, or available at all times</li>
-      <li>Error code data is complete, current, or accurate for every equipment variant</li>
-      <li>Dosing calculations will produce safe or effective results for your specific conditions</li>
-      <li>AI scanner results will correctly identify every code, part, condition, or test-strip value</li>
-      <li>Offline caching will work correctly on every device or browser version</li>
-    </ul>
-    <p>To the maximum extent permitted by applicable law, SplashLens disclaims all implied warranties, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
-  </div>
+ <div class="policy-section">
+ <h2>6. Disclaimer of Warranties</h2>
+ <p>SplashLens is provided "as is" and "as available" without warranty of any kind, express or implied. We do not warrant that:</p>
+ <ul>
+ <li>The app will be error-free, uninterrupted, or available at all times</li>
+ <li>Error code data is complete, current, or accurate for every equipment variant</li>
+ <li>Dosing calculations will produce safe or effective results for your specific conditions</li>
+ <li>AI scanner results will correctly identify every code, part, condition, or test-strip value</li>
+ <li>Offline caching will work correctly on every device or browser version</li>
+ </ul>
+ <p>To the maximum extent permitted by applicable law, SplashLens disclaims all implied warranties, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>7. Limitation of Liability</h2>
-    <p>To the fullest extent permitted by law, SplashLens and its operators shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the app, including but not limited to: equipment damage, property damage, personal injury, chemical spill cleanup costs, or lost business revenue.</p>
-    <p>For free use, our total liability to you for any claim arising from use of SplashLens shall not exceed zero dollars. If you paid SplashLens for a web upgrade, our total liability for claims related to that paid feature shall not exceed the amount you paid to SplashLens in the three months before the claim arose.</p>
-  </div>
+ <div class="policy-section">
+ <h2>7. Limitation of Liability</h2>
+ <p>To the fullest extent permitted by law, SplashLens and its operators shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the app, including but not limited to: equipment damage, property damage, personal injury, chemical spill cleanup costs, or lost business revenue.</p>
+ <p>For free use, our total liability to you for any claim arising from use of SplashLens shall not exceed zero dollars. If you paid SplashLens for a web upgrade, our total liability for claims related to that paid feature shall not exceed the amount you paid to SplashLens in the three months before the claim arose.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>8. Changes to the Service</h2>
-    <p>SplashLens reserves the right to modify, suspend, or discontinue the app or any feature at any time, with or without notice. We are under no obligation to maintain any particular feature set or level of availability. For paid web upgrades, refund handling is governed by the applicable checkout and payment-provider terms.</p>
-  </div>
+ <div class="policy-section">
+ <h2>8. Changes to the Service</h2>
+ <p>SplashLens reserves the right to modify, suspend, or discontinue the app or any feature at any time, with or without notice. We are under no obligation to maintain any particular feature set or level of availability. For paid web upgrades, refund handling is governed by the applicable checkout and payment-provider terms.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>9. Intellectual Property</h2>
-    <p>The SplashLens app, this website, and all associated content - including the error code database, reference guides, UI design, and copy - are the intellectual property of SplashLens. You may use the app as intended. You may not copy, redistribute, or create derivative works from SplashLens content without written permission.</p>
-  </div>
+ <div class="policy-section">
+ <h2>9. Intellectual Property</h2>
+ <p>The SplashLens app, this website, and all associated content - including the error code database, reference guides, UI design, and copy - are the intellectual property of SplashLens. You may use the app as intended. You may not copy, redistribute, or create derivative works from SplashLens content without written permission.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>10. Governing Law</h2>
-    <p>These Terms of Service are governed by the laws of the State of Illinois, USA, without regard to its conflict of law provisions. Any disputes arising from these terms shall be resolved in the courts of McLean County, Illinois.</p>
-  </div>
+ <div class="policy-section">
+ <h2>10. Governing Law</h2>
+ <p>These Terms of Service are governed by the laws of the State of Illinois, USA, without regard to its conflict of law provisions. Any disputes arising from these terms shall be resolved in the courts of McLean County, Illinois.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>11. Changes to These Terms</h2>
-    <p>We may update these Terms of Service from time to time. The effective date at the top of this page will reflect the most recent revision. Continued use of SplashLens after a terms update constitutes acceptance of the revised terms.</p>
-  </div>
+ <div class="policy-section">
+ <h2>11. Changes to These Terms</h2>
+ <p>We may update these Terms of Service from time to time. The effective date at the top of this page will reflect the most recent revision. Continued use of SplashLens after a terms update constitutes acceptance of the revised terms.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>12. Contact</h2>
-    <p>Questions about these terms: <a href="mailto:hello@splashlens.com">hello@splashlens.com</a></p>
-  </div>
+ <div class="policy-section">
+ <h2>12. Contact</h2>
+ <p>Questions about these terms: <a href="mailto:hello@splashlens.com">hello@splashlens.com</a></p>
+ </div>
 
 </div>
 
 <footer>
-  <div class="container">
-    <p>&copy; 2026 SplashLens &middot; Built for pool service professionals &middot; <a href="https://app.splashlens.com">app.splashlens.com</a></p>
-    <p style="margin-top:8px;font-size:.78rem">SplashLens is a free PWA field reference tool and is not affiliated with Hayward, Pentair, Jandy, Maytronics, Skimmer, or Pool Brain.</p>
-    <p style="margin-top:12px;font-size:.78rem">
-      <a href="/privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp;
-      <a href="/terms.html">Terms of Service</a> &nbsp;&middot;&nbsp;
-      <a href="/blog/">Blog</a>
-    </p>
-  </div>
+ <div class="container">
+ <p>&copy; 2026 SplashLens &middot; Built for pool service professionals &middot; <a href="https://app.splashlens.com">app.splashlens.com</a></p>
+ <p style="margin-top:8px;font-size:.78rem">SplashLens is a free PWA field reference tool and is not affiliated with Hayward, Pentair, Jandy, Maytronics, Skimmer, or Pool Brain.</p>
+ <p style="margin-top:12px;font-size:.78rem">
+ <a href="/privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp;
+ <a href="/terms.html">Terms of Service</a> &nbsp;&middot;&nbsp;
+ <a href="/blog/">Blog</a>
+ </p>
+ </div>
 </footer>
 
 </body>

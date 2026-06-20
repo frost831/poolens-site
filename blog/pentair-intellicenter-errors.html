@@ -4,19 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Pentair IntelliCenter Common Errors: What They Mean | SplashLens</title>
-<meta name="description" content="Pentair IntelliCenter showing errors? This guide covers the most common IntelliCenter fault messages — comm errors, sensor faults, and freeze protection — with fixes.">
+<meta name="description" content="Pentair IntelliCenter showing errors? This guide covers the most common IntelliCenter fault messages - comm errors, sensor faults, and freeze protection - with fixes.">
 <meta property="og:title" content="Pentair IntelliCenter Common Errors: What They Mean">
-<meta property="og:description" content="Pentair IntelliCenter showing errors? This guide covers the most common IntelliCenter fault messages — comm errors, sensor faults, and freeze protection — with fixes.">
+<meta property="og:description" content="Pentair IntelliCenter showing errors? This guide covers the most common IntelliCenter fault messages - comm errors, sensor faults, and freeze protection - with fixes.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://splashlens.com/blog/pentair-intellicenter-errors.html">
 <meta property="og:image" content="https://images.unsplash.com/photo-1591389703635-e15a07b842d7?w=1200&h=400&fit=crop&auto=format&q=80">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://splashlens.com/blog/pentair-intellicenter-errors.html">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Pentair IntelliCenter Common Errors: What They Mean","datePublished":"2025-08-19","dateModified":"2025-08-19","author":{"@type":"Organization","name":"SplashLens","url":"https://splashlens.com"},"publisher":{"@type":"Organization","name":"SplashLens"},"image":"https://images.unsplash.com/photo-1591389703635-e15a07b842d7?w=1200&h=400&fit=crop&auto=format&q=80","description":"Pentair IntelliCenter showing errors? This guide covers the most common IntelliCenter fault messages — comm errors, sensor faults, and freeze protection — with fixes.","url":"https://splashlens.com/blog/pentair-intellicenter-errors.html"}
+{"@context":"https://schema.org","@type":"Article","headline":"Pentair IntelliCenter Common Errors: What They Mean","datePublished":"2025-08-19","dateModified":"2025-08-19","author":{"@type":"Organization","name":"SplashLens","url":"https://splashlens.com"},"publisher":{"@type":"Organization","name":"SplashLens"},"image":"https://images.unsplash.com/photo-1591389703635-e15a07b842d7?w=1200&h=400&fit=crop&auto=format&q=80","description":"Pentair IntelliCenter showing errors? This guide covers the most common IntelliCenter fault messages - comm errors, sensor faults, and freeze protection - with fixes.","url":"https://splashlens.com/blog/pentair-intellicenter-errors.html"}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does IntelliCenter 'Device Not Communicating' mean?","acceptedAnswer":{"@type":"Answer","text":"'Device Not Communicating' means the IntelliCenter load center has lost communication with one of its connected devices — typically an IntelliFlo pump, IntelliChlor, or expansion module — over the RS-485 data bus. Check wiring and device address settings."}},{"@type":"Question","name":"Why does IntelliCenter show a sensor fault?","acceptedAnswer":{"@type":"Answer","text":"Sensor faults on IntelliCenter are usually caused by a disconnected sensor wire, a failed NTC temperature sensor, or water intrusion in the sensor connector. Disconnect and reconnect the sensor connector and check the sensor resistance."}},{"@type":"Question","name":"What is IntelliCenter 'Freeze Protection Active'?","acceptedAnswer":{"@type":"Answer","text":"Freeze Protection Active is not an error — it's a notification that the system has automatically started equipment (pump, heater) to protect plumbing from freezing because the air temperature sensor detected temperatures near freezing. It is normal and intentional behavior."}},{"@type":"Question","name":"How do I update IntelliCenter firmware?","acceptedAnswer":{"@type":"Answer","text":"IntelliCenter firmware updates are delivered via the Pentair Home app over Wi-Fi, or via USB drive inserted into the load center. Always check current firmware version before diagnosing persistent control issues — many bugs have been fixed in firmware updates."}},{"@type":"Question","name":"Why does IntelliCenter show 'Pool Chem Module Not Responding'?","acceptedAnswer":{"@type":"Answer","text":"This message indicates the IntelliChem chemical controller or IntelliChlor salt chlorine generator is not communicating with the IntelliCenter. Check the RS-485 address settings on both devices and inspect the communication wiring between them."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does IntelliCenter 'Device Not Communicating' mean?","acceptedAnswer":{"@type":"Answer","text":"'Device Not Communicating' means the IntelliCenter load center has lost communication with one of its connected devices - typically an IntelliFlo pump, IntelliChlor, or expansion module - over the RS-485 data bus. Check wiring and device address settings."}},{"@type":"Question","name":"Why does IntelliCenter show a sensor fault?","acceptedAnswer":{"@type":"Answer","text":"Sensor faults on IntelliCenter are usually caused by a disconnected sensor wire, a failed NTC temperature sensor, or water intrusion in the sensor connector. Disconnect and reconnect the sensor connector and check the sensor resistance."}},{"@type":"Question","name":"What is IntelliCenter 'Freeze Protection Active'?","acceptedAnswer":{"@type":"Answer","text":"Freeze Protection Active is not an error - it's a notification that the system has automatically started equipment (pump, heater) to protect plumbing from freezing because the air temperature sensor detected temperatures near freezing. It is normal and intentional behavior."}},{"@type":"Question","name":"How do I update IntelliCenter firmware?","acceptedAnswer":{"@type":"Answer","text":"IntelliCenter firmware updates are delivered via the Pentair Home app over Wi-Fi, or via USB drive inserted into the load center. Always check current firmware version before diagnosing persistent control issues - many bugs have been fixed in firmware updates."}},{"@type":"Question","name":"Why does IntelliCenter show 'Pool Chem Module Not Responding'?","acceptedAnswer":{"@type":"Answer","text":"This message indicates the IntelliChem chemical controller or IntelliChlor salt chlorine generator is not communicating with the IntelliCenter. Check the RS-485 address settings on both devices and inspect the communication wiring between them."}}]}
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -61,132 +61,133 @@ footer{background:#0f172a;color:#94a3b8;padding:32px 24px;text-align:center;font
 footer a{color:#7dd3fc;text-decoration:none}
 @media(max-width:640px){.hero-img{height:220px}}
 </style>
+<script src="/ga4.js" defer></script>
 </head>
 <body>
 <nav>
-  <a href="/" class="nav-logo">SplashLens</a>
-  <a href="https://app.splashlens.com" class="nav-cta">Open App Free →</a>
+ <a href="/" class="nav-logo">SplashLens</a>
+ <a href="https://app.splashlens.com" class="nav-cta">Open App Free -></a>
 </nav>
 <img src="https://images.unsplash.com/photo-1591389703635-e15a07b842d7?w=1200&h=400&fit=crop&auto=format&q=80" alt="Pool automation technician" class="hero-img" loading="lazy">
 <div class="container">
-  <div class="breadcrumb"><a href="/">SplashLens</a> › <a href="/blog/">Blog</a> › Error Codes</div>
-  <h1>Pentair IntelliCenter Common Errors: What They Mean</h1>
-  <div class="post-meta">
-    <span>📅 August 19, 2025</span>
-    <span class="post-tag">Error Codes</span>
-    <span>⏱ 8 min read</span>
-  </div>
+ <div class="breadcrumb"><a href="/">SplashLens</a> > <a href="/blog/">Blog</a> > Error Codes</div>
+ <h1>Pentair IntelliCenter Common Errors: What They Mean</h1>
+ <div class="post-meta">
+ <span>Date: August 19, 2025</span>
+ <span class="post-tag">Error Codes</span>
+ <span>Time: 8 min read</span>
+ </div>
 
-  <p>The Pentair IntelliCenter is one of the most capable pool automation systems on the market, integrating control of pumps, heaters, lights, chemistry, and more through a single touchscreen interface or smartphone app. With that capability comes complexity — and a range of error messages that can appear and confuse both homeowners and technicians. This guide covers the messages you'll encounter most frequently and what to do about each one.</p>
+ <p>The Pentair IntelliCenter is one of the most capable pool automation systems on the market, integrating control of pumps, heaters, lights, chemistry, and more through a single touchscreen interface or smartphone app. With that capability comes complexity - and a range of error messages that can appear and confuse both homeowners and technicians. This guide covers the messages you'll encounter most frequently and what to do about each one.</p>
 
-  <h2>IntelliCenter Architecture Basics</h2>
-  <p>The IntelliCenter uses an RS-485 data bus (same as the IntelliFlo pumps) to communicate with all connected devices. The load center is the hub; expansion boards, pumps, and the IntelliChlor or IntelliChem connect as nodes. When any node stops communicating, the IntelliCenter logs an error. Many of the "errors" you'll see are actually communication failures, not device failures.</p>
+ <h2>IntelliCenter Architecture Basics</h2>
+ <p>The IntelliCenter uses an RS-485 data bus (same as the IntelliFlo pumps) to communicate with all connected devices. The load center is the hub; expansion boards, pumps, and the IntelliChlor or IntelliChem connect as nodes. When any node stops communicating, the IntelliCenter logs an error. Many of the "errors" you'll see are actually communication failures, not device failures.</p>
 
-  <div class="callout">
-    <p>First step for any IntelliCenter error: check firmware version. Many communication and sensor bugs have been fixed in firmware updates. Navigate to Settings &gt; General &gt; Firmware to check. Updates are delivered via the Pentair Home app or USB drive.</p>
-  </div>
+ <div class="callout">
+ <p>First step for any IntelliCenter error: check firmware version. Many communication and sensor bugs have been fixed in firmware updates. Navigate to Settings &gt; General &gt; Firmware to check. Updates are delivered via the Pentair Home app or USB drive.</p>
+ </div>
 
-  <h2>Common IntelliCenter Error Messages</h2>
+ <h2>Common IntelliCenter Error Messages</h2>
 
-  <h3>"Device Not Communicating" or "[Device Name] Offline"</h3>
-  <p>This is the most frequent error in the field. It means the load center cannot communicate with a specific device on the RS-485 bus — typically an IntelliFlo pump, IntelliChlor cell, IntelliChem controller, or an expansion board. Causes:</p>
-  <ul>
-    <li>RS-485 wiring loose or corroded at any terminal in the chain</li>
-    <li>A/B polarity reversed somewhere in the wiring</li>
-    <li>Duplicate device addresses on the bus</li>
-    <li>A failed device (the device itself has died)</li>
-    <li>Firmware mismatch between the load center and the device</li>
-  </ul>
-  <p>Diagnostic approach: Power everything down. Inspect all terminal connections. Re-check A/B polarity at every device. Confirm unique device addresses. Power up and test one device at a time if needed to isolate which device or cable segment is the problem.</p>
+ <h3>"Device Not Communicating" or "[Device Name] Offline"</h3>
+ <p>This is the most frequent error in the field. It means the load center cannot communicate with a specific device on the RS-485 bus - typically an IntelliFlo pump, IntelliChlor cell, IntelliChem controller, or an expansion board. Causes:</p>
+ <ul>
+ <li>RS-485 wiring loose or corroded at any terminal in the chain</li>
+ <li>A/B polarity reversed somewhere in the wiring</li>
+ <li>Duplicate device addresses on the bus</li>
+ <li>A failed device (the device itself has died)</li>
+ <li>Firmware mismatch between the load center and the device</li>
+ </ul>
+ <p>Diagnostic approach: Power everything down. Inspect all terminal connections. Re-check A/B polarity at every device. Confirm unique device addresses. Power up and test one device at a time if needed to isolate which device or cable segment is the problem.</p>
 
-  <h3>Sensor Fault (Air/Water/Solar Temperature Sensor)</h3>
-  <p>IntelliCenter uses NTC thermistor sensors for air temperature, pool water temperature, spa water temperature, and solar temperature. A sensor fault message typically means:</p>
-  <ul>
-    <li>The sensor wire is disconnected from the terminal block on the load center or expansion board</li>
-    <li>The sensor itself has failed (open or short circuit)</li>
-    <li>Water has infiltrated the sensor connector</li>
-  </ul>
-  <p>Test: Disconnect the sensor wire and measure resistance between the two wires. An NTC thermistor should read approximately 10,000 ohms (10K) at 77°F (25°C). Readings near zero (short) or open (infinite resistance) indicate sensor failure. Sensors cost $15–25 and are easy to replace.</p>
+ <h3>Sensor Fault (Air/Water/Solar Temperature Sensor)</h3>
+ <p>IntelliCenter uses NTC thermistor sensors for air temperature, pool water temperature, spa water temperature, and solar temperature. A sensor fault message typically means:</p>
+ <ul>
+ <li>The sensor wire is disconnected from the terminal block on the load center or expansion board</li>
+ <li>The sensor itself has failed (open or short circuit)</li>
+ <li>Water has infiltrated the sensor connector</li>
+ </ul>
+ <p>Test: Disconnect the sensor wire and measure resistance between the two wires. An NTC thermistor should read approximately 10,000 ohms (10K) at 77 degrees F (25 degrees C). Readings near zero (short) or open (infinite resistance) indicate sensor failure. Sensors cost $15-25 and are easy to replace.</p>
 
-  <h3>Freeze Protection Active</h3>
-  <p>This is a notification, not an error. When the air temperature sensor reads below the configured freeze protection threshold (typically 35–40°F), the IntelliCenter automatically starts the pump and optionally the heater to protect plumbing from freezing. The system will display "Freeze Protection Active" during this time. No action is required — the system is working correctly. Once temperature rises above the threshold, normal scheduling resumes.</p>
+ <h3>Freeze Protection Active</h3>
+ <p>This is a notification, not an error. When the air temperature sensor reads below the configured freeze protection threshold (typically 35-40 degrees F), the IntelliCenter automatically starts the pump and optionally the heater to protect plumbing from freezing. The system will display "Freeze Protection Active" during this time. No action is required - the system is working correctly. Once temperature rises above the threshold, normal scheduling resumes.</p>
 
-  <h3>High Water Temperature Warning</h3>
-  <p>If the water temperature sensor reads above 104°F (40°C), the IntelliCenter displays a high temperature warning. Common causes: heater set too high, solar panels overheating a pool with no shade, or a failed water temperature sensor reading falsely high. Verify actual water temperature with a calibrated thermometer. If the pool temperature matches the display, lower the heater setpoint.</p>
+ <h3>High Water Temperature Warning</h3>
+ <p>If the water temperature sensor reads above 104 degrees F (40 degrees C), the IntelliCenter displays a high temperature warning. Common causes: heater set too high, solar panels overheating a pool with no shade, or a failed water temperature sensor reading falsely high. Verify actual water temperature with a calibrated thermometer. If the pool temperature matches the display, lower the heater setpoint.</p>
 
-  <h3>IntelliChlor / Salt System Errors</h3>
-  <p>If an IntelliChlor salt chlorine generator is connected, the IntelliCenter will display its status. Common messages:</p>
-  <ul>
-    <li>"No Flow" — IntelliChlor flow switch not detecting adequate flow; check pump is running</li>
-    <li>"Low Salt" — Salt level below the generator's minimum (typically 2,400 ppm); test actual salt level and add if needed</li>
-    <li>"High Current" — Cell scaling or high salt; inspect cell for scaling, test salt level</li>
-    <li>"Low Current" — Worn cell or very low salt; test salt level, inspect cell blades</li>
-  </ul>
+ <h3>IntelliChlor / Salt System Errors</h3>
+ <p>If an IntelliChlor salt chlorine generator is connected, the IntelliCenter will display its status. Common messages:</p>
+ <ul>
+ <li>"No Flow" - IntelliChlor flow switch not detecting adequate flow; check pump is running</li>
+ <li>"Low Salt" - Salt level below the generator's minimum (typically 2,400 ppm); test actual salt level and add if needed</li>
+ <li>"High Current" - Cell scaling or high salt; inspect cell for scaling, test salt level</li>
+ <li>"Low Current" - Worn cell or very low salt; test salt level, inspect cell blades</li>
+ </ul>
 
-  <h2>IntelliCenter Error Message Quick Reference</h2>
-  <table>
-    <thead>
-      <tr><th>Message</th><th>Meaning</th><th>First Action</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Device Not Communicating</td><td>RS-485 loss</td><td>Check wiring, polarity, addresses</td></tr>
-      <tr><td>Sensor Fault</td><td>NTC sensor open/short</td><td>Test sensor resistance, replace</td></tr>
-      <tr><td>Freeze Protection Active</td><td>Normal freeze protection</td><td>None — wait for temp rise</td></tr>
-      <tr><td>High Water Temp</td><td>Pool >104°F or sensor fault</td><td>Verify with thermometer</td></tr>
-      <tr><td>No Flow (salt system)</td><td>IntelliChlor flow switch</td><td>Confirm pump is running</td></tr>
-      <tr><td>Low Salt</td><td>Salt below minimum</td><td>Test salt, add if needed</td></tr>
-      <tr><td>Heater Fault</td><td>Heater-specific error</td><td>Check heater display for specific code</td></tr>
-    </tbody>
-  </table>
+ <h2>IntelliCenter Error Message Quick Reference</h2>
+ <table>
+ <thead>
+ <tr><th>Message</th><th>Meaning</th><th>First Action</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>Device Not Communicating</td><td>RS-485 loss</td><td>Check wiring, polarity, addresses</td></tr>
+ <tr><td>Sensor Fault</td><td>NTC sensor open/short</td><td>Test sensor resistance, replace</td></tr>
+ <tr><td>Freeze Protection Active</td><td>Normal freeze protection</td><td>None - wait for temp rise</td></tr>
+ <tr><td>High Water Temp</td><td>Pool >104 degrees F or sensor fault</td><td>Verify with thermometer</td></tr>
+ <tr><td>No Flow (salt system)</td><td>IntelliChlor flow switch</td><td>Confirm pump is running</td></tr>
+ <tr><td>Low Salt</td><td>Salt below minimum</td><td>Test salt, add if needed</td></tr>
+ <tr><td>Heater Fault</td><td>Heater-specific error</td><td>Check heater display for specific code</td></tr>
+ </tbody>
+ </table>
 
-  <div class="warning-box">
-    <p>Warning: If IntelliCenter shows a "Heater Fault," always go to the heater itself and read its own display for the specific fault code. IntelliCenter only relays that the heater has faulted — the specific diagnosis requires reading the heater's native code directly.</p>
-  </div>
+ <div class="warning-box">
+ <p>Warning: If IntelliCenter shows a "Heater Fault," always go to the heater itself and read its own display for the specific fault code. IntelliCenter only relays that the heater has faulted - the specific diagnosis requires reading the heater's native code directly.</p>
+ </div>
 
-  <p>You can look up IntelliCenter error messages and cross-reference with connected device codes in <a href="https://app.splashlens.com">SplashLens</a> — offline at the equipment pad, no Wi-Fi required.</p>
+ <p>You can look up IntelliCenter error messages and cross-reference with connected device codes in <a href="https://app.splashlens.com">SplashLens</a> - offline at the equipment pad, no Wi-Fi required.</p>
 
-  <div class="app-cta">
-    <h3>IntelliCenter Error Reference — Offline at the Equipment Pad</h3>
-    <p>SplashLens covers IntelliCenter, EasyTouch, and all Pentair automation error messages. Free, no login, works anywhere.</p>
-    <a href="https://app.splashlens.com">Open SplashLens Free →</a>
-  </div>
+ <div class="app-cta">
+ <h3>IntelliCenter Error Reference - Offline at the Equipment Pad</h3>
+ <p>SplashLens covers IntelliCenter, EasyTouch, and all Pentair automation error messages. Free, no login, works anywhere.</p>
+ <a href="https://app.splashlens.com">Open SplashLens Free -></a>
+ </div>
 
-  <div class="faq-section">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <div class="faq-q">What does IntelliCenter 'Device Not Communicating' mean?</div>
-      <p class="faq-a">'Device Not Communicating' means the IntelliCenter load center has lost communication with one of its connected devices — typically an IntelliFlo pump, IntelliChlor, or expansion module — over the RS-485 data bus. Check wiring and device address settings.</p>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Why does IntelliCenter show a sensor fault?</div>
-      <p class="faq-a">Sensor faults on IntelliCenter are usually caused by a disconnected sensor wire, a failed NTC temperature sensor, or water intrusion in the sensor connector. Disconnect and reconnect the sensor connector and check the sensor resistance.</p>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What is IntelliCenter 'Freeze Protection Active'?</div>
-      <p class="faq-a">Freeze Protection Active is not an error — it's a notification that the system has automatically started equipment to protect plumbing from freezing because the air temperature sensor detected temperatures near freezing. It is normal and intentional behavior.</p>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How do I update IntelliCenter firmware?</div>
-      <p class="faq-a">IntelliCenter firmware updates are delivered via the Pentair Home app over Wi-Fi, or via USB drive inserted into the load center. Always check current firmware version before diagnosing persistent control issues.</p>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Why does IntelliCenter show 'Pool Chem Module Not Responding'?</div>
-      <p class="faq-a">This message indicates the IntelliChem chemical controller or IntelliChlor salt chlorine generator is not communicating with the IntelliCenter. Check the RS-485 address settings on both devices and inspect the communication wiring between them.</p>
-    </div>
-  </div>
+ <div class="faq-section">
+ <h2>Frequently Asked Questions</h2>
+ <div class="faq-item">
+ <div class="faq-q">What does IntelliCenter 'Device Not Communicating' mean?</div>
+ <p class="faq-a">'Device Not Communicating' means the IntelliCenter load center has lost communication with one of its connected devices - typically an IntelliFlo pump, IntelliChlor, or expansion module - over the RS-485 data bus. Check wiring and device address settings.</p>
+ </div>
+ <div class="faq-item">
+ <div class="faq-q">Why does IntelliCenter show a sensor fault?</div>
+ <p class="faq-a">Sensor faults on IntelliCenter are usually caused by a disconnected sensor wire, a failed NTC temperature sensor, or water intrusion in the sensor connector. Disconnect and reconnect the sensor connector and check the sensor resistance.</p>
+ </div>
+ <div class="faq-item">
+ <div class="faq-q">What is IntelliCenter 'Freeze Protection Active'?</div>
+ <p class="faq-a">Freeze Protection Active is not an error - it's a notification that the system has automatically started equipment to protect plumbing from freezing because the air temperature sensor detected temperatures near freezing. It is normal and intentional behavior.</p>
+ </div>
+ <div class="faq-item">
+ <div class="faq-q">How do I update IntelliCenter firmware?</div>
+ <p class="faq-a">IntelliCenter firmware updates are delivered via the Pentair Home app over Wi-Fi, or via USB drive inserted into the load center. Always check current firmware version before diagnosing persistent control issues.</p>
+ </div>
+ <div class="faq-item">
+ <div class="faq-q">Why does IntelliCenter show 'Pool Chem Module Not Responding'?</div>
+ <p class="faq-a">This message indicates the IntelliChem chemical controller or IntelliChlor salt chlorine generator is not communicating with the IntelliCenter. Check the RS-485 address settings on both devices and inspect the communication wiring between them.</p>
+ </div>
+ </div>
 
-  <div class="related">
-    <h3>Related Guides</h3>
-    <div class="related-links">
-      <a href="/blog/intelliflo-e10-communication.html">IntelliFlo E10 Communication Fault: RS-485 Fix Guide</a>
-      <a href="/blog/pentair-mastertemp-e05.html">Pentair MasterTemp E05 Error: Step-by-Step Fix</a>
-      <a href="/blog/hayward-omnilogic-errors.html">Hayward OmniLogic Troubleshooting: Common Error Codes</a>
-    </div>
-  </div>
+ <div class="related">
+ <h3>Related Guides</h3>
+ <div class="related-links">
+ <a href="/blog/intelliflo-e10-communication.html">IntelliFlo E10 Communication Fault: RS-485 Fix Guide</a>
+ <a href="/blog/pentair-mastertemp-e05.html">Pentair MasterTemp E05 Error: Step-by-Step Fix</a>
+ <a href="/blog/hayward-omnilogic-errors.html">Hayward OmniLogic Troubleshooting: Common Error Codes</a>
+ </div>
+ </div>
 </div>
 <footer>
-  <p>© 2026 SplashLens · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>
-  <p style="margin-top:8px">SplashLens is a free field reference tool for pool service professionals. Not affiliated with Hayward, Pentair, Jandy, or Maytronics.</p>
+ <p>(c) 2026 SplashLens | <a href="/">Home</a> | <a href="/blog/">Blog</a> | <a href="/privacy.html">Privacy</a> | <a href="/terms.html">Terms</a></p>
+ <p style="margin-top:8px">SplashLens is a free field reference tool for pool service professionals. Not affiliated with Hayward, Pentair, Jandy, or Maytronics.</p>
 </footer>
 </body>
 </html>

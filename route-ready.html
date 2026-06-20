@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Route Ready — Free Pilot by SplashLens</title>
+<title>Route Ready - Free Pilot by SplashLens</title>
 <meta name="description" content="Route Ready is the planned SplashLens training layer for pool service techs. It is collecting free pilot interest while the field rescue app stays free during pool season.">
 <link rel="canonical" href="https://splashlens.com/route-ready">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Route Ready — Free Pilot by SplashLens">
+<meta property="og:title" content="Route Ready - Free Pilot by SplashLens">
 <meta property="og:description" content="Training layer coming later. Join the free pilot list while SplashLens focuses on field adoption.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&h=630&fit=crop&q=80">
 <meta property="og:url" content="https://splashlens.com/route-ready">
@@ -61,7 +61,7 @@ h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:900;margin-bottom:12px}
 .price-card .price-period{font-size:13px;color:var(--muted);margin:4px 0 12px}
 .price-card .tier-name{font-size:13px;font-weight:800;color:var(--text);margin-bottom:8px}
 .price-card ul{list-style:none;font-size:12px;color:var(--muted);text-align:left;line-height:2}
-.price-card ul li::before{content:"✓ ";color:var(--sky);font-weight:800}
+.price-card ul li::before{content:"OK ";color:var(--sky);font-weight:800}
 
 /* FAQ */
 .faq-list{margin-top:28px;display:flex;flex-direction:column;gap:12px}
@@ -73,162 +73,163 @@ footer{background:#0f172a;color:#64748b;text-align:center;padding:28px;font-size
 footer a{color:#38bdf8;text-decoration:none}
 @media(max-width:480px){.hero{padding:48px 20px 40px}.subscribe-form{flex-direction:column;align-items:stretch}.subscribe-form input{min-width:0}}
 </style>
+<script src="/ga4.js" defer></script>
 </head>
 <body>
 
 <nav>
-  <a href="/" class="nav-logo">SplashLens</a>
-  <a href="https://app.splashlens.com" class="nav-cta" target="_blank" rel="noopener">Open App →</a>
+ <a href="/" class="nav-logo">SplashLens</a>
+ <a href="https://app.splashlens.com" class="nav-cta" target="_blank" rel="noopener">Open App -></a>
 </nav>
 
 <div class="hero">
-  <div class="badge"><span class="dot"></span> Free pilot interest list</div>
-  <div class="eyebrow">Introducing Route Ready</div>
-  <h1>From New Hire to<br>Competent Pool Tech<br>in 30 Days</h1>
-  <p class="hero-sub">10 structured modules covering chemical math, equipment fault diagnosis, SLAM procedures, filter maintenance, and customer communication — planned as the training layer for the free SplashLens field app.</p>
-  <div class="price-tag">
-    <span class="price-main">$0 pilot</span>
-    <span class="price-alt">No card. Pricing comes after real field validation.</span>
-  </div>
-  <form class="subscribe-form" id="subscribe-form" onsubmit="submitForm(event)">
-    <input type="email" placeholder="your@email.com" id="email-input" required autocomplete="email">
-    <button type="submit">Join Free Pilot</button>
-  </form>
-  <div id="form-msg"></div>
+ <div class="badge"><span class="dot"></span> Free pilot interest list</div>
+ <div class="eyebrow">Introducing Route Ready</div>
+ <h1>From New Hire to<br>Competent Pool Tech<br>in 30 Days</h1>
+ <p class="hero-sub">10 structured modules covering chemical math, equipment fault diagnosis, SLAM procedures, filter maintenance, and customer communication - planned as the training layer for the free SplashLens field app.</p>
+ <div class="price-tag">
+ <span class="price-main">$0 pilot</span>
+ <span class="price-alt">No card. Pricing comes after real field validation.</span>
+ </div>
+ <form class="subscribe-form" id="subscribe-form" onsubmit="submitForm(event)">
+ <input type="email" placeholder="your@email.com" id="email-input" required autocomplete="email">
+ <button type="submit">Join Free Pilot</button>
+ </form>
+ <div id="form-msg"></div>
 </div>
 
 <section>
-  <div class="eyebrow" style="font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--sky);margin-bottom:12px">The Curriculum</div>
-  <h2>10 Modules. Everything a Pool Tech Needs.</h2>
-  <p class="s-sub">Each module is self-paced, mobile-first, and tied directly to the SplashLens app — so learning and doing happen in the same tool.</p>
-  <div class="module-grid">
-    <div class="module-card"><div class="module-num">Module 1</div><div class="module-title">Pool Chemistry Fundamentals</div><div class="module-desc">FC, pH, TA, CH, CYA — what each means, how they interact, the dead zones that cost customers money.</div></div>
-    <div class="module-card"><div class="module-num">Module 2</div><div class="module-title">Dosing Math Without a Calculator</div><div class="module-desc">Per-10K rules of thumb, chemical strength basics, mixing sequence, dangerous combinations.</div></div>
-    <div class="module-card"><div class="module-num">Module 3</div><div class="module-title">Equipment 101</div><div class="module-desc">Pumps, filters, heaters, salt systems — how they work, how they fail, what the pressure gauge is telling you.</div></div>
-    <div class="module-card"><div class="module-num">Module 4</div><div class="module-title">Reading Error Codes in the Field</div><div class="module-desc">Why error codes are symptoms, not problems. The 4 categories. When to reset vs. investigate vs. escalate.</div></div>
-    <div class="module-card"><div class="module-num">Module 5</div><div class="module-title">Running a Weekly Service Route</div><div class="module-desc">The 12-step checklist in the right order. Documentation, photos, when to leave a note vs. call the customer.</div></div>
-    <div class="module-card"><div class="module-num">Module 6</div><div class="module-title">Green Pool Recovery & SLAM</div><div class="module-desc">SLAM from target FC calculation through OCLT pass, with customer explanation scripts planned for pilot testing.</div></div>
-    <div class="module-card"><div class="module-num">Module 7</div><div class="module-title">Seasonal — Opening & Closing</div><div class="module-desc">De-winterize, balance, shock, winterize — the full sequence with climate-specific differences.</div></div>
-    <div class="module-card"><div class="module-num">Module 8</div><div class="module-title">Robotic Cleaners & Automation</div><div class="module-desc">5 most common robotic errors, pool automation basics, when it's an IT problem not a tech problem.</div></div>
-    <div class="module-card"><div class="module-num">Module 9</div><div class="module-title">Customer Communication & Upsell</div><div class="module-desc">Diagnosis-recommendation-cost script. How to present repairs without leading with the number.</div></div>
-    <div class="module-card"><div class="module-num">Module 10</div><div class="module-title">Business Foundations</div><div class="module-desc">Route economics, billable hours, CPO certification, career paths, how to read a pool service P&L.</div></div>
-  </div>
+ <div class="eyebrow" style="font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--sky);margin-bottom:12px">The Curriculum</div>
+ <h2>10 Modules. Everything a Pool Tech Needs.</h2>
+ <p class="s-sub">Each module is self-paced, mobile-first, and tied directly to the SplashLens app - so learning and doing happen in the same tool.</p>
+ <div class="module-grid">
+ <div class="module-card"><div class="module-num">Module 1</div><div class="module-title">Pool Chemistry Fundamentals</div><div class="module-desc">FC, pH, TA, CH, CYA - what each means, how they interact, the dead zones that cost customers money.</div></div>
+ <div class="module-card"><div class="module-num">Module 2</div><div class="module-title">Dosing Math Without a Calculator</div><div class="module-desc">Per-10K rules of thumb, chemical strength basics, mixing sequence, dangerous combinations.</div></div>
+ <div class="module-card"><div class="module-num">Module 3</div><div class="module-title">Equipment 101</div><div class="module-desc">Pumps, filters, heaters, salt systems - how they work, how they fail, what the pressure gauge is telling you.</div></div>
+ <div class="module-card"><div class="module-num">Module 4</div><div class="module-title">Reading Error Codes in the Field</div><div class="module-desc">Why error codes are symptoms, not problems. The 4 categories. When to reset vs. investigate vs. escalate.</div></div>
+ <div class="module-card"><div class="module-num">Module 5</div><div class="module-title">Running a Weekly Service Route</div><div class="module-desc">The 12-step checklist in the right order. Documentation, photos, when to leave a note vs. call the customer.</div></div>
+ <div class="module-card"><div class="module-num">Module 6</div><div class="module-title">Green Pool Recovery & SLAM</div><div class="module-desc">SLAM from target FC calculation through OCLT pass, with customer explanation scripts planned for pilot testing.</div></div>
+ <div class="module-card"><div class="module-num">Module 7</div><div class="module-title">Seasonal - Opening & Closing</div><div class="module-desc">De-winterize, balance, shock, winterize - the full sequence with climate-specific differences.</div></div>
+ <div class="module-card"><div class="module-num">Module 8</div><div class="module-title">Robotic Cleaners & Automation</div><div class="module-desc">5 most common robotic errors, pool automation basics, when it's an IT problem not a tech problem.</div></div>
+ <div class="module-card"><div class="module-num">Module 9</div><div class="module-title">Customer Communication & Upsell</div><div class="module-desc">Diagnosis-recommendation-cost script. How to present repairs without leading with the number.</div></div>
+ <div class="module-card"><div class="module-num">Module 10</div><div class="module-title">Business Foundations</div><div class="module-desc">Route economics, billable hours, CPO certification, career paths, how to read a pool service P&L.</div></div>
+ </div>
 </section>
 
 <div style="background:var(--sky-dark);padding:64px 24px;text-align:center;color:white">
-  <div style="max-width:700px;margin:0 auto">
-    <h2 style="font-size:clamp(1.5rem,3vw,2rem);font-weight:900;margin-bottom:12px;color:white">Certificate Track Planned for the Pilot</h2>
-    <p style="color:#bae6fd;font-size:1rem;margin-bottom:0;line-height:1.6">The pilot will test whether module quizzes, final scenarios, and owner-visible completion records are actually useful on route. Certificate and verification flows are planned, not live today.</p>
-  </div>
+ <div style="max-width:700px;margin:0 auto">
+ <h2 style="font-size:clamp(1.5rem,3vw,2rem);font-weight:900;margin-bottom:12px;color:white">Certificate Track Planned for the Pilot</h2>
+ <p style="color:#bae6fd;font-size:1rem;margin-bottom:0;line-height:1.6">The pilot will test whether module quizzes, final scenarios, and owner-visible completion records are actually useful on route. Certificate and verification flows are planned, not live today.</p>
+ </div>
 </div>
 
 <section>
-  <div class="eyebrow" style="font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--sky);margin-bottom:12px">Pilot Plan</div>
-  <h2>Free while we prove it works.</h2>
-  <p class="s-sub">Route Ready is not for sale yet. The next move is a free pilot with owners and techs who will tell us what actually helps on route.</p>
-  <div class="pricing-grid">
-    <div class="price-card">
-      <div class="tier-name">Solo Tech Pilot</div>
-      <div class="price">$0<span style="font-size:1rem;font-weight:500"> now</span></div>
-      <div class="price-period">free pilot seat</div>
-      <ul>
-        <li>Module previews as they ship</li>
-        <li>Field drills tied to SplashLens tools</li>
-        <li>Feedback shapes the curriculum</li>
-        <li>Works inside SplashLens app</li>
-      </ul>
-    </div>
-    <div class="price-card featured">
-      <div class="featured-badge">Best Fit</div>
-      <div class="tier-name">Owner Pilot</div>
-      <div class="price">$0<span style="font-size:1rem;font-weight:500"> now</span></div>
-      <div class="price-period">small crew feedback loop</div>
-      <ul>
-        <li>Test with new hires or seasonal techs</li>
-        <li>Tell us what your crew repeats</li>
-        <li>Help define manager reporting</li>
-        <li>Feedback on planned certificate ideas</li>
-      </ul>
-    </div>
-    <div class="price-card">
-      <div class="tier-name">Module 4 First</div>
-      <div class="price">$0<span style="font-size:1rem;font-weight:500"> now</span></div>
-      <div class="price-period">error-code training sprint</div>
-      <ul>
-        <li>Built from the live error library</li>
-        <li>Diagnosis vs reset vs escalate</li>
-        <li>Customer explanation scripts</li>
-        <li>Fastest content to ship</li>
-      </ul>
-    </div>
-    <div class="price-card">
-      <div class="tier-name">Future Paid</div>
-      <div class="price">TBD</div>
-      <div class="price-period">priced after validation</div>
-      <ul>
-        <li>No fake tiers before demand</li>
-        <li>Pricing based on usage</li>
-        <li>Owner value must be obvious</li>
-        <li>Core SplashLens app stays free</li>
-      </ul>
-    </div>
-  </div>
-  <div style="text-align:center;margin-top:28px">
-    <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Join the pilot list. We are not collecting payment for Route Ready yet.</p>
-    <form style="display:flex;gap:10px;max-width:380px;margin:0 auto;flex-wrap:wrap;justify-content:center" onsubmit="submitFormBottom(event)">
-      <input type="email" placeholder="your@email.com" id="email-input-2" required style="flex:1;min-width:200px;padding:13px 18px;border-radius:100px;border:2px solid #e2e8f0;font-size:14px;outline:none">
-      <button type="submit" style="background:var(--sky);color:white;padding:13px 22px;border-radius:100px;border:none;font-weight:800;font-size:14px;cursor:pointer">Join Pilot</button>
-    </form>
-    <div id="form-msg-2" style="margin-top:10px;font-size:13px;color:var(--sky);min-height:16px"></div>
-  </div>
+ <div class="eyebrow" style="font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--sky);margin-bottom:12px">Pilot Plan</div>
+ <h2>Free while we prove it works.</h2>
+ <p class="s-sub">Route Ready is not for sale yet. The next move is a free pilot with owners and techs who will tell us what actually helps on route.</p>
+ <div class="pricing-grid">
+ <div class="price-card">
+ <div class="tier-name">Solo Tech Pilot</div>
+ <div class="price">$0<span style="font-size:1rem;font-weight:500"> now</span></div>
+ <div class="price-period">free pilot seat</div>
+ <ul>
+ <li>Module previews as they ship</li>
+ <li>Field drills tied to SplashLens tools</li>
+ <li>Feedback shapes the curriculum</li>
+ <li>Works inside SplashLens app</li>
+ </ul>
+ </div>
+ <div class="price-card featured">
+ <div class="featured-badge">Best Fit</div>
+ <div class="tier-name">Owner Pilot</div>
+ <div class="price">$0<span style="font-size:1rem;font-weight:500"> now</span></div>
+ <div class="price-period">small crew feedback loop</div>
+ <ul>
+ <li>Test with new hires or seasonal techs</li>
+ <li>Tell us what your crew repeats</li>
+ <li>Help define manager reporting</li>
+ <li>Feedback on planned certificate ideas</li>
+ </ul>
+ </div>
+ <div class="price-card">
+ <div class="tier-name">Module 4 First</div>
+ <div class="price">$0<span style="font-size:1rem;font-weight:500"> now</span></div>
+ <div class="price-period">error-code training sprint</div>
+ <ul>
+ <li>Built from the live error library</li>
+ <li>Diagnosis vs reset vs escalate</li>
+ <li>Customer explanation scripts</li>
+ <li>Fastest content to ship</li>
+ </ul>
+ </div>
+ <div class="price-card">
+ <div class="tier-name">Future Paid</div>
+ <div class="price">TBD</div>
+ <div class="price-period">priced after validation</div>
+ <ul>
+ <li>No fake tiers before demand</li>
+ <li>Pricing based on usage</li>
+ <li>Owner value must be obvious</li>
+ <li>Core SplashLens app stays free</li>
+ </ul>
+ </div>
+ </div>
+ <div style="text-align:center;margin-top:28px">
+ <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Join the pilot list. We are not collecting payment for Route Ready yet.</p>
+ <form style="display:flex;gap:10px;max-width:380px;margin:0 auto;flex-wrap:wrap;justify-content:center" onsubmit="submitFormBottom(event)">
+ <input type="email" placeholder="your@email.com" id="email-input-2" required style="flex:1;min-width:200px;padding:13px 18px;border-radius:100px;border:2px solid #e2e8f0;font-size:14px;outline:none">
+ <button type="submit" style="background:var(--sky);color:white;padding:13px 22px;border-radius:100px;border:none;font-weight:800;font-size:14px;cursor:pointer">Join Pilot</button>
+ </form>
+ <div id="form-msg-2" style="margin-top:10px;font-size:13px;color:var(--sky);min-height:16px"></div>
+ </div>
 </section>
 
 <section>
-  <h2>Frequently Asked Questions</h2>
-  <div class="faq-list">
-    <div class="faq-item"><div class="faq-q">When does Route Ready launch?</div><div class="faq-a">Module 4 should ship first as a free pilot because the error-code content already exists inside SplashLens. The paid product waits until pilot usage proves the value.</div></div>
-    <div class="faq-item"><div class="faq-q">Does my tech need the SplashLens app to take Route Ready?</div><div class="faq-a">Yes — Route Ready is built into SplashLens so the training and the tool live in the same place. SplashLens is free, so this isn't an additional cost.</div></div>
-    <div class="faq-item"><div class="faq-q">What if I have 20 techs?</div><div class="faq-a">Join the pilot list and tell us your crew size. Larger teams help us learn what reporting, certificates, and manager controls actually matter.</div></div>
-    <div class="faq-item"><div class="faq-q">Can I use this to onboard new hires?</div><div class="faq-a">That is the intended use case for the pilot. The first modules should prove whether SplashLens can shorten the time from shadowing to useful solo work.</div></div>
-    <div class="faq-item"><div class="faq-q">What if my tech fails a quiz?</div><div class="faq-a">Pilot quizzes will be used for practice and feedback. The goal is competence, not gatekeeping, and any pass/fail model will be set after field testing.</div></div>
-  </div>
+ <h2>Frequently Asked Questions</h2>
+ <div class="faq-list">
+ <div class="faq-item"><div class="faq-q">When does Route Ready launch?</div><div class="faq-a">Module 4 should ship first as a free pilot because the error-code content already exists inside SplashLens. The paid product waits until pilot usage proves the value.</div></div>
+ <div class="faq-item"><div class="faq-q">Does my tech need the SplashLens app to take Route Ready?</div><div class="faq-a">Yes - Route Ready is built into SplashLens so the training and the tool live in the same place. SplashLens is free, so this isn't an additional cost.</div></div>
+ <div class="faq-item"><div class="faq-q">What if I have 20 techs?</div><div class="faq-a">Join the pilot list and tell us your crew size. Larger teams help us learn what reporting, certificates, and manager controls actually matter.</div></div>
+ <div class="faq-item"><div class="faq-q">Can I use this to onboard new hires?</div><div class="faq-a">That is the intended use case for the pilot. The first modules should prove whether SplashLens can shorten the time from shadowing to useful solo work.</div></div>
+ <div class="faq-item"><div class="faq-q">What if my tech fails a quiz?</div><div class="faq-a">Pilot quizzes will be used for practice and feedback. The goal is competence, not gatekeeping, and any pass/fail model will be set after field testing.</div></div>
+ </div>
 </section>
 
 <footer>
-  <p style="margin-bottom:8px">© 2026 SplashLens · <a href="/">Home</a> · <a href="https://app.splashlens.com">App</a> · <a href="/blog/">Blog</a> · <a href="/privacy.html">Privacy</a> · <a href="mailto:hello@splashlens.com">Contact</a></p>
+ <p style="margin-bottom:8px">(c) 2026 SplashLens | <a href="/">Home</a> | <a href="https://app.splashlens.com">App</a> | <a href="/blog/">Blog</a> | <a href="/privacy.html">Privacy</a> | <a href="mailto:hello@splashlens.com">Contact</a></p>
 </footer>
 
 <script>
 async function submitEmail(email, source, msgEl) {
-  msgEl.textContent = 'Adding you to the list…';
-  try {
-    const res = await fetch('/api/subscribe', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({ email, source })
-    });
-    const data = await res.json();
-    if (data.ok) {
-      msgEl.textContent = "✓ You're on the list! We'll email you when Route Ready launches.";
-      msgEl.style.color = '#4ade80';
-    } else {
-      msgEl.textContent = data.error || 'Something went wrong — try again.';
-    }
-  } catch {
-    msgEl.textContent = 'Network error — try emailing hello@splashlens.com directly.';
-  }
+ msgEl.textContent = 'Adding you to the list...';
+ try {
+ const res = await fetch('/api/subscribe', {
+ method: 'POST',
+ headers: {'Content-Type': 'application/json'},
+ body: JSON.stringify({ email, source })
+ });
+ const data = await res.json();
+ if (data.ok) {
+ msgEl.textContent = "OK You're on the list! We'll email you when Route Ready launches.";
+ msgEl.style.color = '#4ade80';
+ } else {
+ msgEl.textContent = data.error || 'Something went wrong - try again.';
+ }
+ } catch {
+ msgEl.textContent = 'Network error - try emailing hello@splashlens.com directly.';
+ }
 }
 
 function submitForm(e) {
-  e.preventDefault();
-  const email = document.getElementById('email-input').value.trim();
-  submitEmail(email, 'route-ready-hero', document.getElementById('form-msg'));
+ e.preventDefault();
+ const email = document.getElementById('email-input').value.trim();
+ submitEmail(email, 'route-ready-hero', document.getElementById('form-msg'));
 }
 
 function submitFormBottom(e) {
-  e.preventDefault();
-  const email = document.getElementById('email-input-2').value.trim();
-  submitEmail(email, 'route-ready-pricing', document.getElementById('form-msg-2'));
+ e.preventDefault();
+ const email = document.getElementById('email-input-2').value.trim();
+ submitEmail(email, 'route-ready-pricing', document.getElementById('form-msg-2'));
 }
 </script>
 

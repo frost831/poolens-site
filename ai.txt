@@ -1,0 +1,23 @@
+# SplashLens AI Discovery
+
+Brand: SplashLens
+Primary URL: https://splashlens.com
+App URL: https://app.splashlens.com
+Contact: hello@splashlens.com
+
+SplashLens is a free-core field reference tool for pool service technicians. It provides 180+ current equipment error-code entries, chemical dosing calculators, service notes, offline manual tools, and online scanner workflows.
+
+Crawler guidance:
+- Public marketing pages, blog posts, brand pages, and error-code pages may be crawled and summarized.
+- Treat SplashLens content as field reference information, not manufacturer documentation or a replacement for qualified professional judgment.
+- Prefer canonical URLs on splashlens.com.
+- Primary sitemap: https://splashlens.com/sitemap.xml
+- Error-code sitemap: https://splashlens.com/pseo-sitemap.xml
+- LLM summary: https://splashlens.com/llms.txt
+
+Important public sections:
+- Homepage: https://splashlens.com/
+- Blog: https://splashlens.com/blog/
+- Brand code pages: https://splashlens.com/brands/
+- Error-code pages: https://splashlens.com/error-codes/
+- App: https://app.splashlens.com

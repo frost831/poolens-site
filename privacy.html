@@ -9,269 +9,270 @@
 <link rel="canonical" href="https://splashlens.com/privacy.html">
 <link rel="icon" href="https://app.splashlens.com/favicon.svg" type="image/svg+xml">
 <style>
-  :root {
-    --sky: #0284c7;
-    --sky-dark: #0369a1;
-    --sky-light: #e0f2fe;
-    --sky-xlight: #f0f9ff;
-    --green: #16a34a;
-    --slate: #0f172a;
-    --slate-mid: #334155;
-    --slate-soft: #64748b;
-    --border: #e2e8f0;
-    --white: #ffffff;
-    --radius: 14px;
-    --radius-sm: 8px;
-    --card-shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.04);
-  }
+ :root {
+ --sky: #0284c7;
+ --sky-dark: #0369a1;
+ --sky-light: #e0f2fe;
+ --sky-xlight: #f0f9ff;
+ --green: #16a34a;
+ --slate: #0f172a;
+ --slate-mid: #334155;
+ --slate-soft: #64748b;
+ --border: #e2e8f0;
+ --white: #ffffff;
+ --radius: 14px;
+ --radius-sm: 8px;
+ --card-shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.04);
+ }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
 
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    background: var(--white);
-    color: var(--slate);
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
+ body {
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+ background: var(--white);
+ color: var(--slate);
+ line-height: 1.6;
+ overflow-x: hidden;
+ }
 
-  /* NAV */
-  nav {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(255,255,255,.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    padding: 0 24px;
-  }
-  .nav-inner {
-    max-width: 1100px; margin: 0 auto;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 60px;
-  }
-  .nav-logo {
-    display: flex; align-items: center; gap: 10px;
-    font-weight: 700; font-size: 1.15rem; color: var(--sky-dark);
-    text-decoration: none;
-  }
-  .nav-logo svg { width: 32px; height: 32px; }
-  .nav-links { display: flex; align-items: center; gap: 28px; }
-  .nav-links a {
-    color: var(--slate-mid); text-decoration: none; font-size: .9rem; font-weight: 500;
-    transition: color .2s;
-  }
-  .nav-links a:hover { color: var(--sky); }
-  .nav-cta {
-    background: var(--sky); color: var(--white) !important;
-    padding: 8px 20px; border-radius: 100px;
-    transition: background .2s !important;
-  }
-  .nav-cta:hover { background: var(--sky-dark) !important; }
+ /* NAV */
+ nav {
+ position: sticky; top: 0; z-index: 100;
+ background: rgba(255,255,255,.92);
+ backdrop-filter: blur(12px);
+ border-bottom: 1px solid var(--border);
+ padding: 0 24px;
+ }
+ .nav-inner {
+ max-width: 1100px; margin: 0 auto;
+ display: flex; align-items: center; justify-content: space-between;
+ height: 60px;
+ }
+ .nav-logo {
+ display: flex; align-items: center; gap: 10px;
+ font-weight: 700; font-size: 1.15rem; color: var(--sky-dark);
+ text-decoration: none;
+ }
+ .nav-logo svg { width: 32px; height: 32px; }
+ .nav-links { display: flex; align-items: center; gap: 28px; }
+ .nav-links a {
+ color: var(--slate-mid); text-decoration: none; font-size: .9rem; font-weight: 500;
+ transition: color .2s;
+ }
+ .nav-links a:hover { color: var(--sky); }
+ .nav-cta {
+ background: var(--sky); color: var(--white) !important;
+ padding: 8px 20px; border-radius: 100px;
+ transition: background .2s !important;
+ }
+ .nav-cta:hover { background: var(--sky-dark) !important; }
 
-  /* PAGE HEADER */
-  .page-header {
-    background: linear-gradient(160deg, var(--sky-dark) 0%, var(--sky) 100%);
-    padding: 60px 24px;
-    text-align: center;
-  }
-  .page-header h1 {
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    font-weight: 800; color: white;
-    margin-bottom: 12px;
-  }
-  .page-header p {
-    color: rgba(255,255,255,.85); font-size: 1rem;
-  }
+ /* PAGE HEADER */
+ .page-header {
+ background: linear-gradient(160deg, var(--sky-dark) 0%, var(--sky) 100%);
+ padding: 60px 24px;
+ text-align: center;
+ }
+ .page-header h1 {
+ font-size: clamp(1.8rem, 4vw, 2.8rem);
+ font-weight: 800; color: white;
+ margin-bottom: 12px;
+ }
+ .page-header p {
+ color: rgba(255,255,255,.85); font-size: 1rem;
+ }
 
-  /* CONTENT */
-  .content-wrap {
-    max-width: 760px; margin: 0 auto;
-    padding: 60px 24px 80px;
-  }
-  .effective-date {
-    display: inline-block;
-    background: var(--sky-xlight); color: var(--sky-dark);
-    border: 1px solid var(--sky-light);
-    padding: 6px 16px; border-radius: 100px;
-    font-size: .82rem; font-weight: 600;
-    margin-bottom: 40px;
-  }
+ /* CONTENT */
+ .content-wrap {
+ max-width: 760px; margin: 0 auto;
+ padding: 60px 24px 80px;
+ }
+ .effective-date {
+ display: inline-block;
+ background: var(--sky-xlight); color: var(--sky-dark);
+ border: 1px solid var(--sky-light);
+ padding: 6px 16px; border-radius: 100px;
+ font-size: .82rem; font-weight: 600;
+ margin-bottom: 40px;
+ }
 
-  .policy-section { margin-bottom: 40px; }
-  .policy-section h2 {
-    font-size: 1.2rem; font-weight: 700;
-    color: var(--slate); margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--sky-light);
-  }
-  .policy-section p {
-    font-size: .95rem; color: var(--slate-mid);
-    line-height: 1.75; margin-bottom: 12px;
-  }
-  .policy-section p:last-child { margin-bottom: 0; }
-  .policy-section ul {
-    margin: 12px 0 12px 20px;
-    display: flex; flex-direction: column; gap: 8px;
-  }
-  .policy-section ul li {
-    font-size: .95rem; color: var(--slate-mid); line-height: 1.6;
-  }
+ .policy-section { margin-bottom: 40px; }
+ .policy-section h2 {
+ font-size: 1.2rem; font-weight: 700;
+ color: var(--slate); margin-bottom: 12px;
+ padding-bottom: 8px;
+ border-bottom: 2px solid var(--sky-light);
+ }
+ .policy-section p {
+ font-size: .95rem; color: var(--slate-mid);
+ line-height: 1.75; margin-bottom: 12px;
+ }
+ .policy-section p:last-child { margin-bottom: 0; }
+ .policy-section ul {
+ margin: 12px 0 12px 20px;
+ display: flex; flex-direction: column; gap: 8px;
+ }
+ .policy-section ul li {
+ font-size: .95rem; color: var(--slate-mid); line-height: 1.6;
+ }
 
-  .highlight-box {
-    background: var(--sky-xlight);
-    border: 1px solid var(--sky-light);
-    border-left: 4px solid var(--sky);
-    border-radius: var(--radius-sm);
-    padding: 20px 24px;
-    margin-bottom: 32px;
-  }
-  .highlight-box p {
-    font-size: .95rem; color: var(--sky-dark); font-weight: 500; line-height: 1.6;
-    margin: 0;
-  }
+ .highlight-box {
+ background: var(--sky-xlight);
+ border: 1px solid var(--sky-light);
+ border-left: 4px solid var(--sky);
+ border-radius: var(--radius-sm);
+ padding: 20px 24px;
+ margin-bottom: 32px;
+ }
+ .highlight-box p {
+ font-size: .95rem; color: var(--sky-dark); font-weight: 500; line-height: 1.6;
+ margin: 0;
+ }
 
-  footer {
-    background: var(--slate); color: #94a3b8; padding: 32px 24px;
-    text-align: center; font-size: .85rem;
-  }
-  footer a { color: #7dd3fc; text-decoration: none; }
-  footer .container { max-width: 1100px; margin: 0 auto; }
+ footer {
+ background: var(--slate); color: #94a3b8; padding: 32px 24px;
+ text-align: center; font-size: .85rem;
+ }
+ footer a { color: #7dd3fc; text-decoration: none; }
+ footer .container { max-width: 1100px; margin: 0 auto; }
 
-  @media (max-width: 768px) {
-    .nav-links { display: none; }
-  }
+ @media (max-width: 768px) {
+ .nav-links { display: none; }
+ }
 </style>
+<script src="/ga4.js" defer></script>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <div class="nav-inner">
-    <a href="/" class="nav-logo">
-      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="32" height="32" rx="8" fill="#0284c7"/>
-        <path d="M6 20 Q10 12 16 16 Q22 20 26 12" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-        <circle cx="16" cy="10" r="3" fill="#7dd3fc"/>
-        <path d="M10 24h12" stroke="white" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-      SplashLens
-    </a>
-    <div class="nav-links">
-      <a href="/#features">Features</a>
-      <a href="/#how">How It Works</a>
-      <a href="/blog/">Blog</a>
-      <a href="https://app.splashlens.com" target="_blank" class="nav-cta">Open App -></a>
-    </div>
-  </div>
+ <div class="nav-inner">
+ <a href="/" class="nav-logo">
+ <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+ <rect width="32" height="32" rx="8" fill="#0284c7"/>
+ <path d="M6 20 Q10 12 16 16 Q22 20 26 12" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+ <circle cx="16" cy="10" r="3" fill="#7dd3fc"/>
+ <path d="M10 24h12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+ </svg>
+ SplashLens
+ </a>
+ <div class="nav-links">
+ <a href="/#features">Features</a>
+ <a href="/#how">How It Works</a>
+ <a href="/blog/">Blog</a>
+ <a href="https://app.splashlens.com" target="_blank" class="nav-cta">Open App -></a>
+ </div>
+ </div>
 </nav>
 
 <!-- PAGE HEADER -->
 <div class="page-header">
-  <h1>Privacy Policy</h1>
-  <p>Pool data stays on your device. Scanner, checkout, and waitlist actions use the services needed to run them.</p>
+ <h1>Privacy Policy</h1>
+ <p>Pool data stays on your device. Scanner, checkout, and waitlist actions use the services needed to run them.</p>
 </div>
 
 <!-- CONTENT -->
 <div class="content-wrap">
 
-  <div class="effective-date">Effective Date: June 16, 2026</div>
+ <div class="effective-date">Effective Date: June 16, 2026</div>
 
-  <div class="highlight-box">
-    <p>Short version: pool profiles, chemistry history, route notes, and checklist data stay in your browser on your device. If you join the Route Ready pilot list, we store your email. If you use the online AI scanner, your image is sent through our Cloudflare function to Anthropic for immediate analysis. If you upgrade PartSnap Pro, checkout is handled by Stripe. We also collect anonymous first-party usage events so we can see which free tools are being used and receive owner notifications when the app is actually opened or used.</p>
-  </div>
+ <div class="highlight-box">
+ <p>Short version: pool profiles, chemistry history, route notes, and checklist data stay in your browser on your device. If you join the Route Ready pilot list, we store your email. If you use the online AI scanner, your image is sent through our Cloudflare function to Anthropic for immediate analysis. If you upgrade PartSnap Pro, checkout is handled by Stripe. We also collect anonymous first-party usage events so we can see which free tools are being used and receive owner notifications when the app is actually opened or used.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>1. Who We Are</h2>
-    <p>SplashLens is a free, offline-first progressive web application (PWA) for pool service professionals, available at <strong>https://app.splashlens.com</strong>. This marketing website is available at <strong>https://splashlens.com</strong>. Both are operated by SplashLens. Contact: <a href="mailto:hello@splashlens.com">hello@splashlens.com</a>.</p>
-  </div>
+ <div class="policy-section">
+ <h2>1. Who We Are</h2>
+ <p>SplashLens is a free, offline-first progressive web application (PWA) for pool service professionals, available at <strong>https://app.splashlens.com</strong>. This marketing website is available at <strong>https://splashlens.com</strong>. Both are operated by SplashLens. Contact: <a href="mailto:hello@splashlens.com">hello@splashlens.com</a>.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>2. Data We Do Not Collect By Default</h2>
-    <p>SplashLens does not require an account and does not collect these by default:</p>
-    <ul>
-      <li>Your name, phone number, or address</li>
-      <li>Account credentials (there is no account system)</li>
-      <li>Location data or GPS coordinates</li>
-      <li>Device identifiers or advertising IDs</li>
-      <li>Crash reports or diagnostic data sent to our servers</li>
-      <li>Any information about your customers or the pools you service</li>
-    </ul>
-    <p>We collect your email only if you submit a waitlist or pilot form. We collect anonymous feature events such as page views, app opens, PWA install signals, scan starts, manual searches, PartSnap result views, upgrade clicks, and buy-link clicks to understand the launch funnel and know when the app is actually being used.</p>
-  </div>
+ <div class="policy-section">
+ <h2>2. Data We Do Not Collect By Default</h2>
+ <p>SplashLens does not require an account and does not collect these by default:</p>
+ <ul>
+ <li>Your name, phone number, or address</li>
+ <li>Account credentials (there is no account system)</li>
+ <li>Location data or GPS coordinates</li>
+ <li>Device identifiers or advertising IDs</li>
+ <li>Crash reports or diagnostic data sent to our servers</li>
+ <li>Any information about your customers or the pools you service</li>
+ </ul>
+ <p>We collect your email only if you submit a waitlist or pilot form. We collect anonymous feature events such as page views, app opens, PWA install signals, scan starts, manual searches, PartSnap result views, upgrade clicks, and buy-link clicks to understand the launch funnel and know when the app is actually being used.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>3. Your Pool Data - Stays on Your Device</h2>
-    <p>All data you enter into SplashLens - pool profiles, volume measurements, chemical history, route stops, checklist progress - is stored exclusively in your browser's <strong>localStorage</strong> on your own device. This data:</p>
-    <ul>
-      <li>Never leaves your device</li>
-      <li>Is not transmitted to SplashLens for account sync or backup</li>
-      <li>Is never shared with third parties</li>
-      <li>Persists until you clear your browser data or uninstall the PWA</li>
-    </ul>
-    <p>Because data lives only on your device, SplashLens cannot recover your data if you clear your browser storage or switch devices. We have no backup of anything you enter.</p>
-  </div>
+ <div class="policy-section">
+ <h2>3. Your Pool Data - Stays on Your Device</h2>
+ <p>All data you enter into SplashLens - pool profiles, volume measurements, chemical history, route stops, checklist progress - is stored exclusively in your browser's <strong>localStorage</strong> on your own device. This data:</p>
+ <ul>
+ <li>Never leaves your device</li>
+ <li>Is not transmitted to SplashLens for account sync or backup</li>
+ <li>Is never shared with third parties</li>
+ <li>Persists until you clear your browser data or uninstall the PWA</li>
+ </ul>
+ <p>Because data lives only on your device, SplashLens cannot recover your data if you clear your browser storage or switch devices. We have no backup of anything you enter.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>4. Cookies and Tracking</h2>
-    <p>SplashLens does not use cookies for advertising or retargeting. We do not use fingerprinting. We run small first-party event endpoints on splashlens.com and app.splashlens.com to record anonymous launch and app activity such as page views, app opens, PWA install signals, AI scan starts, manual searches, PartSnap result views, upgrade clicks, and buy-link clicks. Event rows may include event name, page path, referrer, user agent, approximate country, display mode, and the small event properties needed to understand usage. These events do not include pool profiles, customer names, chemistry logs, route data, or submitted photos. App usage events may trigger an email notification to the SplashLens owner and are retained for up to 120 days.</p>
-    <p>The app uses a service worker for offline caching - this caches app files locally on your device and is entirely standard PWA technology. It does not track behavior.</p>
-  </div>
+ <div class="policy-section">
+ <h2>4. Cookies and Tracking</h2>
+ <p>SplashLens does not use cookies for advertising or retargeting. We do not use fingerprinting. We run small first-party event endpoints on splashlens.com and app.splashlens.com to record anonymous launch and app activity such as page views, app opens, PWA install signals, AI scan starts, manual searches, PartSnap result views, upgrade clicks, and buy-link clicks. Event rows may include event name, page path, referrer, user agent, approximate country, display mode, and the small event properties needed to understand usage. These events do not include pool profiles, customer names, chemistry logs, route data, or submitted photos. App usage events may trigger an email notification to the SplashLens owner and are retained for up to 120 days.</p>
+ <p>The app uses a service worker for offline caching - this caches app files locally on your device and is entirely standard PWA technology. It does not track behavior.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>5. Cloudflare CDN</h2>
-    <p>SplashLens is hosted on Cloudflare Pages and delivered via Cloudflare's content delivery network. When you access the app, your browser communicates with Cloudflare's servers to download app files and call our serverless functions. Cloudflare may process standard HTTP request metadata such as IP address, browser type, and request timestamp as part of normal CDN and security operation. This is governed by <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare's Privacy Policy</a>.</p>
-  </div>
+ <div class="policy-section">
+ <h2>5. Cloudflare CDN</h2>
+ <p>SplashLens is hosted on Cloudflare Pages and delivered via Cloudflare's content delivery network. When you access the app, your browser communicates with Cloudflare's servers to download app files and call our serverless functions. Cloudflare may process standard HTTP request metadata such as IP address, browser type, and request timestamp as part of normal CDN and security operation. This is governed by <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare's Privacy Policy</a>.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>6. Online AI Scanner</h2>
-    <p>SplashLens includes online AI scanner modes for equipment error displays, PartSnap part identification, and test strip field triage. Here is how scanner privacy works:</p>
-    <ul>
-      <li>When you choose to scan equipment, the image is sent from your device to a Cloudflare Worker (a serverless function we operate)</li>
-      <li>That Worker makes a single API call to Anthropic's API to analyze the image</li>
-      <li><strong>Images are not stored</strong> - by us or by Anthropic beyond the immediate API response processing</li>
-      <li>No image is retained, indexed, or used for any purpose other than returning the analysis to you</li>
-      <li>Use of the AI scanner is always opt-in - you must actively choose to take and submit a photo</li>
-    </ul>
-    <p>Anthropic's data handling for API calls is governed by <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic's Privacy Policy</a>.</p>
-  </div>
+ <div class="policy-section">
+ <h2>6. Online AI Scanner</h2>
+ <p>SplashLens includes online AI scanner modes for equipment error displays, PartSnap part identification, and test strip field triage. Here is how scanner privacy works:</p>
+ <ul>
+ <li>When you choose to scan equipment, the image is sent from your device to a Cloudflare Worker (a serverless function we operate)</li>
+ <li>That Worker makes a single API call to Anthropic's API to analyze the image</li>
+ <li><strong>Images are not stored</strong> - by us or by Anthropic beyond the immediate API response processing</li>
+ <li>No image is retained, indexed, or used for any purpose other than returning the analysis to you</li>
+ <li>Use of the AI scanner is always opt-in - you must actively choose to take and submit a photo</li>
+ </ul>
+ <p>Anthropic's data handling for API calls is governed by <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic's Privacy Policy</a>.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>7. Email, Checkout, and Payments</h2>
-    <p>If you join the Route Ready pilot or another SplashLens email list, we store your email address and the source of the signup in our Cloudflare D1 database so we can contact you about that specific product or pilot. If you upgrade PartSnap Pro, payment checkout is handled by Stripe. We do not receive or store your full card number. Parts search links may open third-party sites; if an approved affiliate tag is configured later, SplashLens may earn a commission and will disclose that connection near those links.</p>
-  </div>
+ <div class="policy-section">
+ <h2>7. Email, Checkout, and Payments</h2>
+ <p>If you join the Route Ready pilot or another SplashLens email list, we store your email address and the source of the signup in our Cloudflare D1 database so we can contact you about that specific product or pilot. If you upgrade PartSnap Pro, payment checkout is handled by Stripe. We do not receive or store your full card number. Parts search links may open third-party sites; if an approved affiliate tag is configured later, SplashLens may earn a commission and will disclose that connection near those links.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>8. Children's Privacy</h2>
-    <p>SplashLens is a professional field reference tool intended for adult pool service technicians. We do not knowingly collect information from anyone under 13.</p>
-  </div>
+ <div class="policy-section">
+ <h2>8. Children's Privacy</h2>
+ <p>SplashLens is a professional field reference tool intended for adult pool service technicians. We do not knowingly collect information from anyone under 13.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>9. Data Retention and Deletion</h2>
-    <p>To remove all SplashLens app data from your device, clear your browser's site data for app.splashlens.com or uninstall the PWA from your home screen. Anonymous usage events expire automatically after up to 120 days. To request removal of a waitlist email or any support/contact record associated with your email address, contact <a href="mailto:hello@splashlens.com">hello@splashlens.com</a>.</p>
-  </div>
+ <div class="policy-section">
+ <h2>9. Data Retention and Deletion</h2>
+ <p>To remove all SplashLens app data from your device, clear your browser's site data for app.splashlens.com or uninstall the PWA from your home screen. Anonymous usage events expire automatically after up to 120 days. To request removal of a waitlist email or any support/contact record associated with your email address, contact <a href="mailto:hello@splashlens.com">hello@splashlens.com</a>.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>10. Changes to This Policy</h2>
-    <p>If we materially change this Privacy Policy, we will update the effective date at the top of this page. We will not introduce data collection practices that contradict the core commitments in this policy without clear, prominent notice.</p>
-  </div>
+ <div class="policy-section">
+ <h2>10. Changes to This Policy</h2>
+ <p>If we materially change this Privacy Policy, we will update the effective date at the top of this page. We will not introduce data collection practices that contradict the core commitments in this policy without clear, prominent notice.</p>
+ </div>
 
-  <div class="policy-section">
-    <h2>11. Contact</h2>
-    <p>Questions about this policy: <a href="mailto:hello@splashlens.com">hello@splashlens.com</a></p>
-  </div>
+ <div class="policy-section">
+ <h2>11. Contact</h2>
+ <p>Questions about this policy: <a href="mailto:hello@splashlens.com">hello@splashlens.com</a></p>
+ </div>
 
 </div>
 
 <footer>
-  <div class="container">
-    <p>&copy; 2026 SplashLens &middot; Built for pool service professionals &middot; <a href="https://app.splashlens.com">app.splashlens.com</a></p>
-    <p style="margin-top:8px;font-size:.78rem">SplashLens is a free PWA field reference tool and is not affiliated with Hayward, Pentair, Jandy, Maytronics, Skimmer, or Pool Brain.</p>
-    <p style="margin-top:12px;font-size:.78rem">
-      <a href="/privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp;
-      <a href="/terms.html">Terms of Service</a> &nbsp;&middot;&nbsp;
-      <a href="/blog/">Blog</a>
-    </p>
-  </div>
+ <div class="container">
+ <p>&copy; 2026 SplashLens &middot; Built for pool service professionals &middot; <a href="https://app.splashlens.com">app.splashlens.com</a></p>
+ <p style="margin-top:8px;font-size:.78rem">SplashLens is a free PWA field reference tool and is not affiliated with Hayward, Pentair, Jandy, Maytronics, Skimmer, or Pool Brain.</p>
+ <p style="margin-top:12px;font-size:.78rem">
+ <a href="/privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp;
+ <a href="/terms.html">Terms of Service</a> &nbsp;&middot;&nbsp;
+ <a href="/blog/">Blog</a>
+ </p>
+ </div>
 </footer>
 
 </body>

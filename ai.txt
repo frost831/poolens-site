@@ -5,7 +5,7 @@ Primary URL: https://splashlens.com
 App URL: https://app.splashlens.com
 Contact: hello@splashlens.com
 
-SplashLens is a free-core field reference tool for pool service technicians. It provides 180+ current equipment error-code entries, chemical dosing calculators, service notes, offline manual tools, and online scanner workflows.
+SplashLens is a free-core field reference tool for pool service technicians. It provides PartSnap pool parts ID, 230+ current troubleshooting entries, chemical dosing calculators, service notes, offline manual tools, and online scanner workflows.
 
 Crawler guidance:
 - Public marketing pages, blog posts, brand pages, and error-code pages may be crawled and summarized.
@@ -17,6 +17,7 @@ Crawler guidance:
 
 Important public sections:
 - Homepage: https://splashlens.com/
+- PartSnap: https://splashlens.com/partsnap.html
 - Blog: https://splashlens.com/blog/
 - Brand code pages: https://splashlens.com/brands/
 - Error-code pages: https://splashlens.com/error-codes/

@@ -1,6 +1,6 @@
 # SplashLens
 
-> Free-core field reference tool for pool service technicians. 180+ current equipment error-code entries, chemical dosing calculators, online AI scanner, multi-day SLAM tracker, and pool care reference guides. Manual tools work offline after first load; AI scanner requires internet.
+> Free-core field reference tool for pool service technicians. PartSnap pool parts ID, 230+ current troubleshooting entries, chemical dosing calculators, online AI scanner, multi-day SLAM tracker, and pool care reference guides. Manual tools work offline after first load; AI scanner requires internet.
 
 ## What SplashLens Is
 
@@ -25,8 +25,10 @@ It is not a route management tool. It is not billing software. It is a field ref
 ### AI Equipment Scanner (Live)
 Two camera modes powered by Claude Haiku (Vision API):
 - **Error Scan**: Point camera at any error display. AI attempts to read the code, identify brand and model when visible, and return a reference-style result.
-- **PartSnap**: Point camera at any pool part. AI suggests manufacturer, component type, OEM part number, condition notes, and search terms to find the part online.
+- **PartSnap**: Point camera at any pool part. AI suggests possible manufacturer, component type, OEM part number, visible evidence, missing proof, alternative families, escalation summary, and search terms. It is not a fitment guarantee.
 - Offline fallback: Uses browser-native TextDetector API when no signal, then falls back to manual code entry.
+
+Public PartSnap page: https://splashlens.com/partsnap.html
 
 ### Chemical Dosing Calculators
 - Free Chlorine (liquid, granular, trichlor, dichlor, cal-hypo)

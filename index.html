@@ -111,7 +111,8 @@
  }
  .nav-cta:hover { background: var(--sky-dark) !important; }
  .nav-store,
- .app-store-badge {
+ .app-store-badge,
+ .play-store-badge {
  min-height: 38px;
  width: 132px;
  display: inline-flex;
@@ -141,15 +142,23 @@
  transform: translateY(-1px);
  box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 10px 22px rgba(0,0,0,.32);
  }
+ .play-store-badge {
+ cursor: default;
+ border-color: rgba(255,255,255,.18);
+ background: #111827;
+ opacity: .9;
+ }
  .nav-store svg,
- .app-store-badge svg {
+ .app-store-badge svg,
+ .play-store-badge svg {
  width: 22px;
  height: 22px;
  flex: 0 0 auto;
  fill: currentColor;
  }
  .nav-store span,
- .app-store-badge span {
+ .app-store-badge span,
+ .play-store-badge span {
  display: flex;
  flex-direction: column;
  gap: 2px;
@@ -160,7 +169,8 @@
  white-space: nowrap;
  }
  .nav-store small,
- .app-store-badge small {
+ .app-store-badge small,
+ .play-store-badge small {
  color: #fff;
  font-size: 7.4px;
  font-weight: 700;
@@ -172,6 +182,13 @@
  .app-store-badge strong {
  font-size: inherit;
  letter-spacing: 0;
+ }
+ .store-badges {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ gap: 10px;
+ flex-wrap: wrap;
  }
 
  /* HERO */
@@ -689,14 +706,18 @@
  margin: 0 auto 28px;
  }
  .hero-actions .btn-primary,
- .hero-actions .app-store-badge {
+ .hero-actions .app-store-badge,
+ .hero-actions .play-store-badge {
  width: 100%;
  min-height: 52px;
  justify-content: center;
  }
- .hero-actions .app-store-badge svg { width: 24px; height: 24px; }
- .hero-actions .app-store-badge span { font-size: 13px; }
- .hero-actions .app-store-badge small { font-size: 7.6px; }
+ .hero-actions .app-store-badge svg,
+ .hero-actions .play-store-badge svg { width: 24px; height: 24px; }
+ .hero-actions .app-store-badge span,
+ .hero-actions .play-store-badge span { font-size: 13px; }
+ .hero-actions .app-store-badge small,
+ .hero-actions .play-store-badge small { font-size: 7.6px; }
  .mobile-ai-quick {
  display: block;
  padding: 24px 18px;
@@ -841,6 +862,11 @@
  <span><small>Download on the</small>
  App Store</span>
  </a>
+ <span class="play-store-badge" aria-label="Google Play approval pending">
+ <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.2 3.3c-.4.3-.7.8-.7 1.4v14.6c0 .6.3 1.1.7 1.4l8.1-8.1L4.2 3.3zm9.2 8.2l2.4-2.4L6.2 3.6l7.2 7.9zm2.4 3.4l-2.4-2.4-7.2 7.9 9.6-5.5zm1.1-1.1l2.7-1.5c.9-.5.9-1.8 0-2.3l-2.7-1.5-2.8 2.8 2.8 2.5z"/></svg>
+ <span><small>Awaiting approval on</small>
+ Google Play</span>
+ </span>
  <a href="https://app.splashlens.com" target="_blank" class="nav-cta">Open App</a>
  </div>
  </div>
@@ -850,7 +876,7 @@
 <div class="hero">
  <div class="hero-badge">
  <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="5"/></svg>
- Now live on the App Store
+ iOS live now - Google Play awaiting approval
  </div>
  <h1>Stuck at the <br>Equipment Pad?</h1>
  <p class="hero-sub">Open SplashLens before the escalation call. Error codes, dosing math, AI scanner, and offline tools built for the stop you're standing at right now.</p>
@@ -864,6 +890,11 @@
  <span><small>Download on the</small>
  App Store</span>
  </a>
+ <span class="play-store-badge" aria-label="Google Play approval pending">
+ <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.2 3.3c-.4.3-.7.8-.7 1.4v14.6c0 .6.3 1.1.7 1.4l8.1-8.1L4.2 3.3zm9.2 8.2l2.4-2.4L6.2 3.6l7.2 7.9zm2.4 3.4l-2.4-2.4-7.2 7.9 9.6-5.5zm1.1-1.1l2.7-1.5c.9-.5.9-1.8 0-2.3l-2.7-1.5-2.8 2.8 2.8 2.5z"/></svg>
+ <span><small>Awaiting approval on</small>
+ Google Play</span>
+ </span>
  </div>
  <div class="trust-bar">
  <div class="trust-item">
@@ -881,6 +912,10 @@
  <div class="trust-item">
  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
  iOS App Store Live
+ </div>
+ <div class="trust-item">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 4l16 8-16 8V4z"/></svg>
+ Google Play In Review
  </div>
  <div class="trust-item">
  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
@@ -1431,6 +1466,18 @@
  <a href="https://app.splashlens.com" target="_blank" class="btn-primary" data-track="open_app_click" data-source="bottom_cta" style="display:inline-flex;gap:8px;align-items:center">
  Open SplashLens Free
  </a>
+ <div class="store-badges" style="margin-top:18px">
+ <a href="https://apps.apple.com/us/app/splashlens/id6763644905" target="_blank" rel="noopener" class="app-store-badge" aria-label="Download SplashLens on the App Store" data-track="app_store_download_click" data-source="bottom_cta">
+ <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.37 2.83zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+ <span><small>Download on the</small>
+ App Store</span>
+ </a>
+ <span class="play-store-badge" aria-label="Google Play approval pending">
+ <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.2 3.3c-.4.3-.7.8-.7 1.4v14.6c0 .6.3 1.1.7 1.4l8.1-8.1L4.2 3.3zm9.2 8.2l2.4-2.4L6.2 3.6l7.2 7.9zm2.4 3.4l-2.4-2.4-7.2 7.9 9.6-5.5zm1.1-1.1l2.7-1.5c.9-.5.9-1.8 0-2.3l-2.7-1.5-2.8 2.8 2.8 2.5z"/></svg>
+ <span><small>Awaiting approval on</small>
+ Google Play</span>
+ </span>
+ </div>
  </div>
 </div>
 

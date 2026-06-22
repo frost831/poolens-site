@@ -107,3 +107,15 @@ Sent five one-to-one plain-text outreach emails: info@cpocertified.com, chad@poo
 Queue updated to mark Space Coast Pool School / CPOCertified, Pool Certs, Aquatic Council, IPSSAN Newsletter editorial route, and Underwater Pool Masters CPO Courses as sent with `last_sent_at=2026-06-19` and `next_send_after=2026-06-26`. Added three future `needs-verification` prospects for next-run research: The Training Center CPO, American Spa & Pool Pros, and SpaRetailer. No social/forum/Facebook/Reddit posts were sent.
 
 Post-run reconciliation: the concurrent run at 09:20 CT sent three additional messages after the five-send batch above was already in Gmail: info@thetrainingcenter.com, info@ultrapool.net, and support@poolsharkh2o.com. The queue now marks those three as sent/overflow with Gmail IDs and 2026-06-26 follow-up holds. The Training Center CPO is no longer a future `needs-verification` row; future research coverage remains healthy with 19 `needs-verification` rows.
+
+## Controlled outreach drip - 2026-06-22 09:19:38 -05:00
+
+Preflight: live HTTP checks returned 200 for https://splashlens.com and https://app.splashlens.com. Visible homepage copy still showed 180+ current entries, did not show visible 500+ claims, and no fake-name testimonial markers were found.
+
+Gmail last-7-day checks found no SplashLens-specific bounces, unsubscribe/remove-me requests, complaints, negative replies, or delivery failures. Two inbound messages from Tim Auerhahn at Aquatic Council were found on the 2026-06-19 thread; this was a positive reply and later call-interest note, so the Aquatic Council row was marked `replied` and removed from cold-drip follow-up.
+
+Queue state had no `queued` rows, so this run verified current public contact paths and Gmail prior-send history before sending. No prior Gmail history was found for community@getskimmer.com, rudy@cpoclass.com, office@aagaonline.com, maria@aaschq.org, or info@texascampgrounds.com.
+
+Sent five one-to-one plain-text outreach emails: community@getskimmer.com, rudy@cpoclass.com, office@aagaonline.com, maria@aaschq.org, and info@texascampgrounds.com. Copy stayed conservative: free no-account reference app, 180+ current equipment/error-code entries, possible matches, verification notes, not a diagnosis tool, no official partnership, certification, or endorsement claims, and founder pool-sales-to-service-company context where natural. Gmail sent IDs: 19eefb246f8aab4e, 19eefb29caf3f339, 19eefb2a1311d379, 19eefb2a25770d14, and 19eefb2a569849f3.
+
+Queue updated to mark The Pool Deck by Skimmer as sent, add/send Talking Pools / CPOClass media route, AAGA CPO course, AASC CPO course, and Texas Association of Campgrounds CPO class, and add future `needs-verification` rows for Pool Pro Podcast and Pool Nation Awards. Future coverage remains healthy with 20 `needs-verification` rows. No social/forum/Facebook/Reddit posts were sent.

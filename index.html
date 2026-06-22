@@ -4,18 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>SplashLens - Free Field Rescue App for Pool Techs</title>
-<meta name="description" content="SplashLens is a free field rescue PWA for pool service technicians. Search error codes, estimate chemical doses, dictate visit notes, and use online scanner workflows so techs can finish cleaner and get more of the day back. Manual tools work offline after first load.">
+<meta name="description" content="SplashLens is a free field rescue PWA for pool service technicians. Use PartSnap pool parts ID, error lookup, Route Brain, dosing math, and service proof tools so techs can finish cleaner and get more time back.">
 <meta property="og:title" content="SplashLens - Free Field Rescue App for Pool Techs">
-<meta property="og:description" content="Before you call the senior tech, open SplashLens. Finish the stop faster, document it cleaner, and get more of the day back.">
+<meta property="og:description" content="PartSnap helps pool techs identify possible pool part matches, verify before ordering, and build cleaner escalation packets.">
 <meta property="og:image" content="https://images.pexels.com/photos/17324374/pexels-photo-17324374.jpeg?auto=compress&cs=tinysrgb&w=1200">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://splashlens.com">
 <meta name="robots" content="index, follow">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"SplashLens","url":"https://splashlens.com","description":"Free field rescue app for pool service technicians - error codes, dosing calculators, visit reports, filter guides, and online scanner workflows.","potentialAction":{"@type":"SearchAction","target":"https://splashlens.com/blog/?q={search_term_string}","query-input":"required name=search_term_string"}}
+{"@context":"https://schema.org","@type":"WebSite","name":"SplashLens","url":"https://splashlens.com","description":"Free field rescue app for pool service technicians - PartSnap pool parts ID, error lookup, Route Brain, dosing calculators, visit reports, filter guides, and online scanner workflows.","potentialAction":{"@type":"SearchAction","target":"https://splashlens.com/blog/?q={search_term_string}","query-input":"required name=search_term_string"}}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SplashLens","applicationCategory":"UtilitiesApplication","operatingSystem":"iOS, Android, Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free field rescue app for pool service professionals. 230+ current equipment, automation, lighting, robot, cover, sanitizer, and controller troubleshooting entries, chemical dosing calculators, visit reports, SLAM tracker, salt chlorinator reference, and online scanner workflows.","url":"https://apps.apple.com/us/app/splashlens/id6763644905","screenshot":"https://images.pexels.com/photos/17324374/pexels-photo-17324374.jpeg?auto=compress&cs=tinysrgb&w=1200","featureList":["230+ current field troubleshooting entries","Manual tools work offline","Chemical dosing calculators","Visit reports","SLAM tracker","Salt chlorinator reference","Chemical safety guide","Online scanner workflows"]}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SplashLens","applicationCategory":"UtilitiesApplication","operatingSystem":"iOS, Android, Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free field rescue app for pool service professionals. PartSnap pool parts ID, 230+ current equipment, automation, lighting, robot, cover, sanitizer, and controller troubleshooting entries, chemical dosing calculators, visit reports, SLAM tracker, salt chlorinator reference, and online scanner workflows.","url":"https://apps.apple.com/us/app/splashlens/id6763644905","screenshot":"https://images.pexels.com/photos/17324374/pexels-photo-17324374.jpeg?auto=compress&cs=tinysrgb&w=1200","featureList":["PartSnap pool parts ID","230+ current field troubleshooting entries","Manual tools work offline","Chemical dosing calculators","Visit reports","SLAM tracker","Salt chlorinator reference","Chemical safety guide","Online scanner workflows"]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"SplashLens","url":"https://splashlens.com","description":"SplashLens builds free field reference tools for pool service professionals.","sameAs":["https://app.splashlens.com","https://apps.apple.com/us/app/splashlens/id6763644905"]}
@@ -308,6 +308,48 @@
  color: rgba(255,255,255,.9); font-size: .85rem; font-weight: 500;
  }
  .trust-item svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+ /* PARTSNAP HERO BAND */
+ .partsnap-band {
+ background: #f8fafc;
+ padding: 46px 24px;
+ }
+ .partsnap-panel {
+ display: grid;
+ grid-template-columns: 1.05fr .95fr;
+ gap: 24px;
+ align-items: center;
+ background: white;
+ border: 1px solid #ccfbf1;
+ border-left: 5px solid #0f766e;
+ border-radius: 8px;
+ padding: 26px;
+ box-shadow: var(--card-shadow);
+ }
+ .partsnap-proof-grid {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 10px;
+ }
+ .partsnap-proof-grid div {
+ background: #f0fdfa;
+ border: 1px solid #99f6e4;
+ border-radius: 8px;
+ padding: 14px;
+ }
+ .partsnap-proof-grid strong {
+ display: block;
+ color: #0f766e;
+ font-size: 1rem;
+ font-weight: 900;
+ margin-bottom: 3px;
+ }
+ .partsnap-proof-grid span {
+ display: block;
+ color: #475569;
+ font-size: .85rem;
+ line-height: 1.35;
+ }
 
  /* PHONE MOCKUP */
  .phone-wrap {
@@ -848,12 +890,12 @@
  <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="5"/></svg>
  iOS live now - Google Play coming soon
  </div>
- <h1>Stuck at the <br>Equipment Pad?</h1>
- <p class="hero-sub">Open SplashLens before the escalation call. Error codes, dosing math, AI scanner, and offline tools built for the stop you're standing at right now.</p>
+ <h1>Find the Part.<br>Fix the Stop.</h1>
+ <p class="hero-sub">PartSnap helps pool techs turn a mystery part photo into possible manufacturer clues, model context, part-number prompts, and verification search terms. Route Brain, error lookup, dosing math, and service proof stay right beside it.</p>
  <div class="hero-actions">
  <a href="https://app.splashlens.com" target="_blank" class="btn-primary">
  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
- Open SplashLens Free - No Card
+ Open PartSnap + SplashLens Free
  </a>
  <div class="store-badges" aria-label="Download SplashLens">
  <a href="https://apps.apple.com/us/app/splashlens/id6763644905" target="_blank" rel="noopener" class="store-badge apple" aria-label="Download SplashLens on the App Store" data-track="app_store_download_click" data-source="hero">
@@ -894,6 +936,24 @@
 </div>
 
 <!-- MOBILE AI QUICK LOOK -->
+<section class="partsnap-band" aria-label="PartSnap pool parts identification">
+ <div class="container">
+ <div class="partsnap-panel">
+ <div>
+ <div class="section-eyebrow">PartSnap Parts ID</div>
+ <h2 class="section-title" style="text-align:left;margin-bottom:12px">The scanner for the part nobody can name.</h2>
+ <p class="section-sub" style="text-align:left;margin:0">Photo an impeller, seal, grid, valve, salt cell, robot part, fitting, basket, gauge, O-ring, control label, or pump-pad component. PartSnap returns possible matches and verification prompts so the tech can escalate cleaner and avoid blind ordering.</p>
+ </div>
+ <div class="partsnap-proof-grid">
+ <div><strong>Photo</strong><span>part, label, or component</span></div>
+ <div><strong>Verify</strong><span>model, visible marking, fit</span></div>
+ <div><strong>Escalate</strong><span>copy a clean parts packet</span></div>
+ <div><strong>Protect</strong><span>confidence ladder before links</span></div>
+ </div>
+ </div>
+ </div>
+</section>
+
 <section class="mobile-ai-quick" aria-label="SplashLens scanner demo">
  <p class="mobile-ai-quick-title">That feeling when the code appears before the escalation call: this is the stop-level relief SplashLens is built for.</p>
  <div class="ai-visual">
@@ -930,8 +990,8 @@
  <div class="container">
  <div class="stat-grid">
  <div class="stat-item">
- <div class="stat-num">180+</div>
- <div class="stat-label">Equipment Error Codes</div>
+ <div class="stat-num">230+</div>
+ <div class="stat-label">Troubleshooting Entries</div>
  </div>
  <div class="stat-item">
  <div class="stat-num">12+</div>
@@ -961,6 +1021,13 @@
  <p class="section-sub">PoolBrain and Skimmer run the company. SplashLens saves the stop: codes, dosing, reports, checklists, and scanner workflows built for the equipment pad.</p>
 
  <div class="feature-grid">
+
+ <div class="feature-card">
+ <div class="feature-icon" style="background:#ccfbf1;color:#0f766e">ID</div>
+ <h3>PartSnap Pool Parts ID</h3>
+ <p>Photo an unknown pool part and get possible manufacturer, model, part-number clues, confidence level, and verification search terms before ordering or escalating.</p>
+ <span class="feature-badge" style="background:var(--green-light);color:var(--green)">Flagship</span>
+ </div>
 
  <div class="feature-card">
  <div class="feature-icon" style="background:#fef3c7">SPIN</div>

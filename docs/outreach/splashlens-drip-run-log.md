@@ -125,3 +125,9 @@ Queue updated to mark The Pool Deck by Skimmer as sent, add/send Talking Pools /
 Lauren Broom at Space Coast Pool School / CPOCertified replied positively to the 2026-06-19 SplashLens outreach from Joshua Frost. Inbound summary: "I am interested. Lets talk, what would this include?" Sender signature included Lauren Broom, B.S., R.S., PHTA Instructor, Authorized OSHA General Industry Trainer, Educational Consultant, Space Coast Pool School, LLC.
 
 Queue action: marked Space Coast Pool School / CPOCertified as `replied` and removed from cold-drip follow-up. Draft reply prepared for Joshua review before send; no email sent by Codex in this step.
+
+## Warm reply sent - 2026-06-22
+
+Sent Joshua's approved reply to Lauren Broom at spacecoastpoolschool@yahoo.com in the existing Gmail thread for "Free reference app for CPO training feedback." Gmail sent message id: `19ef02e43af6e4a9`; thread id: `19ee03fb1c2a70b5`.
+
+Reply included the SplashLens website, web app, iOS App Store link, honest Google Play status as submitted/awaiting approval, positive note that multiple training/media/service replies have come in, and a training-session style app/web layer as a possible partnership direction. Kept framing conservative: SplashLens is a field reference app, not a replacement for CPO training, manuals, instructors, or qualified judgment.

@@ -1,6 +1,6 @@
 # SplashLens
 
-> Free-core field reference tool for pool service technicians. PartSnap pool parts ID, 230+ current troubleshooting entries, chemical dosing calculators, online AI scanner, multi-day SLAM tracker, and pool care reference guides. Manual tools work offline after first load; AI scanner requires internet.
+> Free-core field reference tool for pool service technicians. PartSnap pool parts ID, 230+ current troubleshooting entries, chemical dosing calculators, online AI scanner, multi-day SLAM tracker, pool tech search hubs, and pool care reference guides. Manual tools work offline after first load; AI scanner requires internet.
 
 ## What SplashLens Is
 
@@ -18,7 +18,7 @@ It is not a route management tool. It is not billing software. It is a field ref
 ## Core Features (All Live)
 
 ### Error Code Database
-- 180+ current fault-code/status entries across 15 brands in the app database
+- 230+ current fault-code/status entries across equipment, automation, lighting, robot, cover, sanitizer, and controller groups in the app database
 - Each entry includes: severity (high/medium/low), likely causes, next checks, and a "call a pro" flag for codes that require licensed technicians
 - Searchable by code (E01, FLO, LO, ERR 3), by brand, or by keyword (ignition, pressure, flow)
 
@@ -29,6 +29,20 @@ Two camera modes powered by Claude Haiku (Vision API):
 - Offline fallback: Uses browser-native TextDetector API when no signal, then falls back to manual code entry.
 
 Public PartSnap page: https://splashlens.com/partsnap.html
+
+### Pool Tech Search Hubs
+Crawler-friendly hub pages for high-intent pool service searches:
+- Pool service app: https://splashlens.com/pool-service-app.html
+- Pool tech app: https://splashlens.com/pool-tech-app.html
+- Pool parts identification: https://splashlens.com/pool-parts-identification.html
+- Pool hardware reference: https://splashlens.com/pool-hardware-reference.html
+- Pool equipment troubleshooting: https://splashlens.com/pool-equipment-troubleshooting.html
+- Pump, heater, heat pump, and salt cell troubleshooting: https://splashlens.com/pool-pump-heater-salt-cell-troubleshooting.html
+- Automation, lighting, and robot troubleshooting: https://splashlens.com/pool-automation-lighting-robot-troubleshooting.html
+- Pool tech training field reference: https://splashlens.com/pool-tech-training-field-reference.html
+- Pool manufacturers, distributors, parts, and chemical lines: https://splashlens.com/pool-manufacturers-distributors-chemicals.html
+
+Names covered as search/watchlist terms include Thursday Pools, Leisure Pools, SCP, Pool360, Superior Pool Products, Heritage Pool Supply, BioGuard, Natural Chemistry, Orenda, HASA, HTH, Leslie's, In The Swim, Clorox Pool & Spa, Jack's Magic, SeaKlear, Poolife, Baquacil, GLB, Applied Biochemists, Lo-Chlor, Pool Frog, King Technology, and other pool hardware and chemical-line references. These are independent search and coverage targets, not partnership or official data claims.
 
 ### Chemical Dosing Calculators
 - Free Chlorine (liquid, granular, trichlor, dichlor, cal-hypo)
@@ -97,6 +111,9 @@ Start a SLAM (Shock Level and Maintain) treatment and track it through completio
 - App: https://app.splashlens.com
 - Marketing site: https://splashlens.com
 - Blog: https://splashlens.com/blog/
+- Pool tech hubs: https://splashlens.com/seo-hub-sitemap.xml
+- Category hubs: https://splashlens.com/category-hub-sitemap.xml
+- Error-code pages: https://splashlens.com/pseo-sitemap.xml
 - Privacy: https://splashlens.com/privacy.html
 - Terms: https://splashlens.com/terms.html
 

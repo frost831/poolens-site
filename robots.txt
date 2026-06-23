@@ -2,6 +2,8 @@ User-agent: *
 Allow: /
 Sitemap: https://splashlens.com/sitemap.xml
 Sitemap: https://splashlens.com/pseo-sitemap.xml
+Sitemap: https://splashlens.com/seo-hub-sitemap.xml
+Sitemap: https://splashlens.com/category-hub-sitemap.xml
 
 # AI crawler access
 User-agent: GPTBot

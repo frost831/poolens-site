@@ -131,3 +131,13 @@ Queue action: marked Space Coast Pool School / CPOCertified as `replied` and rem
 Sent Joshua's approved reply to Lauren Broom at spacecoastpoolschool@yahoo.com in the existing Gmail thread for "Free reference app for CPO training feedback." Gmail sent message id: `19ef02e43af6e4a9`; thread id: `19ee03fb1c2a70b5`.
 
 Reply included the SplashLens website, web app, iOS App Store link, honest Google Play status as submitted/awaiting approval, positive note that multiple training/media/service replies have come in, and a training-session style app/web layer as a possible partnership direction. Kept framing conservative: SplashLens is a field reference app, not a replacement for CPO training, manuals, instructors, or qualified judgment.
+
+## Controlled outreach drip - 2026-06-23 09:36:00 -05:00
+
+Preflight: live HTTP checks returned 200 for https://splashlens.com and https://app.splashlens.com. Visible homepage copy still showed 180+ current entries, did not show visible 500+ claims, and no fake-name testimonial markers were found.
+
+Gmail last-7-day checks found no SplashLens-specific bounces, unsubscribe/remove-me requests, complaints, negative replies, or delivery failures. Known positive Lauren Broom / Space Coast and Tim Auerhahn / Aquatic Council threads remained the only new inbound reply evidence in scope. No prior Gmail history was found for poolpropod@gmail.com, contact@poolnationawards.com, editorial@kendrickcontent.com, bluestreetpools@gmail.com, or erik@chlorinekingpools.com before sending.
+
+Sent five one-to-one plain-text outreach emails: poolpropod@gmail.com, contact@poolnationawards.com, editorial@kendrickcontent.com, bluestreetpools@gmail.com, and erik@chlorinekingpools.com. Copy stayed conservative: free no-account reference app, 180+ current equipment/error-code entries, possible matches, verification notes, not a diagnosis tool, no official partnership or endorsement claims, and founder pool-sales-to-service-company context where natural. Gmail sent IDs: 19ef4da71585007d, 19ef4da8fe1c3167, 19ef4daa8f9e4f59, 19ef4dac3a46f192, and 19ef4dadfaf929b9.
+
+Queue actions: marked Pool Pro Podcast, Pool Nation Awards, SpaRetailer, and MJ The Pool Pro as sent with `last_sent_at=2026-06-23` and `next_send_after=2026-06-30`; added Chlorine King Pool Service Show as a sent row for erik@chlorinekingpools.com. Audit note: Chlorine King had prior same-organization outreach to office@chlorinekingpools.com on 2026-06-15, but the final pre-send check only found no address-level history for erik@chlorinekingpools.com. This is recorded as same-organization repeat exposure and should not receive a cold follow-up unless they reply. No social/forum/Facebook/Reddit posts were sent.

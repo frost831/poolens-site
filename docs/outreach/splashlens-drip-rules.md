@@ -8,12 +8,13 @@
 
 ## Daily Send Boundary
 
-- Maximum 5 cold emails per weekday.
+- Maximum 5 cold emails per day.
 - Send one-to-one only. Do not use BCC batches.
 - Do not send to Facebook groups, Reddit threads, forums, or community admins without authenticated-account review and group-rule confirmation.
 - Do not send to `needs-verification` rows until a current public contact path is verified.
 - Do not send to `hold-proof-needed` rows until a one-page PDF or stronger usage proof exists.
 - Stop sending for the day if a bounce, complaint, unsubscribe/request-not-to-contact, or negative reply is found.
+- When the verified sendable queue is empty, use the run to research more public contact paths and append them as `queued` or `needs-verification`.
 
 ## Required Preflight
 
@@ -55,18 +56,23 @@ Before sending any daily batch:
 
 ## Batch Priority
 
-1. `queued` Tier 1 and Tier 2 media/blog/creator/association rows.
-2. Newly verified media/blog/creator/association contacts.
-3. Newly researched pool podcasts, pool magazines, pool publications, pool bloggers, creator/tech educators, associations, training groups, and trade-show/media contacts with current public contact paths.
-4. Second-wave software/training/buying-group contacts only after the message is framed as feedback/resource routing, not a partnership claim.
+Use `docs/outreach/splashlens-visibility-engine.md` and `docs/outreach/splashlens-outreach-templates.md` for lane strategy and copy.
+
+1. Warm replies and requested follow-ups.
+2. `queued` Tier 1 and Tier 2 media/blog/creator/association rows.
+3. Mystery Part Challenge targets: pool podcasts, pool publications, creators, trainers, distributor counters, and manufacturer support routes.
+4. Newly researched pool podcasts, pool magazines, pool publications, pool bloggers, creator/tech educators, associations, training groups, and trade-show/media contacts with current public contact paths.
+5. Distributor, manufacturer, software community, and buying-group contacts only when framed as feedback/resource routing, not a partnership claim.
+6. Field tester / ambassador invites for real pool techs and tech-forward service company owners.
 
 ## Queue Expansion
 
-- Every weekday run should try to keep at least 15 future eligible prospects in `queued` or `needs-verification`.
+- Every run should try to keep at least 25 future eligible prospects in `queued` or `needs-verification`.
 - If fewer than 5 sendable rows are available, research more public contacts before sending.
 - Prefer official contact pages, podcast pages, publication staff/contact pages, association pages, and clearly public business emails.
 - Do not use scraped personal emails, private social profiles, or stale snippets as sendable contacts without verification.
 - Add newly found prospects to `docs/outreach/splashlens-drip-queue.csv` with source URL, segment, status, and notes.
+- Keep thinking of new places to send: pool schools, podcasts, magazines, YouTube channels, distributor counters, manufacturer product/training/support routes, trade shows, associations, buying groups, service coaches, route-owner communities, and tech-forward solo operators.
 
 ## Output Expected From Each Run
 

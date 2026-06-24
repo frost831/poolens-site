@@ -151,3 +151,9 @@ Gmail last-7-day checks found a new SplashLens delivery failure from the 2026-06
 Queue actions: marked Pool Nation Awards / contact@poolnationawards.com as `bounced`, cleared its follow-up date, and suppressed it from future sends unless a new verified contact route is found. The current queue still has 32 future `needs-verification` rows, above the 25-prospect target.
 
 Send decision: sent 0 emails. The daily drip rules say to stop sending for the day when a bounce is found, so this run preserved the audit trail and did not send additional one-to-one outreach. No social/forum/Facebook/Reddit posts were sent.
+
+## 2026-06-24 - Proof-library campaign prep
+- Added PartSnap Proof Library as the primary outreach hook for trainers, media, podcasts, vendors, and manufacturer feedback routes.
+- Updated controlled outreach automation prompt to use proof-library link, callback-risk/proof-passport/mystery-ticket language, and the one-real-part/code test ask.
+- No emails sent in this prep pass; exact Gmail send still requires suppression checks and approval of recipient/subject/body.
+

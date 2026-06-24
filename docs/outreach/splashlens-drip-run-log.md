@@ -157,3 +157,16 @@ Send decision: sent 0 emails. The daily drip rules say to stop sending for the d
 - Updated controlled outreach automation prompt to use proof-library link, callback-risk/proof-passport/mystery-ticket language, and the one-real-part/code test ask.
 - No emails sent in this prep pass; exact Gmail send still requires suppression checks and approval of recipient/subject/body.
 
+
+## 2026-06-24 - Proof-library follow-up sends
+- Preflight: https://splashlens.com/partsnap-proof-library and https://app.splashlens.com returned HTTP 200.
+- Gmail suppression searches found no targeted bounce, unsubscribe/remove-me, complaint, or delivery-failure hits for the batch.
+- Read address-level Gmail history for five recipients; all were outbound-only with no replies found.
+- Sent 5 one-to-one threaded follow-ups, no BCC:
+  - AQUA Magazine <editors@aquamagazine.com> - Gmail id 19efa47a51bc57b8
+  - Service Industry News <info@serviceindustrynews.net> - Gmail id 19efa47c350fa0cf
+  - Pool Magazine <editor@poolmagazine.com> - Gmail id 19efa47e662d8ad7
+  - Pool & Spa Marketing <editor@poolspamarketing.com> - Gmail id 19efa480a68b9d5d
+  - Pool Chasers <poolchasers.greg@gmail.com> - Gmail id 19efa483342fc84c
+- Copy used the PartSnap Proof Library hook and the one-real-part/code test ask. No endorsement, diagnosis, guarantee, or partnership claims.
+- Queue rows marked follow-up-sent with no further cold follow-up unless they reply.

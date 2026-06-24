@@ -11,6 +11,7 @@
 - Maximum 5 cold emails per day.
 - Send one-to-one only. Do not use BCC batches.
 - Do not send to Facebook groups, Reddit threads, forums, or community admins without authenticated-account review and group-rule confirmation.
+- Do not send to `follow-up-sent` rows; those have already received the one allowed cold follow-up.
 - Do not send to `needs-verification` rows until a current public contact path is verified.
 - Do not send to `hold-proof-needed` rows until a one-page PDF or stronger usage proof exists.
 - Stop sending for the day if a bounce, complaint, unsubscribe/request-not-to-contact, or negative reply is found.

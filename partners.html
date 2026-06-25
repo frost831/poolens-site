@@ -41,10 +41,18 @@ h1{font-size:clamp(2rem,5vw,3.7rem);line-height:1.05;font-weight:950;max-width:7
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border-radius:999px;padding:0 18px;text-decoration:none;font-weight:900}
 .btn.primary{background:#0284c7;color:white}
 .btn.secondary{background:#fff;color:#0369a1;border:1px solid #bae6fd}
+.partnerForm{display:grid;gap:12px;margin-top:16px}
+.fieldGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{display:grid;gap:5px;font-size:12px;font-weight:900;color:#334155;text-transform:uppercase;letter-spacing:.04em}
+input,select,textarea{width:100%;border:1px solid #cbd5e1;border-radius:8px;padding:11px 12px;font:inherit;color:#0f172a;background:#fff}
+textarea{min-height:118px;resize:vertical}
+button.btn{border:0;cursor:pointer}
+.formStatus{min-height:20px;font-size:13px;font-weight:800;color:#0369a1}
+.formStatus.error{color:#b91c1c}
 .note{background:#fefce8;border:1px solid #fde68a;color:#854d0e;border-radius:8px;padding:14px;font-size:14px}
 footer{padding:30px 24px;background:#0f172a;color:#94a3b8;text-align:center;font-size:13px}
 footer a{color:#7dd3fc;text-decoration:none}
-@media(max-width:820px){.grid,.split{grid-template-columns:1fr}.navlinks a:not(.cta){display:none}.hero{padding:52px 18px}.band{padding:34px 18px}}
+@media(max-width:820px){.grid,.split,.fieldGrid{grid-template-columns:1fr}.navlinks a:not(.cta){display:none}.hero{padding:52px 18px}.band{padding:34px 18px}}
 </style>
 </head>
 <body>
@@ -175,10 +183,39 @@ footer a{color:#7dd3fc;text-decoration:none}
 <span class="pill">Partner Fit</span>
 <h2>Who we want to hear from</h2>
 <p>Pool schools, CPO instructors, manufacturers, distributors, repair trainers, parts suppliers, podcasts, magazines, service-company owners, and tech-forward field experts. SplashLens is especially interested in partners who can make the app more useful for the person actually standing at the pad.</p>
-<div class="ctaRow">
-<a class="btn primary" href="mailto:hello@splashlens.com?subject=SplashLens%20partner%20fit">Email hello@splashlens.com</a>
-<a class="btn secondary" href="/">Back to SplashLens</a>
+<form class="partnerForm" id="partner-form">
+<div class="fieldGrid">
+<label>Name<input name="name" autocomplete="name" required></label>
+<label>Email<input name="email" type="email" autocomplete="email" required></label>
 </div>
+<div class="fieldGrid">
+<label>Organization<input name="organization" autocomplete="organization"></label>
+<label>Role<input name="role" placeholder="Instructor, editor, manufacturer, tech"></label>
+</div>
+<div class="fieldGrid">
+<label>Lane
+<select name="lane" required>
+<option value="Education/training">Education/training</option>
+<option value="Manufacturer/product support">Manufacturer/product support</option>
+<option value="Distributor/parts counter">Distributor/parts counter</option>
+<option value="Podcast/media/creator">Podcast/media/creator</option>
+<option value="Service company/advisor">Service company/advisor</option>
+<option value="Google Play tester">Google Play tester</option>
+<option value="Sponsor/affiliate">Sponsor/affiliate</option>
+<option value="Other">Other</option>
+</select>
+</label>
+<label>Website<input name="website" type="url" placeholder="https://"></label>
+</div>
+<label>What should we test, change, build, or discuss?
+<textarea name="note" maxlength="1800" placeholder="Tell us what you want SplashLens to support, where the app could help techs move faster, or what kind of pilot would be useful."></textarea>
+</label>
+<div class="ctaRow">
+<button class="btn primary" type="submit">Send partner inquiry</button>
+<a class="btn secondary" href="mailto:hello@splashlens.com?subject=SplashLens%20partner%20fit">Email instead</a>
+</div>
+<div class="formStatus" id="partner-status" role="status" aria-live="polite"></div>
+</form>
 </div>
 </div>
 </section>
@@ -187,6 +224,38 @@ footer a{color:#7dd3fc;text-decoration:none}
 <footer>
 <p>2026 SplashLens. Reference assistance only. No endorsement or partnership is implied unless explicitly stated in writing. <a href="/">Home</a></p>
 </footer>
+<script>
+const partnerForm = document.getElementById('partner-form');
+const partnerStatus = document.getElementById('partner-status');
+if (partnerForm) {
+ partnerForm.addEventListener('submit', async (event) => {
+ event.preventDefault();
+ partnerStatus.className = 'formStatus';
+ partnerStatus.textContent = 'Sending...';
+ const submit = partnerForm.querySelector('button[type="submit"]');
+ submit.disabled = true;
+ const data = Object.fromEntries(new FormData(partnerForm).entries());
+ data.source = 'partners-page';
+ data.path = window.location.pathname;
+ try {
+ const response = await fetch('/api/partner-intake', {
+ method: 'POST',
+ headers: { 'Content-Type': 'application/json' },
+ body: JSON.stringify(data),
+ });
+ const result = await response.json();
+ if (!response.ok || !result.ok) throw new Error(result.error || 'Could not send');
+ partnerStatus.textContent = 'Sent. Thank you - we will review it and reach out.';
+ partnerForm.reset();
+ } catch (error) {
+ partnerStatus.className = 'formStatus error';
+ partnerStatus.textContent = 'Could not send the form. Please email hello@splashlens.com.';
+ } finally {
+ submit.disabled = false;
+ }
+ });
+}
+</script>
 </body>
 </html>
 

@@ -199,7 +199,7 @@ Pool service companies can verify their techs' certificates.
 | Individual | $29/mo or $199 lifetime | 1 tech, all 10 modules + future updates |
 | Team Starter | $99/mo | Up to 5 techs |
 | Team Growth | $199/mo | Up to 15 techs |
-| Company Unlimited | $399/mo | Unlimited techs + manager dashboard |
+| Company / Training Pilot | TBD | Team, training, and partner pilots are open for discussion; no unlimited-seat plan should be marketed until pricing and entitlement are production-ready. |
 
 **Bundled offer for launch:** First 50 individuals → $99 lifetime (limited time).
 

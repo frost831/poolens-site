@@ -20,6 +20,8 @@ Crawler guidance:
 Important public sections:
 - Homepage: https://splashlens.com/
 - PartSnap: https://splashlens.com/partsnap.html
+- Partners and industry pilots: https://splashlens.com/partners.html
+- Google Play tester access: https://splashlens.com/google-play-testers.html
 - Pool service app hub: https://splashlens.com/pool-service-app.html
 - Pool tech app hub: https://splashlens.com/pool-tech-app.html
 - Pool parts identification hub: https://splashlens.com/pool-parts-identification.html

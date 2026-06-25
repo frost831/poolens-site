@@ -109,6 +109,8 @@ Start a SLAM (Shock Level and Maintain) treatment and track it through completio
 ## URLs
 
 - App: https://app.splashlens.com
+- Partners and training/manufacturer/media pilots: https://splashlens.com/partners.html
+- Google Play tester access: https://splashlens.com/google-play-testers.html
 - Marketing site: https://splashlens.com
 - Blog: https://splashlens.com/blog/
 - Pool tech hubs: https://splashlens.com/seo-hub-sitemap.xml

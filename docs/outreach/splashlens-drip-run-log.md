@@ -193,3 +193,17 @@ Copy used the creative-lane feedback/routing ask: field proof, possible part fam
 Queue updates: marked Fluidra and Waterway rows sent; added sent rows for AquaStar, Intermatic Pool Support, and LaMotte Technical Service. Generic chemical/parts/distributor/podcast/builder/facility/software waves remain research-needed for future runs.
 
 Blocker: user asked for all creative-lane emails before Friday, but the standing SplashLens drip rule caps cold outreach at 5 per day. More sends require either another daily run after preflight or an explicit rule change.
+
+## Controlled outreach drip - 2026-06-25 09:22:00 -05:00
+
+Preflight: `https://splashlens.com`, `https://app.splashlens.com`, `https://splashlens.com/api/partner-intake`, and `https://app.splashlens.com/api/events` all returned healthy live responses on 2026-06-25. `partner-intake` initially looked broken under a `HEAD` check, but live `GET` returned `ok=true` with storage/email configured and live `POST` validation returned `Valid email required`, confirming the route is up. `https://app.splashlens.com/dashboard` returned 200, and `/owner-dashboard` plus the `/dashboad` typo redirect to `/dashboard`.
+
+Gmail last-7-day checks found no new SplashLens-specific unsubscribe/remove requests, complaints, or delivery failures after the already-recorded Pool Nation Awards bounce. Warm/reply evidence in scope: Bethany Branscum at Kendrick Content replied on 2026-06-24 asking for a PoolPro-ready write-up, Joshua sent the write-up plus a Google Play live-link correction on 2026-06-25, and Intermatic Pool Support sent an automatic acknowledgement/ticket response on 2026-06-25. Known Lauren Broom / Space Coast and Tim Auerhahn / Aquatic Council warm threads remain active background context.
+
+Send decision: sent 0 new cold emails. The June 25 cold-send cap was already consumed by the earlier five one-to-one creative-lane emails, so this pass stayed no-send and did not use BCC, social/forum posts, or any same-organization repeat exposure.
+
+Queue actions: marked SpaRetailer as `replied` because the Kendrick Content thread converted into a warm PoolPro press conversation; marked Intermatic Pool Support as `replied` after the ticket acknowledgement; upgraded the Raypak technical-training route to `queued` with verified public `warranty@raypak.com`; corrected the AquaCal training row because `https://aquacal.com/contact-us/` returned 404 while `https://aquacal.com/service_request` is live; updated HornerXpress / Team Horner to an official `needs-contact` form route; and added two verified future prospects: HASA (`info@hasapool.com`) and Pleatco filtration (`Pleatco_IA_Info@Pentair.com`).
+
+Release-readiness checks: monthly and yearly checkout routes both returned `302` to live Stripe Payment Links with `X-SplashLens-Checkout-Fallback: stripe_api_401`, so direct Stripe API checkout is still blocked by the secret/config issue. Discovery surfaces stayed healthy: site/app `robots.txt`, `sitemap.xml`, `ai.txt`, and `llms.txt` all returned 200. Store-facing URLs also stayed reachable: the iOS App Store listing URL returned 200, the public Google Play listing URL remained live per the June 25 release packet, and `https://app.splashlens.com/?store=ios` plus `?store=android` both returned 200.
+
+Blockers: no additional cold outreach can go out on June 25 without violating the daily cap, and direct Stripe API checkout still fails with `stripe_api_401` even though payment-link fallback works.

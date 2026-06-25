@@ -176,3 +176,20 @@ Send decision: sent 0 emails. The daily drip rules say to stop sending for the d
   - Pool Chasers <poolchasers.greg@gmail.com> - Gmail id 19efa483342fc84c
 - Copy used the PartSnap Proof Library hook and the one-real-part/code test ask. No endorsement, diagnosis, guarantee, or partnership claims.
 - Queue rows marked follow-up-sent with no further cold follow-up unless they reply.
+
+## 2026-06-25 creative lane send prep and capped batch
+
+Preflight: Gmail recent SplashLens search found warm/reply threads only (Bethany/PoolPro, Lauren/Space Coast Pool School, Tim/Aquatic Council) and no new unsubscribe/remove requests, complaints, bounces, or delivery-failure hits for the creative-lane targets. Live HTTP checks returned 200 for https://splashlens.com and https://app.splashlens.com. A stale live homepage "Google Play Coming Soon" trust badge was found, fixed, redeployed, and the follow-up risky-phrase scan returned clean before sending.
+
+Sent 5 one-to-one plain-text emails, respecting the daily cap and no-BCC rule:
+- Fluidra / Jandy / Polaris / Zodiac at productsupport@fluidra.com - Gmail id 19efcb802509707b.
+- Waterway Plastics at waterway@waterwayplastics.com - Gmail id 19efcb8243e0c45a.
+- AquaStar Pool Products at Info@aquastarpoolproducts.com - Gmail id 19efcb845263f34f.
+- Intermatic Pool Support at poolsupport@intermatic.com - Gmail id 19efcb8638770632.
+- LaMotte Technical Service at tech@lamotte.com - Gmail id 19efcb88070a7fdd.
+
+Copy used the creative-lane feedback/routing ask: field proof, possible part families, water-testing guardrails, support routing, and no endorsement, diagnosis, warranty, fitment, or official-partner claim. Each email ended with "Talk Soon,".
+
+Queue updates: marked Fluidra and Waterway rows sent; added sent rows for AquaStar, Intermatic Pool Support, and LaMotte Technical Service. Generic chemical/parts/distributor/podcast/builder/facility/software waves remain research-needed for future runs.
+
+Blocker: user asked for all creative-lane emails before Friday, but the standing SplashLens drip rule caps cold outreach at 5 per day. More sends require either another daily run after preflight or an explicit rule change.

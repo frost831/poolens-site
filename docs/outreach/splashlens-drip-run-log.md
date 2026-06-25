@@ -1,5 +1,9 @@
 # SplashLens Drip Run Log
 
+## 2026-06-25 PoolPro/SpaRetailer editorial inbound
+
+Bethany Branscum, Managing Editor for SpaRetailer / PoolPro / PoolPro en Espanol, replied that SplashLens may fit PoolPro magazine's news section and requested a press release or write-up for review. Prepared `docs/outreach/POOLPRO_PRESS_RELEASE_SPLASHLENS_2026-06-25.md` with a reply email, full press release, and short news-item version. Angle: free no-account field reference app for pool service technicians, founder/operator context, PartSnap as a cautious part-identification workflow, and clear non-diagnosis/manual-verification disclaimers.
+
 ## 2026-06-15 Manual Audit
 
 - Verified first-wave outreach had started on 2026-06-11 with 12 individual emails.

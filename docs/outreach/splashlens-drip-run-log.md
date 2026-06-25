@@ -4,6 +4,8 @@
 
 Bethany Branscum, Managing Editor for SpaRetailer / PoolPro / PoolPro en Espanol, replied that SplashLens may fit PoolPro magazine's news section and requested a press release or write-up for review. Prepared `docs/outreach/POOLPRO_PRESS_RELEASE_SPLASHLENS_2026-06-25.md` with a reply email, full press release, and short news-item version. Angle: free no-account field reference app for pool service technicians, founder/operator context, PartSnap as a cautious part-identification workflow, and clear non-diagnosis/manual-verification disclaimers.
 
+Sent the PoolPro write-up to Bethany in-thread on 2026-06-25. Gmail sent id: `19efc929b4215d85`. After live verification showed Google Play is already public for `com.splashlens.fieldtools`, sent a correction in-thread replacing the pending-review line with the live Google Play URL. Gmail correction id: `19efc939b35cf2bd`.
+
 ## 2026-06-15 Manual Audit
 
 - Verified first-wave outreach had started on 2026-06-11 with 12 individual emails.

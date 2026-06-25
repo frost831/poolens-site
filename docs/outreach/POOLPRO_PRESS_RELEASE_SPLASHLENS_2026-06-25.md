@@ -25,6 +25,7 @@ We are also exploring ways to bring practical training resources into the app an
 Links:
 SplashLens web app: https://app.splashlens.com
 iOS App Store: https://apps.apple.com/us/app/splashlens/id6763644905
+Google Play: https://play.google.com/store/apps/details?id=com.splashlens.fieldtools
 
 Talk Soon,
 Joshua Frost
@@ -55,7 +56,7 @@ Frost said future development may include practical training resources inside th
 
 "The goal is not to replace a good tech," Frost said. "The goal is to help that tech move faster, stay cleaner with notes, and spend less time bouncing between tabs, photos, old screenshots, and memory."
 
-SplashLens is available as a free no-account web app at https://app.splashlens.com and on the iOS App Store at https://apps.apple.com/us/app/splashlens/id6763644905.
+SplashLens is available as a free no-account web app at https://app.splashlens.com, on the iOS App Store at https://apps.apple.com/us/app/splashlens/id6763644905, and on Google Play at https://play.google.com/store/apps/details?id=com.splashlens.fieldtools.
 
 ### About SplashLens
 
@@ -83,4 +84,4 @@ SplashLens is positioned as a reference aid, not a diagnosis replacement. AI-ass
 
 Future development may include practical training resources inside the app. SplashLens is open to feedback, testing, partnership and licensing conversations with educators, manufacturers, service companies and other organizations serving pool professionals.
 
-SplashLens is available as a free no-account web app at https://app.splashlens.com and on the iOS App Store at https://apps.apple.com/us/app/splashlens/id6763644905.
+SplashLens is available as a free no-account web app at https://app.splashlens.com, on the iOS App Store at https://apps.apple.com/us/app/splashlens/id6763644905, and on Google Play at https://play.google.com/store/apps/details?id=com.splashlens.fieldtools.

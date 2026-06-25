@@ -1,5 +1,23 @@
 # SplashLens Drip Run Log
 
+## 2026-06-25 daily growth and release-readiness loop
+
+Preflight and readiness checks on 2026-06-25: `https://splashlens.com`, `https://app.splashlens.com`, `https://splashlens.com/api/partner-intake`, and `https://app.splashlens.com/api/events` all returned live `GET` `200` responses. Partner intake and app events both returned JSON showing storage configured and email notifications configured. Owner dashboard checks returned `200` for `https://app.splashlens.com/dashboard` and `301 -> /dashboard` for `https://app.splashlens.com/owner-dashboard`. Discovery surfaces also checked clean with `200` on `https://splashlens.com/sitemap.xml`, `https://splashlens.com/pseo-sitemap.xml`, `https://splashlens.com/seo-hub-sitemap.xml`, `https://splashlens.com/category-hub-sitemap.xml`, `https://splashlens.com/ai.txt`, and `https://splashlens.com/llms.txt`. Live homepage copy still contained `180+` / `230+` language, did not show visible `500+` claims, and the stale `Google Play Coming Soon` badge was no longer present.
+
+Commerce and store status: both `https://app.splashlens.com/api/checkout?plan=monthly` and `?plan=yearly` redirected with `X-SplashLens-Checkout-Mode: payment_link_fallback` and `X-SplashLens-Checkout-Fallback: stripe_api_401`, so direct Stripe Checkout Session creation is still not production-ready even though the public payment links work. The live iOS App Store URL and the public Google Play listing both resolved successfully. The current Play release packet still documents that the `1.0.4` bundle upload was initiated but the final Play Console review/rollout click was not truthfully confirmed from automation.
+
+Gmail hygiene stayed mostly clean: no new unsubscribe/remove-me requests, complaints, or negative replies were found. The known Pool Nation Awards bounce remained the only recent delivery failure in scope. Two meaningful inbox events were confirmed: Bethany Branscum's positive PoolPro/SpaRetailer reply remains active and Joshua's in-thread write-up plus Google Play correction are now reflected as a warm `replied` row, and Intermatic sent an automated acknowledgement (`Ticket #167005`) for the 2026-06-25 support email so that row was moved to `replied`/hold status.
+
+Send decision: sent `0` new emails in this loop. Gmail shows the daily 2026-06-25 cold-send cap was already consumed by the earlier five-recipient creative-lane batch (Fluidra, Waterway, AquaStar, Intermatic, LaMotte). Two additional same-day Gmail messages were warm in-thread PoolPro follow-ups, not fresh cold sends. Because the five cold emails were already out before this loop, this run preserved the no-send boundary and used the time for queue expansion instead.
+
+Queue expansion added or upgraded verified future prospects/contact paths:
+
+- Team Horner Education / Laura Castanza (`LCastanza@teamhorner.com`) from the official June 2024 Team Horner newsletter PDF.
+- Jack's Magic (`jacksmagic@jacksmagic.com`) from the official Jack's Magic site.
+- PoolRx (`cs@poolrx.com`) from the official PoolRx site footer/contact surface.
+- Loop-Loc (`Consumers@LoopLoc.com`) from the official Loop-Loc contact page.
+- GLB Pool Care official contact page / helpline path verified, but no public email was visible, so it stays `needs-verification` rather than sendable.
+
 ## 2026-06-25 PoolPro/SpaRetailer editorial inbound
 
 Bethany Branscum, Managing Editor for SpaRetailer / PoolPro / PoolPro en Espanol, replied that SplashLens may fit PoolPro magazine's news section and requested a press release or write-up for review. Prepared `docs/outreach/POOLPRO_PRESS_RELEASE_SPLASHLENS_2026-06-25.md` with a reply email, full press release, and short news-item version. Angle: free no-account field reference app for pool service technicians, founder/operator context, PartSnap as a cautious part-identification workflow, and clear non-diagnosis/manual-verification disclaimers.

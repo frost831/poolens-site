@@ -6,16 +6,16 @@ Post to these subs in this order. Space them out 2-3 days apart, different accou
 
 ## POST 1 — r/swimmingpools (largest sub, most DIY + pro mix)
 
-**Title:** Built a free offline reference tool for pool techs — 500+ error codes, AI scanner, dosing calculators. No account, no app store.
+**Title:** Built a free field reference tool for pool techs - 230+ troubleshooting entries, AI scanner, dosing calculators.
 
 **Body:**
 I work in pool service and got tired of either calling the manufacturer, hunting through 200-page PDFs in the van, or hoping I could remember the fix from two years ago when I saw the same code.
 
-So I built a tool. It's a Progressive Web App — you open it in Safari or Chrome, hit "Add to Home Screen," and it works like a native app with no App Store involved. Once it loads once, everything works offline.
+So I built a tool. It's a Progressive Web App — you open it in Safari or Chrome, hit "Add to Home Screen," and it works like a native app with store listings also available. Once it loads once, core manual-reference tools keep working.
 
 **What's in it:**
-- 500+ error codes across 13 brands (Hayward, Pentair, Jandy, Maytronics/Dolphin, Polaris, Aiper, Raypak, IntelliFlo, AquaCal, Sta-Rite, Waterway, Beatbot, Betta). Each code has severity rating, likely causes, and step-by-step fix instructions.
-- AI scanner — aim your camera at an equipment error display and it reads the code and returns the diagnosis. Also has a "PartSnap" mode that identifies parts by camera (manufacturer, part number, condition, where to find it online).
+- 230+ field troubleshooting entries across major equipment categories (Hayward, Pentair, Jandy, Maytronics/Dolphin, Polaris, Aiper, Raypak, IntelliFlo, AquaCal, Sta-Rite, Waterway, Beatbot, Betta). Entries include likely causes, verification notes, and next-check prompts.
+- AI scanner — aim your camera at an equipment error display and it reads the code and returns reference notes and next checks. Also has a "PartSnap" mode that suggests possible part matches by camera with visible evidence and search terms.
 - Chemical dosing calculators (FC, pH, TA, CH, CYA, salt, SLAM) for pool volumes 1K–100K gallons
 - SLAM tracker — multi-day tracking with OCLT pass/fail
 - Filter guides (sand, DE, cartridge), opening/closing checklists, chemical safety guide, salt chlorinator reference
@@ -31,15 +31,15 @@ Would love feedback from anyone actually running routes. What codes are you hitt
 
 ## POST 2 — r/poolsupplies (more retailer/commercial focus)
 
-**Title:** Free PWA for pool pros — AI reads error codes from camera, 500+ fault codes offline, dosing calcs. Feedback wanted.
+**Title:** Free pool field reference for pros - AI scan assist, 230+ troubleshooting entries, dosing calcs. Feedback wanted.
 
 **Body:**
-Just launched a free field reference tool for pool service. It's a PWA (no app store, works offline after first load) aimed at pool techs who need answers at the equipment pad without a signal.
+Just launched a free field reference tool for pool service. It works as a web app and now has store listings, aimed at pool techs who need answers at the equipment pad without a signal.
 
 Core features:
-→ 500+ error codes, 13 brands, with causes + fix steps
+-> 230+ field troubleshooting entries, with causes + verification prompts
 → AI camera mode: point at an equipment display, it reads the code and returns full diagnosis
-→ PartSnap: identify unknown parts by camera (OEM part number, brand, condition)
+→ PartSnap: suggest possible unknown-part matches by camera with visible proof prompts
 → Chemical dosing (all chemicals, all pool sizes)
 → SLAM multi-day tracker with OCLT check-ins
 → Filter procedures, opening/closing checklists
@@ -57,7 +57,7 @@ If you're selling to pool service companies, this might be worth bookmarking to 
 **Title:** Free offline tool for pool owners and pros — look up error codes, calculate chemical doses, identify parts with your camera
 
 **Body:**
-Built a free web app for pool care. Works offline after the first load, no account needed, no app store.
+Built a free web app for pool care. Works from the browser after first load, has store listings, and needs no account for core reference use.
 
 If you have a Hayward, Pentair, Jandy, Dolphin, Polaris, Raypak, or any other major brand — it has the error codes with plain-English explanations and fix steps.
 
@@ -77,9 +77,9 @@ It's completely free: https://app.splashlens.com
 I've been building a field reference tool for pool service techs. Just went live.
 
 What it does:
-- **Error codes:** 500+ across 13 brands. Not just the code — causes, fix sequence, and a "call a licensed tech" flag for codes that require it.
+- **Troubleshooting entries:** 230+ across major equipment categories. Not just the code — possible causes, verification prompts, and a "call a qualified tech" flag for codes that require it.
 - **AI scanner:** Aims camera at any equipment error display → reads the code → returns full diagnosis. Works when you're staring at a display you've never seen before.
-- **PartSnap:** Camera → part identification. Manufacturer, OEM part number, condition rating, search terms for sourcing it online.
+- **PartSnap:** Camera → part identification. Possible manufacturer/category, visible proof prompts, callback-risk notes, and search terms for verification.
 - **Test strip reader:** Camera → estimated FC/pH/TA/CH/CYA readings.
 - **SLAM tracker:** Day-by-day FC log, OCLT dusk/dawn recording, automatic pass/fail.
 - **Dosing calcs:** All chemicals, 1K–100K gallon pools.

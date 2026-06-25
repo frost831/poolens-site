@@ -19,10 +19,10 @@ REDDIT_POSTS = [
         "title": "Built a free offline reference app for pool techs — error codes, dosing calculators, AI scanner (splashlens.com)",
         "body": """I've been building tools for pool service techs and wanted to share what I've put together.
 
-**SplashLens** (splashlens.com) is a free, offline-first PWA — no account, no app store download, no subscription. Just open it on your phone and it works, even without signal.
+**SplashLens** (splashlens.com) is a free, offline-first PWA — no account for core reference use, store listings available, no subscription required for the free field tools. Open it on your phone and core manual-reference tools keep working after first load.
 
 What's in it:
-- **500+ error codes** across 13 brands: Hayward (H-Series, TurboCell), Pentair (MasterTemp, IntelliFlo, IntelliTouch), Jandy (LXi, JXi, iAqualink), Raypak, AquaCal, Sta-Rite, Maytronics Dolphin, Aiper, Beatbot, Polaris, Waterway, and more
+- **230+ field troubleshooting entries** across major pool equipment categories: Hayward, Pentair, Jandy, Raypak, AquaCal, Sta-Rite, Maytronics Dolphin, Aiper, Beatbot, Polaris, Waterway, lighting, automation, robots, and more
 - **Chemical dosing calculators** — chlorine, acid, alkalinity, cyanuric acid, with pool volume built in
 - **SLAM tracker** — multi-day tracker with OCLT logging
 - **AI scanner** — point your camera at error codes or equipment nameplates
@@ -43,7 +43,7 @@ Would love feedback from anyone actually doing pool service work. What's missing
 **SplashLens** (splashlens.com) — free offline PWA, no account needed.
 
 The main things:
-- 500+ equipment error codes (Hayward, Pentair, Jandy, Raypak, and 9 more brands) with causes and fix steps
+- 230+ equipment and field troubleshooting entries with causes, verification notes, and next-check prompts
 - Chemical dosing calculators with the math already done
 - SLAM multi-day tracker with OCLT
 - AI camera scanner for error displays and equipment nameplates

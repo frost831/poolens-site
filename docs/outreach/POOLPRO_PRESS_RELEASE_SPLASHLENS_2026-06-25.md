@@ -20,6 +20,8 @@ The main angle is that SplashLens is a free, no-account field reference app for 
 
 The app is not positioned as a diagnosis replacement. It is meant to help techs move faster, stay organized, and verify against manuals, qualified judgment, and manufacturer guidance.
 
+We are also exploring ways to bring practical training resources into the app and are open to ideas from educators, manufacturers, service companies, media groups, and other industry partners. That could include feedback, testing, training content, partnership opportunities, or licensing conversations if there is a useful fit.
+
 Links:
 SplashLens web app: https://app.splashlens.com
 iOS App Store: https://apps.apple.com/us/app/splashlens/id6763644905
@@ -49,6 +51,8 @@ Current SplashLens tools include more than 180 equipment and error-code referenc
 
 SplashLens is intentionally framed as a reference aid, not a diagnosis engine. AI-assisted scan results and possible matches should be verified against model numbers, manuals, calibrated test results, label directions, manufacturer guidance, and qualified professional judgment.
 
+Frost said future development may include practical training resources inside the app, and SplashLens is open to feedback, testing, partnership, and licensing conversations with educators, manufacturers, service companies, and other organizations serving pool professionals.
+
 "The goal is not to replace a good tech," Frost said. "The goal is to help that tech move faster, stay cleaner with notes, and spend less time bouncing between tabs, photos, old screenshots, and memory."
 
 SplashLens is available as a free no-account web app at https://app.splashlens.com and on the iOS App Store at https://apps.apple.com/us/app/splashlens/id6763644905.
@@ -77,5 +81,6 @@ Current tools include more than 180 equipment and error-code reference entries, 
 
 SplashLens is positioned as a reference aid, not a diagnosis replacement. AI-assisted scan results and possible matches should be verified against model numbers, manuals, calibrated test results, label directions, manufacturer guidance and qualified professional judgment.
 
-SplashLens is available as a free no-account web app at https://app.splashlens.com and on the iOS App Store at https://apps.apple.com/us/app/splashlens/id6763644905.
+Future development may include practical training resources inside the app. SplashLens is open to feedback, testing, partnership and licensing conversations with educators, manufacturers, service companies and other organizations serving pool professionals.
 
+SplashLens is available as a free no-account web app at https://app.splashlens.com and on the iOS App Store at https://apps.apple.com/us/app/splashlens/id6763644905.

@@ -1,4 +1,4 @@
-# SplashLens Outreach Templates
+﻿# SplashLens Outreach Templates
 
 Use plain text only. Personalize the first line and one body sentence. Keep one primary link unless a warm reply needs more.
 
@@ -17,7 +17,7 @@ The idea is simple: send one weird pool part, label, model plate, or error code 
 
 If this would make a useful segment, post, or quick test for your audience, I would be grateful for honest feedback or one mystery part to try.
 
-Thanks,
+Talk Soon,
 Joshua Frost
 Founder, SplashLens
 hello@splashlens.com
@@ -37,7 +37,7 @@ It includes PartSnap parts ID, error-code lookup, Route Brain, dosing math, Serv
 
 We are exploring a training-session style layer for apprentices and CPO students, especially around Mystery Part Lab and callback-risk scenarios. Would you be open to giving feedback on whether this would help students after class?
 
-Thanks,
+Talk Soon,
 Joshua Frost
 Founder, SplashLens
 hello@splashlens.com
@@ -57,7 +57,7 @@ It helps a tech capture a possible part match, visible proof, missing proof, cal
 
 Would this be useful for techs who come to the counter with a vague part photo? I am not implying a partnership or asking for endorsement; I am looking for practical feedback from people who see these parts every day.
 
-Thanks,
+Talk Soon,
 Joshua Frost
 Founder, SplashLens
 hello@splashlens.com
@@ -77,7 +77,7 @@ The goal is conservative: help techs capture better proof before they order, esc
 
 Is there someone on your product, training, or technical support side who would be open to telling us what techs should capture before identifying [category/product] parts?
 
-Thanks,
+Talk Soon,
 Joshua Frost
 Founder, SplashLens
 hello@splashlens.com
@@ -97,7 +97,7 @@ https://splashlens.com
 
 No endorsement or partnership claim intended.
 
-Thanks,
+Talk Soon,
 Joshua Frost
 Founder, SplashLens
 hello@splashlens.com
@@ -120,7 +120,7 @@ https://splashlens.com/mystery-part-lab.html
 
 No obligation, no endorsement ask. I am looking for practical field truth.
 
-Thanks,
+Talk Soon,
 Joshua Frost
 Founder, SplashLens
 hello@splashlens.com
@@ -135,5 +135,6 @@ Quick follow-up in case this got buried. The simple ask is whether SplashLens or
 
 If it is not a fit, no problem. If there is a better route, I would appreciate the pointer.
 
-Thanks,
+Talk Soon,
 Joshua
+

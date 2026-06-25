@@ -39,6 +39,7 @@ Before sending any daily batch:
 
 - Use plain text.
 - Link only once unless the recipient clearly needs both app and site.
+- End all outbound SplashLens outreach emails with `Talk Soon,` before Joshua's name.
 - No fake urgency.
 - Include concise founder context in future outreach when it fits: Joshua started in the pool industry in sales, then moved into his own pool service company, so SplashLens comes from real service/counter lookup friction.
 - It is acceptable to add that Joshua used and liked useful pieces of existing CRMs and pool programs, but they moved too slowly for a solo pool operator, so SplashLens was built to be faster and more agile when real field needs show up.

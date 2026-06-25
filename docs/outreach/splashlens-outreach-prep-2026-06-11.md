@@ -1,4 +1,4 @@
-# SplashLens Outreach Prep - 2026-06-11
+﻿# SplashLens Outreach Prep - 2026-06-11
 
 ## Send Boundary
 
@@ -83,7 +83,7 @@ I thought it might be useful as a short reader resource or product note for [Pub
 
 Happy to send screenshots, a 2-minute walkthrough, or answer any accuracy/disclosure questions.
 
-Best,
+Talk Soon,
 [Name]
 
 ## Template 2: Podcast
@@ -104,7 +104,7 @@ I built SplashLens as a free reference app for that moment: error-code lookup, e
 
 If useful, I can share a short demo and a few real use cases from common heater/code workflows. I would also welcome blunt feedback from your audience before pushing it harder.
 
-Best,
+Talk Soon,
 [Name]
 
 ## Template 3: Creator / Tech Educator
@@ -127,7 +127,7 @@ I am intentionally keeping the claims conservative. It does not diagnose repairs
 
 If you are open to it, I would value honest feedback on where the tool is useful, where it is wrong, and what a working tech would need before trusting it in the field.
 
-Best,
+Talk Soon,
 [Name]
 
 ## Template 4: Association / Newsletter
@@ -148,7 +148,7 @@ It is designed for quick lookup of equipment error codes and possible part refer
 
 Would this be appropriate as a short member resource, chapter note, or newsletter blurb? I can provide screenshots and a short description in whatever format is easiest.
 
-Best,
+Talk Soon,
 [Name]
 
 ## Template 5: Distributor / Counter
@@ -167,7 +167,7 @@ It helps techs and pool owners look up equipment error codes and possible part m
 
 Would there be someone on your pro, training, or branch support team who evaluates free tools like this?
 
-Best,
+Talk Soon,
 [Name]
 
 ## Social DM Shorts
@@ -294,3 +294,4 @@ These should not receive the generic media pitch. Use a second-wave "resource/in
 - Everything Under the Sun Expo: https://s36.a2zinc.net/clients/fspa/opss2026/public/content.aspx?ID=2941&sortMenu=101000
 - Southwest Pool & Spa Show: https://www.swpsshow.com/education/
 - Pool & Spa Show / NESPA: https://www.thepoolspashow.com/nespa2026/Public/Content.aspx?ID=5316
+

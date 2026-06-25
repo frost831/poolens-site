@@ -1,4 +1,4 @@
-# SplashLens Next Outreach Wave - Proof Library + Training Hook - 2026-06-24
+﻿# SplashLens Next Outreach Wave - Proof Library + Training Hook - 2026-06-24
 
 ## Outreach Angle
 
@@ -36,7 +36,7 @@ If this is useful for your readers/listeners, I would be grateful for feedback. 
 
 No endorsement or partnership claim intended.
 
-Thanks,
+Talk Soon,
 Joshua Frost
 Founder, SplashLens
 hello@splashlens.com
@@ -61,7 +61,7 @@ If you are open to it, I would love your practical feedback or one real part/cod
 
 No official training alignment or endorsement implied.
 
-Thanks,
+Talk Soon,
 Joshua Frost
 Founder, SplashLens
 hello@splashlens.com
@@ -103,3 +103,4 @@ Do not send until:
 2. The queue row is verified and not recently contacted.
 3. The exact recipient, subject, and body are approved.
 4. No BCC, no scraping-only guessed emails, no fake partner or endorsement language.
+

@@ -225,3 +225,12 @@ Queue actions: marked SpaRetailer as `replied` because the Kendrick Content thre
 Release-readiness checks: monthly and yearly checkout routes both returned `302` to live Stripe Payment Links with `X-SplashLens-Checkout-Fallback: stripe_api_401`, so direct Stripe API checkout is still blocked by the secret/config issue. Discovery surfaces stayed healthy: site/app `robots.txt`, `sitemap.xml`, `ai.txt`, and `llms.txt` all returned 200. Store-facing URLs also stayed reachable: the iOS App Store listing URL returned 200, the public Google Play listing URL remained live per the June 25 release packet, and `https://app.splashlens.com/?store=ios` plus `?store=android` both returned 200.
 
 Blockers: no additional cold outreach can go out on June 25 without violating the daily cap, and direct Stripe API checkout still fails with `stripe_api_401` even though payment-link fallback works.
+## 2026-06-27 - Meeting follow-up replies
+
+- Searched recent SplashLens/pool outreach replies for call, schedule, next week, talk, interested, availability, and meeting language.
+- Confirmed two live meeting-intent threads:
+  - Tim Auerhahn, Aquatic Council - asked for a quick call about a service program that may tie into SplashLens.
+  - Lauren Broom, Space Coast Pool School - replied interested and asked to talk.
+- Sent scheduling follow-up to Tim offering next-week Wednesday, Thursday, or Friday, late morning to mid-afternoon Central. Gmail message id: `19f0b06078b636cf`.
+- Sent scheduling follow-up to Lauren offering next-week Tuesday, Wednesday, or Thursday, late morning or afternoon Central. Gmail message id: `19f0b060958945eb`.
+- Other matching threads reviewed were either PoolPro publication already handled, autoresponders, or unrelated non-SplashLens projects.

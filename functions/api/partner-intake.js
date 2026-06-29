@@ -198,6 +198,14 @@ export async function onRequestPost({ request, env }) {
  return json(request, env, 400, { ok: false, error: 'Valid email required' });
  }
 
+ const partnerDetails = [
+ body.docsUrl ? `Docs/model source: ${clean(body.docsUrl, 300)}` : '',
+ body.modelFamilies ? `Model families: ${clean(body.modelFamilies, 600)}` : '',
+ body.failurePoints ? `Known failure points: ${clean(body.failurePoints, 600)}` : '',
+ body.verificationLanguage ? `Preferred verification language: ${clean(body.verificationLanguage, 600)}` : '',
+ body.sponsorInterest ? `Sponsor/affiliate interest: ${clean(body.sponsorInterest, 160)}` : '',
+ ].filter(Boolean).join('\n');
+
  const record = {
  email,
  name: clean(body.name, 120),
@@ -205,7 +213,7 @@ export async function onRequestPost({ request, env }) {
  role: clean(body.role, 120),
  lane: clean(body.lane || 'partner/advisor', 80),
  website: clean(body.website, 220),
- note: clean(body.note, 1800),
+ note: clean([clean(body.note, 1800), partnerDetails].filter(Boolean).join('\n\n'), 2400),
  source: clean(body.source || 'partners-page', 80),
  path: clean(body.path, 300),
  referrer: clean(request.headers.get('Referer') || body.referrer, 500),

@@ -234,3 +234,15 @@ Blockers: no additional cold outreach can go out on June 25 without violating th
 - Sent scheduling follow-up to Tim offering next-week Wednesday, Thursday, or Friday, late morning to mid-afternoon Central. Gmail message id: `19f0b06078b636cf`.
 - Sent scheduling follow-up to Lauren offering next-week Tuesday, Wednesday, or Thursday, late morning or afternoon Central. Gmail message id: `19f0b060958945eb`.
 - Other matching threads reviewed were either PoolPro publication already handled, autoresponders, or unrelated non-SplashLens projects.
+
+## Controlled outreach drip - 2026-06-29
+
+Preflight: live HTTP checks returned healthy responses for `https://splashlens.com` and `https://app.splashlens.com`. Same-day Gmail sent search found 0 SplashLens outreach sends for 2026-06-29 before this run.
+
+Gmail hygiene: sender profile is still Joshua Frost `<frost@belowzeromedia.com>`. Last-7-day SplashLens searches found no unsubscribe/remove-me requests, complaints, or negative replies. The existing Pool Nation Awards delivery failure remains inside the 7-day window: `contact@poolnationawards.com` bounced on 2026-06-23 with `550 No Such User Here` in Gmail thread `19ef4daa0370af71`.
+
+Queue reconciliation: the Pool Nation Awards row is already marked `bounced` with the 550 evidence and remains suppressed from future sends unless a new verified contact route is found. PHTA podcast/public marketing routing was rechecked, but PHTA already has prior SplashLens exposure, so no duplicate cold send was prepared from that lane.
+
+Send decision: sent 0 cold emails. The drip rules say to stop sending for the day when a hard bounce is present in the active hygiene window, so this run preserved deliverability and did not use BCC, social/forum posts, or additional same-organization exposure.
+
+Revenue-readiness note: production checkout still redirects to live Stripe Payment Links, but the first-party Stripe Checkout Session path is returning `stripe_api_401`, which blocks automatic scanner entitlement activation from checkout sessions until the production `STRIPE_SECRET_KEY` is corrected in Cloudflare Pages.

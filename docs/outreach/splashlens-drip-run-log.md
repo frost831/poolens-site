@@ -278,3 +278,22 @@ Reply/acknowledgement review: recent inbound SplashLens/PartSnap searches found 
 Queue reconciliation: no CSV change was needed. Current queue snapshot remains `queued=7`, `needs-verification=31`, `sent=57`, `replied=6`, `follow-up-sent=5`, `bounced=2`, `hold-community=6`, `hold-proof-needed=4`, `needs-contact=2`, `research-needed=19`, `second-wave=1`, and `covered-by-sent=1`, leaving 38 future eligible queued/needs-verification prospects.
 
 Send decision: sent 0 cold emails. The drip rules require stopping for the day while a hard bounce is present in the active 7-day hygiene window, so this run did not send one-to-one email, BCC batches, social posts, forum posts, Facebook posts, Reddit posts, or additional same-organization exposure.
+
+## Controlled outreach drip - 2026-06-30 10:45:00 -05:00
+
+Preflight: live HTTP checks returned `HTTP/1.1 200 OK` for `https://splashlens.com` and `https://app.splashlens.com`. Body scans found no visible `500+` claim, no known fake testimonial-name markers, public-site `230+` plus fallback `180+` language, and app `230+` language.
+
+Gmail hygiene: sender profile verified as Joshua Frost `<frost@belowzeromedia.com>`. Fresh last-7-day Gmail searches found no unsubscribe/remove-me requests, complaints, negative replies, or SplashLens-specific delivery failures. Same-recipient searches for all 7 queued rows found no prior SplashLens sends to those exact addresses. One recent sent match was an internal GA4 traffic alert to Joshua, not outreach.
+
+Send decision: sent 5 one-to-one plain-text emails, respecting the checked-in daily cap and no-BCC rule:
+- Raypak technical training route at `warranty@raypak.com` - Gmail id `19f1935410e73ddf`.
+- HornerXpress / Team Horner at `LCastanza@teamhorner.com` - Gmail id `19f19355fc4fd081`.
+- Jack's Magic at `jacksmagic@jacksmagic.com` - Gmail id `19f19357e8e24085`.
+- PoolRx at `cs@poolrx.com` - Gmail id `19f1935a5081e7b2`.
+- Loop-Loc at `Consumers@LoopLoc.com` - Gmail id `19f1935c4f2cb1d1`.
+
+Copy used manufacturer/distributor/chemical/accessory feedback asks with conservative reference-aid language, no endorsement claim, no diagnosis claim, no warranty/fitment/safety certification claim, and each email ended with `Talk Soon,`.
+
+Queue updates: marked the five sent rows as `sent`, set `last_sent_at=2026-06-30`, set `next_send_after=2026-07-04`, and appended Gmail message IDs in notes. Remaining queued rows after the cap: HASA service-pro support at `info@hasapool.com` and Pleatco filtration routing at `Pleatco_IA_Info@Pentair.com`.
+
+Blocker: user asked to send all outreach, but the current checked-in SplashLens drip rule caps cold outreach at 5 per day. The remaining 2 queued rows should be sent in the next eligible run after the standard preflight, unless Joshua explicitly changes the cap in `docs/outreach/splashlens-drip-rules.md`.

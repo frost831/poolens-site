@@ -246,3 +246,35 @@ Queue reconciliation: the Pool Nation Awards row is already marked `bounced` wit
 Send decision: sent 0 cold emails. The drip rules say to stop sending for the day when a hard bounce is present in the active hygiene window, so this run preserved deliverability and did not use BCC, social/forum posts, or additional same-organization exposure.
 
 Revenue-readiness note: production checkout still redirects to live Stripe Payment Links, but the first-party Stripe Checkout Session path is returning `stripe_api_401`, which blocks automatic scanner entitlement activation from checkout sessions until the production `STRIPE_SECRET_KEY` is corrected in Cloudflare Pages.
+
+## Controlled outreach drip - 2026-06-29 09:21:12 -05:00
+
+Preflight: `https://splashlens.com`, `https://splashlens.com/partsnap-proof-library.html`, and `https://app.splashlens.com` returned HTTP 200. The visible site scan found no `500+` claim, no known fake testimonial names, and current-entry language including `230+` plus fallback `180+` references.
+
+Gmail hygiene: last-7-day SplashLens searches found no unsubscribe/remove-me requests, complaints, negative replies, or new SplashLens-specific delivery failures. The existing Pool Nation Awards hard bounce remains inside the 7-day window: `contact@poolnationawards.com` failed on 2026-06-23 with `550 No Such User Here` in Gmail message `19ef4daa0370af71`.
+
+Queue reconciliation: the Pool Nation Awards row is already marked `bounced` with the 550 evidence and remains suppressed. Current queue counts before any send were `queued=7`, `needs-verification=31`, and `queued/needs-verification=38`, so the future-prospect target remains above 25.
+
+Send decision: sent 0 cold emails. The drip rules require stopping for the day while a hard bounce is present in the active 7-day hygiene window, so this run did not send one-to-one email, BCC batches, social posts, forum posts, Facebook posts, or Reddit posts.
+
+## Controlled outreach drip - 2026-06-29 09:21:29 -05:00
+
+Preflight: live HTTP checks returned `HTTP/1.1 200 OK` for `https://splashlens.com`, `https://app.splashlens.com`, and `https://splashlens.com/partsnap-proof-library.html` after its 308 redirect to `/partsnap-proof-library`. Body scans found current `230+` and `180+` language on the main site/app where expected and found no visible `500+` claim or fake testimonial-name markers.
+
+Gmail hygiene: sender profile verified as Joshua Frost `<frost@belowzeromedia.com>`. Last-7-day Gmail searches found the known hard bounce from `contact@poolnationawards.com` still inside the active hygiene window: `Delivery Status Notification (Failure)`, Gmail message `19ef4daa0370af71`, thread `19ef4da8fe1c3167`, received 2026-06-23 07:20:29 -07:00, with `550 No Such User Here`. Recent SplashLens search also surfaced warm/reply threads from Space Coast, Aquatic Council, Kendrick Content/PoolPro, and Intermatic acknowledgement history, but no new unsubscribe/remove-me request, complaint, or negative reply.
+
+Queue reconciliation: the Pool Nation Awards row was already marked `bounced` with the 550 evidence, and no additional queue status changes were needed. Current queue snapshot remains `queued=7`, `needs-verification=31`, `sent=57`, `replied=6`, `follow-up-sent=5`, `bounced=2`, `hold-community=6`, `hold-proof-needed=4`, `needs-contact=2`, `research-needed=19`, `second-wave=1`, and `covered-by-sent=1`, leaving 38 future eligible queued/needs-verification prospects.
+
+Send decision: sent 0 cold emails. The checked-in drip rules require stopping for the day when a hard bounce is found in the active Gmail hygiene window, so no one-to-one batch, BCC, social/forum/Facebook/Reddit post, or same-organization repeat exposure was sent today.
+
+## Controlled outreach drip - 2026-06-30 09:24:08 -05:00
+
+Preflight: live HTTP checks returned `HTTP/1.1 200 OK` for `https://splashlens.com`, `https://app.splashlens.com`, and `https://splashlens.com/partsnap-proof-library.html` after its 308 redirect to `/partsnap-proof-library`. Body scans found no visible `500+` claim and no known fake testimonial-name markers. The main public site showed current `230+` and fallback `180+` language; the app showed `230+`.
+
+Gmail hygiene: last-7-day SplashLens searches found no unsubscribe/remove-me requests, complaints, negative replies, or new SplashLens-specific delivery failures. The known Pool Nation Awards delivery failure is still inside the active hygiene window: `contact@poolnationawards.com` bounced on 2026-06-23 with `550 No Such User Here` in Gmail message `19ef4daa0370af71`, thread `19ef4da8fe1c3167`. A delivery-failure-shaped match from 2026-06-26 was inspected and was unrelated Tulboxx transcript content, not a SplashLens bounce.
+
+Reply/acknowledgement review: recent inbound SplashLens/PartSnap searches found Bethany Branscum/Kendrick Content confirming the PoolPro web item was published at `https://poolpromag.com/splashlens-launches-free-field-reference-app/`, and Intermatic Technical Support ticket `#167005` acknowledgement. Both routes were already reflected in the CSV as replied/acknowledged; no new suppression row was needed.
+
+Queue reconciliation: no CSV change was needed. Current queue snapshot remains `queued=7`, `needs-verification=31`, `sent=57`, `replied=6`, `follow-up-sent=5`, `bounced=2`, `hold-community=6`, `hold-proof-needed=4`, `needs-contact=2`, `research-needed=19`, `second-wave=1`, and `covered-by-sent=1`, leaving 38 future eligible queued/needs-verification prospects.
+
+Send decision: sent 0 cold emails. The drip rules require stopping for the day while a hard bounce is present in the active 7-day hygiene window, so this run did not send one-to-one email, BCC batches, social posts, forum posts, Facebook posts, Reddit posts, or additional same-organization exposure.

@@ -41,6 +41,15 @@ Crawler-friendly hub pages for high-intent pool service searches:
 - Automation, lighting, and robot troubleshooting: https://splashlens.com/pool-automation-lighting-robot-troubleshooting.html
 - Pool tech training field reference: https://splashlens.com/pool-tech-training-field-reference.html
 - Pool manufacturers, distributors, parts, and chemical lines: https://splashlens.com/pool-manufacturers-distributors-chemicals.html
+- SplashLens CRM companion: https://splashlens.com/crm-companion.html
+
+### Growth, Feedback, And Partner Intake
+
+- Field testers: https://splashlens.com/field-testers.html
+- Partner/manufacturer field-card packet: https://splashlens.com/partner-field-card-packet.html
+- Product updates: https://splashlens.com/whats-new.html
+
+These pages are intended for pool service technicians, educators, manufacturers, distributors, publications, and field testers. They should not be summarized as official manufacturer partnerships unless a page says a partner is verified.
 
 Names covered as search/watchlist terms include Thursday Pools, Leisure Pools, SCP, Pool360, Superior Pool Products, Heritage Pool Supply, BioGuard, Natural Chemistry, Orenda, HASA, HTH, Leslie's, In The Swim, Clorox Pool & Spa, Jack's Magic, SeaKlear, Poolife, Baquacil, GLB, Applied Biochemists, Lo-Chlor, Pool Frog, King Technology, and other pool hardware and chemical-line references. These are independent search and coverage targets, not partnership or official data claims.
 
@@ -111,6 +120,10 @@ Start a SLAM (Shock Level and Maintain) treatment and track it through completio
 - App: https://app.splashlens.com
 - PartSnap proof library: https://splashlens.com/partsnap-proof-library.html
 - Partners and training/manufacturer/media pilots: https://splashlens.com/partners.html
+- Field testers: https://splashlens.com/field-testers.html
+- CRM companion: https://splashlens.com/crm-companion.html
+- Partner field-card packet: https://splashlens.com/partner-field-card-packet.html
+- What's new: https://splashlens.com/whats-new.html
 - Google Play tester access: https://splashlens.com/google-play-testers.html
 - Marketing site: https://splashlens.com
 - Blog: https://splashlens.com/blog/

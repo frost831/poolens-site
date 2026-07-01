@@ -334,3 +334,27 @@ Send decision: a separate same-day commit, `728779e`, had already completed a Ju
 Copy used conservative SplashLens language, PartSnap possible matches, missing proof, Callback Risk Score, Service Proof Passport saves, Mystery Part ticket IDs, Apprentice Mode, and verification notes. Messages avoided endorsement, partnership, diagnosis, warranty, safety-certification, and fitment-guarantee claims, and each ended with `Talk Soon,` immediately before Joshua Frost's name.
 
 Queue updates: appended the new J AND L sent row, set/updated the affected `last_sent_at` values where needed, and added explicit duplicate-send notes plus Gmail IDs to HASA, Pleatco, Pool & Spa Marketing, and The Training Center. Blocker/risk: this pass produced duplicate outreach because the repo state changed underneath the run; suppress additional cold outreach to those affected contacts unless they reply.
+
+## Controlled outreach drip - 2026-07-01 09:41:05 -05:00
+
+Final reconciliation: Gmail changed underneath the run again. By the time this pass completed, July 1 already had 9 SplashLens cold emails in Gmail because a concurrent same-day automation had sent a second batch after the earlier 4-send update. This pass verified that the external mailbox/worktree state, then added one more email to Aiper before the over-cap situation was fully visible in Gmail, bringing the true July 1 total to 10 cold emails. That is above the checked-in 5/day rule and should be treated as a drift/coordination failure, not as compliant execution.
+
+Confirmed July 1 SplashLens cold-send set in Gmail:
+- HASA service-pro support at `info@hasapool.com` - Gmail ids `19f1e0d1b568a65a` and duplicate `19f1e0dc13016926`.
+- Pleatco filtration routing at `Pleatco_IA_Info@Pentair.com` - Gmail ids `19f1e0d1e2ee9ac0` and duplicate `19f1e0defa9e0014`.
+- Paramount Pool & Spa Systems at `paramount@1paramount.com` - Gmail id `19f1e0d23a6f6fd9`.
+- Water Tech Pool Blaster support at `CustomerCare@watertechcorp.com` - Gmail id `19f1e0d27abcf7be`.
+- Pool & Spa Marketing at `editor@poolspamarketing.com` - duplicate cold send Gmail id `19f1e0e13ef048db`.
+- The Training Center CPO at `info@thetrainingcenter.com` - duplicate cold send Gmail id `19f1e0e3622fe129`.
+- J AND L Pool Service at `info@jandlpool.com` - Gmail id `19f1e0e582ba3c2e`.
+- Aiper robot support at `service@aiper.com` - Gmail id `19f1e0eee934c560`.
+
+Reply/suppression review since the previous run: no new unsubscribe/remove-me requests, complaints, or negative replies were found. One meaningful new inbox event was Loop-Loc's automated reply from `Consumers@LoopLoc.com` on 2026-06-30 stating that the mailbox is not monitored and directing customers to dealer/support links; the CSV row was moved to `replied`/auto-routed so it is not hit again as a cold follow-up target.
+
+Queue updates from this reconciliation pass: converted Pentair Pool University to a verified future row at `knowledge@pentair.com`, but held it until `2026-07-15` because Pentair-owned Pleatco was already contacted on 2026-07-01. Added Beatbot robot support as a new verified future row at `service@beatbot.com`. Added the Aiper sent row and preserved the external same-day queue edits rather than overwriting them.
+
+Release-readiness refresh: `https://splashlens.com` and `https://app.splashlens.com` returned HTTP `200`. `https://splashlens.com/api/partner-intake` returned `ok=true` on live `GET` with storage/email configured, and `https://app.splashlens.com/api/events` returned `ok=true` with storage/email configured. Monthly and yearly checkout both returned `302` with `X-SplashLens-Checkout-Mode: payment_link_direct` to live Stripe Payment Links, so the older `stripe_api_401` fallback is no longer the current production truth. Public iOS App Store and Google Play listing URLs both remained reachable.
+
+Discovery/AEO note: `splashlens.com` discovery surfaces remained healthy. On the app host, `robots.txt`, `sitemap.xml`, and `llms.txt` returned `200`, but `https://app.splashlens.com/ai.txt` currently returns HTTP `200` while serving the HTML app shell instead of app-specific AI-discovery text. Treat app-host `ai.txt` as an active discovery-surface regression.
+
+Blockers: do not send any more SplashLens cold email on 2026-07-01. The real blocker from this run is coordination drift between concurrent automations and the mailbox/repo truth surface, which produced duplicate same-day sends and a 10-email overrun against the checked-in daily cap. Technical blocker: app-host `ai.txt` still needs to serve real text content before app-side AI/AEO discovery can be called clean.

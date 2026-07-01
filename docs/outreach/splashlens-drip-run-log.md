@@ -317,3 +317,20 @@ Send decision: sent 4 one-to-one plain-text emails, no BCC and no social/forum/F
 Copy used conservative free no-account reference-app language, PartSnap possible matches, missing proof, Callback Risk, Service Proof Passport, Mystery Part ticket IDs, and verification notes. Messages explicitly avoided endorsement, partnership, diagnosis, warranty, safety-certification, and fitment-guarantee claims. Each email ended with `Talk Soon,` immediately before Joshua Frost's name.
 
 Queue updates: added Paramount and Water Tech as verified rows, then marked all four sent rows `sent`, set `last_sent_at=2026-07-01`, set `next_send_after=2026-07-05`, and appended Gmail IDs in notes. The run stopped at 4 sends because those were the only fully verified sendable rows after expansion; questionable routes such as S.R.Smith remained unupgraded rather than forcing the daily cap.
+
+## Controlled outreach drip - 2026-07-01 10:06:00 -05:00
+
+Preflight: automation memory was read from `C:\Users\sales\.codex\automations\splashlens-controlled-outreach-drip\memory.md` because `CODEX_HOME` was unset in the shell. Live HTTP checks returned `HTTP/1.1 200 OK` for `https://splashlens.com`, `https://app.splashlens.com`, and `https://splashlens.com/partsnap-proof-library.html` after its 308 redirect to `/partsnap-proof-library`. Body scan found no visible `500+` claim, no common fake testimonial-name markers, and both `230+` and fallback `180+` language.
+
+Gmail hygiene: last-7-day searches found no SplashLens-specific mailer-daemon bounces, delivery failures, unsubscribe/remove-me requests, complaints, negative replies, or suppression requests. Relevant inbound matches were PoolPro/Kendrick Content positive publication confirmation and Intermatic ticket acknowledgement already reflected in the queue; other matches were unrelated Bing/Tulboxx noise. The prior Pool Nation Awards bounce from 2026-06-23 is outside the active newer-than-7-day stop window.
+
+Send decision: a separate same-day commit, `728779e`, had already completed a July 1 run and updated the queue before this pass finished. This pass still sent 5 one-to-one plain-text emails from Gmail:
+- HASA service-pro support at `info@hasapool.com` - Gmail id `19f1e0dc13016926` - duplicate same-day send after `728779e` had already sent that row.
+- Pleatco filtration routing at `Pleatco_IA_Info@Pentair.com` - Gmail id `19f1e0defa9e0014` - duplicate same-day send after `728779e` had already sent that row.
+- Pool & Spa Marketing at `editor@poolspamarketing.com` - Gmail id `19f1e0e13ef048db` - unexpected duplicate cold email despite existing `follow-up-sent` suppression in the latest committed queue.
+- The Training Center CPO at `info@thetrainingcenter.com` - Gmail id `19f1e0e3622fe129` - unexpected duplicate cold email despite prior `sent` status in the latest committed queue.
+- J AND L Pool Service at `info@jandlpool.com` - Gmail id `19f1e0e582ba3c2e` - newly verified public service-operator contact from `https://www.jandlpool.com/Accessibility?domain=jandlpool`.
+
+Copy used conservative SplashLens language, PartSnap possible matches, missing proof, Callback Risk Score, Service Proof Passport saves, Mystery Part ticket IDs, Apprentice Mode, and verification notes. Messages avoided endorsement, partnership, diagnosis, warranty, safety-certification, and fitment-guarantee claims, and each ended with `Talk Soon,` immediately before Joshua Frost's name.
+
+Queue updates: appended the new J AND L sent row, set/updated the affected `last_sent_at` values where needed, and added explicit duplicate-send notes plus Gmail IDs to HASA, Pleatco, Pool & Spa Marketing, and The Training Center. Blocker/risk: this pass produced duplicate outreach because the repo state changed underneath the run; suppress additional cold outreach to those affected contacts unless they reply.

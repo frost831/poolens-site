@@ -297,3 +297,23 @@ Copy used manufacturer/distributor/chemical/accessory feedback asks with conserv
 Queue updates: marked the five sent rows as `sent`, set `last_sent_at=2026-06-30`, set `next_send_after=2026-07-04`, and appended Gmail message IDs in notes. Remaining queued rows after the cap: HASA service-pro support at `info@hasapool.com` and Pleatco filtration routing at `Pleatco_IA_Info@Pentair.com`.
 
 Blocker: user asked to send all outreach, but the current checked-in SplashLens drip rule caps cold outreach at 5 per day. The remaining 2 queued rows should be sent in the next eligible run after the standard preflight, unless Joshua explicitly changes the cap in `docs/outreach/splashlens-drip-rules.md`.
+
+## Controlled outreach drip - 2026-07-01 09:17:37 -05:00
+
+Preflight: live HTTP checks returned `HTTP/1.1 200 OK` for `https://splashlens.com`, `https://app.splashlens.com`, and `https://splashlens.com/partsnap-proof-library.html` after its 308 redirect to `/partsnap-proof-library`. Body scans found no visible `500+` claim and no known fake testimonial-name markers. The public site showed `230+` and fallback `180+` language; the proof library showed PartSnap, Callback Risk, Mystery Part, and Service Proof language; the app showed `230+`.
+
+Gmail hygiene: sender profile verified as Joshua Frost `<frost@belowzeromedia.com>`. Last-7-day Gmail searches found no SplashLens-specific delivery failures, bounces, unsubscribe/remove-me requests, complaints, negative replies, or suppression requests. The prior Pool Nation Awards hard bounce from 2026-06-23 is no longer inside the active newer-than-7-day stop window. Exact-recipient searches found no prior Gmail history for the two remaining queued rows (`info@hasapool.com`, `Pleatco_IA_Info@Pentair.com`) or the two newly verified expansion rows (`paramount@1paramount.com`, `CustomerCare@watertechcorp.com`).
+
+Queue expansion: because only 2 sendable queued rows remained, researched and verified two more current public contact paths from live official pages before sending:
+- Paramount Pool & Spa Systems at `paramount@1paramount.com` from `https://www.1paramount.com/support/contact/`.
+- Water Tech Pool Blaster support at `CustomerCare@watertechcorp.com` from `https://watertechcorp.com/pages/contact-us`.
+
+Send decision: sent 4 one-to-one plain-text emails, no BCC and no social/forum/Facebook/Reddit posts:
+- HASA service-pro support at `info@hasapool.com` - Gmail id `19f1e0d1b568a65a`.
+- Pleatco filtration routing at `Pleatco_IA_Info@Pentair.com` - Gmail id `19f1e0d1e2ee9ac0`.
+- Paramount Pool & Spa Systems at `paramount@1paramount.com` - Gmail id `19f1e0d23a6f6fd9`.
+- Water Tech Pool Blaster support at `CustomerCare@watertechcorp.com` - Gmail id `19f1e0d27abcf7be`.
+
+Copy used conservative free no-account reference-app language, PartSnap possible matches, missing proof, Callback Risk, Service Proof Passport, Mystery Part ticket IDs, and verification notes. Messages explicitly avoided endorsement, partnership, diagnosis, warranty, safety-certification, and fitment-guarantee claims. Each email ended with `Talk Soon,` immediately before Joshua Frost's name.
+
+Queue updates: added Paramount and Water Tech as verified rows, then marked all four sent rows `sent`, set `last_sent_at=2026-07-01`, set `next_send_after=2026-07-05`, and appended Gmail IDs in notes. The run stopped at 4 sends because those were the only fully verified sendable rows after expansion; questionable routes such as S.R.Smith remained unupgraded rather than forcing the daily cap.

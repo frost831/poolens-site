@@ -358,3 +358,12 @@ Release-readiness refresh: `https://splashlens.com` and `https://app.splashlens.
 Discovery/AEO note: `splashlens.com` discovery surfaces remained healthy. On the app host, `robots.txt`, `sitemap.xml`, and `llms.txt` returned `200`, but `https://app.splashlens.com/ai.txt` currently returns HTTP `200` while serving the HTML app shell instead of app-specific AI-discovery text. Treat app-host `ai.txt` as an active discovery-surface regression.
 
 Blockers: do not send any more SplashLens cold email on 2026-07-01. The real blocker from this run is coordination drift between concurrent automations and the mailbox/repo truth surface, which produced duplicate same-day sends and a 10-email overrun against the checked-in daily cap. Technical blocker: app-host `ai.txt` still needs to serve real text content before app-side AI/AEO discovery can be called clean.
+## 2026-07-02 - PoolPro recognition outreach prep / blocked send
+
+Request: send new outreach to all prior SplashLens outreach contacts except PoolPro Magazine, skipping anyone emailed in the last 72 hours, mentioning PoolPro recognition at `https://poolpromag.com/splashlens-launches-free-field-reference-app/`, and asking recipients to test the free app.
+
+Preflight live checks returned HTTP 200 for `https://splashlens.com`, `https://app.splashlens.com`, and the PoolPro article URL. Gmail profile resolved as Joshua Frost `<frost@belowzeromedia.com>`, but Gmail search calls failed with `Mail service not enabled` / `failedPrecondition`. A direct send-path test to `frost@belowzeromedia.com` failed with the same Gmail API error, so no outreach emails were sent.
+
+Recipient math from `docs/outreach/splashlens-drip-queue.csv`: 62 broad user-rule recipients matched not-PoolPro/not-Kendrick and not contacted since the conservative cutoff date `2026-06-29`; 51 remained in the stricter safer-send set after excluding follow-up-spent or duplicate-risk notes; 13 rows were excluded as recent 72-hour-ish contacts; 71 rows were hard-suppressed or not send-ready. Prepared copy and recipient lists were written to `docs/outreach/splashlens-poolpro-recognition-outreach-2026-07-02.md`.
+
+Send decision: sent 0 emails because the available Gmail connector cannot search or send for this Google account right now. No CSV rows were marked sent, no BCC/social/forum posts were made, and PoolPro/Kendrick routes were excluded.

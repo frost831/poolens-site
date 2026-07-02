@@ -367,3 +367,27 @@ Preflight live checks returned HTTP 200 for `https://splashlens.com`, `https://a
 Recipient math from `docs/outreach/splashlens-drip-queue.csv`: 62 broad user-rule recipients matched not-PoolPro/not-Kendrick and not contacted since the conservative cutoff date `2026-06-29`; 51 remained in the stricter safer-send set after excluding follow-up-spent or duplicate-risk notes; 13 rows were excluded as recent 72-hour-ish contacts; 71 rows were hard-suppressed or not send-ready. Prepared copy and recipient lists were written to `docs/outreach/splashlens-poolpro-recognition-outreach-2026-07-02.md`.
 
 Send decision: sent 0 emails because the available Gmail connector cannot search or send for this Google account right now. No CSV rows were marked sent, no BCC/social/forum posts were made, and PoolPro/Kendrick routes were excluded.
+
+## Controlled outreach drip - 2026-07-02 09:23:25 -05:00
+
+Preflight: automation memory was read from `C:\Users\sales\.codex\automations\splashlens-controlled-outreach-drip\memory.md`. Live HTTP checks returned 200 for `https://splashlens.com`, `https://splashlens.com/partsnap-proof-library.html` after redirect to `/partsnap-proof-library`, and `https://app.splashlens.com`. Public home-page scan found no visible `500+` claim and no known fake testimonial-name markers; `230+` and fallback `180+` language were present.
+
+Gmail hygiene: sender profile verified as Joshua Frost `<frost@belowzeromedia.com>`. Last-7-day Gmail searches found no SplashLens-specific delivery failures, bounces, unsubscribe/remove-me requests, complaints, negative replies, or suppression requests. The only inbound SplashLens match was the already-known PoolPro/Kendrick Content positive publication thread. Gmail sent-search found no July 2 SplashLens outreach before this run.
+
+Queue expansion: because only Beatbot was immediately sendable and Pentair Pool University remains held until 2026-07-15, researched live public contact paths before sending. Added three verified training/association send rows and one future needs-verification row:
+- SLCC Certified Registered Pool Operator at `mykel.severson@slcc.edu` from `https://www.slcc.edu/workforce-training/program/certified-pool-operator.aspx`.
+- South Carolina Pool Guy Trainers at `Poolguytrainers@gmail.com` from `https://des.sc.gov/programs/bureau-water/recreational-waters/sc-pool-operator-record`.
+- Texas Public Pool Council classes at `info@tppc.org` from `https://www.tppc.org/classes.html`.
+- NRPA AFO certification route at `EGonzales@nrpa.org`, left as `needs-verification` because the address was found on a New Mexico state training-provider page rather than a current NRPA-owned page.
+
+Send decision: sent 4 one-to-one plain-text emails, no BCC and no social/forum/Facebook/Reddit posts:
+- Beatbot robot support at `service@beatbot.com` - Gmail id `19f2335ce24759c6`.
+- SLCC Certified Registered Pool Operator at `mykel.severson@slcc.edu` - Gmail id `19f2335ef4e81e4e`.
+- South Carolina Pool Guy Trainers at `Poolguytrainers@gmail.com` - Gmail id `19f23360cb3dc7b2`.
+- Texas Public Pool Council classes at `info@tppc.org` - Gmail id `19f23362daf58158`.
+
+Copy used conservative SplashLens language: free no-account reference app, verified `230+` current field troubleshooting entries, PartSnap possible matches, missing proof, Callback Risk Score, Service Proof Passport saves, Mystery Part ticket IDs, Apprentice Mode, and verification notes. Messages avoided endorsement, official alignment, partnership, diagnosis, code-compliance, warranty, and fitment-guarantee claims. Each email ended with `Talk Soon,` immediately before Joshua Frost's name.
+
+Queue updates: marked Beatbot plus the three new training rows as `sent`, set `last_sent_at=2026-07-02`, set `next_send_after=2026-07-06`, appended Gmail IDs in notes, and added the NRPA AFO route as `needs-verification`. Queue snapshot after update: `sent=68`, `needs-verification=31`, `queued=1`, `follow-up-sent=8`, `replied=7`, `bounced=2`, `research-needed=19`, `hold-community=6`, `hold-proof-needed=4`, `needs-contact=2`, `second-wave=1`, `covered-by-sent=1`.
+
+Blockers: stop at 4 sends because the fifth researched route needs direct-source verification before outreach, and the remaining queued Pentair-owned row is intentionally held until 2026-07-15 after Pleatco/Pentair exposure on 2026-07-01.

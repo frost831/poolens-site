@@ -457,4 +457,6 @@ Copy used conservative SplashLens language: free no-account reference app, verif
 
 Queue updates: marked the five unique recipient rows as `sent`, set `last_sent_at=2026-07-03`, set `next_send_after=2026-07-07`, and appended both observed Gmail ID sets in notes. Marked `team@poolbrain.com` as `replied` with a holiday-auto-reply note. No new prospects were added because 10 current sendable queued rows existed at preflight and the daily cap was filled from verified rows. Remaining current queued rows after the cap: `office@mypoolguy.com`, `customerservice@poolcoversinc.com`, `sales@riptidevac.com`, `service@pooltek.com`, and `global@pools.shop`; Pentair Pool University remains held until `2026-07-15`.
 
+Queue hardening after final reconciliation: the five unique recipient rows were moved to `follow-up-sent`, `next_send_after` was cleared, and duplicate same-day reconciliation notes were added. Treat those contacts as follow-up-spent; do not send additional cold SplashLens outreach unless they reply and create a warm route.
+
 Blockers: stop all further SplashLens outreach on 2026-07-03 because Gmail truth now shows a same-minute duplicate-send drift and 10 total outbound messages against the checked-in 5/day rule. No bounce, complaint, unsubscribe, remove-me request, or negative reply blocked the run.

@@ -1,2 +1,7 @@
-docs/outreach/**
-docs/design/**
+.git/
+.agents/
+.codex/
+node_modules/
+.wrangler/
+docs/
+*.log

@@ -6,7 +6,9 @@ Requested: email all prior outreach contacts except PoolPro Magazine / Kendrick 
 
 https://poolpromag.com/splashlens-launches-free-field-reference-app/
 
-Actual send status: blocked. Gmail profile resolved as `Joshua Frost <frost@belowzeromedia.com>`, but Gmail search and send calls both returned `Mail service not enabled` / `failedPrecondition`, including a send-path test to `frost@belowzeromedia.com`.
+Initial Gmail API send status: blocked. Gmail profile resolved as `Joshua Frost <frost@belowzeromedia.com>`, but Gmail search and send calls both returned `Mail service not enabled` / `failedPrecondition`, including a send-path test to `frost@belowzeromedia.com`.
+
+Final send status: completed through the local SMTP fallback after a successful SMTP send-path test. Final sent count: 49. Failed count: 0. See `splashlens-poolpro-recognition-sent-2026-07-02.csv`.
 
 ## Live Checks
 
@@ -20,7 +22,8 @@ Actual send status: blocked. Gmail profile resolved as `Joshua Frost <frost@belo
 - Stricter safer-send recipients after excluding follow-up-spent / duplicate-risk notes: 51.
 - Excluded as recent 72-hour-ish contacts using conservative date cutoff `2026-06-29`: 13.
 - Hard-suppressed / not-sendable queue rows: 71.
-- Sent: 0, because Gmail send is unavailable.
+- Sent: 49 via SMTP fallback after Gmail API remained unavailable.
+- Failed: 0.
 
 ## Proposed Plain-Text Copy
 
@@ -113,10 +116,10 @@ hello@splashlens.com
 - Pool Spa Patio Expo <client.services@poolspapatio.com>
 - Chlorine King Pool Service Show <erik@chlorinekingpools.com>
 
-## Blocker
+## Initial Gmail API Blocker
 
 Gmail connector error from both search and send:
 
 `Mail service not enabled` / `failedPrecondition`
 
-No CSV rows were marked sent because no email was actually sent.
+This blocker was bypassed with the local SMTP fallback. CSV rows were marked after SMTP send completion, not after the failed Gmail API attempt.

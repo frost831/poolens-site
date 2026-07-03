@@ -368,6 +368,16 @@ Recipient math from `docs/outreach/splashlens-drip-queue.csv`: 62 broad user-rul
 
 Send decision: sent 0 emails because the available Gmail connector cannot search or send for this Google account right now. No CSV rows were marked sent, no BCC/social/forum posts were made, and PoolPro/Kendrick routes were excluded.
 
+## 2026-07-02 - PoolPro recognition outreach SMTP fallback send
+
+Mail-service recovery: the Gmail API connector still returned `Mail service not enabled` / `failedPrecondition`, but the local SMTP path for Joshua Frost `<frost@belowzeromedia.com>` was tested successfully with a send-path test to Joshua. The outreach send then used SMTP one-to-one messages, not BCC.
+
+Suppression boundary preserved: excluded PoolPro/Kendrick/SpaRetailer routes, replied rows, bounced rows, rows contacted on/after the conservative `2026-06-29` cutoff, rows with explicit duplicate/no-further-send notes, and future-hold rows such as Pentair Pool University's `2026-07-15` hold. Live checks had already returned HTTP 200 for `https://splashlens.com`, `https://app.splashlens.com`, and the PoolPro article.
+
+Send decision: sent 49 one-to-one plain-text emails with subject `SplashLens was featured in PoolPro`, the PoolPro article link, the free-use CTA for `https://app.splashlens.com`, optional add-ons / disclosed affiliate-link language, no diagnosis/fitment/endorsement claim, and `Talk Soon,` sign-off. SMTP failures: 0. Recipient proof was written to `docs/outreach/splashlens-poolpro-recognition-sent-2026-07-02.csv`; the failed-send file `docs/outreach/splashlens-poolpro-recognition-failed-2026-07-02.csv` contains 0 failed rows.
+
+Queue updates: updated 49 rows in `docs/outreach/splashlens-drip-queue.csv`; prior `sent` rows moved to `follow-up-sent`, queued/second-wave first-touch rows moved to `sent`, `last_sent_at` set to `2026-07-02`, `next_send_after` cleared, and notes appended with the SMTP fallback send detail. No Gmail API message IDs were available because the Gmail connector remained unavailable.
+
 ## Controlled outreach drip - 2026-07-02 09:23:25 -05:00
 
 Preflight: automation memory was read from `C:\Users\sales\.codex\automations\splashlens-controlled-outreach-drip\memory.md`. Live HTTP checks returned 200 for `https://splashlens.com`, `https://splashlens.com/partsnap-proof-library.html` after redirect to `/partsnap-proof-library`, and `https://app.splashlens.com`. Public home-page scan found no visible `500+` claim and no known fake testimonial-name markers; `230+` and fallback `180+` language were present.

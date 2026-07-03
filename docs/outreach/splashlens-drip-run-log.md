@@ -401,3 +401,15 @@ Copy used conservative SplashLens language: free no-account reference app, verif
 Queue updates: marked Beatbot plus the three new training rows as `sent`, set `last_sent_at=2026-07-02`, set `next_send_after=2026-07-06`, appended Gmail IDs in notes, and added the NRPA AFO route as `needs-verification`. Queue snapshot after update: `sent=68`, `needs-verification=31`, `queued=1`, `follow-up-sent=8`, `replied=7`, `bounced=2`, `research-needed=19`, `hold-community=6`, `hold-proof-needed=4`, `needs-contact=2`, `second-wave=1`, `covered-by-sent=1`.
 
 Blockers: stop at 4 sends because the fifth researched route needs direct-source verification before outreach, and the remaining queued Pentair-owned row is intentionally held until 2026-07-15 after Pleatco/Pentair exposure on 2026-07-01.
+
+## 2026-07-02 - Deep prospecting expansion
+
+Request: scrape deeper for more SplashLens outreach prospects beyond the already-contacted media/training list, especially influencers, possible field users, robot/vacuum makers, and other industry lanes.
+
+Send boundary: research-and-queue only. No emails were sent in this pass.
+
+Queue additions: added 16 new prospect rows to `docs/outreach/splashlens-drip-queue.csv`. Ten verified public-email rows were added as `queued`: WYBOT robot support, Betta robotic skimmer support, Ask the Pool Guy, Pool Service Techs LLC, The Pool Guy BCS, MYPOOLGUY.COM Texas, Pool Covers Inc., Riptide Pool Vacuum Systems, Pooltek Services, and Pools.shop ecommerce. Six promising but not send-ready rows were added as `needs-contact`: Pure Swim / Rich Gallo, Pool Guy Coaching, Poolside Perspectives Podcast, The Pool Shop Coach / Lee Salisbury, Hammer-Head Pool Vacuums, and Vac Daddy portable pool vacuum.
+
+Research report: wrote `docs/outreach/splashlens-deep-prospecting-2026-07-02.md` with sources, why each lane matters, contact gating, and next lanes to mine: robots, manual vacuums, covers, lighting, automation/smart pool, chemicals/test lines, distributors/counters, and operator training audiences.
+
+Compliance posture: deduped against the existing queue before adding rows; preserved replied, bounced, recent-contact, and no-further-send boundaries. Contact-form/social-only prospects were not converted into email-send rows.

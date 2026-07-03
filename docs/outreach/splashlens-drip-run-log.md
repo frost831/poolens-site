@@ -402,6 +402,25 @@ Queue updates: marked Beatbot plus the three new training rows as `sent`, set `l
 
 Blockers: stop at 4 sends because the fifth researched route needs direct-source verification before outreach, and the remaining queued Pentair-owned row is intentionally held until 2026-07-15 after Pleatco/Pentair exposure on 2026-07-01.
 
+## Controlled outreach drip - 2026-07-03 09:32:00 -05:00
+
+Preflight: automation memory path `C:\Users\sales\.codex\automations\splashlens-controlled-outreach-drip\memory.md` was checked and had no prior saved notes. Live HTTP checks returned 200 for `https://splashlens.com`, final 200 for `https://splashlens.com/partsnap-proof-library.html` after 308 redirect to `/partsnap-proof-library`, and 200 for `https://app.splashlens.com`. Public home-page scan found no visible `500+` claim and no known fake testimonial-name markers; the page contained verified `230+` entry language.
+
+Gmail hygiene: Gmail profile resolved as Joshua Frost `<frost@belowzeromedia.com>`. Last-7-day SplashLens stop-signal searches found no unsubscribe, remove-me, complaint, negative reply, SplashLens bounce, or SplashLens delivery failure. Four recent delivery failures were read and confirmed unrelated to SplashLens: two GrainBrief sends and two Bay2Course sends. One new SplashLens-related inbound item was a Pool Brain auto-reply for the PoolPro recognition thread saying support was closed Friday, July 3 for Independence Day and would resume Monday, July 6; the queue row was moved to `replied` to prevent further cold sends unless a human reply creates a warm route.
+
+Send decision: sent 5 one-to-one plain-text emails, no BCC and no social/forum/Facebook/Reddit posts:
+- WYBOT robot support at `support@wybotpool.com` - Gmail id `19f2859565fa0a2f`.
+- Betta robotic skimmer support at `info@bettabot.com` - Gmail id `19f285974508504e`.
+- Ask the Pool Guy at `team@askthepoolguy.com` - Gmail id `19f28599590e2010`.
+- Pool Service Techs LLC at `info@poolservicetechs.com` - Gmail id `19f2859b08779662`.
+- The Pool Guy BCS at `sean@thepoolguybcs.com` - Gmail id `19f2859c8762c86a`.
+
+Copy used conservative SplashLens language: free no-account reference app, verified `230+` current field troubleshooting entries, PartSnap possible matches, missing proof, Callback Risk Score, Service Proof Passport saves, Mystery Part ticket IDs, Apprentice Mode, and verification notes. Messages avoided endorsement, official alignment, partnership, diagnosis, code-compliance, warranty, and fitment-guarantee claims. Each email ended with `Talk Soon,` immediately before Joshua Frost's name.
+
+Queue updates: marked the five sent rows as `sent`, set `last_sent_at=2026-07-03`, set `next_send_after=2026-07-07`, and appended Gmail IDs in notes. Moved Pool Brain from `follow-up-sent` to `replied` because of the July 3 auto-reply. No new prospects were added because 10 current verified queued rows were available before the send and 5 remain queued afterward, with Pentair Pool University still intentionally held until 2026-07-15.
+
+Blockers: superseded by the post-send reconciliation below. Gmail truth shows same-minute duplicate sends to the same five contacts, so July 3 must be treated as over-cap and no further SplashLens outreach should run today. Keep monitoring for any post-send bounces or human replies before future sends.
+
 ## 2026-07-02 - Deep prospecting expansion
 
 Request: scrape deeper for more SplashLens outreach prospects beyond the already-contacted media/training list, especially influencers, possible field users, robot/vacuum makers, and other industry lanes.
@@ -413,3 +432,29 @@ Queue additions: added 16 new prospect rows to `docs/outreach/splashlens-drip-qu
 Research report: wrote `docs/outreach/splashlens-deep-prospecting-2026-07-02.md` with sources, why each lane matters, contact gating, and next lanes to mine: robots, manual vacuums, covers, lighting, automation/smart pool, chemicals/test lines, distributors/counters, and operator training audiences.
 
 Compliance posture: deduped against the existing queue before adding rows; preserved replied, bounced, recent-contact, and no-further-send boundaries. Contact-form/social-only prospects were not converted into email-send rows.
+
+## Controlled outreach drip - 2026-07-03 09:18:04 -05:00
+
+Preflight: automation memory path was checked first and did not exist yet in this environment, so this run established the current baseline from memory summaries, queue, rules, run log, and Gmail. Live HTTP checks returned `HTTP/1.1 200 OK` for `https://splashlens.com`, `https://splashlens.com/partsnap-proof-library.html` after its 308 redirect to `/partsnap-proof-library`, and `https://app.splashlens.com`. Body scans found no visible `500+` claim and no common fake-testimonial-name markers. The live site/app exposed verified `230+` field-entry language and fallback `180+` language.
+
+Gmail hygiene: sender profile verified as Joshua Frost `<frost@belowzeromedia.com>`. Last-7-day searches found no SplashLens-specific delivery failures, bounces, unsubscribe/remove-me requests, complaints, negative replies, or suppression requests. One new inbound Pool Brain holiday auto-reply from `team@poolbrain.com` was found for the July 2 PoolPro recognition message; it was not a complaint, unsubscribe, or negative reply, but the queue row was moved to `replied`/auto-reply noted to avoid future cold automation against that address. Gmail showed no exact-recipient history for the five selected queued rows and no July 3 sends to those addresses before this batch.
+
+Send decision: sent 5 one-to-one plain-text emails from this pass, no BCC and no social/forum/Facebook/Reddit posts:
+- WYBOT robot support at `support@wybotpool.com` - Gmail id `19f285977324d070`.
+- Betta robotic skimmer support at `info@bettabot.com` - Gmail id `19f2859796b7aac7`.
+- Ask the Pool Guy at `team@askthepoolguy.com` - Gmail id `19f28597c5752561`.
+- Pool Service Techs LLC at `info@poolservicetechs.com` - Gmail id `19f28597fbe657ed`.
+- The Pool Guy BCS at `sean@thepoolguybcs.com` - Gmail id `19f2859820574e0d`.
+
+Post-send reconciliation: Gmail then showed duplicate same-minute sends to the same five contacts, likely from concurrent automation/worktree drift. Treat July 3 SplashLens cold outreach as over-cap: 10 total outbound messages to 5 unique recipients. Duplicate Gmail ids found in the mailbox and reflected in queue notes:
+- WYBOT robot support at `support@wybotpool.com` - duplicate Gmail id `19f2859565fa0a2f`.
+- Betta robotic skimmer support at `info@bettabot.com` - duplicate Gmail id `19f285974508504e`.
+- Ask the Pool Guy at `team@askthepoolguy.com` - duplicate Gmail id `19f28599590e2010`.
+- Pool Service Techs LLC at `info@poolservicetechs.com` - duplicate Gmail id `19f2859b08779662`.
+- The Pool Guy BCS at `sean@thepoolguybcs.com` - duplicate Gmail id `19f2859c8762c86a`.
+
+Copy used conservative SplashLens language: free no-account reference app, verified `230+` current field troubleshooting entries, PartSnap possible matches, missing proof, Callback Risk Score, Service Proof Passport saves, Mystery Part ticket IDs, Apprentice Mode, and verification notes. Messages avoided endorsement, official alignment, partnership, diagnosis, warranty, and fitment-guarantee claims. Each email ended with `Talk Soon,` immediately before Joshua Frost's name.
+
+Queue updates: marked the five unique recipient rows as `sent`, set `last_sent_at=2026-07-03`, set `next_send_after=2026-07-07`, and appended both observed Gmail ID sets in notes. Marked `team@poolbrain.com` as `replied` with a holiday-auto-reply note. No new prospects were added because 10 current sendable queued rows existed at preflight and the daily cap was filled from verified rows. Remaining current queued rows after the cap: `office@mypoolguy.com`, `customerservice@poolcoversinc.com`, `sales@riptidevac.com`, `service@pooltek.com`, and `global@pools.shop`; Pentair Pool University remains held until `2026-07-15`.
+
+Blockers: stop all further SplashLens outreach on 2026-07-03 because Gmail truth now shows a same-minute duplicate-send drift and 10 total outbound messages against the checked-in 5/day rule. No bounce, complaint, unsubscribe, remove-me request, or negative reply blocked the run.

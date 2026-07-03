@@ -481,3 +481,31 @@ Final truth for 2026-07-03: SplashLens sent 10 total cold emails across 10 uniqu
 Queue updates from this reconciliation pass: marked the five second-batch rows as `sent`, set `last_sent_at=2026-07-03`, set `next_send_after=2026-07-07`, and appended Gmail ids plus the over-cap note to each row. Remaining `queued` row after reconciliation: Pentair Pool University at `knowledge@pentair.com`, still intentionally held until `2026-07-15` because of recent Pentair/Pleatco exposure. Current queue snapshot after reconciliation: `follow-up-sent=60`, `needs-verification=31`, `sent=26`, `research-needed=19`, `replied=8`, `needs-contact=8`, `hold-community=6`, `hold-proof-needed=4`, `bounced=2`, `covered-by-sent=1`, `queued=1`.
 
 Blocker: do not send any additional SplashLens outreach on 2026-07-03. The true blocker is same-day coordination drift between committed queue state and live mailbox/send actions, not public site health.
+
+## Controlled outreach reconciliation - 2026-07-03 09:52:00 -05:00
+
+Final growth-loop truth pass for July 3:
+
+- `https://splashlens.com`, `https://app.splashlens.com`, `https://splashlens.com/api/partner-intake`, and `https://app.splashlens.com/api/events` all returned healthy live `GET` `200` responses.
+- `https://app.splashlens.com/api/checkout?plan=monthly` and `?plan=yearly` both returned `302` with `X-SplashLens-Checkout-Mode: payment_link_direct` to the live Stripe Payment Links.
+- Public discovery surfaces stayed healthy. Important delta versus the July 1 release-status note: `https://app.splashlens.com/ai.txt` now serves a real plain-text SplashLens app AI-discovery file instead of the HTML app shell, so the earlier app-host `ai.txt` regression appears fixed on 2026-07-03.
+- Owner usage notification health remained green from public evidence: `https://app.splashlens.com/api/events` still returned `{"ok":true,"status":"SplashLens app event endpoint ready.","storageConfigured":true,"emailConfigured":true}`, `https://app.splashlens.com/dashboard` returned `200`, and `https://app.splashlens.com/owner-dashboard` returned `301 -> /dashboard`.
+- Public App Store and Google Play listing URLs both remained reachable.
+
+Gmail hygiene since the previous run still showed no SplashLens-specific unsubscribe/remove-me requests, complaints, negative replies, or direct SplashLens delivery failures. The only new SplashLens-related inbound mail remained the Pool Brain holiday auto-reply already recorded earlier in the day.
+
+Critical mailbox reconciliation: Gmail showed **15 SplashLens cold emails on 2026-07-03**, not 10:
+
+- First same-day batch sent 5 one-to-one emails to `support@wybotpool.com`, `info@bettabot.com`, `team@askthepoolguy.com`, `info@poolservicetechs.com`, and `sean@thepoolguybcs.com`.
+- A second concurrent same-day batch resent those same 5 recipients, creating duplicate same-recipient exposure and pushing the day to 10 total sends.
+- A later same-day batch sent 5 more one-to-one emails to `office@mypoolguy.com`, `customerservice@poolcoversinc.com`, `sales@riptidevac.com`, `service@pooltek.com`, and `global@pools.shop`, bringing the real day total to 15.
+
+This daily growth-loop run therefore sent **0 additional emails** and stayed in queue-maintenance mode only.
+
+Queue maintenance from this final reconciliation:
+
+- Preserved the earlier duplicate-suppression hardening on `support@wybotpool.com`, `info@bettabot.com`, `team@askthepoolguy.com`, `info@poolservicetechs.com`, and `sean@thepoolguybcs.com`; those rows remain `follow-up-sent` because the duplicate same-day resend already spent the cold follow-up boundary.
+- Added 5 new verified future prospects as `queued`: `info@bluesquaremfg.com`, `sales@waterco.us`, `salessupport@oreqcorp.com`, `Customer.Service@KingTechnology.com`, and `help@poolzoom.com`.
+- Preserved `team@poolbrain.com` as `replied` and Pentair Pool University as a future hold until `2026-07-15`.
+
+Current interpretation: July 3 is an over-cap coordination failure, not a clean compliant send day. The next eligible SplashLens send run must reconcile Gmail, queue, and committed branch truth immediately before any recipient selection.

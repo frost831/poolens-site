@@ -460,3 +460,24 @@ Queue updates: marked the five unique recipient rows as `sent`, set `last_sent_a
 Queue hardening after final reconciliation: the five unique recipient rows were moved to `follow-up-sent`, `next_send_after` was cleared, and duplicate same-day reconciliation notes were added. Treat those contacts as follow-up-spent; do not send additional cold SplashLens outreach unless they reply and create a warm route.
 
 Blockers: stop all further SplashLens outreach on 2026-07-03 because Gmail truth now shows a same-minute duplicate-send drift and 10 total outbound messages against the checked-in 5/day rule. No bounce, complaint, unsubscribe, remove-me request, or negative reply blocked the run.
+
+## Controlled outreach reconciliation - 2026-07-03 09:33:12 -05:00
+
+Preflight verification: `https://splashlens.com`, `https://app.splashlens.com`, `https://splashlens.com/api/partner-intake`, and `https://app.splashlens.com/api/events` all returned live healthy responses on 2026-07-03. `partner-intake` returned `{"ok":true,"storageConfigured":true,"emailConfigured":true}`. `api/events` returned `{"ok":true,"storageConfigured":true,"emailConfigured":true}`. Monthly and yearly checkout still returned `302` with `X-SplashLens-Checkout-Mode: payment_link_direct` to live Stripe Payment Links. Public App Store and Google Play listing URLs both remained reachable. Discovery surfaces stayed green: `splashlens.com/ai.txt`, `app.splashlens.com/ai.txt`, `app.splashlens.com/llms.txt`, `app.splashlens.com/robots.txt`, `app.splashlens.com/sitemap.xml`, `splashlens.com/robots.txt`, and `splashlens.com/sitemap.xml` all returned `200`. The owner digest route `https://app.splashlens.com/api/events?digest=1` returned `401 Unauthorized`, which matches the intended protected auth gate rather than a public outage.
+
+Gmail hygiene before this reconciliation pass: sender profile verified as Joshua Frost `<frost@belowzeromedia.com>`. No SplashLens-specific unsubscribe/remove request, complaint, negative reply, or bounce surfaced since the previous run. The only new SplashLens inbound message was the Pool Brain holiday auto-reply already recorded earlier on 2026-07-03.
+
+Collision discovered: by the time this pass reconciled the branch state, `docs/outreach/splashlens-drip-run-log.md` and the committed queue already showed a separate July 3 SplashLens batch had consumed the 5-email daily cap on five other recipients: `support@wybotpool.com`, `info@bettabot.com`, `team@askthepoolguy.com`, `info@poolservicetechs.com`, and `sean@thepoolguybcs.com`. Those sends were not visible in the initial recipient-selection snapshot used by this pass, so this pass incorrectly sent a second 5-email batch before the same-day branch/mailbox drift was fully visible.
+
+Second batch actually sent from this pass, one-to-one plain text, no BCC:
+- MYPOOLGUY.COM Texas at `office@mypoolguy.com` - Gmail id `19f285ba7e6e96ef`.
+- Pool Covers Inc. at `customerservice@poolcoversinc.com` - Gmail id `19f285bdc1e18ee2`.
+- Riptide Pool Vacuum Systems at `sales@riptidevac.com` - Gmail id `19f285bf55fb4948`.
+- Pooltek Services at `service@pooltek.com` - Gmail id `19f285bc119b7911`.
+- Pools.shop ecommerce at `global@pools.shop` - Gmail id `19f285c106f5a2c2`.
+
+Final truth for 2026-07-03: SplashLens sent 10 total cold emails across 10 unique recipients. This is an over-cap coordination failure against the checked-in `5/day` rule, even though the second batch itself was conservative, one-to-one, plain text, and ended with `Talk Soon,`.
+
+Queue updates from this reconciliation pass: marked the five second-batch rows as `sent`, set `last_sent_at=2026-07-03`, set `next_send_after=2026-07-07`, and appended Gmail ids plus the over-cap note to each row. Remaining `queued` row after reconciliation: Pentair Pool University at `knowledge@pentair.com`, still intentionally held until `2026-07-15` because of recent Pentair/Pleatco exposure. Current queue snapshot after reconciliation: `follow-up-sent=60`, `needs-verification=31`, `sent=26`, `research-needed=19`, `replied=8`, `needs-contact=8`, `hold-community=6`, `hold-proof-needed=4`, `bounced=2`, `covered-by-sent=1`, `queued=1`.
+
+Blocker: do not send any additional SplashLens outreach on 2026-07-03. The true blocker is same-day coordination drift between committed queue state and live mailbox/send actions, not public site health.

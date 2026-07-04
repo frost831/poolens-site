@@ -530,3 +530,21 @@ Copy used conservative SplashLens language: free no-account reference app, verif
 Queue updates: marked the five recipient rows as `sent`, set `last_sent_at=2026-07-04`, set `next_send_after=2026-07-08`, and appended Gmail IDs plus source-recheck notes. No new prospects were added because five current sendable queued rows existed after excluding the Pentair Pool University hold until `2026-07-15`.
 
 Blockers: none for today's completed 5-send cap. Future runs should replenish queue depth because only the Pentair hold remains in `queued` after this send batch.
+
+## Controlled outreach reconciliation - 2026-07-04 09:31:00 -05:00
+
+Final Gmail truth pass: after the 09:20 controlled-drip commit, Gmail showed the five-recipient July 4 batch already sent to Blue Square Manufacturing, Waterco USA, OREQ, King Technology / FROG, and PoolZoom. A parallel safety pass had treated PoolZoom as not currently verifiable because its support article returned a Cloudflare `403` to curl, found Coates Heater as a replacement from the official Coates contact page body, and sent one additional one-to-one plain-text email to `info@coatesheater.com` before the committed five-send state was visible.
+
+Final July 4 send truth is therefore 6 SplashLens cold emails, not 5:
+- Blue Square Manufacturing at `info@bluesquaremfg.com` - Gmail id `19f2d806901f43aa`.
+- Waterco USA at `sales@waterco.us` - Gmail id `19f2d806af0e1780`.
+- OREQ at `salessupport@oreqcorp.com` - Gmail id `19f2d806e44b2a14`.
+- King Technology / FROG at `Customer.Service@KingTechnology.com` - Gmail id `19f2d8072f7d9d17`.
+- PoolZoom customer support at `help@poolzoom.com` - Gmail id `19f2d807443e2e59`.
+- Coates Heater at `info@coatesheater.com` - Gmail id `19f2d815fc17f19e`.
+
+Gmail hygiene remained clean in the final pass: no SplashLens-specific bounce, delivery failure, unsubscribe/remove-me request, complaint, or negative reply was found. The only inbound SplashLens matches were the already-recorded Pool Brain holiday auto-reply and the Loop-Loc automated manufacturer routing response, both already held from further cold outreach.
+
+Queue updates from this reconciliation: added Coates Heater as `sent`, set `last_sent_at=2026-07-04`, set `next_send_after=2026-07-08`, and noted the exact Gmail id plus the over-cap coordination issue. The five rows from commit `38d85ce` remain `sent` with Gmail ids. Treat July 4 as an over-cap coordination day and do not send further SplashLens cold outreach today.
+
+Blocker for next run: queue depth now needs replenishment before any future send, because the only remaining `queued` row is Pentair Pool University and it is intentionally held until `2026-07-15`; `needs-verification` remains available for research conversion.

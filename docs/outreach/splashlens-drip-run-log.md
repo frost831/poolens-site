@@ -509,3 +509,24 @@ Queue maintenance from this final reconciliation:
 - Preserved `team@poolbrain.com` as `replied` and Pentair Pool University as a future hold until `2026-07-15`.
 
 Current interpretation: July 3 is an over-cap coordination failure, not a clean compliant send day. The next eligible SplashLens send run must reconcile Gmail, queue, and committed branch truth immediately before any recipient selection.
+
+## Controlled outreach drip - 2026-07-04 09:20:27 -05:00
+
+Preflight: automation memory path was checked first and did not exist yet in this environment. Live HTTP checks returned `200` for `https://splashlens.com`, `https://splashlens.com/partsnap-proof-library.html`, and `https://app.splashlens.com`. Body scans found no visible `500+` claim and no common fake-testimonial-name markers. The live site/app exposed verified `230+` current-entry language plus fallback `180+` language.
+
+Gmail hygiene: sender profile verified as Joshua Frost `<frost@belowzeromedia.com>`. Last-7-day SplashLens searches found no unsubscribe/remove-me requests, complaints, negative replies, or SplashLens-specific bounces/delivery failures. The only inbound SplashLens item found was the already-recorded Pool Brain holiday auto-reply from 2026-07-03. Delivery-subsystem hits in the same 7-day mailbox window were unrelated GrainBrief/golf/ag messages, not SplashLens. Gmail showed no July 4 SplashLens sent mail and no exact-recipient history for the five selected queued rows before this batch.
+
+Source/contact revalidation: Blue Square, Waterco USA, OREQ, and King Technology/FROG source URLs returned `200` on 2026-07-04. The PoolZoom support article returned `403` to curl on 2026-07-04, but the row was already queued from a 2026-07-03 official-page verification that listed `help@poolzoom.com`; record the 403 caveat for future review.
+
+Send decision: sent 5 one-to-one plain-text emails from this pass, no BCC and no social/forum/Facebook/Reddit posts:
+- Blue Square Manufacturing at `info@bluesquaremfg.com` - Gmail id `19f2d806901f43aa`.
+- Waterco USA at `sales@waterco.us` - Gmail id `19f2d806af0e1780`.
+- OREQ at `salessupport@oreqcorp.com` - Gmail id `19f2d806e44b2a14`.
+- King Technology / FROG at `Customer.Service@KingTechnology.com` - Gmail id `19f2d8072f7d9d17`.
+- PoolZoom customer support at `help@poolzoom.com` - Gmail id `19f2d807443e2e59`.
+
+Copy used conservative SplashLens language: free no-account reference app, verified `230+` current field troubleshooting entries where natural, PartSnap possible matches, missing proof, Callback Risk Score, Service Proof Passport saves, Mystery Part ticket IDs, Apprentice Mode, and verification notes. Messages avoided endorsement, official alignment, partnership, diagnosis, warranty, and fitment-guarantee claims. Each email ended with `Talk Soon,` immediately before Joshua Frost's name.
+
+Queue updates: marked the five recipient rows as `sent`, set `last_sent_at=2026-07-04`, set `next_send_after=2026-07-08`, and appended Gmail IDs plus source-recheck notes. No new prospects were added because five current sendable queued rows existed after excluding the Pentair Pool University hold until `2026-07-15`.
+
+Blockers: none for today's completed 5-send cap. Future runs should replenish queue depth because only the Pentair hold remains in `queued` after this send batch.

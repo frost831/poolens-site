@@ -548,3 +548,9 @@ Gmail hygiene remained clean in the final pass: no SplashLens-specific bounce, d
 Queue updates from this reconciliation: added Coates Heater as `sent`, set `last_sent_at=2026-07-04`, set `next_send_after=2026-07-08`, and noted the exact Gmail id plus the over-cap coordination issue. The five rows from commit `38d85ce` remain `sent` with Gmail ids. Treat July 4 as an over-cap coordination day and do not send further SplashLens cold outreach today.
 
 Blocker for next run: queue depth now needs replenishment before any future send, because the only remaining `queued` row is Pentair Pool University and it is intentionally held until `2026-07-15`; `needs-verification` remains available for research conversion.
+
+## Suppression update - Fluidra removal request - 2026-07-05
+
+Inbound reply from Kapri / Fluidra WCS Support at Fluidra North America said they are not interested and asked to be removed from the email list. Updated the Fluidra / Jandy / Polaris / Zodiac queue row for `productsupport@fluidra.com` to `suppressed`.
+
+No follow-up or persuasion email should be sent to this row. Future SplashLens outreach must exclude `productsupport@fluidra.com` and this Fluidra/Jandy/Polaris/Zodiac product-support route unless Fluidra initiates a new conversation.

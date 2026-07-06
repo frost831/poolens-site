@@ -554,3 +554,24 @@ Blocker for next run: queue depth now needs replenishment before any future send
 Inbound reply from Kapri / Fluidra WCS Support at Fluidra North America said they are not interested and asked to be removed from the email list. Updated the Fluidra / Jandy / Polaris / Zodiac queue row for `productsupport@fluidra.com` to `suppressed`.
 
 No follow-up or persuasion email should be sent to this row. Future SplashLens outreach must exclude `productsupport@fluidra.com` and this Fluidra/Jandy/Polaris/Zodiac product-support route unless Fluidra initiates a new conversation.
+
+## Controlled outreach drip - 2026-07-06 09:20:51 -05:00
+
+Preflight: automation memory was read from `C:\Users\sales\.codex\automations\splashlens-controlled-outreach-drip\memory.md` because `CODEX_HOME` was unset in this shell. Live checks passed: `https://splashlens.com`, `https://splashlens.com/partsnap-proof-library.html` (redirecting to `/partsnap-proof-library`), and `https://app.splashlens.com` returned 200-level rendered pages. Homepage body showed `230+` field/troubleshooting entry language and no visible `500+` claim or common fake-testimonial-name markers.
+
+Gmail hygiene: targeted last-7-day SplashLens searches found no SplashLens-specific bounces, delivery failures, complaints, unsubscribe/remove-me requests, or negative replies beyond the already-recorded Fluidra removal request from 2026-07-05. Generic mailer-daemon failures in the mailbox were unrelated to SplashLens (`office@southeastagnet.com`, `Office@agnetwest.com`, and `info@perfectpractice.golf`). Inbound SplashLens-related items found today:
+
+- Tim Auerhahn / Aquatic Council replied on 2026-07-04 that he is still interested and has a flexible week. Queue row remains `replied`; treat as warm scheduling, not cold drip.
+- PoolZoom sent automated Zendesk/ticket replies on 2026-07-04 and 2026-07-06. Queue row changed from `sent` to `replied`; do not cold-follow-up unless a human reply creates a warm route.
+- Pool Brain holiday auto-reply remained previously recorded and held.
+
+Send decision: sent 0 emails. The checked-in rules say to stop sending for the day if a bounce, complaint, unsubscribe/request-not-to-contact, or negative reply is found; the 2026-07-05 Fluidra removal request is still inside the 7-day review window, so this run stayed in queue-maintenance mode only.
+
+Queue maintenance:
+
+- Updated Aquatic Council notes with the fresh 2026-07-04 human reply.
+- Updated PoolZoom customer support to `replied`, cleared `next_send_after`, and recorded the automated Zendesk replies.
+- Added 3 verified future queued prospects for training/association rotation: California Pool Association (`info@capoolassociation.com`), Professional Pool Management (`cduncan865@gmail.com`), and Pool Pros CPO Training (`poolproscponv@gmail.com`).
+- Current queue snapshot after edits: `queued=4`, `needs-verification=31`, `replied=9`, `suppressed=1`, `sent=31`, `follow-up-sent=59`, `sendable_today=0`.
+
+Blockers: no outbound SplashLens email should be sent on 2026-07-06 because the Fluidra remove-me request remains a current stop signal under the 7-day Gmail hygiene rule. Next clean run should start by rechecking Gmail stop signals, then use the newly queued training/association rows if no hard stop remains.

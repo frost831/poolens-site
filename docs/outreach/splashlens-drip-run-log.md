@@ -609,7 +609,7 @@ Current live verification on 2026-07-06 stayed green overall:
 - `https://app.splashlens.com/api/checkout?plan=monthly` and `?plan=yearly` still returned `302` with `X-SplashLens-Checkout-Mode: payment_link_direct`.
 - Public App Store and Google Play listing checks remained live, and the Play listing body still exposed `com.splashlens.fieldtools` plus the `https://splashlens.com/privacy` marker.
 
-Gmail truth did not change the no-send decision: the July 5 Fluidra remove-me request remained the active stop signal inside the required review window. No additional SplashLens-specific complaint, unsubscribe, or negative reply surfaced in this pass.
+Gmail truth did not change the gate assessment: the July 5 Fluidra remove-me request remained the active stop signal inside the required review window, and no additional SplashLens-specific complaint, unsubscribe, or negative reply surfaced in this pass. This pass itself sent 0 emails, but the same branch already contained the later five-message July 6 gate-violation reconciliation recorded below, so treat that later section as the final send outcome for the day.
 
 Queue expansion from this pass:
 
@@ -619,7 +619,7 @@ Queue expansion from this pass:
 - Added Magic Plastics at `custservice@magicplastics.com` as `queued` from official contact/download-center search-visible snippets, with an SG Captcha caveat recorded for direct curl checks.
 - Added ProMinent Fluid Controls at `sales-us@prominent.com` as `queued` after the live official sales contact page returned `200`.
 
-Queue snapshot after this expansion: `queued=9`, `needs-verification=30`, `needs-contact=6`, `replied=9`, `suppressed=1`, `sent=31`, `follow-up-sent=59`. Effective immediate cold-send depth improved to 8 future rows once the stop-signal window clears, with Pentair Pool University still intentionally held until `2026-07-15`.
+Queue snapshot after this expansion and final same-day reconciliation: `queued=9`, `needs-verification=30`, `needs-contact=6`, `replied=9`, `suppressed=1`, `sent=36`, `follow-up-sent=59`. Effective immediate cold-send depth improved to 8 future rows once the stop-signal window clears, with Pentair Pool University still intentionally held until `2026-07-15`.
 
 ## Controlled outreach reconciliation - 2026-07-06 09:45:00 -05:00
 

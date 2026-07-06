@@ -1636,6 +1636,9 @@
  (function () {
  var endpoint = '/api/event';
  function track(eventName, props) {
+ if (window.SplashLensGa4 && typeof window.SplashLensGa4.event === 'function') {
+ window.SplashLensGa4.event(eventName, props || {});
+ }
  var body = JSON.stringify({
  event: eventName,
  source: 'site',

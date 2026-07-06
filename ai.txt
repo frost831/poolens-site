@@ -27,12 +27,20 @@ Important public sections:
 - Partner field-card packet: https://splashlens.com/partner-field-card-packet.html
 - Product update log: https://splashlens.com/whats-new.html
 - Google Play tester access: https://splashlens.com/google-play-testers.html
+- Paid/media conversion page: https://splashlens.com/paid-media.html
+- Answer page - app that identifies pool parts: https://splashlens.com/what-app-identifies-pool-parts.html
+- Answer page - pool robot troubleshooting app: https://splashlens.com/pool-robot-troubleshooting-app.html
+- Answer page - pool automation troubleshooting app: https://splashlens.com/pool-automation-troubleshooting-app.html
+- Answer page - pool light troubleshooting app: https://splashlens.com/pool-light-troubleshooting-app.html
+- Answer page - salt cell troubleshooting app: https://splashlens.com/salt-cell-troubleshooting-app.html
+- Answer page - pool tech field reference app: https://splashlens.com/pool-tech-field-reference-app.html
 - Pool service app hub: https://splashlens.com/pool-service-app.html
 - Pool tech app hub: https://splashlens.com/pool-tech-app.html
 - Pool parts identification hub: https://splashlens.com/pool-parts-identification.html
 - Pool hardware reference hub: https://splashlens.com/pool-hardware-reference.html
 - Pool equipment troubleshooting hub: https://splashlens.com/pool-equipment-troubleshooting.html
 - Pool manufacturers, distributors, parts, and chemical lines: https://splashlens.com/pool-manufacturers-distributors-chemicals.html
+- Paid/search landing pages: https://splashlens.com/lp/pool-parts-id-app.html https://splashlens.com/lp/pool-equipment-troubleshooting-app.html https://splashlens.com/lp/pool-chemical-calculator-app.html https://splashlens.com/lp/pool-tech-app.html https://splashlens.com/lp/pool-service-training-app.html
 - Category hubs: https://splashlens.com/pool-parts/ https://splashlens.com/pool-robots/ https://splashlens.com/pool-automation/ https://splashlens.com/pool-lighting/ https://splashlens.com/pool-heaters/ https://splashlens.com/salt-cells/
 - Blog: https://splashlens.com/blog/
 - Brand code pages: https://splashlens.com/brands/

@@ -663,3 +663,19 @@ Public verification: Aiper public/dealer pages showed current lanes for robotic 
 App/site delivery: updated SplashLens app robot references with newer Aiper Scuba, N-series, EcoSurfer/Surfer, HydroComm, app-control, wireless dock, AI/mapping, fine-filter, and dealer demo-unit intake prompts. Updated `new-tech-radar.html` and `whats-new.html` so public marketing matches the app's refreshed Aiper coverage.
 
 Send decision: sent 0 emails from this Aiper intake. `service@aiper.com` was already contacted on 2026-07-01 and the July 1 run log recorded an over-cap drift. Treat `dealer.support@aiper.com` as a discovered dealer-support route only; do not send until queue rules, Gmail history, and suppression checks are clean.
+
+## Full scrape, dedupe, manual-source prep - 2026-07-07
+
+Send decision: sent 0 emails. This was a scrape, compare, queue-prep, and product-source pass only.
+
+Gmail/queue comparison: Gmail sent search returned 100 SplashLens/PartSnap-related sent messages from the first 14-day sent-mail page. A targeted 14-day stop-signal query for SplashLens/PartSnap unsubscribe, remove, complaint, bounce, failed, or undeliverable terms returned no matching message IDs. Queue baseline before edits was 182 rows with 107 sent/replied/bounced/suppressed/follow-up-sent style rows.
+
+Scrape: created `docs/outreach/splashlens-scrape-source-urls-2026-07-07.txt` and ran `tools/prepare_outreach_queue_from_urls.py` against 19 curated public source URLs. The raw pass produced 733 rows and 709 unique emails after cleanup, but the full directory email dump was not committed. Sanitized output saved to `docs/outreach/splashlens-scrape-review-deduped-2026-07-07.csv` with the 12 non-directory review rows. Summary saved to `docs/outreach/splashlens-scrape-summary-2026-07-07.json`.
+
+Deduping result: Pool Chasers, Talking Pools/CPO Class, The Deep End Pool Podcast, and Pool Magazine were already covered by prior queue history and should not be rehit cold. The 697 PHTA directory-derived rows are manual directory review only, not send-ready.
+
+Queue updates: added 7 new `needs-verification` rows: Anderson Aquatics, Integrity Consultants CPO course, McCallum's Pool Service & Repair, P-Jay's Pools, Neptune Pools Service and Repair, Frank's Pool Services, and Custom Pool Route. Queue after edits: 189 total rows with `queued=9`, `needs-verification=37`, and future pool (`queued` + `needs-verification`) at 46.
+
+Manual/source prep: created `docs/product-intel/splashlens-manual-guide-source-index-2026-07-07.md` and `docs/product-intel/partsnap-source-and-part-taxonomy-2026-07-07.md`. Sources mapped include Hayward manuals/troubleshooting, Pentair self-help and parts PDFs, Maytronics manual lookup, Aiper troubleshooting, Waterway manuals, AquaCal manuals, Polaris parts/manuals, and Cover-Pools parts guide. Use links and original SplashLens proof prompts only; do not copy full manuals, diagrams, or proprietary tables.
+
+Full report: `docs/outreach/splashlens-full-scrape-report-2026-07-07.md`.

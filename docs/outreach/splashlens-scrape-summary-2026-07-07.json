@@ -1,0 +1,37 @@
+{
+  "raw_rows": 733,
+  "unique_emails": 709,
+  "status_counts": {
+    "duplicate-or-covered": 11,
+    "manual-directory-review": 697,
+    "manual-review-personal-or-owner": 1
+  },
+  "lane_counts": {
+    "training": 4,
+    "pool-service-company": 700,
+    "creator-media": 1,
+    "publication": 3,
+    "needs-classification": 1
+  },
+  "known_queue_emails": 125,
+  "known_queue_domains_nonfree": 175,
+  "recent_sent_sample_emails": 25,
+  "free_email_domains_not_used_for_domain_dedupe": [
+    "aol.com",
+    "att.net",
+    "bellsouth.net",
+    "comcast.net",
+    "gmail.com",
+    "hotmail.com",
+    "icloud.com",
+    "live.com",
+    "mac.com",
+    "me.com",
+    "outlook.com",
+    "verizon.net",
+    "yahoo.com"
+  ],
+  "committed_review_rows": 12,
+  "directory_rows_not_committed": 697,
+  "raw_directory_dump_committed": false
+}

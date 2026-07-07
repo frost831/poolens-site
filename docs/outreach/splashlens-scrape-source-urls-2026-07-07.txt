@@ -1,0 +1,22 @@
+# SplashLens full scrape source URLs - 2026-07-07
+# Public source pages only. Output is review-only, not send-ready.
+
+https://www.poolchasers.com/contact
+https://talkingpoolspodcast.buzzsprout.com/
+https://cpoclass.com/swimming-pool-podcast/
+https://thedeependpoolpodcast.com/contact/
+https://www.thepoolclass.com/contact/
+https://cpoclass.com/contact/
+https://integrity-consultants.com/certified-pool-spa-operator-course/
+https://www.andersonaquatics.com/classes
+https://www.poolspanews.com/contact-us/
+https://www.poolmagazine.com/contact-us/
+https://www.poolspamarketing.com/
+https://www.phta.org/consumer/directory/find-a-pool-repair-pro/
+https://poolroutesales.com/
+https://custompoolroute.com/about-us/
+https://azpoolguys.com/
+https://www.pjayspools.com/
+https://neptunepoolsaz.com/
+https://frankspoolservicesinc.com/
+https://mccallumspoolservice.com/

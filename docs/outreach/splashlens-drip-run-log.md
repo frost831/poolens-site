@@ -651,3 +651,15 @@ AQUA editorial send: sent one one-to-one follow-up to `editors@aquamagazine.com`
 Suppression boundary: Fluidra WCS / product-support routes remain suppressed because of the July 2026 remove request. Product knowledge from received/public Fluidra/Jandy material can be added to SplashLens, but no promotional follow-up should be sent to the suppressed support route unless Fluidra initiates a new thread.
 
 Deep prospecting prep: created `docs/outreach/splashlens-outreach-expansion-2026-07-07.md` with prioritized podcast, magazine, training, manufacturer, and small-company lanes plus a compliant scraping/verification workflow. No scraped pool-company blast was sent. Future small-company outreach should be queue-based, source-verified, deduped against Gmail and the drip queue, and subject to the 7-day stop-signal rule before any send.
+
+## Aiper product-intel intake - 2026-07-07
+
+Product intake: parsed `C:\Users\sales\AppData\Local\Temp\How to Get Aiper Demo Unit.msg` from AIPER INTELLIGENT LLC. Extracted source saved to `docs/product-intel/aiper-demo-unit-email-2026-07-07.json`; filtered product-intel note saved to `docs/product-intel/aiper-demo-unit-2026-07-07-splashlens-intake.md`.
+
+Email facts: dealer/demo-unit offer said Aiper products were available at 60% off MSRP for demo/display use, surfaced `dealer.support@aiper.com`, and linked to the Aiper Dealer Portal through tracked email links. No product-spec attachment was included.
+
+Public verification: Aiper public/dealer pages showed current lanes for robotic pool cleaners, robotic pool skimmers, handheld vacuums, smart pool care, parts/accessories, and demo-unit names including Scuba 800, Scuba L1, Scuba N1 Plus, EcoSurfer M2, Scuba N1 Max, and Scuba N3 AI Vision. Aiper public product/troubleshooting pages also support Scuba X1 / X1 Pro Max, HydroComm/app, wireless dock, mapping, filter, and firmware/status prompts.
+
+App/site delivery: updated SplashLens app robot references with newer Aiper Scuba, N-series, EcoSurfer/Surfer, HydroComm, app-control, wireless dock, AI/mapping, fine-filter, and dealer demo-unit intake prompts. Updated `new-tech-radar.html` and `whats-new.html` so public marketing matches the app's refreshed Aiper coverage.
+
+Send decision: sent 0 emails from this Aiper intake. `service@aiper.com` was already contacted on 2026-07-01 and the July 1 run log recorded an over-cap drift. Treat `dealer.support@aiper.com` as a discovered dealer-support route only; do not send until queue rules, Gmail history, and suppression checks are clean.

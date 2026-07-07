@@ -633,3 +633,21 @@ Messages already sent before reconciliation:
 - Certified Pool Trainers of Iowa and Minnesota at `johnszymanski99@hotmail.com` - Gmail id `19f37ceebe21c965`.
 
 Corrective queue action: the five rows remain `sent` because the emails exist in Gmail, but `next_send_after` was cleared and notes now state that no automated follow-up should be sent. No further SplashLens outreach should be sent on 2026-07-06. The next run must treat any removal request inside the 7-day hygiene window as a hard no-send condition before selecting recipients.
+
+## Product-intel, warm meetings, and AQUA follow-up - 2026-07-07 12:53:29 -05:00
+
+Product intake: parsed the dropped-in Fluidra/Jandy TruClear email from `C:\Users\sales\AppData\Local\Temp\Drop In A Jandy_ TruClear Salt Chlorinator.msg` and saved the extracted source record to `docs/product-intel/jandy-truclear-email-2026-07-07.json`. The email had no attachments. Service-relevant items extracted: TruClear drop-in replacement positioning, drop-in replacement guide mention, major competitor dimensions/performance/SKU match-up language, clear viewing window, cleaning workflow, and cell-body/cap multitasking workflow.
+
+AQUA New & Improved intake: reviewed `https://www.aquamagazine.com/products/article/15828665/new-improved-july-2026` and saved the filtered SplashLens intake to `docs/product-intel/aqua-new-improved-july-2026-splashlens-intake.md`. App-relevant items: Jandy TruClear salt lane, CCEI Antea VS / Vigipool / Tild VP connected-pool lane, Jandy Infinite WaterColors lighting confirmation, SunnyWhale FinWhale smart chlorine dispenser, Water Tech Volt vacs, and a new hot tub/spa troubleshooting lane. Deferred/excluded items were retail/wellness/decor or non-serviceable accessories.
+
+App/site delivery: updated and deployed the app and public site so marketing claims match product reality. Live checks confirmed `https://app.splashlens.com` returned `200`, the app bundle contained `TRUCLEAR-CHECK-CELL`, app data contained `Hot Tubs / Spas`, and the live site returned final `200` responses for `https://splashlens.com/new-tech-radar`, `https://splashlens.com/whats-new`, and `https://splashlens.com/spa-hot-tub-troubleshooting-app`. The sitemap contains `spa-hot-tub-troubleshooting-app.html`.
+
+Warm scheduling sends: sent two one-to-one replies to existing warm meeting leads, no CC/BCC:
+- Tim Auerhahn / Aquatic Council at `tim@aquaticcouncil.com` - Gmail sent id `19f3dacc243a830d`.
+- Lauren Broom / Space Coast Pool School at `spacecoastpoolschool@yahoo.com` - Gmail sent id `19f3dacc6b4711bb`.
+
+AQUA editorial send: sent one one-to-one follow-up to `editors@aquamagazine.com` - Gmail sent id `19f3db01060b65c2`. The email referenced the PoolPro article, the AQUA July New & Improved roundup, and the app's newly updated field-reference coverage. No endorsement, diagnosis, warranty, code-compliance, or fitment-guarantee claims were made. Signoff used `Talk Soon`.
+
+Suppression boundary: Fluidra WCS / product-support routes remain suppressed because of the July 2026 remove request. Product knowledge from received/public Fluidra/Jandy material can be added to SplashLens, but no promotional follow-up should be sent to the suppressed support route unless Fluidra initiates a new thread.
+
+Deep prospecting prep: created `docs/outreach/splashlens-outreach-expansion-2026-07-07.md` with prioritized podcast, magazine, training, manufacturer, and small-company lanes plus a compliant scraping/verification workflow. No scraped pool-company blast was sent. Future small-company outreach should be queue-based, source-verified, deduped against Gmail and the drip queue, and subject to the 7-day stop-signal rule before any send.

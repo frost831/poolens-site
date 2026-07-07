@@ -691,3 +691,11 @@ Product source expansion: added Balboa, Gecko, Waterway NEO, iAquaLink manuals, 
 App/site build: expanded the actual app spa/hot-tub corpus in `poolens/js/errors.js` and `poolens/js/data.js` with spa pack/controller, plumbing/jets/pumps, water/sanitation/ozone, heat/swim-spa/cover, Aiper robot, and proof-packet prompt coverage. Bumped the app service-worker cache to `splashlens-v15-spa-hot-tub-lane`. Public site pages updated: `spa-hot-tub-troubleshooting-app.html`, `partsnap.html`, `partsnap-proof-library.html`, and `connected-pool-brain.html`. New docs created: `docs/product-intel/spa-hot-tub-lane-build-2026-07-07.md` and `docs/outreach/splashlens-spa-hot-tub-and-media-prep-2026-07-07.md`.
 
 Validation before deploy: `node --check` passed for `js/errors.js`, `js/data.js`, `js/app.js`, and `sw.js`. Public-site content checks confirmed Balboa/Gecko/Waterway markers in the spa, PartSnap, proof-library, and Connected Pool Brain pages, with no affirmative unsafe claims found.
+
+## All-seven prep pass - 2026-07-07
+
+Send decision: sent 0 emails. This pass stayed inside verification/prep because the run log still contains the July 2026 Fluidra remove request and the July 6 gate-violation reconciliation. Future sends require a fresh same-day Gmail stop-signal search, queue dedupe, suppression check, and explicit send authority.
+
+Outreach QA: created `docs/outreach/splashlens-outreach-verification-2026-07-07.md`. Current future rows remain verification-only unless cleared by suppression checks: Swimming Pool News, Between Two Stops / Skimmer Podcast, Certified Pool Trainers Georgia route, and The Pool Trainers.
+
+Public crawl work: generated `source-pages/` conservative proof-checklist pages for Balboa, Gecko, Waterway NEO, Raypak, CMP DEL/Ozone/AOP, Clear Comfort AOP, Hayward CAT, IntelliChem, Rola-Chem, and CHEMTROL. Added `source-pages-sitemap.xml` and robots.txt sitemap reference.

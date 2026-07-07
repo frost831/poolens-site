@@ -72,7 +72,17 @@ Require or encourage these before any confident part path:
 ### Spas / Hot Tubs
 
 - Spa pack, topside control, heater tube, pressure switch, flow switch, circ pump, jet body, air valve, filter, ozone/UV/AOP unit, sensor, union.
-- Proof flags: small-volume chemistry, breaker/GFCI behavior, flow/no-heat code, pack model, pump voltage, plumbing layout.
+- Proof flags: small-volume chemistry, breaker/GFCI behavior, flow/no-heat code, pack model, topside display code, pump voltage, plumbing layout, heater tube, sensor family, filter condition, drain/purge history, cover condition.
+
+### Spa Pack / Topside Controllers
+
+- Balboa, Gecko, Waterway NEO, OEM-branded pack, topside keypad, heater tube, pressure/flow switch, temp sensor, high-limit sensor, relay/board, GFCI behavior.
+- Proof flags: controller ecosystem, exact display code, pack label, topside photo, pump/circ-pump running status, water level, filter proof, valve position, breaker trip timing, manual/source link.
+
+### Spa Ozone / UV / AOP
+
+- Ozone module, UV/AOP chamber, lamp, check valve, injector, tubing, status light, flow loop, power supply.
+- Proof flags: module label, status light, lamp age, check-valve water intrusion, injector air draw, flow proof, tubing route, qualified electrical boundary.
 
 ### Chemical Feeders / Controllers
 
@@ -98,6 +108,27 @@ When a manufacturer, distributor, trainer, or senior tech helps, capture:
 - Safety or warranty language.
 - Link to current official support/manual page.
 
+## New Proof Packet Templates
+
+### Spa Pack Proof Packet
+
+- Controller ecosystem: Balboa, Gecko, Waterway NEO, OEM-branded, or unknown.
+- Visible code: display text, flashing indicators, app screen, or blank display.
+- Water/flow proof: water level, filter state, valve position, circ pump or jet pump movement.
+- Safety proof: GFCI trip timing, wet pack/topside evidence, heater/high-limit repeat behavior.
+- Escalation rule: do not recommend board, sensor, heater, or pump replacement without current manual and qualified verification.
+
+### Chemical Controller Proof Packet
+
+- Controller model and app/screen state.
+- Manual water test, probe age, calibration standard/date, flow cell, sample line, tank/tablet level, feed tubing, injection fitting.
+- Risk prompt: automation readings that disagree with manual tests are high callback risk.
+
+### AOP / Ozone / UV Proof Packet
+
+- Module label, status light/app alert, lamp age, flow proof, tubing/check-valve condition, injector air draw, water-in-tubing evidence.
+- Risk prompt: stop if water has reached electronics or if the unit requires energized internal testing.
+
 ## Scrape Sources That Help PartSnap
 
 - Official parts sheets and exploded diagrams.
@@ -116,4 +147,3 @@ SplashLens should say:
 SplashLens should not say:
 
 "PartSnap identifies the exact part," "guaranteed fit," "manufacturer-approved," or "replace this part."
-

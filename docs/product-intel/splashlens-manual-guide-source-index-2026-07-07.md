@@ -30,6 +30,30 @@ Use manuals and support libraries as source references, not copied content.
 | AquaCal operation/manual library | `https://www.aquacal.com/` | Heat pumps, AutoPilot, fault codes, water flow, service warnings. | Add heat-pump and salt/chlorinator proof prompts with qualified-service boundary. |
 | Polaris parts/manuals | `https://www.polarispool.com/en/support/parts` | Cleaner parts and manuals. | Add pressure cleaner and robotic cleaner proof prompts. |
 | Cover-Pools parts guide | `https://www.coverpools.com/wp-content/uploads/2025/11/Cover-Pools-Parts-Guide.pdf` | Automatic cover track, coping, glider, rope, leading-edge, cover-system parts. | Add automatic-cover PartSnap taxonomy and proof packet. |
+| Balboa product resources | `https://www.balboawater.com/support/resources/` | Spa packs, topsides, M7, tech sheets, water-care support, Purezone. | Add spa-pack controller proof prompts: pack label, topside code, heater tube, sensors, flow/pressure switch, GFCI timing. |
+| Balboa PDF user guides | `https://www.balboawater.com/support/pdf-user-guides/` | Public guides for Balboa control and spa systems. | Link as source references only; do not copy tables or controller-specific service procedures. |
+| Gecko documentation | `https://geckoalliance.com/support/documentation/` | in.ye, in.yt, in.xe, in.yj, in.touch, keypad/app, error workflows. | Add Gecko controller family and proof prompts for HL, FLO, sensor, priming, and app/Wi-Fi context. |
+| Gecko Y/XE troubleshooting guide | `https://geckoalliance.com/wp-content/uploads/2023/04/9919-101313-D_Troubleshooting_Guide_YSERIES_XE_EN_REV_15_07_2023.pdf` | Spa-pack troubleshooting and safety/error language. | Use to shape proof-first language for high-limit, sensor, flow, and heater warnings. |
+| iAquaLink product manuals | `https://www.iaqualink.com/en/manuals` | Jandy/Zodiac/AquaLink automation, app, robot, and connected-equipment manuals. | Add Connected Pool Brain source links for app pairing, automation boards, RS-485, and smart equipment. |
+| Raypak document library | `https://www.raypak.com/technical-resources/documents/` | Gas heaters, heat pumps, model history, parts, current pool/spa docs. | Add Raypak heater/heat-pump proof prompts: model/serial, gas type, ignition/flame, limits, pressure/flow, rollout/flue safety boundary. |
+| Raypak pool/spa current documents | `https://www.raypak.com/technical-resources/documents/current-documents/pool-spa-current-documents/` | Current pool/spa heater documents. | Use live source links before building any Raypak-specific field card. |
+| CMP DEL Ozone spa | `https://www.c-m-p.com/spa-products/spa-sanitizers/del-ozone-spa/` | Spa ozone product family and service context. | Add ozone proof prompts: module label, injector vacuum, check valve, tubing water intrusion, flow context. |
+| CMP DEL AOP spa | `https://www.c-m-p.com/spa-products/spa-sanitizers/del-aop-spa/` | Spa AOP product family and support context. | Add UV/AOP proof prompts: lamp age, status light, flow, module label, qualified electrical boundary. |
+| CMP DEL AOP 25/40 manual | `https://www.c-m-p.com/wp-content/uploads/2020/08/AOP-25.40-Instruction-Manual-4-2794-01_RevA_SCREEN.pdf` | AOP install/operation details. | Use as a source link only; extract original proof prompts, not manual tables. |
+| Clear Comfort help | `https://clearcomfort.com/help/` | AOP support, status lights, installation help. | Add status-light and service-proof prompts for AOP systems. |
+| Clear Comfort CCW25 spa install | `https://clearcomfort.com/support/install-ccw25-spa-system/` | Spa AOP install context. | Use for spa AOP proof prompts and escalation boundaries. |
+| Cover-Pools owner manuals | `https://www.coverpools.com/resources/owners-manual/` | Cover operation, safety, and owner-facing proof context. | Pair with parts guide for cover proof packets. |
+| Hot Spring manuals/resources | `https://www.hotspring.com/owners/manuals-and-resources` | Hot Spring spa owner/manual source hub. | Add OEM spa lane source links; do not make brand-specific service claims without manual verification. |
+| Hot Spring FreshWater IQ resources | `https://www.hotspring.com/owners/manuals-and-resources/freshwater-iq` | Smart water-care system context. | Add spa salt/sensor proof prompts: cartridge, app status, manual water test, water age. |
+| Jacuzzi manuals | `https://www.jacuzzi.com/en-us/resources/manuals-and-user-guides.html` | Public Jacuzzi user guides. | Use public guides only. Do not ingest confidential/dealer-only partner parts catalogs. |
+| Sundance manuals | `https://www.sundancespas.com/manuals-user-guides` | Public Sundance guides. | Add OEM manual-link coverage for spa/hot-tub source pages. |
+| Bullfrog manuals | `https://www.bullfrogspas.com/manuals/` | Public Bullfrog owner/manual hub. | Add OEM manual-link coverage for swim-spa and spa-pack proof. |
+| Marquis manuals | `https://www.marquisspas.com/support/manuals-and-downloads/` | Public Marquis support/manual downloads. | Add OEM manual-link coverage for spa/hot-tub source pages. |
+| CDC home pool and hot tub testing | `https://www.cdc.gov/healthy-swimming/about/home-pool-and-hot-tub-water-treatment-and-testing.html` | Public-health best-practice anchor for testing and treatment. | Use for conservative water-testing and small-volume chemistry reminders. |
+| CDC hot tub health | `https://www.cdc.gov/healthy-swimming/safety/what-you-can-do-to-stay-healthy-in-hot-tubs.html` | Hot tub health/safety context. | Use as safety anchor for public/hospitality spa language. |
+| CDC Legionella hot tub prevention | `https://www.cdc.gov/healthy-swimming/prevention/preventing-legionella-from-hot-tubs.html` | Hot tub Legionella prevention context. | Use only as public-health reference language, not diagnosis. |
+| CDC Model Aquatic Health Code | `https://www.cdc.gov/model-aquatic-health-code/php/about/index.html` | Public/commercial aquatic facility code model context. | Use for commercial/operator caution, never as a local code-compliance claim. |
+| CPSC pool and spa drain covers | `https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/Pool-and-Spa-Drain-Covers` | Drain-cover safety guidance. | Add suction/drain-cover safety proof prompts and qualified-service warnings. |
 
 ## Not A Product Source
 
@@ -88,3 +112,14 @@ PoolDial's public Pool Repair AI page shows a competitor lane claiming manual-ba
    - ozone/UV/AOP unit
    - small-volume chemistry context
 
+## Spa / Hot Tub Source Addendum
+
+Use Balboa, Gecko, Waterway, Hot Spring, Jacuzzi, Sundance, Bullfrog, Marquis, CMP DEL, Clear Comfort, CDC, and CPSC sources as links and prompt anchors only. The app should keep the field workflow short:
+
+1. Identify the controller ecosystem: Balboa, Gecko, Waterway NEO, OEM-branded pack, or unknown.
+2. Capture display code, topside photo, pack label, heater tube, sensor/flow-switch context, filter condition, and GFCI timing.
+3. Check low-risk field context first: water level, filter, valves, air lock, mode/setpoint, visible leaks, and water test.
+4. Escalate qualified work: high-limit repeats, dry-heater faults, GFCI trips, sealed pack faults, heater electrical, pumps/capacitors, suction/drain safety, and public/commercial code-sensitive operations.
+5. For water-care systems, compare every app/cartridge/controller reading against a manual water test before trust language.
+
+Do not ingest confidential dealer catalogs, private partner parts sheets, paywalled documents, or manuals that prohibit reuse. Public source links are acceptable; copied tables, diagrams, and proprietary fitment claims are not.

@@ -679,3 +679,15 @@ Queue updates: added 7 new `needs-verification` rows: Anderson Aquatics, Integri
 Manual/source prep: created `docs/product-intel/splashlens-manual-guide-source-index-2026-07-07.md` and `docs/product-intel/partsnap-source-and-part-taxonomy-2026-07-07.md`. Sources mapped include Hayward manuals/troubleshooting, Pentair self-help and parts PDFs, Maytronics manual lookup, Aiper troubleshooting, Waterway manuals, AquaCal manuals, Polaris parts/manuals, and Cover-Pools parts guide. Use links and original SplashLens proof prompts only; do not copy full manuals, diagrams, or proprietary tables.
 
 Full report: `docs/outreach/splashlens-full-scrape-report-2026-07-07.md`.
+
+## Spa/hot-tub product build and outreach prep - 2026-07-07
+
+Send decision: sent 0 emails. This pass was product build, source-index expansion, and verified-queue prep only. The current run log still contains the July 2026 Fluidra remove-me suppression and the July 6 gate-violation reconciliation, so outbound should remain guarded until the 7-day stop-signal window clears or the user explicitly overrides.
+
+Subagent lane comparison: most named podcast/media/training targets are already `follow-up-sent` or otherwise held: Talking Pools/CPO Class, Pool Chasers, Pool People/PoolDial, The Deep End, Pool Guy Podcast, PHTA central, AQUA, Pool & Spa News, Pool & Spa Marketing, Pool Magazine, Service Industry News, Pool Training Academy, and Pool Operation Management. Fresh verification-only rows were added for Swimming Pool News, Between Two Stops / Skimmer Podcast, Certified Pool Trainers Georgia route, and The Pool Trainers.
+
+Product source expansion: added Balboa, Gecko, Waterway NEO, iAquaLink manuals, Raypak, CMP DEL Ozone/AOP, Clear Comfort, Hot Spring, Jacuzzi public manuals, Sundance, Bullfrog, Marquis, CDC hot-tub guidance, CDC MAHC, and CPSC drain-cover guidance to `docs/product-intel/splashlens-manual-guide-source-index-2026-07-07.md`. Boundary remains source links and original SplashLens proof prompts only; no copied manuals, proprietary tables, dealer-only content, or confidential partner catalogs.
+
+App/site build: expanded the actual app spa/hot-tub corpus in `poolens/js/errors.js` and `poolens/js/data.js` with spa pack/controller, plumbing/jets/pumps, water/sanitation/ozone, heat/swim-spa/cover, Aiper robot, and proof-packet prompt coverage. Bumped the app service-worker cache to `splashlens-v15-spa-hot-tub-lane`. Public site pages updated: `spa-hot-tub-troubleshooting-app.html`, `partsnap.html`, `partsnap-proof-library.html`, and `connected-pool-brain.html`. New docs created: `docs/product-intel/spa-hot-tub-lane-build-2026-07-07.md` and `docs/outreach/splashlens-spa-hot-tub-and-media-prep-2026-07-07.md`.
+
+Validation before deploy: `node --check` passed for `js/errors.js`, `js/data.js`, `js/app.js`, and `sw.js`. Public-site content checks confirmed Balboa/Gecko/Waterway markers in the spa, PartSnap, proof-library, and Connected Pool Brain pages, with no affirmative unsafe claims found.

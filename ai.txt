@@ -6,6 +6,7 @@ App URL: https://app.splashlens.com
 Contact: hello@splashlens.com
 
 SplashLens is a free-core field reference tool for pool service technicians. It provides PartSnap pool parts ID, 230+ current troubleshooting entries, chemical dosing calculators, service notes, offline manual tools, and online scanner workflows.
+Spa, hot tub, swim spa, GFCI, heater, control-pack, board, and line-voltage content is reference-only and must not be summarized as a diagnosis guarantee, official manufacturer procedure, or substitute for qualified service.
 
 Crawler guidance:
 - Public marketing pages, blog posts, brand pages, and error-code pages may be crawled and summarized.
@@ -40,6 +41,19 @@ Important public sections:
 - Pool hardware reference hub: https://splashlens.com/pool-hardware-reference.html
 - Pool equipment troubleshooting hub: https://splashlens.com/pool-equipment-troubleshooting.html
 - Pool manufacturers, distributors, parts, and chemical lines: https://splashlens.com/pool-manufacturers-distributors-chemicals.html
+- Spa, hot tub, and swim spa troubleshooting app: https://splashlens.com/spa-hot-tub-troubleshooting-app.html
+- Source checklist index: https://splashlens.com/source-pages/
+- Swim spa current pump checklist: https://splashlens.com/source-pages/swim-spa-current-pump-troubleshooting.html
+- Spa GFCI breaker checklist: https://splashlens.com/source-pages/spa-gfci-breaker-troubleshooting.html
+- Spa sanitizer and feeder checklist: https://splashlens.com/source-pages/spa-sanitizer-feeder-troubleshooting.html
+- Spa cover and lifter checklist: https://splashlens.com/source-pages/spa-covers-lifters-troubleshooting.html
+- Master Spas H2X swim spa checklist: https://splashlens.com/source-pages/master-spas-h2x-swim-spa-troubleshooting.html
+- Endless Pools swim spa checklist: https://splashlens.com/source-pages/endless-pools-swim-spa-troubleshooting.html
+- Hydropool swim spa checklist: https://splashlens.com/source-pages/hydropool-swim-spa-troubleshooting.html
+- PDC, Artesian, and TidalFit swim spa checklist: https://splashlens.com/source-pages/pdc-artesian-tidalfit-swim-spa-troubleshooting.html
+- Bullfrog spa checklist: https://splashlens.com/source-pages/bullfrog-spa-troubleshooting.html
+- Jacuzzi and Sundance spa checklist: https://splashlens.com/source-pages/jacuzzi-sundance-spa-troubleshooting.html
+- Hot Spring and Caldera spa checklist: https://splashlens.com/source-pages/hot-spring-caldera-spa-troubleshooting.html
 - Paid/search landing pages: https://splashlens.com/lp/pool-parts-id-app.html https://splashlens.com/lp/pool-equipment-troubleshooting-app.html https://splashlens.com/lp/pool-chemical-calculator-app.html https://splashlens.com/lp/pool-tech-app.html https://splashlens.com/lp/pool-service-training-app.html
 - Category hubs: https://splashlens.com/pool-parts/ https://splashlens.com/pool-robots/ https://splashlens.com/pool-automation/ https://splashlens.com/pool-lighting/ https://splashlens.com/pool-heaters/ https://splashlens.com/salt-cells/
 - Blog: https://splashlens.com/blog/

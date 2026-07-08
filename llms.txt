@@ -43,6 +43,27 @@ Crawler-friendly hub pages for high-intent pool service searches:
 - Pool manufacturers, distributors, parts, and chemical lines: https://splashlens.com/pool-manufacturers-distributors-chemicals.html
 - SplashLens CRM companion: https://splashlens.com/crm-companion.html
 
+### Spa, Hot Tub, And Swim Spa Coverage
+
+SplashLens includes a live spa, hot tub, and swim spa reference lane. It covers proof-first workflows for Balboa BP/VS/GS/GL, Balboa TP/spaTouch panels, Gecko Y/XE/YT/in.touch, Waterway NEO, Watkins/Hot Spring/Caldera-style controls, Jacuzzi/Sundance-style controls, Master Spas H2X, Endless Pools, Hydropool, PDC, Artesian/TidalFit, Bullfrog, Marquis, Coast, Arctic, Wellis, spa packs, topsides, swim current pumps, jet banks, diverter valves, air controls, blowers, suction covers, heater tubes, sensors, GFCI trip timing, ozone/UV/AOP, salt/mineral/bromine feeders, covers, lifters, app/Wi-Fi modules, lights, and audio accessories.
+
+The spa lane is a field reference and proof workflow, not a manufacturer manual or repair guarantee. Electrical, heater, GFCI, pack, board, and line-voltage work requires qualified service and current manufacturer documentation.
+
+Spa and swim spa pages:
+- Spa and hot tub troubleshooting app: https://splashlens.com/spa-hot-tub-troubleshooting-app.html
+- Source checklist index: https://splashlens.com/source-pages/
+- Master Spas H2X swim spa checklist: https://splashlens.com/source-pages/master-spas-h2x-swim-spa-troubleshooting.html
+- Endless Pools swim spa checklist: https://splashlens.com/source-pages/endless-pools-swim-spa-troubleshooting.html
+- Hydropool swim spa checklist: https://splashlens.com/source-pages/hydropool-swim-spa-troubleshooting.html
+- PDC, Artesian, and TidalFit swim spa checklist: https://splashlens.com/source-pages/pdc-artesian-tidalfit-swim-spa-troubleshooting.html
+- Bullfrog spa checklist: https://splashlens.com/source-pages/bullfrog-spa-troubleshooting.html
+- Jacuzzi and Sundance spa checklist: https://splashlens.com/source-pages/jacuzzi-sundance-spa-troubleshooting.html
+- Hot Spring and Caldera spa checklist: https://splashlens.com/source-pages/hot-spring-caldera-spa-troubleshooting.html
+- Swim spa current pump checklist: https://splashlens.com/source-pages/swim-spa-current-pump-troubleshooting.html
+- Spa GFCI breaker checklist: https://splashlens.com/source-pages/spa-gfci-breaker-troubleshooting.html
+- Spa cover and lifter checklist: https://splashlens.com/source-pages/spa-covers-lifters-troubleshooting.html
+- Spa sanitizer and feeder checklist: https://splashlens.com/source-pages/spa-sanitizer-feeder-troubleshooting.html
+
 ### Paid And High-Intent Landing Pages
 
 Focused conversion pages for search and PPC traffic:

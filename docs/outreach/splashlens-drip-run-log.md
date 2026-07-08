@@ -755,3 +755,31 @@ Queue work completed because the send gate was not clean:
 Queue snapshot after this run: `queued=10`, `needs-verification=40`, `needs-contact=9`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=36`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=1`.
 
 Blocker: no outbound SplashLens cold email should be sent before the Fluidra 7-day removal-request window clears. The next clean run should repeat the same Gmail stop-signal search first, then work from the queued rows starting with Clear Comfort, California Pool Association, Professional Pool Management, Pool Pros CPO Training, AquaCal, The Pool Shop Coach, Hammer-Head Pool Vacuums, Magic Plastics, and ProMinent if the gate is clean.
+
+## Daily growth loop queue verification - 2026-07-08 09:28:00 -05:00
+
+Send decision: sent 0 emails. The cold-send gate remained closed because the Fluidra WCS remove-me / not-interested reply from 2026-07-05 is still inside the required 7-day stop window. Earliest clean cold-send recheck is 2026-07-12 after a fresh same-day Gmail hygiene sweep.
+
+Live/store verification refresh:
+
+- `https://splashlens.com/api/partner-intake` returned direct `GET 200` with `{"ok":true,"endpoint":"splashlens_partner_intake","storageConfigured":true,"emailConfigured":true}`.
+- `https://app.splashlens.com/api/events` returned direct `GET 200` with `{"ok":true,"status":"SplashLens app event endpoint ready.","storageConfigured":true,"emailConfigured":true}`.
+- `https://app.splashlens.com/api/events?digest=1` returned `401 Unauthorized`, which still matches the intended protected owner-digest gate.
+- `https://app.splashlens.com/api/checkout?plan=monthly` returned `302` with `X-SplashLens-Checkout-Mode: payment_link_direct` to `https://buy.stripe.com/7sY7sE2aIaq31cE5EF8AE0O`.
+- `https://app.splashlens.com/api/checkout?plan=yearly` returned `302` with `X-SplashLens-Checkout-Mode: payment_link_direct` to `https://buy.stripe.com/aFa28k9Da69NdZq3wx8AE0P`.
+- `https://app.splashlens.com/owner-dashboard` now returned direct `200`, so the earlier `301 -> /dashboard` behavior is no longer the current public truth.
+- Public Google Play evidence remained live for `com.splashlens.fieldtools` with `1.0.5`, `InStock`, and `https://splashlens.com/privacy`.
+- Public iOS truth is `https://apps.apple.com/us/app/splashlens/id6763644905` returning `200`; the older `id6747138915` URL now returns `404` and should be treated as stale.
+
+Gmail hygiene since the previous automation run stayed clean for SplashLens stop signals:
+
+- No new SplashLens-specific bounce, complaint, unsubscribe, remove-me, delivery-failure, or negative-reply message surfaced after the previous 2026-07-07 loop.
+- The only new human SplashLens-related inbound thread remained Tim Auerhahn / Aquatic Council confirming the Thursday 11:00 AM Eastern call; Gmail inbound id `19f3dfc668d07bbe`, Joshua confirmation reply id `19f3e248f5010b91`.
+
+Queue work completed because the gate stayed red:
+
+- Added `CCEI North America / Vigipool` as `queued` after verifying `info-na@ccei-pool.com` on the official CCEI North America page.
+- Promoted six existing future rows from `needs-verification` to `queued` after live `200` checks, exact public email confirmation, and a clean Gmail exact-recipient history search: Anderson Aquatics, Integrity Consultants CPO course, McCallum's Pool Service & Repair, P-Jay's Pools, Neptune Pools Service and Repair, and Frank's Pool Services.
+- Left `Custom Pool Route` in `needs-verification` because the official page failed certificate validation during this run, so the public route could not be cleanly re-verified.
+
+Queue snapshot after this pass: `queued=17`, `needs-verification=34`, `needs-contact=9`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=36`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=1`. Immediate sendable depth stayed parked behind the Fluidra stop window.

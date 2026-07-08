@@ -699,3 +699,25 @@ Send decision: sent 0 emails. This pass stayed inside verification/prep because 
 Outreach QA: created `docs/outreach/splashlens-outreach-verification-2026-07-07.md`. Current future rows remain verification-only unless cleared by suppression checks: Swimming Pool News, Between Two Stops / Skimmer Podcast, Certified Pool Trainers Georgia route, and The Pool Trainers.
 
 Public crawl work: generated `source-pages/` conservative proof-checklist pages for Balboa, Gecko, Waterway NEO, Raypak, CMP DEL/Ozone/AOP, Clear Comfort AOP, Hayward CAT, IntelliChem, Rola-Chem, and CHEMTROL. Added `source-pages-sitemap.xml` and robots.txt sitemap reference.
+
+## Controlled outreach maintenance - 2026-07-08
+
+Send decision: sent 0 emails. Live preflight passed: `https://splashlens.com` returned final `200`, `https://splashlens.com/partsnap-proof-library.html` returned final `200` after redirect to `/partsnap-proof-library`, and `https://app.splashlens.com` returned final `200`. Homepage body scan found no visible `500+` claim and no common fake-testimonial-name markers; both `230+` and fallback `180+` language were present.
+
+Gmail hygiene: searched the last 7 days for SplashLens/PartSnap replies and stop signals. Fresh warm reply found from Tim Auerhahn / Aquatic Council confirming a Thursday 11:00 AM Eastern call; Joshua replied that he would call from a 309 area code. PoolZoom automated ticket-still-open notices remain marked as replied/no cold follow-up. A narrow stop-word query for unsubscribe/remove/do-not-contact/complaint/not-interested/bounce/undeliverable/delivery-failure returned no new matching message IDs, but the checked-in Fluidra suppression row still records a 2026-07-05 remove-me/not-interested request from Kapri / Fluidra WCS Support. Because that stop signal is inside the 7-day window, the cold-send gate stayed closed.
+
+Queue updates: Aquatic Council notes refreshed with Gmail inbound id `19f3dfc668d07bbe` and Joshua reply id `19f3e248f5010b91`; `next_send_after` cleared because it is a warm replied lead only. No new prospects were added because the queue already had `queued=9`, `needs-verification=41`, and eight immediately eligible queued rows before the Fluidra stop gate was applied.
+
+Current queue snapshot after edits: `queued=9`, `needs-verification=41`, `needs-contact=6`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=36`, `follow-up-sent=59`.
+
+## Controlled outreach hygiene stop - 2026-07-08 09:18:32 -05:00
+
+Send decision: sent 0 emails. The same-day Gmail stop-signal search did not return a new SplashLens unsubscribe/remove/complaint/bounce message ID, but the checked-in queue and recent run log still record the 2026-07-05 Fluidra WCS remove-me/not-interested reply inside the required 7-day review window. The queue already has `productsupport@fluidra.com` marked `suppressed` with the removal note, so no additional queue status change was needed.
+
+Live preflight stayed green: `https://splashlens.com`, `https://splashlens.com/partsnap-proof-library.html`, and `https://app.splashlens.com` each returned HTTP `200`. The public site scan found `230+` and `180+` language and did not find the blocked fake-testimonial names checked in this run.
+
+Gmail hygiene: searched the last 7 days for SplashLens, PartSnap, Mystery Part, Service Proof Passport, Joshua Frost, Fluidra/Jandy, and stop-signal terms. Non-SplashLens matches included unrelated Bay2Course and internal mail; those were not applied to the SplashLens queue. The queue/run-log Fluidra suppression evidence remains the active hard stop.
+
+Queue snapshot before/after this no-send pass: `queued=9`, `needs-verification=41`, `needs-contact=6`, `replied=9`, `suppressed=1`, `sent=36`, `follow-up-sent=59`, `bounced=2`, `hold-community=6`, `hold-proof-needed=4`, `research-needed=19`, `covered-by-sent=1`. Sendable rows that remain parked until the stop window clears include AquaCal, The Pool Shop Coach, Hammer-Head Pool Vacuums, Magic Plastics, ProMinent, California Pool Association, Professional Pool Management, and Pool Pros CPO Training. Future eligible depth remains above the 25-row target, so no additional prospect research was needed today.
+
+Blocker: no outbound SplashLens cold outreach should be sent until the 7-day Fluidra removal-request window clears and a fresh Gmail check shows no current bounce, complaint, unsubscribe, remove-me request, or negative reply. Next clean run should start with the same Gmail stop-signal search, then choose from the existing queued training, association, manufacturer, creator, and supplier rows if the gate is clear.

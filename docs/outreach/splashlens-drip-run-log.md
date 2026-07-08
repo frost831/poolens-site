@@ -706,9 +706,9 @@ Send decision: sent 0 emails. Live preflight passed: `https://splashlens.com` re
 
 Gmail hygiene: searched the last 7 days for SplashLens/PartSnap replies and stop signals. Fresh warm reply found from Tim Auerhahn / Aquatic Council confirming a Thursday 11:00 AM Eastern call; Joshua replied that he would call from a 309 area code. PoolZoom automated ticket-still-open notices remain marked as replied/no cold follow-up. A narrow stop-word query for unsubscribe/remove/do-not-contact/complaint/not-interested/bounce/undeliverable/delivery-failure returned no new matching message IDs, but the checked-in Fluidra suppression row still records a 2026-07-05 remove-me/not-interested request from Kapri / Fluidra WCS Support. Because that stop signal is inside the 7-day window, the cold-send gate stayed closed.
 
-Queue updates: Aquatic Council notes refreshed with Gmail inbound id `19f3dfc668d07bbe` and Joshua reply id `19f3e248f5010b91`; `next_send_after` cleared because it is a warm replied lead only. No new prospects were added because the queue already had `queued=9`, `needs-verification=41`, and eight immediately eligible queued rows before the Fluidra stop gate was applied.
+Queue updates: Aquatic Council notes refreshed with Gmail inbound id `19f3dfc668d07bbe` and Joshua reply id `19f3e248f5010b91`; `next_send_after` cleared because it is a warm replied lead only. Future queue maintenance also updated CMP / Brilliant Wonders to `needs-contact` after verifying the official support page, and added Natural Chemistry / NC Brands, Haviland / ProTeam / SpaPure, and Clear Comfort AOP from verified public contact pages. Clear Comfort is queued for 2026-07-12; Natural Chemistry and Haviland are `needs-contact` because no public email was visible in the fetched page body.
 
-Current queue snapshot after edits: `queued=9`, `needs-verification=41`, `needs-contact=6`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=36`, `follow-up-sent=59`.
+Current queue snapshot after edits: `queued=10`, `needs-verification=40`, `needs-contact=9`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=36`, `follow-up-sent=59`.
 
 ## Controlled outreach hygiene stop - 2026-07-08 09:18:32 -05:00
 
@@ -718,6 +718,40 @@ Live preflight stayed green: `https://splashlens.com`, `https://splashlens.com/p
 
 Gmail hygiene: searched the last 7 days for SplashLens, PartSnap, Mystery Part, Service Proof Passport, Joshua Frost, Fluidra/Jandy, and stop-signal terms. Non-SplashLens matches included unrelated Bay2Course and internal mail; those were not applied to the SplashLens queue. The queue/run-log Fluidra suppression evidence remains the active hard stop.
 
-Queue snapshot before/after this no-send pass: `queued=9`, `needs-verification=41`, `needs-contact=6`, `replied=9`, `suppressed=1`, `sent=36`, `follow-up-sent=59`, `bounced=2`, `hold-community=6`, `hold-proof-needed=4`, `research-needed=19`, `covered-by-sent=1`. Sendable rows that remain parked until the stop window clears include AquaCal, The Pool Shop Coach, Hammer-Head Pool Vacuums, Magic Plastics, ProMinent, California Pool Association, Professional Pool Management, and Pool Pros CPO Training. Future eligible depth remains above the 25-row target, so no additional prospect research was needed today.
+Queue snapshot after this no-send pass: `queued=10`, `needs-verification=40`, `needs-contact=9`, `replied=9`, `suppressed=1`, `sent=36`, `follow-up-sent=59`, `bounced=2`, `hold-community=6`, `hold-proof-needed=4`, `research-needed=19`, `covered-by-sent=1`. Sendable rows that remain parked until the stop window clears include AquaCal, The Pool Shop Coach, Hammer-Head Pool Vacuums, Magic Plastics, ProMinent, California Pool Association, Professional Pool Management, Pool Pros CPO Training, and Clear Comfort AOP. Future eligible depth remains above the 25-row target.
 
 Blocker: no outbound SplashLens cold outreach should be sent until the 7-day Fluidra removal-request window clears and a fresh Gmail check shows no current bounce, complaint, unsubscribe, remove-me request, or negative reply. Next clean run should start with the same Gmail stop-signal search, then choose from the existing queued training, association, manufacturer, creator, and supplier rows if the gate is clear.
+
+## Daily growth loop reconciliation - 2026-07-08 09:20:34 -05:00
+
+Send decision: sent 0 emails. The run started with the required same-day Gmail and live-site preflight, and the cold-send gate remained closed because the `productsupport@fluidra.com` suppression still traces back to the 2026-07-05 remove-me / not-interested reply, which is still inside the 7-day stop window required by `docs/outreach/splashlens-drip-rules.md`.
+
+Live verification rechecked now:
+
+- `https://splashlens.com` returned HTTP `200`; body scan still showed the expected `180+` positioning, did not show a visible `500+` claim, and did not hit the blocked fake-testimonial-name markers used in this run.
+- `https://app.splashlens.com` returned HTTP `200`.
+- `https://splashlens.com/api/partner-intake` returned direct `GET 200` with JSON readiness (`ok=true`, storage configured, email configured). The earlier `404` evidence was method-specific header behavior from a prior run, not a current GET outage.
+- `https://app.splashlens.com/api/events` returned direct `GET 200` with JSON readiness (`ok=true`, storage configured, email configured).
+- `https://app.splashlens.com/api/events?digest=1` returned `401 Unauthorized`, which still matches the intended protected owner-digest gate.
+- `https://app.splashlens.com/dashboard` returned `200`, and `https://app.splashlens.com/owner-dashboard` now returned direct `200` instead of the earlier `301 -> /dashboard` behavior recorded in the July 6 status note.
+- `https://app.splashlens.com/api/checkout?plan=monthly` returned `302` with `X-SplashLens-Checkout-Mode: payment_link_direct` to `https://buy.stripe.com/7sY7sE2aIaq31cE5EF8AE0O`.
+- `https://app.splashlens.com/api/checkout?plan=yearly` returned `302` with `X-SplashLens-Checkout-Mode: payment_link_direct` to `https://buy.stripe.com/aFa28k9Da69NdZq3wx8AE0P`.
+- Discovery/AEO surfaces remained live: site/app `ai.txt`, site/app `robots.txt`, site/app `sitemap.xml`, site `pseo-sitemap.xml`, site `seo-hub-sitemap.xml`, site `category-hub-sitemap.xml`, site/app `llms.txt`, and `https://splashlens.com/privacy` all returned `200`.
+- Public store evidence remained live: the Play body still exposed `com.splashlens.fieldtools`, `1.0.5`, `InStock`, and `https://splashlens.com/privacy`; the iOS App Store listing returned HTTP `200` at `https://apps.apple.com/us/app/splashlens/id6763644905`.
+
+Gmail hygiene since the previous automation run:
+
+- No new SplashLens-specific bounce, delivery-failure, complaint, unsubscribe, remove-me, or negative-reply message surfaced after the prior 2026-07-07 automation run.
+- The warm Aquatic Council thread remains real and positive; Tim Auerhahn's 2026-07-07 reply confirming a Thursday 11:00 AM Eastern call is still the only new human SplashLens-related inbound thread since that prior run.
+- PoolZoom remains an automated Zendesk/ticket thread only; it is still not a human warm reply.
+
+Queue work completed because the send gate was not clean:
+
+- Upgraded `CMP / Brilliant Wonders lighting route` from `needs-verification` to `needs-contact` after re-verifying the live CMP support-options page. The official support route is real, but no public email was exposed in the curl-visible body.
+- Added `Natural Chemistry / NC Brands` as `needs-contact` from the live official contact page plus live-chat route.
+- Added `Haviland / ProTeam / SpaPure` as `needs-contact` from the live official Haviland contact page.
+- Added `Clear Comfort AOP` as `queued` with verified `info@clearcomfort.com` from the official contact page.
+
+Queue snapshot after this run: `queued=10`, `needs-verification=40`, `needs-contact=9`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=36`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=1`.
+
+Blocker: no outbound SplashLens cold email should be sent before the Fluidra 7-day removal-request window clears. The next clean run should repeat the same Gmail stop-signal search first, then work from the queued rows starting with Clear Comfort, California Pool Association, Professional Pool Management, Pool Pros CPO Training, AquaCal, The Pool Shop Coach, Hammer-Head Pool Vacuums, Magic Plastics, and ProMinent if the gate is clean.

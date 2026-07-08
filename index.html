@@ -242,6 +242,47 @@
  background: #ecfeff;
  border-top: 4px solid #0891b2;
  }
+ .partsnap-proof-flow {
+ max-width: 1040px;
+ margin: 24px auto 18px;
+ display: grid;
+ grid-template-columns: repeat(5, 1fr);
+ gap: 8px;
+ }
+ .proof-step {
+ background: rgba(255,255,255,.94);
+ border: 1px solid rgba(255,255,255,.28);
+ border-radius: 8px;
+ padding: 13px;
+ text-align: left;
+ box-shadow: 0 18px 48px rgba(2, 8, 23, .22);
+ }
+ .proof-step b {
+ display: grid;
+ place-items: center;
+ width: 28px;
+ height: 28px;
+ border-radius: 999px;
+ background: #0f766e;
+ color: #fff;
+ font-size: .78rem;
+ font-weight: 950;
+ margin-bottom: 10px;
+ }
+ .proof-step strong {
+ display: block;
+ color: var(--slate);
+ font-size: .96rem;
+ font-weight: 950;
+ margin-bottom: 4px;
+ }
+ .proof-step span {
+ display: block;
+ color: var(--slate-soft);
+ font-size: .78rem;
+ line-height: 1.28;
+ font-weight: 650;
+ }
  .hero-proof-line {
  display: flex;
  justify-content: center;
@@ -805,6 +846,7 @@
  .store-badge.apple img { height: 46px; }
  .store-badge.google img { height: 52px; }
  .hero-product-bar,
+ .partsnap-proof-flow,
  .hero-proof-line { display: none; }
  .mobile-ai-quick {
  display: block;
@@ -970,15 +1012,15 @@
   <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="5"/></svg>
   Featured by PoolPro Magazine - iOS and Google Play listings live now
   </div>
-  <h1>Get off the pad faster.</h1>
-  <p class="hero-sub">SplashLens is the free field rescue app for pool techs: PartSnap parts ID, error-code lookup, Connected Pool Brain, dosing math, voice notes, and proof packets built to help the stop move cleaner.</p>
+  <h1>Identify the part. Prove the path.</h1>
+  <p class="hero-sub">SplashLens is the free field rescue app for pool techs: PartSnap helps turn weird parts, labels, and equipment clues into possible matches, missing proof, callback risk, and a cleaner senior-tech or vendor packet.</p>
   <div class="hero-actions">
-  <a href="https://app.splashlens.com" target="_blank" class="btn-primary" data-track="open_app_click" data-source="hero_primary">
+  <a href="https://app.splashlens.com/?tab=scan&mode=parts" target="_blank" class="btn-primary" data-track="partsnap_click" data-source="hero_primary">
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-  Open SplashLens Free
+  Try PartSnap Free
   </a>
-  <a href="https://app.splashlens.com/?tab=scan" target="_blank" class="btn-ghost" data-track="partsnap_click" data-source="hero_secondary">
-  Try PartSnap
+  <a href="https://app.splashlens.com" target="_blank" class="btn-ghost" data-track="open_app_click" data-source="hero_secondary">
+  Open Field Tools
   </a>
   <div class="store-badges" aria-label="Download SplashLens">
   <a href="https://apps.apple.com/us/app/splashlens/id6763644905" target="_blank" rel="noopener" class="store-badge apple" aria-label="Download SplashLens on the App Store" data-track="app_store_download_click" data-source="hero">
@@ -990,6 +1032,13 @@
   </div>
   </div>
   <p style="margin:14px 0 0;color:#bae6fd;font-size:.92rem;font-weight:800;">Earned industry coverage: <a href="https://poolpromag.com/splashlens-launches-free-field-reference-app/" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;text-decoration-thickness:2px;">PoolPro Magazine covered the SplashLens launch</a>.</p>
+  <div class="partsnap-proof-flow" aria-label="PartSnap proof workflow">
+  <div class="proof-step"><b>1</b><strong>Photo</strong><span>part, label, plate, or component.</span></div>
+  <div class="proof-step"><b>2</b><strong>Match</strong><span>possible family, model, or part path.</span></div>
+  <div class="proof-step"><b>3</b><strong>Proof</strong><span>marking, dimensions, model plate.</span></div>
+  <div class="proof-step"><b>4</b><strong>Risk</strong><span>callback flag before ordering.</span></div>
+  <div class="proof-step"><b>5</b><strong>Packet</strong><span>senior tech or vendor handoff.</span></div>
+  </div>
   <div class="hero-product-bar" aria-label="SplashLens field tools">
   <div class="hero-product-item is-primary"><strong>PartSnap</strong><span>Photo a mystery part and get possible ID clues plus proof prompts before ordering.</span></div>
   <div class="hero-product-item"><strong>Connected Pool Brain</strong><span>Robots, automation, lighting, heaters, salt, pumps, and smart-pad troubleshooting.</span></div>

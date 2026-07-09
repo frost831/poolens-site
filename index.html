@@ -102,12 +102,77 @@
  text-transform: uppercase;
  color: var(--sky-dark);
  }
- .nav-links { display: flex; align-items: center; gap: 18px; }
- .nav-links a {
+ .nav-links { display: flex; align-items: center; gap: 8px; }
+ .nav-links a,
+ .nav-menu summary {
  color: var(--slate-mid); text-decoration: none; font-size: .9rem; font-weight: 500;
  transition: color .2s;
  }
- .nav-links a:hover { color: var(--sky); }
+ .nav-links a:hover,
+ .nav-menu summary:hover,
+ .nav-menu[open] summary { color: var(--sky); }
+ .nav-menu {
+ position: relative;
+ }
+ .nav-menu summary {
+ list-style: none;
+ cursor: pointer;
+ padding: 8px 8px;
+ border-radius: 8px;
+ display: inline-flex;
+ align-items: center;
+ gap: 5px;
+ }
+ .nav-menu summary::-webkit-details-marker { display: none; }
+ .nav-menu summary::after {
+ content: '';
+ width: 7px;
+ height: 7px;
+ border-right: 1.8px solid currentColor;
+ border-bottom: 1.8px solid currentColor;
+ transform: rotate(45deg) translateY(-2px);
+ transition: transform .18s ease;
+ }
+ .nav-menu[open] summary::after { transform: rotate(225deg) translateY(-1px); }
+ .nav-menu-panel {
+ position: absolute;
+ top: calc(100% + 10px);
+ left: 50%;
+ transform: translateX(-50%);
+ width: min(560px, calc(100vw - 40px));
+ display: grid;
+ grid-template-columns: repeat(2, minmax(0, 1fr));
+ gap: 6px;
+ padding: 10px;
+ background: rgba(255,255,255,.98);
+ border: 1px solid var(--border);
+ border-radius: 12px;
+ box-shadow: 0 18px 50px rgba(15,23,42,.16);
+ z-index: 120;
+ }
+ .nav-menu-panel a {
+ display: block;
+ padding: 10px 11px;
+ border-radius: 8px;
+ background: #fff;
+ border: 1px solid transparent;
+ line-height: 1.2;
+ }
+ .nav-menu-panel a strong {
+ display: block;
+ font-size: .86rem;
+ color: var(--slate);
+ }
+ .nav-menu-panel a span {
+ display: block;
+ margin-top: 3px;
+ font-size: .72rem;
+ color: var(--slate-soft);
+ }
+ .nav-menu-panel a:hover {
+ border-color: #bae6fd;
+ background: var(--sky-xlight);
+ }
  .nav-cta {
  background: var(--sky); color: var(--white) !important;
  padding: 8px 20px; border-radius: 100px;
@@ -152,8 +217,9 @@
  .nav-store-badges .store-badge.apple img { height: 52px; }
  .nav-store-badges .store-badge.google img { height: 58px; }
  @media (max-width: 1180px) {
- .nav-links { gap: 14px; }
- .nav-link-optional { display: none; }
+ .nav-links { gap: 6px; }
+ .nav-links a,
+ .nav-menu summary { font-size: .82rem; }
  .nav-store-badges { gap: clamp(1rem, 8vw, 3.5rem); }
  .nav-store-badges .store-badge.apple img { height: 44px; }
  .nav-store-badges .store-badge.google img { height: 50px; }
@@ -865,14 +931,39 @@ font-weight: 700;
  footer a { color: #7dd3fc; text-decoration: none; }
 
  @media (max-width: 768px) {
+ nav { padding: 0 14px 9px; }
+ .nav-inner {
+ height: auto;
+ min-height: 60px;
+ align-items: flex-start;
+ padding: 10px 0 8px;
+ gap: 10px;
+ }
+ .nav-logo-mark { width: 34px; height: 34px; border-radius: 9px; }
+ .nav-logo-name { font-size: 1rem; }
+ .nav-logo-tag { font-size: .48rem; }
  .nav-links {
  display: flex;
- gap: .4rem;
+ gap: .28rem;
  margin-left: auto;
+ justify-content: flex-end;
+ flex-wrap: wrap;
+ max-width: calc(100% - 132px);
  }
- .nav-links > a:not(.store-badge),
- .nav-links > a.nav-cta {
- display: none;
+ .nav-links > a:first-child { display: none; }
+ .nav-links a,
+ .nav-menu summary { font-size: .7rem; padding: 7px 6px; }
+ .nav-cta { padding: 7px 10px; border-radius: 8px; }
+ .nav-menu-panel {
+ position: fixed;
+ top: 66px;
+ left: 14px;
+ right: 14px;
+ transform: none;
+ width: auto;
+ grid-template-columns: 1fr;
+ max-height: 70vh;
+ overflow: auto;
  }
  .nav-store-badges {
  gap: 1.4rem;
@@ -1047,15 +1138,48 @@ font-weight: 700;
  </a>
 <div class="nav-links">
 <a href="#features">Features</a>
-<a href="/partsnap.html">PartSnap</a>
-<a href="/connected-pool-brain.html" class="nav-link-optional">Connected Network</a>
-<a href="/new-tech-radar.html">Tech Radar</a>
-<a href="/facility-assist">Facility Assist</a>
-<a href="/mystery-part-lab.html" class="nav-link-optional">Mystery Lab</a>
-<a href="#how" class="nav-link-optional">How It Works</a>
- <a href="#compare" class="nav-link-optional">Compare</a>
- <a href="#ai" class="nav-link-optional">AI Scanning</a>
- <a href="/partners.html">Partners</a>
+<details class="nav-menu">
+ <summary>Tools</summary>
+ <div class="nav-menu-panel">
+ <a href="/partsnap.html"><strong>PartSnap</strong><span>photo-based part clue workflow</span></a>
+ <a href="/partsnap-pool-part-identification-app.html"><strong>Parts ID Page</strong><span>marketing and proof path</span></a>
+ <a href="/partsnap-proof-library.html"><strong>Proof Library</strong><span>callback risk and handoff packets</span></a>
+ <a href="/mystery-part-lab.html"><strong>Mystery Lab</strong><span>weird part review lane</span></a>
+ <a href="#ai"><strong>AI Scanning</strong><span>error scan, PartSnap, strip reader</span></a>
+ <a href="https://app.splashlens.com" target="_blank"><strong>Open Web App</strong><span>use the field tools now</span></a>
+ </div>
+</details>
+<details class="nav-menu">
+ <summary>Equipment</summary>
+ <div class="nav-menu-panel">
+ <a href="/pool-robots/"><strong>Robots</strong><span>Dolphin, Polaris, Aiper, Beatbot</span></a>
+ <a href="/pool-automation/"><strong>Automation</strong><span>Omni, IntelliCenter, AquaLink</span></a>
+ <a href="/pool-lighting/"><strong>Lighting</strong><span>niches, transformers, sync issues</span></a>
+ <a href="/salt-cells/"><strong>Salt Cells</strong><span>cell, flow, salt, output clues</span></a>
+ <a href="/spa-hot-tub-troubleshooting-app.html"><strong>Spa / Swim Spa</strong><span>packs, topsides, GFCI, current pumps</span></a>
+ <a href="/brands/"><strong>Brands</strong><span>manufacturer and family hubs</span></a>
+ </div>
+</details>
+<details class="nav-menu">
+ <summary>Learn</summary>
+ <div class="nav-menu-panel">
+ <a href="/facility-assist"><strong>Facility Assist</strong><span>CPO and aquatic operator workflow</span></a>
+ <a href="/new-tech-radar.html"><strong>Tech Radar</strong><span>new equipment and product watchlist</span></a>
+ <a href="/pool-tech-training-field-reference.html"><strong>Training</strong><span>apprentice and senior review lanes</span></a>
+ <a href="/blog/"><strong>Blog</strong><span>pool tech articles and guides</span></a>
+ <a href="#how"><strong>How It Works</strong><span>field workflow overview</span></a>
+ <a href="#compare"><strong>Compare</strong><span>where SplashLens fits</span></a>
+ </div>
+</details>
+<details class="nav-menu">
+ <summary>Partners</summary>
+ <div class="nav-menu-panel">
+ <a href="/partners.html"><strong>Partner Page</strong><span>education, media, manufacturers</span></a>
+ <a href="/field-testers.html"><strong>Field Testers</strong><span>send real-world feedback</span></a>
+ <a href="/partner-field-card-packet.html"><strong>Field Card Packet</strong><span>manufacturer-ready proof cards</span></a>
+ <a href="/paid-media.html"><strong>Media Traffic</strong><span>lean conversion page</span></a>
+ </div>
+</details>
  <a href="https://app.splashlens.com" target="_blank" class="nav-cta">Open App</a>
  </div>
  </div>
@@ -1801,6 +1925,31 @@ font-weight: 700;
  source: link.getAttribute('data-source') || '',
  href: link.href || ''
  });
+ });
+ var navMenus = Array.prototype.slice.call(document.querySelectorAll('.nav-menu'));
+ navMenus.forEach(function (menu) {
+ var summary = menu.querySelector('summary');
+ if (summary) {
+ summary.addEventListener('click', function () {
+ navMenus.forEach(function (other) {
+ if (other !== menu) other.open = false;
+ });
+ });
+ }
+ menu.addEventListener('toggle', function () {
+ if (!menu.open) return;
+ navMenus.forEach(function (other) {
+ if (other !== menu) other.open = false;
+ });
+ });
+ });
+ document.addEventListener('click', function (event) {
+ if (event.target.closest && event.target.closest('.nav-menu')) return;
+ navMenus.forEach(function (menu) { menu.open = false; });
+ });
+ document.addEventListener('keydown', function (event) {
+ if (event.key !== 'Escape') return;
+ navMenus.forEach(function (menu) { menu.open = false; });
  });
  var featureCards = Array.prototype.slice.call(document.querySelectorAll('.feature-card'));
  var mobileFeatureQuery = window.matchMedia('(max-width: 768px)');

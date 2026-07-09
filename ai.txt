@@ -42,6 +42,7 @@ Important public sections:
 - Pool equipment troubleshooting hub: https://splashlens.com/pool-equipment-troubleshooting.html
 - Pool manufacturers, distributors, parts, and chemical lines: https://splashlens.com/pool-manufacturers-distributors-chemicals.html
 - Spa, hot tub, and swim spa troubleshooting app: https://splashlens.com/spa-hot-tub-troubleshooting-app.html
+- Spa and swim spa parts identification app: https://splashlens.com/spa-swim-spa-parts-identification-app.html
 - Source checklist index: https://splashlens.com/source-pages/
 - Swim spa current pump checklist: https://splashlens.com/source-pages/swim-spa-current-pump-troubleshooting.html
 - Spa GFCI breaker checklist: https://splashlens.com/source-pages/spa-gfci-breaker-troubleshooting.html

@@ -783,3 +783,16 @@ Queue work completed because the gate stayed red:
 - Left `Custom Pool Route` in `needs-verification` because the official page failed certificate validation during this run, so the public route could not be cleanly re-verified.
 
 Queue snapshot after this pass: `queued=17`, `needs-verification=34`, `needs-contact=9`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=36`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=1`. Immediate sendable depth stayed parked behind the Fluidra stop window.
+## Spa SEO + verified outreach prep - 2026-07-09
+
+Gmail hygiene: authenticated as `frost@belowzeromedia.com`. Searched the last seven days for SplashLens/PartSnap/app.splashlens.com messages and stop-signal terms. The stop-word query returned no new SplashLens-specific bounce, complaint, unsubscribe, remove-me, not-interested, undeliverable, or delivery-failure message IDs today. Warm/non-cold items observed included the Tim Auerhahn Thursday call confirmation and the AQUA editorial follow-up already sent on 2026-07-07.
+
+Send decision: sent 0 emails. The 2026-07-05 Fluidra WCS remove-me / not-interested suppression remains inside the checked-in seven-day stop window, so this run stayed in queue expansion and SEO/AEO prep mode. Next clean cold-send recheck remains 2026-07-12 after a fresh Gmail hygiene sweep.
+
+Live checks: `https://splashlens.com` returned 200, `https://app.splashlens.com` returned 200, and the spa/hot-tub troubleshooting page redirected to the extensionless URL and returned 200.
+
+Queue updates: added 18 spa, hot-tub, swim-spa, control-pack, filter, cover/lifter, parts-distribution, and creator/podcast prospects from official/public source routes. Newly queued rows: Master Spas / H2X Swim Spas, Hydropool Hot Tubs / Swim Spas, Endless Pools, Coast Spas, Wellis, Filbur Manufacturing, and Cover Valet. New needs-contact rows: Balboa Water Group, PDC Spas / TruSwim, Artesian Spas / TidalFit, Bullfrog Spas, Sundance Spas, Hot Spring / Caldera / Watkins Wellness, Marquis Spas, Arctic Spas, Spa Parts Plus, and Tub Talk with The Hot Tub Lady. New needs-verification row: Gecko Alliance / Gecko Depot.
+
+SEO/AEO updates: added `spa-swim-spa-parts-identification-app.html` as a crawlable answer/conversion page for hot tub parts identification, spa parts identification, swim spa parts identification, Balboa/Gecko/Waterway spa pack parts, spa filter cartridge identification, cover lifter parts, and hot tub pump-label lookup. Added a homepage internal link plus `sitemap.xml`, `ai.txt`, and `llms.txt` discovery references.
+
+Queue snapshot after this pass: `queued=24`, `needs-contact=19`, `needs-verification=35`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=36`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=1`.

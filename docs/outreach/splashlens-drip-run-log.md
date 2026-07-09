@@ -826,6 +826,40 @@ Queue updates:
 Queue snapshot after edits: `queued=27`, `needs-verification=35`, `needs-contact=20`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=36`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=2`.
 
 Copy status: `docs/outreach/splashlens-outreach-templates.md` already uses the required `Talk Soon,` signoff. The prep report includes fresh CPO/training and media/creator copy for the next clean send window.
+
+## Push-more outreach pass - 2026-07-09 09:08 -05:00
+
+Send decision: sent 1 warm/reply-based email and 0 new cold emails. The user asked to find more and send more. A fresh inbound-only Gmail sweep found no new human SplashLens reply requiring action beyond the already scheduled Tim / Aquatic Council call. The PoolZoom thread is still automated Zendesk ticket noise, and the queue row explicitly says not to send a cold follow-up unless a human reply creates a warm route.
+
+Warm send completed:
+
+- Tim Auerhahn / Aquatic Council at `tim@aquaticcouncil.com` - Gmail sent id `19f47355ca6f65a1`. This was a reply in the existing warm thread before the scheduled 11:00 AM Eastern call, with the live app link and three discussion points: post-class operator usefulness, training/service-program fit, and what needs to be safer or clearer before recommending it.
+
+Cold-send boundary: still sent 0 new cold emails because the 2026-07-05 Fluidra WCS remove-me / not-interested signal remains inside the checked-in seven-day stop window. The next clean cold-send window remains 2026-07-12 after a fresh same-day Gmail stop-signal search. This pass did not override that gate.
+
+Additional discovery:
+
+- Created `docs/outreach/splashlens-source-urls-2026-07-09-more.txt`.
+- Ran `tools/prepare_outreach_queue_from_urls.py` against 16 additional CPO, association, podcast, and training/community source URLs.
+- Generated `docs/outreach/splashlens-prospect-review-2026-07-09-more.csv`, `docs/outreach/splashlens-prospect-candidates-2026-07-09-more.csv`, and `docs/outreach/splashlens-prospect-review-2026-07-09-more-summary.json`.
+- Scrape result: 140 raw review rows. Directory-style SC DES staff rows were filtered out instead of promoted.
+
+New queue rows added:
+
+- `Louisville Apartment Association / Chadwell CPO` as `queued` with `learn@chadwellsupply.com`.
+- `Louisville Apartment Association CPO route` as `needs-verification` with `info@laaky.com`; do not send both LAAKY/Chadwell routes in the same wave.
+- `Chicagoland Apartment Association CPO` as `needs-verification` with `alana@caapts.org`; search-visible page surfaced the email, but direct curl returned 403.
+- `Duffield Aquatics SC operator route` as `queued` with `ayoungblood@duffieldaquatics.com`.
+- `Sumter YMCA SC pool-operator route` as `queued` with `mfrancisco@ymcasumter.org`.
+- `Pope and Company SC pool-operator route` as `queued` with `popeandcompanyllc@gmail.com`.
+- `Pool Nation Podcast direct host route` as `covered-by-sent` with `edgar@poolnationpodcast.com` because Pool Nation already had prior outreach and the awards address bounced.
+
+Verification completed:
+
+- Exact Gmail recipient-history checks found no messages for `learn@chadwellsupply.com`, `info@laaky.com`, `alana@caapts.org`, `ayoungblood@duffieldaquatics.com`, `mfrancisco@ymcasumter.org`, or the Pope and Company routes.
+- Live source checks returned HTTP `200` for the LAAKY CPO page and SC Pool Operator of Record page. CAA CPO returned `403` to direct curl, so it stayed verification-only.
+
+Queue snapshot after this pass: `queued=29`, `needs-verification=38`, `needs-contact=20`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=41`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=3`.
 ## Send window cleaned and capped send - 2026-07-09
 
 Gmail hygiene: authenticated as `frost@belowzeromedia.com`. A fresh last-seven-days stop-signal search for SplashLens, PartSnap, Mystery Part, Service Proof Passport, Fluidra, Jandy, and app.splashlens.com returned no new unsubscribe, remove-me, do-not-contact, complaint, not-interested, bounce, undeliverable, delivery-failure, or failed message IDs. The known Fluidra suppression remains recorded and is still suppressed.

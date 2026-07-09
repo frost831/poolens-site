@@ -899,4 +899,27 @@ Gmail hygiene: authenticated as `frost@belowzeromedia.com`. Last-seven-days Spla
 
 Queue verification: the five capped recipients remain marked `sent` with `last_sent_at=2026-07-09` and `next_send_after=2026-07-16`: The Pool Shop Coach / Lee Salisbury, Hammer-Head Pool Vacuums, ProMinent Fluid Controls, California Pool Association, and Pool Pros CPO Training. Queue snapshot before this audit entry: `queued=29`, `needs-verification=38`, `needs-contact=20`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=41`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=3`.
 
-Blocker: no more cold SplashLens outreach should go out on 2026-07-09 because the daily cap is already used. Next cold-send recheck should be 2026-07-10 or later after a fresh live preflight and Gmail stop-signal search.
+Blocker: no more cold SplashLens outreach should go out on 2026-07-09 because the daily cap is already used. Under the stricter last-7-day stop-window reading, the earliest clean cold-send recheck is 2026-07-12 after a fresh live preflight and Gmail stop-signal search.
+
+## Release-readiness and rules reconciliation - 2026-07-09 09:24 -05:00
+
+Live release checks completed in this pass:
+
+- `https://splashlens.com` returned HTTP `200`.
+- `https://app.splashlens.com` returned HTTP `200`.
+- `https://splashlens.com/api/partner-intake` returned `{"ok":true,"endpoint":"splashlens_partner_intake","storageConfigured":true,"emailConfigured":true}` on direct `GET`.
+- `https://app.splashlens.com/api/events` returned `{"ok":true,"status":"SplashLens app event endpoint ready.","storageConfigured":true,"emailConfigured":true}` on direct `GET`.
+- `https://app.splashlens.com/api/events?digest=1` returned `401 Unauthorized`, which still matches the intended protected digest gate rather than a public outage.
+- `https://app.splashlens.com/dashboard` and `https://app.splashlens.com/owner-dashboard` both returned HTTP `200`.
+- Direct GET checks on `https://app.splashlens.com/api/checkout?plan=monthly` and `?plan=yearly` still returned `302` with `X-SplashLens-Checkout-Mode: payment_link_direct`, redirecting to the live monthly and yearly Stripe Payment Links. A HEAD check now resolves to the final HTML response, so future public checkout verification should stay GET-based.
+- Discovery/AEO surfaces stayed live: site/app `ai.txt`, site/app `llms.txt`, `https://splashlens.com/robots.txt`, `https://splashlens.com/sitemap.xml`, `https://splashlens.com/pseo-sitemap.xml`, `https://splashlens.com/seo-hub-sitemap.xml`, `https://splashlens.com/category-hub-sitemap.xml`, and `https://splashlens.com/privacy` all returned HTTP `200`.
+- Public store status remained live: `https://apps.apple.com/us/app/splashlens/id6763644905` returned `200`, and the Google Play listing body still exposed `com.splashlens.fieldtools`, `1.0.5`, `InStock`, `SoftwareApplication`, `Jun 25, 2026`, and `https://splashlens.com/privacy`.
+
+Gmail reconciliation in this pass: the same targeted last-7-day stop-signal search still returned no new SplashLens-specific bounce, complaint, unsubscribe, remove-me, do-not-contact, negative-reply, or delivery-failure message IDs after the previous run. However, the checked-in `productsupport@fluidra.com` suppression still traces back to the 2026-07-05 Fluidra WCS remove-me / not-interested reply, which is still inside the rules file's last-7-day review window on 2026-07-09.
+
+Final truth for the five earlier same-day cold sends: they are real and remain counted against the daily cap, but they should not be treated as clean compliant sends under `docs/outreach/splashlens-drip-rules.md`. The queue rows for The Pool Shop Coach / Lee Salisbury, Hammer-Head Pool Vacuums, ProMinent Fluid Controls, California Pool Association, and Pool Pros CPO Training were updated to clear `next_send_after` and record `no automated follow-up` because the 2026-07-05 Fluidra remove-me request had not yet aged out of the last-seven-days stop window.
+
+True blockers after this reconciliation:
+
+- No more cold SplashLens outreach should go out on 2026-07-09 because the daily cap is already consumed by the earlier five sends.
+- The stricter rules-based gate should also be treated as red until the 2026-07-05 Fluidra remove-me event is outside the last-seven-days review window; earliest clean cold-send recheck is 2026-07-12 after a fresh same-day Gmail search.

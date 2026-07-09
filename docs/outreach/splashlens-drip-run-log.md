@@ -783,6 +783,35 @@ Queue work completed because the gate stayed red:
 - Left `Custom Pool Route` in `needs-verification` because the official page failed certificate validation during this run, so the public route could not be cleanly re-verified.
 
 Queue snapshot after this pass: `queued=17`, `needs-verification=34`, `needs-contact=9`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=36`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=1`. Immediate sendable depth stayed parked behind the Fluidra stop window.
+
+## Deep outreach prep and CPO/media queue expansion - 2026-07-09
+
+Send decision: sent 0 cold emails. Fresh Gmail stop-signal search returned no new SplashLens/PartSnap/Fluidra/Jandy unsubscribe, remove-me, complaint, not-interested, bounce, undeliverable, or delivery-failure message ids, but the known 2026-07-05 Fluidra WCS remove-me / not-interested signal is still inside the required 7-day stop window. The next clean cold-send recheck remains 2026-07-12 after a fresh same-day Gmail hygiene sweep.
+
+Live preflight: `https://splashlens.com`, `https://app.splashlens.com`, and `https://splashlens.com/sitemap.xml` returned HTTP `200`. Checkout endpoint reachability checks for `https://app.splashlens.com/api/checkout?plan=monthly` and `?plan=yearly` returned HTTP `200` in this pass; older proof recorded `302` direct payment-link headers, so the next monetization audit should verify the UI still reaches Stripe cleanly.
+
+Scrape/prep artifacts created:
+
+- `docs/outreach/splashlens-source-urls-2026-07-09.txt`
+- `docs/outreach/splashlens-prospect-review-2026-07-09.csv`
+- `docs/outreach/splashlens-prospect-review-2026-07-09-summary.json`
+- `docs/outreach/splashlens-prospect-candidates-2026-07-09.csv`
+- `docs/outreach/splashlens-outreach-prep-2026-07-09.md`
+
+Scrape result: 20 curated source URLs produced 122 raw review rows, 58 deduped candidate rows, 57 duplicates, and 7 junk rows. Fort Worth city staff/media directory addresses were explicitly excluded from send-ready queueing because they are not pool-industry outreach targets.
+
+Queue updates:
+
+- Promoted `PHTA Pool Professionals Podcast` to `queued` with `marketing@phta.org`, while recording same-organization caution because `service@phta.org` already had prior exposure.
+- Added `Wake Tech Certified Pool Operator Training` as `queued` with verified `wceresources@waketech.edu`.
+- Added `New Jersey Pest Management Association CPO` as `queued` with verified `bonaccib@njpma.org`.
+- Added `HD Supply Pool Maintenance Training` as `needs-verification` because `customercare@hdsupply.com` is broad customer-care rather than a named training/editorial route.
+- Added `The Training Center Houston instructor route` as `covered-by-sent` because same-organization outreach already happened on 2026-06-19 and again on 2026-07-01.
+- Added `The Grit Game pool-podcast roundup` as `needs-contact`; use only after manual/form route review.
+
+Queue snapshot after edits: `queued=27`, `needs-verification=35`, `needs-contact=20`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=36`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=2`.
+
+Copy status: `docs/outreach/splashlens-outreach-templates.md` already uses the required `Talk Soon,` signoff. The prep report includes fresh CPO/training and media/creator copy for the next clean send window.
 ## Spa SEO + verified outreach prep - 2026-07-09
 
 Gmail hygiene: authenticated as `frost@belowzeromedia.com`. Searched the last seven days for SplashLens/PartSnap/app.splashlens.com messages and stop-signal terms. The stop-word query returned no new SplashLens-specific bounce, complaint, unsubscribe, remove-me, not-interested, undeliverable, or delivery-failure message IDs today. Warm/non-cold items observed included the Tim Auerhahn Thursday call confirmation and the AQUA editorial follow-up already sent on 2026-07-07.

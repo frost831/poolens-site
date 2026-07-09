@@ -1,5 +1,6 @@
 /dashboard https://app.splashlens.com/dashboard 302
 /dashboad https://app.splashlens.com/dashboard 302
+/facility-assist /facility-assist.html 200
 /docs/* /404.html 404
 /docs/outreach/* /404.html 404
 /docs/design/* /404.html 404

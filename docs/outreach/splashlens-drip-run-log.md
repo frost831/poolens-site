@@ -923,3 +923,17 @@ True blockers after this reconciliation:
 
 - No more cold SplashLens outreach should go out on 2026-07-09 because the daily cap is already consumed by the earlier five sends.
 - The stricter rules-based gate should also be treated as red until the 2026-07-05 Fluidra remove-me event is outside the last-seven-days review window; earliest clean cold-send recheck is 2026-07-12 after a fresh same-day Gmail search.
+
+## User-requested recheck and send decision - 2026-07-09
+
+Send decision: sent 0 additional emails. Gmail directly confirmed six same-day SplashLens outbound messages: five cold sends (`19f473549402fb7a`, `19f47354ad1113b5`, `19f47354fdc5b73e`, `19f4735529a00558`, `19f4735590c6e549`) plus the warm Tim / Aquatic Council prep email (`19f47355ca6f65a1`). The July 9 cold daily cap is already consumed, and the stricter Fluidra stop-window gate remains red.
+
+Fresh checks completed:
+
+- Same-day inbound SplashLens reply search returned no new non-Joshua inbound message IDs.
+- Same-day stop-signal search returned no new unsubscribe, remove-me, do-not-contact, complaint, not-interested, bounce, undeliverable, delivery-failure, or failed-message IDs.
+- `https://splashlens.com/`, `https://app.splashlens.com/`, and `https://splashlens.com/partsnap-proof-library` returned HTTP `200`.
+
+Queue state remained correct: The Pool Shop Coach / Lee Salisbury, Hammer-Head Pool Vacuums, ProMinent Fluid Controls, California Pool Association, and Pool Pros CPO Training are marked `sent` with `last_sent_at=2026-07-09`; after reconciliation, their notes should be treated as no automated follow-up because the Fluidra stop window had not aged out.
+
+Blocker: no more cold SplashLens outreach should go out on 2026-07-09. Earliest clean cold-send recheck remains 2026-07-12 after a fresh Gmail stop-signal search and live preflight.

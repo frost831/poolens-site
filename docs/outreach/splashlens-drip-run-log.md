@@ -900,13 +900,3 @@ Gmail hygiene: authenticated as `frost@belowzeromedia.com`. Last-seven-days Spla
 Queue verification: the five capped recipients remain marked `sent` with `last_sent_at=2026-07-09` and `next_send_after=2026-07-16`: The Pool Shop Coach / Lee Salisbury, Hammer-Head Pool Vacuums, ProMinent Fluid Controls, California Pool Association, and Pool Pros CPO Training. Queue snapshot before this audit entry: `queued=29`, `needs-verification=38`, `needs-contact=20`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=41`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=3`.
 
 Blocker: no more cold SplashLens outreach should go out on 2026-07-09 because the daily cap is already used. Next cold-send recheck should be 2026-07-10 or later after a fresh live preflight and Gmail stop-signal search.
-
-## Daily automation audit after capped send - 2026-07-09 09:17 -05:00
-
-Gmail hygiene: authenticated as `frost@belowzeromedia.com`. Fresh last-seven-days stop-signal searches for SplashLens, PartSnap, Mystery Part, Service Proof Passport, Fluidra/Jandy, `splashlens.com`, and `app.splashlens.com` returned no new unsubscribe, remove-me, do-not-contact, complaint, not-interested, bounce, undeliverable, delivery-failure, or failed message IDs. Recent inbound SplashLens messages remain the known Tim Auerhahn warm thread and automated PoolZoom ticket notices already treated as replied/no cold follow-up.
-
-Live preflight: `https://splashlens.com` returned HTTP `200`; `https://splashlens.com/partsnap-proof-library.html` returned `308` to `/partsnap-proof-library` and then HTTP `200`; `https://app.splashlens.com` returned HTTP `200`. Homepage body scan found `230+` and fallback `180+` language, with no visible `500+` claim and no common fake testimonial-name markers.
-
-Send decision: sent `0` additional emails in this audit pass. The earlier 2026-07-09 capped send already used the daily cold-send cap with five one-to-one plain-text emails plus one warm Aquatic Council reply. Gmail sent-mail verification confirmed the five cold emails had no CC/BCC and used the required `Talk Soon,` signoff.
-
-No queue changes were made in this pass. Current committed queue snapshot remains `queued=29`, `needs-verification=38`, `needs-contact=20`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=41`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=3`.

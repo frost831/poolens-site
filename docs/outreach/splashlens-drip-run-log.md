@@ -826,3 +826,31 @@ Queue updates:
 Queue snapshot after edits: `queued=27`, `needs-verification=35`, `needs-contact=20`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=36`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=2`.
 
 Copy status: `docs/outreach/splashlens-outreach-templates.md` already uses the required `Talk Soon,` signoff. The prep report includes fresh CPO/training and media/creator copy for the next clean send window.
+## Send window cleaned and capped send - 2026-07-09
+
+Gmail hygiene: authenticated as `frost@belowzeromedia.com`. A fresh last-seven-days stop-signal search for SplashLens, PartSnap, Mystery Part, Service Proof Passport, Fluidra, Jandy, and app.splashlens.com returned no new unsubscribe, remove-me, do-not-contact, complaint, not-interested, bounce, undeliverable, delivery-failure, or failed message IDs. The known Fluidra suppression remains recorded and is still suppressed.
+
+Live preflight: `https://splashlens.com` returned 200 and `https://app.splashlens.com` returned 200.
+
+Send decision: sent 5 one-to-one plain-text emails, no BCC, using the required `Talk Soon,` signoff. This used the daily cap, so no more cold sends should go out on 2026-07-09.
+
+Recipients sent:
+
+- The Pool Shop Coach / Lee Salisbury, `lee@thepoolshopcoach.com.au`, Gmail id `19f473549402fb7a`.
+- Hammer-Head Pool Vacuums, `info@hammerheadvac.com`, Gmail id `19f47354ad1113b5`.
+- ProMinent Fluid Controls, `sales-us@prominent.com`, Gmail id `19f47354fdc5b73e`.
+- California Pool Association, `info@capoolassociation.com`, Gmail id `19f4735529a00558`.
+- Pool Pros CPO Training, `poolproscponv@gmail.com`, Gmail id `19f4735590c6e549`.
+
+Queue updates: the five recipients above were moved from `queued` to `sent`, with `last_sent_at=2026-07-09` and `next_send_after=2026-07-16`.
+
+New prospect expansion found six public/current event and association routes; four were added as new rows and two were retained as already-covered existing queue rows:
+
+- The Pool & Spa Show / NESPA, `info@thepoolspashow.com`, `queued`.
+- Northeast Spa & Pool Association / NESPA, `info@nespapool.org`, `queued`.
+- LIPSA / NESPA chapter services, `AHernandez@nespapool.org`, `queued`.
+- FSPA Job Board / education advertising route, `Charis@fspa.com`, `needs-verification`.
+- Pool Spa Patio Expo / PSP Deck Expo, `client.services@poolspapatio.com`, already existed as `sent`; duplicate new row was not retained.
+- Southwest Pool & Spa Show, `christi@mpire-group.com`, already existed as `follow-up-sent`; duplicate new row was not retained.
+
+More-source scrape artifacts were also created for the next review pass: `docs/outreach/splashlens-source-urls-2026-07-09-more.txt`, `docs/outreach/splashlens-prospect-review-2026-07-09-more.csv`, `docs/outreach/splashlens-prospect-review-2026-07-09-more-summary.json`, and `docs/outreach/splashlens-prospect-candidates-2026-07-09-more.csv`. These are review-only until manually promoted; the candidate file has a lot of broad directory/government-contact noise mixed with useful leads, so it should not be treated as a send-ready blast list.

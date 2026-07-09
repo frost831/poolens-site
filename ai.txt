@@ -30,6 +30,7 @@ Important public sections:
 - Google Play tester access: https://splashlens.com/google-play-testers.html
 - Paid/media conversion page: https://splashlens.com/paid-media.html
 - Facility Assist for CPOs and aquatic operators: https://splashlens.com/facility-assist
+- Facilities Pilot for QR workflows, support routing, and usage reporting: https://splashlens.com/facilities
 - Answer page - app that identifies pool parts: https://splashlens.com/what-app-identifies-pool-parts.html
 - Answer page - pool robot troubleshooting app: https://splashlens.com/pool-robot-troubleshooting-app.html
 - Answer page - pool automation troubleshooting app: https://splashlens.com/pool-automation-troubleshooting-app.html

@@ -437,12 +437,65 @@
  font-weight: 900;
  margin-bottom: 3px;
  }
- .partsnap-proof-grid span {
- display: block;
- color: #475569;
- font-size: .85rem;
- line-height: 1.35;
- }
+.partsnap-proof-grid span {
+display: block;
+color: #475569;
+font-size: .85rem;
+line-height: 1.35;
+}
+.facility-band {
+background: #082f49;
+color: #fff;
+padding: 48px 24px;
+}
+.facility-panel {
+display: grid;
+grid-template-columns: .9fr 1.1fr;
+gap: 16px;
+align-items: stretch;
+background: rgba(255,255,255,.08);
+border: 1px solid rgba(186,230,253,.28);
+border-radius: 12px;
+padding: 18px;
+}
+.facility-panel h2 {
+font-size: clamp(2rem,4vw,3.4rem);
+line-height: .98;
+letter-spacing: 0;
+margin: 0 0 10px;
+}
+.facility-panel p {
+color: #dbeafe;
+font-size: 16px;
+line-height: 1.55;
+margin: 0 0 16px;
+}
+.facility-grid {
+display: grid;
+grid-template-columns: repeat(2,1fr);
+gap: 9px;
+}
+.facility-grid div {
+background: #f8fafc;
+color: #0f172a;
+border-radius: 8px;
+padding: 13px;
+border: 1px solid #bae6fd;
+}
+.facility-grid strong {
+display: block;
+color: #0369a1;
+font-size: 13px;
+font-weight: 950;
+margin-bottom: 3px;
+}
+.facility-grid span {
+display: block;
+color: #475569;
+font-size: 12px;
+line-height: 1.35;
+font-weight: 700;
+}
 
  /* PHONE MOCKUP */
  .phone-wrap {
@@ -877,7 +930,7 @@
  .field-photo { min-height: 246px; }
  .ai-inner { grid-template-columns: 1fr; gap: 40px; }
  .steps::before { display: none; }
- .partsnap-panel, .bridge-panel, .authority-grid { grid-template-columns: 1fr; }
+.partsnap-panel, .bridge-panel, .authority-grid, .facility-panel, .facility-grid { grid-template-columns: 1fr; }
  .feature-grid {
  display: flex;
  flex-direction: column;
@@ -987,6 +1040,7 @@
 <a href="/partsnap.html">PartSnap</a>
 <a href="/connected-pool-brain.html" class="nav-link-optional">Connected Network</a>
 <a href="/new-tech-radar.html">Tech Radar</a>
+<a href="/facility-assist.html">Facility Assist</a>
 <a href="/mystery-part-lab.html" class="nav-link-optional">Mystery Lab</a>
 <a href="#how" class="nav-link-optional">How It Works</a>
  <a href="#compare" class="nav-link-optional">Compare</a>
@@ -1069,6 +1123,25 @@
  <div><strong>Verify</strong><span>model, visible marking, fit</span></div>
  <div><strong>Escalate</strong><span>copy a clean parts packet</span></div>
  <div><strong>Protect</strong><span>confidence ladder before links</span></div>
+ </div>
+ </div>
+ </div>
+</section>
+
+<section class="facility-band" aria-label="Facility Assist for CPOs and aquatic operators">
+ <div class="container">
+ <div class="facility-panel">
+ <div>
+ <div class="section-eyebrow" style="color:#bae6fd">CPO / Facility Mode</div>
+ <h2>A lighter front door for the people responsible for the pool.</h2>
+ <p>Facility Assist gives CPOs, swim-school staff, apartment managers, and aquatic operators a simple workflow before the deeper tech tools: daily checks, chemical dosing, contamination-event documentation, basic equipment proof, and support escalation.</p>
+ <p><a href="/facility-assist.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:44px;border-radius:8px;background:#fff;color:#075985;text-decoration:none;font-weight:950;padding:0 16px">See Facility Assist -&gt;</a></p>
+ </div>
+ <div class="facility-grid">
+ <div><strong>Daily check</strong><span>Readings, clarity, equipment sound, required documentation.</span></div>
+ <div><strong>Contamination event</strong><span>Close, document, follow approved standards, escalate.</span></div>
+ <div><strong>Basic equipment proof</strong><span>Labels, visible checks, codes, photos, no invasive repair.</span></div>
+ <div><strong>Support packet</strong><span>Give human experts readings, symptoms, photos, and context.</span></div>
  </div>
  </div>
  </div>

@@ -889,6 +889,44 @@ New prospect expansion found six public/current event and association routes; fo
 
 More-source scrape artifacts were also created for the next review pass: `docs/outreach/splashlens-source-urls-2026-07-09-more.txt`, `docs/outreach/splashlens-prospect-review-2026-07-09-more.csv`, `docs/outreach/splashlens-prospect-review-2026-07-09-more-summary.json`, and `docs/outreach/splashlens-prospect-candidates-2026-07-09-more.csv`. These are review-only until manually promoted; the candidate file has a lot of broad directory/government-contact noise mixed with useful leads, so it should not be treated as a send-ready blast list.
 
+## Daily growth loop reconciliation - 2026-07-09 09:40:00 -05:00
+
+Send decision: sent 0 additional emails in this run. Gmail and queue truth already showed the July 9 daily cold cap was spent before this pass started: five one-to-one cold emails had already gone out today to The Pool Shop Coach, Hammer-Head Pool Vacuums, ProMinent Fluid Controls, California Pool Association, and Pool Pros CPO Training, plus one warm prep reply in the Aquatic Council thread.
+
+Gmail hygiene since the previous automation run on 2026-07-08:
+
+- Authenticated account is still `frost@belowzeromedia.com`.
+- A same-day stop-signal query after the previous run returned no new SplashLens-specific bounce, complaint, unsubscribe, remove-me, do-not-contact, not-interested, undeliverable, delivery-failure, or failed message IDs.
+- A same-day reply sweep after the previous run returned no new human SplashLens inbound thread. The only SplashLens-related same-day message was Joshua's warm Aquatic Council prep reply before the scheduled Thursday call.
+- A same-day failure sweep for the six July 9 recipient threads returned no current bounce or delivery-failure message IDs.
+
+Verified send-state audit:
+
+- Read the five cold July 9 sent messages plus the Aquatic Council warm reply directly from Gmail.
+- The five cold emails were one-to-one with no CC/BCC, used plain-text bodies, and each ended with the required `Talk Soon,` signoff.
+- The warm Aquatic Council reply also used the required `Talk Soon,` signoff and stayed inside the existing replied thread.
+
+Live verification rechecked now:
+
+- `https://splashlens.com` returned HTTP `200`.
+- `https://app.splashlens.com` returned HTTP `200`.
+- `https://splashlens.com/api/partner-intake` still returned healthy `GET 200` JSON with `ok=true`, `storageConfigured=true`, and `emailConfigured=true`, but `HEAD` still returns `404`; treat that as method-specific drift, not a current GET outage.
+- `https://app.splashlens.com/api/events` returned `GET 200` JSON with `ok=true`, `storageConfigured=true`, and `emailConfigured=true`.
+- `https://app.splashlens.com/api/events?digest=1` returned `401 Unauthorized`, which still matches the intended protected owner-digest gate.
+- `https://app.splashlens.com/api/checkout?plan=monthly` and `?plan=yearly` still returned direct `302` responses with `X-SplashLens-Checkout-Mode: payment_link_direct` to the live Stripe Payment Links, and full follow redirects landed on live Stripe Checkout pages.
+- Site/app discovery surfaces remained healthy on live recheck: site/app `ai.txt`, site/app `llms.txt`, site/app `robots.txt`, and the site sitemap family still resolved cleanly.
+- Public store markers remained live: the Play listing still exposed `com.splashlens.fieldtools`, `1.0.5`, `InStock`, and `https://splashlens.com/privacy`, while the iOS App Store listing at `https://apps.apple.com/us/app/splashlens/id6763644905` returned `200`.
+
+Queue work completed because the daily cap was already spent:
+
+- Added `Blue-White Industries` as `queued` with `sales@blue-white.com` after verifying the official contact page and a clean Gmail recipient-history search.
+- Added `Bio-Dex Laboratories` as `queued` with `info@bio-dex.com` after verifying the official contact page and a clean Gmail recipient-history search.
+- Added `Periodic Products` as `queued` with `info@periodicproducts.com` after verifying official Periodic Products PDF/source evidence and a clean Gmail recipient-history search.
+
+Queue snapshot after this run: `queued=32`, `needs-verification=38`, `needs-contact=20`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=41`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=3`.
+
+Blocker: no more cold SplashLens outreach should be sent on 2026-07-09 because the five-email daily cap was already fully used before this automation pass. The next eligible cold-send check is a fresh same-day Gmail sweep on 2026-07-10 using the enlarged queued pool.
+
 ## Automation cap audit - 2026-07-09 09:17 -05:00
 
 Send decision: sent 0 additional emails in this automation invocation. The same-day run log and Gmail both show the July 9 daily cold cap was already used by five one-to-one SplashLens sends at about 09:08 -05:00 / 10:08 -04:00, so this pass preserved the cap and did not send more.

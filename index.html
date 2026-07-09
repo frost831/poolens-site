@@ -71,7 +71,7 @@
  background: rgba(255,255,255,.92);
  backdrop-filter: blur(12px);
  border-bottom: 1px solid var(--border);
- padding: 0 24px 10px;
+ padding: 0 24px;
  }
  .nav-inner {
  max-width: 1320px; margin: 0 auto;
@@ -190,14 +190,6 @@
  gap: .75rem;
  flex-wrap: wrap;
  }
- .nav-store-badges {
- max-width: 1320px;
- margin: 0 auto;
- padding-top: 8px;
- justify-content: center;
- gap: clamp(1rem, 5vw, 4.5rem);
- border-top: 1px solid rgba(226, 232, 240, .72);
- }
  .store-badge {
  position: relative;
  display: inline-flex;
@@ -218,15 +210,18 @@
  }
  .store-badge.apple img { height: 52px; }
  .store-badge.google img { height: 58px; }
- .nav-store-badges .store-badge.apple img { height: 52px; }
- .nav-store-badges .store-badge.google img { height: 58px; }
  @media (max-width: 1180px) {
  .nav-links { gap: 6px; }
  .nav-links a,
  .nav-menu summary { font-size: .82rem; }
- .nav-store-badges { gap: clamp(1rem, 8vw, 3.5rem); }
- .nav-store-badges .store-badge.apple img { height: 44px; }
- .nav-store-badges .store-badge.google img { height: 50px; }
+ }
+ @media (prefers-reduced-motion: reduce) {
+ *, *::before, *::after {
+ animation-duration: .001ms !important;
+ animation-iteration-count: 1 !important;
+ scroll-behavior: auto !important;
+ transition-duration: .001ms !important;
+ }
  }
  /* HERO */
  .hero {
@@ -575,6 +570,214 @@ line-height: 1.35;
 font-weight: 700;
 }
 
+.photo-band {
+min-height: clamp(280px, 38vw, 460px);
+padding: 64px 24px;
+display: flex;
+align-items: flex-end;
+position: relative;
+overflow: hidden;
+background-image: linear-gradient(90deg, rgba(2,8,23,.82), rgba(2,8,23,.45), rgba(2,8,23,.14)), var(--band-image);
+background-size: cover;
+background-position: var(--band-position, center);
+}
+.photo-band::after {
+content: "";
+position: absolute;
+inset: 0;
+background: linear-gradient(180deg, rgba(2,8,23,.08), rgba(2,8,23,.46));
+pointer-events: none;
+}
+.photo-band-inner {
+position: relative;
+z-index: 1;
+max-width: 1100px;
+width: 100%;
+margin: 0 auto;
+color: #fff;
+}
+.photo-band-kicker {
+font-size: .78rem;
+font-weight: 950;
+letter-spacing: .12em;
+text-transform: uppercase;
+color: #bae6fd;
+margin-bottom: 10px;
+}
+.photo-band h2 {
+font-size: clamp(2rem, 5vw, 4.4rem);
+line-height: .98;
+letter-spacing: 0;
+max-width: 720px;
+margin: 0 0 12px;
+text-wrap: balance;
+}
+.photo-band p {
+max-width: 620px;
+font-size: clamp(1rem, 2vw, 1.18rem);
+line-height: 1.55;
+color: rgba(255,255,255,.9);
+}
+.photo-band.facility-photo-band {
+--band-image: url("https://aloha-pools-assets.spicyweb.net.au/main/_blogImages/23008/21caydonV2.webp");
+--band-position: center 48%;
+}
+.photo-band.pricing-photo-band {
+--band-image: url("https://cdn.pixabay.com/photo/2016/03/27/18/58/pool-pump-1283648_1280.jpg");
+--band-position: center 58%;
+}
+
+.product-showcase {
+background: #ffffff;
+padding: 54px 24px 64px;
+}
+.product-showcase-grid {
+display: grid;
+grid-template-columns: .86fr 1.14fr;
+gap: 28px;
+align-items: center;
+}
+.product-showcase-copy h2 {
+font-size: clamp(2rem, 4vw, 3.7rem);
+line-height: .98;
+letter-spacing: 0;
+margin: 0 0 14px;
+color: var(--slate);
+text-wrap: balance;
+}
+.product-showcase-copy p {
+color: var(--slate-soft);
+font-size: 1.05rem;
+line-height: 1.6;
+margin-bottom: 18px;
+}
+.phone-stage {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 14px;
+align-items: end;
+}
+.product-phone {
+background: #0f172a;
+border-radius: 30px;
+padding: 9px;
+box-shadow: 0 24px 60px rgba(15,23,42,.2);
+border: 1px solid rgba(255,255,255,.12);
+min-height: 410px;
+}
+.product-phone:nth-child(2) {
+transform: translateY(-18px);
+}
+.product-screen {
+height: 100%;
+min-height: 392px;
+background: #eff8fb;
+border-radius: 23px;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+}
+.product-screen-top {
+background: #0369a1;
+color: #fff;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 8px;
+padding: 10px 12px;
+font-size: .72rem;
+font-weight: 900;
+}
+.product-screen-body {
+padding: 11px;
+display: grid;
+gap: 9px;
+}
+.scan-window {
+height: 138px;
+border-radius: 14px;
+background: linear-gradient(145deg,#0f172a,#083344);
+border: 1px solid #155e75;
+position: relative;
+overflow: hidden;
+display: grid;
+place-items: center;
+color: #e0f2fe;
+font-weight: 950;
+letter-spacing: .08em;
+}
+.scan-window::after {
+content: "";
+position: absolute;
+left: 10%;
+right: 10%;
+height: 3px;
+top: 20%;
+background: linear-gradient(90deg, transparent, #67e8f9, transparent);
+animation: scan 2s ease-in-out infinite;
+}
+.product-pill {
+display: inline-flex;
+align-items: center;
+width: fit-content;
+min-height: 26px;
+border-radius: 999px;
+padding: 4px 8px;
+background: #ccfbf1;
+color: #0f766e;
+font-size: .62rem;
+font-weight: 950;
+text-transform: uppercase;
+letter-spacing: .08em;
+}
+.product-card {
+background: #fff;
+border: 1px solid #dbe8ef;
+border-radius: 10px;
+padding: 10px;
+box-shadow: 0 1px 2px rgba(15,23,42,.05);
+}
+.product-card strong {
+display: block;
+color: var(--slate);
+font-size: .83rem;
+line-height: 1.18;
+margin-bottom: 4px;
+}
+.product-card span {
+display: block;
+color: var(--slate-soft);
+font-size: .68rem;
+line-height: 1.35;
+font-weight: 700;
+}
+.packet-line {
+display: flex;
+gap: 7px;
+align-items: flex-start;
+background: #f8fafc;
+border: 1px solid #e2e8f0;
+border-radius: 9px;
+padding: 8px;
+}
+.packet-line b {
+display: grid;
+place-items: center;
+width: 20px;
+height: 20px;
+border-radius: 999px;
+background: #e0f2fe;
+color: #0369a1;
+font-size: .62rem;
+flex: 0 0 auto;
+}
+.packet-line span {
+font-size: .67rem;
+line-height: 1.35;
+color: #334155;
+font-weight: 800;
+}
+
  /* PHONE MOCKUP */
  .phone-wrap {
  position: relative; display: inline-block;
@@ -678,12 +881,81 @@ font-weight: 700;
  font-size: .7rem; font-weight: 700; letter-spacing: .05em;
  padding: 3px 10px; border-radius: 100px;
  }
- .feature-mobile-toggle {
- display: none;
- color: var(--sky);
- font-size: .76rem;
- font-weight: 800;
- margin-top: 12px;
+ .feature-spotlight {
+ display: grid;
+ grid-template-columns: 1fr .82fr;
+ gap: 18px;
+ align-items: stretch;
+ background: linear-gradient(145deg, #062b2f, #0f172a);
+ border-radius: 12px;
+ padding: clamp(18px, 3vw, 30px);
+ margin-bottom: 20px;
+ color: #fff;
+ box-shadow: 0 28px 80px rgba(15,23,42,.18);
+ overflow: hidden;
+ }
+ .feature-spotlight h3 {
+ font-size: clamp(1.8rem, 4vw, 3.5rem);
+ line-height: .98;
+ margin: 0 0 12px;
+ letter-spacing: 0;
+ }
+ .feature-spotlight p {
+ color: #ccfbf1;
+ max-width: 650px;
+ font-size: 1.03rem;
+ line-height: 1.6;
+ margin-bottom: 16px;
+ }
+ .spotlight-steps {
+ display: grid;
+ grid-template-columns: repeat(4, minmax(0, 1fr));
+ gap: 8px;
+ }
+ .spotlight-steps div {
+ background: rgba(255,255,255,.08);
+ border: 1px solid rgba(153,246,228,.18);
+ border-radius: 8px;
+ padding: 10px;
+ min-height: 76px;
+ }
+ .spotlight-steps strong {
+ display: block;
+ color: #99f6e4;
+ font-size: .82rem;
+ margin-bottom: 4px;
+ }
+ .spotlight-steps span {
+ display: block;
+ color: #d1fae5;
+ font-size: .72rem;
+ line-height: 1.3;
+ font-weight: 700;
+ }
+ .feature-spotlight .product-phone {
+ min-height: 360px;
+ max-width: 280px;
+ justify-self: center;
+ box-shadow: 0 24px 64px rgba(0,0,0,.34);
+ }
+ .feature-spotlight .product-screen { min-height: 342px; }
+ .feature-all-tools {
+ display: flex;
+ justify-content: center;
+ margin-top: 24px;
+ }
+ .feature-all-tools a {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ min-height: 46px;
+ border-radius: 999px;
+ background: var(--sky-xlight);
+ border: 1px solid #bae6fd;
+ color: var(--sky-dark);
+ text-decoration: none;
+ font-weight: 950;
+ padding: 0 18px;
  }
 
  .bridge-band {
@@ -935,11 +1207,11 @@ font-weight: 700;
  footer a { color: #7dd3fc; text-decoration: none; }
 
  @media (max-width: 768px) {
- nav { padding: 0 14px 9px; }
+ nav { padding: 0 14px; }
  .nav-inner {
  height: auto;
  min-height: 60px;
- align-items: flex-start;
+ align-items: center;
  padding: 10px 0 8px;
  gap: 10px;
  }
@@ -952,9 +1224,10 @@ font-weight: 700;
  margin-left: auto;
  justify-content: flex-end;
  flex-wrap: wrap;
- max-width: calc(100% - 132px);
+ max-width: none;
  }
- .nav-links > a:first-child { display: none; }
+ .nav-links > a:not(.nav-cta),
+ .nav-links .nav-menu { display: none; }
  .nav-links a,
  .nav-menu summary { font-size: .7rem; padding: 7px 6px; }
  .nav-cta { padding: 7px 10px; border-radius: 8px; }
@@ -969,12 +1242,6 @@ font-weight: 700;
  max-height: 70vh;
  overflow: auto;
  }
- .nav-store-badges {
- gap: 1.4rem;
- padding-top: 7px;
- }
- .nav-store-badges .store-badge.apple img { height: 32px; }
- .nav-store-badges .store-badge.google img { height: 36px; }
  section { padding: 56px 18px; }
  .hero {
  min-height: auto;
@@ -1031,6 +1298,26 @@ font-weight: 700;
  }
  .field-photo-grid { grid-template-columns: 1fr; }
  .field-photo { min-height: 246px; }
+ .product-showcase-grid,
+ .feature-spotlight {
+ grid-template-columns: 1fr;
+ }
+ .phone-stage {
+ grid-template-columns: 1fr;
+ max-width: 330px;
+ margin: 0 auto;
+ }
+ .product-phone,
+ .product-phone:nth-child(2) {
+ transform: none;
+ min-height: 0;
+ }
+ .product-screen { min-height: 356px; }
+ .photo-band {
+ min-height: 320px;
+ padding: 42px 18px;
+ }
+ .spotlight-steps { grid-template-columns: 1fr 1fr; }
  .ai-inner { grid-template-columns: 1fr; gap: 40px; }
  .steps::before { display: none; }
 .partsnap-panel, .bridge-panel, .authority-grid, .facility-panel, .facility-grid { grid-template-columns: 1fr; }
@@ -1052,37 +1339,15 @@ font-weight: 700;
  margin-bottom: 10px;
  }
  .feature-card h3 {
- margin-bottom: 0;
- padding-right: 34px;
+ margin-bottom: 8px;
+ padding-right: 0;
  position: relative;
  }
- .feature-card h3::after {
- content: "+";
- position: absolute;
- right: 0;
- top: 0;
- width: 24px;
- height: 24px;
- border-radius: 50%;
- background: var(--sky-xlight);
- color: var(--sky-dark);
- display: inline-flex;
- align-items: center;
- justify-content: center;
- font-size: 1rem;
- font-weight: 900;
- }
- .feature-card.is-open h3::after { content: "-"; }
  .feature-card p,
  .feature-card .feature-badge {
- display: none;
+ display: block;
  }
- .feature-card.is-open p,
- .feature-card.is-open .feature-badge {
- display: inline-block;
- }
- .feature-card.is-open p { display: block; margin-top: 10px; }
- .feature-mobile-toggle { display: block; }
+ .feature-card .feature-badge { display: inline-block; }
  .comp-swipe-hint {
  display: block;
  margin: -30px 0 12px;
@@ -1185,16 +1450,8 @@ font-weight: 700;
  </div>
 </details>
  <a href="/facility-assist">For Facilities</a>
- <a href="https://app.splashlens.com" target="_blank" class="nav-cta">Open App</a>
+ <a href="https://app.splashlens.com" target="_blank" class="nav-cta">Get the app</a>
  </div>
- </div>
- <div class="store-badges nav-store-badges" aria-label="Download SplashLens">
- <a href="https://apps.apple.com/us/app/splashlens/id6763644905" target="_blank" rel="noopener" class="store-badge apple" aria-label="Download SplashLens on the App Store" data-track="app_store_download_click" data-source="nav_download_strip">
- <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" loading="eager">
- </a>
- <a href="https://play.google.com/store/apps/details?id=com.splashlens.fieldtools" target="_blank" rel="noopener" class="store-badge google" aria-label="Get SplashLens on Google Play" data-track="google_play_download_click" data-source="nav_download_strip">
- <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" loading="eager">
- </a>
  </div>
 </nav>
 
@@ -1244,6 +1501,34 @@ font-weight: 700;
   <span>Manual tools work offline</span>
   <span>Scanner results require verification</span>
   </div>
+ </div>
+</div>
+
+<!-- STAT STRIP -->
+<div class="stat-strip">
+ <div class="container">
+ <div class="stat-grid">
+ <div class="stat-item">
+ <div class="stat-num">230+</div>
+ <div class="stat-label">Troubleshooting Entries</div>
+ </div>
+ <div class="stat-item">
+ <div class="stat-num">12+</div>
+ <div class="stat-label">Dosing Calculators</div>
+ </div>
+ <div class="stat-item">
+ <div class="stat-num">100+</div>
+ <div class="stat-label">Chemical Products Covered</div>
+ </div>
+ <div class="stat-item">
+ <div class="stat-num">Free</div>
+ <div class="stat-label">Core Tools Forever</div>
+ </div>
+ <div class="stat-item">
+ <div class="stat-num">Offline</div>
+ <div class="stat-label">Manual Tools</div>
+ </div>
+ </div>
  </div>
 </div>
 
@@ -1297,6 +1582,54 @@ font-weight: 700;
 })();
 </script>
 
+<section class="product-showcase" aria-label="SplashLens product screens">
+ <div class="container product-showcase-grid">
+ <div class="product-showcase-copy">
+ <div class="section-eyebrow">Show, don't tell</div>
+ <h2>The app should feel obvious in three seconds.</h2>
+ <p>A tech sees PartSnap. A senior tech sees the packet. A facility operator sees the simple wizard. That is the product story.</p>
+ <a href="https://app.splashlens.com/?tab=scan&mode=parts" target="_blank" class="btn-primary" style="background:#0369a1;color:#fff;box-shadow:none" data-track="partsnap_click" data-source="product_showcase">Open PartSnap</a>
+ </div>
+ <div class="phone-stage">
+ <div class="product-phone" aria-label="PartSnap mid-scan phone mockup">
+ <div class="product-screen">
+ <div class="product-screen-top"><span>PartSnap</span><span>proof first</span></div>
+ <div class="product-screen-body">
+ <div class="scan-window">IDENTIFYING</div>
+ <span class="product-pill">Possible match</span>
+ <div class="product-card"><strong>Pump lid / O-ring family</strong><span>Needs model plate and molded number before ordering.</span></div>
+ <div class="product-card"><strong>Missing proof</strong><span>Label close-up, diameter, vendor cross-check.</span></div>
+ </div>
+ </div>
+ </div>
+ <div class="product-phone" aria-label="Escalation packet phone mockup">
+ <div class="product-screen">
+ <div class="product-screen-top"><span>Packet</span><span>send ready</span></div>
+ <div class="product-screen-body">
+ <span class="product-pill">Senior tech</span>
+ <div class="packet-line"><b>1</b><span>Symptom: flow fault after pump-speed change.</span></div>
+ <div class="packet-line"><b>2</b><span>Visible proof: label, display code, pad photo.</span></div>
+ <div class="packet-line"><b>3</b><span>Risk flag: verify filter pressure and model before parts.</span></div>
+ <div class="product-card"><strong>Copy packet</strong><span>One clean handoff instead of four texts.</span></div>
+ </div>
+ </div>
+ </div>
+ <div class="product-phone" aria-label="Facility wizard phone mockup">
+ <div class="product-screen">
+ <div class="product-screen-top"><span>Facility</span><span>CPO mode</span></div>
+ <div class="product-screen-body">
+ <span class="product-pill">What happened?</span>
+ <div class="packet-line"><b>1</b><span>Daily pool check</span></div>
+ <div class="packet-line"><b>2</b><span>Contamination event</span></div>
+ <div class="packet-line"><b>3</b><span>Equipment acting up</span></div>
+ <div class="product-card"><strong>End state</strong><span>Resolved - logged or Escalate - send packet.</span></div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+</section>
+
 <!-- MOBILE AI QUICK LOOK -->
 <section class="partsnap-band" aria-label="PartSnap pool parts identification">
  <div class="container">
@@ -1314,6 +1647,14 @@ font-weight: 700;
  <div><strong>Protect</strong><span>confidence ladder before links</span></div>
  </div>
  </div>
+ </div>
+</section>
+
+<section class="photo-band facility-photo-band" aria-label="Facility Assist visual chapter">
+ <div class="photo-band-inner">
+ <div class="photo-band-kicker">Facility Assist</div>
+ <h2>A different workflow for the person responsible for the pool.</h2>
+ <p>Swim schools, apartments, hotels, and aquatic facilities need fast documentation and escalation, not a repair-tech rabbit hole.</p>
  </div>
 </section>
 
@@ -1384,34 +1725,6 @@ font-weight: 700;
  </div>
 </section>
 
-<!-- STAT STRIP -->
-<div class="stat-strip">
- <div class="container">
- <div class="stat-grid">
- <div class="stat-item">
- <div class="stat-num">230+</div>
- <div class="stat-label">Troubleshooting Entries</div>
- </div>
- <div class="stat-item">
- <div class="stat-num">12+</div>
- <div class="stat-label">Dosing Calculators</div>
- </div>
- <div class="stat-item">
- <div class="stat-num">100+</div>
- <div class="stat-label">Chemical Products Covered</div>
- </div>
- <div class="stat-item">
- <div class="stat-num">Free</div>
- <div class="stat-label">Core Tools Forever</div>
- </div>
- <div class="stat-item">
- <div class="stat-num">Offline</div>
- <div class="stat-label">Manual Tools</div>
- </div>
- </div>
- </div>
-</div>
-
 <!-- FEATURES -->
 <section id="features">
  <div class="container">
@@ -1419,136 +1732,65 @@ font-weight: 700;
  <h2 class="section-title">The field rescue layer<br>your route app never built</h2>
  <p class="section-sub">Route apps run the company. SplashLens saves the stop: codes, dosing, reports, checklists, and scanner workflows built for the equipment pad.</p>
 
+ <div class="feature-spotlight">
+ <div>
+ <span class="feature-badge" style="background:#ccfbf1;color:#0f766e;margin:0 0 12px">Flagship</span>
+ <h3>PartSnap is the wedge.</h3>
+ <p>Photo the weird part, label, plate, or component. SplashLens returns possible ID clues, missing proof, callback-risk language, and a senior-tech/vendor packet before anyone orders blind.</p>
+ <div class="spotlight-steps">
+ <div><strong>1. Photo</strong><span>part, label, display, or plate</span></div>
+ <div><strong>2. Proof</strong><span>model, marking, fit clues</span></div>
+ <div><strong>3. Risk</strong><span>what could cause a callback</span></div>
+ <div><strong>4. Packet</strong><span>clean handoff in one tap</span></div>
+ </div>
+ </div>
+ <div class="product-phone" aria-label="PartSnap feature phone mockup">
+ <div class="product-screen">
+ <div class="product-screen-top"><span>PartSnap</span><span>AI scan</span></div>
+ <div class="product-screen-body">
+ <div class="scan-window">PART SNAP</div>
+ <span class="product-pill">Possible match</span>
+ <div class="product-card"><strong>Valve actuator / diverter path</strong><span>Verify brand, voltage, shaft fit, and label before replacement.</span></div>
+ <div class="product-card"><strong>Proof still needed</strong><span>Second photo plus equipment-side model plate.</span></div>
+ </div>
+ </div>
+ </div>
+ </div>
+
  <div class="feature-grid">
-
  <div class="feature-card">
- <div class="feature-icon" style="background:#ccfbf1;color:#0f766e">ID</div>
- <h3>PartSnap Pool Parts ID</h3>
- <p>Photo an unknown pool part and get possible manufacturer, model, part-number clues, confidence level, and verification search terms before ordering or escalating.</p>
- <span class="feature-badge" style="background:var(--green-light);color:var(--green)">Flagship</span>
+ <div class="feature-icon" style="background:#e0f2fe;color:#075985">ERR</div>
+ <h3>Error code lookup</h3>
+ <p>230+ field-reference entries across heaters, pumps, salt systems, robots, automation, lights, covers, controllers, spas, and swim spas.</p>
  </div>
-
  <div class="feature-card">
- <div class="feature-icon" style="background:#e0f2fe;color:#075985">SPA</div>
- <h3>Spa + Swim Spa Parts</h3>
- <p>PartSnap-style proof prompts for spa packs, topsides, swim-current pumps, filters, covers, lifters, ozone, UV, sanitizer feeders, and hot tub hardware.</p>
- <a href="/spa-swim-spa-parts-identification-app.html" style="display:inline-block;margin-top:10px;color:#0369a1;font-weight:900;text-decoration:none">See spa part workflow -&gt;</a>
- <span class="feature-badge" style="background:var(--green-light);color:var(--green)">New</span>
+ <div class="feature-icon" style="background:#fef3c7;color:#92400e">DOSE</div>
+ <h3>Dosing and water math</h3>
+ <p>Pool volume, turnover, FC, pH, TA, CH, CYA, SLAM, drain/refill, and report-ready chemistry notes.</p>
  </div>
-
  <div class="feature-card">
- <div class="feature-icon" style="background:#fef3c7">SPIN</div>
- <h3>SpinTouch Chemistry Proof</h3>
- <p>Capture LaMotte SpinTouch-style readings, source-tag the result, and carry those numbers into dosing and visit reports so the next decision starts from the field reading.</p>
- <span class="feature-badge" style="background:var(--green-light);color:var(--green)">Live</span>
+ <div class="feature-icon" style="background:#dbeafe;color:#075985">PAD</div>
+ <h3>Connected Pool Network</h3>
+ <p>Robots, automation, app pairing, RS-485, relays, actuators, lighting, heat pumps, covers, and smart backyard equipment.</p>
  </div>
-
  <div class="feature-card">
- <div class="feature-icon" style="background:#dbeafe">PAD</div>
- <h3>Equipment-Pad Rescue</h3>
- <p>Fault codes, heaters, pumps, filters, salt cells, and part lookup in one stop-focused reference flow before the senior tech gets pulled away from another job.</p>
- <span class="feature-badge" style="background:var(--green-light);color:var(--green)">Live</span>
+ <div class="feature-icon" style="background:#ffedd5;color:#9a3412">SPA</div>
+ <h3>Spa + swim spa lane</h3>
+ <p>Balboa, Gecko, Waterway NEO, topsides, GFCI symptoms, current pumps, ozone, UV, covers, and sanitizer feeders.</p>
+ <span class="feature-badge" style="background:#ffedd5;color:#9a3412">New</span>
  </div>
-
  <div class="feature-card">
- <div class="feature-icon" style="background:#fee2e2">HEAT</div>
- <h3>Heater Fault-Code Screen</h3>
- <p>Read common display codes, confirm model context, and document the issue before ordering parts, quoting repair work, or making the escalation call.</p>
- <span class="feature-badge" style="background:#dbeafe;color:#1d4ed8">Live Online</span>
+ <div class="feature-icon" style="background:#ede9fe;color:#6d28d9">TRAIN</div>
+ <h3>Training and proof packets</h3>
+ <p>Apprentice mode, senior-tech review, service proof passports, customer-safe summaries, and escalation packet language.</p>
  </div>
-
  <div class="feature-card">
- <div class="feature-icon" style="background:#fef3c7">ERR</div>
- <h3>Error Code Library</h3>
- <p>Hayward, Pentair, Jandy, iAqualink, Zodiac, Maytronics/Dolphin, Polaris, Kreepy Krauly, Waterway, and more. Fault-code reference with likely causes, next checks, and manual-friendly context - searchable by code or brand.</p>
- <span class="feature-badge" style="background:var(--green-light);color:var(--green)">Live</span>
+ <div class="feature-icon" style="background:#dcfce7;color:#166534">OFF</div>
+ <h3>Offline manual tools</h3>
+ <p>Manual lookup, calculators, guides, and checklists stay available after first load. Online scanning is clearly labeled.</p>
  </div>
-
- <div class="feature-card">
- <div class="feature-icon" style="background:#dbeafe">pH</div>
- <h3>Chemical Dosing Calculator</h3>
- <p>Enter pool volume and current readings to get reference dose estimates for FC, pH, TA, CH, and CYA. Verify against labels, service policy, and a calibrated test kit before adding chemicals.</p>
- <span class="feature-badge" style="background:var(--green-light);color:var(--green)">Live</span>
  </div>
-
- <div class="feature-card">
- <div class="feature-icon" style="background:#dcfce7">VOL</div>
- <h3>Volume Calculator</h3>
- <p>Rectangular, circular, oval, and L-shaped pools. Turnover rate and drain/refill calculations built in. Save your pool volumes for instant reuse on every visit.</p>
- <span class="feature-badge" style="background:var(--green-light);color:var(--green)">Live</span>
- </div>
-
- <div class="feature-card">
- <div class="feature-icon" style="background:#fce7f3">FLT</div>
- <h3>Filter Reference (Sand / DE / Cartridge)</h3>
- <p>Backwash steps, media sizing guides, DE charge calculators, cartridge sizing by sq ft - organized by filter type with tabbed navigation. Troubleshooting for every common issue.</p>
- <span class="feature-badge" style="background:var(--green-light);color:var(--green)">Live</span>
- </div>
-
- <div class="feature-card">
- <div class="feature-icon" style="background:#ede9fe">CHK</div>
- <h3>Maintenance Checklists</h3>
- <p>Opening, closing, weekly, and monthly checklists. Tap to check off tasks as you go. Progress tracked per visit, per pool. Never miss a step.</p>
- <span class="feature-badge" style="background:var(--green-light);color:var(--green)">Live</span>
- </div>
-
- <div class="feature-card">
- <div class="feature-icon" style="background:#fef9c3">DAY</div>
- <h3>Route & Day View</h3>
- <p>Build your daily stop list, mark pools done as you go, add custom stops. Visual progress bar shows the day at a glance. Detects stale days so you never run yesterday's route.</p>
- <span class="feature-badge" style="background:var(--green-light);color:var(--green)">Live</span>
- </div>
-
- <div class="feature-card">
- <div class="feature-icon" style="background:#e0f2fe">POOL</div>
- <h3>Pool Profiles</h3>
- <p>Save every pool on your route - volume, shape, filter type, notes. Auto-fills your dosing calculator when you select a pool. Chemistry history logged per visit.</p>
- <span class="feature-badge" style="background:var(--green-light);color:var(--green)">Live</span>
- </div>
-
- <div class="feature-card">
- <div class="feature-icon" style="background:#fce7f3">SLAM</div>
- <h3>SLAM & Treatment Plans</h3>
- <p>Green pool? Build a reference treatment outline from readings, then confirm the plan against your company process and chemical labels. SLAM targets are calculated from CYA; drain/refill math is included.</p>
- <span class="feature-badge" style="background:var(--green-light);color:var(--green)">Live</span>
- </div>
-
- <div class="feature-card">
- <div class="feature-icon" style="background:#dcfce7">SALT</div>
- <h3>Salt Chlorinator Reference</h3>
- <p>Salt cell diagnostics, optimal salinity ranges, cell cleaning procedure, troubleshooting low output and high/low salt alarms - covers all major SWG brands.</p>
- <span class="feature-badge" style="background:var(--green-light);color:var(--green)">Live</span>
- </div>
-
- <div class="feature-card">
- <div class="feature-icon" style="background:#fee2e2">PPE</div>
- <h3>Chemical Safety Guide</h3>
- <p>Handling protocols, PPE requirements, spill response, and incompatibility warnings for every chemical in the toolkit. Critical knowledge offline at every service stop.</p>
- <span class="feature-badge" style="background:var(--green-light);color:var(--green)">Live</span>
- </div>
-
- <div class="feature-card">
- <div class="feature-icon" style="background:#f0fdf4">OFF</div>
- <h3>Offline Manual Tools</h3>
- <p>Error codes, calculators, and reference guides are cached to your device on first load. Manual tools work in mechanical rooms, basements, and zero-bar backyards. AI scan needs internet.</p>
- <span class="feature-badge" style="background:var(--green-light);color:var(--green)">Live</span>
- </div>
-
- <div class="feature-card" style="border: 2px solid var(--sky);">
- <div class="feature-icon" style="background:#e0f2fe">SCAN</div>
- <h3>AI Equipment Scanner</h3>
- <p>Point your camera at an error code display. SplashLens uses online AI to attempt a code read and return reference causes plus next checks. Offline, use manual lookup.</p>
- <span class="feature-badge" style="background:#dbeafe;color:#1d4ed8">Live Online</span>
- </div>
-
- <div class="feature-card" style="border: 2px solid #7c3aed;">
- <div class="feature-icon" style="background:#ede9fe">PART</div>
- <h3>PartSnap - AI Parts ID</h3>
- <p>Point your camera at a pool part - pump impeller, filter grid, salt cell, valve, or O-ring - and PartSnap attempts to suggest the manufacturer, model, possible part number, and useful verification search terms.</p>
- <span class="feature-badge" style="background:#ede9fe;color:#6d28d9">Live Online</span>
- </div>
-
- </div>
+ <div class="feature-all-tools"><a href="/pool-tech-field-reference-app.html">Open all tools and reference lanes -&gt;</a></div>
  </div>
 </section>
 
@@ -1714,7 +1956,7 @@ font-weight: 700;
  <div class="container">
  <div class="ai-inner">
  <div class="ai-text">
- <div class="ai-coming-badge" style="margin-bottom:20px">Live Online</div>
+ <div class="ai-coming-badge" style="margin-bottom:20px">Online scanner</div>
  <div class="section-eyebrow">AI Equipment Scanner</div>
  <h2 class="section-title">Point. Check. Document.</h2>
  <p class="section-sub">Point your camera at an error display, fault-code panel, equipment label, or test strip. SplashLens uses online AI for the scan, then keeps manual lookup ready when signal disappears. Treat scan output as a field reference, not a repair guarantee.</p>
@@ -1798,6 +2040,14 @@ font-weight: 700;
  </div>
  </div>
  </div>
+ </div>
+</section>
+
+<section class="photo-band pricing-photo-band" aria-label="Pricing visual chapter">
+ <div class="photo-band-inner">
+ <div class="photo-band-kicker">Free core, paid power tools</div>
+ <h2>The field tools stay free. High-use scanner workflows can pay for the build.</h2>
+ <p>The pricing story should feel simple before anyone sees a card: free reference tools, optional PartSnap Pro for heavy scanner use.</p>
  </div>
 </section>
 
@@ -2006,51 +2256,6 @@ font-weight: 700;
  if (event.key !== 'Escape') return;
  navMenus.forEach(function (menu) { menu.open = false; });
  });
- var featureCards = Array.prototype.slice.call(document.querySelectorAll('.feature-card'));
- var mobileFeatureQuery = window.matchMedia('(max-width: 768px)');
- function setFeatureCardState(card, isOpen) {
- card.classList.toggle('is-open', isOpen);
- card.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
- var toggle = card.querySelector('.feature-mobile-toggle');
- if (toggle) toggle.textContent = isOpen ? 'Tap to collapse' : 'Tap to expand';
- }
- function syncFeatureCards() {
- featureCards.forEach(function (card) {
- if (!card.querySelector('.feature-mobile-toggle')) {
- var toggle = document.createElement('span');
- toggle.className = 'feature-mobile-toggle';
- toggle.textContent = 'Tap to expand';
- card.appendChild(toggle);
- }
- if (mobileFeatureQuery.matches) {
- card.setAttribute('role', 'button');
- card.setAttribute('tabindex', '0');
- if (!card.hasAttribute('aria-expanded')) setFeatureCardState(card, false);
- } else {
- card.removeAttribute('role');
- card.removeAttribute('tabindex');
- card.removeAttribute('aria-expanded');
- card.classList.remove('is-open');
- }
- });
- }
- featureCards.forEach(function (card) {
- card.addEventListener('click', function (event) {
- if (!mobileFeatureQuery.matches || event.target.closest('a')) return;
- setFeatureCardState(card, !card.classList.contains('is-open'));
- });
- card.addEventListener('keydown', function (event) {
- if (!mobileFeatureQuery.matches || (event.key !== 'Enter' && event.key !== ' ')) return;
- event.preventDefault();
- setFeatureCardState(card, !card.classList.contains('is-open'));
- });
- });
- syncFeatureCards();
- if (mobileFeatureQuery.addEventListener) {
- mobileFeatureQuery.addEventListener('change', syncFeatureCards);
- } else if (mobileFeatureQuery.addListener) {
- mobileFeatureQuery.addListener(syncFeatureCards);
- }
  var routeReadyForm = document.getElementById('route-ready-form');
  var routeReadyStatus = document.getElementById('route-ready-status');
  if (routeReadyForm) {

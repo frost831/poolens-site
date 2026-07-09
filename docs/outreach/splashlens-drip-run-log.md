@@ -888,3 +888,25 @@ New prospect expansion found six public/current event and association routes; fo
 - Southwest Pool & Spa Show, `christi@mpire-group.com`, already existed as `follow-up-sent`; duplicate new row was not retained.
 
 More-source scrape artifacts were also created for the next review pass: `docs/outreach/splashlens-source-urls-2026-07-09-more.txt`, `docs/outreach/splashlens-prospect-review-2026-07-09-more.csv`, `docs/outreach/splashlens-prospect-review-2026-07-09-more-summary.json`, and `docs/outreach/splashlens-prospect-candidates-2026-07-09-more.csv`. These are review-only until manually promoted; the candidate file has a lot of broad directory/government-contact noise mixed with useful leads, so it should not be treated as a send-ready blast list.
+
+## Automation cap audit - 2026-07-09 09:17 -05:00
+
+Send decision: sent 0 additional emails in this automation invocation. The same-day run log and Gmail both show the July 9 daily cold cap was already used by five one-to-one SplashLens sends at about 09:08 -05:00 / 10:08 -04:00, so this pass preserved the cap and did not send more.
+
+Live preflight: `https://splashlens.com/`, `https://splashlens.com/partsnap-proof-library`, and `https://app.splashlens.com/` returned HTTP `200`. Homepage body scan found `230+` and fallback `180+` language, with no visible `500+` claim or common fake-testimonial-name markers checked in this pass.
+
+Gmail hygiene: authenticated as `frost@belowzeromedia.com`. Last-seven-days SplashLens/PartSnap/app.splashlens.com searches returned no new unsubscribe, remove-me, do-not-contact, complaint, not-interested, bounce, undeliverable, delivery-failure, or failed-message hits. The search also confirmed the earlier same-day sent IDs: `19f473549402fb7a`, `19f47354ad1113b5`, `19f47354fdc5b73e`, `19f4735529a00558`, and `19f4735590c6e549`. Warm Tim / Aquatic Council reply id `19f47355ca6f65a1` remains separate from the cold cap.
+
+Queue verification: the five capped recipients remain marked `sent` with `last_sent_at=2026-07-09` and `next_send_after=2026-07-16`: The Pool Shop Coach / Lee Salisbury, Hammer-Head Pool Vacuums, ProMinent Fluid Controls, California Pool Association, and Pool Pros CPO Training. Queue snapshot before this audit entry: `queued=29`, `needs-verification=38`, `needs-contact=20`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=41`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=3`.
+
+Blocker: no more cold SplashLens outreach should go out on 2026-07-09 because the daily cap is already used. Next cold-send recheck should be 2026-07-10 or later after a fresh live preflight and Gmail stop-signal search.
+
+## Daily automation audit after capped send - 2026-07-09 09:17 -05:00
+
+Gmail hygiene: authenticated as `frost@belowzeromedia.com`. Fresh last-seven-days stop-signal searches for SplashLens, PartSnap, Mystery Part, Service Proof Passport, Fluidra/Jandy, `splashlens.com`, and `app.splashlens.com` returned no new unsubscribe, remove-me, do-not-contact, complaint, not-interested, bounce, undeliverable, delivery-failure, or failed message IDs. Recent inbound SplashLens messages remain the known Tim Auerhahn warm thread and automated PoolZoom ticket notices already treated as replied/no cold follow-up.
+
+Live preflight: `https://splashlens.com` returned HTTP `200`; `https://splashlens.com/partsnap-proof-library.html` returned `308` to `/partsnap-proof-library` and then HTTP `200`; `https://app.splashlens.com` returned HTTP `200`. Homepage body scan found `230+` and fallback `180+` language, with no visible `500+` claim and no common fake testimonial-name markers.
+
+Send decision: sent `0` additional emails in this audit pass. The earlier 2026-07-09 capped send already used the daily cold-send cap with five one-to-one plain-text emails plus one warm Aquatic Council reply. Gmail sent-mail verification confirmed the five cold emails had no CC/BCC and used the required `Talk Soon,` signoff.
+
+No queue changes were made in this pass. Current committed queue snapshot remains `queued=29`, `needs-verification=38`, `needs-contact=20`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=41`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=3`.

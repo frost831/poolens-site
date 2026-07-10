@@ -15,6 +15,14 @@
 /*.html
  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
 
+/service-proof-passport
+ Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+ Content-Type: text/html; charset=UTF-8
+
+/faq
+ Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+ Content-Type: text/html; charset=UTF-8
+
 /sitemap.xml
  Cache-Control: public, max-age=3600, s-maxage=3600, must-revalidate
  Content-Type: application/xml; charset=UTF-8

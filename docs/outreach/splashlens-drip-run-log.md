@@ -1062,3 +1062,41 @@ Blockers:
 - Do not send any more SplashLens cold email on 2026-07-10; the five-email daily cap is already spent.
 - Do not treat the gate as green again until the 2026-07-05 Fluidra remove-me / not-interested thread is outside the 7-day rules window and a fresh same-day Gmail stop-signal sweep is clean.
 - Earliest clean cold-send recheck remains 2026-07-12.
+
+## Daily growth loop final audit - 2026-07-10 09:30 CT
+
+Send decision: sent 0 additional emails in this pass. Gmail already showed the July 10 five-email SplashLens cold cap had been spent before this audit, and no new clean send window opened afterward.
+
+Live verification rechecked now:
+
+- `https://splashlens.com` returned HTTP `200`.
+- `https://app.splashlens.com` returned HTTP `200`.
+- `https://splashlens.com/api/partner-intake` returned direct `GET 200` JSON with `ok=true`, `storageConfigured=true`, and `emailConfigured=true`.
+- `https://app.splashlens.com/api/events` returned direct `GET 200` JSON with `ok=true`, `storageConfigured=true`, and `emailConfigured=true`.
+- `https://app.splashlens.com/api/events?digest=1` returned `401 Unauthorized`, which still matches the intended protected digest gate.
+- `https://app.splashlens.com/api/checkout?plan=monthly` and `?plan=yearly` still returned `302` with `X-SplashLens-Checkout-Mode: payment_link_direct`, and full follow redirects landed on live Stripe Checkout pages with `200`.
+- Site/app discovery surfaces stayed healthy: site/app `ai.txt`, site/app `llms.txt`, site/app `robots.txt`, the site sitemap family, and `https://splashlens.com/privacy` all returned `200`.
+- Public store markers stayed live: the Play listing still exposed `com.splashlens.fieldtools`, `1.0.5`, `InStock`, `SoftwareApplication`, `Jun 25, 2026`, and `https://splashlens.com/privacy`; the iOS App Store listing at `https://apps.apple.com/us/app/splashlens/id6763644905` still returned `200`.
+- Current owner-surface drift note: `https://app.splashlens.com/dashboard` returned `200`, while `https://app.splashlens.com/owner-dashboard` is back to `301 -> /dashboard` in this pass rather than the direct `200` recorded earlier on 2026-07-09.
+- The fetched homepage body still exposed the supported `230+ current field troubleshooting entries` language and did not expose a visible `500+` claim.
+
+Gmail reconciliation since the previous run:
+
+- Authenticated sender profile is still `Joshua Frost <frost@belowzeromedia.com>`.
+- Targeted `after:2026/07/09` SplashLens stop-signal and reply sweeps returned no new SplashLens-specific human reply, bounce, complaint, unsubscribe, remove-me, do-not-contact, or delivery-failure message after the prior run timestamp.
+- One delivery-failure message did surface in broader Gmail search after the prior run, but it was unrelated to SplashLens outreach: `sales@sennagolftee.com`, Gmail id `19f4721697015f02`. It was not applied to the SplashLens queue.
+- Exact recipient-history checks stayed clean for the newly researched Balboa, Spa Parts Plus, and PDC Spas addresses added below.
+
+Queue work completed because send remained blocked:
+
+- Added `Balboa Water Group` as `queued` with `techsupport@balboawater.com` after verifying the official contact page and a clean Gmail recipient-history search.
+- Added `Spa Parts Plus` as `queued` with `customercare@spaparts.com` after verifying the official contact page/schema and a clean Gmail recipient-history search.
+- Added `PDC Spas / TruSwim` as `queued` with `sales@pdcspas.com` after verifying the official contact page and a clean Gmail recipient-history search.
+
+Queue snapshot after this pass: `queued=32`, `needs-verification=37`, `needs-contact=24`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=46`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=3`.
+
+Blockers:
+
+- Do not send any more SplashLens cold email on 2026-07-10; the five-email daily cap is already spent.
+- The 2026-07-05 Fluidra remove-me / not-interested thread still sits inside the enforced 7-day rules window, so the cold-send gate remains red even after today's no-new-signal audit.
+- Earliest clean cold-send recheck remains 2026-07-12 after a fresh same-day Gmail stop-signal sweep with prior queue/run-log truth loaded first.

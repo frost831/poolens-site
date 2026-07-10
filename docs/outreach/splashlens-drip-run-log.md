@@ -1023,3 +1023,42 @@ Gmail hygiene and send audit:
 Queue changes: the three existing queued rows moved to `sent`; two newly verified official public contact paths were added as `sent`; all five have `last_sent_at=2026-07-10`, blank `next_send_after`, and explicit noncompliant-batch/no-automated-follow-up notes.
 
 Blocker: the July 10 daily cap is fully spent and the known Fluidra stop event remains inside the checked-in seven-day gate. Send no more SplashLens cold outreach today. Recheck no earlier than 2026-07-12 with both current Gmail results and prior run-log/queue suppression truth loaded before selection.
+
+## Daily growth loop audit and queue expansion - 2026-07-10 09:23 CT
+
+Send decision: sent 0 additional emails in this automation pass. Gmail already showed five SplashLens cold sends had gone out on 2026-07-10 at about 09:18 CT, so the daily cap was already consumed before this run could legally send anything. The stricter rules gate also remains red because the checked-in 2026-07-05 Fluidra WCS Support removal request still sits inside the enforced 7-day review window.
+
+Live verification rechecked now with direct `GET` requests:
+
+- `https://splashlens.com` returned HTTP `200`.
+- `https://app.splashlens.com` returned HTTP `200`.
+- `https://splashlens.com/api/partner-intake` returned `200` JSON with `ok=true`, `storageConfigured=true`, and `emailConfigured=true`.
+- `https://app.splashlens.com/api/events` returned `200` JSON with `ok=true`, `storageConfigured=true`, and `emailConfigured=true`.
+- `https://app.splashlens.com/api/events?digest=1` returned `401 Unauthorized`, which still matches the intended protected digest gate rather than a public outage.
+- `https://app.splashlens.com/api/checkout?plan=monthly` and `?plan=yearly` still returned `302` with `X-SplashLens-Checkout-Mode: payment_link_direct`, and full follow redirects landed on live Stripe Checkout pages with `200`.
+- Discovery/AEO surfaces stayed healthy: `https://splashlens.com/sitemap.xml`, `https://splashlens.com/pseo-sitemap.xml`, `https://splashlens.com/seo-hub-sitemap.xml`, `https://splashlens.com/category-hub-sitemap.xml`, `https://splashlens.com/ai.txt`, `https://splashlens.com/llms.txt`, `https://app.splashlens.com/ai.txt`, `https://app.splashlens.com/llms.txt`, `https://app.splashlens.com/robots.txt`, and `https://splashlens.com/privacy` all returned `200`.
+- Public store markers stayed live: the Google Play listing still exposed `com.splashlens.fieldtools`, `1.0.5`, `InStock`, `SoftwareApplication`, `Jun 25, 2026`, and `https://splashlens.com/privacy`; the iOS App Store listing at `https://apps.apple.com/us/app/splashlens/id6763644905` returned `200`.
+- Homepage/source scan still exposed the supported `230+ current field troubleshooting entries` language and did not expose a visible `500+` claim in the fetched page body.
+
+Gmail reconciliation since the previous run:
+
+- Authenticated sender profile is still `Joshua Frost <frost@belowzeromedia.com>`.
+- A targeted `after:2026/7/9` SplashLens/PartSnap/Fluidra/Jandy stop-signal search returned no new SplashLens-specific unsubscribe, remove-me, do-not-contact, complaint, bounce, undeliverable, or delivery-failure message IDs after the previous run timestamp.
+- A broader stop-word search surfaced unrelated mail, including a Stripe webhook warning for `answermap-production.up.railway.app` and non-SplashLens delivery failures; those were not applied to the SplashLens queue.
+- Gmail still shows the already-recorded Fluidra WCS Support removal thread as the standing rules blocker, and today's five new cold sends are already logged as noncompliant/no-automated-follow-up rows.
+
+Queue work completed because send remained blocked:
+
+- Upgraded `S.R.Smith pool lighting/product route` from `needs-verification` to `needs-contact` after re-verifying the official contact page; the page exposes a live official form but no clean public email in curl-readable body.
+- Upgraded `PAL Lighting product support route` from `needs-verification` to `needs-contact` after re-verifying the official contact page; the page exposes a live official form but no clean public email in curl-readable body.
+- Added `SeaKlear` as `needs-contact` after verifying the official contact page and live form route.
+- Added `Lo-Chlor Specialty Chemicals` as `needs-verification`; the official contact path is real, but this environment hit an SG-Captcha challenge and could not cleanly capture a sendable route.
+- Added `Stenner Pump Company` as `needs-contact` after verifying the official contact page and live form route.
+
+Queue snapshot after this pass: `queued=29`, `needs-verification=37`, `needs-contact=24`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=46`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=3`.
+
+Blockers:
+
+- Do not send any more SplashLens cold email on 2026-07-10; the five-email daily cap is already spent.
+- Do not treat the gate as green again until the 2026-07-05 Fluidra remove-me / not-interested thread is outside the 7-day rules window and a fresh same-day Gmail stop-signal sweep is clean.
+- Earliest clean cold-send recheck remains 2026-07-12.

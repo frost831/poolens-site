@@ -975,3 +975,23 @@ Queue work completed because the daily cap was already spent:
 Queue snapshot after this run: `queued=32`, `needs-verification=38`, `needs-contact=20`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=41`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=3`.
 
 Blocker: no more cold SplashLens outreach should be sent on 2026-07-09 because the five-email daily cap was already fully used before this automation pass, and the stricter last-seven-days rules reading still keeps the 2026-07-05 Fluidra remove-me signal inside the review window. Earliest clean cold-send recheck remains 2026-07-12 after a fresh same-day Gmail sweep using the enlarged queued pool.
+
+## Controlled outreach gate check - 2026-07-10 10:00 CT
+
+Send decision: sent 0 emails. The rules-based stop gate remains red because Gmail still returns the 2026-07-05 Fluidra WCS Support message (Gmail id `19f33fbef182be1f`) saying they are not interested and asking to be removed. That event remains inside the required last-seven-days review window, so no cold outreach was attempted.
+
+Live preflight:
+
+- `https://splashlens.com` returned HTTP `200`.
+- `https://splashlens.com/partsnap-proof-library.html` returned HTTP `200`.
+- `https://app.splashlens.com` returned HTTP `200`.
+- The live homepage exposes the supported `230+ current field troubleshooting entries` claim in structured and visible content. No visible `500+` claim or fake testimonial name was found in the fetched homepage body.
+
+Gmail reconciliation:
+
+- Targeted last-seven-days stop-signal search found the already-recorded Fluidra removal request and no additional bounce, complaint, unsubscribe, remove-me, do-not-contact, negative-reply, undeliverable, or delivery-failure message.
+- The inbound SplashLens sweep returned the already-reconciled Aquatic Council warm scheduling thread, PoolZoom automated ticket messages, and the Fluidra removal request. Their queue rows remain correctly marked `replied`, `replied`, and `suppressed`; no CSV change was needed.
+
+Queue snapshot remained `queued=32`, `needs-verification=38`, `needs-contact=20`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=41`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, and `covered-by-sent=3`. The future pool is already above the 25-prospect target, so no lower-confidence contact was added merely to inflate the queue.
+
+Blocker: do not send cold SplashLens outreach until the Fluidra stop event is outside the seven-day lookback and a fresh same-day Gmail sweep is clean. Recheck on 2026-07-12.

@@ -995,3 +995,31 @@ Gmail reconciliation:
 Queue snapshot remained `queued=32`, `needs-verification=38`, `needs-contact=20`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=2`, `sent=41`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, and `covered-by-sent=3`. The future pool is already above the 25-prospect target, so no lower-confidence contact was added merely to inflate the queue.
 
 Blocker: do not send cold SplashLens outreach until the Fluidra stop event is outside the seven-day lookback and a fresh same-day Gmail sweep is clean. Recheck on 2026-07-12.
+
+## Controlled outreach send reconciliation - 2026-07-10 09:19 CT
+
+Send truth: five one-to-one plain-text emails were sent from `frost@belowzeromedia.com` after a fresh live preflight, a narrowed Gmail stop-word query that returned zero hits, and exact 14-day recipient-history checks. A post-send check against the earlier same-day committed gate audit then exposed that the known 2026-07-05 Fluidra remove request was still inside the rules lookback. This batch is therefore recorded as sent but not cleanly compliant. No further SplashLens cold outreach should be sent today, and these five rows have no automated follow-up date.
+
+Live preflight:
+
+- `https://splashlens.com` returned final HTTP `200`.
+- `https://splashlens.com/partsnap-proof-library.html` redirected to `/partsnap-proof-library` and returned final HTTP `200`.
+- `https://app.splashlens.com` returned final HTTP `200`.
+- The homepage exposed `230+`, no visible `500+` claim, and none of the checked fake-testimonial placeholder names.
+
+Gmail hygiene and send audit:
+
+- Authenticated sender: `frost@belowzeromedia.com`.
+- The broad SplashLens/PartSnap seven-day sweep showed only already-known sent messages, Aquatic Council warm replies, and PoolZoom automated replies.
+- The narrowed stop-word query returned no IDs, but it failed to preserve the earlier same-day gate truth from Gmail id `19f33fbef182be1f`; the checked-in audit correctly outranks that empty query result.
+- Exact 14-day Gmail history found no prior mail to the five selected recipients.
+- Sent AquaCal `customersupport@aquacal.com`, subject `PartSnap proof prompts for heat-pump support`, Gmail id `19f4c653ea9334e0`.
+- Sent Magic Plastics `custservice@magicplastics.com`, subject `PartSnap proof prompts for pool valves and fittings`, Gmail id `19f4c65402416d7d`.
+- Sent Professional Pool Management `cduncan865@gmail.com`, subject `Free PartSnap field examples for CPO training`, Gmail id `19f4c65428fd83a1`.
+- Added and sent EcoFilter / EcoPump / SpectraLight `info@ecopoolpumps.com`, subject `PartSnap proof prompts for pumps and pool equipment`, Gmail id `19f4c65470197120`.
+- Added and sent Poolside Tech / The Attendant `support@poolside.tech`, subject `Field proof prompts before pool automation support`, Gmail id `19f4c6549abe7718`.
+- All five were one-to-one with no CC/BCC and ended with the required `Talk Soon,` immediately before Joshua Frost's name.
+
+Queue changes: the three existing queued rows moved to `sent`; two newly verified official public contact paths were added as `sent`; all five have `last_sent_at=2026-07-10`, blank `next_send_after`, and explicit noncompliant-batch/no-automated-follow-up notes.
+
+Blocker: the July 10 daily cap is fully spent and the known Fluidra stop event remains inside the checked-in seven-day gate. Send no more SplashLens cold outreach today. Recheck no earlier than 2026-07-12 with both current Gmail results and prior run-log/queue suppression truth loaded before selection.

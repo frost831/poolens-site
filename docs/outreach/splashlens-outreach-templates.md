@@ -125,6 +125,100 @@ Joshua Frost
 Founder, SplashLens
 hello@splashlens.com
 
+## Service Proof Passport - Training / CPO
+
+Subject: Free proof workflow for pool tech training
+
+Hi [Name],
+
+I am Joshua Frost, founder of SplashLens. I started in pool sales, then moved into my own service company, so SplashLens came from the lookup and documentation friction techs hit on real stops.
+
+SplashLens is a free no-account field reference app for pool and spa techs:
+https://app.splashlens.com
+
+The newest add-on layer is Service Proof Passport. It helps a tech save the evidence around a stop: photos, model plates, readings, PartSnap possible matches, missing proof, callback-risk notes, and customer-safe summaries.
+
+For training, the value is not "the app knows the answer." The value is teaching techs what proof they should capture before they order a part, escalate to a senior tech, call support, or explain the visit to a customer.
+
+It is not a replacement for CPO training, manuals, label directions, code requirements, manufacturer diagrams, or qualified judgment.
+
+Would you be open to giving blunt feedback on whether this would help students or new techs document stops more cleanly after class?
+
+Talk Soon,
+Joshua Frost
+Founder, SplashLens
+hello@splashlens.com
+
+## Service Proof Passport - Service Owner / Operator
+
+Subject: Free proof layer for pool service stops
+
+Hi [Name],
+
+I built SplashLens after running into real lookup and documentation friction as a pool salesperson and later service-company owner.
+
+SplashLens is the free field reference app:
+https://app.splashlens.com
+
+Service Proof Passport is the add-on layer for proving the stop before the tech leaves: notes, photos, visible evidence, readings, model plates, missing-proof prompts, callback-risk language, and customer-safe summaries.
+
+The goal is practical. Fewer vague notes. Cleaner handoffs. Better proof before a blind part order. Less rewriting at night after the route is already done.
+
+It does not diagnose, guarantee fit, replace manuals, or replace qualified tech judgment. It helps organize the proof so the next step is cleaner.
+
+If you try it on one real stop, I would love direct feedback on what would save time and what needs to be stricter.
+
+Talk Soon,
+Joshua Frost
+Founder, SplashLens
+hello@splashlens.com
+
+## Service Proof Passport - Manufacturer / Supplier / Support
+
+Subject: Proof prompts before pool techs escalate
+
+Hi [Name],
+
+I am Joshua Frost, founder of SplashLens. SplashLens is a free field reference app for pool and spa techs:
+https://app.splashlens.com
+
+We are adding Service Proof Passport as the documentation layer around PartSnap and field lookup. The goal is to help techs capture better proof before they order, escalate, or contact support.
+
+Examples include model plates, visible labels, readings, installed context, missing-proof prompts, possible part-family notes, callback-risk language, and a cleaner senior tech or vendor packet.
+
+We are not trying to imply endorsement, warranty coverage, diagnosis, fitment, or manufacturer approval. I am looking for practical guardrail feedback: what proof should a tech capture before asking about [equipment/category]?
+
+Is there someone on your training, product, or support side who would be willing to tell us what not to claim and what evidence matters most?
+
+Talk Soon,
+Joshua Frost
+Founder, SplashLens
+hello@splashlens.com
+
+## Service Proof Passport - Media / Creator / Newsletter
+
+Subject: SplashLens now helps techs prove the stop
+
+Hi [Name],
+
+I am Joshua Frost, founder of SplashLens. I started in pool sales, then moved into my own service company, and built SplashLens because field lookup and documentation were eating too much route time.
+
+SplashLens is a free no-account field reference app for pool and spa techs:
+https://app.splashlens.com
+
+The newest layer is Service Proof Passport. It helps techs save the proof around a stop: notes, photos, model plates, readings, PartSnap possible matches, missing proof, callback-risk notes, and customer-safe summaries.
+
+The angle for your audience is simple: the lookup matters, but the proof is what protects the next step. Before a part is ordered, a callback is risked, or a customer is updated, the tech needs cleaner evidence.
+
+It is not a diagnosis tool or manufacturer-backed answer machine. It is a free field workflow for organizing proof and escalating more cleanly.
+
+If this would make a useful quick test, I would be grateful for one weird part, code, or service scenario your audience sees often.
+
+Talk Soon,
+Joshua Frost
+Founder, SplashLens
+hello@splashlens.com
+
 ## Short Follow-Up
 
 Subject: Re: [original subject]

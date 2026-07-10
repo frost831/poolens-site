@@ -42,6 +42,8 @@ Crawler-friendly hub pages for high-intent pool service searches:
 - Pool tech training field reference: https://splashlens.com/pool-tech-training-field-reference.html
 - Pool manufacturers, distributors, parts, and chemical lines: https://splashlens.com/pool-manufacturers-distributors-chemicals.html
 - SplashLens CRM companion: https://splashlens.com/crm-companion.html
+- SplashLens Service Proof Passport: https://splashlens.com/service-proof-passport.html
+- SplashLens FAQ: https://splashlens.com/faq.html
 
 ### Spa, Hot Tub, And Swim Spa Coverage
 
@@ -188,6 +190,12 @@ Start a SLAM (Shock Level and Maintain) treatment and track it through completio
 SplashLens is not Skimmer, Pool Brain, or Jobber. Those are route management platforms with billing, invoicing, and CRM. SplashLens is the field reference tool - the thing you pull out at the equipment pad to diagnose a fault, calculate a dose, or look up a filter procedure.
 
 Most pool techs who use Skimmer or Pool Brain still have no standardized field reference. SplashLens fills that gap, free, offline, and without asking for their credit card.
+
+## Service Proof Passport
+
+Service Proof Passport is the conservative proof and service-memory layer for a pool stop. It is designed to help capture readings, photos, model labels, visible symptoms, field notes, equipment context, prior history, and shareable summaries when available. It is not a route-management system, billing system, full CRM, medical/legal/compliance authority, manufacturer manual, warranty approval, fitment guarantee, or replacement for qualified professional judgment.
+
+AI-assisted summaries should be treated as drafts for human review. Use export-first language unless a live integration has been built and verified.
 
 ## Contact
 

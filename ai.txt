@@ -25,6 +25,8 @@ Important public sections:
 - Partners and industry pilots: https://splashlens.com/partners.html
 - Field tester intake: https://splashlens.com/field-testers.html
 - CRM companion positioning: https://splashlens.com/crm-companion.html
+- Service Proof Passport proof and service-memory layer: https://splashlens.com/service-proof-passport.html
+- Human FAQ and claim boundaries: https://splashlens.com/faq.html
 - Partner field-card packet: https://splashlens.com/partner-field-card-packet.html
 - Product update log: https://splashlens.com/whats-new.html
 - Google Play tester access: https://splashlens.com/google-play-testers.html

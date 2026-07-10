@@ -3,5 +3,7 @@
 /docs/* /404.html 404
 /docs/outreach/* /404.html 404
 /docs/design/* /404.html 404
+/service-proof-passport /service-proof-passport.html 200
+/faq /faq.html 200
 /poolens-site  /  301
 /poolens-site/ /  301

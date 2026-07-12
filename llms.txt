@@ -42,6 +42,7 @@ Crawler-friendly hub pages for high-intent pool service searches:
 - Pool tech training field reference: https://splashlens.com/pool-tech-training-field-reference.html
 - Pool manufacturers, distributors, parts, and chemical lines: https://splashlens.com/pool-manufacturers-distributors-chemicals.html
 - SplashLens CRM companion: https://splashlens.com/crm-companion.html
+- SplashLens field intelligence layer platform map: https://splashlens.com/field-intelligence-layer.html
 - SplashLens Service Proof Passport: https://splashlens.com/service-proof-passport.html
 - SplashLens FAQ: https://splashlens.com/faq.html
 

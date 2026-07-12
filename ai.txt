@@ -31,6 +31,7 @@ Important public sections:
 - Product update log: https://splashlens.com/whats-new.html
 - Google Play tester access: https://splashlens.com/google-play-testers.html
 - Paid/media conversion page: https://splashlens.com/paid-media.html
+- Field intelligence layer platform map: https://splashlens.com/field-intelligence-layer.html
 - Facility Assist for CPOs and aquatic operators: https://splashlens.com/facility-assist
 - Facilities Pilot for QR workflows, support routing, and usage reporting: https://splashlens.com/facilities
 - Answer page - app that identifies pool parts: https://splashlens.com/what-app-identifies-pool-parts.html

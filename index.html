@@ -8,10 +8,10 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0284c7">
 <title>SplashLens - Free Field Rescue App for Pool Techs</title>
-<meta name="description" content="SplashLens is a free field rescue PWA for pool service technicians. Use PartSnap pool parts ID, Connected Pool Network, robot and automation troubleshooting, error lookup, Route Brain, dosing math, voice notes, and service proof tools so techs can finish cleaner and get more time back.">
+<meta name="description" content="SplashLens is the field intelligence layer for pool, spa, and aquatic service work: PartSnap parts ID, Service Proof Passport, Connected Pool Network, Facility Assist, training workflows, and owner usage signals so techs finish cleaner and get more time back.">
 <meta property="og:site_name" content="SplashLens">
 <meta property="og:title" content="SplashLens - Free Field Rescue App for Pool Techs">
-<meta property="og:description" content="PartSnap and Connected Pool Network help pool techs identify possible part matches, troubleshoot robots and smart automation, verify before ordering, and build cleaner escalation packets.">
+<meta property="og:description" content="Identify it, prove it, explain it, train from it, and remember it. SplashLens connects PartSnap, service proof, facility workflows, partner cards, and field usage signals.">
 <link rel="image_src" href="https://splashlens.com/splashlens-share-card.png">
 <meta property="og:image" content="https://splashlens.com/splashlens-share-card.png">
 <meta property="og:image:secure_url" content="https://splashlens.com/splashlens-share-card.png">
@@ -24,7 +24,7 @@
 <link rel="canonical" href="https://splashlens.com">
 <meta name="robots" content="index, follow">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"SplashLens","url":"https://splashlens.com","description":"Free field rescue app for pool service technicians - PartSnap pool parts ID, Connected Pool Network, robot troubleshooting, pool automation troubleshooting, error lookup, Route Brain, dosing calculators, visit reports, filter guides, and online scanner workflows.","potentialAction":{"@type":"SearchAction","target":"https://splashlens.com/blog/?q={search_term_string}","query-input":"required name=search_term_string"}}
+{"@context":"https://schema.org","@type":"WebSite","name":"SplashLens","url":"https://splashlens.com","description":"Field intelligence layer for pool, spa, and aquatic service work - PartSnap parts ID, Service Proof Passport, Connected Pool Network, Facility Assist, training workflows, owner usage signals, dosing calculators, visit reports, filter guides, and online scanner workflows.","potentialAction":{"@type":"SearchAction","target":"https://splashlens.com/blog/?q={search_term_string}","query-input":"required name=search_term_string"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SplashLens","applicationCategory":"UtilitiesApplication","operatingSystem":"iOS, Android, Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free field rescue app for pool service professionals. PartSnap pool parts ID, Connected Pool Network, New Tech Radar, 230+ current equipment, automation, lighting, robot, cover, sanitizer, and controller troubleshooting entries, chemical dosing calculators, voice notes, visit reports, SLAM tracker, salt chlorinator reference, and online scanner workflows.","url":"https://app.splashlens.com","downloadUrl":["https://apps.apple.com/us/app/splashlens/id6763644905","https://play.google.com/store/apps/details?id=com.splashlens.fieldtools"],"sameAs":["https://apps.apple.com/us/app/splashlens/id6763644905","https://play.google.com/store/apps/details?id=com.splashlens.fieldtools"],"screenshot":"https://splashlens.com/qa-splashlens-public-site-2026-05-27.png","featureList":["PartSnap pool parts ID","Connected Pool Network","New Tech Radar","Robot cleaner troubleshooting","Pool automation troubleshooting","PartSnap Callback Risk Score","Service Proof Passport","Mystery Part Review Queue","Apprentice Mode","230+ current field troubleshooting entries","Manual tools work offline","Chemical dosing calculators","Voice-first service notes","Visit reports","SLAM tracker","Salt chlorinator reference","Chemical safety guide","Online scanner workflows"]}
@@ -781,6 +781,103 @@ line-height: 1.35;
 color: #334155;
 font-weight: 800;
 }
+.stop-system {
+background: #f8fafc;
+border-top: 1px solid var(--border);
+border-bottom: 1px solid var(--border);
+padding: 56px 24px;
+}
+.stop-system-head {
+display: grid;
+grid-template-columns: .9fr 1.1fr;
+gap: 22px;
+align-items: end;
+margin-bottom: 24px;
+}
+.stop-system-head h2 {
+font-size: clamp(1.9rem, 4vw, 3.45rem);
+line-height: 1;
+letter-spacing: 0;
+margin: 0;
+color: var(--slate);
+text-wrap: balance;
+}
+.stop-system-head p {
+color: var(--slate-soft);
+font-size: 1.02rem;
+line-height: 1.55;
+max-width: 620px;
+margin: 0;
+}
+.stop-flow {
+display: grid;
+grid-template-columns: repeat(5, minmax(0, 1fr));
+gap: 8px;
+margin-bottom: 16px;
+}
+.stop-flow div {
+background: #fff;
+border: 1px solid #dbe8ef;
+border-radius: 8px;
+padding: 13px;
+min-height: 122px;
+}
+.stop-flow b {
+display: block;
+color: #0369a1;
+font-size: .72rem;
+font-weight: 950;
+letter-spacing: .08em;
+text-transform: uppercase;
+margin-bottom: 8px;
+}
+.stop-flow strong {
+display: block;
+color: var(--slate);
+font-size: 1rem;
+line-height: 1.15;
+margin-bottom: 6px;
+}
+.stop-flow span {
+display: block;
+color: var(--slate-soft);
+font-size: .78rem;
+line-height: 1.35;
+font-weight: 650;
+}
+.system-links {
+display: grid;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+gap: 8px;
+}
+.system-link {
+display: block;
+min-height: 118px;
+padding: 13px;
+border-radius: 8px;
+background: #fff;
+border: 1px solid #e2e8f0;
+text-decoration: none;
+transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.system-link:hover {
+transform: translateY(-2px);
+border-color: #7dd3fc;
+box-shadow: 0 12px 28px rgba(15,23,42,.08);
+}
+.system-link strong {
+display: block;
+color: var(--slate);
+font-size: .95rem;
+line-height: 1.16;
+margin-bottom: 7px;
+}
+.system-link span {
+display: block;
+color: var(--slate-soft);
+font-size: .78rem;
+line-height: 1.35;
+}
 
  /* PHONE MOCKUP */
  .phone-wrap {
@@ -856,6 +953,104 @@ font-weight: 800;
  .stat-item { text-align: center; min-width: 140px; }
  .stat-num { font-size: 2.4rem; font-weight: 800; color: var(--sky-dark); line-height: 1; }
  .stat-label { font-size: .85rem; color: var(--slate-soft); margin-top: 4px; font-weight: 500; }
+
+ /* FIELD INTELLIGENCE LAYER */
+ .field-os {
+ background: #ffffff;
+ border-bottom: 1px solid var(--border);
+ }
+ .field-os-shell {
+ display: grid;
+ grid-template-columns: .95fr 1.35fr;
+ gap: 22px;
+ align-items: stretch;
+ }
+ .field-os-copy {
+ background: linear-gradient(145deg, #082f49, #0f766e);
+ color: #fff;
+ border-radius: 12px;
+ padding: clamp(20px, 3vw, 30px);
+ min-height: 100%;
+ box-shadow: 0 22px 70px rgba(8,47,73,.18);
+ }
+ .field-os-copy .section-eyebrow { color: #a7f3d0; }
+ .field-os-copy h2 {
+ font-size: clamp(2.3rem, 5vw, 4.8rem);
+ line-height: .92;
+ letter-spacing: 0;
+ margin: 0 0 14px;
+ }
+ .field-os-copy p {
+ color: #dff7ef;
+ font-size: 1.03rem;
+ line-height: 1.55;
+ max-width: 620px;
+ }
+ .field-os-actions {
+ display: flex;
+ gap: 10px;
+ flex-wrap: wrap;
+ margin-top: 20px;
+ }
+ .field-os-actions a {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ min-height: 44px;
+ border-radius: 8px;
+ padding: 0 15px;
+ text-decoration: none;
+ font-weight: 900;
+ font-size: .9rem;
+ }
+ .field-os-actions a:first-child { background: #fff; color: #075985; }
+ .field-os-actions a:last-child { border: 1px solid rgba(255,255,255,.35); color: #fff; }
+ .field-os-grid {
+ display: grid;
+ grid-template-columns: repeat(2, minmax(0, 1fr));
+ gap: 10px;
+ }
+ .field-os-card {
+ background: #f8fafc;
+ border: 1px solid #dbe8ef;
+ border-radius: 10px;
+ padding: 16px;
+ min-height: 132px;
+ }
+ .field-os-card b {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ width: 30px;
+ height: 30px;
+ border-radius: 8px;
+ background: #e0f2fe;
+ color: #075985;
+ font-size: .86rem;
+ margin-bottom: 12px;
+ }
+ .field-os-card strong {
+ display: block;
+ color: #0f172a;
+ font-size: 1rem;
+ line-height: 1.1;
+ margin-bottom: 7px;
+ }
+ .field-os-card span {
+ display: block;
+ color: #64748b;
+ font-size: .88rem;
+ line-height: 1.42;
+ }
+ .field-os-card.is-wide {
+ grid-column: 1 / -1;
+ display: grid;
+ grid-template-columns: auto 1fr;
+ gap: 12px;
+ align-items: start;
+ background: #ecfeff;
+ border-color: #bae6fd;
+ }
 
  /* FEATURE GRID */
  .feature-grid {
@@ -1275,6 +1470,12 @@ font-weight: 800;
  .hero-product-bar,
  .partsnap-proof-flow,
  .hero-proof-line { display: none; }
+ .field-os-shell,
+ .field-os-grid,
+ .field-os-card.is-wide {
+ grid-template-columns: 1fr;
+ }
+ .field-os-copy h2 { font-size: clamp(2.5rem, 14vw, 4rem); }
  .mobile-ai-quick {
  display: block;
  padding: 24px 18px;
@@ -1303,8 +1504,24 @@ font-weight: 800;
  .field-photo-grid { grid-template-columns: 1fr; }
  .field-photo { min-height: 246px; }
  .product-showcase-grid,
+ .stop-system-head,
  .feature-spotlight {
  grid-template-columns: 1fr;
+ }
+ .stop-system {
+ padding: 38px 18px;
+ }
+ .stop-system-head {
+ gap: 12px;
+ margin-bottom: 16px;
+ }
+ .stop-flow,
+ .system-links {
+ grid-template-columns: 1fr;
+ }
+ .stop-flow div,
+ .system-link {
+ min-height: auto;
  }
  .phone-stage {
  grid-template-columns: 1fr;
@@ -1536,6 +1753,27 @@ font-weight: 800;
  </div>
 </div>
 
+<section class="field-os" aria-label="SplashLens field intelligence layer">
+ <div class="container field-os-shell">
+ <div class="field-os-copy">
+ <div class="section-eyebrow">Where SplashLens goes next</div>
+ <h2>The field intelligence layer.</h2>
+ <p>PartSnap is the front door, but the moat is what happens after the scan: proof, explanation, training, partner verification, and service memory. SplashLens is built to help the tech finish cleaner and give the owner a better record of what actually happened at the stop.</p>
+ <div class="field-os-actions">
+ <a href="/field-intelligence-layer.html">See the platform map</a>
+ <a href="https://app.splashlens.com/?tab=scan&mode=parts" target="_blank" rel="noopener" data-track="partsnap_click" data-source="field_os_home">Try the workflow</a>
+ </div>
+ </div>
+ <div class="field-os-grid">
+ <article class="field-os-card"><b>1</b><strong>Identify it</strong><span>PartSnap turns mystery parts, labels, codes, and equipment clues into possible paths with conservative certainty language.</span></article>
+ <article class="field-os-card"><b>2</b><strong>Prove it</strong><span>Service Proof Passport captures readings, photos, notes, model context, missing proof, and callback-risk signals.</span></article>
+ <article class="field-os-card"><b>3</b><strong>Explain it</strong><span>Customer-safe summaries and senior-tech/vendor packets turn messy field evidence into something useful.</span></article>
+ <article class="field-os-card"><b>4</b><strong>Train from it</strong><span>Apprentice Mode, Facility Assist, and five-minute lessons make real stops become repeatable training moments.</span></article>
+ <article class="field-os-card is-wide"><b>5</b><span><strong>Remember it</strong> Owner dashboards, trending searches, saved proof, and partner-ready cards help teams learn where techs are getting stuck and what the app should cover next.</span></article>
+ </div>
+ </div>
+</section>
+
 <section class="persona-fork" aria-label="Choose SplashLens workflow" style="background:#f8fafc;border-bottom:1px solid #dbe8ef;padding:26px 18px;">
  <div class="container">
  <div style="display:grid;grid-template-columns:1.05fr 2fr;gap:18px;align-items:start;">
@@ -1630,6 +1868,35 @@ font-weight: 800;
  </div>
  </div>
  </div>
+ </div>
+ </div>
+</section>
+
+<section class="stop-system" aria-label="SplashLens stop system">
+ <div class="container">
+ <div class="stop-system-head">
+ <div>
+ <div class="section-eyebrow">Field operating system</div>
+ <h2>Identify it. Prove it. Explain it. Train from it. Remember it.</h2>
+ </div>
+ <p>SplashLens turns the messy stop into a repeatable loop: name the likely part or equipment issue, collect proof, explain the next move, coach the tech, and keep the memory for owners and partners.</p>
+ </div>
+ <div class="stop-flow" aria-label="SplashLens workflow">
+ <div><b>01</b><strong>Identify it</strong><span>PartSnap and Connected Equipment turn labels, parts, codes, and smart-pad clues into possible paths.</span></div>
+ <div><b>02</b><strong>Prove it</strong><span>Service Proof Passport captures photos, readings, model plates, missing proof, and callback risk.</span></div>
+ <div><b>03</b><strong>Explain it</strong><span>Customer-safe notes and senior-tech packets replace vague texts and cold escalation calls.</span></div>
+ <div><b>04</b><strong>Train from it</strong><span>The Training Layer turns real stops into apprentice review, CPO practice, and owner-visible progress.</span></div>
+ <div><b>05</b><strong>Remember it</strong><span>Owner Dashboard and partner portals keep recurring issues, equipment context, and field proof easy to find.</span></div>
+ </div>
+ <div class="system-links" aria-label="SplashLens product layers">
+ <a class="system-link" href="/service-proof-passport.html"><strong>Service Proof Passport</strong><span>Stop-level proof, notes, readings, photos, and shareable summaries.</span></a>
+ <a class="system-link" href="/partsnap.html"><strong>PartSnap Network</strong><span>Parts ID, proof prompts, review tickets, and cautious partner cards.</span></a>
+ <a class="system-link" href="/facility-assist"><strong>Facility / CPO Light Mode</strong><span>Daily checks, incident documentation, support packets, and QR front doors.</span></a>
+ <a class="system-link" href="/route-ready.html"><strong>Training Layer</strong><span>Route Ready pilots, apprentice moments, and review built from real stops.</span></a>
+ <a class="system-link" href="/partners.html"><strong>Partner / Manufacturer Portal</strong><span>Verified language, product-family cards, education pilots, and media support.</span></a>
+ <a class="system-link" href="/connected-pool-brain.html"><strong>Connected Equipment</strong><span>Robots, automation, lighting, covers, sensors, controllers, and smart spas.</span></a>
+ <a class="system-link" href="https://app.splashlens.com/dashboard" target="_blank" rel="noopener"><strong>Owner Dashboard</strong><span>Usage, packets, recurring issue lanes, and field activity visibility.</span></a>
+ <a class="system-link" href="https://app.splashlens.com" target="_blank" rel="noopener"><strong>Open the app</strong><span>Use the field layer now while the partner and training lanes expand.</span></a>
  </div>
  </div>
 </section>

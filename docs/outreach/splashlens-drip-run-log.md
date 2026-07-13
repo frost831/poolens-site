@@ -1190,3 +1190,41 @@ True blocker: 2026-07-13 is over cap by five cold emails, and two new hard bounc
 - The hard bounces were Wake Tech (`wceresources@waketech.edu`, bounce id `19f5bdab320ff42e`) and NJPMA (`bonaccib@njpma.org`, bounce id `19f5bdaae4aa2f1f`); both queue rows are `bounced` with no future date.
 - This is a daily-cap violation caused by overlapping automation activity, not an authorization to replace bounced messages. Send no more SplashLens cold outreach on 2026-07-13.
 - Required guard before the next send day: a single-writer/day-lock around the Gmail send plus queue/run-log transaction so parallel automations cannot each consume the cap.
+
+## Daily growth loop final audit - 2026-07-13 09:35 CT
+
+Send decision for this pass: sent `0` additional emails. Gmail already showed today's five-recipient spa/parts batch plus a second overlapping five-recipient training batch, so the true 2026-07-13 SplashLens cold total is already `10` and the stop gate is red for the rest of the day.
+
+Live verification rechecked now:
+
+- `https://splashlens.com` returned HTTP `200`.
+- `https://app.splashlens.com` returned HTTP `200`.
+- `https://splashlens.com/api/partner-intake` returned direct `GET 200` JSON with `ok=true`, `storageConfigured=true`, and `emailConfigured=true`.
+- `https://app.splashlens.com/api/events` returned direct `GET 200` JSON with `ok=true`, `storageConfigured=true`, and `emailConfigured=true`.
+- `https://app.splashlens.com/api/events?digest=1` returned `401 Unauthorized`, which still matches the intended protected digest gate.
+- `https://app.splashlens.com/dashboard` returned HTTP `200`, and `https://app.splashlens.com/owner-dashboard` still resolved through `301 -> /dashboard`.
+- `https://app.splashlens.com/api/checkout?plan=monthly` and `?plan=yearly` still redirected to the live Stripe Payment Links. Public checkout mode remains `payment_link_direct`.
+- Discovery/AEO surfaces stayed healthy: site/app `ai.txt`, site/app `llms.txt`, app `robots.txt`, the site sitemap family, and `https://splashlens.com/privacy` all returned HTTP `200`.
+- Public store markers stayed live: the Play listing still exposed `com.splashlens.fieldtools`, `1.0.5`, `InStock`, `SoftwareApplication`, `Jun 25, 2026`, and `https://splashlens.com/privacy`; the iOS App Store listing at `https://apps.apple.com/us/app/splashlens/id6763644905` returned `200`.
+- The fetched homepage body still exposed supported `230+` field-reference language, did not expose a visible `500+` claim, and did not expose checked fake-testimonial names.
+
+Gmail reconciliation since the previous completed run on 2026-07-10:
+
+- Authenticated sender profile is still `Joshua Frost <frost@belowzeromedia.com>`.
+- No new SplashLens-specific human reply, complaint, unsubscribe, remove-me, do-not-contact, negative reply, bounce, undeliverable, or delivery-failure message surfaced after the 2026-07-10 run.
+- The only same-day delivery failures now in scope are today's two training-lane hard bounces already recorded above for Wake Tech and NJPMA; they are reflected in the queue as `bounced`.
+- The older unrelated `sales@sennagolftee.com` delivery failure remains unrelated to SplashLens and was not applied to the queue.
+
+Queue work completed because today's cap was already overrun:
+
+- Added `Dimension One Spas` as `queued` with `service@d1spas.com` after verifying the official contact page and a clean Gmail exact-recipient history search.
+- Added `Dream Maker Spas` as `queued` with `sales@dreammakerspas.com` after verifying the official contact page and a clean Gmail exact-recipient history search.
+- Added `Leisure Concepts / Covermate` as `queued` with `info@leisureconcepts.com` after verifying the official contact page and a clean Gmail exact-recipient history search.
+- Hardened the duplicate `PDC Spas / TruSwim` non-email row to `covered-by-sent` so the same organization is not exposed again through another cold route after today's `sales@pdcspas.com` send.
+
+Queue snapshot after this pass: `queued=25`, `needs-verification=37`, `needs-contact=23`, `replied=9`, `suppressed=1`, `bounced=4`, `sent=54`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=4`, and `research-needed=19`.
+
+True blockers:
+
+- Do not send any more SplashLens cold email on 2026-07-13; the cap was already exceeded by overlapping automation activity.
+- The next send day needs a single-writer/day-lock across Gmail send, queue mutation, and run-log update so two automations cannot each see a clean slate and double-spend the cap.

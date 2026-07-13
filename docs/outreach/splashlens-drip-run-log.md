@@ -1141,6 +1141,48 @@ Blocker: the 2026-07-13 five-email cold cap is now fully spent. Send no more Spl
 - Immediate post-send reconciliation found two hard bounces: Wake Tech / `wceresources@waketech.edu` (`19f5bdab320ff42e`) and NJPMA / `bonaccib@njpma.org` (`19f5bdaae4aa2f1f`). Both queue rows are now `bounced` with no future send date. Stop gate is red for the rest of 2026-07-13; no replacement sends.
 - Anderson Aquatics, Integrity Consultants, and Chadwell learning are `sent` with `last_sent_at=2026-07-13` and `next_send_after=2026-07-17`. No new prospects were required because future queue depth remained above 25 before the batch.
 
+## Same-minute overlap reconciliation - 2026-07-13 09:24 CT
+
+- Gmail confirms two independent five-message cold batches at 09:20-09:21 CT, for 10 total cold sends on 2026-07-13. The earlier batch was not visible to the second run's same-day Gmail preflight before it sent. This is an over-cap day.
+- Earlier manufacturer/spa batch: Blue-White (`19f5bd995a8bcb13`), PDC Spas (`19f5bd99b7c07b23`), Filbur (`19f5bd99dca59950`), Hydropool (`19f5bd9a0e86af2d`), and Master Spas (`19f5bd9a271418d2`). Later training batch: Anderson Aquatics (`19f5bda9c65d5062`), Integrity Consultants (`19f5bdaa220c3f3b`), Wake Tech (`19f5bdaa798ce248`), NJPMA (`19f5bdaa971c38f8`), and Chadwell (`19f5bdaad2107d35`).
+- Direct Gmail readback verified all 10 were one-to-one, had no CC/BCC, used conservative plain-text copy, and ended with `Talk Soon,` immediately before Joshua Frost's name.
+- Wake Tech and NJPMA hard-bounced immediately and remain `bounced`. The other eight rows remain `sent`, but all automated follow-up dates were cleared to prevent compounding the overlap.
+- Final queue snapshot: `queued=22`, `needs-verification=37`, `needs-contact=24`, `replied=9`, `suppressed=1`, `bounced=4`, `sent=54`, `follow-up-sent=59`. Future `queued + needs-verification` depth is 59, so no new prospect was added.
+- Stop all SplashLens cold outreach for the rest of 2026-07-13. Because two hard bounces are now inside the seven-day hygiene window, the cold-send gate remains red until they age out; earliest clean recheck is 2026-07-20 after a fresh Gmail sweep.
+
+## Daily growth loop reconciliation - 2026-07-13 09:24 CT
+
+Current truth from Gmail and the queue is stricter than either single batch entry above: two parallel SplashLens cold-email batches went out on 2026-07-13, so the real same-day total is `10` one-to-one sends, not `5`.
+
+Combined same-day send list:
+
+- Blue-White Industries, `sales@blue-white.com`, sent id `19f5bd995a8bcb13`.
+- PDC Spas / TruSwim, `sales@pdcspas.com`, sent id `19f5bd99b7c07b23`.
+- Filbur Manufacturing, `info@filburmfg.com`, sent id `19f5bd99dca59950`.
+- Hydropool Hot Tubs / Swim Spas, `info@hydropoolhottubs.com`, sent id `19f5bd9a0e86af2d`.
+- Master Spas / H2X Swim Spas, `customerservice@masterspas.com`, sent id `19f5bd9a271418d2`.
+- Anderson Aquatics, `brad@andersonaquatics.com`, sent id `19f5bda9c65d5062`.
+- Integrity Consultants CPO course, `cs@integrity-consultants.com`, sent id `19f5bdaa220c3f3b`.
+- Wake Tech Certified Pool Operator Training, `wceresources@waketech.edu`, sent id `19f5bdaa798ce248`, then hard-bounced at `19f5bdab320ff42e`.
+- New Jersey Pest Management Association CPO, `bonaccib@njpma.org`, sent id `19f5bdaa971c38f8`, then hard-bounced at `19f5bdaae4aa2f1f`.
+- Louisville Apartment Association / Chadwell CPO, `learn@chadwellsupply.com`, sent id `19f5bdaad2107d35`.
+
+Current live verification rechecked during reconciliation:
+
+- `https://splashlens.com` returned HTTP `200`.
+- `https://app.splashlens.com` returned HTTP `200`.
+- `https://splashlens.com/api/partner-intake` returned direct `GET 200` JSON with `ok=true`, `storageConfigured=true`, and `emailConfigured=true`.
+- `https://app.splashlens.com/api/events` returned direct `GET 200` JSON with `ok=true`, `storageConfigured=true`, and `emailConfigured=true`.
+- `https://app.splashlens.com/api/events?digest=1` returned `401 Unauthorized`, which still matches the intended protected owner-digest gate.
+- `https://app.splashlens.com/api/checkout?plan=monthly` and `?plan=yearly` returned `302` with `X-SplashLens-Checkout-Mode: payment_link_direct`, and full follow redirects landed on live Stripe Checkout pages with `200`.
+- `https://splashlens.com/ai.txt`, `https://splashlens.com/llms.txt`, `https://splashlens.com/robots.txt`, `https://splashlens.com/sitemap.xml`, `https://splashlens.com/pseo-sitemap.xml`, `https://splashlens.com/seo-hub-sitemap.xml`, `https://splashlens.com/category-hub-sitemap.xml`, `https://app.splashlens.com/ai.txt`, `https://app.splashlens.com/llms.txt`, `https://app.splashlens.com/robots.txt`, and `https://splashlens.com/privacy` all returned `200`.
+- Public Google Play evidence still exposed `com.splashlens.fieldtools`, `1.0.5`, `InStock`, `SoftwareApplication`, `Jun 25, 2026`, and `https://splashlens.com/privacy`.
+- The iOS App Store listing at `https://apps.apple.com/us/app/splashlens/id6763644905` returned `200`.
+
+Queue snapshot after reconciliation: `queued=22`, `needs-verification=37`, `needs-contact=24`, `research-needed=19`, `replied=9`, `suppressed=1`, `bounced=4`, `sent=54`, `follow-up-sent=59`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=3`.
+
+True blocker: 2026-07-13 is over cap by five cold emails, and two new hard bounces were added. Send no more SplashLens cold outreach on 2026-07-13. The next eligible review is a fresh 2026-07-14 Gmail/queue sweep with queue expansion or warm-thread handling only unless the stop-signal search is still clean and the same-day send count is zero.
+
 ## Same-day overlap reconciliation - 2026-07-13 09:23 CT
 
 - Gmail and queue truth show two independent five-message batches ran about one minute apart after both pre-send checks initially saw zero same-day SplashLens cold mail.

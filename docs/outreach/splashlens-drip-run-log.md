@@ -1100,3 +1100,51 @@ Blockers:
 - Do not send any more SplashLens cold email on 2026-07-10; the five-email daily cap is already spent.
 - The 2026-07-05 Fluidra remove-me / not-interested thread still sits inside the enforced 7-day rules window, so the cold-send gate remains red even after today's no-new-signal audit.
 - Earliest clean cold-send recheck remains 2026-07-12 after a fresh same-day Gmail stop-signal sweep with prior queue/run-log truth loaded first.
+
+## Controlled outreach send - 2026-07-13 09:20 CT
+
+Send decision for this invocation: sent 5 one-to-one plain-text emails from `frost@belowzeromedia.com`. The seven-day SplashLens reply/stop-signal sweep was clean, the same-day cold-send count was zero, and exact Gmail history was empty for all five recipients immediately before sending. A post-send mailbox reconciliation then found that another SplashLens automation sent five additional cold messages about one minute later, so the true same-day total became 10 and exceeded the five-email cap.
+
+Live preflight:
+
+- `https://splashlens.com` returned final HTTP `200`.
+- `https://splashlens.com/partsnap-proof-library.html` returned final HTTP `200`.
+- `https://app.splashlens.com` returned final HTTP `200`.
+- The live homepage supports `230+` current field-reference entries and did not expose a visible `500+` claim. The fetched proof-library and app bodies also showed no `500+` claim.
+- The only homepage `testimonial` string was structural copy; no fake testimonial person name was found in the visible page content.
+
+Gmail reconciliation:
+
+- No new SplashLens-specific complaint, unsubscribe, remove-me, do-not-contact, negative reply, bounce, undeliverable, or delivery-failure message was found in the last seven days.
+- Tim Auerhahn's Aquatic Council scheduling reply remains correctly reconciled as `replied`; no queue change was needed.
+- One unrelated delivery failure remained in the broader mailbox sweep for `sales@sennagolftee.com` (Gmail id `19f4721697015f02`); it is not a SplashLens queue contact.
+- The candidate NESPA row was excluded because the same address already has a `follow-up-sent` row elsewhere in the queue.
+
+Sent:
+
+- Blue-White Industries, `sales@blue-white.com`, subject `PartSnap proof prompts for pool chemical-feed equipment`, Gmail id `19f5bd995a8bcb13`.
+- PDC Spas / TruSwim, `sales@pdcspas.com`, subject `One real swim-spa part or code for PartSnap?`, Gmail id `19f5bd99b7c07b23`.
+- Filbur Manufacturing, `info@filburmfg.com`, subject `PartSnap proof prompts for filter identification`, Gmail id `19f5bd99dca59950`.
+- Hydropool Hot Tubs / Swim Spas, `info@hydropoolhottubs.com`, subject `One real hot-tub or swim-spa code for SplashLens?`, Gmail id `19f5bd9a0e86af2d`.
+- Master Spas / H2X Swim Spas, `customerservice@masterspas.com`, subject `PartSnap proof prompts before spa support`, Gmail id `19f5bd9a271418d2`.
+
+All five messages used the PartSnap Proof Library as the single link, used conservative reference-not-diagnosis language, made no endorsement or partnership claim, and ended with `Talk Soon,` immediately before Joshua Frost's name.
+
+Queue changes: the five recipient rows moved from `queued` to `sent`, `last_sent_at` is `2026-07-13`, and `next_send_after` is `2026-07-20`. No new prospect was needed because the future pool remains above the 25-prospect floor.
+
+Blocker: the 2026-07-13 five-email cold cap is now fully spent. Send no more SplashLens cold outreach today.
+## Controlled outreach drip - 2026-07-13 09:21 CT
+
+- Live preflight passed: `https://splashlens.com`, `https://splashlens.com/partsnap-proof-library.html` (redirected to `/partsnap-proof-library`), and `https://app.splashlens.com` all returned final HTTP `200`. Homepage scan verified `230+`, found no visible `500+` claim, and found no checked fake-testimonial names.
+- Gmail seven-day hygiene found no new SplashLens reply, complaint, unsubscribe/remove-me request, or negative reply. Two older delivery failures in the window were unrelated to SplashLens (`sales@sennagolftee.com`). Same-day sent-mail check found no earlier SplashLens batch.
+- Sent five one-to-one plain-text training-lane emails from `frost@belowzeromedia.com`, all with no CC/BCC and the required `Talk Soon,` signoff: Anderson Aquatics (`19f5bda9c65d5062`), Integrity Consultants (`19f5bdaa220c3f3b`), Wake Tech (`19f5bdaa798ce248`), NJPMA / Brian Bonacci (`19f5bdaa971c38f8`), and Chadwell learning (`19f5bdaad2107d35`).
+- Immediate post-send reconciliation found two hard bounces: Wake Tech / `wceresources@waketech.edu` (`19f5bdab320ff42e`) and NJPMA / `bonaccib@njpma.org` (`19f5bdaae4aa2f1f`). Both queue rows are now `bounced` with no future send date. Stop gate is red for the rest of 2026-07-13; no replacement sends.
+- Anderson Aquatics, Integrity Consultants, and Chadwell learning are `sent` with `last_sent_at=2026-07-13` and `next_send_after=2026-07-17`. No new prospects were required because future queue depth remained above 25 before the batch.
+
+## Same-day overlap reconciliation - 2026-07-13 09:23 CT
+
+- Gmail and queue truth show two independent five-message batches ran about one minute apart after both pre-send checks initially saw zero same-day SplashLens cold mail.
+- Final same-day total: 10 one-to-one SplashLens cold messages, 2 immediate hard bounces, and 8 accepted so far.
+- The hard bounces were Wake Tech (`wceresources@waketech.edu`, bounce id `19f5bdab320ff42e`) and NJPMA (`bonaccib@njpma.org`, bounce id `19f5bdaae4aa2f1f`); both queue rows are `bounced` with no future date.
+- This is a daily-cap violation caused by overlapping automation activity, not an authorization to replace bounced messages. Send no more SplashLens cold outreach on 2026-07-13.
+- Required guard before the next send day: a single-writer/day-lock around the Gmail send plus queue/run-log transaction so parallel automations cannot each consume the cap.

@@ -1275,3 +1275,10 @@ True blockers:
   - Neptune Pools Service and Repair / `daryl@neptunepoolsaz.com` / Gmail id `19f6125a6639b990`
 - Copy posture: service proof layer for the AI/efficiency moment, free app CTA, PoolPro credibility link, conservative no-diagnosis/no-endorsement language where relevant, opt-out route, and `Talk Soon,` signoff.
 - Follow-up boundary: do not follow up with these recipients until a fresh reply/bounce/suppression sweep is complete.
+
+## Service Proof OS product submission prep - 2026-07-14
+
+- Created `docs/outreach/aqua-new-product-submission-service-proof-os-2026-07-14.md` for the warm AQUA opportunity.
+- Packet reframes SplashLens around PartSnap + Service Proof Passport + Facility Assist + Connected Pool Network.
+- Included website, app, iOS, Google Play, PoolPro article, suggested images, conservative safety language, and an optional reply to Laura.
+- No email was sent by this file update.

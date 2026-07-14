@@ -1228,3 +1228,11 @@ True blockers:
 
 - Do not send any more SplashLens cold email on 2026-07-13; the cap was already exceeded by overlapping automation activity.
 - The next send day needs a single-writer/day-lock across Gmail send, queue mutation, and run-log update so two automations cannot each see a clean slate and double-spend the cap.
+## Controlled outreach drip - 2026-07-14 09:18 CT
+
+- Live preflight passed: `https://splashlens.com`, `https://splashlens.com/partsnap-proof-library.html` (final `/partsnap-proof-library`), and `https://app.splashlens.com` returned HTTP 200. Homepage body contained supported `230+` language, no visible `500+` claim, and no checked fake-testimonial placeholder names.
+- Gmail profile: `frost@belowzeromedia.com`. Fresh seven-day stop-word search returned no new SplashLens stop signal, and the July 14 sent-mail search returned zero messages.
+- Reply reconciliation: Laura Carew at AQUA Magazine replied on 2026-07-13 (Gmail id `19f5c306f510019a`, cc Jared Fish). AQUA Magazine moved from `follow-up-sent` to `replied`; future handling is warm-thread only.
+- Send decision: `0` cold emails. The Wake Tech and NJPMA hard bounces from 2026-07-13 remain inside the source-of-truth seven-day hygiene window, so the send gate is red through the earliest clean recheck on 2026-07-20. No replacement sends were attempted.
+- Prospect additions: `0`. Existing future depth remains sufficient: `queued=25` plus `needs-verification=37`.
+- Blocker: current seven-day hard-bounce gate. The repository now includes a single-writer/day-lock from commit `2507fe1`; it was not exercised because sending was prohibited.

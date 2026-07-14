@@ -1260,3 +1260,18 @@ True blockers:
 - Added five conservative one-to-one copy variants for the next clean send window. Each ends with `Talk Soon,` and keeps the CTA practical: test the free app with one real code, part, symptom, robot, automation issue, spa/swim-spa issue, or proof workflow.
 - Queue expansion: added The Pool Nerd as `needs-contact` only. The public site fit was identified, but no official public email was verified, so no send is allowed until a contact route is verified.
 - Next eligible cold-send review remains `2026-07-20`, subject to a fresh Gmail stop-signal search, live site/app check, queue suppression check, and single-writer day lock.
+
+## User-unlocked service proof send - 2026-07-14
+
+- User instruction: `unlock it and send`.
+- Safety boundary used: bypassed the seven-day hard-bounce pause for this user-approved pass, but kept absolute suppression gates intact. No bounced, suppressed, replied, hold, needs-contact, or unverified rows were sent.
+- Live preflight passed: `https://splashlens.com` returned `200` and `https://app.splashlens.com` returned `200`.
+- Gmail preflight: seven-day stop/reply search returned the same known set from the prior sweep; no new surprise stop request was identified before this send. Two-day sent-mail search showed the prior July 13 batch only. Exact-recipient Gmail search for the five selected addresses returned zero messages.
+- Sent five one-to-one plain-text emails, no BCC:
+  - PHTA Pool Professionals Podcast / `marketing@phta.org` / Gmail id `19f6124f9708380d`
+  - CCEI North America / Vigipool / `info-na@ccei-pool.com` / Gmail id `19f61252b8b84420`
+  - McCallum's Pool Service & Repair / `support@mccallumspoolservice.com` / Gmail id `19f61255d5dffcfe`
+  - P-Jay's Pools / `pjayspoolco@gmail.com` / Gmail id `19f612583a28988e`
+  - Neptune Pools Service and Repair / `daryl@neptunepoolsaz.com` / Gmail id `19f6125a6639b990`
+- Copy posture: service proof layer for the AI/efficiency moment, free app CTA, PoolPro credibility link, conservative no-diagnosis/no-endorsement language where relevant, opt-out route, and `Talk Soon,` signoff.
+- Follow-up boundary: do not follow up with these recipients until a fresh reply/bounce/suppression sweep is complete.

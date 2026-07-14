@@ -1251,3 +1251,12 @@ True blockers:
 - Queue expansion completed with four additional verified prospects and clean exact-recipient Gmail history checks: `HASA Ask Terry` (`askterry@hasapool.com`), `Your Pool Buddy` (`info@Yourpoolbuddy.com`), `Pool Pro` (`info@poolpro.com`), and `Professional Pool Service` (`office@professional-pools.com`).
 - Queue snapshot after this extension: `queued=32`, `needs-verification=37`, `needs-contact=22`, `replied=10`, `suppressed=1`, `bounced=4`, `sent=54`, `follow-up-sent=58`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=4`, and `research-needed=19`.
 - Blocker remains unchanged: do not send new SplashLens cold outreach before the earliest clean recheck on `2026-07-20`, unless a fresh same-day Gmail sweep and the checked-in rules both turn green.
+
+## Service proof / AI efficiency outreach prep - 2026-07-14
+
+- Send decision: `0` cold emails. The checked-in send gate remains blocked by the July 13 Wake Tech and NJPMA hard bounces inside the seven-day hygiene window.
+- Warm-thread action: prepared an AQUA Magazine submission packet after Laura Carew's replied editorial thread, including product description, URLs, conservative safety language, and suggested repo image assets.
+- Created `docs/outreach/splashlens-service-proof-ai-window-2026-07-14.md` with the next-window positioning: service proof layer for the AI/efficiency moment, CPO/facility workflows, robot/automation/smart-device proof prompts, spa/swim-spa proof prompts, and distributor/CRM-adjacent proof layer.
+- Added five conservative one-to-one copy variants for the next clean send window. Each ends with `Talk Soon,` and keeps the CTA practical: test the free app with one real code, part, symptom, robot, automation issue, spa/swim-spa issue, or proof workflow.
+- Queue expansion: added The Pool Nerd as `needs-contact` only. The public site fit was identified, but no official public email was verified, so no send is allowed until a contact route is verified.
+- Next eligible cold-send review remains `2026-07-20`, subject to a fresh Gmail stop-signal search, live site/app check, queue suppression check, and single-writer day lock.

@@ -21,6 +21,11 @@
 
 Before sending any daily batch:
 
+0. Run the single-writer/day-lock guard from the repo root:
+   - `powershell -ExecutionPolicy Bypass -File tools\splashlens_outreach_day_lock.ps1`
+   - If it reports `BLOCKED`, do not send cold outreach. Use the run for queue expansion, warm replies, or manual review only.
+   - Release the lock only after the Gmail send, queue update, and run-log append are complete:
+     `powershell -ExecutionPolicy Bypass -File tools\splashlens_outreach_day_lock.ps1 -Release`
 1. Search Gmail for replies, bounces, unsubscribe language, and delivery failures from the last 7 days.
 2. Update `docs/outreach/splashlens-drip-queue.csv` statuses:
    - `replied`

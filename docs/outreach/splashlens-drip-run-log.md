@@ -1281,4 +1281,5 @@ True blockers:
 - Created `docs/outreach/aqua-new-product-submission-service-proof-os-2026-07-14.md` for the warm AQUA opportunity.
 - Packet reframes SplashLens around PartSnap + Service Proof Passport + Facility Assist + Connected Pool Network.
 - Included website, app, iOS, Google Play, PoolPro article, suggested images, conservative safety language, and an optional reply to Laura.
-- No email was sent by this file update.
+- Warm reply sent to Laura Carew (`laura@aquamagazine.com`) and Jared Fish (`jared@aquamagazine.com`) in the existing AQUA thread on 2026-07-14. Gmail id `19f630bd129ecb2a`, thread id `19f5c306f510019a`.
+- Reply included current product framing, app/site links, PoolPro article, product summary, what-is-new copy, conservative reference-only safety language, and `Talk Soon,` signoff.

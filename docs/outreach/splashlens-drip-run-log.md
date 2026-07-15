@@ -1283,3 +1283,15 @@ True blockers:
 - Included website, app, iOS, Google Play, PoolPro article, suggested images, conservative safety language, and an optional reply to Laura.
 - Warm reply sent to Laura Carew (`laura@aquamagazine.com`) and Jared Fish (`jared@aquamagazine.com`) in the existing AQUA thread on 2026-07-14. Gmail id `19f630bd129ecb2a`, thread id `19f5c306f510019a`.
 - Reply included current product framing, app/site links, PoolPro article, product summary, what-is-new copy, conservative reference-only safety language, and `Talk Soon,` signoff.
+
+## Controlled outreach drip - 2026-07-15 09:17 CT
+
+- Live preflight passed: `https://splashlens.com`, `https://splashlens.com/partsnap-proof-library.html` (final route `/partsnap-proof-library`), and `https://app.splashlens.com` all returned final HTTP `200`.
+- Homepage trust scan passed: the fetched visible body supported `230+`, showed no visible `500+` claim, and exposed no testimonial person names in the checked markup.
+- Authenticated Gmail sender remains `Joshua Frost <frost@belowzeromedia.com>`. The completed seven-day SplashLens/reply scan found no new human reply, unsubscribe, remove-me request, complaint, or negative reply beyond the already handled AQUA Magazine thread. The delivery-failure scan still found the known 2026-07-13 Wake Tech and NJPMA hard bounces; both queue rows remain `bounced` and suppressed from future outreach. An unrelated Senna Golf Tee failure was not applied to the SplashLens queue.
+- Same-day sent-mail search found `0` SplashLens messages on 2026-07-15. A later narrower Gmail refinement hit the connector's per-minute rate limit after the main hygiene searches had completed; this did not change the already-red send gate.
+- The checked-in single-writer/day-lock guard reported `BLOCKED` because recent hard-bounce/delivery-failure language remains inside the seven-day run-log window.
+- Send decision: `0` cold emails. No recipient, subject, or body was generated or sent, and no override was attempted.
+- Queue reconciliation required no row changes: the five user-unlocked 2026-07-14 recipients are already `sent` with Gmail ids recorded, AQUA Magazine remains `replied`, and Wake Tech/NJPMA remain `bounced` with no future send date.
+- Added `0` prospects because future depth remains above the required floor: `queued=27`, `needs-verification=37`, for `64` future research/send candidates. Current date-eligible verified queue count is `20`, but none may be used while the global stop gate is red.
+- Blocker: do not send new cold SplashLens outreach until the seven-day bounce window clears and a fresh Gmail sweep plus day-lock check both pass. Earliest expected clean recheck remains 2026-07-20.

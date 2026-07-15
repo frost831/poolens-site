@@ -1305,3 +1305,13 @@ True blockers:
 - Queue expansion completed instead: added `Upper State Apartment Association SC operator route` (`rose@upperstate.org`), `York Technical College SC operator route` (`bodom@yorktech.edu`), `Coastal Carolina University SC operator route` (`mmiller@coastal.edu`), and `New Mexico aquatics program operator route` (`aquatics.program@env.nm.gov`) after official public-directory verification and clean exact-recipient Gmail history checks.
 - Queue snapshot after this extension: `queued=31`, `needs-verification=37`, `needs-contact=23`, `replied=10`, `suppressed=1`, `bounced=4`, `sent=59`, `follow-up-sent=58`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=4`, and `research-needed=19`.
 - Blocker remains unchanged: keep SplashLens cold outreach paused until the bounce window clears and the day lock plus fresh Gmail sweep both turn green.
+## User-requested pipeline check - 2026-07-15
+
+- User asked whether there is anything left in the SplashLens outreach pipeline and wanted to get rolling.
+- Live preflight passed: `https://splashlens.com`, `https://splashlens.com/partsnap-proof-library.html`, and `https://app.splashlens.com` returned HTTP `200`; fetched homepage body still showed supported `230+` language and no visible `500+` claim.
+- Day-lock result: `BLOCKED`. `tools/splashlens_outreach_day_lock.ps1` still blocks cold send because recent hard-bounce/delivery-failure language remains inside the seven-day run-log window.
+- Fresh Gmail stop-signal searches returned no current matching SplashLens unsubscribe/remove/do-not-contact/complaint/not-interested/bounce/undeliverable/delivery-failure messages, but the repo-level lock remains conservative because the July 13 Wake Tech and NJPMA bounces are still inside the seven-day hygiene window.
+- Send decision: `0` cold emails. No override was attempted from the user's general "get rolling" wording.
+- Pipeline truth: current queue still has verified sendable depth. Date-eligible queued candidates include Pentair Pool University, Frank's Pool Services, Clear Comfort AOP, Dimension One Spas, Dream Maker Spas, Endless Pools, Coast Spas, Wellis, Cover Valet, Leisure Concepts / Covermate, Duffield Aquatics, NESPA routes, Bio-Dex, Periodic Products, Balboa Water Group, and others.
+- Prepared `docs/outreach/splashlens-next-send-window-2026-07-15.md` with the recommended next 5 cold targets: Pentair Pool University, Clear Comfort AOP, Dimension One Spas, Endless Pools, and Balboa Water Group, plus conservative manufacturer/training support copy.
+- Next clean action: re-run Gmail sweep and day-lock on or after 2026-07-20; if both pass, send up to 5 one-to-one plain-text emails from the prepared packet.

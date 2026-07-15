@@ -1315,3 +1315,19 @@ True blockers:
 - Pipeline truth: current queue still has verified sendable depth. Date-eligible queued candidates include Pentair Pool University, Frank's Pool Services, Clear Comfort AOP, Dimension One Spas, Dream Maker Spas, Endless Pools, Coast Spas, Wellis, Cover Valet, Leisure Concepts / Covermate, Duffield Aquatics, NESPA routes, Bio-Dex, Periodic Products, Balboa Water Group, and others.
 - Prepared `docs/outreach/splashlens-next-send-window-2026-07-15.md` with the recommended next 5 cold targets: Pentair Pool University, Clear Comfort AOP, Dimension One Spas, Endless Pools, and Balboa Water Group, plus conservative manufacturer/training support copy.
 - Next clean action: re-run Gmail sweep and day-lock on or after 2026-07-20; if both pass, send up to 5 one-to-one plain-text emails from the prepared packet.
+## User override send - 2026-07-15
+
+- User instruction: `Send them all.`
+- Scope interpretation: sent the five prepped next-window recipients from `docs/outreach/splashlens-next-send-window-2026-07-15.md`, not the entire 31-row queue.
+- Safety boundary: explicit user override of the seven-day bounce-window pause was applied. Suppressed, bounced, replied, needs-contact, unverified, hold, and no-email rows were still excluded. Exact recipient-history search before send returned no prior SplashLens/PartSnap/Service Proof messages for the five selected addresses.
+- Live preflight from the earlier same-day check was green for `https://splashlens.com`, `https://splashlens.com/partsnap-proof-library.html`, and `https://app.splashlens.com`.
+- Sent 5 one-to-one plain-text emails, no BCC, all ending with `Talk Soon,`.
+- Recipients and Gmail ids:
+  - Pentair Pool University / `knowledge@pentair.com` / Gmail id `19f67fe0c49e973c`.
+  - Clear Comfort AOP / `info@clearcomfort.com` / Gmail id `19f67fe259d87e30`.
+  - Dimension One Spas / `service@d1spas.com` / Gmail id `19f67fe3e135d223`.
+  - Endless Pools / `poolhelp@endlesspools.com` / Gmail id `19f67fe624641a8e`.
+  - Balboa Water Group / `techsupport@balboawater.com` / Gmail id `19f67fe915560f37`.
+- Copy posture: manufacturer/training/support guardrail request around Service Proof Passport, PartSnap, scan/code lookup, field proof, and escalation evidence. No endorsement, diagnosis, warranty, compliance, fitment, or partnership claim.
+- Queue changes: the five rows were moved from `queued` to `sent`, `last_sent_at=2026-07-15`, `next_send_after=2026-07-22`, with Gmail ids appended to notes. Queue snapshot after update: `sent=64`, `follow-up-sent=58`, `queued=26`, `needs-verification=37`, `needs-contact=23`, `replied=10`, `bounced=4`, `suppressed=1`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=4`, `research-needed=19`.
+- Follow-up boundary: no follow-up to these five before a fresh reply/bounce/suppression sweep.

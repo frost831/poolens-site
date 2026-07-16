@@ -1331,3 +1331,10 @@ True blockers:
 - Copy posture: manufacturer/training/support guardrail request around Service Proof Passport, PartSnap, scan/code lookup, field proof, and escalation evidence. No endorsement, diagnosis, warranty, compliance, fitment, or partnership claim.
 - Queue changes: the five rows were moved from `queued` to `sent`, `last_sent_at=2026-07-15`, `next_send_after=2026-07-22`, with Gmail ids appended to notes. Queue snapshot after update: `sent=64`, `follow-up-sent=58`, `queued=26`, `needs-verification=37`, `needs-contact=23`, `replied=10`, `bounced=4`, `suppressed=1`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=4`, `research-needed=19`.
 - Follow-up boundary: no follow-up to these five before a fresh reply/bounce/suppression sweep.
+## AQUA Magazine warm reply - 2026-07-15
+
+- Jared Fish at AQUA Magazine replied in the Laura Carew editorial thread asking for a quick call to learn more about SplashLens brand direction and possible paid opportunities alongside editorial coverage.
+- User requested a response noting interest in speaking ASAP and that Joshua still gets and enjoys reading AQUA.
+- Sent warm threaded reply to `jared@aquamagazine.com`, cc `laura@aquamagazine.com`, Gmail id `19f68d1c3b04390a`.
+- Reply posture: enthusiastic, acknowledged missing it earlier, said Joshua would love to speak as soon as possible, mentioned he still gets and enjoys AQUA, and framed SplashLens around PartSnap, Service Proof Passport, Facility Assist, and proof workflows for techs/operators.
+- This is a warm thread, not cold outreach, and should not count against the cold-send queue. Future handling should remain manual/warm.

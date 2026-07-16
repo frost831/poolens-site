@@ -145,6 +145,23 @@
  </div>
  </section>
 
+ <section class="columns" style="margin-top:16px">
+ <div class="panel">
+ <div class="label">Leads By Source</div>
+ <table>
+ <thead><tr><th>Source</th><th>Total</th><th>30 Days</th></tr></thead>
+ <tbody id="leads-by-source"></tbody>
+ </table>
+ </div>
+ <div class="panel">
+ <div class="label">Leads By Lane</div>
+ <table>
+ <thead><tr><th>Lane</th><th>Total</th><th>30 Days</th></tr></thead>
+ <tbody id="leads-by-lane"></tbody>
+ </table>
+ </div>
+ </section>
+
  <section class="panel" style="margin-top:16px">
  <div class="label">Source Caveats</div>
  <div class="caveats" id="caveats"></div>
@@ -160,6 +177,12 @@
  ['affiliateClicks30d', 'Affiliate clicks', 'Last 30 days', 'affiliate_click events'],
  ['subscribersTotal', 'Waitlist emails', 'Total', 'subscribers table'],
  ['subscribers30d', 'New waitlist emails', 'Last 30 days', 'subscribers table'],
+ ['partnerLeadsTotal', 'Partner leads', 'All time', 'partners-page intake'],
+ ['partnerLeads30d', 'Partner leads', 'Last 30 days', 'partners-page intake'],
+ ['fieldTesterLeadsTotal', 'Field tester leads', 'All time', 'field tester source and lanes'],
+ ['fieldTesterLeads30d', 'Field tester leads', 'Last 30 days', 'field tester source and lanes'],
+ ['pilotLeadsTotal', 'Pilot leads', 'All time', 'pilot lane or interest'],
+ ['pilotLeads30d', 'Pilot leads', 'Last 30 days', 'pilot lane or interest'],
  ['events30d', 'Total events', 'Last 30 days', 'events table'],
  ];
 
@@ -196,6 +219,8 @@
  renderRows('top-queries', data.topManualQueries, row => [`${row.query}${row.brand ? ` (${row.brand})` : ''}`, row.count]);
  renderRows('scans-by-mode', data.scansByMode, row => [row.mode, row.count]);
  renderRows('daily', data.dailyProxy, row => [row.day, row.user_agent_proxy]);
+ renderBreakdownRows('leads-by-source', data.leadsBySource, 'source');
+ renderBreakdownRows('leads-by-lane', data.leadsByLane, 'lane');
  document.getElementById('caveats').innerHTML = (data.sources?.caveats || []).map(text => `<div>${escapeHtml(text)}</div>`).join('');
  }
 
@@ -218,6 +243,14 @@
  return `<tr><td>${escapeHtml(left || 'unknown')}</td><td>${Number(right || 0).toLocaleString()}</td></tr>`;
  }).join('')
  : '<tr><td colspan="2">No data yet</td></tr>';
+ }
+
+ function renderBreakdownRows(id, rows, labelKey) {
+ const body = document.getElementById(id);
+ const safeRows = Array.isArray(rows) ? rows : [];
+ body.innerHTML = safeRows.length
+ ? safeRows.map(row => `<tr><td>${escapeHtml(row[labelKey] || 'unknown')}</td><td>${Number(row.count || 0).toLocaleString()}</td><td>${Number(row.count30d || 0).toLocaleString()}</td></tr>`).join('')
+ : '<tr><td colspan="3">No data yet</td></tr>';
  }
 
  function escapeHtml(value) {

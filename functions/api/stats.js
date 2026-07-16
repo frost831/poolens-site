@@ -52,6 +52,48 @@ async function count(db, sql, ...bindings) {
  return Number(row.value || 0);
 }
 
+async function partnerIntakeStats(db) {
+ const table = await first(db, `SELECT name FROM sqlite_master WHERE type = 'table' AND name = 'partner_intake'`);
+ if (!table.name) {
+ return {
+ metrics: { partnerLeadsTotal: 0, partnerLeads30d: 0, fieldTesterLeadsTotal: 0, fieldTesterLeads30d: 0, pilotLeadsTotal: 0, pilotLeads30d: 0 },
+ bySource: [],
+ byLane: [],
+ };
+ }
+
+ const [partnerLeadsTotal, partnerLeads30d, fieldTesterLeadsTotal, fieldTesterLeads30d, pilotLeadsTotal, pilotLeads30d, bySource, byLane] = await Promise.all([
+ count(db, `SELECT COUNT(*) AS value FROM partner_intake WHERE source = 'partners-page'`),
+ count(db, `SELECT COUNT(*) AS value FROM partner_intake WHERE source = 'partners-page' AND datetime(created_at) >= datetime('now', '-30 days')`),
+ count(db, `SELECT COUNT(*) AS value FROM partner_intake WHERE source = 'field-testers-page' OR lower(COALESCE(lane, '')) LIKE '%tester%'`),
+ count(db, `SELECT COUNT(*) AS value FROM partner_intake WHERE (source = 'field-testers-page' OR lower(COALESCE(lane, '')) LIKE '%tester%') AND datetime(created_at) >= datetime('now', '-30 days')`),
+ count(db, `SELECT COUNT(*) AS value FROM partner_intake WHERE lower(COALESCE(lane, '')) LIKE '%pilot%' OR lower(COALESCE(note, '')) LIKE '%sponsor/affiliate interest: education pilot%'`),
+ count(db, `SELECT COUNT(*) AS value FROM partner_intake WHERE (lower(COALESCE(lane, '')) LIKE '%pilot%' OR lower(COALESCE(note, '')) LIKE '%sponsor/affiliate interest: education pilot%') AND datetime(created_at) >= datetime('now', '-30 days')`),
+ all(db, `
+ SELECT COALESCE(NULLIF(TRIM(source), ''), 'unknown') AS source,
+ COUNT(*) AS count,
+ SUM(CASE WHEN datetime(created_at) >= datetime('now', '-30 days') THEN 1 ELSE 0 END) AS count30d
+ FROM partner_intake
+ GROUP BY COALESCE(NULLIF(TRIM(source), ''), 'unknown')
+ ORDER BY count DESC, source ASC
+ `),
+ all(db, `
+ SELECT COALESCE(NULLIF(TRIM(lane), ''), 'unknown') AS lane,
+ COUNT(*) AS count,
+ SUM(CASE WHEN datetime(created_at) >= datetime('now', '-30 days') THEN 1 ELSE 0 END) AS count30d
+ FROM partner_intake
+ GROUP BY COALESCE(NULLIF(TRIM(lane), ''), 'unknown')
+ ORDER BY count DESC, lane ASC
+ `),
+ ]);
+
+ return {
+ metrics: { partnerLeadsTotal, partnerLeads30d, fieldTesterLeadsTotal, fieldTesterLeads30d, pilotLeadsTotal, pilotLeads30d },
+ bySource,
+ byLane,
+ };
+}
+
 export async function onRequestGet({ request, env }) {
  const headers = corsHeaders(request);
 
@@ -81,6 +123,7 @@ export async function onRequestGet({ request, env }) {
  scansByMode,
  topManualQueries,
  dailyProxy,
+ partnerIntake,
  ] = await Promise.all([
  count(db, `SELECT COUNT(*) AS value FROM events WHERE created_at >= datetime('now', '-7 days')`),
  count(db, `SELECT COUNT(*) AS value FROM events WHERE created_at >= datetime('now', '-30 days')`),
@@ -126,6 +169,7 @@ export async function onRequestGet({ request, env }) {
  GROUP BY day
  ORDER BY day DESC
  `),
+ partnerIntakeStats(db),
  ]);
 
  return json({
@@ -134,10 +178,13 @@ export async function onRequestGet({ request, env }) {
  sources: {
  events: 'SUBSCRIBERS_DB.events',
  subscribers: 'SUBSCRIBERS_DB.subscribers',
+ partnerIntake: 'SUBSCRIBERS_DB.partner_intake',
  caveats: [
  'DAU is a user-agent proxy until a durable anonymous app ID is captured.',
  'Installs are not proven by this endpoint until PWA/store install events are added.',
  'PartSnap Pro active subscription truth remains Stripe/KV, not the event table.',
+ 'Partner totals count partners-page submissions; field tester totals include field-testers-page submissions and tester lanes.',
+ 'Pilot totals count pilot lanes and Education pilot sponsor-interest notes.',
  ],
  },
  metrics: {
@@ -151,11 +198,14 @@ export async function onRequestGet({ request, env }) {
  affiliateClicks30d,
  subscribersTotal,
  subscribers30d,
+ ...partnerIntake.metrics,
  },
  topEvents,
  scansByMode,
  topManualQueries,
  dailyProxy,
+ leadsBySource: partnerIntake.bySource,
+ leadsByLane: partnerIntake.byLane,
  }, 200, headers);
  } catch (err) {
  console.error('Stats error:', err);

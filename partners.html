@@ -54,6 +54,9 @@ textarea{min-height:118px;resize:vertical}
 button.btn{border:0;cursor:pointer}
 .formStatus{min-height:20px;font-size:13px;font-weight:800;color:#0369a1}
 .formStatus.error{color:#b91c1c}
+.consentGroup{display:grid;gap:9px;margin-top:4px}
+.consent{display:flex;align-items:flex-start;gap:9px;font-size:13px;font-weight:700;line-height:1.4;text-transform:none;letter-spacing:0}
+.consent input{width:auto;margin-top:3px;flex:0 0 auto}
 .note{background:#fefce8;border:1px solid #fde68a;color:#854d0e;border-radius:8px;padding:14px;font-size:14px}
 .proofBox{background:#ecfeff;border:1px solid #99f6e4;border-radius:8px;padding:14px}
 .proofBox strong{display:block;color:#0f172a;margin-bottom:4px}
@@ -239,6 +242,7 @@ footer a{color:#7dd3fc;text-decoration:none}
 <option value="Distributor/parts counter">Distributor/parts counter</option>
 <option value="Podcast/media/creator">Podcast/media/creator</option>
 <option value="Service company/advisor">Service company/advisor</option>
+<option value="Pilot/field validation">Pilot/field validation</option>
 <option value="Google Play tester">Google Play tester</option>
 <option value="Sponsor/affiliate">Sponsor/affiliate</option>
 <option value="Other">Other</option>
@@ -271,6 +275,10 @@ footer a{color:#7dd3fc;text-decoration:none}
 <label>What should we test, change, build, or discuss?
 <textarea name="note" maxlength="1800" placeholder="Tell us what you want SplashLens to support, where the app could help techs move faster, or what kind of pilot would be useful."></textarea>
 </label>
+<div class="consentGroup">
+<label class="consent"><input type="checkbox" name="followUpPermission" value="yes" required><span>I give SplashLens permission to follow up by email about this request.</span></label>
+<label class="consent"><input type="checkbox" name="caseStudyPermission" value="yes"><span>Optional: SplashLens may ask me about a case study. Nothing will be published without separate approval.</span></label>
+</div>
 <div class="ctaRow">
 <button class="btn primary" type="submit">Send partner inquiry</button>
 <a class="btn secondary" href="mailto:hello@splashlens.com?subject=SplashLens%20partner%20fit">Email instead</a>
@@ -296,6 +304,9 @@ if (partnerForm) {
  const submit = partnerForm.querySelector('button[type="submit"]');
  submit.disabled = true;
  const data = Object.fromEntries(new FormData(partnerForm).entries());
+ data.followUpPermission = data.followUpPermission === 'yes';
+ data.caseStudyPermission = data.caseStudyPermission === 'yes';
+ data.attribution = window.SplashLensGa4?.attribution?.() || {};
  data.source = 'partners-page';
  data.path = window.location.pathname;
  try {
@@ -306,6 +317,13 @@ if (partnerForm) {
  });
  const result = await response.json();
  if (!response.ok || !result.ok) throw new Error(result.error || 'Could not send');
+ window.SplashLensGa4?.event?.('partner_lead', {
+  lead_type: data.lane?.toLowerCase().includes('pilot') || data.sponsorInterest?.toLowerCase().includes('pilot') ? 'pilot' : 'partner',
+  lane: data.lane || '',
+  source: data.source,
+  follow_up_permission: data.followUpPermission,
+  case_study_permission: data.caseStudyPermission
+ });
  partnerStatus.textContent = 'Sent. Thank you - we will review it and reach out.';
  partnerForm.reset();
  } catch (error) {

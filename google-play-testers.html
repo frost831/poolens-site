@@ -13,6 +13,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="robots" content="index, follow">
+<script src="/ga4.js" defer></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","name":"SplashLens Android Testers","url":"https://splashlens.com/google-play-testers.html","description":"Tester and field-feedback access request page for upcoming SplashLens Android app builds.","isPartOf":{"@type":"WebSite","name":"SplashLens","url":"https://splashlens.com"}}
 </script>
@@ -49,6 +50,8 @@ textarea{min-height:130px;resize:vertical}
 .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
 .formStatus{min-height:20px;font-size:13px;font-weight:800;color:#0369a1}
 .formStatus.error{color:#b91c1c}
+.consent{display:flex;align-items:flex-start;gap:9px;font-size:13px;font-weight:700;line-height:1.4;text-transform:none;letter-spacing:0}
+.consent input{width:auto;margin-top:3px;flex:0 0 auto}
 .note{background:#fefce8;border:1px solid #fde68a;color:#854d0e;border-radius:8px;padding:14px;font-size:14px;margin-top:14px}
 footer{padding:30px 24px;background:#0f172a;color:#94a3b8;text-align:center;font-size:13px}
 footer a{color:#7dd3fc;text-decoration:none}
@@ -66,7 +69,7 @@ footer a{color:#7dd3fc;text-decoration:none}
 </head>
 <body>
 <nav class="nav">
-<a class="brand" href="/"><span class="mark" aria-hidden="true" style="display:inline-grid;place-items:center;width:34px;height:34px;border-radius:8px;background:#075985;vertical-align:middle;flex:0 0 auto"><svg viewBox="0 0 32 32" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 19c4.5-4.8 8.5-4.8 13 0s8.5 4.8 13 0" stroke="white" stroke-width="3" stroke-linecap="round"/><path d="M4 25c4.5-4.8 8.5-4.8 13 0s8.5 4.8 13 0" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".55"/><circle cx="16" cy="10" r="4" fill="white" opacity=".92"/></svg></span><span>SplashLens</span></a>
+<a class="brand" href="/"><img src="/splashlens-icon-180.png" alt="" width="36" height="36" style="border-radius:8px"><span>SplashLens</span></a>
 <div class="navlinks">
 <a href="/partners.html">Partners</a>
 <a href="/partsnap.html">PartSnap</a>
@@ -121,6 +124,8 @@ footer a{color:#7dd3fc;text-decoration:none}
 <textarea name="note" maxlength="1800" placeholder="A device you use, a feature you want tested, or a field problem SplashLens should handle better."></textarea>
 </label>
 <input name="lane" type="hidden" value="Google Play tester">
+<label class="consent"><input type="checkbox" name="followUpPermission" value="yes" required><span>I give SplashLens permission to follow up by email about tester access and feedback.</span></label>
+<label class="consent"><input type="checkbox" name="caseStudyPermission" value="yes"><span>Optional: SplashLens may ask about a case study. Nothing will be published without separate approval.</span></label>
 <div class="ctaRow">
 <button class="btn primary" type="submit">Request tester access</button>
 <a class="btn secondary" href="/partners.html">Partner options</a>
@@ -146,6 +151,9 @@ if (testerForm) {
  const submit = testerForm.querySelector('button[type="submit"]');
  submit.disabled = true;
  const data = Object.fromEntries(new FormData(testerForm).entries());
+ data.followUpPermission = data.followUpPermission === 'yes';
+ data.caseStudyPermission = data.caseStudyPermission === 'yes';
+ data.attribution = window.SplashLensGa4?.attribution?.() || {};
  data.source = 'google-play-testers-page';
  data.path = window.location.pathname;
  try {
@@ -156,6 +164,13 @@ if (testerForm) {
  });
  const result = await response.json();
  if (!response.ok || !result.ok) throw new Error(result.error || 'Could not send');
+ window.SplashLensGa4?.event?.('field_tester_lead', {
+  lead_type: 'android_tester',
+  lane: data.lane,
+  source: data.source,
+  follow_up_permission: data.followUpPermission,
+  case_study_permission: data.caseStudyPermission
+ });
  testerStatus.textContent = 'Sent. We will use this for the tester invitation path.';
  testerForm.reset();
  } catch (error) {

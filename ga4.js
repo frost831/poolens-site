@@ -4,15 +4,42 @@
  window.__splashlensGa4Loaded = true;
  window.dataLayer = window.dataLayer || [];
  window.gtag = window.gtag || function gtag(){ window.dataLayer.push(arguments); };
+ var attributionKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "gclid", "gbraid", "wbraid"];
  function readAttribution() {
   var params = new URLSearchParams(window.location.search || "");
-  var keys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "gclid", "gbraid", "wbraid"];
   var values = {};
-  keys.forEach(function (key) {
+  attributionKeys.forEach(function (key) {
    var value = params.get(key);
    if (value) values[key] = value.slice(0, 160);
   });
+  if (Object.keys(values).length) {
+   try { sessionStorage.setItem("splashlens-site-attribution", JSON.stringify(values)); } catch (err) {}
+   return values;
+  }
+  try {
+   var stored = JSON.parse(sessionStorage.getItem("splashlens-site-attribution") || "{}");
+   attributionKeys.forEach(function (key) {
+    if (stored && typeof stored[key] === "string" && stored[key]) values[key] = stored[key].slice(0, 160);
+   });
+  } catch (err) {}
   return values;
+ }
+ function decorateAppLink(link, attribution) {
+  if (!link || !link.href) return;
+  try {
+   var url = new URL(link.href, window.location.href);
+   if (url.hostname !== "app.splashlens.com") return;
+   Object.keys(attribution).forEach(function (key) {
+    if (!url.searchParams.has(key)) url.searchParams.set(key, attribution[key]);
+   });
+   link.href = url.toString();
+  } catch (err) {}
+ }
+ function decorateAppLinks() {
+  var attribution = readAttribution();
+  document.querySelectorAll('a[href*="app.splashlens.com"]').forEach(function (link) {
+   decorateAppLink(link, attribution);
+  });
  }
  function normalizeEventName(name) {
   var map = {
@@ -22,7 +49,9 @@
    open_app_click: "open_app",
    partsnap_click: "select_partsnap",
    team_deployment_click: "generate_lead",
-   route_ready_notify_submit: "generate_lead"
+   route_ready_notify_submit: "generate_lead",
+   field_tester_lead: "generate_lead",
+   partner_lead: "generate_lead"
   };
   return map[name] || name || "site_event";
  }
@@ -41,7 +70,7 @@
  }
  function mirrorOwnerEvent(name, props) {
   var eventName = name || "site_event";
-  if (!/^(app_store_download_click|google_play_download_click|checkout_click|open_app_click|partsnap_click|team_deployment_click|route_ready_notify_submit|persona_fork_click)$/.test(eventName)) return;
+  if (!/^(app_store_download_click|google_play_download_click|checkout_click|open_app_click|partsnap_click|team_deployment_click|route_ready_notify_submit|persona_fork_click|media_landing_view|campaign_landing_view|field_tester_lead|partner_lead)$/.test(eventName)) return;
   var body = JSON.stringify({
    event: eventName,
    source: "site",
@@ -66,6 +95,7 @@
  window.SplashLensGa4 = {
   id: measurementId,
   attribution: readAttribution,
+  decorateAppLinks: decorateAppLinks,
   event: function (name, props) {
    var eventName = normalizeEventName(name);
    var dedupeKey = name + "|" + JSON.stringify(props || {});
@@ -87,6 +117,12 @@
   page_path: window.location.pathname + window.location.search,
   page_location: window.location.href
  });
+ decorateAppLinks();
+ if (document.body && document.body.hasAttribute("data-media-landing")) {
+  window.SplashLensGa4.event("media_landing_view", {
+   source: document.body.getAttribute("data-media-landing") || "paid_media"
+  });
+ }
  var script = document.createElement("script");
  script.async = true;
  script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
@@ -94,6 +130,7 @@
  document.addEventListener("click", function (event) {
   var link = event.target.closest && event.target.closest("[data-track]");
   if (!link || !window.SplashLensGa4 || typeof window.SplashLensGa4.event !== "function") return;
+  decorateAppLink(link, readAttribution());
   window.SplashLensGa4.event(link.getAttribute("data-track"), {
    plan: link.getAttribute("data-plan") || "",
    source: link.getAttribute("data-source") || "",

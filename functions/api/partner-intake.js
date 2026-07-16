@@ -9,6 +9,7 @@ const DEFAULT_ALLOWED_ORIGINS = [
 ];
 const RATE_WINDOW_SECONDS = 60 * 60;
 const RATE_LIMIT_PER_IP = 6;
+const ATTRIBUTION_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'gbraid', 'wbraid'];
 
 function allowedOrigins(env) {
  return (env.SPLASHLENS_ALLOWED_ORIGINS || DEFAULT_ALLOWED_ORIGINS.join(','))
@@ -42,6 +43,18 @@ function originAllowed(request, env) {
 
 function clean(value, max = 500) {
  return String(value || '').replace(/[\u0000-\u001f\u007f]/g, '').trim().slice(0, max);
+}
+
+function cleanMultiline(value, max = 8000) {
+ return String(value || '')
+ .replace(/\r\n?/g, '\n')
+ .replace(/[\u0000-\u0009\u000b-\u001f\u007f]/g, '')
+ .trim()
+ .slice(0, max);
+}
+
+function permissionGranted(value) {
+ return value === true || ['true', 'yes', 'on', '1'].includes(String(value || '').toLowerCase());
 }
 
 function notifyConfig(env) {
@@ -198,6 +211,12 @@ export async function onRequestPost({ request, env }) {
  return json(request, env, 400, { ok: false, error: 'Valid email required' });
  }
 
+ const followUpPermission = permissionGranted(body.followUpPermission);
+ const caseStudyPermission = permissionGranted(body.caseStudyPermission);
+ if (!followUpPermission) {
+ return json(request, env, 400, { ok: false, error: 'Follow-up permission required' });
+ }
+
  const partnerDetails = [
  body.docsUrl ? `Docs/model source: ${clean(body.docsUrl, 300)}` : '',
  body.modelFamilies ? `Model families: ${clean(body.modelFamilies, 600)}` : '',
@@ -206,6 +225,26 @@ export async function onRequestPost({ request, env }) {
  body.sponsorInterest ? `Sponsor/affiliate interest: ${clean(body.sponsorInterest, 160)}` : '',
  ].filter(Boolean).join('\n');
 
+ const source = clean(body.source || 'partners-page', 80);
+ const path = clean(body.path, 300);
+ const referrer = clean(request.headers.get('Referer') || body.referrer, 500);
+ const rawAttribution = body.attribution && typeof body.attribution === 'object' ? body.attribution : {};
+ const attributionLines = ATTRIBUTION_KEYS.map((key) => {
+ const value = clean(rawAttribution[key] || body[key], 160);
+ return value ? `${key}: ${value}` : '';
+ }).filter(Boolean);
+ const evidenceDetails = [
+ 'Consent',
+ 'Follow-up permission: granted',
+ `Case-study permission: ${caseStudyPermission ? 'granted' : 'not granted'}`,
+ '',
+ 'Attribution',
+ `Source: ${source}`,
+ `Path: ${path || 'not provided'}`,
+ `Referrer: ${referrer || 'not provided'}`,
+ ...(attributionLines.length ? attributionLines : ['Campaign parameters: none provided']),
+ ].join('\n');
+
  const record = {
  email,
  name: clean(body.name, 120),
@@ -213,10 +252,10 @@ export async function onRequestPost({ request, env }) {
  role: clean(body.role, 120),
  lane: clean(body.lane || 'partner/advisor', 80),
  website: clean(body.website, 220),
- note: clean([clean(body.note, 1800), partnerDetails].filter(Boolean).join('\n\n'), 2400),
- source: clean(body.source || 'partners-page', 80),
- path: clean(body.path, 300),
- referrer: clean(request.headers.get('Referer') || body.referrer, 500),
+ note: cleanMultiline([clean(body.note, 1800), partnerDetails, evidenceDetails].filter(Boolean).join('\n\n')),
+ source,
+ path,
+ referrer,
  country: clean(request.cf?.country || request.headers.get('CF-IPCountry'), 10),
  createdAt: new Date().toISOString(),
  };

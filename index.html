@@ -672,6 +672,30 @@ min-height: 410px;
 .product-phone:nth-child(2) {
 transform: translateY(-18px);
 }
+.product-phone.is-live {
+margin: 0;
+padding: 8px;
+min-height: 0;
+overflow: hidden;
+}
+.product-phone.is-live img {
+display: block;
+width: 100%;
+height: auto;
+aspect-ratio: 390 / 844;
+object-fit: cover;
+object-position: top center;
+border-radius: 23px;
+background: #eff8fb;
+}
+.product-phone.is-live figcaption {
+padding: 10px 8px 4px;
+color: #e2e8f0;
+font-size: .76rem;
+font-weight: 850;
+line-height: 1.3;
+text-align: center;
+}
 .product-screen {
 height: 100%;
 min-height: 392px;
@@ -1833,41 +1857,18 @@ line-height: 1.35;
  <a href="https://app.splashlens.com/?tab=scan&mode=parts" target="_blank" class="btn-primary" style="background:#0369a1;color:#fff;box-shadow:none" data-track="partsnap_click" data-source="product_showcase">Open PartSnap</a>
  </div>
  <div class="phone-stage">
- <div class="product-phone" aria-label="PartSnap mid-scan phone mockup">
- <div class="product-screen">
- <div class="product-screen-top"><span>PartSnap</span><span>proof first</span></div>
- <div class="product-screen-body">
- <div class="scan-window">IDENTIFYING</div>
- <span class="product-pill">Possible match</span>
- <div class="product-card"><strong>Pump lid / O-ring family</strong><span>Needs model plate and molded number before ordering.</span></div>
- <div class="product-card"><strong>Missing proof</strong><span>Label close-up, diameter, vendor cross-check.</span></div>
- </div>
- </div>
- </div>
- <div class="product-phone" aria-label="Escalation packet phone mockup">
- <div class="product-screen">
- <div class="product-screen-top"><span>Packet</span><span>send ready</span></div>
- <div class="product-screen-body">
- <span class="product-pill">Senior tech</span>
- <div class="packet-line"><b>1</b><span>Symptom: flow fault after pump-speed change.</span></div>
- <div class="packet-line"><b>2</b><span>Visible proof: label, display code, pad photo.</span></div>
- <div class="packet-line"><b>3</b><span>Risk flag: verify filter pressure and model before parts.</span></div>
- <div class="product-card"><strong>Copy packet</strong><span>One clean handoff instead of four texts.</span></div>
- </div>
- </div>
- </div>
- <div class="product-phone" aria-label="Facility wizard phone mockup">
- <div class="product-screen">
- <div class="product-screen-top"><span>Facility</span><span>CPO mode</span></div>
- <div class="product-screen-body">
- <span class="product-pill">What happened?</span>
- <div class="packet-line"><b>1</b><span>Daily pool check</span></div>
- <div class="packet-line"><b>2</b><span>Contamination event</span></div>
- <div class="packet-line"><b>3</b><span>Equipment acting up</span></div>
- <div class="product-card"><strong>End state</strong><span>Resolved - logged or Escalate - send packet.</span></div>
- </div>
- </div>
- </div>
+ <figure class="product-phone is-live" aria-label="Live PartSnap app screen">
+ <img src="/product-screenshots/partsnap-live-mobile.png" alt="SplashLens PartSnap camera workflow with part, label, verify, and packet steps" loading="lazy" width="390" height="844">
+ <figcaption>PartSnap: photo, verify, packet</figcaption>
+ </figure>
+ <figure class="product-phone is-live" aria-label="Live Service Proof app screen">
+ <img src="/product-screenshots/service-proof-live-mobile.png" alt="SplashLens Service Proof Passport and Field Proof Queue workflow" loading="lazy" width="390" height="844">
+ <figcaption>Service Proof: pause, finish, hand off</figcaption>
+ </figure>
+ <figure class="product-phone is-live" aria-label="Live Facility Assist app screen">
+ <img src="/product-screenshots/facility-assist-live-mobile.png" alt="SplashLens Facility Assist workflow for daily checks, dosing, contamination events, and equipment issues" loading="lazy" width="390" height="844">
+ <figcaption>Facility Assist: simple operator path</figcaption>
+ </figure>
  </div>
  </div>
 </section>

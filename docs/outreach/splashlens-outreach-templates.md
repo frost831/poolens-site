@@ -92,6 +92,44 @@ Joshua Frost
 Founder, SplashLens
 hello@splashlens.com
 
+## Manufacturer / Training Team - Docs And Failure Points
+
+Subject: Field-safe SplashLens cards for [brand/category]
+
+Hi [Name],
+
+I am Joshua Frost, founder of SplashLens. SplashLens has now been published online by AQUA Magazine and PoolPro, and I am using that attention to make the product more useful for techs, trainers, support teams, and counter staff.
+
+The practical ask is simple: give us your docs, known failure points, model families, and preferred verification language. We turn it into field-safe cards that help techs capture better proof before ordering, escalating, or calling support.
+
+SplashLens does not mark anything partner-verified unless there is a real review path. Until then, results stay cautious: possible match, visible proof, missing proof, and manual verification.
+
+Would someone on your product, training, or support side be open to telling us what proof matters most for [equipment/category]?
+
+Talk Soon,
+Joshua Frost
+Founder, SplashLens
+hello@splashlens.com
+
+## Named Pilot Ask - Service Company / Facility / Trainer
+
+Subject: Would you be one of the first SplashLens pilots?
+
+Hi [Name],
+
+I am Joshua Frost, founder of SplashLens. We are looking for a small group of named early pilots: field techs, service companies, facilities, and trainers willing to test one real workflow and give blunt feedback.
+
+The ask is practical: try one part, code, service proof packet, or Facility Assist workflow and tell us where it helps, where it slows down, and what proof it should ask for next.
+
+SplashLens core tools are free. Paid add-ons support heavier scanner/proof workflows, but the pilot ask is feedback, not a purchase.
+
+If this fits, I would be glad to set up a short walkthrough and keep it useful.
+
+Talk Soon,
+Joshua Frost
+Founder, SplashLens
+hello@splashlens.com
+
 ## Software / Service Community
 
 Subject: Field reference layer for pool service techs

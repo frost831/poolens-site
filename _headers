@@ -33,7 +33,22 @@
  Content-Type: image/png
 
 /*.html
- Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+ Cache-Control: no-cache, must-revalidate
+
+/campaign
+ Cache-Control: no-cache, must-revalidate
+
+/field-testers
+ Cache-Control: no-cache, must-revalidate
+
+/google-play-testers
+ Cache-Control: no-cache, must-revalidate
+
+/partners
+ Cache-Control: no-cache, must-revalidate
+
+/paid-media
+ Cache-Control: no-cache, must-revalidate
 
 /service-proof-passport
  Cache-Control: public, max-age=3600, stale-while-revalidate=86400

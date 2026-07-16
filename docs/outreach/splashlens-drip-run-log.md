@@ -1338,3 +1338,15 @@ True blockers:
 - Sent warm threaded reply to `jared@aquamagazine.com`, cc `laura@aquamagazine.com`, Gmail id `19f68d1c3b04390a`.
 - Reply posture: enthusiastic, acknowledged missing it earlier, said Joshua would love to speak as soon as possible, mentioned he still gets and enjoys AQUA, and framed SplashLens around PartSnap, Service Proof Passport, Facility Assist, and proof workflows for techs/operators.
 - This is a warm thread, not cold outreach, and should not count against the cold-send queue. Future handling should remain manual/warm.
+
+## Controlled outreach drip - 2026-07-16 09:19 CT
+
+- Live preflight passed: `https://splashlens.com`, `https://splashlens.com/partsnap-proof-library.html` (final route `/partsnap-proof-library`), and `https://app.splashlens.com` all returned final HTTP `200`.
+- Homepage trust scan passed: the fetched body supported the current `230+` positioning, showed no visible `500+` claim, and matched none of the checked fake-testimonial placeholder names.
+- Authenticated Gmail sender remains `Joshua Frost <frost@belowzeromedia.com>`. The fresh seven-day SplashLens/PartSnap sweep found no new human reply, unsubscribe, remove-me request, complaint, negative reply, or delivery failure requiring a queue change. The AQUA Magazine messages remain the already-reconciled warm editorial thread.
+- Delivery-failure search found only the known 2026-07-13 Wake Tech bounce (`19f5bdab320ff42e`) and NJPMA bounce (`19f5bdaae4aa2f1f`). Both rows remain `bounced`, with no future send date.
+- The required single-writer/day-lock guard reported `BLOCKED` because those hard-bounce/delivery-failure records remain inside the seven-day run-log window.
+- Send decision: `0` cold emails. No override was attempted, no recipient or subject was selected, and no outbound body was generated.
+- Queue reconciliation required no row changes. Current snapshot remains `queued=26`, `needs-verification=37`, `needs-contact=23`, `replied=10`, `suppressed=1`, `bounced=4`, `sent=64`, `follow-up-sent=58`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=4`, and `research-needed=19`.
+- Added `0` prospects because future depth remains above the required floor: `queued=26` plus `needs-verification=37`, for `63` future candidates.
+- Blocker: keep cold outreach paused until the seven-day bounce window clears and a fresh Gmail sweep plus the day-lock guard both pass. Earliest expected clean recheck remains `2026-07-20`.

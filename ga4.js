@@ -48,6 +48,8 @@
    checkout_click: "begin_checkout",
    open_app_click: "open_app",
    partsnap_click: "select_partsnap",
+  press_coverage_click: "select_content",
+  industry_intel_click: "select_content",
    team_deployment_click: "generate_lead",
    route_ready_notify_submit: "generate_lead",
    field_tester_lead: "generate_lead",
@@ -70,7 +72,7 @@
  }
  function mirrorOwnerEvent(name, props) {
   var eventName = name || "site_event";
-  if (!/^(app_store_download_click|google_play_download_click|checkout_click|open_app_click|partsnap_click|team_deployment_click|route_ready_notify_submit|persona_fork_click|media_landing_view|campaign_landing_view|field_tester_lead|partner_lead)$/.test(eventName)) return;
+  if (!/^(app_store_download_click|google_play_download_click|checkout_click|open_app_click|partsnap_click|press_coverage_click|industry_intel_click|team_deployment_click|route_ready_notify_submit|persona_fork_click|media_landing_view|campaign_landing_view|field_tester_lead|partner_lead)$/.test(eventName)) return;
   var body = JSON.stringify({
    event: eventName,
    source: "site",
@@ -134,6 +136,9 @@
   window.SplashLensGa4.event(link.getAttribute("data-track"), {
    plan: link.getAttribute("data-plan") || "",
    source: link.getAttribute("data-source") || "",
+   publication: link.getAttribute("data-publication") || "",
+   content_type: link.getAttribute("data-publication") ? "industry_coverage" : "",
+   content_id: link.getAttribute("data-publication") || "",
    href: link.href || ""
   });
  });

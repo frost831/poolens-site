@@ -1365,3 +1365,11 @@ True blockers:
 - Queue expansion added three official future prospects instead of sending: `AquaFinesse` (`customercare@aquafinesse.com`) as `queued`, plus `DEL Ozone` and `Sirona Spa Care` as `needs-contact` because their official contact pages returned `200` but did not expose a clean public email in curl-readable body.
 - Queue snapshot after this refresh: `queued=30`, `needs-verification=37`, `needs-contact=25`, `replied=10`, `suppressed=1`, `bounced=4`, `sent=64`, `follow-up-sent=58`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=4`, and `research-needed=19`.
 - Blocker remains unchanged: keep cold SplashLens outreach paused until the bounce window clears and the next fresh Gmail sweep plus day-lock check both pass. Earliest expected clean recheck remains `2026-07-20`.
+
+## AQUA publication proof and outreach preparation - 2026-07-16
+
+- Verified Laura Carew's publication confirmation and the live AQUA canonical article: `SplashLens: Field Reference App for Pool, Spa and Facility Professionals`, published 2026-07-16 in Products > Business Software.
+- Recorded the AQUA Today e-newsletter placement as scheduled for 2026-08-18, not completed.
+- Updated the homepage, campaign landing, paid-media landing, analytics events, outreach rules, queue notes, and reusable one-to-one proof copy to use AQUA plus PoolPro coverage without implying endorsement.
+- Prepared `docs/outreach/splashlens-aqua-coverage-proof-2026-07-16.md` for the next eligible clean send window.
+- Sent `0` emails. The prior cold-send gate remains in force, and this pass did not override it.

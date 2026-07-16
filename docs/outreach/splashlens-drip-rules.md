@@ -51,6 +51,8 @@ Before sending any daily batch:
 - Keep CRM/program language broad and fair. Do not name, mock, or attack specific software unless a documented comparison is being sent.
 - For media, podcast, association, and creator/editorial targets, it is acceptable to add that Joshua has been highlighted in industry magazines for tech-forward thinking in the pool space.
 - Do not present the magazine note as an award, endorsement, partnership, or hard proof unless exact publication names/links are included in the message.
+- The factual coverage line may name AQUA Magazine and PoolPro only when the exact published URLs are included or the message links to the tracked campaign page that names them. Say `published` or `coverage`, never `endorsed`, `partnered`, `approved`, or `recommended`.
+- AQUA's 2026-08-18 newsletter placement is scheduled, not completed. Do not claim newsletter publication until it is verified after deployment.
 - No "official," "endorsed," "partnered," or manufacturer/distributor affiliation claims.
 - No "diagnoses," "guarantees," or "tells you what to replace."
 - Say "reference app," "possible matches," "verification notes," and "qualified tech/manual verification."

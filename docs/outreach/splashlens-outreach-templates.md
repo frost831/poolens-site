@@ -2,6 +2,16 @@
 
 Use plain text only. Personalize the first line and one body sentence. Keep one primary link unless a warm reply needs more.
 
+## Current Earned-Coverage Line
+
+SplashLens has now been published online by both AQUA Magazine and PoolPro. Use this only as factual coverage, never as an endorsement or partnership. For a fresh one-to-one follow-up, prefer the AQUA link as the one primary link:
+
+https://www.aquamagazine.com/products/business-software/article/15830162/splashlens-splashlens-field-reference-app-for-pool-spa-and-facility-professionals
+
+The PoolPro link remains available when a warm recipient specifically needs both references:
+
+https://poolpromag.com/splashlens-launches-free-field-reference-app/
+
 ## Mystery Part Challenge - Creator / Podcast / Media
 
 Subject: Mystery pool part challenge for your audience

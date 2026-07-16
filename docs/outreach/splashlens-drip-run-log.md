@@ -1343,10 +1343,12 @@ True blockers:
 
 - Live preflight passed: `https://splashlens.com`, `https://splashlens.com/partsnap-proof-library.html` (final route `/partsnap-proof-library`), and `https://app.splashlens.com` all returned final HTTP `200`.
 - Homepage trust scan passed: the fetched body supported the current `230+` positioning, showed no visible `500+` claim, and matched none of the checked fake-testimonial placeholder names.
-- Authenticated Gmail sender remains `Joshua Frost <frost@belowzeromedia.com>`. The fresh seven-day SplashLens/PartSnap sweep found no new human reply, unsubscribe, remove-me request, complaint, negative reply, or delivery failure requiring a queue change. The AQUA Magazine messages remain the already-reconciled warm editorial thread.
+- Authenticated Gmail sender remains `Joshua Frost <frost@belowzeromedia.com>`. The fresh seven-day SplashLens/PartSnap sweep found no new human reply, unsubscribe, remove-me request, complaint, negative reply, or delivery failure requiring a queue change. The AQUA Magazine messages remain the warm editorial thread, and today's only SplashLens sends were warm follow-ups in that thread.
 - Delivery-failure search found only the known 2026-07-13 Wake Tech bounce (`19f5bdab320ff42e`) and NJPMA bounce (`19f5bdaae4aa2f1f`). Both rows remain `bounced`, with no future send date.
+- Warm-thread note: Joshua sent a non-cold follow-up to Laura Carew at AQUA Magazine on 2026-07-16 after submitting the product Typeform, Gmail id `19f68de5d0cc32fa`. This remains outside the cold-send cap and should stay manual/warm.
 - The required single-writer/day-lock guard reported `BLOCKED` because those hard-bounce/delivery-failure records remain inside the seven-day run-log window.
 - Send decision: `0` cold emails. No override was attempted, no recipient or subject was selected, and no outbound body was generated.
-- Queue reconciliation required no row changes. Current snapshot remains `queued=26`, `needs-verification=37`, `needs-contact=23`, `replied=10`, `suppressed=1`, `bounced=4`, `sent=64`, `follow-up-sent=58`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=4`, and `research-needed=19`.
-- Added `0` prospects because future depth remains above the required floor: `queued=26` plus `needs-verification=37`, for `63` future candidates.
+- Queue expansion completed with three additional verified service-owner routes and clean exact-recipient Gmail history checks: `SLC Pool Service` (`info@slcpoolservice.com`), `Horizon Pool and Patio` (`info@horizonpool.com`), and `AmeriKen Pools` (`info@amerikenpools.com`).
+- Queue snapshot after this pass: `queued=29`, `needs-verification=37`, `needs-contact=23`, `replied=10`, `suppressed=1`, `bounced=4`, `sent=64`, `follow-up-sent=58`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=4`, and `research-needed=19`.
+- Future depth remains above the required floor: `queued=29` plus `needs-verification=37`, for `66` future candidates.
 - Blocker: keep cold outreach paused until the seven-day bounce window clears and a fresh Gmail sweep plus the day-lock guard both pass. Earliest expected clean recheck remains `2026-07-20`.

@@ -143,7 +143,9 @@ function page(hub) {
 <a href="/brands/hayward.html">Hayward code reference</a>
 <a href="/brands/jandy-zodiac.html">Jandy / Zodiac code reference</a>
 <a href="/brands/maytronics-dolphin.html">Maytronics / Dolphin robot reference</a>
-<a href="/partners.html">Partner and training ideas</a>
+<a href="/pool-automation/">Automation reference</a>
+<a href="/pool-robots/">Robot reference</a>
+<a href="/salt-cells/">Salt cell reference</a>
 </div></section>
 <section class="section"><div class="notice"><strong>Reference only.</strong> SplashLens is independent and should be used as a field starting point. Verify exact model, code, safety procedure, and parts fitment against current manufacturer documentation and qualified judgment.</div></section>
 <section class="section"><div class="cta"><div><h2>Open SplashLens in the field.</h2><p>Manual lookup, dosing, checklists, service notes, and route tools stay free. Online scanner workflows require internet.</p></div><a class="btn" href="https://app.splashlens.com">Open Free App</a></div></section>

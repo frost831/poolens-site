@@ -10,6 +10,7 @@
   - `https://splashlens.com/pseo-sitemap.xml`
   - `https://splashlens.com/seo-hub-sitemap.xml`
   - `https://splashlens.com/category-hub-sitemap.xml`
+  - `https://splashlens.com/source-pages-sitemap.xml`
 
 ## Search Console Weekly Pull
 
@@ -18,6 +19,7 @@ Export the last 28 days every Monday and paste the top movers below.
 | Date | Query | Page | Clicks | Impressions | CTR | Avg Position | Action |
 | --- | --- | --- | ---: | ---: | ---: | ---: | --- |
 | 2026-07-06 | pending console export | pending |  |  |  |  | Verify sitemap processing after deploy |
+| 2026-07-17 | language expansion watch | `/languages/`, `/es/`, `/ca/`, `/fr-ca/`, `/pt-br/`, `/ht/` |  |  |  |  | Confirm fresh sitemap processing and watch app-open lift |
 
 ## Console Submission Checklist
 
@@ -32,6 +34,7 @@ Google Search Console:
   - `pseo-sitemap.xml`
   - `seo-hub-sitemap.xml`
   - `category-hub-sitemap.xml`
+  - `source-pages-sitemap.xml`
 
 Bing Webmaster Tools:
 
@@ -42,7 +45,15 @@ Bing Webmaster Tools:
   - `https://splashlens.com/pseo-sitemap.xml`
   - `https://splashlens.com/seo-hub-sitemap.xml`
   - `https://splashlens.com/category-hub-sitemap.xml`
+  - `https://splashlens.com/source-pages-sitemap.xml`
 - Automation option: wire Bing Webmaster API only after a valid account API key is available in the runtime. No Bing API key was present in the local environment during this pass.
+
+2026-07-17 evidence:
+
+- `https://splashlens.com/sitemap.xml` returned HTTP 200 and includes `/languages/`, `/pt-br/`, and `/ht/`.
+- `https://splashlens.com/robots.txt` returned HTTP 200 and references all five sitemap files.
+- `https://splashlens.com/ai.txt` and `https://splashlens.com/llms.txt` returned HTTP 200 and now expose the language-support hub and pilot/demand pages.
+- Google Search Console and Bing Webmaster Tools still require authenticated console confirmation for final "Submitted/Success" state.
 
 ## Pages To Watch First
 
@@ -56,6 +67,12 @@ Bing Webmaster Tools:
 | `/pool-light-troubleshooting-app.html` | pool lighting | open app, query growth | Add niche/transformer/retrofit terms |
 | `/salt-cell-troubleshooting-app.html` | salt systems | open app, query growth | Add cell/controller family aliases |
 | `/pool-tech-field-reference-app.html` | tech workflow | open app, install click | Add proof/passport and training examples |
+| `/languages/` | language-support answer | language app open, requested-language event | Watch Spanish, French Canada, Portuguese, Haitian Creole demand before deeper localization |
+| `/es/` | Spanish field support | Spanish app open, PartSnap, proof save | Expand in-app Spanish proof prompts and store metadata |
+| `/ca/` | Canada market pilot | Canada app open, Facility Assist, PartSnap | Pair with Canadian pool/spa outreach |
+| `/fr-ca/` | French-Canadian pilot | French requested-language event | Build full French only after usage or partner signal |
+| `/pt-br/` | Portuguese demand capture | Portuguese requested-language event | Keep page live; do not build full app translation until dashboard shows demand |
+| `/ht/` | Haitian Creole demand capture | Haitian Creole requested-language event | Keep page live; test South Florida/facility lane first |
 
 ## CTR Fix Rule
 

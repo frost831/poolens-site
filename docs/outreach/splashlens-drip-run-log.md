@@ -1411,3 +1411,10 @@ True blockers:
 - Queue expansion completed instead: added four verified service-owner routes after official-source verification plus clean exact-recipient Gmail history checks: `Thunder City Pool Services` (`thundercitypoolservices@yahoo.com`), `Pool Heaven` (`poolheavenhb@gmail.com`), `Prime Pool Service` (`info@primepoolservice.com`), and `Pool Fix` (`TellMeMore@PoolFix.com`).
 - Queue snapshot after this refresh: `queued=34`, `needs-verification=37`, `needs-contact=25`, `replied=11`, `suppressed=1`, `bounced=4`, `sent=64`, `follow-up-sent=57`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=4`, and `research-needed=19`.
 - Blocker remains unchanged: keep cold SplashLens outreach paused until the bounce window clears and the next fresh Gmail sweep plus day-lock check both pass. Earliest expected clean recheck remains `2026-07-20`.
+## 2026-07-17 - Language/Canada SEO pass and cold-send blocked
+
+- Send boundary: `tools\splashlens_outreach_day_lock.ps1` returned `BLOCKED` because recent hard-bounce/delivery-failure language remains inside the last seven days of the run log. No cold outreach was sent.
+- Live preflight: `https://splashlens.com`, `https://app.splashlens.com`, `/languages/`, `/es/`, `/ca/`, `/fr-ca/`, `/pt-br/`, `/ht/`, and `/sitemap.xml` all returned HTTP `200`; no visible `500+` claim was found in those fetched bodies.
+- Gmail hygiene: searches for SplashLens unsubscribe/remove/complaint/not-interested language and delivery-failure/bounce language in the last seven days returned no new matching messages. General reply search showed the warm Service Industry News and AQUA threads already in progress.
+- SEO/AEO work: language hub, Canada/French-Canada, Spanish, Portuguese, and Haitian Creole surfaces remained live; `ai.txt`, `llms.txt`, `robots.txt`, and `sitemap.xml` are the crawler discovery path.
+- Outreach action: no cold sends. Next eligible cold-send recheck remains 2026-07-20 or later after a fresh same-day Gmail hygiene sweep and day-lock pass.

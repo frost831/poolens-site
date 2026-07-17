@@ -1,5 +1,7 @@
 /dashboard https://app.splashlens.com/dashboard 302
 /dashboad https://app.splashlens.com/dashboard 302
+/faq /faq.html 200
+/faq/ /faq.html 200
 /languages /languages/index.html 200
 /languages/ /languages/index.html 200
 /pt-br /pt-br/index.html 200

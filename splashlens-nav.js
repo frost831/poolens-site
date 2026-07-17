@@ -6,7 +6,7 @@
       items: [
         ['PartSnap', '/partsnap', 'photo-based part clue workflow'],
         ['Parts ID Page', '/partsnap-pool-part-identification-app.html', 'marketing and proof path'],
-        ['Proof Library', '/partsnap-proof-library.html', 'callback risk and handoff packets'],
+        ['Job Records', '/partsnap-proof-library.html', 'what to photo before ordering'],
         ['Mystery Lab', '/mystery-part-lab.html', 'weird part review lane'],
         ['AI Scanning', '/#ai', 'error scan, PartSnap, strip reader'],
         ['Open Web App', 'https://app.splashlens.com', 'use the field tools now']
@@ -27,7 +27,7 @@
       label: 'Learn',
       items: [
         ['Tech Radar', '/new-tech-radar.html', 'new equipment and product watchlist'],
-        ['Training', '/pool-tech-training-field-reference.html', 'apprentice and senior review lanes'],
+        ['Training', '/pool-tech-training-field-reference.html', 'teach newer techs from real stops'],
         ['Blog', '/blog/', 'pool tech articles and guides'],
         ['How It Works', '/#how', 'field workflow overview'],
         ['Compare', '/#compare', 'where SplashLens fits']

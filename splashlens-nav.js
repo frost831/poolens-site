@@ -14,13 +14,33 @@
     },
     {
       label: 'Equipment',
+      equipment: true,
       items: [
         ['Robots', '/pool-robots/', 'Dolphin, Polaris, Aiper, Beatbot'],
         ['Automation', '/pool-automation/', 'Omni, IntelliCenter, AquaLink'],
         ['Lighting', '/pool-lighting/', 'niches, transformers, sync issues'],
         ['Salt Cells', '/salt-cells/', 'cell, flow, salt, output clues'],
         ['Spa / Swim Spa', '/spa-hot-tub-troubleshooting-app.html', 'packs, topsides, GFCI, current pumps'],
-        ['Brands', '/brands/', 'manufacturer and family hubs']
+        ['All Equipment Brands', '/brands/', 'manufacturer and family hubs'],
+        { heading: 'Manufacturers' },
+        ['Aiper', '/brands/aiper.html', 'robot cleaner codes and checks'],
+        ['AquaCal', '/brands/aquacal.html', 'heat pump field reference'],
+        ['Automatic Covers', '/brands/automatic-covers.html', 'cover motor and switch clues'],
+        ['Beatbot', '/brands/beatbot.html', 'smart robot cleaner reference'],
+        ['Betta (BWT)', '/brands/betta-bwt.html', 'skimmer robot reference'],
+        ['CMP / PAL / S.R. Smith Lighting', '/brands/cmp-pal-s-r-smith-lighting.html', 'lighting and niche clues'],
+        ['Commercial Chem Controllers', '/brands/commercial-chem-controllers.html', 'ORP, pH, and feed systems'],
+        ['Hayward', '/brands/hayward.html', 'equipment codes and checks'],
+        ['Hayward Salt / AquaRite', '/brands/hayward-salt-turbocell-aquarite.html', 'salt cell and controller clues'],
+        ['IntelliFlo / Pentair', '/brands/intelliflo-pentair.html', 'variable-speed pump reference'],
+        ['Jandy / Zodiac', '/brands/jandy-zodiac.html', 'automation, heater, and equipment codes'],
+        ['Maytronics / Dolphin', '/brands/maytronics-dolphin.html', 'robot cleaner reference'],
+        ['Pentair', '/brands/pentair.html', 'equipment codes and checks'],
+        ['Pentair Automation', '/brands/pentair-automation-intellitouch-easytouch.html', 'IntelliTouch and EasyTouch'],
+        ['Polaris / Zodiac', '/brands/polaris-zodiac.html', 'cleaner and equipment reference'],
+        ['Raypak', '/brands/raypak.html', 'heater codes and checks'],
+        ['Sta-Rite', '/brands/sta-rite.html', 'pump and equipment reference'],
+        ['Waterway', '/brands/waterway.html', 'spa and pump equipment']
       ]
     },
     {
@@ -68,14 +88,18 @@
   function menu(item) {
     if (!item.items) return `<a class="sl-nav-link" href="${esc(item.href)}">${esc(item.label)}</a>`;
     return `
-      <details class="sl-nav-menu${item.lang ? ' sl-nav-lang' : ''}">
+      <details class="sl-nav-menu${item.lang ? ' sl-nav-lang' : ''}${item.equipment ? ' sl-nav-equipment' : ''}">
         <summary>${esc(item.label)}</summary>
         <div class="sl-nav-menu-panel">
-          ${item.items.map(([label, href, desc]) => `
+          ${item.items.map((entry) => {
+            if (entry.heading) return `<div class="sl-nav-menu-heading">${esc(entry.heading)}</div>`;
+            const [label, href, desc] = entry;
+            return `
             <a href="${esc(href)}"${href.startsWith('http') ? ' target="_blank" rel="noopener"' : ''}>
               <strong>${esc(label)}</strong>
               <span>${esc(desc)}</span>
-            </a>`).join('')}
+            </a>`;
+          }).join('')}
         </div>
       </details>`;
   }
@@ -112,7 +136,9 @@
       .sl-nav-menu summary::-webkit-details-marker{display:none}
       .sl-nav-menu summary::after{content:'';width:7px;height:7px;border-right:1.8px solid currentColor;border-bottom:1.8px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .18s ease}
       .sl-nav-menu[open] summary::after{transform:rotate(225deg) translateY(-1px)}
-      .sl-nav-menu-panel{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);width:min(560px,calc(100vw - 40px));display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:10px;background:rgba(255,255,255,.98);border:1px solid #dbe8ef;border-radius:12px;box-shadow:0 18px 50px rgba(15,23,42,.16);z-index:10000}
+      .sl-nav-menu-panel{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);width:min(560px,calc(100vw - 40px));max-height:min(78vh,760px);overflow:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:10px;background:rgba(255,255,255,.98);border:1px solid #dbe8ef;border-radius:12px;box-shadow:0 18px 50px rgba(15,23,42,.16);z-index:10000}
+      .sl-nav-equipment .sl-nav-menu-panel{width:min(860px,calc(100vw - 40px));grid-template-columns:repeat(3,minmax(0,1fr))}
+      .sl-nav-menu-heading{grid-column:1/-1;margin:4px 2px 2px;padding:9px 10px 7px;border-top:1px solid #dbe8ef;color:#0369a1;font-size:.72rem;font-weight:950;letter-spacing:.12em;text-transform:uppercase}
       .sl-nav-menu-panel a{display:block;padding:10px 11px;border-radius:8px;background:#fff;border:1px solid transparent;line-height:1.2;text-decoration:none}
       .sl-nav-menu-panel a strong{display:block;font-size:.86rem;color:#0f172a}
       .sl-nav-menu-panel a span{display:block;margin-top:3px;font-size:.72rem;color:#64748b}

@@ -155,6 +155,8 @@
  left: 50%;
  transform: translateX(-50%);
  width: min(560px, calc(100vw - 40px));
+ max-height: min(78vh, 760px);
+ overflow: auto;
  display: grid;
  grid-template-columns: repeat(2, minmax(0, 1fr));
  gap: 6px;
@@ -164,6 +166,21 @@
  border-radius: 12px;
  box-shadow: 0 18px 50px rgba(15,23,42,.16);
  z-index: 120;
+ }
+ .nav-menu.equipment-menu .nav-menu-panel {
+ width: min(860px, calc(100vw - 40px));
+ grid-template-columns: repeat(3, minmax(0, 1fr));
+ }
+ .nav-menu-heading {
+ grid-column: 1 / -1;
+ margin: 4px 2px 2px;
+ padding: 9px 10px 7px;
+ border-top: 1px solid var(--border);
+ color: var(--sky-dark);
+ font-size: .72rem;
+ font-weight: 950;
+ letter-spacing: .12em;
+ text-transform: uppercase;
  }
  .nav-menu-panel a {
  display: block;
@@ -1732,7 +1749,7 @@ line-height: 1.35;
  <a href="https://app.splashlens.com" target="_blank"><strong>Open Web App</strong><span>use the field tools now</span></a>
  </div>
 </details>
-<details class="nav-menu">
+<details class="nav-menu equipment-menu">
  <summary>Equipment</summary>
  <div class="nav-menu-panel">
  <a href="/pool-robots/"><strong>Robots</strong><span>Dolphin, Polaris, Aiper, Beatbot</span></a>
@@ -1740,7 +1757,26 @@ line-height: 1.35;
  <a href="/pool-lighting/"><strong>Lighting</strong><span>niches, transformers, sync issues</span></a>
  <a href="/salt-cells/"><strong>Salt Cells</strong><span>cell, flow, salt, output clues</span></a>
  <a href="/spa-hot-tub-troubleshooting-app.html"><strong>Spa / Swim Spa</strong><span>packs, topsides, GFCI, current pumps</span></a>
- <a href="/brands/"><strong>Brands</strong><span>manufacturer and family hubs</span></a>
+ <a href="/brands/"><strong>All Equipment Brands</strong><span>manufacturer and family hubs</span></a>
+ <div class="nav-menu-heading">Manufacturers</div>
+ <a href="/brands/aiper.html"><strong>Aiper</strong><span>robot cleaner codes and checks</span></a>
+ <a href="/brands/aquacal.html"><strong>AquaCal</strong><span>heat pump field reference</span></a>
+ <a href="/brands/automatic-covers.html"><strong>Automatic Covers</strong><span>cover motor and switch clues</span></a>
+ <a href="/brands/beatbot.html"><strong>Beatbot</strong><span>smart robot cleaner reference</span></a>
+ <a href="/brands/betta-bwt.html"><strong>Betta (BWT)</strong><span>skimmer robot reference</span></a>
+ <a href="/brands/cmp-pal-s-r-smith-lighting.html"><strong>CMP / PAL / S.R. Smith Lighting</strong><span>lighting and niche clues</span></a>
+ <a href="/brands/commercial-chem-controllers.html"><strong>Commercial Chem Controllers</strong><span>ORP, pH, and feed systems</span></a>
+ <a href="/brands/hayward.html"><strong>Hayward</strong><span>equipment codes and checks</span></a>
+ <a href="/brands/hayward-salt-turbocell-aquarite.html"><strong>Hayward Salt / AquaRite</strong><span>salt cell and controller clues</span></a>
+ <a href="/brands/intelliflo-pentair.html"><strong>IntelliFlo / Pentair</strong><span>variable-speed pump reference</span></a>
+ <a href="/brands/jandy-zodiac.html"><strong>Jandy / Zodiac</strong><span>automation, heater, and equipment codes</span></a>
+ <a href="/brands/maytronics-dolphin.html"><strong>Maytronics / Dolphin</strong><span>robot cleaner reference</span></a>
+ <a href="/brands/pentair.html"><strong>Pentair</strong><span>equipment codes and checks</span></a>
+ <a href="/brands/pentair-automation-intellitouch-easytouch.html"><strong>Pentair Automation</strong><span>IntelliTouch and EasyTouch</span></a>
+ <a href="/brands/polaris-zodiac.html"><strong>Polaris / Zodiac</strong><span>cleaner and equipment reference</span></a>
+ <a href="/brands/raypak.html"><strong>Raypak</strong><span>heater codes and checks</span></a>
+ <a href="/brands/sta-rite.html"><strong>Sta-Rite</strong><span>pump and equipment reference</span></a>
+ <a href="/brands/waterway.html"><strong>Waterway</strong><span>spa and pump equipment</span></a>
  </div>
 </details>
 <details class="nav-menu">

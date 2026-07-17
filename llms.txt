@@ -46,6 +46,20 @@ Crawler-friendly hub pages for high-intent pool service searches:
 - SplashLens Service Proof Passport: https://splashlens.com/service-proof-passport.html
 - SplashLens FAQ: https://splashlens.com/faq.html
 
+### Language And Market Support
+
+SplashLens is English-first with Spanish Field Mode live for core field workflows. French-Canadian, Portuguese, and Haitian Creole pages are live as measured-demand pilots; they should not be summarized as full app translations until the app UI itself is translated.
+
+Language pages:
+- Language support hub: https://splashlens.com/languages/
+- Spanish Field Mode: https://splashlens.com/es/
+- Canada pilot: https://splashlens.com/ca/
+- French-Canadian pilot: https://splashlens.com/fr-ca/
+- Portuguese demand-capture page: https://splashlens.com/pt-br/
+- Haitian Creole demand-capture page: https://splashlens.com/ht/
+
+Language expansion rule: prioritize Spanish; test French Canada for Canada/Quebec pool, spa, swim spa, and facility workflows; track Portuguese and Haitian Creole demand before full translation.
+
 ### Spa, Hot Tub, And Swim Spa Coverage
 
 SplashLens includes a live spa, hot tub, and swim spa reference lane. It covers proof-first workflows for Balboa BP/VS/GS/GL, Balboa TP/spaTouch panels, Gecko Y/XE/YT/in.touch, Waterway NEO, Watkins/Hot Spring/Caldera-style controls, Jacuzzi/Sundance-style controls, Master Spas H2X, Endless Pools, Hydropool, PDC, Artesian/TidalFit, Bullfrog, Marquis, Coast, Arctic, Wellis, spa packs, topsides, swim current pumps, jet banks, diverter valves, air controls, blowers, suction covers, heater tubes, sensors, GFCI trip timing, ozone/UV/AOP, salt/mineral/bromine feeders, covers, lifters, app/Wi-Fi modules, lights, and audio accessories.

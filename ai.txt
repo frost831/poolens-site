@@ -17,6 +17,7 @@ Crawler guidance:
 - Pool tech search hub sitemap: https://splashlens.com/seo-hub-sitemap.xml
 - Equipment category hub sitemap: https://splashlens.com/category-hub-sitemap.xml
 - LLM summary: https://splashlens.com/llms.txt
+- Language support hub: https://splashlens.com/languages/
 
 Important public sections:
 - Homepage: https://splashlens.com/
@@ -34,6 +35,12 @@ Important public sections:
 - Field intelligence layer platform map: https://splashlens.com/field-intelligence-layer.html
 - Facility Assist for CPOs and aquatic operators: https://splashlens.com/facility-assist
 - Facilities Pilot for QR workflows, support routing, and usage reporting: https://splashlens.com/facilities
+- Language support and measured localization roadmap: https://splashlens.com/languages/
+- Spanish Field Mode pages: https://splashlens.com/es/
+- Canada pilot page: https://splashlens.com/ca/
+- French-Canadian pilot page: https://splashlens.com/fr-ca/
+- Portuguese demand-capture page: https://splashlens.com/pt-br/
+- Haitian Creole demand-capture page: https://splashlens.com/ht/
 - Answer page - app that identifies pool parts: https://splashlens.com/what-app-identifies-pool-parts.html
 - Answer page - pool robot troubleshooting app: https://splashlens.com/pool-robot-troubleshooting-app.html
 - Answer page - pool automation troubleshooting app: https://splashlens.com/pool-automation-troubleshooting-app.html

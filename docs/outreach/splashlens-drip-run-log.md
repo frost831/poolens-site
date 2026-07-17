@@ -1373,3 +1373,15 @@ True blockers:
 - Updated the homepage, campaign landing, paid-media landing, analytics events, outreach rules, queue notes, and reusable one-to-one proof copy to use AQUA plus PoolPro coverage without implying endorsement.
 - Prepared `docs/outreach/splashlens-aqua-coverage-proof-2026-07-16.md` for the next eligible clean send window.
 - Sent `0` emails. The prior cold-send gate remains in force, and this pass did not override it.
+
+## Controlled outreach drip - 2026-07-17 09:17 CT
+
+- Live preflight passed: `https://splashlens.com`, `https://splashlens.com/partsnap-proof-library.html` (final route `/partsnap-proof-library`), and `https://app.splashlens.com` all returned final HTTP `200`.
+- Homepage trust scan passed: the fetched body supported the current `230+` positioning, showed no visible `500+` claim, and matched none of the checked fake-testimonial placeholder names.
+- Authenticated Gmail sender remains `Joshua Frost <frost@belowzeromedia.com>`. The fresh seven-day SplashLens/PartSnap sweep found no new unsubscribe, remove-me request, complaint, negative reply, or delivery failure.
+- New reply reconciled: Carolyn Dibrell at Service Industry News replied on 2026-07-16 that SplashLens looks interesting and asked to discuss marketing support (`19f6d449ab637b23`). Joshua already replied to arrange a call after 9 AM Hawaii time (`19f6d6d39a1e2d90`). The queue row moved from `follow-up-sent` to `replied` and is now warm-thread-only.
+- The required single-writer/day-lock guard reported `BLOCKED` because the known 2026-07-13 Wake Tech and NJPMA hard-bounce records remain inside the seven-day run-log window.
+- Send decision: `0` cold emails. Recipients and subjects: none. No override was attempted and no outbound cold body was generated.
+- Added `0` prospects because future depth remains above the required floor: `queued=30` plus `needs-verification=37`, for `67` future candidates.
+- Queue snapshot after reconciliation: `queued=30`, `needs-verification=37`, `needs-contact=25`, `replied=11`, `suppressed=1`, `bounced=4`, `sent=64`, `follow-up-sent=57`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=4`, and `research-needed=19`.
+- Blocker: keep cold SplashLens outreach paused until the bounce window clears and a fresh Gmail sweep plus the day-lock guard both pass. Earliest expected clean recheck remains `2026-07-20`.

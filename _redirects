@@ -1,4 +1,10 @@
 /dashboard https://app.splashlens.com/dashboard 302
 /dashboad https://app.splashlens.com/dashboard 302
+/languages /languages/index.html 200
+/languages/ /languages/index.html 200
+/pt-br /pt-br/index.html 200
+/pt-br/ /pt-br/index.html 200
+/ht /ht/index.html 200
+/ht/ /ht/index.html 200
 /poolens-site  /  301
 /poolens-site/ /  301

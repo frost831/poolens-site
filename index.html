@@ -194,6 +194,19 @@
  transition: background .2s !important;
  }
  .nav-cta:hover { background: var(--sky-dark) !important; }
+ .nav-lang summary {
+ border: 1px solid var(--border);
+ color: var(--slate-mid);
+ background: #f8fafc;
+ font-weight: 750;
+ }
+ .nav-lang .nav-menu-panel {
+ width: min(300px, calc(100vw - 40px));
+ grid-template-columns: 1fr;
+ right: 0;
+ left: auto;
+ transform: none;
+ }
  .store-badges {
  display: flex;
  align-items: center;
@@ -1502,7 +1515,10 @@ line-height: 1.35;
  max-width: none;
  }
  .nav-links > a:not(.nav-cta),
- .nav-links .nav-menu { display: none; }
+ .nav-links .nav-menu:not(.nav-lang) { display: none; }
+ .nav-links .nav-lang { display: block; }
+ .nav-lang summary { font-size: 0; gap: 0; padding: 7px 8px; }
+ .nav-lang summary::before { content: 'Lang'; font-size: .7rem; }
  .nav-links a,
  .nav-menu summary { font-size: .7rem; padding: 7px 6px; }
  .nav-cta { padding: 7px 10px; border-radius: 8px; }
@@ -1688,7 +1704,7 @@ line-height: 1.35;
 <!-- NAV -->
 <nav>
  <div class="nav-inner">
- <a href="#" class="nav-logo">
+ <a href="/" class="nav-logo">
  <span class="nav-logo-mark" aria-hidden="true">
  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
  <path d="M5 20c2.7-2.7 5.3-2.7 8 0s5.3 2.7 8 0 5.3-2.7 8 0" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
@@ -1746,11 +1762,15 @@ line-height: 1.35;
  <a href="/paid-media.html"><strong>Media Traffic</strong><span>lean conversion page</span></a>
  </div>
 </details>
- <a href="/facility-assist">For Facilities</a>
- <a href="/languages/">Languages</a>
- <a href="/ca/" hreflang="en-ca">Canada</a>
- <a href="/es/" hreflang="es">Español</a>
- <a href="https://app.splashlens.com" target="_blank" class="nav-cta">Get the app</a>
+<details class="nav-menu nav-lang">
+ <summary>Language</summary>
+ <div class="nav-menu-panel">
+ <a href="/languages/"><strong>All Languages</strong><span>Choose a translated field workflow</span></a>
+ <a href="/ca/" hreflang="en-ca"><strong>Canada</strong><span>Canadian field-reference route</span></a>
+ <a href="/es/" hreflang="es"><strong>Español</strong><span>Spanish field workflow</span></a>
+ </div>
+</details>
+ <a href="https://app.splashlens.com" target="_blank" class="nav-cta">Web App</a>
  </div>
  </div>
 </nav>
@@ -1770,7 +1790,7 @@ line-height: 1.35;
   Identify A Part
   </a>
   <a href="https://app.splashlens.com" target="_blank" class="btn-ghost" data-track="open_app_click" data-source="hero_secondary">
-  Build Service Proof
+  Save Visit Proof
   </a>
   <div class="store-badges" aria-label="Download SplashLens">
   <a href="https://apps.apple.com/us/app/splashlens/id6763644905" target="_blank" rel="noopener" class="store-badge apple" aria-label="Download SplashLens on the App Store" data-track="app_store_download_click" data-source="hero">
@@ -1792,7 +1812,7 @@ line-height: 1.35;
   </div>
   <div class="hero-product-bar" aria-label="SplashLens field tools">
   <div class="hero-product-item is-primary"><strong>PartSnap</strong><span>Photo a mystery part and capture the proof needed before ordering.</span></div>
-  <div class="hero-product-item"><strong>Service Proof Passport</strong><span>Readings, photos, voice notes, customer summaries, and visit memory.</span></div>
+  <div class="hero-product-item"><strong>Visit Proof History</strong><span>Readings, photos, voice notes, customer summaries, and what happened last time.</span></div>
   <div class="hero-product-item"><strong>Facility Assist</strong><span>Daily checks, contamination events, and CPO-friendly escalation packets.</span></div>
   <div class="hero-product-item"><strong>Connected Equipment</strong><span>Robots, automation, lights, salt, spas, heat pumps, covers, and smart pads.</span></div>
   </div>
@@ -1861,7 +1881,7 @@ line-height: 1.35;
  <h2>Proof for the stop. Not another CRM.</h2>
  <p>SplashLens does not replace Jobber, Skimmer, Pool Brain, billing, dispatch, or your route app. It helps with the field moment those systems usually do not solve: what the tech saw, what proof is missing, what should be verified, and what needs to be sent next.</p>
  <div class="field-os-actions">
- <a href="/service-proof-passport.html">See Service Proof</a>
+ <a href="/service-proof-passport.html">See Proof Tools</a>
  <a href="https://app.splashlens.com/?tab=report" target="_blank" rel="noopener" data-track="service_proof_click" data-source="field_os_home">Create a Passport</a>
  </div>
  </div>
@@ -1941,7 +1961,7 @@ line-height: 1.35;
  </figure>
  <figure class="product-phone is-live" aria-label="Live Service Proof app screen">
  <img src="/product-screenshots/service-proof-live-mobile.png" alt="SplashLens Service Proof Passport and Field Proof Queue workflow" loading="lazy" width="390" height="844">
- <figcaption>Service Proof: pause, finish, hand off</figcaption>
+ <figcaption>Visit proof: pause, finish, hand off</figcaption>
  </figure>
  <figure class="product-phone is-live" aria-label="Live Facility Assist app screen">
  <img src="/product-screenshots/facility-assist-live-mobile.png" alt="SplashLens Facility Assist workflow for daily checks, dosing, contamination events, and equipment issues" loading="lazy" width="390" height="844">
@@ -1962,13 +1982,13 @@ line-height: 1.35;
  </div>
  <div class="stop-flow" aria-label="SplashLens workflow">
  <div><b>01</b><strong>Identify it</strong><span>PartSnap and Connected Equipment turn labels, parts, codes, and smart-pad clues into possible paths.</span></div>
- <div><b>02</b><strong>Prove it</strong><span>Service Proof Passport captures photos, readings, model plates, missing proof, and callback risk.</span></div>
+ <div><b>02</b><strong>Prove it</strong><span>Save photos, readings, model plates, missing proof, and callback risk for the visit.</span></div>
  <div><b>03</b><strong>Explain it</strong><span>Customer-safe notes and senior-tech packets replace vague texts and cold escalation calls.</span></div>
  <div><b>04</b><strong>Train from it</strong><span>The Training Layer turns real stops into apprentice review, CPO practice, and owner-visible progress.</span></div>
  <div><b>05</b><strong>Remember it</strong><span>Owner Dashboard and partner portals keep recurring issues, equipment context, and field proof easy to find.</span></div>
  </div>
  <div class="system-links" aria-label="SplashLens product layers">
- <a class="system-link" href="/service-proof-passport.html"><strong>Service Proof Passport</strong><span>Stop-level proof, notes, readings, photos, and shareable summaries.</span></a>
+ <a class="system-link" href="/service-proof-passport.html"><strong>Visit Proof History</strong><span>Stop-level proof, notes, readings, photos, and shareable summaries.</span></a>
  <a class="system-link" href="/partsnap.html"><strong>PartSnap Network</strong><span>Parts ID, proof prompts, review tickets, and cautious partner cards.</span></a>
  <a class="system-link" href="/facility-assist"><strong>Facility / CPO Light Mode</strong><span>Daily checks, incident documentation, support packets, and QR front doors.</span></a>
  <a class="system-link" href="/route-ready.html"><strong>Training Layer</strong><span>Route Ready pilots, apprentice moments, and review built from real stops.</span></a>
@@ -2444,7 +2464,7 @@ line-height: 1.35;
  <div class="price-grid" style="max-width:1100px;margin-top:28px;">
  <div class="price-card">
  <div class="price-card-badge">Solo Pro Pilot</div>
- <div class="price-plan">Service Proof Pro</div>
+ <div class="price-plan">Solo Visit Proof</div>
  <div class="price-num" style="font-size:2.45rem">$19</div>
  <div class="price-period">target per solo tech / month</div>
  <p style="margin:0 0 12px;color:#475569;font-size:13px;line-height:1.45;font-weight:750;">Adds saved visit history and shareable proof for solo operators.</p>

@@ -51,10 +51,11 @@ async function sendEventAlert(env, record) {
  'content-type': 'application/json',
  },
  body: JSON.stringify({
- personalizations: [{
- to: [{ email: config.to }],
- subject: `[SplashLens] ${record.event}`,
- }],
+personalizations: [{
+to: [{ email: config.to }],
+subject: `[SplashLens] ${record.event}`,
+custom_args: { product: 'splashlens', template_id: 'site_event_alert', correlation_id: record.correlationId },
+}],
  from: { email: config.from, name: 'SplashLens Alerts' },
  categories: ['splashlens', 'site-event', record.event],
  content: [{
@@ -163,6 +164,7 @@ export async function onRequestPost({ request, env }) {
  const country = clean(request.cf?.country, 10);
  const propsJson = JSON.stringify(props).slice(0, 2000);
  const record = {
+ correlationId: crypto.randomUUID(),
  event,
  source,
  path,

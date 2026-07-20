@@ -31,10 +31,11 @@ async function sendSignupAlert(env, record) {
  'content-type': 'application/json',
  },
  body: JSON.stringify({
- personalizations: [{
- to: [{ email: config.to }],
- subject: `[SplashLens] New marketing signup: ${record.email}`,
- }],
+personalizations: [{
+to: [{ email: config.to }],
+subject: `[SplashLens] New marketing signup: ${record.email}`,
+custom_args: { product: 'splashlens', template_id: 'marketing_signup', correlation_id: record.correlationId },
+}],
  from: { email: config.from, name: 'SplashLens Alerts' },
  reply_to: { email: record.email },
  categories: ['splashlens', 'marketing-signup'],
@@ -154,6 +155,7 @@ export async function onRequestPost({ request, env }) {
 
  const source = (body.source || 'route-ready').slice(0, 50);
  const record = {
+ correlationId: crypto.randomUUID(),
  email,
  source,
  path: (body.path || '').slice(0, 300),

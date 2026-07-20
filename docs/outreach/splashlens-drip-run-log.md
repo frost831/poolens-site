@@ -1418,3 +1418,16 @@ True blockers:
 - Gmail hygiene: searches for SplashLens unsubscribe/remove/complaint/not-interested language and delivery-failure/bounce language in the last seven days returned no new matching messages. General reply search showed the warm Service Industry News and AQUA threads already in progress.
 - SEO/AEO work: language hub, Canada/French-Canada, Spanish, Portuguese, and Haitian Creole surfaces remained live; `ai.txt`, `llms.txt`, `robots.txt`, and `sitemap.xml` are the crawler discovery path.
 - Outreach action: no cold sends. Next eligible cold-send recheck remains 2026-07-20 or later after a fresh same-day Gmail hygiene sweep and day-lock pass.
+
+## Controlled outreach drip - 2026-07-20 09:00 CT
+
+- Live preflight passed: `https://splashlens.com`, `https://splashlens.com/partsnap-proof-library.html` (final route `/partsnap-proof-library`), and `https://app.splashlens.com` all returned final HTTP `200`.
+- Homepage trust scan passed: the fetched body supported the current `230+` positioning, showed no visible `500+` claim, and contained no checked fake-testimonial placeholder names. A generic `testimonial` markup token was not treated as a named testimonial.
+- Authenticated Gmail sender remains `Joshua Frost <frost@belowzeromedia.com>`. The fresh seven-day SplashLens/PartSnap sweep found no new unsubscribe, remove-me request, complaint, negative reply, bounce, undeliverable notice, or delivery failure requiring a queue change.
+- Known delivery failures remain the 2026-07-13 Wake Tech bounce (`19f5bdab320ff42e`) and NJPMA bounce (`19f5bdaae4aa2f1f`). Both queue rows were already `bounced` with no future send date.
+- Same-day Gmail sent search found `0` cold SplashLens emails on 2026-07-20 before this run.
+- The required single-writer/day-lock guard still reported `BLOCKED` because the two July 13 hard-bounce records remain inside its rolling seven-day run-log window.
+- Send decision: `0` cold emails. Recipients and subjects: none. No override was attempted and no outbound cold body was generated.
+- Added `0` prospects because future depth remains above the required floor: `queued=37` plus `needs-verification=37`, for `74` future candidates.
+- Queue snapshot remained: `queued=37`, `needs-verification=37`, `needs-contact=25`, `replied=11`, `suppressed=1`, `bounced=4`, `sent=64`, `follow-up-sent=57`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=4`, and `research-needed=19`.
+- Blocker: keep cold SplashLens outreach paused until a fresh Gmail hygiene sweep and the checked-in day-lock both pass. Recheck on the next daily run; the boundary depends on the guard's rolling-window calculation.

@@ -1424,6 +1424,7 @@ True blockers:
 - Live preflight passed: `https://splashlens.com`, `https://splashlens.com/partsnap-proof-library.html` (final route `/partsnap-proof-library`), and `https://app.splashlens.com` all returned final HTTP `200`.
 - Homepage trust scan passed: the fetched body supported the current `230+` positioning, showed no visible `500+` claim, and contained no checked fake-testimonial placeholder names. A generic `testimonial` markup token was not treated as a named testimonial.
 - Authenticated Gmail sender remains `Joshua Frost <frost@belowzeromedia.com>`. The fresh seven-day SplashLens/PartSnap sweep found no new unsubscribe, remove-me request, complaint, negative reply, bounce, undeliverable notice, or delivery failure requiring a queue change.
+- Warm-thread reconciliation stayed current: AQUA Magazine and Service Industry News remain `replied`; Carolyn Dibrell's 2026-07-17 call follow-up (`19f71abb6e39aa53`) is warm editorial/business activity and requires no queue change.
 - Known delivery failures remain the 2026-07-13 Wake Tech bounce (`19f5bdab320ff42e`) and NJPMA bounce (`19f5bdaae4aa2f1f`). Both queue rows were already `bounced` with no future send date.
 - Same-day Gmail sent search found `0` cold SplashLens emails on 2026-07-20 before this run.
 - The required single-writer/day-lock guard still reported `BLOCKED` because the two July 13 hard-bounce records remain inside its rolling seven-day run-log window.

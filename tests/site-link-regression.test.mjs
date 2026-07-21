@@ -59,3 +59,15 @@ test('SendGrid alert payloads expose product routing metadata', () => {
     assert.match(source, /correlation_id:/);
   }
 });
+
+test('remote diagnostics article uses the responsive official Pentair newsroom', () => {
+  const article = fs.readFileSync(
+    path.join(root, 'blog', 'pool-service-remote-diagnostics-2026.html'),
+    'utf8',
+  );
+  assert.match(
+    article,
+    /https:\/\/www\.pentair\.com\/en-us\/about-pentair\/newsroom\/news-releases\.html/,
+  );
+  assert.doesNotMatch(article, /investors\.pentair\.com\/news-releases\/news-release-details/);
+});

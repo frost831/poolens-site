@@ -30,6 +30,27 @@ test('all repaired pool automation href targets exist', () => {
   }
 });
 
+test('every local generated error-code href resolves to a deployed file', () => {
+  const sourceFiles = [];
+  const walk = (directory) => {
+    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+      const absolute = path.join(directory, entry.name);
+      if (entry.isDirectory() && entry.name !== '.git' && entry.name !== 'node_modules') walk(absolute);
+      else if (entry.isFile() && entry.name.endsWith('.html')) sourceFiles.push(absolute);
+    }
+  };
+  walk(root);
+  const missing = [];
+  for (const sourceFile of sourceFiles) {
+    const html = fs.readFileSync(sourceFile, 'utf8');
+    for (const match of html.matchAll(/href=["'](\/error-codes\/[^"'?#]+\.html)["']/g)) {
+      const target = path.join(root, ...match[1].slice(1).split('/'));
+      if (!fs.existsSync(target)) missing.push(`${path.relative(root, sourceFile)} -> ${match[1]}`);
+    }
+  }
+  assert.deepEqual(missing, []);
+});
+
 test('SendGrid alert payloads expose product routing metadata', () => {
   for (const relativePath of ['functions/api/subscribe.js', 'functions/api/event.js']) {
     const source = fs.readFileSync(path.join(root, relativePath), 'utf8');

@@ -44,14 +44,18 @@ if ($todayAcceptedSends -eq 0) {
 }
 
 $recentHardBounce = $false
+$recapPattern = '(?i)known|remain|remains|still|no new|beyond known|blocked because|earliest|window clears|old|prior|previous|fresh seven-day|hygiene|send boundary|send gate|guard|blocker|blocked'
+$bouncePattern = '(?i)hard[- ]?bounce|hard[- ]?bounced|delivery failure|550 No Such User|bounce id'
 for ($daysBack = 0; $daysBack -le 7; $daysBack++) {
   $checkDate = (Get-Date $Date).AddDays(-1 * $daysBack).ToString('yyyy-MM-dd')
-  $sections = [regex]::Matches($logText, "(?ms)^## .*?$([Regex]::Escape($checkDate)).*?(?=^## |\z)")
-  foreach ($section in $sections) {
-    if ($section.Value -match '(?i)hard[- ]?bounce|hard[- ]?bounced|delivery failure|550 No Such User|bounce id') {
-      $recentHardBounce = $true
-      break
-    }
+  $freshBounceLines = @([regex]::Split($logText, "`r?`n") | Where-Object {
+    ($_ -match $checkDate) -and
+    ($_ -match $bouncePattern) -and
+    ($_ -notmatch $recapPattern)
+  })
+  if ($freshBounceLines.Count -gt 0) {
+    $recentHardBounce = $true
+    break
   }
   if ($recentHardBounce) { break }
 }

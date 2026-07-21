@@ -1456,3 +1456,21 @@ True blockers:
 - Public store truth remained split but healthy on 2026-07-20: the public Google Play listing still exposed `SplashLens Field Tools`, package `com.splashlens.fieldtools`, public version `1.0.5`, `SoftwareApplication`, `InStock`, `Jun 25, 2026`, and `https://splashlens.com/privacy`, while Apple public lookup for `id6763644905` still reported bundle `com.splashlens.app`, version `1.0.6`, and `currentVersionReleaseDate` `2026-07-16T05:09:22Z`. Repo-local Android wrapper drift remains at `versionCode 7` / `versionName "1.0.6"`.
 - Gmail since the prior completed run on 2026-07-17 showed no new SplashLens unsubscribe/remove request, complaint, bounce, or delivery-failure. Warm thread movement was real: Carolyn Dibrell replied after the July 17 call (`19f71abb6e39aa53`), Joshua sent a same-thread follow-up to Carolyn (`19f71b0e3da4a31c`), and Joshua sent a warm operator-lane note to Tim Auerhahn (`19f71b36ac317d29`). No cold SplashLens send occurred on Monday, July 20, 2026.
 - Cold-send gate remained red. The checked-in `tools/splashlens_outreach_day_lock.ps1 -Date 2026-07-20` guard still returned `BLOCKED`, so no cold outreach was sent or drafted in this refresh.
+
+## Controlled outreach drip - 2026-07-21 13:00 CT
+
+- Live preflight passed: `https://splashlens.com` and `https://app.splashlens.com` both returned HTTP `200`.
+- Gmail hygiene passed before sending: the fresh seven-day searches for SplashLens/PartSnap unsubscribe/remove request, complaint, not-interested language, bounce, undeliverable notice, and delivery failure returned no matching new stop-signal messages.
+- Send guard fix: `tools\splashlens_outreach_day_lock.ps1` was tightened so old run-log recap text such as known prior hard-bounce notes does not masquerade as a fresh hard-bounce event. The guard still blocks dated hard-bounce/delivery-failure lines that are not recap/status text.
+- Send gate after the fix: `PASS`; created `docs\outreach\.locks\splashlens-outreach-2026-07-21.lock`; sends found before this batch were `0/5`.
+- Exact-recipient Gmail history check for the selected five recipients returned no messages before send.
+- Sent `5` one-to-one plain-text emails, no BCC:
+  - AquaFinesse, `customercare@aquafinesse.com`, subject `Spa water-care proof prompts in SplashLens`, sent id `19f84cc38b828323`.
+  - Bio-Dex Laboratories, `info@bio-dex.com`, subject `Pool and spa field-reference feedback`, sent id `19f84cc5af71614e`.
+  - Bullfrog Spas, `support@bullfrogspas.com`, subject `Spa proof prompts and field-reference feedback`, sent id `19f84cc7d2e634a3`.
+  - Coast Spas, `info@coastspas.com`, subject `Swim spa and service-proof feedback`, sent id `19f84cc9e68da915`.
+  - Dream Maker Spas, `sales@dreammakerspas.com`, subject `Spa field-reference feedback for SplashLens`, sent id `19f84ccc394f9691`.
+- Queue expansion added one verified training/on-site-testing route after exact Gmail history returned no messages: `Swimming Pool and Spa Association on-site testing` at `poolandspaassociation@yahoo.com`.
+- Duplicate/hold decisions: FSPA Education was not added because it is already `replied`; IPSSAN/editor route was not added because it is already `follow-up-sent`; PHTA was not added because the organization already has existing outreach history.
+- Queue snapshot after this run: `sent=69`, `follow-up-sent=57`, `queued=41`, `needs-verification=36`, `needs-contact=25`, `research-needed=19`, `replied=11`, `hold-community=6`, `bounced=4`, `hold-proof-needed=4`, `covered-by-sent=4`, and `suppressed=1`.
+- Learning OS direction: keep the free reference app intact and frame Learning OS as a paid/partner layer built from Service Proof Passport, Facility Assist, PartSnap misses, contamination/checklist workflows, and 5-minute training loops. Avoid positioning it as a generic LMS or certification replacement.

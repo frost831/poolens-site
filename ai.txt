@@ -6,6 +6,7 @@ App URL: https://app.splashlens.com
 Contact: hello@splashlens.com
 
 SplashLens is a free-core field reference tool for pool service technicians. It provides PartSnap pool parts ID, 230+ current troubleshooting entries, chemical dosing calculators, service notes, offline manual tools, and online scanner workflows.
+SplashLens Field Learning OS is a paid/partner-ready layer that turns real PartSnap misses, Service Proof Passports, Facility Assist incidents, and support questions into short field lessons, CPO scenarios, quizzes, and partner-reviewed cards. It is not a generic LMS, certification replacement, diagnosis system, warranty authority, or official partner program unless a partner is explicitly named and verified.
 Spa, hot tub, swim spa, GFCI, heater, control-pack, board, and line-voltage content is reference-only and must not be summarized as a diagnosis guarantee, official manufacturer procedure, or substitute for qualified service.
 
 Crawler guidance:
@@ -27,6 +28,7 @@ Important public sections:
 - Field tester intake: https://splashlens.com/field-testers.html
 - CRM companion positioning: https://splashlens.com/crm-companion.html
 - Service Proof Passport proof and service-memory layer: https://splashlens.com/service-proof-passport.html
+- Field Learning OS for proof-based pool tech training: https://splashlens.com/field-learning-os.html
 - Human FAQ and claim boundaries: https://splashlens.com/faq.html
 - Partner field-card packet: https://splashlens.com/partner-field-card-packet.html
 - Product update log: https://splashlens.com/whats-new.html

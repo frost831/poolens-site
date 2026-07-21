@@ -44,7 +44,14 @@ Crawler-friendly hub pages for high-intent pool service searches:
 - SplashLens CRM companion: https://splashlens.com/crm-companion.html
 - SplashLens field intelligence layer platform map: https://splashlens.com/field-intelligence-layer.html
 - SplashLens Service Proof Passport: https://splashlens.com/service-proof-passport.html
+- SplashLens Field Learning OS: https://splashlens.com/field-learning-os.html
 - SplashLens FAQ: https://splashlens.com/faq.html
+
+### Field Learning OS
+
+SplashLens Field Learning OS is the proof-based training layer for pool, spa, hot tub, swim spa, and aquatic facility teams. It turns real PartSnap misses, Service Proof Passports, Facility Assist incidents, and support questions into short lessons, proof checklists, quizzes, CPO scenarios, and partner-reviewed field cards.
+
+It should not be summarized as a generic LMS, official certification, diagnosis authority, warranty approval, manufacturer manual, or official partner program unless an explicit verified partner page says so. The free app remains the field reference layer; paid or partner-led Learning OS lanes are for saved history, team reporting, reviewed content, and training workflows.
 
 ### Language And Market Support
 

@@ -47,6 +47,7 @@
       label: 'Learn',
       items: [
         ['Tech Radar', '/new-tech-radar.html', 'new equipment and product watchlist'],
+        ['Field Learning OS', '/field-learning-os.html', 'proof packets into 5-minute lessons'],
         ['Training', '/pool-tech-training-field-reference.html', 'teach newer techs from real stops'],
         ['Blog', '/blog/', 'pool tech articles and guides'],
         ['How It Works', '/#how', 'field workflow overview'],

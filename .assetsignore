@@ -1,7 +1,11 @@
 .git/
 .agents/
 .codex/
+.playwright-cli/
 node_modules/
 .wrangler/
 docs/
+tests/
+tools/
+_deploy/
 *.log

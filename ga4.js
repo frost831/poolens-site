@@ -4,7 +4,7 @@
  window.__splashlensGa4Loaded = true;
  window.dataLayer = window.dataLayer || [];
  window.gtag = window.gtag || function gtag(){ window.dataLayer.push(arguments); };
- var attributionKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "gclid", "gbraid", "wbraid"];
+ var attributionKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "gclid", "gbraid", "wbraid", "participant", "participant_id", "pilot", "pilot_id", "ref", "referral_id"];
  function readAttribution() {
   var params = new URLSearchParams(window.location.search || "");
   var values = {};
@@ -72,7 +72,7 @@
  }
  function mirrorOwnerEvent(name, props) {
   var eventName = name || "site_event";
-  if (!/^(app_store_download_click|google_play_download_click|checkout_click|open_app_click|partsnap_click|press_coverage_click|industry_intel_click|team_deployment_click|route_ready_notify_submit|persona_fork_click|media_landing_view|campaign_landing_view|field_tester_lead|partner_lead)$/.test(eventName)) return;
+  if (!/^(app_store_download_click|google_play_download_click|checkout_click|open_app_click|partsnap_click|press_coverage_click|industry_intel_click|team_deployment_click|route_ready_notify_submit|persona_fork_click|media_landing_view|campaign_landing_view|field_tester_lead|partner_lead|field_challenge_started|field_challenge_routed|field_challenge_feedback|referral_share)$/.test(eventName)) return;
   var body = JSON.stringify({
    event: eventName,
    source: "site",

@@ -1,0 +1,23 @@
+1
+00:00:00,350 --> 00:00:04,300
+Found a loose part?
+Start with proof, not a guess.
+
+2
+00:00:04,500 --> 00:00:11,900
+In PartSnap, capture the full part,
+then the label or molded marking.
+
+3
+00:00:12,000 --> 00:00:20,300
+SplashLens can organize visible clues
+and suggest what to check next.
+
+4
+00:00:20,400 --> 00:00:27,200
+Treat any match as possible until you verify the model,
+manual, manufacturer guidance, and fitment.
+
+5
+00:00:27,250 --> 00:00:29,600
+Try the workflow at splashlens.com.

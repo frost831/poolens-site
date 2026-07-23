@@ -1,0 +1,22 @@
+1
+00:00:00,350 --> 00:00:04,300
+Would you order from one tight close-up?
+
+2
+00:00:04,500 --> 00:00:14,200
+Start with the full assembly, the label or markings,
+and the connection with a size reference.
+
+3
+00:00:14,300 --> 00:00:22,200
+SplashLens keeps those clues together for comparison
+against the model and manual.
+
+4
+00:00:22,300 --> 00:00:26,800
+Or send a cleaner request to a parts counter.
+Send proof, not a guess.
+
+5
+00:00:26,900 --> 00:00:29,600
+Test the workflow at splashlens.com.

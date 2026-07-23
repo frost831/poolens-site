@@ -15,6 +15,22 @@ const ALERT_EVENTS = new Set([
  'open_app_click',
 ]);
 
+const APP_FUNNEL_EVENTS = new Set([
+ 'article_referral_open',
+ 'campaign_landing_view',
+ 'campaign_view',
+ 'field_challenge_page_view',
+ 'field_challenge_started',
+ 'field_challenge_routed',
+ 'field_challenge_feedback',
+ 'app_store_download_click',
+ 'google_play_download_click',
+ 'play_store_download_click',
+ 'open_app_click',
+ 'partsnap_click',
+ 'checkout_click',
+]);
+
 function corsHeaders(request) {
  const origin = request.headers.get('Origin') || '';
  return {
@@ -28,6 +44,46 @@ function corsHeaders(request) {
 
 function clean(value, max = 120) {
  return String(value || '').replace(/[\u0000-\u001f\u007f]/g, '').trim().slice(0, max);
+}
+
+async function forwardToAppFunnel(record, props) {
+ if (!APP_FUNNEL_EVENTS.has(record.event)) return { sent: false, skipped: true };
+ const safeProps = {
+  client_id: clean(props.client_id || props.clientId, 120),
+  session_id: clean(props.session_id || props.sessionId, 160),
+  attribution_source: clean(props.attribution_source || record.source, 80),
+  attribution_medium: clean(props.attribution_medium || props.medium, 80),
+  attribution_campaign: clean(props.attribution_campaign || props.campaign, 120),
+  attribution_referrer_host: clean(props.attribution_referrer_host, 120),
+  field_challenge: clean(props.field_challenge || props.challenge, 80),
+  challenge_path: clean(props.challenge_path, 40),
+  challenge_id: clean(props.challenge_id, 100),
+  challenge_type: clean(props.challenge_type, 40),
+  pilot_id: clean(props.pilot_id || props.pilot, 80),
+  participant_id: clean(props.participant_id || props.participant, 80),
+  referral_id: clean(props.referral_id || props.ref, 80),
+  audience: clean(props.audience, 80),
+  destination: clean(props.destination, 120),
+  demo: props.demo === true || props.demo === 'true',
+  test: props.test === true || props.test === 'true',
+  synthetic: props.synthetic === true || props.synthetic === 'true',
+ };
+ try {
+  const response = await fetch('https://app.splashlens.com/api/events', {
+   method: 'POST',
+   headers: { 'Content-Type': 'application/json' },
+   body: JSON.stringify({
+    event: record.event,
+    source: record.source || 'marketing-site',
+    path: record.path,
+    props: safeProps,
+   }),
+  });
+  return { sent: response.ok, status: response.status };
+ } catch (error) {
+  console.warn('SplashLens funnel forwarding failed:', String(error));
+  return { sent: false, reason: 'forward_failed' };
+ }
 }
 
 function notifyConfig(env) {
@@ -182,6 +238,8 @@ export async function onRequestPost({ request, env }) {
  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
  ).bind(event, source, path, plan, mode, propsJson, userAgent, referrer, country).run();
 
+ const funnelForward = await forwardToAppFunnel(record, props);
+
  let alert = { sent: false, skipped: true };
  if (ALERT_EVENTS.has(event)) {
  alert = await sendEventAlert(env, record);
@@ -192,6 +250,7 @@ export async function onRequestPost({ request, env }) {
  ok: true,
  alertQueued: Boolean(alert.sent),
  emailConfigured: alert.reason !== 'missing_sendgrid_config',
+ funnelForwarded: Boolean(funnelForward.sent),
  }), { status: 200, headers });
  } catch (err) {
  console.error('Event capture error:', err);

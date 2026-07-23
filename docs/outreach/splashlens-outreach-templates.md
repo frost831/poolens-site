@@ -280,3 +280,83 @@ If it is not a fit, no problem. If there is a better route, I would appreciate t
 Talk Soon,
 Joshua
 
+## Manufacturer Representative / Product Educator
+
+Subject: Could SplashLens reduce avoidable support calls?
+
+Hi [Name],
+
+I am Joshua Frost, founder of SplashLens. I started in pool sales and later ran my own service company, so I have seen how quickly an incomplete model plate, vague symptom, or wrong part assumption can cost a tech another trip.
+
+SplashLens is a free no-account field reference app for pool and spa professionals:
+https://app.splashlens.com
+
+The goal is to help service businesses finish cleaner: identify a possible equipment or part family, capture the proof that is still missing, and prepare a better handoff before calling a rep, distributor, senior tech, or manufacturer.
+
+It does not diagnose, guarantee fit, or replace manuals and qualified judgment. Would someone on your product or training side be willing to try one real field scenario and tell me what evidence your reps wish techs captured the first time?
+
+Talk Soon,
+Joshua Frost
+Founder, SplashLens
+hello@splashlens.com
+
+## Parts Counter / Equipment Support
+
+Subject: Better proof before the part-order call
+
+Hi [Name],
+
+I built SplashLens after seeing how much route time disappears when a tech reaches a counter or support desk without the right label, angle, serial, symptom, or installed-context photo.
+
+SplashLens is free to use without an account:
+https://app.splashlens.com
+
+PartSnap and the proof workflow help organize possible part families and show what still needs verification before an order. The point is not to tell anyone what to replace. It is to help the tech arrive with better evidence so the counter or support team can help faster and the service business avoids a wrong-part callback.
+
+Would you test it with one common support request and tell me what proof prompt is missing?
+
+Talk Soon,
+Joshua Frost
+Founder, SplashLens
+hello@splashlens.com
+
+## Service-Business Educator / Mentor
+
+Subject: A free field tool for cleaner service stops
+
+Hi [Name],
+
+I am Joshua Frost, founder of SplashLens. I started in pool sales, moved into my own service company, and built the app around the small delays that follow a solo operator home: uncertain lookups, vague route notes, customer rewrites, and repeat trips for missing proof.
+
+SplashLens is free and requires no account:
+https://app.splashlens.com
+
+It helps techs look up equipment and codes, capture part and service evidence, and prepare clearer customer or senior-tech handoffs. It is a reference workflow, not a diagnosis or replacement for manuals and qualified judgment.
+
+Because you work with people building pool-service businesses, I would value a blunt test: does this genuinely save a newer operator time, and where does it still create work?
+
+Talk Soon,
+Joshua Frost
+Founder, SplashLens
+hello@splashlens.com
+
+## Spanish-Language Field Tester
+
+Subject: Una prueba de campo gratis para tecnicos de piscina
+
+Hola [Name],
+
+Soy Joshua Frost, fundador de SplashLens. Empece en ventas de piscinas y despues tuve mi propia compania de servicio. Cree SplashLens para ayudar a los tecnicos a terminar cada visita con menos dudas, mejores notas y menos viajes repetidos.
+
+La aplicacion es gratis y no requiere una cuenta:
+https://app.splashlens.com
+
+Incluye busqueda de equipos y codigos, PartSnap para posibles familias de piezas y herramientas para guardar la evidencia de la visita. No diagnostica, no garantiza compatibilidad y no reemplaza los manuales ni el criterio de un tecnico calificado.
+
+Podria probarla con un codigo, equipo o pieza real y decirme que falta para que sea mas util para tecnicos de habla hispana?
+
+Talk Soon,
+Joshua Frost
+Founder, SplashLens
+hello@splashlens.com
+

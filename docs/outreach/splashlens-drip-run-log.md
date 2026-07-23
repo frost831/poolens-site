@@ -1508,3 +1508,16 @@ True blockers:
   - Atlantic Aquatech, `brad@atlanticaquatechpools.com`, subject `Field-reference feedback for pool operator training`, Gmail id `19f8f31fedb0d74c`.
   - Patriot Pool Service, `info@patriotpoolservice.com`, subject `Could SplashLens support operator-course field follow-through?`, Gmail id `19f8f3203149fea0`.
 - Copy posture: practical service/operator workflow test, founder field context, free no-account app, cautious possible-match/reference language, and no diagnosis, fitment, certification, endorsement, or partnership claim.
+
+## Outreach lane expansion - 2026-07-23 10:15 CT
+
+- Send decision: `0` additional cold emails. The controlled daily limit was already fully used by the five one-to-one sends recorded above, so this pass was research and queue preparation only.
+- Expanded beyond the usual publication and service-company lanes into organizations that can help pool businesses reduce wrong-part calls, incomplete support requests, repeat visits, and after-hours documentation: manufacturer representatives, dealer/product educators, aquatic-facility risk and staff training, service-business mentorship, Spanish-language field testing, and independent parts/equipment support.
+- Added `14` verified `queued` prospects with current public business inboxes and `1` `needs-contact` prospect. Exact Gmail recipient searches and a second sent-mail domain search found no prior messages for any of the 14 sendable routes.
+- Manufacturer-representative routes added: The Alpha Group, Performance Link Rep Group, Southeast Leisure Reps, Devin Cahn Associates, MAST Sales Group, Aqua Quest, Byrd Moreton & Associates, and B&A Sales.
+- Business/training routes added: JRod Pool Service mentorship, Aquastar Consulting, and Pool Builder Marketing.
+- Field/channel routes added: JJ Elite Pool Service as a Spanish-language service-company tester, Pool Supply Now, and Lodore Pool Products.
+- Canada research route added as `needs-contact`: Sani Marc Pools & Spas. Its official current page confirms retailer/professional support, water-testing software, staff training, and eAcademy positioning, but no clean intended pool/spa business email was exposed, so no address was guessed.
+- Queue validation passed through PowerShell `Import-Csv`; total rows are now `292`. Snapshot: `queued=43`, `needs-verification=36`, `needs-contact=26`, `research-needed=19`, `sent=79`, `follow-up-sent=59`, `replied=11`, `bounced=4`, `suppressed=1`, `hold-community=6`, `hold-proof-needed=4`, and `covered-by-sent=4`.
+- Existing duplicate-email groups for Kendrick Content, The Pool & Spa Show, and NESPA remain historical organization-level rows with non-send statuses; this expansion introduced no new duplicate email address.
+- Recommended next clean-send order after a fresh Gmail hygiene sweep and day-lock pass: manufacturer-rep/resource routes first, then Aquastar Consulting and JRod, then the Spanish field-test and parts-counter routes. Each note should lead with helping a service business finish cleaner and avoid callbacks, not generic AI promotion.

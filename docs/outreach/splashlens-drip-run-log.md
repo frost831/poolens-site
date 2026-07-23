@@ -1522,3 +1522,14 @@ True blockers:
 - Existing duplicate-email groups for Kendrick Content, The Pool & Spa Show, and NESPA remain historical organization-level rows with non-send statuses; this expansion introduced no new duplicate email address.
 - Recommended next clean-send order after a fresh Gmail hygiene sweep and day-lock pass: manufacturer-rep/resource routes first, then Aquastar Consulting and JRod, then the Spanish field-test and parts-counter routes. Each note should lead with helping a service business finish cleaner and avoid callbacks, not generic AI promotion.
 - Added four lane-specific reusable drafts to `splashlens-outreach-templates.md`: manufacturer representative/product educator, parts counter/equipment support, service-business educator/mentor, and Spanish-language field tester. Each uses one app link, ends with `Talk Soon,`, and keeps diagnosis, fitment, manual, and qualified-judgment guardrails explicit.
+
+## Historical re-engagement audit - 2026-07-23 10:45 CT
+
+- Audited prior `sent` rows from the beginning of the queue against current queue status, organization/domain history, notes, and exact Gmail recipient history.
+- Excluded every known reply, bounce, suppression, unsubscribe/remove request, prior follow-up, same-organization repeat, duplicate-send row, and one automated support acknowledgment.
+- Identified `35` clean one-follow-up candidates with exactly one prior outbound touch and no human response. Saved them in `splashlens-reengagement-queue-2026-07-23.csv` as `ready`.
+- Fresh seven-day Gmail stop-signal sweep returned no new SplashLens/PartSnap unsubscribe, remove-me, complaint, negative reply, bounce, undeliverable notice, or delivery failure.
+- Verified `https://splashlens.com`, `https://app.splashlens.com`, and the tracked `campaign.html` landing route all returned HTTP `200`. The campaign page carries UTM attribution into app links and tracks landing, web-app, PartSnap, App Store, Google Play, and publication-coverage clicks.
+- Claim correction: public search and Gmail verify PoolPro and AQUA Magazine publication, active industry/training conversations, and outreach to podcast hosts; they do not verify a published SplashLens podcast appearance. The re-engagement copy therefore says SplashLens has been talking with podcast hosts rather than falsely claiming an appearance.
+- Added the `Verified Momentum Re-Engagement` template. It leads with helping service businesses finish faster, capture better proof, avoid wrong-part/repeat trips, and leave less work for after the route. It uses one tracked campaign link and ends with `Talk Soon,`.
+- No re-engagement email was sent in this pass because Gmail proves five cold emails were already sent on 2026-07-23. The day-lock parser was repaired to recognize both `sent id` and `Gmail id` log styles and now correctly blocks at `5/5`.

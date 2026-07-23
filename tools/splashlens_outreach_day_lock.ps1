@@ -32,14 +32,15 @@ if (!(Test-Path $runLog)) {
 
 $logText = Get-Content -LiteralPath $runLog -Raw
 $todayPattern = [Regex]::Escape($Date)
-$todayAcceptedSends = ([regex]::Matches($logText, "(?im)^\s*-\s+.*sent id `?19[a-zA-Z0-9]+`?.*$todayPattern|^\s*-\s+.*$todayPattern.*sent id `?19[a-zA-Z0-9]+`?")).Count
+$messageIdPattern = '(?:sent|gmail)\s+id `?19[a-zA-Z0-9]+`?'
+$todayAcceptedSends = ([regex]::Matches($logText, "(?im)^\s*-\s+.*$messageIdPattern.*$todayPattern|^\s*-\s+.*$todayPattern.*$messageIdPattern")).Count
 
 # Fallback for the current run-log style where a section header has the date
 # and the recipient bullets below carry Gmail ids but not the date.
 if ($todayAcceptedSends -eq 0) {
-  $sections = [regex]::Matches($logText, "(?ms)^## .*?$todayPattern.*?(?=^## |\z)")
+  $sections = [regex]::Matches($logText, "(?ms)^## [^\r\n]*$todayPattern[^\r\n]*\r?\n.*?(?=^## |\z)")
   foreach ($section in $sections) {
-    $todayAcceptedSends += ([regex]::Matches($section.Value, "(?im)sent id `?19[a-zA-Z0-9]+`?")).Count
+    $todayAcceptedSends += ([regex]::Matches($section.Value, "(?im)$messageIdPattern")).Count
   }
 }
 

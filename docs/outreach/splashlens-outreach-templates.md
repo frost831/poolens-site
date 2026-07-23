@@ -300,6 +300,28 @@ Joshua Frost
 Founder, SplashLens
 hello@splashlens.com
 
+## Verified Momentum Re-Engagement
+
+Subject: A useful SplashLens update for your team
+
+Hi [Name],
+
+I reached out earlier and wanted to send one useful update, then get out of your inbox.
+
+Since then, SplashLens has been published by PoolPro and AQUA Magazine, gone live on web, iOS, and Google Play, and expanded from equipment and code lookup into PartSnap, robot/automation/spa reference, voice notes, and cleaner service-proof workflows. We have also been talking with service-industry editors, trainers, facility operators, and podcast hosts about the field problems that still cost technicians time.
+
+The reason for reaching back out is simple: I want SplashLens to help service businesses finish calls faster, capture better proof, avoid wrong-part and repeat trips, and leave less paperwork for after the route.
+
+The core app is free and requires no account. Try it with one real code, part, or equipment family and tell me where it helps or falls short:
+https://splashlens.com/campaign.html?utm_source=outreach&utm_medium=email&utm_campaign=industry_reengagement_202607&utm_content=followup&audience=pool-service-businesses
+
+If it is useful, please share it with a tech. If it is not, blunt feedback is useful too.
+
+Talk Soon,
+Joshua Frost
+Founder, SplashLens
+hello@splashlens.com
+
 ## Parts Counter / Equipment Support
 
 Subject: Better proof before the part-order call

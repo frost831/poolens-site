@@ -1493,3 +1493,18 @@ True blockers:
   - HASA Ask Terry, `askterry@hasapool.com`, subject `Could SplashLens prompt better water-care proof?`, sent id `19f8a97525bf3b49`.
   - Periodic Products, `info@periodicproducts.com`, subject `Could SplashLens prompt better metals-treatment proof?`, sent id `19f8a97563e8349e`.
 - Queue snapshot after this run: `sent=74`, `follow-up-sent=57`, `queued=36`, `needs-verification=36`, `needs-contact=25`, `research-needed=19`, `replied=11`, `hold-community=6`, `bounced=4`, `hold-proof-needed=4`, `covered-by-sent=4`, and `suppressed=1`.
+
+## Controlled outreach drip - 2026-07-23 04:20 CT
+
+- Live preflight passed: `https://splashlens.com` and `https://app.splashlens.com` both returned HTTP `200`.
+- Gmail hygiene passed before sending: two-day searches found no SplashLens/PartSnap unsubscribe, remove-me request, complaint, negative reply, bounce, undeliverable notice, delivery failure, or new inbox reply.
+- The single-writer/day-lock guard returned `PASS`, created the 2026-07-23 lock, and reported `0/5` prior cold sends today.
+- Queue reconciliation caught two stale rows before send. NESPA and The Pool & Spa Show each had two prior Gmail sends and were moved from `queued` to `follow-up-sent`; no further cold follow-up is allowed unless they reply.
+- Exact-recipient Gmail history for the selected five recipients returned no messages before send.
+- Sent `5` one-to-one plain-text emails, no BCC, each with one app link and ending in `Talk Soon,`:
+  - Your Pool Buddy, `info@Yourpoolbuddy.com`, subject `Would SplashLens hold up on a real service stop?`, Gmail id `19f8f31f18ef19d2`.
+  - AAA Pool Service, `info@aaapoolservice.com`, subject `A practical field-stop test for SplashLens`, Gmail id `19f8f31f4d600991`.
+  - All Pure Pool Service, `allpure@softcom.net`, subject `Could this make weekly service documentation easier?`, Gmail id `19f8f31fcf882aab`.
+  - Atlantic Aquatech, `brad@atlanticaquatechpools.com`, subject `Field-reference feedback for pool operator training`, Gmail id `19f8f31fedb0d74c`.
+  - Patriot Pool Service, `info@patriotpoolservice.com`, subject `Could SplashLens support operator-course field follow-through?`, Gmail id `19f8f3203149fea0`.
+- Copy posture: practical service/operator workflow test, founder field context, free no-account app, cautious possible-match/reference language, and no diagnosis, fitment, certification, endorsement, or partnership claim.

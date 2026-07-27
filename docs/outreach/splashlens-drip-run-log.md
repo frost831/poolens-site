@@ -1563,4 +1563,4 @@ True blockers:
 
 - Tim replied that high-priority projects had taken over his schedule and asked Joshua to reach out again in September.
 - The Aquatic Council row remains `replied` and warm-only. `next_send_after` is now `2026-09-08`; no automated or cold outreach should reach Tim before then.
-- A short, gracious reply was prepared for Joshua's review. It was not sent by this run.
+- Joshua sent a short, gracious acknowledgement in the existing Gmail thread. Gmail id `19fa4ac211c5dea9`.

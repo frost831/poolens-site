@@ -1558,3 +1558,9 @@ True blockers:
   - Callen Pool Supply, `1callen@sbcglobal.net`, Gmail id `19fa3edf56efd104`.
 - Copy lanes were manufacturer-rep field proof, Facility Assist/operator feedback, parts-counter evidence, weekly service/customer updates, and proof-before-ordering. No diagnosis, fitment guarantee, certification, endorsement, or partnership claim was used.
 - Queue after reconciliation: `queued=42`, `sent=84`, `follow-up-sent=59`, `replied=11`, `bounced=4`, `suppressed=1`, `needs-verification=36`, `needs-contact=26`, `research-needed=19`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=4`, total `296`.
+
+## Tim Auerhahn September hold - 2026-07-27
+
+- Tim replied that high-priority projects had taken over his schedule and asked Joshua to reach out again in September.
+- The Aquatic Council row remains `replied` and warm-only. `next_send_after` is now `2026-09-08`; no automated or cold outreach should reach Tim before then.
+- A short, gracious reply was prepared for Joshua's review. It was not sent by this run.

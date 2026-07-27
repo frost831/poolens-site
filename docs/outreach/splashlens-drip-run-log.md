@@ -1544,3 +1544,17 @@ True blockers:
 - Send decision: `0` additional cold emails. The checked-in `tools\splashlens_outreach_day_lock.ps1 -Date 2026-07-23` guard now correctly returned `BLOCKED` because the daily cap was already consumed at `5/5`.
 - Queue expansion added four clean official-source prospects instead of sending: `Callen Pool Supply` (`1callen@sbcglobal.net`), `American Pool Supply` (`dave@americanpoolsupplyinc.com`), `Aquatic Management Services` (`info@aquaticms.com`), and `Pool Services Group` (`sales@poolservicesgroup.com`). Each public route was reverified on the official site and exact Gmail recipient/domain-history searches found no messages.
 - Queue snapshot after this refresh: `queued=47`, `needs-verification=36`, `needs-contact=26`, `research-needed=19`, `sent=79`, `follow-up-sent=59`, `replied=11`, `bounced=4`, `suppressed=1`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=4`, and `total=296`.
+
+## Sunday outreach and Tim calendar follow-up - 2026-07-27
+
+- Preflight passed: `https://splashlens.com` and `https://app.splashlens.com` returned HTTP `200`; the homepage carried the current `230+` positioning with no visible `500+` claim; Gmail found no new SplashLens bounce, unsubscribe/remove request, complaint, negative reply, or delivery failure after the prior July 23 run.
+- The checked-in day lock returned `PASS` with `0/5` cold sends before this batch. All messages were one-to-one plain text, used no BCC, linked to the app once, used conservative reference/verification language, and ended with `Talk Soon,`.
+- Sent a warm in-thread scheduling follow-up to Tim Auerhahn at Aquatic Council. It offered July 29-31 Eastern-time windows for a focused 20-30 minute Facility Assist/operator pilot discussion. This warm relationship message is not counted as a cold-drip send. Gmail id `19fa3ed03df36ee4`.
+- Reverified five current official recipient routes, confirmed exact recipient and domain Gmail history was empty, and verified MX before sending five cold messages:
+  - MAST Sales Group, Dan Bakotic, `dan@mastsalesgroup.com`, Gmail id `19fa3ed42a193d10`.
+  - Aquastar Consulting, Barb Kloberdanz, `bkloberdanz@aquastarconsulting.com`, Gmail id `19fa3ed6aea0f999`.
+  - American Pool Supply, Dave, `dave@americanpoolsupplyinc.com`, Gmail id `19fa3eda02d638ee`.
+  - Sunny Life Pool Service & Repair, Matt, `matt@sunnylifepools.com`, Gmail id `19fa3edc1d7cd2d0`.
+  - Callen Pool Supply, `1callen@sbcglobal.net`, Gmail id `19fa3edf56efd104`.
+- Copy lanes were manufacturer-rep field proof, Facility Assist/operator feedback, parts-counter evidence, weekly service/customer updates, and proof-before-ordering. No diagnosis, fitment guarantee, certification, endorsement, or partnership claim was used.
+- Queue after reconciliation: `queued=42`, `sent=84`, `follow-up-sent=59`, `replied=11`, `bounced=4`, `suppressed=1`, `needs-verification=36`, `needs-contact=26`, `research-needed=19`, `hold-community=6`, `hold-proof-needed=4`, `covered-by-sent=4`, total `296`.

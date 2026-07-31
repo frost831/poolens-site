@@ -1564,3 +1564,20 @@ True blockers:
 - Tim replied that high-priority projects had taken over his schedule and asked Joshua to reach out again in September.
 - The Aquatic Council row remains `replied` and warm-only. `next_send_after` is now `2026-09-08`; no automated or cold outreach should reach Tim before then.
 - Joshua sent a short, gracious acknowledgement in the existing Gmail thread. Gmail id `19fa4ac211c5dea9`.
+
+## Creative controlled outreach and queue refill - 2026-07-31 08:45 CT
+
+- Live preflight passed: `https://splashlens.com`, `https://app.splashlens.com`, and `https://app.splashlens.com/api/checkout-readiness` returned HTTP `200`. Checkout readiness reported direct Payment Link mode, active Stripe charges and payouts, configured webhook/storage, and all current plans configured.
+- Gmail sender verified as Joshua Frost at `frost@belowzeromedia.com`. Same-day sent search returned zero prior SplashLens messages. Searches after 2026-07-27 returned no new SplashLens or PartSnap bounce, unsubscribe/remove request, complaint, negative reply, undeliverable notice, or delivery failure. The only recent inbox result was the known Service Industry News scheduling thread.
+- The checked-in single-writer guard returned `PASS`, created the 2026-07-31 lock, and reported `0/5` prior cold sends.
+- Selected five different business lanes so the batch tested distinct value propositions. Every official source page returned `200`, displayed the exact public business email, exact Gmail history was empty, and MX resolved before send.
+- Sent `5` one-to-one plain-text emails, no BCC, each with one app link and ending in `Talk Soon,`:
+  - The Alpha Group, `hello@alphawest.com`, subject `Could SplashLens reduce vague product-support calls?`, Gmail id `19fb86a65b34e6ea`.
+  - JRod Pool Service mentorship, `info@jrodpoolservice.com`, subject `Could newer solo techs test this on one real stop?`, Gmail id `19fb86a66c8c2c24`.
+  - JJ Elite Pool Service, `jjelite.poolservice@gmail.com`, subject `¿Podrían probar SplashLens en una visita real?`, Gmail id `19fb86a68d155a60`.
+  - Aquatic Management Services, `info@aquaticms.com`, subject `A practical Facility Assist test for SplashLens`, Gmail id `19fb86a6ab5d5666`.
+  - Pool Services Group, `sales@poolservicesgroup.com`, subject `Better proof before a pool-equipment order`, Gmail id `19fb86a6cfad13fe`.
+- Copy posture stayed conservative: free no-account reference app; possible family matching and proof prompts; manual, model, and qualified-tech verification; no diagnosis, fitment guarantee, code/safety authority, endorsement, or partnership claim.
+- Creative refill added or upgraded five current official-source prospects for the next clean window: VacDaddy, Vacless Systems, JED Pool Tools, Commercial Aquatic Services, and Pool Daddy Atlanta. Each exact Gmail history was empty and MX resolved. VacDaddy's stale Instagram-only row was upgraded instead of duplicated.
+- Immediate post-send Gmail verification found one hard bounce: JJ Elite Pool Service at `jjelite.poolservice@gmail.com` returned `550 5.1.1` address not found or unable to receive mail, DSN id `19fb86a6cdb49d4c`. The queue row was changed to `bounced` and the address is permanently suppressed unless a replacement is later published and verified.
+- The hard bounce triggered the rules stop condition and the 2026-07-31 batch also consumed the controlled mailbox limit. No additional cold sends should be made today; warm replies may still be answered in thread after reading the full context.

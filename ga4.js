@@ -4,7 +4,7 @@
  window.__splashlensGa4Loaded = true;
  window.dataLayer = window.dataLayer || [];
  window.gtag = window.gtag || function gtag(){ window.dataLayer.push(arguments); };
- var attributionKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "gclid", "gbraid", "wbraid", "participant", "participant_id", "pilot", "pilot_id", "ref", "referral_id"];
+ var attributionKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "gclid", "gbraid", "wbraid", "participant", "participant_id", "pilot", "pilot_id", "ref", "referral_id", "contact_email", "email", "e", "sl_email", "contact_name", "name", "first_name", "last_name", "company", "organization", "org", "account", "role", "audience", "persona", "lead_id", "contact_id", "recipient_id", "prospect_id", "identity_source"];
  function readAttribution() {
   var params = new URLSearchParams(window.location.search || "");
   var values = {};

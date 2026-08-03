@@ -1,4 +1,4 @@
-// POST /api/event - anonymous first-party launch event capture.
+// POST /api/event - first-party launch event capture.
 // Env: SUBSCRIBERS_DB (D1 binding shared with the Route Ready waitlist)
 
 const ALLOWED_ORIGINS = new Set([
@@ -63,6 +63,13 @@ async function forwardToAppFunnel(record, props) {
   participant_id: clean(props.participant_id || props.participant, 80),
   referral_id: clean(props.referral_id || props.ref, 80),
   audience: clean(props.audience, 80),
+  known_email: clean(props.known_email || props.contact_email || props.email || props.e || props.sl_email, 180).toLowerCase(),
+  known_name: clean(props.known_name || props.contact_name || props.name || [props.first_name, props.last_name].filter(Boolean).join(' '), 140),
+  known_company: clean(props.known_company || props.company || props.organization || props.org || props.account, 160),
+  known_role: clean(props.known_role || props.role || props.audience || props.persona, 80),
+  lead_id: clean(props.lead_id || props.contact_id || props.recipient_id || props.prospect_id, 120),
+  identity_source: clean(props.identity_source || props.attribution_source || record.source, 80),
+  identity_confidence: clean(props.known_email || props.contact_email || props.email || props.e || props.sl_email ? 'tracked-email-link' : props.lead_id || props.contact_id || props.recipient_id || props.prospect_id ? 'tracked-link' : '', 40),
   destination: clean(props.destination, 120),
   demo: props.demo === true || props.demo === 'true',
   test: props.test === true || props.test === 'true',

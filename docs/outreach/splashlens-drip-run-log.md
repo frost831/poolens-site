@@ -1581,3 +1581,18 @@ True blockers:
 - Creative refill added or upgraded five current official-source prospects for the next clean window: VacDaddy, Vacless Systems, JED Pool Tools, Commercial Aquatic Services, and Pool Daddy Atlanta. Each exact Gmail history was empty and MX resolved. VacDaddy's stale Instagram-only row was upgraded instead of duplicated.
 - Immediate post-send Gmail verification found one hard bounce: JJ Elite Pool Service at `jjelite.poolservice@gmail.com` returned `550 5.1.1` address not found or unable to receive mail, DSN id `19fb86a6cdb49d4c`. The queue row was changed to `bounced` and the address is permanently suppressed unless a replacement is later published and verified.
 - The hard bounce triggered the rules stop condition and the 2026-07-31 batch also consumed the controlled mailbox limit. No additional cold sends should be made today; warm replies may still be answered in thread after reading the full context.
+
+## Controlled outreach push - 2026-08-05 09:20 CT
+
+- Send boundary: User explicitly requested a full outreach push. The checked-in `tools\splashlens_outreach_day_lock.ps1 -Date 2026-08-05` guard returned `PASS`, created the day lock, and reported `0/5` prior cold sends today. I did not override the project cap; I used the full clean five-send window.
+- Live preflight passed: `https://splashlens.com`, `https://app.splashlens.com`, and `https://app.splashlens.com/api/checkout-readiness` returned HTTP `200`. Checkout readiness reported `productionReady=true`, Stripe okay, webhook configured, storage configured, active Payment Links, and all current plans configured.
+- Gmail hygiene before send: broad seven-day stop-signal search surfaced only the warm Service Industry News scheduling thread, not a new unsubscribe, remove-me request, complaint, negative reply, bounce, undeliverable notice, or delivery failure. Same-day sent search found `0` SplashLens cold sends before this batch.
+- Exact selected-recipient Gmail history returned no prior SplashLens/PartSnap messages for the selected addresses/domains. MX resolved for all selected domains.
+- Sent `5` one-to-one plain-text emails, no BCC, each with one tracked app link, cautious reference-only language, no diagnosis/fitment/endorsement/partnership claim, and `Talk Soon,` signoff:
+  - Aqua Quest, `sales@aquaquest.net`, subject `Could SplashLens reduce vague support calls?`, Gmail id `19fd24824d9534e1`.
+  - Commercial Aquatic Services, `info@commercialaquatic.com`, subject `A Facility Assist test for SplashLens`, Gmail id `19fd248514db963e`.
+  - Devin Cahn Associates, `info@dca-sales.com`, subject `Field proof before product escalations`, Gmail id `19fd2487d8e81a40`.
+  - Performance Link Rep Group, `info@plrepgroup.com`, subject `Cleaner proof before support calls`, Gmail id `19fd248b35a3051f`.
+  - Southeast Leisure Reps, `sales@seleisurereps.com`, subject `A field-proof test for SplashLens`, Gmail id `19fd248d622c931c`.
+- Outreach strategy: prioritized manufacturer-rep/product-education and commercial/facility routes because they can influence product proof, support-call quality, dealer/counter workflows, and technician education.
+- Sidecar prospect findings: next clean expansion lanes should focus on VacDaddy/Vacless/JED/Pool Supply Now/Lodore, robot and smart-device brands, CPO/AFO/facility operators, distributor/counter routes, media/podcast demos, and trade-show exhibitor/speaker lists. Avoid group/member harvesting and generic legal/privacy/support blasts unless the official page clearly routes business/product inquiries there.

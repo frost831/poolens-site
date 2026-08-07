@@ -7,6 +7,8 @@ test('Amplitude site config is disabled without a Cloudflare secret', () => {
   const config = amplitudeConfigPayload({});
   assert.equal(config.enabled, false);
   assert.equal(config.apiKey, '');
+  assert.equal(config.status, 'missing_api_key');
+  assert.equal(config.ingestion, 'server_side_http_v2');
 });
 
 test('Amplitude site forwarding preserves campaign identity', async () => {
@@ -33,6 +35,7 @@ test('Amplitude site forwarding preserves campaign identity', async () => {
       lead_id: 'lead-test-12345',
       attribution_campaign: 'poolpro_followup',
       known_company: 'Demo Pool Co',
+      publication: 'poolpro',
     });
 
     assert.equal(result.sent, true);
@@ -42,6 +45,8 @@ test('Amplitude site forwarding preserves campaign identity', async () => {
     assert.equal(captured.body.events[0].device_id, 'site-client-12345');
     assert.equal(captured.body.events[0].event_properties.attribution_campaign, 'poolpro_followup');
     assert.equal(captured.body.events[0].user_properties.company, 'Demo Pool Co');
+    assert.equal(captured.body.events[0].groups.company, 'Demo Pool Co');
+    assert.equal(captured.body.events[0].groups.publisher, 'poolpro');
   } finally {
     globalThis.fetch = originalFetch;
   }

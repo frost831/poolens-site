@@ -17,10 +17,13 @@ export function amplitudeEnabled(env) {
 }
 
 export function amplitudeConfigPayload(env) {
+ const enabled = amplitudeEnabled(env);
  return {
   ok: true,
-  enabled: amplitudeEnabled(env),
-  apiKey: amplitudeEnabled(env) ? amplitudeApiKey(env) : '',
+  enabled,
+  status: enabled ? 'ready' : 'missing_api_key',
+  ingestion: 'server_side_http_v2',
+  apiKey: enabled ? amplitudeApiKey(env) : '',
   project: 'splashlens',
   product: 'site',
   sdkUrl: 'https://cdn.amplitude.com/libs/analytics-browser-2.11.7-min.js.gz',
@@ -29,6 +32,14 @@ export function amplitudeConfigPayload(env) {
 
 function pruneObject(value) {
  return Object.fromEntries(Object.entries(value).filter(([, item]) => item !== undefined && item !== null && item !== ''));
+}
+
+function groups(props) {
+ const company = clean(props.known_company || props.company || props.organization || props.org || props.account || '', 160);
+ const campaign = clean(props.attribution_campaign || props.campaign || '', 120);
+ const publisher = clean(props.publication || props.publisher || props.attribution_source || '', 80);
+ const value = pruneObject({ company, campaign, publisher });
+ return Object.keys(value).length ? value : undefined;
 }
 
 function identity(record, props) {
@@ -68,6 +79,7 @@ export async function forwardEventToAmplitude(env, record, props = {}) {
     identity_source: clean(props.identity_source || props.attribution_source || record.source || 'site', 80),
     identity_confidence: clean(props.identity_confidence || '', 40),
    }),
+   groups: groups(props),
    time: Date.parse(record.createdAt || '') || Date.now(),
    insert_id: clean(record.correlationId || `${record.event}:${record.createdAt}`, 180),
   }],

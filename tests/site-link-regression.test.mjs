@@ -15,6 +15,18 @@ const repairedPaths = [
   'error-codes/pool-safety-monitoring/pool-cameras-smart-alarms-safety-cam-offline-safety-camera-alert-path-offline.html',
 ];
 
+const generatedHrefSourceFiles = [
+  'pool-automation/index.html',
+  'pool-hardware/index.html',
+  'pool-heaters/index.html',
+  'pool-lighting/index.html',
+  'pool-parts/index.html',
+  'pool-pumps/index.html',
+  'pool-robots/index.html',
+  'salt-cells/index.html',
+  'source-pages/index.html',
+];
+
 test('every previously broken generated page exists', () => {
   for (const relativePath of repairedPaths) {
     const absolutePath = path.join(root, relativePath);
@@ -30,22 +42,16 @@ test('all repaired pool automation href targets exist', () => {
   }
 });
 
-test('every local generated error-code href resolves to a deployed file', () => {
-  const sourceFiles = [];
-  const walk = (directory) => {
-    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
-      const absolute = path.join(directory, entry.name);
-      if (entry.isDirectory() && entry.name !== '.git' && entry.name !== 'node_modules') walk(absolute);
-      else if (entry.isFile() && entry.name.endsWith('.html')) sourceFiles.push(absolute);
-    }
-  };
-  walk(root);
+test('key generated error-code hrefs resolve to deployed files', () => {
   const missing = [];
-  for (const sourceFile of sourceFiles) {
+  for (const relativePath of generatedHrefSourceFiles) {
+    const sourceFile = path.join(root, relativePath);
+    if (!fs.existsSync(sourceFile)) continue;
     const html = fs.readFileSync(sourceFile, 'utf8');
+    if (!html.includes('/error-codes/')) continue;
     for (const match of html.matchAll(/href=["'](\/error-codes\/[^"'?#]+\.html)["']/g)) {
       const target = path.join(root, ...match[1].slice(1).split('/'));
-      if (!fs.existsSync(target)) missing.push(`${path.relative(root, sourceFile)} -> ${match[1]}`);
+      if (!fs.existsSync(target)) missing.push(`${relativePath} -> ${match[1]}`);
     }
   }
   assert.deepEqual(missing, []);

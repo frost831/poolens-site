@@ -92,6 +92,48 @@ Joshua Frost
 Founder, SplashLens
 hello@splashlens.com
 
+## Midwest Season Wind-Down - Service Company
+
+Subject: End-of-season field test for SplashLens
+
+Hi [Name],
+
+I am Joshua Frost, founder of SplashLens. I started in pool sales, then moved into my own service company, so this came from real route, repair, and counter lookup friction.
+
+As pool season starts winding down in a lot of the Midwest, I am pushing SplashLens harder around one practical ask: try it on one ugly real stop before closing season gets noisy.
+
+Run one code, mystery part, equipment family, closing note, or proof workflow here:
+https://splashlens.com/campaign.html?utm_source=outreach&utm_medium=email&utm_campaign=midwest_winddown_2026&utm_content=service_company
+
+The core app is free, no account required. PartSnap gives possible part paths and proof prompts, not fitment guarantees. The goal is cleaner notes, better model/photo proof, and less guessing before someone orders blind or has to explain the visit later.
+
+If it saves time or falls short, I would genuinely appreciate the blunt field feedback.
+
+Talk Soon,
+Joshua Frost
+Founder, SplashLens
+hello@splashlens.com
+
+## Midwest Season Wind-Down - Supplier / Product
+
+Subject: Better proof before end-of-season part questions
+
+Hi [Name],
+
+I am Joshua Frost, founder of SplashLens. I built it after seeing how often pool techs and counter teams get stuck with a vague photo, old part, missing model plate, or rushed end-of-season repair question.
+
+SplashLens is a free-core field reference app for pool and spa pros:
+https://splashlens.com/campaign.html?utm_source=outreach&utm_medium=email&utm_campaign=midwest_winddown_2026&utm_content=supplier_product
+
+The practical workflow is simple: identify a possible part family, capture model plates and markings, show what proof is missing, and create a cleaner senior-tech/vendor packet before anyone orders blind. It does not diagnose, guarantee fit, or replace manufacturer guidance.
+
+Would you be open to testing it with one real part/support scenario and telling us what proof techs should capture before reaching out?
+
+Talk Soon,
+Joshua Frost
+Founder, SplashLens
+hello@splashlens.com
+
 ## Manufacturer / Training Team - Docs And Failure Points
 
 Subject: Field-safe SplashLens cards for [brand/category]

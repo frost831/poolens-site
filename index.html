@@ -8,10 +8,10 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0284c7">
 <title>SplashLens - PartSnap Pool Part ID and Free Field Tools</title>
-<meta name="description" content="SplashLens is the field intelligence layer for pool, spa, and aquatic service work: PartSnap parts ID, Saved Visit History, Connected Pool Network, Facility Assist, Field Learning OS workflows, and owner usage signals so techs finish cleaner and get more time back.">
+<meta name="description" content="SplashLens helps pool and spa pros get off the pad faster before close season: PartSnap parts ID, code lookup, visit proof, Facility Assist, Field Learning OS workflows, and owner usage signals so techs finish cleaner and get time back.">
 <meta property="og:site_name" content="SplashLens">
 <meta property="og:title" content="SplashLens - PartSnap Pool Part ID and Free Field Tools">
-<meta property="og:description" content="Identify it, prove it, explain it, train from it, and remember it. SplashLens connects PartSnap, service proof, facility workflows, Field Learning OS lessons, partner cards, and field usage signals.">
+<meta property="og:description" content="Identify it, prove it, explain it, train from it, and remember it. SplashLens connects PartSnap, visit proof, facility workflows, Field Learning OS lessons, partner cards, and field usage signals.">
 <link rel="image_src" href="https://splashlens.com/splashlens-share-card.png">
 <meta property="og:image" content="https://splashlens.com/splashlens-share-card.png">
 <meta property="og:image:secure_url" content="https://splashlens.com/splashlens-share-card.png">
@@ -1015,6 +1015,101 @@ line-height: 1.35;
  .stat-num { font-size: 2.4rem; font-weight: 800; color: var(--sky-dark); line-height: 1; }
  .stat-label { font-size: .85rem; color: var(--slate-soft); margin-top: 4px; font-weight: 500; }
 
+ /* SEASON PUSH */
+ .season-push {
+ background: linear-gradient(135deg, #071725 0%, #083344 52%, #0f766e 100%);
+ color: #fff;
+ padding: 34px 18px;
+ border-top: 1px solid rgba(255,255,255,.08);
+ border-bottom: 1px solid rgba(255,255,255,.1);
+ }
+ .season-push-shell {
+ max-width: 1180px;
+ margin: 0 auto;
+ display: grid;
+ grid-template-columns: minmax(260px, .95fr) minmax(360px, 1.25fr);
+ gap: 24px;
+ align-items: center;
+ }
+ .season-push-kicker {
+ margin: 0 0 9px;
+ color: #7dd3fc;
+ font-size: .76rem;
+ font-weight: 950;
+ letter-spacing: .12em;
+ text-transform: uppercase;
+ }
+ .season-push h2 {
+ margin: 0;
+ font-size: clamp(1.85rem, 3.8vw, 3.35rem);
+ line-height: 1.02;
+ letter-spacing: 0;
+ color: #fff;
+ }
+ .season-push p {
+ margin: 10px 0 0;
+ color: #dbeafe;
+ font-size: 1rem;
+ line-height: 1.55;
+ }
+ .season-actions {
+ display: flex;
+ gap: 10px;
+ flex-wrap: wrap;
+ margin-top: 18px;
+ }
+ .season-action {
+ display: inline-flex;
+ min-height: 46px;
+ padding: 0 16px;
+ border-radius: 8px;
+ align-items: center;
+ justify-content: center;
+ background: #38bdf8;
+ color: #04131c;
+ text-decoration: none;
+ font-weight: 950;
+ }
+ .season-action.secondary {
+ background: #fff;
+ color: #075985;
+ }
+ .season-paths {
+ display: grid;
+ grid-template-columns: repeat(3, minmax(0, 1fr));
+ gap: 10px;
+ }
+ .season-path {
+ min-height: 128px;
+ padding: 15px;
+ border: 1px solid rgba(255,255,255,.16);
+ border-radius: 8px;
+ background: rgba(255,255,255,.08);
+ color: #e0f2fe;
+ text-decoration: none;
+ }
+ .season-path b {
+ display: block;
+ color: #7dd3fc;
+ font-size: .78rem;
+ letter-spacing: .08em;
+ text-transform: uppercase;
+ }
+ .season-path strong {
+ display: block;
+ margin-top: 10px;
+ color: #fff;
+ font-size: 1.08rem;
+ line-height: 1.1;
+ }
+ .season-path span {
+ display: block;
+ margin-top: 7px;
+ color: #cfeeff;
+ font-size: .86rem;
+ line-height: 1.35;
+ }
+
  /* FIELD INTELLIGENCE LAYER */
  .field-os {
  background: #ffffff;
@@ -1579,6 +1674,10 @@ line-height: 1.35;
  .hero-product-bar,
  .partsnap-proof-flow,
  .hero-proof-line { display: none; }
+ .season-push-shell,
+ .season-paths {
+ grid-template-columns: 1fr;
+ }
  .field-os-shell,
  .field-os-grid,
  .field-os-card.is-wide {
@@ -1890,6 +1989,31 @@ line-height: 1.35;
 </div>
 </div>
 </div>
+
+<section class="season-push" aria-label="Midwest pool season wind-down push">
+ <div class="season-push-shell">
+ <div>
+ <p class="season-push-kicker">Season wind-down push</p>
+ <h2>Close season with cleaner proof, not more guessing.</h2>
+ <p>When Midwest routes shift into closings, repairs, winterization notes, odd parts, and last-minute callbacks, SplashLens gives techs one fast place to identify, verify, save, and hand off what happened.</p>
+ <div class="season-actions">
+ <a class="season-action" href="/campaign.html?utm_source=site&utm_medium=season_band&utm_campaign=midwest_winddown_2026&audience=pool-service-tech&challenge=field60" data-track="field_challenge_click" data-source="season_band_primary">Run the 60-second field test</a>
+ <a class="season-action secondary" href="/field-proof-pilot.html?utm_source=site&utm_medium=season_band&utm_campaign=midwest_winddown_2026&audience=service-owner" data-track="pilot_request_click" data-source="season_band_secondary">Request a 14-day pilot</a>
+ </div>
+ </div>
+ <div class="season-paths" aria-label="Season wind-down workflows">
+ <a class="season-path" href="https://app.splashlens.com/?tab=scan&mode=parts&utm_source=site&utm_medium=season_band&utm_campaign=midwest_winddown_2026&challenge=field60&challenge_path=partsnap&challenge_id=season_partsnap" target="_blank" rel="noopener" data-track="partsnap_click" data-source="season_partsnap">
+ <b>Tech</b><strong>Mystery part or code</strong><span>Start with the thing in your hand, then capture what proof is still missing.</span>
+ </a>
+ <a class="season-path" href="https://app.splashlens.com/?tab=report&utm_source=site&utm_medium=season_band&utm_campaign=midwest_winddown_2026&challenge=field60&challenge_path=service_proof&challenge_id=season_visit_proof" target="_blank" rel="noopener" data-track="service_proof_click" data-source="season_visit_proof">
+ <b>Owner</b><strong>Visit proof before winter</strong><span>Turn photos, readings, model plates, and notes into a cleaner handoff.</span>
+ </a>
+ <a class="season-path" href="/partner-field-card-packet.html?utm_source=site&utm_medium=season_band&utm_campaign=midwest_winddown_2026&audience=supplier-manufacturer" data-track="partner_packet_click" data-source="season_partner">
+ <b>Supplier</b><strong>Better proof before ordering</strong><span>Ask for model plates, markings, second photos, and symptoms before a part guess.</span>
+ </a>
+ </div>
+ </div>
+</section>
 
 <section class="buyer-strip" aria-label="SplashLens buyer messages">
  <div class="buyer-grid">

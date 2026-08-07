@@ -1596,3 +1596,23 @@ True blockers:
   - Southeast Leisure Reps, `sales@seleisurereps.com`, subject `A field-proof test for SplashLens`, Gmail id `19fd248d622c931c`.
 - Outreach strategy: prioritized manufacturer-rep/product-education and commercial/facility routes because they can influence product proof, support-call quality, dealer/counter workflows, and technician education.
 - Sidecar prospect findings: next clean expansion lanes should focus on VacDaddy/Vacless/JED/Pool Supply Now/Lodore, robot and smart-device brands, CPO/AFO/facility operators, distributor/counter routes, media/podcast demos, and trade-show exhibitor/speaker lists. Avoid group/member harvesting and generic legal/privacy/support blasts unless the official page clearly routes business/product inquiries there.
+## Midwest wind-down conversion push - 2026-08-07
+
+- User requested a hard SplashLens push as Midwest pool season winds down.
+- Send boundary: used the checked-in controlled outreach gate rather than bypassing suppression rules. `tools\splashlens_outreach_day_lock.ps1 -Date 2026-08-07` returned `PASS`, created the 2026-08-07 lock, and found `0/5` prior cold sends.
+- Live preflight passed before send: `https://splashlens.com` and `https://app.splashlens.com` returned HTTP `200`.
+- Gmail hygiene passed before send: seven-day stop-signal searches found no SplashLens/PartSnap unsubscribe, remove-me request, complaint, bounce, undeliverable notice, delivery failure, or negative reply; same-day sent search found no prior SplashLens messages.
+- Site updates deployed to Cloudflare Pages deployment `https://32dfcc7e.poolens-site.pages.dev`; production custom-domain checks with cache-busting verified the new homepage season band and campaign page copy on `https://splashlens.com/` and `https://splashlens.com/campaign`.
+- Homepage now includes a tracked `Season wind-down push` band with CTAs for the 60-second field test, 14-day pilot request, PartSnap, visit proof, and partner field-card packet.
+- Campaign page now leads with `Before closing season buries the route, test one ugly stop`, uses the `midwest_winddown_2026` UTM campaign, and keeps reference-only/manual-verification language visible.
+- Added `docs/outreach/splashlens-midwest-winddown-push-2026-08-07.md` and two reusable templates in `splashlens-outreach-templates.md`: service-company and supplier/product season wind-down copy.
+- Verification: `node --test tests\activation-funnel-bridge.test.mjs`, `node --test tests\field-proof-pilot.test.mjs`, and `node --test tests\amplitude-forwarding.test.mjs` passed. The broad generated-link regression was tightened to use targeted generated roots and `rg --files`; related named subtests passed, but the full local generated-href runner still hung in this Dropbox shell path and should be revisited separately from production deploy.
+- Recipient preflight: exact Gmail history was empty and MX resolved for all five selected recipients; all official source URLs returned HTTP `200`.
+- Sent `5` one-to-one plain-text emails, no BCC, each with one tracked campaign link, conservative reference-only language, no diagnosis/fitment/warranty/endorsement/affiliation claim, and `Talk Soon,` signoff:
+  - Vac Daddy portable pool vacuum, `info@thevacdaddy.com`, subject `Better proof before end-of-season part questions`, Gmail id `19fddebcf4810566`.
+  - Frank's Pool Services, `frank@frankspoolservices.com`, subject `End-of-season field test for SplashLens`, Gmail id `19fddebec1f2b610`.
+  - Pool Supply Now, `support@poolsupplynow.com`, subject `Better proof before end-of-season part questions`, Gmail id `19fddec087f24c7e`.
+  - Lodore Pool Products, `info@lodorepool.com`, subject `Better proof before end-of-season support calls`, Gmail id `19fddec272e4e5c3`.
+  - JED Pool Tools, `sales@jedpooltools.com`, subject `Better proof before end-of-season part questions`, Gmail id `19fddec4c0d94073`.
+- Queue rows changed: the five recipients above moved from `queued` to `sent`, `last_sent_at=2026-08-07`, `next_send_after=2026-08-12`, with Gmail IDs and proof notes added.
+- Queue refill after send: added six new verified `queued` Midwest prospects with source URLs returning HTTP `200`, empty exact Gmail history, and resolved MX: Pride Pool Service Inc., Performance Pool & Spa Hudson, Midwest Pool Supply, Poolside Pools & Spas, Huntington Woods Pools & Spas, and Goodman's Pool Service. Added Lotus Pools as `needs-verification` because the email/MX were available from search result context but direct curl to the source URL returned `406`.

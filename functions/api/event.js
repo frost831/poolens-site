@@ -1,6 +1,8 @@
 // POST /api/event - first-party launch event capture.
 // Env: SUBSCRIBERS_DB (D1 binding shared with the Route Ready waitlist)
 
+import { amplitudeEnabled, forwardEventToAmplitude } from '../_shared/amplitude.mjs';
+
 const ALLOWED_ORIGINS = new Set([
  'https://splashlens.com',
  'https://www.splashlens.com',
@@ -48,6 +50,7 @@ function clean(value, max = 120) {
 
 async function forwardToAppFunnel(record, props) {
  if (!APP_FUNNEL_EVENTS.has(record.event)) return { sent: false, skipped: true };
+ const knownEmail = clean(props.known_email || props.contact_email || props.email || props.e || props.sl_email, 180).toLowerCase();
  const safeProps = {
   client_id: clean(props.client_id || props.clientId, 120),
   session_id: clean(props.session_id || props.sessionId, 160),
@@ -63,13 +66,13 @@ async function forwardToAppFunnel(record, props) {
   participant_id: clean(props.participant_id || props.participant, 80),
   referral_id: clean(props.referral_id || props.ref, 80),
   audience: clean(props.audience, 80),
-  known_email: clean(props.known_email || props.contact_email || props.email || props.e || props.sl_email, 180).toLowerCase(),
+  known_email: knownEmail,
   known_name: clean(props.known_name || props.contact_name || props.name || [props.first_name, props.last_name].filter(Boolean).join(' '), 140),
   known_company: clean(props.known_company || props.company || props.organization || props.org || props.account, 160),
   known_role: clean(props.known_role || props.role || props.audience || props.persona, 80),
   lead_id: clean(props.lead_id || props.contact_id || props.recipient_id || props.prospect_id, 120),
   identity_source: clean(props.identity_source || props.attribution_source || record.source, 80),
-  identity_confidence: clean(props.known_email || props.contact_email || props.email || props.e || props.sl_email ? 'tracked-email-link' : props.lead_id || props.contact_id || props.recipient_id || props.prospect_id ? 'tracked-link' : '', 40),
+  identity_confidence: clean(knownEmail ? 'tracked-email-link' : props.lead_id || props.contact_id || props.recipient_id || props.prospect_id ? 'tracked-link' : '', 40),
   destination: clean(props.destination, 120),
   demo: props.demo === true || props.demo === 'true',
   test: props.test === true || props.test === 'true',
@@ -185,6 +188,7 @@ export async function onRequestGet({ request, env }) {
  source: 'first_party_d1',
  stored: true,
  fresh: latestAgeMinutes !== null && latestAgeMinutes <= 1440,
+ amplitudeConfigured: amplitudeEnabled(env),
  latest_received_at: latestAt,
  latest_age_minutes: latestAgeMinutes,
  latest_event: latest?.event || null,
@@ -246,6 +250,7 @@ export async function onRequestPost({ request, env }) {
  ).bind(event, source, path, plan, mode, propsJson, userAgent, referrer, country).run();
 
  const funnelForward = await forwardToAppFunnel(record, props);
+ const amplitude = await forwardEventToAmplitude(env, record, props);
 
  let alert = { sent: false, skipped: true };
  if (ALERT_EVENTS.has(event)) {
@@ -258,6 +263,8 @@ export async function onRequestPost({ request, env }) {
  alertQueued: Boolean(alert.sent),
  emailConfigured: alert.reason !== 'missing_sendgrid_config',
  funnelForwarded: Boolean(funnelForward.sent),
+ amplitudeQueued: Boolean(amplitude.sent),
+ amplitudeConfigured: amplitude.reason !== 'missing_amplitude_api_key',
  }), { status: 200, headers });
  } catch (err) {
  console.error('Event capture error:', err);

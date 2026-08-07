@@ -61,6 +61,7 @@
         ['Field Testers', '/field-testers.html', 'send real-world feedback'],
         ['Field Card Packet', '/partner-field-card-packet.html', 'manufacturer-ready proof cards'],
         ['Facilities Pilot', '/facilities', 'QR workflow and support routing'],
+        ['Field Proof Pilot', '/field-proof-pilot.html', '14-day company test'],
         ['Media Traffic', '/paid-media.html', 'lean conversion page']
       ]
     },

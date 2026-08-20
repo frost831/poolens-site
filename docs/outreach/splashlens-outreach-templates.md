@@ -102,8 +102,8 @@ I am Joshua Frost, founder of SplashLens. I started in pool sales, then moved in
 
 As pool season starts winding down in a lot of the Midwest, I am pushing SplashLens harder around one practical ask: try it on one ugly real stop before closing season gets noisy.
 
-Run one code, mystery part, equipment family, closing note, or proof workflow here:
-https://splashlens.com/campaign.html?utm_source=outreach&utm_medium=email&utm_campaign=midwest_winddown_2026&utm_content=service_company
+Run one code, mystery part, equipment family, connected-pump alert, closing note, or proof workflow here:
+https://splashlens.com/campaign.html?utm_source=outreach&utm_medium=email&utm_campaign=closing_season_2026&utm_content=service_company
 
 The core app is free, no account required. PartSnap gives possible part paths and proof prompts, not fitment guarantees. The goal is cleaner notes, better model/photo proof, and less guessing before someone orders blind or has to explain the visit later.
 
@@ -123,9 +123,9 @@ Hi [Name],
 I am Joshua Frost, founder of SplashLens. I built it after seeing how often pool techs and counter teams get stuck with a vague photo, old part, missing model plate, or rushed end-of-season repair question.
 
 SplashLens is a free-core field reference app for pool and spa pros:
-https://splashlens.com/campaign.html?utm_source=outreach&utm_medium=email&utm_campaign=midwest_winddown_2026&utm_content=supplier_product
+https://splashlens.com/campaign.html?utm_source=outreach&utm_medium=email&utm_campaign=closing_season_2026&utm_content=supplier_product
 
-The practical workflow is simple: identify a possible part family, capture model plates and markings, show what proof is missing, and create a cleaner senior-tech/vendor packet before anyone orders blind. It does not diagnose, guarantee fit, or replace manufacturer guidance.
+The practical workflow is simple: identify a possible part or equipment family, capture model plates and markings, show what proof is missing, and create a cleaner senior-tech/vendor packet before anyone orders blind. It does not diagnose, guarantee fit, or replace manufacturer guidance.
 
 Would you be open to testing it with one real part/support scenario and telling us what proof techs should capture before reaching out?
 

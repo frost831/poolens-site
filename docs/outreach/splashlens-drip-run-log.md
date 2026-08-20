@@ -1616,3 +1616,17 @@ True blockers:
   - JED Pool Tools, `sales@jedpooltools.com`, subject `Better proof before end-of-season part questions`, Gmail id `19fddec4c0d94073`.
 - Queue rows changed: the five recipients above moved from `queued` to `sent`, `last_sent_at=2026-08-07`, `next_send_after=2026-08-12`, with Gmail IDs and proof notes added.
 - Queue refill after send: added six new verified `queued` Midwest prospects with source URLs returning HTTP `200`, empty exact Gmail history, and resolved MX: Pride Pool Service Inc., Performance Pool & Spa Hudson, Midwest Pool Supply, Poolside Pools & Spas, Huntington Woods Pools & Spas, and Goodman's Pool Service. Added Lotus Pools as `needs-verification` because the email/MX were available from search result context but direct curl to the source URL returned `406`.
+
+## Closing-season subscriber push and scrape - 2026-08-20
+
+- Send boundary: no live sends. User requested project/growth push, queue clearing, scraping, and subscriber strategy; no explicit `send` command was given, so this run stayed approval-ready under the checked-in outreach rules.
+- Gmail hygiene: 30-day stop-signal search found no SplashLens/PartSnap unsubscribe, remove-me, complaint, bounce, undeliverable, delivery-failure, or negative reply hits. Recent SplashLens query returned app-alert/usage messages only.
+- Day lock: `tools\splashlens_outreach_day_lock.ps1 -Date 2026-08-20` returned `PASS` and found `0/5` sends today.
+- Live preflight: `https://splashlens.com`, `https://app.splashlens.com`, and `https://app.splashlens.com/api/checkout-readiness` were healthy; checkout readiness reported `productionReady=true`, Stripe ok, webhook configured, storage configured, active Payment Links, and all plans configured.
+- Site conversion update: refreshed `campaign.html` for closing-season traffic. New hero: `Closing season is where messy notes become callbacks.` Added connected-pump proof prompt section and a post-value `Unlock PartSnap Pro` CTA while keeping free-core and reference-only language.
+- Current-source scrape: added `docs/outreach/splashlens-source-urls-2026-08-20.txt`; ran `tools\prepare_outreach_queue_from_urls.py`; raw scrape produced 95 review rows from 17 public source URLs.
+- Queue cleanup: added `tools\splashlens_closing_push_20260820.mjs`; wrote `docs/outreach/splashlens-prospect-review-clean-2026-08-20.csv`; appended 11 new rows as `needs-verification`; held 12 same-domain rows for manual review; rejected 72 noisy/existing rows from append.
+- Approval-ready send pack created at `docs/outreach/splashlens-closing-season-push-2026-08-20.md` with five proposed recipients: PoolRx, Jack's Magic, Chlorine King Pool Service, Pool Spa Patio Expo, and Raypak technical training route. Copy uses one tracked campaign link, no diagnosis/fitment/endorsement claim, and `Talk Soon,`.
+- Verification: `node --test tests\activation-funnel-bridge.test.mjs tests\amplitude-forwarding.test.mjs tests\field-proof-pilot.test.mjs tests\site-link-regression.test.mjs` passed 14/14.
+- Deployment: preview branch URL `https://93c5a96a.poolens-site.pages.dev`; production branch deploy URL `https://4e919b9b.poolens-site.pages.dev`. Production custom-domain smoke verified the new campaign copy on `https://splashlens.com/campaign`.
+- Heal gate: `tools\splashlens-heal.ps1` passed site/app/payment/SEO/trust checks.

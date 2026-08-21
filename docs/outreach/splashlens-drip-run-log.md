@@ -1630,3 +1630,19 @@ True blockers:
 - Verification: `node --test tests\activation-funnel-bridge.test.mjs tests\amplitude-forwarding.test.mjs tests\field-proof-pilot.test.mjs tests\site-link-regression.test.mjs` passed 14/14.
 - Deployment: preview branch URL `https://93c5a96a.poolens-site.pages.dev`; production branch deploy URL `https://4e919b9b.poolens-site.pages.dev`. Production custom-domain smoke verified the new campaign copy on `https://splashlens.com/campaign`.
 - Heal gate: `tools\splashlens-heal.ps1` passed site/app/payment/SEO/trust checks.
+
+## Closing-season follow-up send - 2026-08-21
+
+- Send boundary: user explicitly said `send`; proceeded with the prepared closing-season send pack after refreshing eligibility checks.
+- Day lock: `tools\splashlens_outreach_day_lock.ps1 -Date 2026-08-21` returned `PASS`, created the lock, and found `0/5` sends today before this batch.
+- Gmail sender: `Joshua Frost <frost@belowzeromedia.com>`.
+- Stop-signal review: broad 30-day SplashLens/PartSnap stop-signal search surfaced the known warm Service Industry News scheduling/advertising thread, not a new unsubscribe, remove-me request, complaint, bounce, undeliverable, or negative reply tied to this batch. Same-day sent search found no prior SplashLens sends before this batch.
+- Recipient history: all five recipients had prior June SplashLens outreach, so this batch was written and sent as a careful follow-up rather than first-touch cold copy. No recipient reply or stop signal was found in the checked histories.
+- Live preflight: `https://splashlens.com/campaign.html` service and supplier campaign URLs returned HTTP `200`; `https://app.splashlens.com/api/checkout-readiness` returned HTTP `200`. MX resolved for all five recipient domains.
+- Sent `5` one-to-one plain-text emails, no BCC, each with one tracked campaign link, conservative reference-only language, no diagnosis/fitment/warranty/endorsement/affiliation claim, and `Talk Soon,` signoff:
+  - PoolRx, `cs@poolrx.com`, subject `Closing-season proof before recurring pool questions`, Gmail id `1a02493e6223a81a`.
+  - Jack's Magic, `jacksmagic@jacksmagic.com`, subject `Closing-season proof before stain or chemistry questions`, Gmail id `1a02494073fe6f9d`.
+  - Chlorine King Pool Service, `office@chlorinekingpools.com`, subject `One ugly closing-season stop for SplashLens`, Gmail id `1a0249426102f20d`.
+  - Pool Spa Patio Expo, `client.services@poolspapatio.com`, subject `Closing-season field proof workflow for service education`, Gmail id `1a024944968169cb`.
+  - Raypak technical training route, `warranty@raypak.com`, subject `Better proof before closing-season heater support questions`, Gmail id `1a024946bef1ce82`.
+- Queue rows changed: the five recipients above moved to `follow-up-sent`, `last_sent_at=2026-08-21`, `next_send_after=2026-08-28`, with Gmail IDs and proof notes added.

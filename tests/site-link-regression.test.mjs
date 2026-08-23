@@ -66,6 +66,12 @@ test('SendGrid alert payloads expose product routing metadata', () => {
   }
 });
 
+test('internal archive and outreach docs stay behind the docs blocker', () => {
+  const source = fs.readFileSync(path.join(root, 'functions', 'docs', '[[path]].js'), 'utf8');
+  assert.match(source, /\/docs\/archive\//);
+  assert.match(source, /\/docs\/outreach\//);
+});
+
 test('remote diagnostics article uses the responsive official Pentair newsroom', () => {
   const article = fs.readFileSync(
     path.join(root, 'blog', 'pool-service-remote-diagnostics-2026.html'),

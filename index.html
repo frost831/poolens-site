@@ -40,7 +40,7 @@
 {"@context":"https://schema.org","@type":"Organization","name":"SplashLens","url":"https://splashlens.com","description":"SplashLens builds free field reference tools for pool service professionals.","sameAs":["https://app.splashlens.com","https://apps.apple.com/us/app/splashlens/id6763644905","https://play.google.com/store/apps/details?id=com.splashlens.fieldtools"]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is SplashLens really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. SplashLens is free with no credit card and no account required."}},{"@type":"Question","name":"How does offline mode work?","acceptedAnswer":{"@type":"Answer","text":"When you first open SplashLens, the service worker caches the app to your device. Manual tools like error lookup, calculators, and guides work without signal after first load. Online camera scanning requires internet."}},{"@type":"Question","name":"What brands are covered in the troubleshooting library?","acceptedAnswer":{"@type":"Answer","text":"Hayward, Pentair, Jandy, Zodiac, Maytronics/Dolphin, Polaris, Aiper, Raypak, IntelliFlo, AquaCal, Sta-Rite, Waterway, Beatbot, Betta, lighting, automation, covers, water features, robots, chemical controllers, and more - 230+ current entries in the app database."}},{"@type":"Question","name":"Does SplashLens compete with route or CRM software?","acceptedAnswer":{"@type":"Answer","text":"No. Service-management platforms run the company. SplashLens supports the stop with field lookup, scanner, dosing, and service-note tools."}},{"@type":"Question","name":"Is the AI scanner live?","acceptedAnswer":{"@type":"Answer","text":"Yes. Error Scan, PartSnap, and Test Strip reader are live online. Offline use falls back to manual lookup and entry."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is SplashLens really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. SplashLens is free with no credit card and no account required."}},{"@type":"Question","name":"How does offline mode work?","acceptedAnswer":{"@type":"Answer","text":"When you first open SplashLens, the service worker caches the app to your device. Manual tools like error lookup, calculators, and guides work without signal after first load. Online camera scanning requires internet."}},{"@type":"Question","name":"What brands are covered in the troubleshooting library?","acceptedAnswer":{"@type":"Answer","text":"Hayward, Pentair, Jandy, Zodiac, Maytronics/Dolphin, Polaris, Aiper, Raypak, IntelliFlo, AquaCal, Sta-Rite, Waterway, Balboa, Gecko, Master Spas/H2X, Endless Pools, Hydropool, Jacuzzi/Sundance, Hot Spring/Caldera, Beatbot, Betta, lighting, automation, covers, water features, robots, chemical controllers, spa packs, swim-current pumps, and more - 230+ current entries in the app database."}},{"@type":"Question","name":"Does SplashLens have hot tub, spa, and swim spa support?","acceptedAnswer":{"@type":"Answer","text":"Yes. SplashLens includes a dedicated spa and swim-spa field lane for Balboa, Gecko, Waterway NEO, no heat, weak jets, GFCI trip timing, sanitizer/feeders, covers, lifters, and current-pump proof. It is a reference aid, not a replacement for manuals or qualified service."}},{"@type":"Question","name":"Does SplashLens compete with route or CRM software?","acceptedAnswer":{"@type":"Answer","text":"No. Service-management platforms run the company. SplashLens supports the stop with field lookup, scanner, dosing, and service-note tools."}},{"@type":"Question","name":"Is the AI scanner live?","acceptedAnswer":{"@type":"Answer","text":"Yes. Error Scan, PartSnap, and Test Strip reader are live online. Offline use falls back to manual lookup and entry."}}]}
 </script>
 <style>
  :root {
@@ -1074,11 +1074,11 @@ line-height: 1.35;
  background: #fff;
  color: #075985;
  }
- .season-paths {
- display: grid;
- grid-template-columns: repeat(3, minmax(0, 1fr));
- gap: 10px;
- }
+.season-paths {
+display: grid;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+gap: 10px;
+}
  .season-path {
  min-height: 128px;
  padding: 15px;
@@ -1778,25 +1778,73 @@ line-height: 1.35;
  }
  .feature-card .feature-badge { display: inline-block; }
  .comp-swipe-hint {
- display: block;
- margin: -30px 0 12px;
+ display: none;
  color: var(--sky-dark);
  font-size: .82rem;
  font-weight: 800;
  text-align: center;
  }
  .comp-wrap {
- margin: 0 -18px;
- padding: 0 18px 8px;
- -webkit-overflow-scrolling: touch;
+ margin: 0;
+ padding: 0;
+ overflow: visible;
  }
  .comp-table {
- min-width: 760px;
+ min-width: 0;
+ width: 100%;
  font-size: .82rem;
+ border-radius: 0;
+ box-shadow: none;
  }
- .comp-table th,
+ .comp-table thead {
+ display: none;
+ }
+ .comp-table tbody,
+ .comp-table tr,
  .comp-table td {
- padding: 12px 14px;
+ display: block;
+ width: 100%;
+ }
+ .comp-table tr {
+ margin-bottom: 12px;
+ border: 1px solid var(--border);
+ border-radius: 12px;
+ overflow: hidden;
+ background: white;
+ box-shadow: var(--card-shadow);
+ }
+ .comp-table tr:nth-child(even) td { background: white; }
+ .comp-table td {
+ border-bottom: 1px solid var(--border);
+ display: grid;
+ grid-template-columns: minmax(100px, .75fr) minmax(0, 1fr);
+ align-items: center;
+ gap: 10px;
+ padding: 11px 13px;
+ word-break: break-word;
+ }
+ .comp-table td:last-child { border-bottom: none; }
+ .comp-table td:first-child {
+ display: block;
+ background: var(--sky-xlight) !important;
+ color: var(--slate);
+ font-weight: 900;
+ font-size: .9rem;
+ }
+ .comp-table td:not(:first-child)::before {
+ color: var(--slate-soft);
+ content: "Field-service CRM";
+ font-size: .68rem;
+ font-weight: 900;
+ letter-spacing: .05em;
+ text-transform: uppercase;
+ }
+ .comp-table td:nth-child(2)::before { content: "SplashLens"; }
+ .comp-table td:nth-child(3)::before { content: "Route app"; }
+ .comp-table td:nth-child(4)::before { content: "Pool CRM"; }
+ .comp-table td.highlight {
+ background: #e0f2fe !important;
+ color: var(--sky-dark);
  }
  .cta-section { padding: 56px 18px; }
  .cta-section .btn-primary {
@@ -2011,6 +2059,9 @@ line-height: 1.35;
  <a class="season-path" href="/partner-field-card-packet.html?utm_source=site&utm_medium=season_band&utm_campaign=midwest_winddown_2026&audience=supplier-manufacturer" data-track="partner_packet_click" data-source="season_partner">
  <b>Supplier</b><strong>Better proof before ordering</strong><span>Ask for model plates, markings, second photos, and symptoms before a part guess.</span>
  </a>
+ <a class="season-path" href="/spa-hot-tub-troubleshooting-app.html?utm_source=site&utm_medium=season_band&utm_campaign=spa_swim_spa_push_2026" data-track="spa_lane_click" data-source="season_spa">
+ <b>Spa</b><strong>Hot tub and swim-spa stops</strong><span>Balboa, Gecko, Waterway NEO, H2X, Endless, Hydropool, GFCI timing, weak jets, covers, feeders, and current-pump proof.</span>
+ </a>
  </div>
  </div>
 </section>
@@ -2061,10 +2112,10 @@ line-height: 1.35;
  <div style="display:grid;grid-template-columns:1.05fr 2fr;gap:18px;align-items:start;">
  <div>
  <div class="section-eyebrow" style="text-align:left">Start in the right mode</div>
- <h2 style="color:#082f49;font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.05;margin:0 0 10px;">One app. Three front doors.</h2>
+ <h2 style="color:#082f49;font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.05;margin:0 0 10px;">One app. Four front doors.</h2>
  <p style="color:#475569;font-size:1rem;line-height:1.55;margin:0;">SplashLens keeps the deep tech tools available, but the first screen should match the person holding the phone.</p>
  </div>
- <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+ <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;">
  <a href="https://app.splashlens.com/?mode=tech&utm_source=site&utm_medium=persona&utm_campaign=field60_home&challenge=field60&challenge_path=partsnap&challenge_id=site_persona_tech" data-track="persona_fork_click" data-source="home_persona_tech" data-challenge-path="partsnap" data-challenge-id="site_persona_tech" style="background:#fff;border:1px solid #dbe8ef;border-left:4px solid #0f766e;border-radius:10px;padding:14px;text-decoration:none;min-height:132px;box-shadow:0 1px 2px rgba(15,23,42,.06);">
  <strong style="display:block;color:#0f172a;font-size:1.02rem;line-height:1.1;margin-bottom:8px;">I fix pools for a living</strong>
  <span style="display:block;color:#64748b;font-size:.9rem;line-height:1.4;">PartSnap, codes, dosing, visit notes, and field tools first.</span>
@@ -2076,6 +2127,10 @@ line-height: 1.35;
  <a href="/facilities" data-track="persona_fork_click" data-source="home_persona_operator" style="background:#fff;border:1px solid #dbe8ef;border-left:4px solid #b45309;border-radius:10px;padding:14px;text-decoration:none;min-height:132px;box-shadow:0 1px 2px rgba(15,23,42,.06);">
  <strong style="display:block;color:#0f172a;font-size:1.02rem;line-height:1.1;margin-bottom:8px;">Service company or multi-site operator?</strong>
  <span style="display:block;color:#64748b;font-size:.9rem;line-height:1.4;">Facility access, QR pilot-in-a-box, usage reporting, and support routing.</span>
+ </a>
+ <a href="/spa-hot-tub-troubleshooting-app.html" data-track="persona_fork_click" data-source="home_persona_spa" style="background:#fff;border:1px solid #dbe8ef;border-left:4px solid #7c3aed;border-radius:10px;padding:14px;text-decoration:none;min-height:132px;box-shadow:0 1px 2px rgba(15,23,42,.06);">
+ <strong style="display:block;color:#0f172a;font-size:1.02rem;line-height:1.1;margin-bottom:8px;">Pool company that also touches spas?</strong>
+ <span style="display:block;color:#64748b;font-size:.9rem;line-height:1.4;">Hot tubs, swim spas, spa packs, weak jets, GFCI trip timing, covers, and sanitizer/feeders.</span>
  </a>
  </div>
  </div>
@@ -2093,14 +2148,14 @@ line-height: 1.35;
  try {
   var params = new URLSearchParams(window.location.search);
   var persona = params.get('p');
-  if (persona === 'tech' || persona === 'facility' || persona === 'operator') {
+  if (persona === 'tech' || persona === 'facility' || persona === 'operator' || persona === 'spa') {
    localStorage.setItem('splashlens_site_persona', persona);
   }
   document.addEventListener('click', function(event) {
    var link = event.target.closest && event.target.closest('[data-track="persona_fork_click"]');
    if (!link) return;
    var source = link.getAttribute('data-source') || '';
-   var value = source.indexOf('facility') >= 0 ? 'facility' : source.indexOf('operator') >= 0 ? 'operator' : 'tech';
+   var value = source.indexOf('spa') >= 0 ? 'spa' : source.indexOf('facility') >= 0 ? 'facility' : source.indexOf('operator') >= 0 ? 'operator' : 'tech';
    localStorage.setItem('splashlens_site_persona', value);
   });
  } catch (err) {}
@@ -2709,8 +2764,12 @@ line-height: 1.35;
  <p class="faq-a">On iPhone, install SplashLens from the App Store. On Android, use the Google Play listing or open app.splashlens.com and use the browser install option when available. The web app remains free for field reference use.</p>
  </details>
  <details class="faq-item">
+ <summary class="faq-q">Does SplashLens have hot tub, spa, and swim spa support?</summary>
+ <p class="faq-a">Yes. SplashLens has a dedicated spa and swim-spa lane for Balboa, Gecko, Waterway NEO, Master Spas H2X, Endless Pools, Hydropool, PDC, TidalFit, Bullfrog, Jacuzzi, Sundance, Hot Spring, Caldera, covers, lifters, weak jets, no heat, GFCI trip timing, sanitizer/feeders, ozone, UV, AOP, and swim-current pump proof. It is a field reference, not a replacement for current manuals or qualified electrical/heater service.</p>
+ </details>
+ <details class="faq-item">
  <summary class="faq-q">What brands are covered in the error code library?</summary>
- <p class="faq-a">Hayward (TriStar, Super Pump, MasterTemp, OmniLogic), Pentair (IntelliFlow, IntelliFlo, MasterTemp, EasyTouch), Jandy (iAqualink, JXi), Zodiac, Maytronics/Dolphin (robot cleaners), Polaris, Kreepy Krauly, Waterway, and more. Beatbot and Betta robotic cleaners are in the current expansion.</p>
+ <p class="faq-a">Hayward (TriStar, Super Pump, MasterTemp, OmniLogic), Pentair (IntelliFlow, IntelliFlo, MasterTemp, EasyTouch), Jandy (iAqualink, JXi), Zodiac, Maytronics/Dolphin, Polaris, Kreepy Krauly, Waterway, Balboa, Gecko, Master Spas/H2X, Endless Pools, Hydropool, Jacuzzi/Sundance, Hot Spring/Caldera, and more. Beatbot and Betta robotic cleaners are in the current expansion.</p>
  </details>
  <details class="faq-item">
  <summary class="faq-q">What does the AI scanner actually do?</summary>

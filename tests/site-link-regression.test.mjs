@@ -87,6 +87,39 @@ test('closing season launch page is crawlable, linked, and claim-safe', () => {
   assert.match(ai, /SplashLens Closing Season Mode/);
 });
 
+test('spa and swim spa lane is crawlable, promoted, and safely framed', () => {
+  const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
+  const ai = fs.readFileSync(path.join(root, 'ai.txt'), 'utf8');
+  const nav = fs.readFileSync(path.join(root, 'splashlens-nav.js'), 'utf8');
+  const brief = fs.readFileSync(path.join(root, 'docs', 'outreach', 'spa-swim-spa-push-brief-2026-08-23.md'), 'utf8');
+
+  const requiredPages = [
+    'spa-hot-tub-troubleshooting-app.html',
+    'spa-swim-spa-parts-identification-app.html',
+    'source-pages/balboa-spa-pack-troubleshooting.html',
+    'source-pages/gecko-spa-pack-troubleshooting.html',
+    'source-pages/waterway-neo-spa-pack-troubleshooting.html',
+    'source-pages/master-spas-h2x-swim-spa-troubleshooting.html',
+    'source-pages/swim-spa-current-pump-troubleshooting.html',
+    'source-pages/spa-gfci-breaker-troubleshooting.html',
+  ];
+
+  for (const relativePath of requiredPages) {
+    assert.equal(fs.existsSync(path.join(root, relativePath)), true, relativePath);
+    assert.match(sitemap, new RegExp(`https://splashlens\\.com/${relativePath.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`));
+  }
+
+  assert.match(home, /Hot tub and swim-spa stops/);
+  assert.match(home, /Pool company that also touches spas/);
+  assert.match(home, /Does SplashLens have hot tub, spa, and swim spa support/);
+  assert.match(home, /It is a field reference, not a replacement for current manuals or qualified electrical\/heater service/);
+  assert.match(nav, /Spa \/ Swim Spa/);
+  assert.match(ai, /Spa, hot tub, and swim spa troubleshooting app/);
+  assert.match(brief, /Try the free spa lane with one real hot tub or swim-spa issue/);
+  assert.match(brief, /Electrical, heater, GFCI, pack, board, and line-voltage work still requires qualified service/);
+});
+
 test('remote diagnostics article uses the responsive official Pentair newsroom', () => {
   const article = fs.readFileSync(
     path.join(root, 'blog', 'pool-service-remote-diagnostics-2026.html'),

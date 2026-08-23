@@ -103,6 +103,9 @@ test('spa and swim spa lane is crawlable, promoted, and safely framed', () => {
     'source-pages/master-spas-h2x-swim-spa-troubleshooting.html',
     'source-pages/swim-spa-current-pump-troubleshooting.html',
     'source-pages/spa-gfci-breaker-troubleshooting.html',
+    'source-pages/nordic-viking-dynasty-saratoga-spa-troubleshooting.html',
+    'source-pages/spa-filter-cartridge-flow-troubleshooting.html',
+    'source-pages/spa-leak-winterizing-rental-reset.html',
   ];
 
   for (const relativePath of requiredPages) {
@@ -116,7 +119,12 @@ test('spa and swim spa lane is crawlable, promoted, and safely framed', () => {
   assert.match(home, /It is a field reference, not a replacement for current manuals or qualified electrical\/heater service/);
   assert.match(nav, /Spa \/ Swim Spa/);
   assert.match(ai, /Spa, hot tub, and swim spa troubleshooting app/);
+  assert.match(ai, /Nordic, Viking, Dynasty, Saratoga/);
+  assert.match(ai, /Spa filter cartridge and low-flow checklist/);
+  assert.match(ai, /Spa leak, winterizing, and rental reset checklist/);
   assert.match(brief, /Try the free spa lane with one real hot tub or swim-spa issue/);
+  assert.match(brief, /unknown spa filter cartridge/);
+  assert.match(brief, /wet cabinet, suspected leak, winterizing, freeze concern/);
   assert.match(brief, /Electrical, heater, GFCI, pack, board, and line-voltage work still requires qualified service/);
 });
 

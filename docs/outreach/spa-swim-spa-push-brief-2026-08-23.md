@@ -9,7 +9,7 @@ SplashLens has a real spa, hot tub, and swim spa lane in the public site and app
 - App deep link: `https://app.splashlens.com/?tab=errors&search=spa`
 - App swim-spa deep link: `https://app.splashlens.com/?tab=errors&search=swim%20spa`
 
-Current coverage includes Balboa, Gecko, Waterway NEO, Master Spas H2X, Endless Pools, Hydropool, PDC, TidalFit, Bullfrog, Jacuzzi, Sundance, Hot Spring, Caldera, Marquis, Coast, Arctic, Wellis, spa packs, topsides, heater tubes, flow/pressure symptoms, GFCI trip timing, weak jets, air controls, diverters, suctions, VGB covers, swim-current pumps, ozone, UV, AOP, sanitizer/feeders, covers, lifters, lights, audio, and Wi-Fi modules.
+Current coverage includes Balboa, Gecko, Waterway NEO, Master Spas H2X, Endless Pools, Hydropool, PDC, TidalFit, Bullfrog, Jacuzzi, Sundance, Hot Spring, Caldera, Marquis, Coast, Arctic, Wellis, Nordic Hot Tubs, Viking Spas, Dynasty Spas, Saratoga Spas, Adirondack-style spa proof, spa packs, topsides, heater tubes, flow/pressure symptoms, GFCI trip timing, weak jets, air controls, diverters, suctions, VGB covers, swim-current pumps, unknown filter cartridges, collapsed filters, wet cabinets, leak timing, winterizing/freeze proof, vacation-rental resets, ozone, UV, AOP, sanitizer/feeders, covers, lifters, lights, audio, and Wi-Fi modules.
 
 ## Push angle
 
@@ -27,6 +27,8 @@ Try the free spa lane with one real hot tub or swim-spa issue:
 - weak jet bank
 - breaker trips immediately versus only on heat call
 - Balboa/Gecko/Waterway topside code
+- unknown spa filter cartridge, collapsed cartridge, or low-flow/no-heat call
+- wet cabinet, suspected leak, winterizing, freeze concern, or vacation-rental reset
 - waterlogged cover or broken lifter
 - sanitizer feeder / ozone / UV / AOP issue
 - swim-current pump or suction-cover concern

@@ -72,6 +72,21 @@ test('internal archive and outreach docs stay behind the docs blocker', () => {
   assert.match(source, /\/docs\/outreach\//);
 });
 
+test('closing season launch page is crawlable, linked, and claim-safe', () => {
+  const page = fs.readFileSync(path.join(root, 'closing-season.html'), 'utf8');
+  const nav = fs.readFileSync(path.join(root, 'splashlens-nav.js'), 'utf8');
+  const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
+  const ai = fs.readFileSync(path.join(root, 'ai.txt'), 'utf8');
+
+  assert.match(page, /Closing Season Mode/);
+  assert.match(page, /Document the close before the freeze/);
+  assert.match(page, /not insurance and does not guarantee coverage/);
+  assert.match(page, /exact equipment manual, product label, local code, company policy, and qualified judgment/);
+  assert.match(nav, /\/closing-season\.html/);
+  assert.match(sitemap, /https:\/\/splashlens\.com\/closing-season\.html/);
+  assert.match(ai, /SplashLens Closing Season Mode/);
+});
+
 test('remote diagnostics article uses the responsive official Pentair newsroom', () => {
   const article = fs.readFileSync(
     path.join(root, 'blog', 'pool-service-remote-diagnostics-2026.html'),

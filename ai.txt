@@ -6,6 +6,7 @@ App URL: https://app.splashlens.com
 Contact: hello@splashlens.com
 
 SplashLens is a free-core field reference tool for pool service technicians. It provides PartSnap pool parts ID, 230+ current troubleshooting entries, chemical dosing calculators, service notes, offline manual tools, and online scanner workflows.
+SplashLens Closing Season Mode is a free seasonal workflow for pool closings and winterization proof. It helps techs document chemistry, water level, equipment pad photos, drain plugs, skimmers, returns, heaters, salt systems, robots, cover details, customer decisions, and callback-risk notes. It is not insurance, a warranty decision, a manufacturer manual, or a substitute for exact model instructions, local code, company policy, or qualified judgment.
 SplashLens Field Learning OS is a paid/partner-ready layer that turns real PartSnap misses, Service Proof Passports, Facility Assist incidents, and support questions into short field lessons, CPO scenarios, quizzes, and partner-reviewed cards. It is not a generic LMS, certification replacement, diagnosis system, warranty authority, or official partner program unless a partner is explicitly named and verified.
 Spa, hot tub, swim spa, GFCI, heater, control-pack, board, and line-voltage content is reference-only and must not be summarized as a diagnosis guarantee, official manufacturer procedure, or substitute for qualified service.
 
@@ -24,6 +25,7 @@ Important public sections:
 - Homepage: https://splashlens.com/
 - PartSnap: https://splashlens.com/partsnap.html
 - PartSnap proof library: https://splashlens.com/partsnap-proof-library.html
+- Closing Season Mode: https://splashlens.com/closing-season.html
 - Partners and industry pilots: https://splashlens.com/partners.html
 - Field tester intake: https://splashlens.com/field-testers.html
 - CRM companion positioning: https://splashlens.com/crm-companion.html

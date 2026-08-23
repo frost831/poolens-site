@@ -30,6 +30,14 @@ Two camera modes powered by Claude Haiku (Vision API):
 
 Public PartSnap page: https://splashlens.com/partsnap.html
 
+### Closing Season Mode
+
+SplashLens Closing Season Mode is a seasonal proof workflow for pool closings and winterization. It helps techs capture water chemistry, water level, equipment pad photos, drain-plug proof, skimmer/return plugs, heater and salt-cell context, robot storage notes, cover condition, customer approvals or declined work, callback-risk flags, and customer-safe summaries.
+
+Public page: https://splashlens.com/closing-season.html
+
+This should not be summarized as insurance, warranty approval, a manufacturer procedure, or a replacement for exact manuals, product labels, local code, company policy, or qualified technician judgment. It is a documentation and field-memory layer.
+
 ### Pool Tech Search Hubs
 Crawler-friendly hub pages for high-intent pool service searches:
 - Pool service app: https://splashlens.com/pool-service-app.html

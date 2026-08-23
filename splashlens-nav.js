@@ -7,6 +7,7 @@
         ['PartSnap', '/partsnap', 'photo-based part clue workflow'],
         ['Parts ID Page', '/partsnap-pool-part-identification-app.html', 'marketing and proof path'],
         ['Job Records', '/partsnap-proof-library.html', 'what to photo before ordering'],
+        ['Closing Season', '/closing-season.html', 'winterization proof and callback notes'],
         ['Mystery Lab', '/mystery-part-lab.html', 'weird part review lane'],
         ['AI Scanning', '/#ai', 'error scan, PartSnap, strip reader'],
         ['Open Web App', 'https://app.splashlens.com', 'use the field tools now']

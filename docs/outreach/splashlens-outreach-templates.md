@@ -12,6 +12,48 @@ The PoolPro link remains available when a warm recipient specifically needs both
 
 https://poolpromag.com/splashlens-launches-free-field-reference-app/
 
+## Closing Season Launch - Service Company
+
+Subject: Closing-season field test for SplashLens
+
+Hi [Name],
+
+I am Joshua Frost, founder of SplashLens. I started in pool sales, then moved into my own service company, so this came from real route, repair, and counter lookup friction.
+
+We just launched a closing-season workflow for pool techs:
+https://splashlens.com/closing-season.html?utm_source=outreach&utm_medium=email&utm_campaign=closing_season_launch_2026&utm_content=[slug]
+
+The practical idea is simple: before the tech leaves the pad, capture cleaner proof around chemistry, drain plugs, heater/salt/robot status, cover notes, customer decisions, and callback-risk items. It is not insurance and does not guarantee coverage, but better photos and notes can help if a customer, owner, spring-opening crew, or carrier asks what was done later.
+
+The core app is free, no account required. If you try it on one real closing or ugly equipment stop, I would genuinely appreciate blunt field feedback.
+
+Talk Soon,
+Joshua Frost
+Founder, SplashLens
+hello@splashlens.com
+
+## Closing Season Launch - Supplier / Counter / Support
+
+Subject: Better proof before closing-season part questions
+
+Hi [Name],
+
+I am Joshua Frost, founder of SplashLens. I started in pool sales, then moved into my own service company, and built SplashLens around the part, code, and proof gaps that slow people down in the field.
+
+We just launched a closing-season workflow:
+https://splashlens.com/closing-season.html?utm_source=outreach&utm_medium=email&utm_campaign=closing_season_launch_2026&utm_content=[slug]
+
+For a supplier or counter team, the useful piece may be the proof prompts: model plates, old part markings, installed context, photos, drain-plug proof, heater/salt/robot notes, and what is still missing before anyone guesses or orders blind.
+
+SplashLens is a free-core reference app. It does not diagnose, guarantee fit, replace manuals, or imply coverage. It just helps techs bring a cleaner story before a closing-season question turns into a wrong part or spring callback.
+
+Would you be open to trying it with one common part/support scenario and telling me what proof techs should capture first?
+
+Talk Soon,
+Joshua Frost
+Founder, SplashLens
+hello@splashlens.com
+
 ## Mystery Part Challenge - Creator / Podcast / Media
 
 Subject: Mystery pool part challenge for your audience

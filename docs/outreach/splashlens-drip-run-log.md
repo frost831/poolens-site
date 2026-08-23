@@ -1646,3 +1646,43 @@ True blockers:
   - Pool Spa Patio Expo, `client.services@poolspapatio.com`, subject `Closing-season field proof workflow for service education`, Gmail id `1a024944968169cb`.
   - Raypak technical training route, `warranty@raypak.com`, subject `Better proof before closing-season heater support questions`, Gmail id `1a024946bef1ce82`.
 - Queue rows changed: the five recipients above moved to `follow-up-sent`, `last_sent_at=2026-08-21`, `next_send_after=2026-08-28`, with Gmail IDs and proof notes added.
+
+## Closing-season launch build and send - 2026-08-23
+
+- Build completed before outreach:
+  - Site: added `closing-season.html`, homepage season CTA updates, navigation link, sitemap entry, `ai.txt`, `llms.txt`, `whats-new.html`, and a regression test for crawlability and claim safety.
+  - App: added Closing Season Mode to Service Proof workflows, metadata, checklist data, source-boundary language, service-worker cache bump, and app regression tests.
+- Source lanes reviewed for claim-safe closing/winterization framing included Pentair freeze/winterizing guidance, Hayward closing guidance, Raypak winterizing guidance, Maytronics robotic cleaner winter storage, and CDC/MAHC facility-code boundaries. Public manufacturer/manual guidance remains the source lane; SplashLens does not replace exact manuals, labels, local code, company policy, or qualified judgment.
+- Verification before deploy:
+  - App: `npm test` passed `67/67`.
+  - Site: `node --test tests\activation-funnel-bridge.test.mjs tests\amplitude-forwarding.test.mjs tests\field-proof-pilot.test.mjs tests\site-link-regression.test.mjs` passed `16/16`.
+- Deployment:
+  - Site deployed to Cloudflare Pages preview `https://05f4ad0d.poolens-site.pages.dev`.
+  - App deployed to Cloudflare Pages preview `https://602b8b5a.poolens.pages.dev`.
+  - Production smoke passed: `https://splashlens.com/closing-season.html` returned `200` and showed `Document the close before the freeze`, `Open Closing Mode`, PoolPro coverage, and AQUA coverage copy.
+  - Production app smoke passed: `https://app.splashlens.com` returned `200` and showed Closing Season Mode copy.
+- Git:
+  - Site commit `891ba42` pushed to `throttleshare/poolens-site` branch `outreach/splashlens-drip-20260616`.
+  - App commit `81553ba` pushed to `throttleshare/poolens` branch `feature/splashlens-usage-alerts-dashboard`.
+- Send boundary:
+  - Checked-in day lock returned `PASS` and reported `0/5` prior cold sends for the local lock date.
+  - Gmail sender verified as `Joshua Frost <frost@belowzeromedia.com>`.
+  - Seven-day stop-signal search found no SplashLens unsubscribe, remove-me, bounce, complaint, negative reply, undeliverable notice, or delivery failure.
+  - Seven-day sent search found the August 21 controlled batch to PoolRx, Jack's Magic, Chlorine King, PSP Expo, and Raypak; those recipients were excluded from today's send.
+  - Exact history checks excluded already-touched media/podcast/blog rows including Poolonomics, Pool Magazine, Pool Chasers, The Deep End, Pool & Spa Marketing, and The Pool Operators Club. Poolonomics remains `bounced`.
+- Sent `5` one-to-one plain-text emails, no BCC, each ending in `Talk Soon,` and using conservative language: free-core reference app, closing-season proof workflow, no diagnosis, no fitment guarantee, no insurance product, no coverage guarantee, no manual/code replacement.
+  - Pride Pool Service Inc., `info@pridepoolservice.com`, subject `Closing-season field test for SplashLens`, Gmail id `1a02cbb797c7d46e`.
+  - Performance Pool & Spa Hudson, `sales@performancepools.com`, subject `Closing-season proof before the spring callback`, Gmail id `1a02cbb97c11a771`.
+  - Midwest Pool Supply, `info@midwestpoolsupply.com`, subject `Better proof before closing-season part questions`, Gmail id `1a02cbbbaec86e2f`.
+  - Poolside Pools & Spas, `poolside@wi.rr.com`, subject `Closing-season workflow for one real pool stop`, Gmail id `1a02cbbe6b1f7225`.
+  - Huntington Woods Pools & Spas, `hwpools@yahoo.com`, subject `A closing-season field test for SplashLens`, Gmail id `1a02cbc0d9fb28e6`.
+- Queue rows changed: the five recipients above moved from `queued` to `sent`, `last_sent_at=2026-08-23`, `next_send_after=2026-08-28`, with Gmail IDs and tracked `utm_content` notes.
+- Post-send Gmail check found no immediate bounce for today's five recipients.
+- Warm publication updates sent after the build, separate from the cold cap:
+  - PoolPro/Kendrick/Bethany Branscum, existing thread `Possible SpaRetailer story/resource note: free pool field-reference app`, Gmail id `1a02cbe55539f6cb`.
+  - AQUA/Laura Carew with Jared Fish CC'd, existing thread `Follow-Up: FREE Product Opportunity with AQUA Magazine`, Gmail id `1a02cbeb89490f5e`.
+  - Both warm updates positioned Closing Season Mode as a seasonal service-tech proof workflow, not insurance, coverage, diagnosis, or a replacement for manuals/code/qualified judgment.
+- Additional prospect research:
+  - PoolDial's 2025 podcast list confirmed active lanes around Pool Chasers, Let's Talk About Pools, Talking Pools, PoolFoo, Between Two Stops, Pool Nation, The Pool Guy Podcast Show, Pool Magazine Podcast, PHTA Pool Professionals Podcast, The Deep End, Rule Your Pool, and Liquid Assets.
+  - The Pool Operators Club public contact page confirmed `contact@pooloperators.club` and a strong commercial/facility-operator audience, but exact Gmail history showed it was already contacted on 2026-07-02, so it was not re-touched.
+  - Pool Guy Coaching is a relevant insurance/coaching lane for future partnership research, but no public email was verified in this run; keep as research-needed, not send-ready.

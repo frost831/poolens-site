@@ -266,12 +266,12 @@
  }
  /* HERO */
  .hero {
- min-height: calc(100vh - 60px);
+ min-height: 720px;
  background:
  linear-gradient(180deg, rgba(2, 8, 23, .72), rgba(2, 8, 23, .58) 44%, rgba(3, 105, 161, .88)),
  url("https://cdn.pixabay.com/photo/2016/03/27/18/58/pool-pump-1283648_1280.jpg") center/cover;
- padding: 74px 24px 34px;
- text-align: center;
+ padding: 66px 24px 32px;
+ text-align: left;
  position: relative;
  overflow: hidden;
  display: flex;
@@ -279,10 +279,19 @@
  }
  .hero-inner {
  width: 100%;
- max-width: 1120px;
+ max-width: 1180px;
  margin: 0 auto;
  position: relative;
  z-index: 1;
+ }
+ .hero-layout {
+ display: grid;
+ grid-template-columns: minmax(0, 1fr) minmax(300px, 410px);
+ gap: clamp(28px, 5vw, 58px);
+ align-items: center;
+ }
+ .hero-copy {
+ max-width: 720px;
  }
  .hero-badge {
  display: inline-flex; align-items: center; gap: 6px;
@@ -296,7 +305,7 @@
  font-size: clamp(3rem, 8vw, 6.3rem);
  font-weight: 950; color: var(--white);
  line-height: .92; margin-bottom: 22px;
- max-width: 980px; margin-left: auto; margin-right: auto;
+ max-width: 820px; margin-left: 0; margin-right: 0;
  text-wrap: balance;
  }
  .hero h1 em {
@@ -308,13 +317,61 @@
  .hero-sub {
  font-size: clamp(1.03rem, 2.4vw, 1.28rem);
  color: rgba(255,255,255,.9);
- max-width: 760px; margin: 0 auto 30px;
+ max-width: 690px; margin: 0 0 26px;
  line-height: 1.55;
  text-wrap: balance;
  }
  .hero-actions {
- display: flex; align-items: center; justify-content: center;
- flex-wrap: wrap; gap: 14px; margin-bottom: 24px;
+ display: flex; align-items: center; justify-content: flex-start;
+ flex-wrap: wrap; gap: 12px; margin-bottom: 16px;
+ }
+ .hero-download-row {
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ flex-wrap: wrap;
+ margin: 4px 0 16px;
+ }
+ .hero-download-label {
+ color: rgba(255,255,255,.78);
+ font-size: .78rem;
+ font-weight: 850;
+ text-transform: uppercase;
+ letter-spacing: .08em;
+ }
+ .published-proof-strip {
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ flex-wrap: wrap;
+ margin: 4px 0 20px;
+ color: rgba(255,255,255,.8);
+ font-size: .82rem;
+ font-weight: 850;
+ }
+ .published-proof-strip span {
+ text-transform: uppercase;
+ letter-spacing: .08em;
+ color: #bae6fd;
+ font-size: .72rem;
+ }
+ .published-proof-strip a {
+ display: inline-flex;
+ align-items: center;
+ min-height: 32px;
+ border-radius: 999px;
+ padding: 0 12px;
+ color: #fff;
+ text-decoration: none;
+ background: rgba(255,255,255,.13);
+ border: 1px solid rgba(255,255,255,.2);
+ backdrop-filter: blur(10px);
+ transition: transform .18s ease, background .18s ease, border-color .18s ease;
+ }
+ .published-proof-strip a:hover {
+ transform: translateY(-1px);
+ background: rgba(255,255,255,.2);
+ border-color: rgba(255,255,255,.36);
  }
  .hero-actions .btn-ghost {
  border-color: rgba(255,255,255,.6);
@@ -357,10 +414,10 @@
  border-top: 4px solid #0891b2;
  }
  .partsnap-proof-flow {
- max-width: 1040px;
- margin: 24px auto 18px;
+ max-width: 720px;
+ margin: 18px 0 0;
  display: grid;
- grid-template-columns: repeat(5, 1fr);
+ grid-template-columns: repeat(3, minmax(0, 1fr));
  gap: 8px;
  }
  .proof-step {
@@ -416,6 +473,58 @@
  background: rgba(15, 23, 42, .28);
  border: 1px solid rgba(255,255,255,.18);
  backdrop-filter: blur(10px);
+ }
+ .hero-phone-card {
+ justify-self: end;
+ width: min(100%, 390px);
+ background: rgba(2, 8, 23, .42);
+ border: 1px solid rgba(255,255,255,.2);
+ border-radius: 22px;
+ padding: 18px;
+ box-shadow: 0 32px 90px rgba(2, 8, 23, .45);
+ backdrop-filter: blur(18px);
+ }
+ .hero-phone-kicker {
+ color: #bae6fd;
+ font-size: .74rem;
+ font-weight: 950;
+ letter-spacing: .1em;
+ text-transform: uppercase;
+ margin-bottom: 12px;
+ }
+ .hero-phone-frame {
+ position: relative;
+ border-radius: 30px;
+ padding: 10px;
+ background: linear-gradient(145deg, #020617, #1e293b);
+ border: 1px solid rgba(255,255,255,.16);
+ box-shadow: inset 0 0 0 1px rgba(255,255,255,.08), 0 18px 52px rgba(0,0,0,.34);
+ }
+ .hero-phone-frame img {
+ display: block;
+ width: 100%;
+ border-radius: 22px;
+ aspect-ratio: 9 / 18;
+ object-fit: cover;
+ background: #e0f2fe;
+ }
+ .hero-phone-caption {
+ margin: 13px 2px 0;
+ color: rgba(255,255,255,.83);
+ font-size: .86rem;
+ line-height: 1.45;
+ font-weight: 750;
+ }
+ body .home-archive-detail {
+ display: none !important;
+ }
+ .premium-reveal {
+ animation: premium-rise .24s cubic-bezier(.2,.8,.2,1) both;
+ }
+ .premium-reveal:nth-child(2) { animation-delay: .07s; }
+ @keyframes premium-rise {
+ from { transform: translateY(10px); filter: saturate(.94); }
+ to { transform: translateY(0); filter: saturate(1); }
  }
  .mobile-ai-quick { display: none; }
  .field-photo-grid {
@@ -990,7 +1099,7 @@ line-height: 1.35;
  .phone-nav-dot.inactive { background: #e2e8f0; }
 
  /* SECTION COMMON */
- section { padding: 80px 24px; }
+ section { padding: 64px 24px; }
  .container { max-width: 1100px; margin: 0 auto; }
  .section-eyebrow {
  font-size: .78rem; font-weight: 700; letter-spacing: .1em;
@@ -1019,7 +1128,7 @@ line-height: 1.35;
  .season-push {
  background: linear-gradient(135deg, #071725 0%, #083344 52%, #0f766e 100%);
  color: #fff;
- padding: 34px 18px;
+ padding: 28px 18px;
  border-top: 1px solid rgba(255,255,255,.08);
  border-bottom: 1px solid rgba(255,255,255,.1);
  }
@@ -1560,15 +1669,15 @@ gap: 10px;
  .btn-price.secondary { background: var(--sky-xlight); color: var(--sky-dark); }
 
  /* TESTIMONIAL / QUOTE */
- .quote-section { background: var(--sky-xlight); }
- .quote-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+ .quote-section { background: var(--sky-xlight); padding: 42px 24px; }
+ .quote-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
  .quote-card {
- background: white; border-radius: var(--radius); padding: 28px;
+ background: white; border-radius: 10px; padding: 18px;
  box-shadow: var(--card-shadow); border: 1px solid var(--border);
  }
  .quote-card.is-new { border-color: #67e8f9; box-shadow: 0 18px 46px rgba(8,145,178,.14); }
- .quote-stars { color: var(--sky); font-size: .72rem; margin-bottom: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
- .quote-text { font-size: .93rem; color: var(--slate-mid); line-height: 1.6; margin-bottom: 16px; }
+ .quote-stars { color: var(--sky); font-size: .68rem; margin-bottom: 9px; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+ .quote-text { font-size: .86rem; color: var(--slate-mid); line-height: 1.5; margin-bottom: 14px; }
  .quote-author { display: flex; align-items: center; gap: 12px; }
  .quote-avatar {
  width: 40px; height: 40px; border-radius: 50%;
@@ -1647,33 +1756,79 @@ gap: 10px;
  }
  section { padding: 56px 18px; }
  .hero {
- min-height: auto;
- padding: 52px 18px 34px;
- align-items: flex-start;
- }
- .hero h1 {
- font-size: clamp(3.1rem, 17vw, 4.4rem);
- line-height: .92;
- }
- .hero-sub { margin-bottom: 24px; }
- .hero-actions {
- flex-direction: column;
- align-items: stretch;
- max-width: 342px;
- margin: 0 auto 22px;
- }
- .hero-actions .btn-primary,
- .hero-actions .btn-ghost {
- width: 100%;
+  min-height: auto;
+  padding: 42px 18px 30px;
+  align-items: flex-start;
+  }
+  .hero-layout {
+  grid-template-columns: 1fr;
+  gap: 24px;
+  }
+  .hero-copy {
+  max-width: none;
+  text-align: center;
+  }
+  .hero h1 {
+  font-size: clamp(3.1rem, 17vw, 4.4rem);
+  line-height: .92;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  .hero-sub { margin: 0 auto 22px; }
+  .hero-actions {
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 342px;
+  margin: 0 auto 22px;
+  }
+  .hero-download-row,
+  .published-proof-strip {
+  justify-content: center;
+  }
+  .hero-download-row .store-badges { width: 100%; }
+  .hero-phone-card {
+  justify-self: center;
+  max-width: 300px;
+  padding: 12px;
+  border-radius: 18px;
+  }
+  .hero-phone-frame {
+  border-radius: 24px;
+  padding: 8px;
+  }
+  .hero-phone-frame img {
+  border-radius: 18px;
+  }
+  .hero-phone-caption {
+  font-size: .76rem;
+  text-align: left;
+  }
+  .hero-actions .btn-primary,
+  .hero-actions .btn-ghost {
+  width: 100%;
  min-height: 52px;
  justify-content: center;
  }
  .hero-actions .store-badges { width: 100%; }
  .store-badge.apple img { height: 46px; }
  .store-badge.google img { height: 52px; }
- .hero-product-bar,
- .partsnap-proof-flow,
- .hero-proof-line { display: none; }
+  .partsnap-proof-flow {
+  grid-template-columns: 1fr;
+  max-width: 342px;
+  margin: 18px auto 0;
+  }
+  .proof-step {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 0 10px;
+  align-items: center;
+  padding: 10px 12px;
+  }
+  .proof-step b { grid-row: span 2; margin: 0; }
+  .hero-product-bar,
+  .hero-proof-line { display: none; }
+  .quote-grid { grid-template-columns: 1fr; }
  .season-push-shell,
  .season-paths {
  grid-template-columns: 1fr;
@@ -1963,49 +2118,49 @@ gap: 10px;
 <!-- HERO -->
 <div class="hero">
  <div class="hero-inner">
-  <h1>Get off the pad faster.</h1>
-  <p class="hero-sub">SplashLens helps pool and spa pros look up codes, scan mystery parts, save the proof, and send a cleaner packet before anyone guesses, orders blind, or loses time at the pad.</p>
-  <div class="hero-actions">
-  <a href="https://app.splashlens.com/?tab=scan&mode=parts&utm_source=site&utm_medium=hero&utm_campaign=field60_home&challenge=field60&challenge_path=partsnap&challenge_id=site_hero_partsnap" target="_blank" class="btn-primary" data-track="partsnap_click" data-source="hero_primary" data-challenge-path="partsnap" data-challenge-id="site_hero_partsnap">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-  Identify A Part
-  </a>
-  <a href="https://app.splashlens.com/?tab=report&utm_source=site&utm_medium=hero&utm_campaign=field60_home&challenge=field60&challenge_path=service_proof&challenge_id=site_hero_service_proof" target="_blank" class="btn-ghost" data-track="open_app_click" data-source="hero_secondary" data-challenge-path="service_proof" data-challenge-id="site_hero_service_proof">
-  Save Visit Proof
-  </a>
-  <a href="/field-proof-pilot.html" class="btn-ghost" data-track="pilot_request_click" data-source="hero_pilot">
-  Book Field Pilot
-  </a>
-  <div class="store-badges" aria-label="Download SplashLens">
-  <a href="https://apps.apple.com/us/app/splashlens/id6763644905" target="_blank" rel="noopener" class="store-badge apple" aria-label="Download SplashLens on the App Store" data-track="app_store_download_click" data-source="hero">
-  <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" loading="eager">
-  </a>
-  <a href="https://play.google.com/store/apps/details?id=com.splashlens.fieldtools" target="_blank" rel="noopener" class="store-badge google" aria-label="Get SplashLens on Google Play" data-track="google_play_download_click" data-source="hero">
-  <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" loading="eager">
-  </a>
+  <div class="hero-layout">
+  <div class="hero-copy premium-reveal">
+   <h1>Get off the pad faster.</h1>
+   <p class="hero-sub">SplashLens helps pool and spa pros identify mystery parts, check codes, capture proof, and send cleaner details before anyone guesses or orders blind.</p>
+   <div class="hero-actions">
+   <a href="https://app.splashlens.com/?tab=scan&mode=parts&utm_source=site&utm_medium=hero&utm_campaign=field60_home&challenge=field60&challenge_path=partsnap&challenge_id=site_hero_partsnap" target="_blank" class="btn-primary" data-track="partsnap_click" data-source="hero_primary" data-challenge-path="partsnap" data-challenge-id="site_hero_partsnap">
+   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+   Identify A Part
+   </a>
+   <a href="https://app.splashlens.com/?tab=report&utm_source=site&utm_medium=hero&utm_campaign=field60_home&challenge=field60&challenge_path=service_proof&challenge_id=site_hero_service_proof" target="_blank" class="btn-ghost" data-track="open_app_click" data-source="hero_secondary" data-challenge-path="service_proof" data-challenge-id="site_hero_service_proof">
+   Prove The Visit
+   </a>
+   </div>
+   <div class="hero-download-row" aria-label="Download SplashLens">
+   <span class="hero-download-label">Free core app</span>
+   <div class="store-badges">
+   <a href="https://apps.apple.com/us/app/splashlens/id6763644905" target="_blank" rel="noopener" class="store-badge apple" aria-label="Download SplashLens on the App Store" data-track="app_store_download_click" data-source="hero">
+   <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" loading="eager">
+   </a>
+   <a href="https://play.google.com/store/apps/details?id=com.splashlens.fieldtools" target="_blank" rel="noopener" class="store-badge google" aria-label="Get SplashLens on Google Play" data-track="google_play_download_click" data-source="hero">
+   <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" loading="eager">
+   </a>
+   </div>
+   </div>
+   <div class="published-proof-strip" aria-label="Published coverage">
+   <span>Published by</span>
+   <a href="https://www.aquamagazine.com/products/article/15833207/splashlens-splashlens-new-closing-season-mode" target="_blank" rel="noopener" data-track="press_coverage_click" data-publication="aqua" data-source="hero">AQUA Closing Season</a>
+   <a href="https://www.aquamagazine.com/products/business-software/article/15830162/splashlens-splashlens-field-reference-app-for-pool-spa-and-facility-professionals" target="_blank" rel="noopener" data-track="press_coverage_click" data-publication="aqua" data-source="hero">AQUA Field App</a>
+   <a href="https://poolpromag.com/splashlens-launches-free-field-reference-app/" target="_blank" rel="noopener" data-track="press_coverage_click" data-publication="poolpro" data-source="hero">PoolPro Launch</a>
+   </div>
+   <div class="partsnap-proof-flow" aria-label="PartSnap proof workflow">
+   <div class="proof-step"><b>1</b><strong>Identify</strong><span>Scan the part, label, code, or symptom.</span></div>
+   <div class="proof-step"><b>2</b><strong>Prove</strong><span>Capture model, markings, photos, and fit clues.</span></div>
+   <div class="proof-step"><b>3</b><strong>Send</strong><span>Share safer details with the boss, counter, or vendor.</span></div>
+   </div>
   </div>
+  <div class="hero-phone-card premium-reveal" aria-label="PartSnap product screenshot">
+   <div class="hero-phone-kicker">PartSnap in the field</div>
+   <div class="hero-phone-frame">
+   <img src="/product-screenshots/partsnap-result-proof-mobile.png" alt="SplashLens PartSnap result showing possible part matches and proof prompts" loading="eager">
+   </div>
+   <p class="hero-phone-caption">Possible matches stay cautious. SplashLens asks for the proof a tech needs before ordering: model plate, second photo, markings, fit clues, and source-backed candidates.</p>
   </div>
-  <p style="margin:14px 0 0;color:#bae6fd;font-size:.92rem;font-weight:800;">AQUA Magazine just published <a href="https://www.aquamagazine.com/products/article/15833207/splashlens-splashlens-new-closing-season-mode" target="_blank" rel="noopener" data-track="press_coverage_click" data-publication="aqua" data-source="hero" style="color:#fff;text-decoration:underline;text-decoration-thickness:2px;">SplashLens Closing Season Mode</a>. Also covered by <a href="https://www.aquamagazine.com/products/business-software/article/15830162/splashlens-splashlens-field-reference-app-for-pool-spa-and-facility-professionals" target="_blank" rel="noopener" data-track="press_coverage_click" data-publication="aqua" data-source="hero" style="color:#fff;text-decoration:underline;text-decoration-thickness:2px;">AQUA</a> and <a href="https://poolpromag.com/splashlens-launches-free-field-reference-app/" target="_blank" rel="noopener" data-track="press_coverage_click" data-publication="poolpro" data-source="hero" style="color:#fff;text-decoration:underline;text-decoration-thickness:2px;">PoolPro</a>.</p>
-  <div class="partsnap-proof-flow" aria-label="PartSnap proof workflow">
-  <div class="proof-step"><b>1</b><strong>Identify</strong><span>part, code, label, or symptom.</span></div>
-  <div class="proof-step"><b>2</b><strong>Capture</strong><span>photos, readings, model proof.</span></div>
-  <div class="proof-step"><b>3</b><strong>Double-check</strong><span>what might bite you later.</span></div>
-  <div class="proof-step"><b>4</b><strong>Explain</strong><span>customer-safe summary.</span></div>
-  <div class="proof-step"><b>5</b><strong>Send</strong><span>clean details for the boss or supplier.</span></div>
-  <div class="proof-step"><b>6</b><strong>Remember</strong><span>save visit history.</span></div>
-  </div>
-  <div class="hero-product-bar" aria-label="SplashLens field tools">
-  <div class="hero-product-item is-primary"><strong>PartSnap</strong><span>Photo a mystery part and capture the proof needed before ordering.</span></div>
-  <div class="hero-product-item"><strong>Visit Proof History</strong><span>Readings, photos, voice notes, customer summaries, and what happened last time.</span></div>
-  <div class="hero-product-item"><strong>Facility Assist</strong><span>Daily checks, contamination events, and simple help requests.</span></div>
-  <div class="hero-product-item"><strong>Connected Equipment</strong><span>Robots, automation, lights, salt, spas, heat pumps, covers, and smart pads.</span></div>
-  </div>
-  <div class="hero-proof-line" aria-label="SplashLens trust notes">
-  <span>Core tools free forever. PartSnap Pro for unlimited scans.</span>
-  <span>PartSnap Pro $4.99/mo or $39/yr</span>
-  <span>No account required</span>
-  <span>Manual tools work offline</span>
-  <span>Scanner results require verification</span>
   </div>
  </div>
 </div>
@@ -2092,10 +2247,11 @@ gap: 10px;
  <div class="section-eyebrow">The flagship push</div>
  <h2>Proof for the stop. Not another CRM.</h2>
  <p>SplashLens does not replace Jobber, Skimmer, Pool Brain, billing, dispatch, or your route app. It helps with the field moment those systems usually do not solve: what the tech saw, what proof is missing, what should be verified, and what needs to be sent next.</p>
- <div class="field-os-actions">
- <a href="/field-learning-os.html">See Field Learning OS</a>
- <a href="https://app.splashlens.com/?tab=report&utm_source=site&utm_medium=field_os&utm_campaign=field60_home&challenge=field60&challenge_path=service_proof&challenge_id=site_field_os_save_visit" target="_blank" rel="noopener" data-track="service_proof_click" data-source="field_os_home" data-challenge-path="service_proof" data-challenge-id="site_field_os_save_visit">Save a Visit</a>
- </div>
+  <div class="field-os-actions">
+  <a href="/field-learning-os.html">See Field Learning OS</a>
+  <a href="https://app.splashlens.com/?tab=report&utm_source=site&utm_medium=field_os&utm_campaign=field60_home&challenge=field60&challenge_path=service_proof&challenge_id=site_field_os_save_visit" target="_blank" rel="noopener" data-track="service_proof_click" data-source="field_os_home" data-challenge-path="service_proof" data-challenge-id="site_field_os_save_visit">Save a Visit</a>
+  <a href="/field-proof-pilot.html" data-track="pilot_request_click" data-source="field_os_home">Book Field Pilot</a>
+  </div>
  </div>
  <div class="field-os-grid">
  <article class="field-os-card"><b>1</b><strong>Stop</strong><span>Start from the actual field moment: part, code, equipment, water, facility incident, or customer question.</span></article>
@@ -2107,7 +2263,7 @@ gap: 10px;
  </div>
 </section>
 
-<section class="persona-fork" aria-label="Choose SplashLens workflow" style="background:#f8fafc;border-bottom:1px solid #dbe8ef;padding:26px 18px;">
+<section class="persona-fork home-archive-detail" aria-label="Choose SplashLens workflow" style="background:#f8fafc;border-bottom:1px solid #dbe8ef;padding:26px 18px;">
  <div class="container">
  <div style="display:grid;grid-template-columns:1.05fr 2fr;gap:18px;align-items:start;">
  <div>
@@ -2162,7 +2318,7 @@ gap: 10px;
 })();
 </script>
 
-<section class="product-showcase" aria-label="SplashLens product screens">
+<section class="product-showcase home-archive-detail" aria-label="SplashLens product screens">
  <div class="container product-showcase-grid">
  <div class="product-showcase-copy">
  <div class="section-eyebrow">Show, don't tell</div>
@@ -2187,7 +2343,7 @@ gap: 10px;
  </div>
 </section>
 
-<section class="stop-system" aria-label="SplashLens stop system">
+<section class="stop-system home-archive-detail" aria-label="SplashLens stop system">
  <div class="container">
  <div class="stop-system-head">
  <div>
@@ -2217,7 +2373,7 @@ gap: 10px;
 </section>
 
 <!-- MOBILE AI QUICK LOOK -->
-<section class="partsnap-band" aria-label="PartSnap pool parts identification">
+<section class="partsnap-band home-archive-detail" aria-label="PartSnap pool parts identification">
  <div class="container">
  <div class="partsnap-panel">
  <div>
@@ -2263,7 +2419,7 @@ gap: 10px;
  </div>
 </section>
 
-<section class="bridge-band" aria-label="Connected Pool Network and New Tech Radar">
+<section class="bridge-band home-archive-detail" aria-label="Connected Pool Network and New Tech Radar">
  <div class="container">
  <div class="bridge-panel">
  <div>
@@ -2280,7 +2436,7 @@ gap: 10px;
  </div>
 </section>
 
-<section class="mobile-ai-quick" aria-label="SplashLens scanner demo">
+<section class="mobile-ai-quick home-archive-detail" aria-label="SplashLens scanner demo">
  <p class="mobile-ai-quick-title">That feeling when the code appears before the escalation call: this is the stop-level relief SplashLens is built for.</p>
  <div class="ai-visual">
  <div class="ai-scan-demo">
@@ -2295,7 +2451,7 @@ gap: 10px;
 </section>
 
 <!-- FIELD POSITIONING -->
-<section class="bridge-band">
+<section class="bridge-band home-archive-detail">
  <div class="container">
  <div class="bridge-panel">
  <div>
@@ -2343,45 +2499,29 @@ gap: 10px;
  </div>
  </div>
 
- <div class="feature-grid">
- <div class="feature-card">
- <div class="feature-icon" style="background:#e0f2fe;color:#075985">ERR</div>
- <h3>Error code lookup</h3>
- <p>230+ field-reference entries across heaters, pumps, salt systems, robots, automation, lights, covers, controllers, spas, and swim spas.</p>
- </div>
- <div class="feature-card">
- <div class="feature-icon" style="background:#fef3c7;color:#92400e">DOSE</div>
- <h3>Dosing and water math</h3>
- <p>Pool volume, turnover, FC, pH, TA, CH, CYA, SLAM, drain/refill, and report-ready chemistry notes.</p>
- </div>
- <div class="feature-card">
- <div class="feature-icon" style="background:#dbeafe;color:#075985">PAD</div>
- <h3>Connected Pool Network</h3>
- <p>Robots, automation, app pairing, RS-485, relays, actuators, lighting, heat pumps, covers, and smart backyard equipment.</p>
- </div>
- <div class="feature-card">
- <div class="feature-icon" style="background:#ffedd5;color:#9a3412">SPA</div>
- <h3>Spa + swim spa lane</h3>
- <p>Balboa, Gecko, Waterway NEO, topsides, GFCI symptoms, current pumps, ozone, UV, covers, and sanitizer feeders.</p>
- <span class="feature-badge" style="background:#ffedd5;color:#9a3412">New</span>
- </div>
- <div class="feature-card">
- <div class="feature-icon" style="background:#ede9fe;color:#6d28d9">TRAIN</div>
- <h3>Training and proof packets</h3>
- <p>New-tech practice, experienced-tech review, saved visit history, customer-safe summaries, and cleaner notes for the next person helping.</p>
- </div>
- <div class="feature-card">
- <div class="feature-icon" style="background:#dcfce7;color:#166534">OFF</div>
- <h3>Offline manual tools</h3>
- <p>Manual lookup, calculators, guides, and checklists stay available after first load. Online scanning is clearly labeled.</p>
- </div>
- </div>
+  <div class="feature-grid">
+  <div class="feature-card">
+  <div class="feature-icon" style="background:#e0f2fe;color:#075985">CODE</div>
+  <h3>Codes and water math</h3>
+  <p>230+ reference entries plus pool volume, turnover, FC, pH, TA, CH, CYA, SLAM, drain/refill, and report-ready chemistry notes.</p>
+  </div>
+  <div class="feature-card">
+  <div class="feature-icon" style="background:#dbeafe;color:#075985">PAD</div>
+  <h3>Connected pool, spa, and swim spa</h3>
+  <p>Robots, automation, app pairing, RS-485, lighting, heat pumps, covers, Balboa, Gecko, Waterway NEO, and sanitizer hardware lanes.</p>
+  </div>
+  <div class="feature-card">
+  <div class="feature-icon" style="background:#dcfce7;color:#166534">OFF</div>
+  <h3>Offline tools after first load</h3>
+  <p>Manual lookup, calculators, guides, and checklists stay available in the field. Online scans are clearly labeled and require verification.</p>
+  </div>
+  </div>
  <div class="feature-all-tools"><a href="/pool-tech-field-reference-app.html">Open all tools and reference lanes -&gt;</a></div>
  </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section id="how" class="how-bg">
+<section id="how" class="how-bg home-archive-detail">
  <div class="container">
  <div class="section-eyebrow">How It Works</div>
  <h2 class="section-title">Zero setup. Open it and go.</h2>
@@ -2420,7 +2560,7 @@ gap: 10px;
 </section>
 
 <!-- COMPARE -->
-<section id="compare">
+<section id="compare" class="home-archive-detail">
  <div class="container">
  <div class="section-eyebrow">Honest Comparison</div>
  <h2 class="section-title">We are not trying to be<br>another route platform</h2>
@@ -2589,8 +2729,8 @@ gap: 10px;
 <section class="quote-section">
  <div class="container">
  <div class="section-eyebrow" style="text-align:center">Industry Coverage</div>
- <h2 class="section-title" style="text-align:center;margin-bottom:8px">SplashLens has now been published twice by AQUA Magazine.</h2>
- <p class="section-sub" style="text-align:center;margin-bottom:40px;margin-left:auto;margin-right:auto">AQUA has now published both the SplashLens field-reference app and the newer Closing Season Mode, following PoolPro launch coverage. That is earned coverage, not an endorsement, and it gives more field professionals a clean way to discover and test the app.</p>
+ <h2 class="section-title" style="text-align:center;margin-bottom:8px">Published by AQUA twice, plus PoolPro.</h2>
+ <p class="section-sub" style="text-align:center;margin-bottom:26px;margin-left:auto;margin-right:auto">Earned trade coverage gives techs, trainers, and service companies a clean reason to test SplashLens. Coverage is not an endorsement.</p>
  <div class="quote-grid">
  <article class="quote-card is-new">
  <div class="quote-stars">New - Published Aug. 24, 2026</div>
@@ -2622,17 +2762,6 @@ gap: 10px;
  <div>
  <div class="quote-name">PoolPro Magazine</div>
  <div class="quote-role"><a href="https://poolpromag.com/splashlens-launches-free-field-reference-app/" target="_blank" rel="noopener" data-track="press_coverage_click" data-publication="poolpro" data-source="industry_coverage">Read the PoolPro article</a></div>
- </div>
- </div>
- </article>
- <article class="quote-card">
- <div class="quote-stars">Why it exists</div>
- <p class="quote-text">Joshua built SplashLens from pool sales and service-company experience: faster lookup, cleaner proof, and less time trapped at the equipment pad. The app remains an independent reference, not a diagnosis or fitment guarantee.</p>
- <div class="quote-author">
- <div class="quote-avatar">JF</div>
- <div>
- <div class="quote-name">Joshua Frost</div>
- <div class="quote-role">Founder, SplashLens</div>
  </div>
  </div>
  </article>

@@ -18,20 +18,24 @@ Do not imply AQUA, Hayward, Leisure Pools, or any other company endorses SplashL
 
 Attach these PNGs in this order:
 
-1. `C:\Users\sales\Dropbox\Projects\poolens-site\docs\outreach\aqua-closing-season-live-mobile-2026-08-24.png`
+Use the send-ready folder:
+
+`C:\Users\sales\Dropbox\Projects\poolens-site\docs\outreach\aqua-closing-season-send-package-2026-08-24`
+
+1. `01-closing-season-mode-live-mobile.png`
    - Lead image. Shows the seasonal page and "Document the close before the freeze."
-2. `C:\Users\sales\Dropbox\Projects\poolens-site\product-screenshots\partsnap-result-proof-mobile.png`
+2. `02-partsnap-proof-result-mobile.png`
    - Shows the proof-before-ordering PartSnap workflow.
-3. `C:\Users\sales\Dropbox\Projects\poolens-site\product-screenshots\service-proof-live-mobile.png`
+3. `03-service-proof-live-mobile.png`
    - Shows Service Proof records and the cleaner stop-history angle.
-4. `C:\Users\sales\Dropbox\Projects\poolens-site\product-screenshots\facility-assist-live-mobile.png`
+4. `04-facility-assist-live-mobile.png`
    - Optional if AQUA wants the operator/CPO/facility lane.
 
 ## Product Description
 
-Word count: 76
+Word count: 77
 
-Closing Season Mode in SplashLens helps pool and spa pros document the close before the freeze. Techs can capture chemistry, water level, equipment-pad photos, drain-plug proof, cover condition, heater/salt/robot notes, declined work, and callback-risk items in one mobile workflow. The goal is cleaner handoffs for homeowners, senior techs, builders, warranty/support teams, and spring reopen reviews. SplashLens is a field reference and proof tool; it does not replace manuals, labels, local code, company procedures, or qualified judgment.
+Closing Season Mode in SplashLens helps pool and spa pros document winterizing proof before freeze season. In one mobile workflow, techs can capture chemistry, water level, equipment-pad photos, drain-plug proof, cover condition, heater/salt/robot notes, declined work, and callback-risk items. The result is a cleaner record for homeowners, senior techs, builders, warranty/support teams, and spring reopen reviews. SplashLens is a field reference and proof tool; it does not replace manuals, labels, local code, company procedures, or qualified judgment.
 
 ## Email Draft
 
@@ -41,15 +45,25 @@ Hi Laura,
 
 Thank you so much. I really appreciate you being open to the update.
 
-Below is a 76-word product description you can use or trim. I tried to keep it practical for AQUA readers: the tech closing the pool, the builder or service company trying to avoid spring confusion, and the warranty/support side that needs cleaner proof before a parts or equipment conversation.
+I think this one has a stronger seasonal hook for AQUA readers because closing season is where rushed notes turn into spring questions. A tech may remember the pool the day they closed it. Six months later, the proof is what matters: water level, drain plugs, equipment photos, cover condition, chemistry, declined work, and what was actually done.
+
+That is the lane I am trying to build SplashLens into: less guessing after the fact, cleaner handoffs for the homeowner, and better context for senior techs, builders, counter staff, and warranty/support conversations.
+
+Simple feature/function/benefit:
+
+- Feature: Closing Season Mode inside SplashLens.
+- Function: Capture the proof that usually gets scattered across photos, memory, texts, and route notes.
+- Benefit: Fewer vague spring callbacks and a cleaner record before anyone orders a part, escalates a problem, or argues about what happened at closing.
+
+Below is a 77-word product description you can use or trim:
 
 Product description:
 
-Closing Season Mode in SplashLens helps pool and spa pros document the close before the freeze. Techs can capture chemistry, water level, equipment-pad photos, drain-plug proof, cover condition, heater/salt/robot notes, declined work, and callback-risk items in one mobile workflow. The goal is cleaner handoffs for homeowners, senior techs, builders, warranty/support teams, and spring reopen reviews. SplashLens is a field reference and proof tool; it does not replace manuals, labels, local code, company procedures, or qualified judgment.
+Closing Season Mode in SplashLens helps pool and spa pros document winterizing proof before freeze season. In one mobile workflow, techs can capture chemistry, water level, equipment-pad photos, drain-plug proof, cover condition, heater/salt/robot notes, declined work, and callback-risk items. The result is a cleaner record for homeowners, senior techs, builders, warranty/support teams, and spring reopen reviews. SplashLens is a field reference and proof tool; it does not replace manuals, labels, local code, company procedures, or qualified judgment.
 
 Suggested images:
 
-1. Closing Season Mode page/screen - best lead image for the seasonal update.
+1. Closing Season Mode screen - best lead image for the seasonal update.
 2. PartSnap proof result - shows how SplashLens asks for proof before ordering or escalating.
 3. Service Proof screen - shows the visit record / customer-safe summary angle.
 4. Facility Assist screen - optional if you want the CPO/facility operator lane.
@@ -68,7 +82,7 @@ https://apps.apple.com/us/app/splashlens/id6763644905
 Google Play:
 https://play.google.com/store/apps/details?id=com.splashlens.fieldtools
 
-Thank you again for looking at it. I am trying to build SplashLens into something useful for the working side of the industry: fewer vague notes, cleaner proof, faster handoffs, and less "what happened on that stop?" after the season turns.
+Thank you again for looking at it. I am trying to build SplashLens into something useful for the working side of the industry: fewer vague notes, cleaner proof, faster handoffs, and less "what happened on that stop?" after the season turns. If AQUA readers try it during closing season and tell me where it falls short, that feedback goes straight back into the product.
 
 Talk Soon,
 Joshua Frost

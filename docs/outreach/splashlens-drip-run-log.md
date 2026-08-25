@@ -1749,3 +1749,35 @@ True blockers:
 - Updated active outreach source of truth so future SplashLens send volume is governed by sender health, verified rows, cooldowns, suppression checks, source/MX checks, exact Gmail history, live preflight, and no-BCC/one-to-one requirements instead of a fixed numeric daily limit.
 - Updated `tools/splashlens_outreach_day_lock.ps1` so it remains a single-writer lock and recent hard-bounce/delivery-failure gate, but no longer blocks because a send count reached a fixed number.
 - Verification: `tools/splashlens_outreach_day_lock.ps1 -Date 2099-01-01` returned `PASS`, created the lock, reported sends found today without a quota denominator, and `-Release` removed the lock.
+
+## Full-boat outreach run - 2026-08-25
+
+- User requested the full-boat outreach run after removing the fixed numeric cold-send limit.
+- Preflight:
+  - `tools/splashlens_outreach_day_lock.ps1` returned `PASS` and created the 2026-08-25 single-writer lock.
+  - Gmail sender verified as `Joshua Frost <frost@belowzeromedia.com>`.
+  - Live preflight returned HTTP `200` for `https://splashlens.com`, `https://app.splashlens.com`, and `https://splashlens.com/campaign.html`.
+  - 14-day Gmail stop-signal search for SplashLens/PartSnap/app links plus unsubscribe/remove/do-not-contact/complaint/bounce/undeliverable/not-interested language returned no messages before send.
+  - The 25 prepared targets in `docs/outreach/splashlens-send-windows-2026-08-26-to-2026-09-01.csv` were checked against the active queue: all 25 were still `queued` with empty `last_sent_at`.
+  - All 25 source URLs returned HTTP `200`; all 25 recipient domains had MX records.
+  - Exact Gmail history checks across the 25 candidates returned no SplashLens/PartSnap/app-link history before send.
+- Sent 10 one-to-one plain-text emails from `frost@belowzeromedia.com`, no BCC, all with `Reply-To: hello@splashlens.com`, all ending `Talk Soon,` and using cautious language with no endorsement, diagnosis, warranty, fitment, certification, code-compliance, or manufacturer-approval claim:
+  - NRPA/AFO route, `EGonzales@nrpa.org`, subject `Closing-season field workflow for pool operator training`, Gmail id `1a03a4ea3d8ca941`.
+  - Wellis, `support@wellis.com`, subject `Spa and swim-spa proof prompts for field support`, Gmail id `1a03a4ec1a0377ae`.
+  - Cover Valet, `Questions@covervalet.com`, subject `Better proof before cover-lifter part questions`, Gmail id `1a03a4ee0eda3b21`.
+  - Leisure Concepts, `info@leisureconcepts.com`, subject `Better proof before spa accessory part questions`, Gmail id `1a03a4efe6bda6c4`.
+  - Duffield Aquatics, `ayoungblood@duffieldaquatics.com`, subject `Free field workflow for pool operator training feedback`, Gmail id `1a03a4f24a12bc75`.
+  - Sumter YMCA operator route, `mfrancisco@ymcasumter.org`, subject `Free field workflow for pool operator training feedback`, Gmail id `1a03a4f64e445c58`.
+  - Pope and Company operator route, `popeandcompanyllc@gmail.com`, subject `Free field workflow for pool operator training feedback`, Gmail id `1a03a4f8543db4f3`.
+  - LIPSA/NESPA chapter services, `AHernandez@nespapool.org`, subject `Free field workflow for pool education feedback`, Gmail id `1a03a4fa358379d4`.
+  - Pool Pro, `info@poolpro.com`, subject `Closing-season field test for SplashLens`, Gmail id `1a03a4fc33ccd963`.
+  - Upper State Apartment Association operator route, `rose@upperstate.org`, subject `Pool operator workflow for apartment communities`, Gmail id `1a03a4fe21f97c97`.
+- Bounce/stop result:
+  - Immediate post-send delivery-failure sweep found two hard bounces:
+    - `mfrancisco@ymcasumter.org`, Gmail failure id `1a03a4f6c0579901`, `550 5.4.1 Recipient address rejected`.
+    - `rose@upperstate.org`, Gmail failure id `1a03a4feb33497b3`, `550 5.4.1 Recipient address rejected`.
+  - No additional immediate failures were found for the first 10 recipients.
+  - Sender-health gate stopped the run after the hard bounces. The remaining 15 prepared recipients were not sent in this run and remain queued pending a fresh source/history/stop-signal check.
+- Queue rows changed:
+  - Eight successful non-bounced sends moved from `queued` to `sent`, `last_sent_at=2026-08-25`, `next_send_after=2026-09-01`, with Gmail IDs and proof notes added.
+  - `mfrancisco@ymcasumter.org` and `rose@upperstate.org` moved from `queued` to `bounced`, `last_sent_at=2026-08-25`, no future send date, with failure IDs and `do not send again unless a new verified address is found` notes.

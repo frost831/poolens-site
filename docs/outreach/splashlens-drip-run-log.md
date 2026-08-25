@@ -1686,3 +1686,19 @@ True blockers:
   - PoolDial's 2025 podcast list confirmed active lanes around Pool Chasers, Let's Talk About Pools, Talking Pools, PoolFoo, Between Two Stops, Pool Nation, The Pool Guy Podcast Show, Pool Magazine Podcast, PHTA Pool Professionals Podcast, The Deep End, Rule Your Pool, and Liquid Assets.
   - The Pool Operators Club public contact page confirmed `contact@pooloperators.club` and a strong commercial/facility-operator audience, but exact Gmail history showed it was already contacted on 2026-07-02, so it was not re-touched.
   - Pool Guy Coaching is a relevant insurance/coaching lane for future partnership research, but no public email was verified in this run; keep as research-needed, not send-ready.
+
+## Closing-season owner/service-company send - 2026-08-25
+
+- Send boundary: user requested the next growth push and the checked-in day lock returned PASS for 2026-08-25 with 0/5 prior SplashLens cold sends.
+- Gmail sender verified as Joshua Frost <frost@belowzeromedia.com>.
+- Stop-signal review: 30-day SplashLens/PartSnap unsubscribe/remove/complaint/negative/bounce/delivery-failure searches returned no stop signals. The only recent inbound SplashLens hit was the known positive AQUA thread and did not block cold sends.
+- Live preflight: https://splashlens.com and https://app.splashlens.com returned HTTP 200. Homepage copy showed current Get off the pad faster positioning and not unsafe 500+ claims.
+- Recipient checks: all five selected official source URLs returned HTTP 200, MX resolved, and exact Gmail recipient-history searches were empty before send.
+- Sent five one-to-one plain-text emails, no BCC, all ending Talk Soon, and using one tracked campaign link with no diagnosis, fitment, warranty, affiliation, or endorsement claims:
+  - Professional Pool Service <office@professional-pools.com>, Gmail id 1a03a2045a9be0b9, utm_content professional_pool_service.
+  - SLC Pool Service <info@slcpoolservice.com>, Gmail id 1a03a20643880bcf, utm_content slc_pool_service.
+  - Horizon Pool and Patio <info@horizonpool.com>, Gmail id 1a03a20865c361a1, utm_content horizon_pool_patio.
+  - AmeriKen Pools <info@amerikenpools.com>, Gmail id 1a03a20ad48d5d6f, utm_content ameriken_pools.
+  - Prime Pool Service <info@primepoolservice.com>, Gmail id 1a03a20d3e1719f0, utm_content prime_pool_service.
+- Queue rows changed: the five recipients above moved from queued to sent, last_sent_at=2026-08-25, next_send_after=2026-09-01, with Gmail IDs and proof notes added.
+- Growth readout from same run: first-party app/site events, Stripe readiness, webhook, Payment Links, and Amplitude smoke forwarding all reported GREEN. Conversion issue is now offer/action quality and completed first workflow, not wiring.

@@ -1,0 +1,26 @@
+send_date,lane,email,slug,source_url,angle,requires_fresh_preflight
+2026-08-26,training_operator,EGonzales@nrpa.org,nrpa_afo_route,https://health.maryland.gov/phpa/oehfp/chs/documents/pool%20documents/pool%20operator%20courses%20approved%20by%20mdh_01_07_21.pdf,Facility/operator training feedback,yes
+2026-08-26,spa_swim_spa,support@wellis.com,wellis_support,https://wellis.com/problem-and-error-reporting/,Spa/swim-spa proof prompts,yes
+2026-08-26,covers_accessories,Questions@covervalet.com,cover_valet,https://covervalet.com/wp-content/uploads/2022/07/Cover-Valet-Pro-Instructions-03-2022.pdf,Cover-lifter proof before support,yes
+2026-08-26,covers_accessories,info@leisureconcepts.com,leisure_concepts,https://www.leisureconcepts.com/contact-us/,Spa accessory proof prompts,yes
+2026-08-26,training_operator,ayoungblood@duffieldaquatics.com,duffield_aquatics,https://des.sc.gov/programs/bureau-water/recreational-waters/sc-pool-operator-record,Operator training feedback,yes
+2026-08-27,training_operator,mfrancisco@ymcasumter.org,ymca_sumter,https://des.sc.gov/programs/bureau-water/recreational-waters/sc-pool-operator-record,Public-pool operator workflow,yes
+2026-08-27,training_operator,popeandcompanyllc@gmail.com,pope_company_pool_operator,https://des.sc.gov/programs/bureau-water/recreational-waters/sc-pool-operator-record,Operator training/resource feedback,yes
+2026-08-27,training_operator,AHernandez@nespapool.org,nespapool_lipsa,https://lipsa.nespapool.org/LIPSA-News/category/lipsa,Education needs and chapter feedback,yes
+2026-08-27,service_company,info@poolpro.com,pool_pro_service,https://www.poolpro.com/contact-us/,Service-owner workflow feedback,yes
+2026-08-27,training_operator,rose@upperstate.org,upper_state_apartment,https://des.sc.gov/programs/bureau-water/recreational-waters/sc-pool-operator-record,Apartment-pool operator workflow,yes
+2026-08-28,training_operator,bodom@yorktech.edu,york_tech_operator,https://des.sc.gov/programs/bureau-water/recreational-waters/sc-pool-operator-record,Public-pool operator training feedback,yes
+2026-08-28,training_operator,mmiller@coastal.edu,coastal_operator,https://des.sc.gov/programs/bureau-water/recreational-waters/sc-pool-operator-record,Facility/operator training feedback,yes
+2026-08-28,training_operator,aquatics.program@env.nm.gov,nm_aquatics_program,https://www.env.nm.gov/pools/certified-operator-training-courses/,Certified-operator resource feedback,yes
+2026-08-28,service_company,thundercitypoolservices@yahoo.com,thunder_city_pool_services,https://www.thundercitypoolservices.com/services/weekly-pool-service,Weekly service and proof workflow,yes
+2026-08-28,service_company,poolheavenhb@gmail.com,pool_heaven_hb,https://poolheaven.net/pool-support/,Repair triage and proof workflow,yes
+2026-08-31,service_company,TellMeMore@PoolFix.com,pool_fix,https://poolfix.com/contact-us/,Repair proof and remodel handoff,yes
+2026-08-31,service_company,ThePoolBoysDispatch@gmail.com,pool_boys_dispatch,https://poolboys.com/contact/,Weekly service and equipment proof,yes
+2026-08-31,service_company,info@purepoolsolutionsfl.com,pure_pool_solutions_fl,https://purepoolfl.com/,Maintenance and repair proof workflow,yes
+2026-08-31,training_operator,jill@sai-intl.org,starfish_aquatics,https://www.floridahealth.gov/wp-content/uploads/2026/01/servicetechniciancertificationcourses.pdf,Training-resource feedback,yes
+2026-08-31,supplier_counter,info@poolsupplywarehouseinc.com,pool_supply_warehouse,https://www.psw-az.com/weekly-pool-maintenance,Equipment-install and part-proof feedback,yes
+2026-09-01,service_company,swimstatepoolservicellc@gmail.com,swim_state_pool_service,https://swimstatepoolservice.com/contact-us/,Cleaning repair renovation proof,yes
+2026-09-01,training_operator,poolandspaassociation@yahoo.com,swimming_pool_spa_association,https://poolandspaassociation.com/lifeguard-class/,Facility Assist and training workflow,yes
+2026-09-01,supplier_counter,byrdmoreton@aol.com,unicel_regional_rep,https://www.unicelfilters.com/customer-support-team/,Filter/support proof feedback,yes
+2026-09-01,supplier_counter,basales@basalesreps.com,ba_sales_reps,https://www.basalesreps.com/,Rep-resource and part-proof feedback,yes
+2026-09-01,owner_team,info@poolbuildermarketing.com,pool_builder_marketing,https://www.poolbuildermarketing.com/contact-us/,Business-owner workflow and newsletter route,yes

@@ -1730,3 +1730,15 @@ True blockers:
   - Created `docs/outreach/splashlens-next-send-window-2026-08-26.md`.
   - Prep checked 12 queued rows; the first 12 had live source URLs and MX. Recommended first five for the next lawful send window: NRPA/AFO route, Wellis support, Cover Valet, Leisure Concepts, and Duffield Aquatics.
   - Before any 2026-08-26 send, rerun day lock, Gmail stop-signal/history checks, source/MX checks, and suppressions.
+
+## Same-day growth package - 2026-08-25
+
+- User requested a larger same-day push after the five-email 2026-08-25 cold batch had already been sent.
+- No additional cold outreach was sent because the SplashLens controlled daily cold cap was already used for the day.
+- Prepared `docs/outreach/splashlens-same-day-growth-package-2026-08-25.md` with:
+  - Today theme: `Get off the pad faster before closing season gets messy.`
+  - Same-day non-email actions for LinkedIn, warm replies, screen-recording prep, and social still image copy.
+  - Exact paste-ready 2026-08-26 copy for NRPA/AFO route, Wellis, Cover Valet, Leisure Concepts, and Duffield Aquatics.
+  - Lane snippets for training/operator, spa/swim-spa, covers/accessories, service company, supplier/counter, media/creator, and owner/team audiences.
+  - Tomorrow preflight checklist and measurement plan.
+- Prepared `docs/outreach/splashlens-send-windows-2026-08-26-to-2026-09-01.csv` with 25 queued candidates across five send windows, all marked `requires_fresh_preflight=yes`.

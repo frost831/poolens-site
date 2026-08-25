@@ -59,7 +59,7 @@
       label: 'Partners',
       items: [
         ['Partner Page', '/partners', 'education, media, manufacturers'],
-        ['Teams', '/teams.html', 'owner visibility and field proof'],
+        ['Teams', '/teams', 'owner visibility and field proof'],
         ['Field Testers', '/field-testers.html', 'send real-world feedback'],
         ['Field Card Packet', '/partner-field-card-packet.html', 'manufacturer-ready proof cards'],
         ['Facilities Pilot', '/facilities', 'QR workflow and support routing'],

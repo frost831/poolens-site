@@ -15,7 +15,7 @@ const surfaces = [
   { name: 'site-spa-filter-flow', url: 'https://splashlens.com/source-pages/spa-filter-cartridge-flow-troubleshooting.html' },
   { name: 'site-spa-leak-winter', url: 'https://splashlens.com/source-pages/spa-leak-winterizing-rental-reset.html' },
   { name: 'site-service-proof', url: 'https://splashlens.com/service-proof-passport.html' },
-  { name: 'site-teams', url: 'https://splashlens.com/teams.html' },
+  { name: 'site-teams', url: 'https://splashlens.com/teams' },
   { name: 'site-facilities', url: 'https://splashlens.com/facilities.html' },
   { name: 'app-home', url: 'https://app.splashlens.com/' },
   {

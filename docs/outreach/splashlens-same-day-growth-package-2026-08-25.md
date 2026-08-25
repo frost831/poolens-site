@@ -1,12 +1,12 @@
 # SplashLens Same-Day Growth Package - 2026-08-25
 
-Prepared after the 2026-08-25 controlled cold batch was already used.
+Prepared after the 2026-08-25 controlled cold batch.
 
-## Hard Boundary
+## Send Boundary
 
-No more cold SplashLens email should be sent on 2026-08-25. Five one-to-one cold emails already went out today, and the project rule is five per day. Use the rest of today for assets, warm replies, social, site-sharing, tomorrow's preflight, and queue expansion.
+The fixed numeric cold-send limit has been removed. Future send volume is governed by sender health, verified rows, suppression checks, cooldown checks, and live preflight status.
 
-This is not a growth pause. It is the same-day package that keeps tomorrow from starting cold.
+This package keeps outreach moving without weakening unsubscribe, bounce, complaint, exact-history, source, MX, cooldown, or no-BCC protections.
 
 ## Today's Push Theme
 
@@ -45,7 +45,7 @@ Use the campaign page as the main link unless a warm recipient specifically need
 
 ## Same-Day Non-Email Actions
 
-These can be done today without violating the cold-send cap:
+These can be done today without weakening sender health:
 
 1. Post on LinkedIn from Joshua:
 
@@ -290,4 +290,3 @@ Do not celebrate opens. Track:
 - Checkout started.
 - Paid conversion.
 - Reply asking for a demo, pilot, article, call, or partner route.
-

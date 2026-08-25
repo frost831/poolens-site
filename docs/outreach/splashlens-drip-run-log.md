@@ -1742,3 +1742,10 @@ True blockers:
   - Lane snippets for training/operator, spa/swim-spa, covers/accessories, service company, supplier/counter, media/creator, and owner/team audiences.
   - Tomorrow preflight checklist and measurement plan.
 - Prepared `docs/outreach/splashlens-send-windows-2026-08-26-to-2026-09-01.csv` with 25 queued candidates across five send windows, all marked `requires_fresh_preflight=yes`.
+
+## Outreach numeric limit removal - 2026-08-25
+
+- User requested removal of the fixed cold-email daily limit.
+- Updated active outreach source of truth so future SplashLens send volume is governed by sender health, verified rows, cooldowns, suppression checks, source/MX checks, exact Gmail history, live preflight, and no-BCC/one-to-one requirements instead of a fixed numeric daily limit.
+- Updated `tools/splashlens_outreach_day_lock.ps1` so it remains a single-writer lock and recent hard-bounce/delivery-failure gate, but no longer blocks because a send count reached a fixed number.
+- Verification: `tools/splashlens_outreach_day_lock.ps1 -Date 2099-01-01` returned `PASS`, created the lock, reported sends found today without a quota denominator, and `-Release` removed the lock.

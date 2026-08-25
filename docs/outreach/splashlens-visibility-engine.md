@@ -172,8 +172,8 @@ Weekdays, the automation should:
 1. Run live preflight for `https://splashlens.com` and `https://app.splashlens.com`.
 2. Search Gmail for replies, bounces, unsubscribe/remove requests, complaints, and delivery failures.
 3. Suppress replied, bounced, negative, or remove-request contacts.
-4. Pick up to five verified `queued` rows.
-5. If there are fewer than five sendable rows, research and add verified prospects before sending.
+4. Pick verified `queued` rows that pass same-day source, MX, exact-history, cooldown, suppression, and sender-health checks.
+5. If sendable rows are thin, research and add verified prospects before sending.
 6. Rotate lanes so the same audience is not over-hit:
    - Monday: training and associations.
    - Tuesday: podcasts, creators, and media.

@@ -5,7 +5,7 @@ This folder now contains only the active outreach source of truth.
 ## Active Files
 
 - `splashlens-drip-queue.csv` - current recipient queue, statuses, send dates, suppression notes, and Gmail proof IDs.
-- `splashlens-drip-rules.md` - sending rules, caps, stop-signal checks, and required run order.
+- `splashlens-drip-rules.md` - sending rules, sender-health gates, stop-signal checks, and required run order.
 - `splashlens-drip-run-log.md` - chronological audit log for sends, no-send runs, scraping, and queue updates.
 - `splashlens-outreach-templates.md` - current approved copy blocks and reusable positioning.
 - `splashlens-visibility-engine.md` - lane strategy and high-level outreach operating model.

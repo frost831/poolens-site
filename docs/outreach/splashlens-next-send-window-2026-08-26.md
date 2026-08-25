@@ -4,7 +4,7 @@ Prepared: 2026-08-25
 
 ## Send Boundary
 
-Do not send more cold SplashLens outreach on 2026-08-25. The controlled daily cap was already used for five one-to-one sends.
+The fixed numeric cold-send limit has been removed. Future send volume is governed by sender health, verified rows, suppression checks, cooldown checks, and live preflight status.
 
 Before sending this packet on 2026-08-26 or later:
 

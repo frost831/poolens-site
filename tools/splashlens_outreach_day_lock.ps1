@@ -1,6 +1,5 @@
 param(
   [string]$Date = (Get-Date -Format 'yyyy-MM-dd'),
-  [int]$DailyCap = 5,
   [switch]$Release
 )
 
@@ -65,9 +64,6 @@ $problems = @()
 if (Test-Path $lockPath) {
   $problems += "Existing same-day lock: $lockPath"
 }
-if ($todayAcceptedSends -ge $DailyCap) {
-  $problems += "Daily cap already consumed: $todayAcceptedSends/$DailyCap accepted sends found in run log for $Date"
-}
 if ($recentHardBounce) {
   $problems += "Recent hard-bounce/delivery-failure language found in the last 7 days of the run log"
 }
@@ -81,7 +77,7 @@ if ($problems.Count -gt 0) {
 $lockPayload = [ordered]@{
   date = $Date
   created_at = (Get-Date).ToString('o')
-  daily_cap = $DailyCap
+  send_limit_policy = 'no fixed numeric daily limit; sender-health and compliance gates apply'
   sends_found_today = $todayAcceptedSends
   repo = $repoRoot.Path
   note = 'Single-writer lock for SplashLens outreach. Release only after queue and run log are updated.'
@@ -90,4 +86,4 @@ $lockPayload = [ordered]@{
 New-Item -ItemType File -Path $lockPath -Value $lockPayload -ErrorAction Stop | Out-Null
 Write-Output "SplashLens outreach send gate: PASS"
 Write-Output "Created lock: $lockPath"
-Write-Output "Sends found today: $todayAcceptedSends/$DailyCap"
+Write-Output "Sends found today: $todayAcceptedSends"

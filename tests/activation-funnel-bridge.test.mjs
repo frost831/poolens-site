@@ -41,3 +41,18 @@ test('homepage app CTAs route visitors into measurable field challenges', () => 
   assert.match(homepage, /destination_path/);
   assert.match(homepage, /challenge_id: destination\.challenge_id/);
 });
+
+test('campaign field challenge includes proof path and current proof strip', () => {
+  const campaign = fs.readFileSync(new URL('../campaign.html', import.meta.url), 'utf8');
+  assert.match(campaign, /Run one ugly stop through SplashLens/);
+  assert.match(campaign, /value="proof"/);
+  assert.match(campaign, /AQUA Closing Season/);
+  assert.match(challenge, /service_proof/);
+});
+
+test('homepage pricing avoids unstable pilot target language', () => {
+  assert.doesNotMatch(homepage, /pilot target/i);
+  assert.doesNotMatch(homepage, /Coming soon: Route Ready/i);
+  assert.match(homepage, /\$19<\/div>[\s\S]*per month \/ request access/);
+  assert.match(homepage, /\$99<\/div>[\s\S]*per company \/ month/);
+});

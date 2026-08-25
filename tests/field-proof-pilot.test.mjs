@@ -14,9 +14,8 @@ test('field proof pilot page captures business pilot requests through partner in
   assert.match(page, /followUpPermission:true/);
 });
 
-test('pilot path is reachable from homepage and global navigation', () => {
-  assert.match(home, /field-proof-pilot\.html/);
-  assert.match(home, /Book Field Pilot/);
+test('pilot path is moved out of the homepage CTA path and kept in global navigation', () => {
+  assert.doesNotMatch(home, /Book Field Pilot/);
   assert.match(nav, /Field Proof Pilot/);
   assert.match(nav, /\/field-proof-pilot\.html/);
 });

@@ -1702,3 +1702,31 @@ True blockers:
   - Prime Pool Service <info@primepoolservice.com>, Gmail id 1a03a20d3e1719f0, utm_content prime_pool_service.
 - Queue rows changed: the five recipients above moved from queued to sent, last_sent_at=2026-08-25, next_send_after=2026-09-01, with Gmail IDs and proof notes added.
 - Growth readout from same run: first-party app/site events, Stripe readiness, webhook, Payment Links, and Amplitude smoke forwarding all reported GREEN. Conversion issue is now offer/action quality and completed first workflow, not wiring.
+
+## Conversion cleanup and next send prep - 2026-08-25
+
+- No additional cold outreach was sent after the five-email 2026-08-25 controlled batch. Daily cap remains used for the day.
+- Site conversion cleanup:
+  - `campaign.html` now leads with a single 60-second field challenge: `Run one ugly stop through SplashLens.`
+  - Added a fourth `Proof` challenge lane that routes to the app report/closing workflow with `challenge_path=service_proof`.
+  - Added the AQUA Closing Season article to the campaign proof strip.
+  - Added plain ROI/value language for PartSnap Pro, Solo Proof, and Teams.
+  - Removed the homepage `Book Field Pilot` CTA from the main Service Proof OS path.
+  - Removed homepage `pilot target`/`Coming soon: Route Ready` language from the main conversion path.
+- App conversion cleanup:
+  - Paid lane language now reads `$19/mo - request access`, `$99/mo - company setup`, and `Request access` instead of unstable pilot-target wording.
+  - Added an explicit `GET /api/scan` JSON method boundary so the live API route returns `405` JSON instead of the app shell.
+- Verification:
+  - Site tests passed `19/19`.
+  - App tests passed `77/77`.
+  - PartSnap corpus benchmark passed `9/9`.
+  - Live UI audit passed `32/32` checks with `0` failures.
+  - Growth probe classified the funnel as `GREEN`: app/site events, Stripe readiness, Stripe webhook, Payment Links, and Amplitude smoke forwarding are live.
+  - Live custom-domain smoke: `https://splashlens.com/`, `/campaign`, `/campaign.html`, `/teams`, `/sitemap.xml`, `/ai.txt`, `/llms.txt`, `https://app.splashlens.com/`, and `/api/checkout-readiness` returned healthy responses. `GET https://app.splashlens.com/api/scan` now returns `405` JSON with `Allow: POST, OPTIONS`.
+- Deployments:
+  - Site deployed to Cloudflare Pages preview `https://9426ea91.poolens-site.pages.dev`.
+  - App deployed to Cloudflare Pages preview `https://3ad936b9.poolens.pages.dev`.
+- Next send window prep:
+  - Created `docs/outreach/splashlens-next-send-window-2026-08-26.md`.
+  - Prep checked 12 queued rows; the first 12 had live source URLs and MX. Recommended first five for the next lawful send window: NRPA/AFO route, Wellis support, Cover Valet, Leisure Concepts, and Duffield Aquatics.
+  - Before any 2026-08-26 send, rerun day lock, Gmail stop-signal/history checks, source/MX checks, and suppressions.

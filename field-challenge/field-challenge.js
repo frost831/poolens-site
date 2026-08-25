@@ -39,6 +39,12 @@
       direction: "Use one real brand, model, symptom, or equipment family.",
       url: "https://app.splashlens.com/?tab=errors",
       path: "lookup"
+    },
+    proof: {
+      label: "Open visit proof",
+      direction: "Use one real closing note, repair handoff, customer explanation, or photo trail.",
+      url: "https://app.splashlens.com/?tab=report&workflow=closing",
+      path: "service_proof"
     }
   };
 
@@ -154,7 +160,7 @@
     route.textContent = mode.label;
     route.href = routeUrl();
     direction.textContent = mode.direction;
-    activeTitle.textContent = state.type === "part" ? "Run PartSnap" : "Run the lookup";
+    activeTitle.textContent = state.type === "part" ? "Run PartSnap" : state.type === "proof" ? "Build visit proof" : "Run the lookup";
     if (window.SplashLensGa4 && typeof window.SplashLensGa4.decorateAppLinks === "function") {
       window.SplashLensGa4.decorateAppLinks();
     }

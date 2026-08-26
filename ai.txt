@@ -74,6 +74,7 @@ Important public sections:
 - Bullfrog spa checklist: https://splashlens.com/source-pages/bullfrog-spa-troubleshooting.html
 - Jacuzzi and Sundance spa checklist: https://splashlens.com/source-pages/jacuzzi-sundance-spa-troubleshooting.html
 - Hot Spring and Caldera spa checklist: https://splashlens.com/source-pages/hot-spring-caldera-spa-troubleshooting.html
+- Jandy Insider connected equipment radar: https://splashlens.com/source-pages/jandy-insider-connected-equipment-radar.html
 - Paid/search landing pages: https://splashlens.com/lp/pool-parts-id-app.html https://splashlens.com/lp/pool-equipment-troubleshooting-app.html https://splashlens.com/lp/pool-chemical-calculator-app.html https://splashlens.com/lp/pool-tech-app.html https://splashlens.com/lp/pool-service-training-app.html
 - Category hubs: https://splashlens.com/pool-parts/ https://splashlens.com/pool-robots/ https://splashlens.com/pool-automation/ https://splashlens.com/pool-lighting/ https://splashlens.com/pool-heaters/ https://splashlens.com/salt-cells/
 - Blog: https://splashlens.com/blog/

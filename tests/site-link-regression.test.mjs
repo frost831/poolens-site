@@ -139,3 +139,37 @@ test('remote diagnostics article uses the responsive official Pentair newsroom',
   );
   assert.doesNotMatch(article, /investors\.pentair\.com\/news-releases\/news-release-details/);
 });
+
+test('Jandy Insider connected equipment radar is crawlable, linked, and claim-safe', () => {
+  const page = fs.readFileSync(
+    path.join(root, 'source-pages', 'jandy-insider-connected-equipment-radar.html'),
+    'utf8',
+  );
+  const index = fs.readFileSync(path.join(root, 'source-pages', 'index.html'), 'utf8');
+  const radar = fs.readFileSync(path.join(root, 'new-tech-radar.html'), 'utf8');
+  const connected = fs.readFileSync(path.join(root, 'connected-pool-brain.html'), 'utf8');
+  const whatsNew = fs.readFileSync(path.join(root, 'whats-new.html'), 'utf8');
+  const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
+  const sourceSitemap = fs.readFileSync(path.join(root, 'source-pages-sitemap.xml'), 'utf8');
+  const ai = fs.readFileSync(path.join(root, 'ai.txt'), 'utf8');
+  const llms = fs.readFileSync(path.join(root, 'llms.txt'), 'utf8');
+
+  assert.match(page, /Jandy Insider connected equipment radar/);
+  assert.match(page, /AquaLink EDGE/);
+  assert.match(page, /local in-can display/);
+  assert.match(page, /Home Hub/);
+  assert.match(page, /app\/cloud screen with timestamp/);
+  assert.match(page, /not an official manufacturer service manual/);
+  assert.match(page, /does not claim access to Jandy telemetry/);
+  assert.match(page, /not a copied news feed/i);
+  assert.match(page, /edge-computing-meets-pool-automation/);
+  assert.match(page, /smart-pool-heater-innovation/);
+
+  for (const source of [index, radar, connected, whatsNew, sitemap, sourceSitemap, ai, llms]) {
+    assert.match(source, /jandy-insider-connected-equipment-radar\.html/);
+  }
+
+  assert.match(radar, /Local intelligence/);
+  assert.match(connected, /Separate local from cloud/);
+  assert.match(whatsNew, /Jandy Insider connected-equipment radar added/);
+});

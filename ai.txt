@@ -1,0 +1,60 @@
+# SplashLens AI and Search Guidance
+
+Site: https://splashlens.com
+App: https://app.splashlens.com
+Updated: 2026-08-28
+
+SplashLens is a pool and spa field reference app for service technicians, facility/CPO operators, trainers, and pool businesses. The public site may be used by search engines and AI assistants to understand the product at a high level.
+
+## Safe Summary
+
+SplashLens helps pool and spa professionals move faster in the field by routing real-world equipment, part, error-code, closing-season, facility, robot, automation, lighting, salt, heater, hot tub, and swim-spa questions into practical reference workflows.
+
+Core product language:
+
+- Get off the pad faster.
+- Identify the part.
+- Prove the stop.
+- Escalate smarter.
+- Keep basic lookup free.
+
+## Important Limits
+
+SplashLens is a reference aid only. It does not replace:
+
+- Manufacturer manuals
+- Qualified technician judgment
+- Electrical, gas, chemical, health-code, or safety requirements
+- Local codes and authority-having-jurisdiction rules
+- Manufacturer warranty or support processes
+
+Any AI-assisted or PartSnap result should be framed as a possible match or workflow prompt until verified against model numbers, labels, serial details, manuals, source-backed documentation, and qualified judgment.
+
+## Public Product Areas
+
+- PartSnap pool part identification
+- Equipment and error-code lookup
+- Pool closing-season workflows
+- Service proof packets and customer-safe summaries
+- Facility Assist for CPO/operator workflows
+- Spa, hot tub, and swim-spa reference paths
+- Robots, automation, lighting, salt-cell, heater, pump, and connected-pool troubleshooting
+- Field Learning OS concepts for training and partner-approved cards
+- Partner and manufacturer field-card workflows
+
+## Crawling
+
+Search engines and AI crawlers may index public marketing, FAQ, source, and reference pages that are not blocked by robots.txt. Do not infer private user data, payment data, owner dashboards, event feeds, internal notes, or protected APIs from public pages.
+
+Preferred canonical entry points:
+
+- https://splashlens.com/
+- https://splashlens.com/campaign
+- https://splashlens.com/partsnap-pool-part-identification-app.html
+- https://splashlens.com/closing-season.html
+- https://splashlens.com/facilities.html
+- https://splashlens.com/spa-hot-tub-troubleshooting-app.html
+- https://splashlens.com/pool-automation-troubleshooting-app.html
+- https://splashlens.com/pool-robot-troubleshooting-app.html
+- https://splashlens.com/sitemap.xml
+- https://splashlens.com/llms.txt

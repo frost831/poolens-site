@@ -8,10 +8,10 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0284c7">
 <title>SplashLens - PartSnap Pool Part ID and Free Field Tools</title>
-<meta name="description" content="SplashLens helps pool and spa pros get off the pad faster before close season: PartSnap parts ID, code lookup, visit proof, Facility Assist, Field Learning OS workflows, and owner usage signals so techs finish cleaner and get time back.">
+<meta name="description" content="SplashLens helps pool and spa pros get off the pad faster: identify pool parts with PartSnap, check equipment codes, save visit proof, and send cleaner details before anyone orders blind.">
 <meta property="og:site_name" content="SplashLens">
 <meta property="og:title" content="SplashLens - PartSnap Pool Part ID and Free Field Tools">
-<meta property="og:description" content="Identify it, prove it, explain it, train from it, and remember it. SplashLens connects PartSnap, visit proof, facility workflows, Field Learning OS lessons, partner cards, and field usage signals.">
+<meta property="og:description" content="Identify the part, prove the visit, and send cleaner job details before anyone orders blind. Free core tools for pool and spa pros.">
 <link rel="image_src" href="https://splashlens.com/splashlens-share-card.png">
 <meta property="og:image" content="https://splashlens.com/splashlens-share-card.png">
 <meta property="og:image:secure_url" content="https://splashlens.com/splashlens-share-card.png">
@@ -31,10 +31,10 @@
 <link rel="alternate" hreflang="x-default" href="https://splashlens.com/">
 <meta name="robots" content="index, follow">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"SplashLens","url":"https://splashlens.com","description":"Field intelligence layer for pool, spa, and aquatic service work - PartSnap parts ID, Saved Visit History, Connected Pool Network, Facility Assist, training workflows, owner usage signals, dosing calculators, visit reports, filter guides, and online scanner workflows.","potentialAction":{"@type":"SearchAction","target":"https://splashlens.com/blog/?q={search_term_string}","query-input":"required name=search_term_string"}}
+{"@context":"https://schema.org","@type":"WebSite","name":"SplashLens","url":"https://splashlens.com","description":"Field reference app for pool, spa, and aquatic service work: PartSnap parts ID, equipment code lookup, visit proof, dosing calculators, filter guides, facility workflows, and online scanner workflows.","potentialAction":{"@type":"SearchAction","target":"https://splashlens.com/blog/?q={search_term_string}","query-input":"required name=search_term_string"}}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SplashLens","applicationCategory":"UtilitiesApplication","operatingSystem":"iOS, Android, Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free field rescue app for pool service professionals. PartSnap pool parts ID, Connected Pool Network, New Tech Radar, 230+ current equipment, automation, lighting, robot, cover, sanitizer, and controller troubleshooting entries, chemical dosing calculators, voice notes, visit reports, Field Learning OS workflows, SLAM tracker, salt chlorinator reference, and online scanner workflows.","url":"https://app.splashlens.com","downloadUrl":["https://apps.apple.com/us/app/splashlens/id6763644905","https://play.google.com/store/apps/details?id=com.splashlens.fieldtools"],"sameAs":["https://apps.apple.com/us/app/splashlens/id6763644905","https://play.google.com/store/apps/details?id=com.splashlens.fieldtools"],"screenshot":"https://splashlens.com/qa-splashlens-public-site-2026-05-27.png","featureList":["PartSnap pool parts ID","Connected Pool Network","New Tech Radar","Robot cleaner troubleshooting","Pool automation troubleshooting","PartSnap callback warning signs","Saved Visit History","Field Learning OS","Mystery Part Review Queue","Apprentice Mode","230+ current field troubleshooting entries","Manual tools work offline","Chemical dosing calculators","Voice-first service notes","Visit reports","SLAM tracker","Salt chlorinator reference","Chemical safety guide","Online scanner workflows"]}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SplashLens","applicationCategory":"UtilitiesApplication","operatingSystem":"iOS, Android, Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free field reference app for pool service professionals. PartSnap pool parts ID, equipment code lookup, visit proof, robot and automation troubleshooting references, spa and swim-spa workflows, chemical dosing calculators, voice notes, checklists, and online scanner workflows.","url":"https://app.splashlens.com","downloadUrl":["https://apps.apple.com/us/app/splashlens/id6763644905","https://play.google.com/store/apps/details?id=com.splashlens.fieldtools"],"sameAs":["https://apps.apple.com/us/app/splashlens/id6763644905","https://play.google.com/store/apps/details?id=com.splashlens.fieldtools"],"screenshot":"https://splashlens.com/product-screenshots/partsnap-result-proof-mobile.png","featureList":["PartSnap pool parts ID","Equipment code lookup","Visit proof","Robot cleaner troubleshooting","Pool automation troubleshooting","Spa and swim-spa workflows","230+ current field troubleshooting entries","Manual tools work offline","Chemical dosing calculators","Voice-first service notes","Visit reports","SLAM tracker","Salt chlorinator reference","Chemical safety guide","Online scanner workflows"]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"SplashLens","url":"https://splashlens.com","description":"SplashLens builds free field reference tools for pool service professionals.","sameAs":["https://app.splashlens.com","https://apps.apple.com/us/app/splashlens/id6763644905","https://play.google.com/store/apps/details?id=com.splashlens.fieldtools"]}
@@ -527,6 +527,175 @@
  to { transform: translateY(0); filter: saturate(1); }
  }
  .mobile-ai-quick { display: none; }
+ .photo-band.facility-photo-band,
+ .photo-band.pricing-photo-band,
+ .facility-band,
+ #ai,
+ #teams,
+ #stay-updated {
+ display: none !important;
+ }
+ body {
+ background: #f7fbfd;
+ }
+ nav {
+ box-shadow: 0 1px 0 rgba(15, 23, 42, .04);
+ }
+ .nav-inner {
+ height: 64px;
+ }
+ .nav-links a,
+ .nav-menu summary {
+ font-weight: 750;
+ }
+ .nav-cta,
+ .btn-primary,
+ .btn-ghost,
+ .btn-price,
+ .season-action,
+ .field-os-actions a {
+ border-radius: 9px;
+ }
+ .hero {
+ min-height: 680px;
+ padding-top: 54px;
+ }
+ .hero::before {
+ content: "";
+ position: absolute;
+ inset: 0;
+ background:
+ linear-gradient(90deg, rgba(255,255,255,.08) 0 1px, transparent 1px 100%),
+ linear-gradient(180deg, rgba(255,255,255,.06) 0 1px, transparent 1px 100%);
+ background-size: 64px 64px;
+ opacity: .16;
+ pointer-events: none;
+ }
+ .hero h1 {
+ max-width: 680px;
+ }
+ .hero-sub {
+ max-width: 610px;
+ }
+ .hero-actions {
+ margin-bottom: 13px;
+ }
+ .hero-download-row {
+ margin-bottom: 12px;
+ }
+ .hero-phone-card {
+ border-radius: 18px;
+ transform: rotate(.35deg);
+ }
+ .hero-phone-frame {
+ border-radius: 24px;
+ }
+ .stat-strip {
+ background: #ffffff;
+ padding: 20px 18px;
+ }
+ .stat-grid {
+ gap: 0;
+ border: 1px solid #dbe8ef;
+ border-radius: 10px;
+ overflow: hidden;
+ background: #f8fafc;
+ }
+ .stat-item {
+ flex: 1 1 150px;
+ min-width: 140px;
+ padding: 18px 14px;
+ background: #ffffff;
+ border-right: 1px solid #dbe8ef;
+ }
+ .stat-item:last-child {
+ border-right: 0;
+ }
+ .stat-num {
+ font-size: clamp(1.35rem, 2.4vw, 2.1rem);
+ }
+ .season-push {
+ padding: 34px 18px;
+ background: linear-gradient(135deg, #06121f 0%, #073449 54%, #0b635d 100%);
+ }
+ .season-path {
+ transition: transform .16s ease, background .16s ease, border-color .16s ease;
+ }
+ .season-path:hover {
+ transform: translateY(-2px);
+ background: rgba(255,255,255,.13);
+ border-color: rgba(255,255,255,.3);
+ }
+ .buyer-strip {
+ padding: 22px 18px;
+ }
+ .buyer-card {
+ min-height: 136px;
+ padding: 16px;
+ }
+ .field-os {
+ background: #f8fafc;
+ padding: 52px 24px;
+ }
+ .field-os-copy {
+ border-radius: 10px;
+ background: linear-gradient(145deg, #061827, #075985 52%, #0f766e);
+ }
+ .field-os-copy h2 {
+ font-size: clamp(2rem, 4.6vw, 4.2rem);
+ }
+ .field-os-card {
+ min-height: 118px;
+ border-radius: 8px;
+ background: #ffffff;
+ }
+ #features {
+ background: #ffffff;
+ }
+ .feature-spotlight {
+ border-radius: 10px;
+ background: linear-gradient(145deg, #061827, #0f172a);
+ }
+ .feature-card {
+ border-radius: 8px;
+ padding: 22px;
+ box-shadow: 0 1px 2px rgba(15,23,42,.05);
+ }
+ .ai-section {
+ padding: 58px 24px;
+ }
+ .ai-item {
+ border-radius: 8px;
+ }
+ .quote-section {
+ background: #f8fafc;
+ padding: 38px 24px;
+ }
+ .quote-card {
+ border-radius: 8px;
+ box-shadow: 0 1px 2px rgba(15,23,42,.05);
+ }
+ .photo-band.pricing-photo-band {
+ min-height: 310px;
+ }
+ #pricing {
+ background: #ffffff;
+ }
+ .price-grid {
+ gap: 16px;
+ }
+ .price-card {
+ border-radius: 8px;
+ padding: 28px 24px;
+ box-shadow: 0 1px 2px rgba(15,23,42,.05);
+ }
+ .price-features {
+ gap: 8px;
+ }
+ .price-features li::before {
+ content: "✓";
+ color: #0f766e;
+ }
  .field-photo-grid {
  max-width: 1060px;
  margin: 0 auto 34px;
@@ -1444,10 +1613,21 @@ gap: 10px;
  font-weight: 700;
  }
  .feature-spotlight .product-phone {
- min-height: 360px;
+ min-height: 0;
  max-width: 280px;
  justify-self: center;
  box-shadow: 0 24px 64px rgba(0,0,0,.34);
+ overflow: hidden;
+ }
+ .feature-spotlight .product-phone img {
+ display: block;
+ width: 100%;
+ height: auto;
+ aspect-ratio: 390 / 844;
+ object-fit: cover;
+ object-position: top center;
+ border-radius: 23px;
+ background: #eff8fb;
  }
  .feature-spotlight .product-screen { min-height: 342px; }
  .feature-all-tools {
@@ -2047,7 +2227,7 @@ gap: 10px;
  <a href="/partsnap-pool-part-identification-app.html"><strong>Parts ID Page</strong><span>marketing and proof path</span></a>
  <a href="/partsnap-proof-library.html"><strong>Job Records</strong><span>what to photo before ordering</span></a>
  <a href="/mystery-part-lab.html"><strong>Mystery Lab</strong><span>weird part review lane</span></a>
- <a href="#ai"><strong>AI Scanning</strong><span>error scan, PartSnap, strip reader</span></a>
+ <a href="/partsnap.html"><strong>Camera Workflows</strong><span>PartSnap, error scan, strip reader</span></a>
  <a href="https://app.splashlens.com" target="_blank"><strong>Open Web App</strong><span>use the field tools now</span></a>
  </div>
 </details>
@@ -2122,7 +2302,7 @@ gap: 10px;
   <div class="hero-layout">
   <div class="hero-copy premium-reveal">
    <h1>Get off the pad faster.</h1>
-   <p class="hero-sub">SplashLens helps pool and spa pros identify mystery parts, check codes, capture proof, and send cleaner details before anyone guesses or orders blind.</p>
+   <p class="hero-sub">Snap the part. Check the code. Save the proof. SplashLens gives pool and spa pros a cleaner next move before anyone guesses or orders blind.</p>
    <div class="hero-actions">
    <a href="https://app.splashlens.com/?tab=scan&mode=parts&utm_source=site&utm_medium=hero&utm_campaign=field60_home&challenge=field60&challenge_path=partsnap&challenge_id=site_hero_partsnap" target="_blank" class="btn-primary" data-track="partsnap_click" data-source="hero_primary" data-challenge-path="partsnap" data-challenge-id="site_hero_partsnap">
    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
@@ -2133,7 +2313,7 @@ gap: 10px;
    </a>
    </div>
    <div class="hero-download-row" aria-label="Download SplashLens">
-   <span class="hero-download-label">Free core app</span>
+   <span class="hero-download-label">Free field app</span>
    <div class="store-badges">
    <a href="https://apps.apple.com/us/app/splashlens/id6763644905" target="_blank" rel="noopener" class="store-badge apple" aria-label="Download SplashLens on the App Store" data-track="app_store_download_click" data-source="hero">
    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" loading="eager">
@@ -2160,7 +2340,7 @@ gap: 10px;
    <div class="hero-phone-frame">
    <img src="/product-screenshots/partsnap-result-proof-mobile.png" alt="SplashLens PartSnap result showing possible part matches and proof prompts" loading="eager">
    </div>
-   <p class="hero-phone-caption">Possible matches stay cautious. SplashLens asks for the proof a tech needs before ordering: model plate, second photo, markings, fit clues, and source-backed candidates.</p>
+   <p class="hero-phone-caption">PartSnap stays cautious: possible match, proof still needed, then cleaner details for the boss, counter, or vendor.</p>
   </div>
   </div>
  </div>
@@ -2172,23 +2352,23 @@ gap: 10px;
  <div class="stat-grid">
  <div class="stat-item">
  <div class="stat-num">230+</div>
- <div class="stat-label">Troubleshooting Entries</div>
+ <div class="stat-label">Field Reference Entries</div>
  </div>
  <div class="stat-item">
- <div class="stat-num">12+</div>
- <div class="stat-label">Dosing Calculators</div>
+ <div class="stat-num">iOS</div>
+ <div class="stat-label">App Store Live</div>
  </div>
  <div class="stat-item">
- <div class="stat-num">100+</div>
- <div class="stat-label">Chemical Products Covered</div>
+ <div class="stat-num">Android</div>
+ <div class="stat-label">Google Play Live</div>
  </div>
  <div class="stat-item">
  <div class="stat-num">Free</div>
  <div class="stat-label">Core Tools Forever</div>
  </div>
  <div class="stat-item">
- <div class="stat-num">Offline</div>
- <div class="stat-label">Manual Tools</div>
+ <div class="stat-num">Photo</div>
+ <div class="stat-label">PartSnap Workflow</div>
  </div>
 </div>
 </div>
@@ -2199,7 +2379,7 @@ gap: 10px;
  <div>
  <p class="season-push-kicker">New: Closing Season Mode</p>
  <h2>Close season with cleaner proof, not more guessing.</h2>
- <p>When Midwest routes shift into closings, repairs, winterization notes, odd parts, and last-minute callbacks, SplashLens now gives techs a dedicated closing workflow for drain-plug proof, cover notes, winterization photos, customer-safe summaries, and callback-risk flags.</p>
+ <p>When Midwest routes shift into closings, repairs, winterizing notes, odd parts, and last-minute callbacks, SplashLens helps techs document the stop before the phone starts ringing again.</p>
  <div class="season-actions">
  <a class="season-action" href="/closing-season.html?utm_source=site&utm_medium=season_band&utm_campaign=closing_season_launch_2026" data-track="closing_season_click" data-source="season_band_primary">See Closing Season Mode</a>
  <a class="season-action secondary" href="https://app.splashlens.com/?tab=report&utm_source=site&utm_medium=season_band&utm_campaign=closing_season_launch_2026&workflow=closing" target="_blank" rel="noopener" data-track="open_app_click" data-source="season_band_secondary">Open closing workflow</a>
@@ -2210,10 +2390,10 @@ gap: 10px;
  <b>Tech</b><strong>Mystery part or code</strong><span>Start with the thing in your hand, then capture what proof is still missing.</span>
  </a>
  <a class="season-path" href="https://app.splashlens.com/?tab=report&utm_source=site&utm_medium=season_band&utm_campaign=closing_season_launch_2026&workflow=closing&challenge_id=season_closing_proof" target="_blank" rel="noopener" data-track="service_proof_click" data-source="season_visit_proof">
- <b>Owner</b><strong>Closing proof before winter</strong><span>Turn drain plugs, covers, readings, photos, and declined-work notes into a cleaner handoff.</span>
+ <b>Owner</b><strong>Closing proof before winter</strong><span>Drain plugs, covers, readings, photos, and declined-work notes in one cleaner summary.</span>
  </a>
  <a class="season-path" href="/partner-field-card-packet.html?utm_source=site&utm_medium=season_band&utm_campaign=midwest_winddown_2026&audience=supplier-manufacturer" data-track="partner_packet_click" data-source="season_partner">
- <b>Supplier</b><strong>Better proof before ordering</strong><span>Ask for model plates, markings, second photos, and symptoms before a part guess.</span>
+ <b>Supplier</b><strong>Better proof before ordering</strong><span>Model plates, markings, second photos, and symptoms before the counter guesses.</span>
  </a>
  <a class="season-path" href="/spa-hot-tub-troubleshooting-app.html?utm_source=site&utm_medium=season_band&utm_campaign=spa_swim_spa_push_2026" data-track="spa_lane_click" data-source="season_spa">
  <b>Spa</b><strong>Hot tub and swim-spa stops</strong><span>Balboa, Gecko, Waterway NEO, H2X, Endless, Hydropool, GFCI timing, weak jets, covers, feeders, and current-pump proof.</span>
@@ -2227,17 +2407,17 @@ gap: 10px;
  <article class="buyer-card is-primary">
  <b>1</b>
  <h2>Identify the part.</h2>
- <p>PartSnap gives the tech a cautious possible path from a photo, label, code, or part clue, then asks for the proof needed before anyone orders blind.</p>
+ <p>Start with the weird thing in your hand. PartSnap gives possible clues and asks what still needs to be proven.</p>
  </article>
  <article class="buyer-card">
  <b>2</b>
  <h2>Prove the visit.</h2>
- <p>Save photos, readings, notes, and the plain-English explanation so the customer, boss, or next tech can see what happened.</p>
+ <p>Save photos, readings, notes, and a plain-English explanation before the stop disappears into camera roll chaos.</p>
  </article>
  <article class="buyer-card">
  <b>3</b>
  <h2>Escalate smarter.</h2>
- <p>Copy clean details for a boss, experienced tech, supplier, distributor counter, trainer, or facility contact instead of sending a vague text thread.</p>
+ <p>Copy clean details for a boss, senior tech, supplier, trainer, or facility contact instead of another vague text thread.</p>
  </article>
  </div>
 </section>
@@ -2245,20 +2425,20 @@ gap: 10px;
 <section class="field-os" aria-label="SplashLens Service Proof OS">
  <div class="container field-os-shell">
  <div class="field-os-copy">
- <div class="section-eyebrow">The flagship push</div>
- <h2>Proof for the stop. Not another CRM.</h2>
- <p>SplashLens does not replace Jobber, Skimmer, Pool Brain, billing, dispatch, or your route app. It helps with the field moment those systems usually do not solve: what the tech saw, what proof is missing, what should be verified, and what needs to be sent next.</p>
+ <div class="section-eyebrow">The job record</div>
+ <h2>Less typing after the last stop.</h2>
+ <p>SplashLens does not replace billing, dispatch, or your route app. It helps with the field moment: what the tech saw, what proof is missing, what should be checked, and what needs to be sent next.</p>
   <div class="field-os-actions">
   <a href="/field-learning-os.html">See Field Learning OS</a>
   <a href="https://app.splashlens.com/?tab=report&utm_source=site&utm_medium=field_os&utm_campaign=field60_home&challenge=field60&challenge_path=service_proof&challenge_id=site_field_os_save_visit" target="_blank" rel="noopener" data-track="service_proof_click" data-source="field_os_home" data-challenge-path="service_proof" data-challenge-id="site_field_os_save_visit">Save a Visit</a>
   </div>
  </div>
  <div class="field-os-grid">
- <article class="field-os-card"><b>1</b><strong>Stop</strong><span>Start from the actual field moment: part, code, equipment, water, facility incident, or customer question.</span></article>
- <article class="field-os-card"><b>2</b><strong>Photos + notes</strong><span>Capture readings, labels, model info, visible evidence, and what still needs to be checked.</span></article>
- <article class="field-os-card"><b>3</b><strong>Send</strong><span>Create customer, boss, supplier, or facility notes without rewriting the stop later.</span></article>
- <article class="field-os-card"><b>4</b><strong>History</strong><span>Save the stop so repeated issues, part history, and next-visit notes stay findable.</span></article>
- <article class="field-os-card is-wide"><b>5</b><span><strong>Learn</strong> Owners can see common searches, missed items, and repeat issues so training and stocking decisions are based on real field friction.</span></article>
+ <article class="field-os-card"><b>1</b><strong>Start with the problem</strong><span>Part, code, water issue, closing note, spa pack, or facility question.</span></article>
+ <article class="field-os-card"><b>2</b><strong>Grab the proof</strong><span>Photos, readings, labels, model info, visible evidence, and missing checks.</span></article>
+ <article class="field-os-card"><b>3</b><strong>Send it clean</strong><span>Customer, boss, supplier, or facility notes without rewriting the whole stop later.</span></article>
+ <article class="field-os-card"><b>4</b><strong>Remember the pool</strong><span>Keep repeat issues, part history, and next-visit notes easier to find.</span></article>
+ <article class="field-os-card is-wide"><b>5</b><span><strong>Train from real misses</strong> Owners can see common searches and repeat questions so training is based on actual field friction.</span></article>
  </div>
  </div>
 </section>
@@ -2471,14 +2651,14 @@ gap: 10px;
 <section id="features">
  <div class="container">
  <div class="section-eyebrow">Built for the bad stop</div>
- <h2 class="section-title">The field rescue layer<br>your route app never built</h2>
- <p class="section-sub">Route apps run the company. SplashLens saves the stop: codes, dosing, reports, checklists, and scanner workflows built for the equipment pad.</p>
+ <h2 class="section-title">The field layer your route app never built.</h2>
+ <p class="section-sub">Route apps run the company. SplashLens helps when the tech is standing at the pad and needs a clean answer fast.</p>
 
  <div class="feature-spotlight">
  <div>
  <span class="feature-badge" style="background:#ccfbf1;color:#0f766e;margin:0 0 12px">Flagship</span>
- <h3>PartSnap is the wedge.</h3>
- <p>Photo the weird part, label, plate, or component. SplashLens returns possible ID clues, what still needs to be checked, callback warning signs, and clean details to send before anyone orders blind.</p>
+ <h3>PartSnap is the hook.</h3>
+ <p>Photo the weird part, label, plate, or component. SplashLens returns possible ID clues, what still needs to be checked, and clean details to send before anyone orders blind.</p>
  <div class="spotlight-steps">
  <div><strong>1. Photo</strong><span>part, label, display, or plate</span></div>
  <div><strong>2. Proof</strong><span>model, marking, fit clues</span></div>
@@ -2486,24 +2666,16 @@ gap: 10px;
  <div><strong>4. Send</strong><span>clean details in one tap</span></div>
  </div>
  </div>
- <div class="product-phone" aria-label="PartSnap feature phone mockup">
- <div class="product-screen">
- <div class="product-screen-top"><span>PartSnap</span><span>AI scan</span></div>
- <div class="product-screen-body">
- <div class="scan-window">PART SNAP</div>
- <span class="product-pill">Possible match</span>
- <div class="product-card"><strong>Valve actuator / diverter path</strong><span>Verify brand, voltage, shaft fit, and label before replacement.</span></div>
- <div class="product-card"><strong>Proof still needed</strong><span>Second photo plus equipment-side model plate.</span></div>
- </div>
- </div>
- </div>
+ <figure class="product-phone" aria-label="PartSnap feature phone screenshot">
+ <img src="/product-screenshots/partsnap-result-proof-mobile.png" alt="SplashLens PartSnap result with cautious possible matches and proof prompts" loading="lazy" width="390" height="844">
+ </figure>
  </div>
 
   <div class="feature-grid">
   <div class="feature-card">
   <div class="feature-icon" style="background:#e0f2fe;color:#075985">CODE</div>
-  <h3>Codes and water math</h3>
-  <p>230+ reference entries plus pool volume, turnover, FC, pH, TA, CH, CYA, SLAM, drain/refill, and report-ready chemistry notes.</p>
+ <h3>Codes and water math</h3>
+  <p>Equipment-code lookup, volume, turnover, FC, pH, TA, CH, CYA, SLAM, drain/refill, and report-ready chemistry notes.</p>
   </div>
   <div class="feature-card">
   <div class="feature-icon" style="background:#dbeafe;color:#075985">PAD</div>
@@ -2678,34 +2850,34 @@ gap: 10px;
 </section>
 
 <!-- AI TEASER -->
-<section id="ai" class="ai-section">
+<section id="ai" class="ai-section home-archive-detail">
  <div class="container">
  <div class="ai-inner">
  <div class="ai-text">
- <div class="ai-coming-badge" style="margin-bottom:20px">Online scanner</div>
- <div class="section-eyebrow">AI Equipment Scanner</div>
+ <div class="ai-coming-badge" style="margin-bottom:20px">Online photo scanner</div>
+ <div class="section-eyebrow">Camera Workflows</div>
  <h2 class="section-title">Point. Check. Document.</h2>
- <p class="section-sub">Point your camera at an error display, fault-code panel, equipment label, or test strip. SplashLens uses online AI for the scan, then keeps manual lookup ready when signal disappears. Treat scan output as a field reference, not a repair guarantee.</p>
+ <p class="section-sub">Point your camera at an error display, equipment label, part, or test strip. SplashLens gives a reference path, then asks for verification before repair or ordering decisions.</p>
  <div class="ai-list">
  <div class="ai-item">
  <div class="ai-item-icon">ERR</div>
  <div class="ai-item-body">
- <h4>Error Code Camera Scan</h4>
- <p>Aim at the display. SplashLens attempts to read the fault code online and returns reference causes plus next checks. No typing when you have signal, manual lookup when you do not.</p>
+ <h4>Error code scan</h4>
+ <p>Aim at the display, get the likely code path, then verify with the manual or qualified tech before repair.</p>
  </div>
  </div>
  <div class="ai-item">
  <div class="ai-item-icon">pH</div>
  <div class="ai-item-body">
- <h4>Test Strip Photo Reading</h4>
- <p>Snap your test strip to get approximate chemistry ranges for field triage, then verify with a calibrated test kit before dosing.</p>
+ <h4>Test strip photo read</h4>
+ <p>Use it for quick field triage, then confirm with a calibrated kit before dosing.</p>
  </div>
  </div>
  <div class="ai-item">
  <div class="ai-item-icon">PART</div>
  <div class="ai-item-body">
- <h4>Parts Identification</h4>
- <p>Photo an unknown part and get suggested manufacturer, model, part number, and search terms to verify before ordering.</p>
+ <h4>Part clues</h4>
+ <p>Photo the unknown part and get safer search terms plus proof prompts before ordering.</p>
  </div>
  </div>
  </div>
@@ -2729,12 +2901,12 @@ gap: 10px;
 <section class="quote-section">
  <div class="container">
  <div class="section-eyebrow" style="text-align:center">Industry Coverage</div>
- <h2 class="section-title" style="text-align:center;margin-bottom:8px">Published by AQUA twice, plus PoolPro.</h2>
- <p class="section-sub" style="text-align:center;margin-bottom:26px;margin-left:auto;margin-right:auto">Earned trade coverage gives techs, trainers, and service companies a clean reason to test SplashLens. Coverage is not an endorsement.</p>
+ <h2 class="section-title" style="text-align:center;margin-bottom:8px">Seen in AQUA and PoolPro.</h2>
+ <p class="section-sub" style="text-align:center;margin-bottom:26px;margin-left:auto;margin-right:auto">Trade coverage gives techs, trainers, and service companies a clean reason to test SplashLens. Coverage is not an endorsement.</p>
  <div class="quote-grid">
  <article class="quote-card is-new">
  <div class="quote-stars">New - Published Aug. 24, 2026</div>
- <p class="quote-text">AQUA Magazine published SplashLens Closing Season Mode for pool and spa pros documenting winterizing proof before freeze season.</p>
+ <p class="quote-text">AQUA covered SplashLens Closing Season Mode for pool and spa pros documenting winterizing proof before freeze season.</p>
  <div class="quote-author">
  <div class="quote-avatar">AQ</div>
  <div>
@@ -2745,7 +2917,7 @@ gap: 10px;
  </article>
  <article class="quote-card">
  <div class="quote-stars">Published July 16, 2026</div>
- <p class="quote-text">AQUA Magazine published SplashLens in its Business Software section as a field-reference app for pool, spa, and facility professionals.</p>
+ <p class="quote-text">AQUA covered SplashLens as a field-reference app for pool, spa, and facility professionals.</p>
  <div class="quote-author">
  <div class="quote-avatar">AQ</div>
  <div>
@@ -2756,7 +2928,7 @@ gap: 10px;
  </article>
  <article class="quote-card">
  <div class="quote-stars">Launch coverage</div>
- <p class="quote-text">PoolPro Magazine published the SplashLens launch as a free field-reference app for pool service technicians.</p>
+ <p class="quote-text">PoolPro covered the SplashLens launch as a free field-reference app for pool service technicians.</p>
  <div class="quote-author">
  <div class="quote-avatar">PP</div>
  <div>
@@ -2769,11 +2941,11 @@ gap: 10px;
  </div>
 </section>
 
-<section class="photo-band pricing-photo-band" aria-label="Pricing visual chapter">
+<section class="photo-band pricing-photo-band home-archive-detail" aria-label="Pricing visual chapter">
  <div class="photo-band-inner">
  <div class="photo-band-kicker">Free field app, optional pro tools</div>
- <h2>Free lookup. Paid when the work needs to be saved, shared, or managed.</h2>
- <p>Use the app free in the field. Upgrade only when you need more scanner use, saved job history, team visibility, facility records, Field Learning OS workflows, or real partner-reviewed cards.</p>
+ <h2>Free lookup. Upgrade when the job needs a trail.</h2>
+ <p>Use the app free in the field. Upgrade when you need heavier scanner use, saved job history, team visibility, or training workflows.</p>
  </div>
 </section>
 
@@ -2781,8 +2953,8 @@ gap: 10px;
 <section id="pricing">
  <div class="container" style="text-align:center">
  <div class="section-eyebrow">Simple Pricing</div>
- <h2 class="section-title">Simple pricing. No mystery stack.</h2>
- <p class="section-sub" style="margin-left:auto;margin-right:auto">Start free in the field. Upgrade when the scanner, saved job history, or company proof trail becomes worth keeping.</p>
+ <h2 class="section-title">Start free. Pay only when it saves work.</h2>
+ <p class="section-sub" style="margin-left:auto;margin-right:auto">The field app stays free. Paid tiers are for more scanner use, saved job history, and owner visibility.</p>
  <div class="price-grid">
  <div class="price-card featured">
  <div class="price-card-badge">Free Field App</div>
@@ -2864,7 +3036,7 @@ gap: 10px;
 </section>
 
 <!-- FAQ -->
-<section style="background:var(--sky-xlight)">
+<section class="home-archive-detail" style="background:var(--sky-xlight)">
  <div class="container">
  <div class="section-eyebrow" style="text-align:center">Questions</div>
  <h2 class="section-title" style="text-align:center;margin-bottom:40px">FAQ</h2>
@@ -2913,7 +3085,7 @@ gap: 10px;
 <div class="cta-section">
  <div class="container">
  <h2>Ready to stop Googling error codes at the equipment pad?</h2>
- <p>Open SplashLens right now. No signup. No install. Just open it.</p>
+ <p>Open SplashLens right now. No signup. No install. Just open it. For details, read the <a href="/faq.html" style="color:#fff;font-weight:900;text-decoration-thickness:2px;text-underline-offset:3px">full FAQ</a>.</p>
  <a href="https://app.splashlens.com/?utm_source=site&utm_medium=bottom_cta&utm_campaign=field60_home&challenge=field60&challenge_path=app_choice&challenge_id=site_bottom_cta" target="_blank" class="btn-primary" data-track="open_app_click" data-source="bottom_cta" data-challenge-path="app_choice" data-challenge-id="site_bottom_cta" style="display:inline-flex;gap:8px;align-items:center">
  Open SplashLens Free
  </a>

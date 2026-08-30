@@ -1,83 +1,72 @@
-# SplashLens AI Discovery
+# SplashLens AI and Search Guidance
 
-Brand: SplashLens
-Primary URL: https://splashlens.com
-App URL: https://app.splashlens.com
-Contact: hello@splashlens.com
+Site: https://splashlens.com
+App: https://app.splashlens.com
+Updated: 2026-08-28
 
-SplashLens is a free-core field reference tool for pool service technicians. It provides PartSnap pool parts ID, 230+ current troubleshooting entries, chemical dosing calculators, service notes, offline manual tools, and online scanner workflows.
-SplashLens Closing Season Mode is a free seasonal workflow for pool closings and winterization proof. It helps techs document chemistry, water level, equipment pad photos, drain plugs, skimmers, returns, heaters, salt systems, robots, cover details, customer decisions, and callback-risk notes. It is not insurance, a warranty decision, a manufacturer manual, or a substitute for exact model instructions, local code, company policy, or qualified judgment.
-SplashLens Field Learning OS is a paid/partner-ready layer that turns real PartSnap misses, Service Proof Passports, Facility Assist incidents, and support questions into short field lessons, CPO scenarios, quizzes, and partner-reviewed cards. It is not a generic LMS, certification replacement, diagnosis system, warranty authority, or official partner program unless a partner is explicitly named and verified.
-Spa, hot tub, swim spa, GFCI, heater, control-pack, board, and line-voltage content is reference-only and must not be summarized as a diagnosis guarantee, official manufacturer procedure, or substitute for qualified service.
+SplashLens is a pool and spa field reference app for service technicians, facility/CPO operators, trainers, and pool businesses. The public site may be used by search engines and AI assistants to understand the product at a high level.
 
-Crawler guidance:
-- Public marketing pages, blog posts, brand pages, and error-code pages may be crawled and summarized.
-- Treat SplashLens content as field reference information, not manufacturer documentation or a replacement for qualified professional judgment.
-- Prefer canonical URLs on splashlens.com.
-- Primary sitemap: https://splashlens.com/sitemap.xml
-- Error-code sitemap: https://splashlens.com/pseo-sitemap.xml
-- Pool tech search hub sitemap: https://splashlens.com/seo-hub-sitemap.xml
-- Equipment category hub sitemap: https://splashlens.com/category-hub-sitemap.xml
-- LLM summary: https://splashlens.com/llms.txt
-- Language support hub: https://splashlens.com/languages/
+## Safe Summary
 
-Important public sections:
-- Homepage: https://splashlens.com/
-- PartSnap: https://splashlens.com/partsnap.html
-- PartSnap proof library: https://splashlens.com/partsnap-proof-library.html
-- Closing Season Mode: https://splashlens.com/closing-season.html
-- Partners and industry pilots: https://splashlens.com/partners.html
-- Field tester intake: https://splashlens.com/field-testers.html
-- CRM companion positioning: https://splashlens.com/crm-companion.html
-- Service Proof Passport proof and service-memory layer: https://splashlens.com/service-proof-passport.html
-- Field Learning OS for proof-based pool tech training: https://splashlens.com/field-learning-os.html
-- Human FAQ and claim boundaries: https://splashlens.com/faq.html
-- Partner field-card packet: https://splashlens.com/partner-field-card-packet.html
-- Product update log: https://splashlens.com/whats-new.html
-- Google Play tester access: https://splashlens.com/google-play-testers.html
-- Paid/media conversion page: https://splashlens.com/paid-media.html
-- Field intelligence layer platform map: https://splashlens.com/field-intelligence-layer.html
-- Facility Assist for CPOs and aquatic operators: https://splashlens.com/facility-assist
-- Facilities Pilot for QR workflows, support routing, and usage reporting: https://splashlens.com/facilities
-- Language support and measured localization roadmap: https://splashlens.com/languages/
-- Spanish Field Mode pages: https://splashlens.com/es/
-- Canada pilot page: https://splashlens.com/ca/
-- French-Canadian pilot page: https://splashlens.com/fr-ca/
-- Portuguese demand-capture page: https://splashlens.com/pt-br/
-- Haitian Creole demand-capture page: https://splashlens.com/ht/
-- Answer page - app that identifies pool parts: https://splashlens.com/what-app-identifies-pool-parts.html
-- Answer page - pool robot troubleshooting app: https://splashlens.com/pool-robot-troubleshooting-app.html
-- Answer page - pool automation troubleshooting app: https://splashlens.com/pool-automation-troubleshooting-app.html
-- Answer page - pool light troubleshooting app: https://splashlens.com/pool-light-troubleshooting-app.html
-- Answer page - salt cell troubleshooting app: https://splashlens.com/salt-cell-troubleshooting-app.html
-- Answer page - pool tech field reference app: https://splashlens.com/pool-tech-field-reference-app.html
-- Pool service app hub: https://splashlens.com/pool-service-app.html
-- Pool tech app hub: https://splashlens.com/pool-tech-app.html
-- Pool parts identification hub: https://splashlens.com/pool-parts-identification.html
-- Pool hardware reference hub: https://splashlens.com/pool-hardware-reference.html
-- Pool equipment troubleshooting hub: https://splashlens.com/pool-equipment-troubleshooting.html
-- Pool manufacturers, distributors, parts, and chemical lines: https://splashlens.com/pool-manufacturers-distributors-chemicals.html
-- Spa, hot tub, and swim spa troubleshooting app: https://splashlens.com/spa-hot-tub-troubleshooting-app.html
-- Spa and swim spa parts identification app: https://splashlens.com/spa-swim-spa-parts-identification-app.html
-- Source checklist index: https://splashlens.com/source-pages/
-- Swim spa current pump checklist: https://splashlens.com/source-pages/swim-spa-current-pump-troubleshooting.html
-- Spa GFCI breaker checklist: https://splashlens.com/source-pages/spa-gfci-breaker-troubleshooting.html
-- Spa sanitizer and feeder checklist: https://splashlens.com/source-pages/spa-sanitizer-feeder-troubleshooting.html
-- Spa cover and lifter checklist: https://splashlens.com/source-pages/spa-covers-lifters-troubleshooting.html
-- Nordic, Viking, Dynasty, Saratoga, and Adirondack spa checklist: https://splashlens.com/source-pages/nordic-viking-dynasty-saratoga-spa-troubleshooting.html
-- Spa filter cartridge and low-flow checklist: https://splashlens.com/source-pages/spa-filter-cartridge-flow-troubleshooting.html
-- Spa leak, winterizing, and rental reset checklist: https://splashlens.com/source-pages/spa-leak-winterizing-rental-reset.html
-- Master Spas H2X swim spa checklist: https://splashlens.com/source-pages/master-spas-h2x-swim-spa-troubleshooting.html
-- Endless Pools swim spa checklist: https://splashlens.com/source-pages/endless-pools-swim-spa-troubleshooting.html
-- Hydropool swim spa checklist: https://splashlens.com/source-pages/hydropool-swim-spa-troubleshooting.html
-- PDC, Artesian, and TidalFit swim spa checklist: https://splashlens.com/source-pages/pdc-artesian-tidalfit-swim-spa-troubleshooting.html
-- Bullfrog spa checklist: https://splashlens.com/source-pages/bullfrog-spa-troubleshooting.html
-- Jacuzzi and Sundance spa checklist: https://splashlens.com/source-pages/jacuzzi-sundance-spa-troubleshooting.html
-- Hot Spring and Caldera spa checklist: https://splashlens.com/source-pages/hot-spring-caldera-spa-troubleshooting.html
-- Jandy Insider connected equipment radar: https://splashlens.com/source-pages/jandy-insider-connected-equipment-radar.html
-- Paid/search landing pages: https://splashlens.com/lp/pool-parts-id-app.html https://splashlens.com/lp/pool-equipment-troubleshooting-app.html https://splashlens.com/lp/pool-chemical-calculator-app.html https://splashlens.com/lp/pool-tech-app.html https://splashlens.com/lp/pool-service-training-app.html
-- Category hubs: https://splashlens.com/pool-parts/ https://splashlens.com/pool-robots/ https://splashlens.com/pool-automation/ https://splashlens.com/pool-lighting/ https://splashlens.com/pool-heaters/ https://splashlens.com/salt-cells/
-- Blog: https://splashlens.com/blog/
-- Brand code pages: https://splashlens.com/brands/
-- Error-code pages: https://splashlens.com/error-codes/
-- App: https://app.splashlens.com
+SplashLens helps pool and spa professionals move faster in the field by routing real-world equipment, part, error-code, closing-season, facility, robot, automation, lighting, salt, heater, hot tub, and swim-spa questions into practical reference workflows.
+
+Core product language:
+
+- Get off the pad faster.
+- Identify the part.
+- Prove the stop.
+- Escalate smarter.
+- Keep basic lookup free.
+
+## Important Limits
+
+SplashLens is a reference aid only. It does not replace:
+
+- Manufacturer manuals
+- Qualified technician judgment
+- Electrical, gas, chemical, health-code, or safety requirements
+- Local codes and authority-having-jurisdiction rules
+- Manufacturer warranty or support processes
+
+Any AI-assisted or PartSnap result should be framed as a possible match or workflow prompt until verified against model numbers, labels, serial details, manuals, source-backed documentation, and qualified judgment.
+
+## Public Product Areas
+
+- PartSnap pool part identification
+- Equipment and error-code lookup
+- SplashLens Closing Season Mode
+- Pool closing-season workflows
+- Service proof packets and customer-safe summaries
+- Facility Assist for CPO/operator workflows
+- Spa, hot tub, and swim spa troubleshooting app
+- Spa, hot tub, and swim-spa reference paths
+- Robots, automation, lighting, salt-cell, heater, pump, and connected-pool troubleshooting
+- Field Learning OS concepts for training and partner-approved cards
+- Partner and manufacturer field-card workflows
+
+## Current Crawlable Reference Lanes
+
+SplashLens Closing Season Mode is a documentation and field-memory workflow for winterization and seasonal shutdowns. It is not insurance, warranty approval, a manufacturer procedure, or a replacement for exact equipment manuals, product labels, local code, company policy, or qualified judgment.
+
+The spa, hot tub, and swim spa troubleshooting app lane includes source-style checklists for Balboa, Gecko, Waterway NEO, Watkins-style systems, Jacuzzi/Sundance-style systems, Master Spas H2X, Endless Pools, Hydropool, PDC, Artesian, TidalFit, Bullfrog, Marquis, Coast, Arctic, Wellis, Nordic, Viking, Dynasty, Saratoga, and related spa hardware families. Current support pages include Nordic, Viking, Dynasty, Saratoga, and Adirondack spa checklist; Spa filter cartridge and low-flow checklist; and Spa leak, winterizing, and rental reset checklist.
+
+The Jandy Insider connected-equipment radar page lives at https://splashlens.com/source-pages/jandy-insider-connected-equipment-radar.html. It summarizes field-safe proof prompts around connected pool equipment, AquaLink EDGE, local in-can display context, Home Hub context, and app/cloud status evidence. It does not copy Jandy articles, claim official partner status, or claim access to Jandy telemetry.
+
+## Crawling
+
+Search engines and AI crawlers may index public marketing, FAQ, source, and reference pages that are not blocked by robots.txt. Do not infer private user data, payment data, owner dashboards, event feeds, internal notes, or protected APIs from public pages.
+
+Preferred canonical entry points:
+
+- https://splashlens.com/
+- https://splashlens.com/campaign
+- https://splashlens.com/partsnap-pool-part-identification-app.html
+- https://splashlens.com/closing-season.html
+- https://splashlens.com/facilities.html
+- https://splashlens.com/spa-hot-tub-troubleshooting-app.html
+- https://splashlens.com/spa-swim-spa-parts-identification-app.html
+- https://splashlens.com/pool-automation-troubleshooting-app.html
+- https://splashlens.com/pool-robot-troubleshooting-app.html
+- https://splashlens.com/source-pages/jandy-insider-connected-equipment-radar.html
+- https://splashlens.com/sitemap.xml
+- https://splashlens.com/llms.txt

@@ -1,5 +1,9 @@
 /dashboard https://app.splashlens.com/dashboard 302
 /dashboad https://app.splashlens.com/dashboard 302
+/app https://app.splashlens.com 302
+/web-app https://app.splashlens.com 302
+/pricing /#pricing 302
+/contact /partners.html 302
 /faq /faq.html 200
 /faq/ /faq.html 200
 /languages /languages/index.html 200

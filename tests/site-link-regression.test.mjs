@@ -188,6 +188,11 @@ test('Verified Field Network moonshot page is crawlable, linked, and claim-safe'
   assert.match(page, /a card is only marked partner-verified after a real partner supplies and approves the language/);
   assert.match(page, /The moonshot is not another CRM/);
   assert.doesNotMatch(page, /diagnosis guarantee|official manufacturer approval|warranty approval/);
+  assert.match(home, /Verified Field Network/);
+  assert.match(home, /Free lookup stays free/);
+  assert.match(home, /Paid lanes are for teams, facilities, trainers, distributors, and manufacturers/);
+  assert.match(home, /The stop becomes a cleaner next move/);
+  assert.match(home, /Verify with partners/);
 
   for (const source of [home, nav, sitemap, ai, llms]) {
     assert.match(source, /verified-field-network\.html/);

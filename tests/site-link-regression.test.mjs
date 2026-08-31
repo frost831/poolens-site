@@ -187,6 +187,11 @@ test('Verified Field Network moonshot page is crawlable, linked, and claim-safe'
   assert.match(page, /The route app owns the schedule\. SplashLens owns the stuck moment\./);
   assert.match(page, /a card is only marked partner-verified after a real partner supplies and approves the language/);
   assert.match(page, /The moonshot is not another CRM/);
+  assert.match(page, /Moonshot build map/);
+  assert.match(page, /Live field loops/);
+  assert.match(page, /feedback taps, saved proof, share prompts/);
+  assert.match(page, /Native parity lane/);
+  assert.match(page, /Track 25 techs, 5 companies, and 3 facility\/training groups/);
   assert.doesNotMatch(page, /diagnosis guarantee|official manufacturer approval|warranty approval/);
   assert.match(home, /Verified Field Network/);
   assert.match(home, /Free lookup stays free/);

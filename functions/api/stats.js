@@ -126,11 +126,13 @@ export async function onRequestGet({ request, env }) {
  scanStarts7d,
  scanStarts30d,
  partSnapResults30d,
+ partSnapFeedback30d,
  affiliateClicks30d,
  subscribersTotal,
  subscribers30d,
  topEvents,
  scansByMode,
+ partSnapFeedbackByOutcome,
  topManualQueries,
  dailyProxy,
  partnerIntake,
@@ -142,6 +144,7 @@ export async function onRequestGet({ request, env }) {
  count(db, `SELECT COUNT(*) AS value FROM events WHERE event = 'ai_scan_started' AND created_at >= datetime('now', '-7 days') ${EXTERNAL_EVENT_FILTER}`),
  count(db, `SELECT COUNT(*) AS value FROM events WHERE event = 'ai_scan_started' AND created_at >= datetime('now', '-30 days') ${EXTERNAL_EVENT_FILTER}`),
  count(db, `SELECT COUNT(*) AS value FROM events WHERE event = 'partsnap_result' AND created_at >= datetime('now', '-30 days') ${EXTERNAL_EVENT_FILTER}`),
+ count(db, `SELECT COUNT(*) AS value FROM events WHERE event = 'partsnap_result_feedback' AND created_at >= datetime('now', '-30 days') ${EXTERNAL_EVENT_FILTER}`),
  count(db, `SELECT COUNT(*) AS value FROM events WHERE event = 'affiliate_click' AND created_at >= datetime('now', '-30 days') ${EXTERNAL_EVENT_FILTER}`),
  count(db, `SELECT COUNT(*) AS value FROM subscribers`),
  count(db, `SELECT COUNT(*) AS value FROM subscribers WHERE created_at >= datetime('now', '-30 days')`),
@@ -161,6 +164,14 @@ export async function onRequestGet({ request, env }) {
  ${EXTERNAL_EVENT_FILTER}
  GROUP BY mode
  ORDER BY count DESC
+ `),
+ all(db, `
+ SELECT COALESCE(json_extract(props, '$.outcome'), 'unknown') AS outcome, COUNT(*) AS count
+ FROM events
+ WHERE event = 'partsnap_result_feedback' AND created_at >= datetime('now', '-30 days')
+ ${EXTERNAL_EVENT_FILTER}
+ GROUP BY outcome
+ ORDER BY count DESC, outcome ASC
  `),
  all(db, `
  SELECT json_extract(props, '$.query') AS query, json_extract(props, '$.brand') AS brand, COUNT(*) AS count
@@ -210,6 +221,7 @@ export async function onRequestGet({ request, env }) {
  scanStarts7d,
  scanStarts30d,
  partSnapResults30d,
+ partSnapFeedback30d,
  affiliateClicks30d,
  subscribersTotal,
  subscribers30d,
@@ -217,6 +229,7 @@ export async function onRequestGet({ request, env }) {
  },
  topEvents,
  scansByMode,
+ partSnapFeedbackByOutcome,
  topManualQueries,
  dailyProxy,
  leadsBySource: partnerIntake.bySource,

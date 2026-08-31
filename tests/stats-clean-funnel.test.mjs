@@ -29,9 +29,11 @@ test('all event dashboard query groups use the clean external event filter', () 
     'scanStarts7d',
     'scanStarts30d',
     'partSnapResults30d',
+    'partSnapFeedback30d',
     'affiliateClicks30d',
     'topEvents',
     'scansByMode',
+    'partSnapFeedbackByOutcome',
     'topManualQueries',
     'dailyProxy',
   ];

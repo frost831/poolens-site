@@ -27,6 +27,16 @@ function json(data, status, headers) {
  return new Response(JSON.stringify(data), { status, headers });
 }
 
+const EXTERNAL_EVENT_FILTER = `
+ AND COALESCE(source, '') NOT IN ('qa', 'codex', 'codex_smoke')
+ AND COALESCE(path, '') NOT LIKE '%utm_source=qa%'
+ AND COALESCE(path, '') NOT LIKE '%utm_medium=playwright%'
+ AND COALESCE(path, '') NOT LIKE '%codex%'
+ AND COALESCE(path, '') NOT LIKE '%amplitude-readiness%'
+ AND COALESCE(path, '') NOT LIKE '%growth-plan%'
+ AND COALESCE(path, '') NOT LIKE '%verify=%'
+`;
+
 function authOk(request, env) {
  const secret = String(env.SPLASHLENS_STATS_SECRET || env.SPLASHLENS_ADMIN_SECRET || '').trim();
  if (!secret) return false;
@@ -125,20 +135,21 @@ export async function onRequestGet({ request, env }) {
  dailyProxy,
  partnerIntake,
  ] = await Promise.all([
- count(db, `SELECT COUNT(*) AS value FROM events WHERE created_at >= datetime('now', '-7 days')`),
- count(db, `SELECT COUNT(*) AS value FROM events WHERE created_at >= datetime('now', '-30 days')`),
- count(db, `SELECT COUNT(*) AS value FROM events WHERE event = 'site_page_view' AND created_at >= datetime('now', '-7 days')`),
- count(db, `SELECT COUNT(*) AS value FROM events WHERE event = 'site_page_view' AND created_at >= datetime('now', '-30 days')`),
- count(db, `SELECT COUNT(*) AS value FROM events WHERE event = 'ai_scan_started' AND created_at >= datetime('now', '-7 days')`),
- count(db, `SELECT COUNT(*) AS value FROM events WHERE event = 'ai_scan_started' AND created_at >= datetime('now', '-30 days')`),
- count(db, `SELECT COUNT(*) AS value FROM events WHERE event = 'partsnap_result' AND created_at >= datetime('now', '-30 days')`),
- count(db, `SELECT COUNT(*) AS value FROM events WHERE event = 'affiliate_click' AND created_at >= datetime('now', '-30 days')`),
+ count(db, `SELECT COUNT(*) AS value FROM events WHERE created_at >= datetime('now', '-7 days') ${EXTERNAL_EVENT_FILTER}`),
+ count(db, `SELECT COUNT(*) AS value FROM events WHERE created_at >= datetime('now', '-30 days') ${EXTERNAL_EVENT_FILTER}`),
+ count(db, `SELECT COUNT(*) AS value FROM events WHERE event = 'site_page_view' AND created_at >= datetime('now', '-7 days') ${EXTERNAL_EVENT_FILTER}`),
+ count(db, `SELECT COUNT(*) AS value FROM events WHERE event = 'site_page_view' AND created_at >= datetime('now', '-30 days') ${EXTERNAL_EVENT_FILTER}`),
+ count(db, `SELECT COUNT(*) AS value FROM events WHERE event = 'ai_scan_started' AND created_at >= datetime('now', '-7 days') ${EXTERNAL_EVENT_FILTER}`),
+ count(db, `SELECT COUNT(*) AS value FROM events WHERE event = 'ai_scan_started' AND created_at >= datetime('now', '-30 days') ${EXTERNAL_EVENT_FILTER}`),
+ count(db, `SELECT COUNT(*) AS value FROM events WHERE event = 'partsnap_result' AND created_at >= datetime('now', '-30 days') ${EXTERNAL_EVENT_FILTER}`),
+ count(db, `SELECT COUNT(*) AS value FROM events WHERE event = 'affiliate_click' AND created_at >= datetime('now', '-30 days') ${EXTERNAL_EVENT_FILTER}`),
  count(db, `SELECT COUNT(*) AS value FROM subscribers`),
  count(db, `SELECT COUNT(*) AS value FROM subscribers WHERE created_at >= datetime('now', '-30 days')`),
  all(db, `
  SELECT event, COUNT(*) AS count
  FROM events
  WHERE created_at >= datetime('now', '-30 days')
+ ${EXTERNAL_EVENT_FILTER}
  GROUP BY event
  ORDER BY count DESC
  LIMIT 12
@@ -147,6 +158,7 @@ export async function onRequestGet({ request, env }) {
  SELECT COALESCE(mode, json_extract(props, '$.mode'), 'unknown') AS mode, COUNT(*) AS count
  FROM events
  WHERE event = 'ai_scan_started' AND created_at >= datetime('now', '-30 days')
+ ${EXTERNAL_EVENT_FILTER}
  GROUP BY mode
  ORDER BY count DESC
  `),
@@ -156,6 +168,7 @@ export async function onRequestGet({ request, env }) {
  WHERE event = 'manual_code_search'
  AND created_at >= datetime('now', '-30 days')
  AND json_extract(props, '$.query') IS NOT NULL
+ ${EXTERNAL_EVENT_FILTER}
  GROUP BY query, brand
  ORDER BY count DESC
  LIMIT 20
@@ -166,6 +179,7 @@ export async function onRequestGet({ request, env }) {
  COUNT(DISTINCT user_agent) AS user_agent_proxy
  FROM events
  WHERE created_at >= datetime('now', '-14 days')
+ ${EXTERNAL_EVENT_FILTER}
  GROUP BY day
  ORDER BY day DESC
  `),
@@ -181,6 +195,7 @@ export async function onRequestGet({ request, env }) {
  partnerIntake: 'SUBSCRIBERS_DB.partner_intake',
  caveats: [
  'DAU is a user-agent proxy until a durable anonymous app ID is captured.',
+ 'Internal QA, Codex smoke, Playwright, verification, and readiness paths are excluded from owner-facing event totals.',
  'Installs are not proven by this endpoint until PWA/store install events are added.',
  'PartSnap Pro active subscription truth remains Stripe/KV, not the event table.',
  'Partner totals count partners-page submissions; field tester totals include field-testers-page submissions and tester lanes.',

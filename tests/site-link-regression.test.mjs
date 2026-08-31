@@ -173,3 +173,23 @@ test('Jandy Insider connected equipment radar is crawlable, linked, and claim-sa
   assert.match(connected, /Separate local from cloud/);
   assert.match(whatsNew, /Jandy Insider connected-equipment radar added/);
 });
+
+test('Verified Field Network moonshot page is crawlable, linked, and claim-safe', () => {
+  const page = fs.readFileSync(path.join(root, 'verified-field-network.html'), 'utf8');
+  const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const nav = fs.readFileSync(path.join(root, 'splashlens-nav.js'), 'utf8');
+  const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
+  const ai = fs.readFileSync(path.join(root, 'ai.txt'), 'utf8');
+  const llms = fs.readFileSync(path.join(root, 'llms.txt'), 'utf8');
+
+  assert.match(page, /SplashLens Verified Field Network/);
+  assert.match(page, /The verified field network for pool and spa work/);
+  assert.match(page, /The route app owns the schedule\. SplashLens owns the stuck moment\./);
+  assert.match(page, /a card is only marked partner-verified after a real partner supplies and approves the language/);
+  assert.match(page, /The moonshot is not another CRM/);
+  assert.doesNotMatch(page, /diagnosis guarantee|official manufacturer approval|warranty approval/);
+
+  for (const source of [home, nav, sitemap, ai, llms]) {
+    assert.match(source, /verified-field-network\.html/);
+  }
+});

@@ -48,6 +48,7 @@
       label: 'Learn',
       items: [
         ['Tech Radar', '/new-tech-radar.html', 'new equipment and product watchlist'],
+        ['Verified Field Network', '/verified-field-network.html', 'the moonshot platform layer'],
         ['Field Learning OS', '/field-learning-os.html', 'proof packets into 5-minute lessons'],
         ['Training', '/pool-tech-training-field-reference.html', 'teach newer techs from real stops'],
         ['Blog', '/blog/', 'pool tech articles and guides'],
@@ -60,6 +61,7 @@
       items: [
         ['Partner Page', '/partners', 'education, media, manufacturers'],
         ['Teams', '/teams', 'owner visibility and field proof'],
+        ['Verified Field Network', '/verified-field-network.html', 'proof, partner cards, and field memory'],
         ['Field Testers', '/field-testers.html', 'send real-world feedback'],
         ['Field Card Packet', '/partner-field-card-packet.html', 'manufacturer-ready proof cards'],
         ['Facilities Pilot', '/facilities', 'QR workflow and support routing'],

@@ -42,6 +42,7 @@ Any AI-assisted or PartSnap result should be framed as a possible match or workf
 - Spa, hot tub, and swim-spa reference paths
 - Robots, automation, lighting, salt-cell, heater, pump, and connected-pool troubleshooting
 - Field Learning OS concepts for training and partner-approved cards
+- SplashLens Verified Field Network for proof, training, partner cards, and field memory
 - Partner and manufacturer field-card workflows
 
 ## Current Crawlable Reference Lanes
@@ -63,6 +64,7 @@ Preferred canonical entry points:
 - https://splashlens.com/partsnap-pool-part-identification-app.html
 - https://splashlens.com/closing-season.html
 - https://splashlens.com/facilities.html
+- https://splashlens.com/verified-field-network.html
 - https://splashlens.com/spa-hot-tub-troubleshooting-app.html
 - https://splashlens.com/spa-swim-spa-parts-identification-app.html
 - https://splashlens.com/pool-automation-troubleshooting-app.html

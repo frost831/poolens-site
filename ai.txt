@@ -2,7 +2,7 @@
 
 Site: https://splashlens.com
 App: https://app.splashlens.com
-Updated: 2026-08-28
+Updated: 2026-09-01
 
 SplashLens is a pool and spa field reference app for service technicians, facility/CPO operators, trainers, and pool businesses. The public site may be used by search engines and AI assistants to understand the product at a high level.
 
@@ -14,8 +14,9 @@ Core product language:
 
 - Get off the pad faster.
 - Identify the part.
-- Prove the stop.
+- Prove the visit.
 - Escalate smarter.
+- Save job history.
 - Keep basic lookup free.
 
 ## Important Limits
@@ -36,13 +37,13 @@ Any AI-assisted or PartSnap result should be framed as a possible match or workf
 - Equipment and error-code lookup
 - SplashLens Closing Season Mode
 - Pool closing-season workflows
-- Service proof packets and customer-safe summaries
+- Saved job history, proof packets, and customer-safe summaries
 - Facility Assist for CPO/operator workflows
 - Spa, hot tub, and swim spa troubleshooting app
 - Spa, hot tub, and swim-spa reference paths
 - Robots, automation, lighting, salt-cell, heater, pump, and connected-pool troubleshooting
 - Field Learning OS concepts for training and partner-approved cards
-- SplashLens Verified Field Network for proof, training, partner cards, and field memory
+- SplashLens Verified Field Network for saved job history, training, partner cards, and field memory
 - Partner and manufacturer field-card workflows
 
 ## Current Crawlable Reference Lanes

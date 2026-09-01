@@ -1,6 +1,6 @@
 # SplashLens
 
-> Free-core field reference tool for pool service technicians. PartSnap pool parts ID, 230+ current troubleshooting entries, chemical dosing calculators, online AI scanner, multi-day SLAM tracker, pool tech search hubs, and pool care reference guides. Manual tools work offline after first load; AI scanner requires internet.
+> Free-core field reference tool for pool service technicians. PartSnap pool parts ID, 230+ current troubleshooting entries, chemical dosing calculators, online AI scanner, saved job history, multi-day SLAM tracker, pool tech search hubs, and pool care reference guides. Manual tools work offline after first load; AI scanner requires internet.
 
 ## What SplashLens Is
 
@@ -32,7 +32,7 @@ Public PartSnap page: https://splashlens.com/partsnap.html
 
 ### Closing Season Mode
 
-SplashLens Closing Season Mode is a seasonal proof workflow for pool closings and winterization. It helps techs capture water chemistry, water level, equipment pad photos, drain-plug proof, skimmer/return plugs, heater and salt-cell context, robot storage notes, cover condition, customer approvals or declined work, callback-risk flags, and customer-safe summaries.
+SplashLens Closing Season Mode is a seasonal proof workflow for pool closings and winterization. It helps techs capture water chemistry, water level, equipment pad photos, drain-plug proof, skimmer/return plugs, heater and salt-cell context, robot storage notes, cover condition, customer approvals or declined work, repeat-issue watch items, and customer-safe summaries.
 
 Public page: https://splashlens.com/closing-season.html
 
@@ -52,13 +52,13 @@ Crawler-friendly hub pages for high-intent pool service searches:
 - SplashLens CRM companion: https://splashlens.com/crm-companion.html
 - SplashLens field intelligence layer platform map: https://splashlens.com/field-intelligence-layer.html
 - SplashLens Verified Field Network: https://splashlens.com/verified-field-network.html
-- SplashLens Service Proof Passport: https://splashlens.com/service-proof-passport.html
+- SplashLens saved job history: https://splashlens.com/service-proof-passport.html
 - SplashLens Field Learning OS: https://splashlens.com/field-learning-os.html
 - SplashLens FAQ: https://splashlens.com/faq.html
 
 ### Field Learning OS
 
-SplashLens Field Learning OS is the proof-based training layer for pool, spa, hot tub, swim spa, and aquatic facility teams. It turns real PartSnap misses, Service Proof Passports, Facility Assist incidents, and support questions into short lessons, proof checklists, quizzes, CPO scenarios, and partner-reviewed field cards.
+SplashLens Field Learning OS is the proof-based training layer for pool, spa, hot tub, swim spa, and aquatic facility teams. It turns real PartSnap misses, saved job notes, Facility Assist incidents, and support questions into short lessons, proof checklists, quizzes, CPO scenarios, and partner-reviewed field cards.
 
 It should not be summarized as a generic LMS, official certification, diagnosis authority, warranty approval, manufacturer manual, or official partner program unless an explicit verified partner page says so. The free app remains the field reference layer; paid or partner-led Learning OS lanes are for saved history, team reporting, reviewed content, and training workflows.
 
@@ -222,13 +222,13 @@ Start a SLAM (Shock Level and Maintain) treatment and track it through completio
 
 ## Competitive Positioning
 
-SplashLens is not Skimmer, Pool Brain, or Jobber. Those are route management platforms with billing, invoicing, and CRM. SplashLens is the field reference tool - the thing you pull out at the equipment pad to diagnose a fault, calculate a dose, or look up a filter procedure.
+SplashLens is not Skimmer, Pool Brain, or Jobber. Those are route management platforms with billing, invoicing, and CRM. SplashLens is the field reference tool - the thing you pull out at the equipment pad to look up a fault, calculate a dose, collect proof, or find a filter procedure.
 
 Most pool techs who use Skimmer or Pool Brain still have no standardized field reference. SplashLens fills that gap, free, offline, and without asking for their credit card.
 
-## Service Proof Passport
+## Saved Job History
 
-Service Proof Passport is the conservative proof and service-memory layer for a pool stop. It is designed to help capture readings, photos, model labels, visible symptoms, field notes, equipment context, prior history, and shareable summaries when available. It is not a route-management system, billing system, full CRM, medical/legal/compliance authority, manufacturer manual, warranty approval, fitment guarantee, or replacement for qualified professional judgment.
+Saved job history is the conservative proof and service-memory layer for a pool stop. It is designed to help capture readings, photos, model labels, visible symptoms, field notes, equipment context, prior history, and shareable summaries when available. It is not a route-management system, billing system, full CRM, medical/legal/compliance authority, manufacturer manual, warranty approval, fitment guarantee, or replacement for qualified professional judgment.
 
 AI-assisted summaries should be treated as drafts for human review. Use export-first language unless a live integration has been built and verified.
 

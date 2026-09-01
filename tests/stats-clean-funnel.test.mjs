@@ -43,6 +43,33 @@ test('all event dashboard query groups use the clean external event filter', () 
   }
 });
 
+test('owner dashboard exposes the north-star conversion funnel', () => {
+  const statsPage = readFileSync(new URL('../stats.html', import.meta.url), 'utf8');
+
+  for (const marker of [
+    'Conversion Funnel',
+    'attention to paid proof',
+    'conversionFunnel7d',
+    'conversionFunnel30d',
+    'checkout_intent',
+    'paid_or_restored',
+  ]) {
+    assert.match(statsSource + statsPage, new RegExp(marker));
+  }
+
+  for (const event of [
+    'article_referral_open',
+    'open_app_click',
+    'first_action_started',
+    'first_value_completed',
+    'partsnap_result_feedback',
+    'checkout_click',
+    'paid_entitlement_activated',
+  ]) {
+    assert.match(statsSource, new RegExp(`'${event}'`));
+  }
+});
+
 test('authorized stats request runs event queries with the external traffic filter', async () => {
   const { onRequestGet } = await loadStatsModule();
   const capturedSql = [];

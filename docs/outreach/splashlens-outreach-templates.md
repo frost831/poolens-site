@@ -23,7 +23,7 @@ I am Joshua Frost, founder of SplashLens. I started in pool sales, then moved in
 We just launched a closing-season workflow for pool techs:
 https://splashlens.com/closing-season.html?utm_source=outreach&utm_medium=email&utm_campaign=closing_season_launch_2026&utm_content=[slug]
 
-The practical idea is simple: before the tech leaves the pad, capture cleaner proof around chemistry, drain plugs, heater/salt/robot status, cover notes, customer decisions, and callback-risk items. It is not insurance and does not guarantee coverage, but better photos and notes can help if a customer, owner, spring-opening crew, or carrier asks what was done later.
+The practical idea is simple: before the tech leaves the pad, capture cleaner proof around chemistry, drain plugs, heater/salt/robot status, cover notes, customer decisions, and repeat-issue watch items. It is not insurance and does not guarantee coverage, but better photos and notes can help if a customer, owner, spring-opening crew, or carrier asks what was done later.
 
 The core app is free, no account required. If you try it on one real closing or ugly equipment stop, I would genuinely appreciate blunt field feedback.
 
@@ -65,7 +65,7 @@ I am Joshua Frost, founder of SplashLens. I started in the pool industry in sale
 We just added Mystery Part Lab around PartSnap:
 https://splashlens.com/mystery-part-lab.html
 
-The idea is simple: send one weird pool part, label, model plate, or error code you think apps usually miss. SplashLens will return possible matches, visible evidence, missing proof, callback-risk language, and a senior tech/vendor packet. It stays framed as a reference workflow, not a diagnosis or fit guarantee.
+The idea is simple: send one weird pool part, label, model plate, or error code you think apps usually miss. SplashLens will return possible matches, visible evidence, missing proof, repeat-issue watch language, and a clean boss/supplier note. It stays framed as a reference workflow, not a diagnosis or fit guarantee.
 
 If this would make a useful segment, post, or quick test for your audience, I would be grateful for honest feedback or one mystery part to try.
 
@@ -85,9 +85,9 @@ I am Joshua Frost, founder of SplashLens. I started in pool sales, then moved in
 SplashLens is a free no-account reference app for pool pros:
 https://app.splashlens.com
 
-It includes PartSnap parts ID, error-code lookup, Route Brain, dosing math, Service Proof Passport, and conservative verification notes. It is not a replacement for CPO training, manuals, instructors, or qualified tech judgment.
+It includes PartSnap parts ID, error-code lookup, Route Brain, dosing math, saved job history, and conservative verification notes. It is not a replacement for CPO training, manuals, instructors, or qualified tech judgment.
 
-We are exploring a training-session style layer for apprentices and CPO students, especially around Mystery Part Lab and callback-risk scenarios. Would you be open to giving feedback on whether this would help students after class?
+We are exploring a training-session style layer for apprentices and CPO students, especially around Mystery Part Lab and repeat-issue scenarios. Would you be open to giving feedback on whether this would help students after class?
 
 Talk Soon,
 Joshua Frost
@@ -105,7 +105,7 @@ I built SplashLens after running into real field and counter lookup friction as 
 PartSnap is the pool part workflow inside SplashLens:
 https://splashlens.com/partsnap.html
 
-It helps a tech capture a possible part match, visible proof, missing proof, callback risk, and a clean senior tech/vendor packet before ordering. It does not guarantee fit or replace manufacturer diagrams.
+It helps a tech capture a possible part match, visible proof, missing proof, repeat-issue watch, and a clean boss/supplier note before ordering. It does not guarantee fit or replace manufacturer diagrams.
 
 Would this be useful for techs who come to the counter with a vague part photo? I am not implying a partnership or asking for endorsement; I am looking for practical feedback from people who see these parts every day.
 
@@ -257,7 +257,7 @@ Joshua Frost
 Founder, SplashLens
 hello@splashlens.com
 
-## Service Proof Passport - Training / CPO
+## Saved Job History - Training / CPO
 
 Subject: Free proof workflow for pool tech training
 
@@ -268,7 +268,7 @@ I am Joshua Frost, founder of SplashLens. I started in pool sales, then moved in
 SplashLens is a free no-account field reference app for pool and spa techs:
 https://app.splashlens.com
 
-The newest add-on layer is Service Proof Passport. It helps a tech save the evidence around a stop: photos, model plates, readings, PartSnap possible matches, missing proof, callback-risk notes, and customer-safe summaries.
+The newest add-on layer is saved job history. It helps a tech save the evidence around a stop: photos, model plates, readings, PartSnap possible matches, missing proof, repeat-issue notes, and customer-safe summaries.
 
 For training, the value is not "the app knows the answer." The value is teaching techs what proof they should capture before they order a part, escalate to a senior tech, call support, or explain the visit to a customer.
 
@@ -281,9 +281,9 @@ Joshua Frost
 Founder, SplashLens
 hello@splashlens.com
 
-## Service Proof Passport - Service Owner / Operator
+## Saved Job History - Service Owner / Operator
 
-Subject: Free proof layer for pool service stops
+Subject: Free job proof workflow for pool service stops
 
 Hi [Name],
 
@@ -292,7 +292,7 @@ I built SplashLens after running into real lookup and documentation friction as 
 SplashLens is the free field reference app:
 https://app.splashlens.com
 
-Service Proof Passport is the add-on layer for proving the stop before the tech leaves: notes, photos, visible evidence, readings, model plates, missing-proof prompts, callback-risk language, and customer-safe summaries.
+Saved job history is the add-on layer for proving the stop before the tech leaves: notes, photos, visible evidence, readings, model plates, missing-proof prompts, repeat-issue language, and customer-safe summaries.
 
 The goal is practical. Fewer vague notes. Cleaner handoffs. Better proof before a blind part order. Less rewriting at night after the route is already done.
 
@@ -305,7 +305,7 @@ Joshua Frost
 Founder, SplashLens
 hello@splashlens.com
 
-## Service Proof Passport - Manufacturer / Supplier / Support
+## Saved Job History - Manufacturer / Supplier / Support
 
 Subject: Proof prompts before pool techs escalate
 
@@ -314,9 +314,9 @@ Hi [Name],
 I am Joshua Frost, founder of SplashLens. SplashLens is a free field reference app for pool and spa techs:
 https://app.splashlens.com
 
-We are adding Service Proof Passport as the documentation layer around PartSnap and field lookup. The goal is to help techs capture better proof before they order, escalate, or contact support.
+We are adding saved job history as the documentation layer around PartSnap and field lookup. The goal is to help techs capture better proof before they order, escalate, or contact support.
 
-Examples include model plates, visible labels, readings, installed context, missing-proof prompts, possible part-family notes, callback-risk language, and a cleaner senior tech or vendor packet.
+Examples include model plates, visible labels, readings, installed context, missing-proof prompts, possible part-family notes, repeat-issue language, and a cleaner boss/supplier note.
 
 We are not trying to imply endorsement, warranty coverage, diagnosis, fitment, or manufacturer approval. I am looking for practical guardrail feedback: what proof should a tech capture before asking about [equipment/category]?
 
@@ -327,7 +327,7 @@ Joshua Frost
 Founder, SplashLens
 hello@splashlens.com
 
-## Service Proof Passport - Media / Creator / Newsletter
+## Saved Job History - Media / Creator / Newsletter
 
 Subject: SplashLens now helps techs prove the stop
 
@@ -338,7 +338,7 @@ I am Joshua Frost, founder of SplashLens. I started in pool sales, then moved in
 SplashLens is a free no-account field reference app for pool and spa techs:
 https://app.splashlens.com
 
-The newest layer is Service Proof Passport. It helps techs save the proof around a stop: notes, photos, model plates, readings, PartSnap possible matches, missing proof, callback-risk notes, and customer-safe summaries.
+The newest layer is saved job history. It helps techs save the proof around a stop: notes, photos, model plates, readings, PartSnap possible matches, missing proof, repeat-issue notes, and customer-safe summaries.
 
 The angle for your audience is simple: the lookup matters, but the proof is what protects the next step. Before a part is ordered, a callback is risked, or a customer is updated, the tech needs cleaner evidence.
 

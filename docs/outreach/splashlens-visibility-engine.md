@@ -7,9 +7,12 @@ Source of truth:
 - Run log: `docs/outreach/splashlens-drip-run-log.md`
 - Public hooks:
   - https://splashlens.com
+  - https://splashlens.com/campaign.html
+  - https://splashlens.com/closing-season.html
   - https://splashlens.com/partsnap.html
   - https://splashlens.com/mystery-part-lab.html
   - https://splashlens.com/partners.html
+  - https://splashlens.com/facility-assist
   - https://app.splashlens.com
 
 ## Goal
@@ -17,6 +20,8 @@ Source of truth:
 Make SplashLens visible where pool technicians already trust information: training rooms, distributor counters, trade publications, podcasts, creator channels, manufacturer support ecosystems, and service-owner software communities.
 
 The message stays simple: SplashLens gives pool techs time back by helping them move faster, cleaner, and with better proof at the equipment pad. It is a reference aid, not a diagnosis replacement.
+
+Current push: Closing Season Pilot. Ask real techs, service owners, suppliers, trainers, and facility operators to try one code, part, equipment family, closing note, or proof workflow before Midwest closing season gets noisy.
 
 ## Outreach Lanes
 
@@ -64,7 +69,7 @@ Primary ask:
 Use language:
 
 - Free no-account reference app.
-- PartSnap, Route Brain, error lookup, dosing math, Service Proof Passport.
+- PartSnap, Route Brain, error lookup, dosing math, saved job history, and Facility Assist.
 - Not a substitute for CPO training, manuals, instructors, or qualified judgment.
 - Joshua started in pool sales, moved into his own service company, and built this from real lookup friction.
 
@@ -85,8 +90,8 @@ Primary ask:
 Story angles:
 
 - A solo pool operator built a faster field reference layer because existing tools moved too slowly for day-to-day tech friction.
-- PartSnap creates senior tech/vendor packets so a newer tech can escalate cleaner.
-- Callback Risk Score helps techs avoid blind part orders.
+- PartSnap creates clean boss/supplier notes so a newer tech can send better proof before ordering.
+- Repeat issue watch helps techs avoid blind part orders and weak end-of-stop notes.
 - Mystery Part Lab is a real-world test, not a polished demo.
 
 ### 4. Distributor Counter Lane
@@ -207,3 +212,4 @@ Do not count email opens. Count:
 - App opens and installs.
 - Saved proofs and shared PartSnap packets.
 - Requests for training, consulting, or partner verification.
+- The owner stats funnel from article/site traffic to app/store intent, first field action, useful result, feedback, return use, checkout intent, and paid/restore proof.

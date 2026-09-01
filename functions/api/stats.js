@@ -62,6 +62,86 @@ async function count(db, sql, ...bindings) {
  return Number(row.value || 0);
 }
 
+const FUNNEL_STAGES = [
+ {
+  key: 'traffic',
+  label: 'Article / site traffic',
+  goal: 'A tech, owner, trainer, facility, or partner lands on SplashLens.',
+  events: ['site_page_view', 'campaign_landing_view', 'campaign_view', 'field_challenge_page_view', 'article_referral_open'],
+ },
+ {
+  key: 'app_intent',
+  label: 'App or store intent',
+  goal: 'They open the web app or click an app-store download path.',
+  events: ['open_app_click', 'app_store_download_click', 'google_play_download_click', 'play_store_download_click', 'app_open', 'first_app_open', 'native_shell_open', 'native_shell_first_open', 'pwa_installed'],
+ },
+ {
+  key: 'first_action',
+  label: 'First field action',
+  goal: 'They start a lookup, PartSnap scan, report, route, or facility workflow.',
+  events: ['first_action_started', 'manual_code_search', 'ai_scan_started', 'service_proof_workflow_started', 'facility_workflow_action_selected', 'field_challenge_started', 'field_challenge_routed'],
+ },
+ {
+  key: 'first_value',
+  label: 'Useful result',
+  goal: 'They get a result, save proof, build a summary, or complete a challenge.',
+  events: ['first_value_completed', 'partsnap_result', 'service_report_saved', 'service_proof_summary_generated', 'service_proof_share_link_created', 'field_challenge_completed'],
+ },
+ {
+  key: 'feedback',
+  label: 'Feedback captured',
+  goal: 'They tell us whether it helped, was wrong, or was missing information.',
+  events: ['partsnap_result_feedback', 'field_feedback_quick_answered', 'field_feedback_submitted', 'field_challenge_feedback', 'field_score_feedback'],
+ },
+ {
+  key: 'return_use',
+  label: 'Return / continued use',
+  goal: 'They come back, continue a saved task, or keep a session alive.',
+  events: ['return_task_continued', 'session_started', 'session_heartbeat', 'app_tab_view', 'partsnap_field_stop_reopened'],
+ },
+ {
+  key: 'checkout_intent',
+  label: 'Checkout intent',
+  goal: 'They click a paid, restore, or native purchase path.',
+  events: ['checkout_click', 'upgrade_click', 'post_value_upgrade_clicked', 'partsnap_pro_restore_requested', 'native_purchase_click', 'paid_lane_click', 'paid_lane_lead_captured'],
+ },
+ {
+  key: 'paid_or_restored',
+  label: 'Paid / entitlement proof',
+  goal: 'Stripe or the app records a completed paid/restore state.',
+  events: ['paid_entitlement_activated', 'checkout_success', 'stripe_checkout_completed', 'restore_entitlement_success'],
+ },
+];
+
+function quotedEvents(events) {
+ return events.map((event) => `'${event.replace(/'/g, "''")}'`).join(', ');
+}
+
+async function funnelStageStats(db, days) {
+ const rows = [];
+ for (const stage of FUNNEL_STAGES) {
+  const value = await count(db, `
+ SELECT COUNT(*) AS value
+ FROM events
+ WHERE event IN (${quotedEvents(stage.events)})
+ AND created_at >= datetime('now', '-${days} days')
+ ${EXTERNAL_EVENT_FILTER}
+ `);
+  rows.push({
+   key: stage.key,
+   label: stage.label,
+   goal: stage.goal,
+   count: value,
+   events: stage.events,
+  });
+ }
+ return rows.map((row, index) => {
+  const previous = index > 0 ? rows[index - 1].count : null;
+  const conversionFromPrevious = previous && previous > 0 ? Math.round((row.count / previous) * 1000) / 10 : null;
+  return { ...row, conversionFromPrevious };
+ });
+}
+
 async function partnerIntakeStats(db) {
  const table = await first(db, `SELECT name FROM sqlite_master WHERE type = 'table' AND name = 'partner_intake'`);
  if (!table.name) {
@@ -135,6 +215,8 @@ export async function onRequestGet({ request, env }) {
  partSnapFeedbackByOutcome,
  topManualQueries,
  dailyProxy,
+ conversionFunnel7d,
+ conversionFunnel30d,
  partnerIntake,
  ] = await Promise.all([
  count(db, `SELECT COUNT(*) AS value FROM events WHERE created_at >= datetime('now', '-7 days') ${EXTERNAL_EVENT_FILTER}`),
@@ -194,6 +276,8 @@ export async function onRequestGet({ request, env }) {
  GROUP BY day
  ORDER BY day DESC
  `),
+ funnelStageStats(db, 7),
+ funnelStageStats(db, 30),
  partnerIntakeStats(db),
  ]);
 
@@ -231,7 +315,9 @@ export async function onRequestGet({ request, env }) {
  scansByMode,
  partSnapFeedbackByOutcome,
  topManualQueries,
- dailyProxy,
+dailyProxy,
+ conversionFunnel7d,
+ conversionFunnel30d,
  leadsBySource: partnerIntake.bySource,
  leadsByLane: partnerIntake.byLane,
  }, 200, headers);

@@ -191,6 +191,34 @@ async function partnerIntakeStats(db) {
  };
 }
 
+async function paymentStats(db) {
+ const table = await first(db, `SELECT name FROM sqlite_master WHERE type = 'table' AND name = 'payment_events'`);
+ if (!table.name) {
+ return { byPlan: [], splashlensCompleted: 0, suspectCompleted: 0 };
+ }
+
+ const byPlan = await all(db, `
+ SELECT event_type,
+ COALESCE(plan, 'unknown') AS plan,
+ COUNT(*) AS count,
+ COUNT(DISTINCT stripe_session_id) AS stripeSessions,
+ MIN(created_at) AS firstSeen,
+ MAX(created_at) AS lastSeen
+ FROM payment_events
+ GROUP BY event_type, COALESCE(plan, 'unknown')
+ ORDER BY count DESC, plan ASC
+ `);
+
+ const splashlensCompleted = byPlan
+ .filter((row) => /partsnap|splashlens/i.test(String(row.plan || '')))
+ .reduce((sum, row) => sum + Number(row.count || 0), 0);
+ const suspectCompleted = byPlan
+ .filter((row) => !/partsnap|splashlens/i.test(String(row.plan || '')))
+ .reduce((sum, row) => sum + Number(row.count || 0), 0);
+
+ return { byPlan, splashlensCompleted, suspectCompleted };
+}
+
 export async function onRequestGet({ request, env }) {
  const headers = corsHeaders(request);
 
@@ -224,7 +252,8 @@ export async function onRequestGet({ request, env }) {
  dailyProxy,
  conversionFunnel7d,
  conversionFunnel30d,
- partnerIntake,
+partnerIntake,
+payments,
  ] = await Promise.all([
  count(db, `SELECT COUNT(*) AS value FROM events WHERE created_at >= datetime('now', '-7 days') ${EXTERNAL_EVENT_FILTER}`),
  count(db, `SELECT COUNT(*) AS value FROM events WHERE created_at >= datetime('now', '-30 days') ${EXTERNAL_EVENT_FILTER}`),
@@ -285,7 +314,8 @@ export async function onRequestGet({ request, env }) {
  `),
  funnelStageStats(db, 7),
  funnelStageStats(db, 30),
- partnerIntakeStats(db),
+partnerIntakeStats(db),
+paymentStats(db),
  ]);
 
  return json({
@@ -317,6 +347,8 @@ export async function onRequestGet({ request, env }) {
  affiliateClicks30d,
  subscribersTotal,
  subscribers30d,
+ splashlensPaidCompletions: payments.splashlensCompleted,
+ suspectNonSplashLensPaymentRows: payments.suspectCompleted,
  ...partnerIntake.metrics,
  },
  topEvents,
@@ -326,8 +358,9 @@ export async function onRequestGet({ request, env }) {
 dailyProxy,
  conversionFunnel7d,
  conversionFunnel30d,
- leadsBySource: partnerIntake.bySource,
- leadsByLane: partnerIntake.byLane,
+leadsBySource: partnerIntake.bySource,
+leadsByLane: partnerIntake.byLane,
+paymentsByPlan: payments.byPlan,
  }, 200, headers);
  } catch (err) {
  console.error('Stats error:', err);

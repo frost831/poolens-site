@@ -55,6 +55,9 @@ test('owner dashboard exposes the north-star conversion funnel', () => {
     'conversionFunnel30d',
     'checkout_intent',
     'paid_or_restored',
+    'splashlensPaidCompletions',
+    'suspectNonSplashLensPaymentRows',
+    'paymentsByPlan',
   ]) {
     assert.match(statsSource + statsPage, new RegExp(marker));
   }

@@ -53,6 +53,10 @@ test('campaign field challenge includes proof path and current proof strip', () 
 test('homepage pricing avoids unstable pilot target language', () => {
   assert.doesNotMatch(homepage, /pilot target/i);
   assert.doesNotMatch(homepage, /Coming soon: Route Ready/i);
-  assert.match(homepage, /\$19<\/div>[\s\S]*per month \/ request access/);
-  assert.match(homepage, /\$99<\/div>[\s\S]*per company \/ month/);
+  assert.match(homepage, /Free, No Account/);
+  assert.match(homepage, /SplashLens Pro/);
+  assert.match(homepage, /\$29<\/div>[\s\S]*per month \/ \$249 yearly target/);
+  assert.match(homepage, /Teams/);
+  assert.match(homepage, /\$149<\/div>[\s\S]*per company \/ month target/);
+  assert.doesNotMatch(homepage, /Saved Job Pro/);
 });

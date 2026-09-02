@@ -1781,3 +1781,36 @@ True blockers:
 - Queue rows changed:
   - Eight successful non-bounced sends moved from `queued` to `sent`, `last_sent_at=2026-08-25`, `next_send_after=2026-09-01`, with Gmail IDs and proof notes added.
   - `mfrancisco@ymcasumter.org` and `rose@upperstate.org` moved from `queued` to `bounced`, `last_sent_at=2026-08-25`, no future send date, with failure IDs and `do not send again unless a new verified address is found` notes.
+## Closing-season full queued send - 2026-09-02
+
+- User explicitly requested send after the 2026-09-02 product/funnel deployment.
+- Source repo used: `C:\Users\sales\Documents\Codex\splashlens-proof-gate-20260830\site`; Dropbox project folders were not local because Dropbox Selective Sync is intentionally active on this PC.
+- Sender verified through Gmail connector as Joshua Frost `<frost@belowzeromedia.com>` with reply-to `hello@splashlens.com`.
+- Single-writer day lock returned `PASS` and created `docs\outreach\.locks\splashlens-outreach-2026-09-02.lock`.
+- Live preflight returned HTTP `200` for `https://splashlens.com`, `https://app.splashlens.com`, and `https://splashlens.com/campaign.html`.
+- Thirty-day Gmail stop-signal search returned two candidates; readback showed the known Service Industry News conversation, not an unsubscribe, bounce, complaint, or stop request affecting this batch.
+- Fresh source/MX preflight checked all 18 queued rows:
+  - 17 rows passed source URL and MX checks.
+  - `Swimming Pool and Spa Association on-site testing <poolandspaassociation@yahoo.com>` was held and moved to `needs-verification` because its source URL returned HTTP `500`.
+- Exact Gmail history checks across the 17 sendable rows found no SplashLens/PartSnap/app-link history before sending.
+- Sent 17 one-to-one plain-text emails from Gmail, no BCC, all ending `Talk Soon,` and using conservative language: free core app, closing-season/one-real-stop test, no diagnosis, fitment, warranty, endorsement, safety, code-compliance, or manufacturer-authority claim.
+  - York Technical College SC operator route `<bodom@yorktech.edu>`, subject `Closing-season field workflow for pool operator feedback`, Gmail id `1a0639715206c3f5`.
+  - Coastal Carolina University SC operator route `<mmiller@coastal.edu>`, subject `Closing-season field workflow for pool operator feedback`, Gmail id `1a063974f3f572d6`; later hard-bounced with Gmail failure id `1a0639b54bc985c8`, `550 5.1.1 user unknown`.
+  - New Mexico aquatics program operator route `<aquatics.program@env.nm.gov>`, subject `Closing-season field workflow for pool operator feedback`, Gmail id `1a063978891fd375`.
+  - Thunder City Pool Services `<thundercitypoolservices@yahoo.com>`, subject `Closing-season field test for SplashLens`, Gmail id `1a06397c2eb3a5d7`.
+  - Pool Heaven `<poolheavenhb@gmail.com>`, subject `Closing-season field test for SplashLens`, Gmail id `1a06397f241fae31`.
+  - Pool Fix `<TellMeMore@PoolFix.com>`, subject `Closing-season proof before the callback`, Gmail id `1a063982e8be8af5`.
+  - The Pool Boys `<ThePoolBoysDispatch@gmail.com>`, subject `Closing-season field test for SplashLens`, Gmail id `1a0639869103c360`.
+  - Pure Pool Solutions `<info@purepoolsolutionsfl.com>`, subject `Closing-season field test for SplashLens`, Gmail id `1a06398a8f4be447`.
+  - Starfish Aquatics Institute `<jill@sai-intl.org>`, subject `Closing-season field workflow for pool operator feedback`, Gmail id `1a06398ebca714ea`.
+  - Pool Supply Warehouse `<info@poolsupplywarehouseinc.com>`, subject `Closing-season proof before the callback`, Gmail id `1a063992884ba8a2`.
+  - Swim State Pool Service `<swimstatepoolservicellc@gmail.com>`, subject `Closing-season field test for SplashLens`, Gmail id `1a063995f84253ba`.
+  - Byrd Moreton & Associates `<byrdmoreton@aol.com>`, subject `Better proof before pool part and support questions`, Gmail id `1a0639997379a41e`.
+  - B&A Sales `<basales@basalesreps.com>`, subject `Better proof before spa and pool part questions`, Gmail id `1a06399d30d5c4a0`.
+  - Pool Builder Marketing `<info@poolbuildermarketing.com>`, subject `A field workflow pool business owners might test`, Gmail id `1a0639a0768e4c1b`.
+  - Vacless Systems `<sales@vacless.com>`, subject `Better proof before SVRS and support questions`, Gmail id `1a0639a3e8ac739c`.
+  - Pool Daddy Atlanta `<pooldaddyec@gmail.com>`, subject `Closing-season field test for SplashLens`, Gmail id `1a0639a75472cf9d`.
+  - Goodman's Pool Service `<grant@goodmanspoolservice.com>`, subject `Closing-season field test from another Central Illinois pool guy`, Gmail id `1a0639aacefd2212`.
+- Immediate post-send delivery-failure search found one hard bounce: `mmiller@coastal.edu` returned `550 5.1.1 user unknown`. A later delivery-failure sweep should still be checked before the next send window.
+- Queue rows changed: 16 `queued` rows moved to `sent` with `last_sent_at=2026-09-02`, `next_send_after=2026-09-09`, Gmail IDs, UTM content labels, and no-immediate-bounce notes. One attempted row moved to `bounced`; one stale-source row moved to `needs-verification`.
+- Remaining action: replenish queue with new verified prospects before the next send window; the current verified `queued` pool is now exhausted.

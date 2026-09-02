@@ -28,7 +28,14 @@ function json(data, status, headers) {
 }
 
 const EXTERNAL_EVENT_FILTER = `
- AND COALESCE(source, '') NOT IN ('qa', 'codex', 'codex_smoke')
+ AND COALESCE(source, '') NOT IN ('qa', 'codex', 'codex_smoke', 'launch-gate-test')
+ AND lower(COALESCE(user_agent, '')) NOT LIKE '%headless%'
+ AND lower(COALESCE(user_agent, '')) NOT LIKE '%bot%'
+ AND lower(COALESCE(user_agent, '')) NOT LIKE '%crawler%'
+ AND lower(COALESCE(user_agent, '')) NOT LIKE '%spider%'
+ AND lower(COALESCE(user_agent, '')) NOT LIKE '%preview%'
+ AND lower(COALESCE(user_agent, '')) NOT LIKE '%compatible; meta-externalagent%'
+ AND COALESCE(path, '') NOT LIKE '/test/%'
  AND COALESCE(path, '') NOT LIKE '%utm_source=qa%'
  AND COALESCE(path, '') NOT LIKE '%utm_medium=playwright%'
  AND COALESCE(path, '') NOT LIKE '%codex%'
@@ -291,6 +298,7 @@ export async function onRequestGet({ request, env }) {
  caveats: [
  'DAU is a user-agent proxy until a durable anonymous app ID is captured.',
  'Internal QA, Codex smoke, Playwright, verification, and readiness paths are excluded from owner-facing event totals.',
+ 'Headless/browser-test heartbeats are excluded from owner-facing event totals.',
  'Installs are not proven by this endpoint until PWA/store install events are added.',
  'PartSnap Pro active subscription truth remains Stripe/KV, not the event table.',
  'Partner totals count partners-page submissions; field tester totals include field-testers-page submissions and tester lanes.',

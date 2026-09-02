@@ -11,7 +11,9 @@ async function loadStatsModule() {
 
 test('owner stats exclude internal QA and smoke traffic from event totals', () => {
   assert.match(statsSource, /const EXTERNAL_EVENT_FILTER = `/);
-  assert.match(statsSource, /COALESCE\(source, ''\) NOT IN \('qa', 'codex', 'codex_smoke'\)/);
+  assert.match(statsSource, /COALESCE\(source, ''\) NOT IN \('qa', 'codex', 'codex_smoke', 'launch-gate-test'\)/);
+  assert.match(statsSource, /lower\(COALESCE\(user_agent, ''\)\) NOT LIKE '%headless%'/);
+  assert.match(statsSource, /COALESCE\(path, ''\) NOT LIKE '\/test\/%'/);
   assert.match(statsSource, /utm_source=qa/);
   assert.match(statsSource, /utm_medium=playwright/);
   assert.match(statsSource, /amplitude-readiness/);
@@ -113,7 +115,9 @@ test('authorized stats request runs event queries with the external traffic filt
   assert.ok(eventQueries.length >= 12);
 
   for (const sql of eventQueries) {
-    assert.match(sql, /NOT IN \('qa', 'codex', 'codex_smoke'\)/);
+    assert.match(sql, /NOT IN \('qa', 'codex', 'codex_smoke', 'launch-gate-test'\)/);
+    assert.match(sql, /headless/);
+    assert.match(sql, /\/test\/%/);
     assert.match(sql, /utm_source=qa/);
     assert.match(sql, /utm_medium=playwright/);
     assert.match(sql, /amplitude-readiness/);

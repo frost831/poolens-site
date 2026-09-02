@@ -1814,3 +1814,45 @@ True blockers:
 - Immediate post-send delivery-failure search found one hard bounce: `mmiller@coastal.edu` returned `550 5.1.1 user unknown`. A later delivery-failure sweep should still be checked before the next send window.
 - Queue rows changed: 16 `queued` rows moved to `sent` with `last_sent_at=2026-09-02`, `next_send_after=2026-09-09`, Gmail IDs, UTM content labels, and no-immediate-bounce notes. One attempted row moved to `bounced`; one stale-source row moved to `needs-verification`.
 - Remaining action: replenish queue with new verified prospects before the next send window; the current verified `queued` pool is now exhausted.
+
+## Queue replenishment - 2026-09-02
+
+- User asked to start rolling on the queue after the verified `queued` pool was exhausted.
+- No emails were sent in this queue-replenishment step.
+- Researched a fresh closing-season prospect lane focused on Midwest and Northeast pool/spa service companies, service/retail operators, pool-management routes, and closing/opening service providers.
+- Added 25 new `queued` rows with `next_send_after=2026-09-03`.
+- Every added row passed:
+  - Not already present in `docs\outreach\splashlens-drip-queue.csv`.
+  - Official public source URL returned HTTP `200`.
+  - Target email was visible on the public source page.
+  - Recipient domain had MX records.
+  - Exact Gmail history search found no prior SplashLens/PartSnap/app-link messages.
+- Added Midwest/service rows:
+  - Russo's Pool and Spa `<info@RussosPoolandSpa.com>`.
+  - Above Ground Professionals `<info@abovegroundprofessionals.com>`.
+  - Power Pool Service `<frank@powerpoolservice.com>`.
+  - Splash Custom Pools and Spas `<contact@splashcustompools.com>`.
+  - St. John Pool Center `<stjohnpoolcenter@gmail.com>`.
+  - Forrester & Sons Pool Service `<forresterpoolservice@gmail.com>`.
+  - The Pool People of Ohio `<jarrod@thepoolpeopleofohio.com>`.
+  - Four Seasons Pool Saint Charles `<stcsales@fsp-stl.com>`.
+  - Four Seasons Pool Wentzville `<wtzsales@fsp-stl.com>`.
+  - Pool Pros Ohio `<service@poolprosohio.com>`.
+  - Kalifornia Pool `<info@k-pool.com>`.
+  - Paradise Pools Kentucky `<sales@paradisepoolsky.com>`.
+  - Great Lakes Pool Services `<greatlakespoolservices@gmail.com>`.
+  - OC Pools Ohio `<oscar.ocswimmingpools@gmail.com>`.
+  - All Minnesota Pools `<ALLMNPOOLS@gmail.com>`.
+  - All Minnesota Pools Savage `<ALLMNPOOLZ@gmail.com>`.
+  - Elite Pool Service KC `<Emily@elitepoolkc.com>`.
+  - Elite Pool Service KC Service `<Rocky@elitepoolkc.com>`.
+  - True Blue Pools Lexington `<wyoung.truebluepools@gmail.com>`.
+- Added Northeast/service/facility rows:
+  - After Hours Pool Service `<ahps@verizon.net>`.
+  - All American Pool Service NJ/NY `<kenaaps@yahoo.com>`.
+  - Pools by Murphy `<service@poolsbymurphy.com>`.
+  - Cannonball Pools New Jersey `<info@cannonballpoolsnj.com>`.
+  - New Jersey Pool Management `<contact@newjerseypoolmanagement.com>`.
+  - Aquatic Pool Connecticut `<info@aquaticpool.com>`.
+- Rejected/held candidates during research rather than adding as send-ready when source pages failed, email was not visibly confirmed on page, or only a form/social source was available.
+- Next send window: after a fresh day lock, stop-signal search, source/MX spot-check, and exact recipient history check, these 25 rows are ready to use as the next controlled one-to-one batch.

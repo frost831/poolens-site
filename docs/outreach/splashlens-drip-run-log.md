@@ -1864,3 +1864,10 @@ True blockers:
 - Created an unsent Gmail reply draft in the same thread, draft id `r9100126174230344872`.
 - Draft answers: SplashLens is a new pool/spa field-reference product based out of Central Illinois; built from Joshua's pool sales and service-company experience; free core, SplashLens Pro at `$29/month` or `$249/year`, Teams around `$149/month`; best-fit customer is service/repair companies and small operators first, with builders/renovators as a secondary fit when equipment identification, support handoff, or customer documentation is involved.
 - Queue updated to mark Pool Builder Marketing as `replied` and hold future cold follow-up.
+
+## Pool Builder Marketing warm reply sent - 2026-09-02
+
+- User reported the Brett Abbott draft was sent.
+- Gmail verification found no remaining draft and confirmed sent message id `1a0641ddf463a0e0` in thread `1a06399f70bffe21`, sent from Joshua Frost `<frost@belowzeromedia.com>` to Brett Abbott `<brett@mymaustin.com>` with reply-to `hello@splashlens.com`.
+- Sent timestamp from Gmail headers: `Wed, 2 Sep 2026 16:54:31 -0500`.
+- Queue note updated to replace the draft-only status with sent-reply proof. Pool Builder Marketing remains `replied` and should stay warm-thread only.

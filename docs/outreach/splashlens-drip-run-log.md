@@ -1856,3 +1856,11 @@ True blockers:
   - Aquatic Pool Connecticut `<info@aquaticpool.com>`.
 - Rejected/held candidates during research rather than adding as send-ready when source pages failed, email was not visibly confirmed on page, or only a form/social source was available.
 - Next send window: after a fresh day lock, stop-signal search, source/MX spot-check, and exact recipient history check, these 25 rows are ready to use as the next controlled one-to-one batch.
+
+## Pool Builder Marketing warm reply draft - 2026-09-02
+
+- Brett Abbott replied from `<brett@mymaustin.com>` to the Pool Builder Marketing outreach thread, Gmail id `1a063de4db692efc`.
+- He asked for more background on the company, location, time in business, 4-user ballpark pricing, and ideal-client fit across renovation, maintenance, and repair companies.
+- Created an unsent Gmail reply draft in the same thread, draft id `r9100126174230344872`.
+- Draft answers: SplashLens is a new pool/spa field-reference product based out of Central Illinois; built from Joshua's pool sales and service-company experience; free core, SplashLens Pro at `$29/month` or `$249/year`, Teams around `$149/month`; best-fit customer is service/repair companies and small operators first, with builders/renovators as a secondary fit when equipment identification, support handoff, or customer documentation is involved.
+- Queue updated to mark Pool Builder Marketing as `replied` and hold future cold follow-up.

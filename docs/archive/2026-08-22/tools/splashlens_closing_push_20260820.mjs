@@ -195,7 +195,7 @@ As closing season starts creeping up in the Midwest, I am pushing SplashLens aro
 Run one code, mystery part, equipment family, connected-pump alert, or proof workflow here:
 https://splashlens.com/campaign.html?utm_source=outreach&utm_medium=email&utm_campaign=closing_season_2026&utm_content=service_company
 
-The core app is free, no account required. PartSnap gives possible part paths and proof prompts, not fitment guarantees. The goal is cleaner notes, better model/photo proof, and less guessing before someone orders blind or has to explain the visit later.
+The core app is free, Manual lookup is free to start. PartSnap gives possible part paths and proof prompts, not fitment guarantees. The goal is cleaner notes, better model/photo proof, and less guessing before someone orders blind or has to explain the visit later.
 
 If it saves time or falls short, I would genuinely appreciate blunt field feedback.
 

@@ -53,7 +53,9 @@ test('campaign field challenge includes proof path and current proof strip', () 
 test('homepage pricing avoids unstable pilot target language', () => {
   assert.doesNotMatch(homepage, /pilot target/i);
   assert.doesNotMatch(homepage, /Coming soon: Route Ready/i);
-  assert.match(homepage, /Free, No Account/);
+  assert.match(homepage, /Free to Start/);
+  assert.match(homepage, /Profile required for AI scans/);
+  assert.doesNotMatch(homepage, /No Account Required/);
   assert.match(homepage, /SplashLens Pro/);
   assert.match(homepage, /\$29<\/div>[\s\S]*per month \/ \$249 yearly target/);
   assert.match(homepage, /Teams/);

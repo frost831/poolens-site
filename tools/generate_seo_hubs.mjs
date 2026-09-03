@@ -92,7 +92,7 @@ function page(hub) {
         {
           '@type': 'Question',
           name: `What is SplashLens for ${hub.terms[0]}?`,
-          acceptedAnswer: { '@type': 'Answer', text: 'SplashLens is a free no-account field reference app for pool service professionals. It helps with lookup, notes, dosing, scanner workflows, and verification prompts, but it does not replace current manufacturer manuals or qualified field judgment.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'SplashLens is a free-to-start field reference app for pool service professionals. Manual lookup, notes, dosing, and guides can start without an account. AI scanner workflows require a free field profile so usage and field misses are tied to a real contact.' },
         },
         {
           '@type': 'Question',

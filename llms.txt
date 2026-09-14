@@ -32,7 +32,7 @@ Public PartSnap page: https://splashlens.com/partsnap.html
 
 ### Closing Season Mode
 
-SplashLens Closing Season Mode is a seasonal proof workflow for pool closings and winterization. It helps techs capture water chemistry, water level, equipment pad photos, drain-plug proof, skimmer/return plugs, heater and salt-cell context, robot storage notes, cover condition, customer approvals or declined work, repeat-issue watch items, and customer-safe summaries.
+SplashLens Closing Season Mode is a seasonal proof workflow for pool closings and winterization. It helps techs capture water chemistry, water level, equipment pad photos, drain-plug proof, skimmer/return plugs, heater and salt-cell context, robot storage notes, cover condition, customer approvals or declined work, repeat-issue watch items, and customer-safe summaries. The current closing-season activation route is a measured 60-second challenge for one real closing stop, framed around Midwest season wind-down and spring-callback prevention.
 
 Public page: https://splashlens.com/closing-season.html
 

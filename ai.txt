@@ -48,7 +48,7 @@ Any AI-assisted or PartSnap result should be framed as a possible match or workf
 
 ## Current Crawlable Reference Lanes
 
-SplashLens Closing Season Mode is a documentation and field-memory workflow for winterization and seasonal shutdowns. It is not insurance, warranty approval, a manufacturer procedure, or a replacement for exact equipment manuals, product labels, local code, company policy, or qualified judgment.
+SplashLens Closing Season Mode is a documentation and field-memory workflow for winterization and seasonal shutdowns. The September push routes techs into a measurable 60-second closing-season challenge so they can try one real closing stop before the first hard-freeze rush. It is not insurance, warranty approval, a manufacturer procedure, or a replacement for exact equipment manuals, product labels, local code, company policy, or qualified judgment.
 
 The spa, hot tub, and swim spa troubleshooting app lane includes source-style checklists for Balboa, Gecko, Waterway NEO, Watkins-style systems, Jacuzzi/Sundance-style systems, Master Spas H2X, Endless Pools, Hydropool, PDC, Artesian, TidalFit, Bullfrog, Marquis, Coast, Arctic, Wellis, Nordic, Viking, Dynasty, Saratoga, and related spa hardware families. Current support pages include Nordic, Viking, Dynasty, Saratoga, and Adirondack spa checklist; Spa filter cartridge and low-flow checklist; and Spa leak, winterizing, and rental reset checklist.
 

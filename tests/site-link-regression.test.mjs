@@ -89,16 +89,19 @@ test('closing season launch page is crawlable, linked, and claim-safe', () => {
 
 test('Facility Assist pursues the operator lane without overclaiming a partner', () => {
   const page = fs.readFileSync(path.join(root, 'facility-assist.html'), 'utf8');
+  const routedPage = fs.readFileSync(path.join(root, 'facility-assist-page.html'), 'utf8');
   const strategy = fs.readFileSync(path.join(root, 'docs', 'strategy', 'splashlens-facility-assist-after-tim-2026-09-14.md'), 'utf8');
 
-  assert.match(page, /Service-program fit/);
-  assert.match(page, /A lighter layer a trainer, facility group, or support company can shape/);
-  assert.match(page, /Call-log categories/);
-  assert.match(page, /Approved wording/);
-  assert.match(page, /Measured pilot/);
-  assert.match(page, /replaceChildren/);
-  assert.doesNotMatch(page, /wizard-result"\)\.innerHTML/);
-  assert.doesNotMatch(page, /Aquatic Council-backed|health-department approval|insurance coverage/);
+  for (const source of [page, routedPage]) {
+    assert.match(source, /Service-program fit/);
+    assert.match(source, /A lighter layer a trainer, facility group, or support company can shape/);
+    assert.match(source, /Call-log categories/);
+    assert.match(source, /Approved wording/);
+    assert.match(source, /Measured pilot/);
+    assert.match(source, /replaceChildren/);
+    assert.doesNotMatch(source, /wizard-result"\)\.innerHTML/);
+    assert.doesNotMatch(source, /Aquatic Council-backed|health-department approval|insurance coverage/);
+  }
 
   assert.match(strategy, /Responsible operator -> short wizard -> proof packet -> qualified escalation or documented closeout/);
   assert.match(strategy, /Do not chase Tim as the only route/);

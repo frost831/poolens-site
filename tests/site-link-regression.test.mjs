@@ -87,6 +87,24 @@ test('closing season launch page is crawlable, linked, and claim-safe', () => {
   assert.match(ai, /SplashLens Closing Season Mode/);
 });
 
+test('Facility Assist pursues the operator lane without overclaiming a partner', () => {
+  const page = fs.readFileSync(path.join(root, 'facility-assist.html'), 'utf8');
+  const strategy = fs.readFileSync(path.join(root, 'docs', 'strategy', 'splashlens-facility-assist-after-tim-2026-09-14.md'), 'utf8');
+
+  assert.match(page, /Service-program fit/);
+  assert.match(page, /A lighter layer a trainer, facility group, or support company can shape/);
+  assert.match(page, /Call-log categories/);
+  assert.match(page, /Approved wording/);
+  assert.match(page, /Measured pilot/);
+  assert.match(page, /replaceChildren/);
+  assert.doesNotMatch(page, /wizard-result"\)\.innerHTML/);
+  assert.doesNotMatch(page, /Aquatic Council-backed|health-department approval|insurance coverage/);
+
+  assert.match(strategy, /Responsible operator -> short wizard -> proof packet -> qualified escalation or documented closeout/);
+  assert.match(strategy, /Do not chase Tim as the only route/);
+  assert.match(strategy, /Facility Assist Pilot/);
+});
+
 test('spa and swim spa lane is crawlable, promoted, and safely framed', () => {
   const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');

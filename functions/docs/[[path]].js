@@ -1,4 +1,4 @@
-const INTERNAL_DOC_PREFIXES = ['/docs/archive/', '/docs/outreach/', '/docs/design/'];
+const INTERNAL_DOC_PREFIXES = ['/docs/archive/', '/docs/outreach/', '/docs/design/', '/docs/strategy/'];
 
 export async function onRequest(context) {
  const url = new URL(context.request.url);

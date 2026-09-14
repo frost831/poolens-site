@@ -1910,3 +1910,36 @@ Recipients:
 - info@cannonballpoolsnj.com
 - contact@newjerseypoolmanagement.com
 - info@aquaticpool.com
+
+## 2026-09-14 - Facility Assist operator-partner clean send
+
+Preflight:
+- Used active frost831 site clone at `C:\Users\sales\Documents\Codex\splashlens-site-amplitude-20260914`; Dropbox source path was not local due selective sync, so it was not recreated.
+- Verified live pages before send: `https://splashlens.com/facility-assist?cb=operatorpartner` and `https://app.splashlens.com/?cb=operatorpartner` returned HTTP `200`.
+- Confirmed connected Gmail sender: Joshua Frost `<frost@belowzeromedia.com>`; Reply-To used on all sends: `hello@splashlens.com`.
+- Recent stop-signal review surfaced Stripe webhook noise and the already-known Coastal Carolina hard bounce, not a new unsubscribe, remove request, complaint, bounce, or negative reply affecting this batch.
+- Exact recipient and same-domain Gmail history checks were clean for all five sent recipients.
+- Excluded Pool Training Academy because the same organization was touched on 2026-08-28. Excluded Aquatic Council / Tim because the user requested this lane with other partners, not Tim specifically.
+
+Sent count: 5
+Suppressed/skipped from this lane: 2
+Immediate target-recipient bounce check: 0
+
+Recipients:
+- GCNKAA CPO / apartment maintenance education `<zach@gcnkaa.org>`, subject `A practical pool-operator workflow for apartment maintenance teams`, Gmail id `1a0a18d8557e709b`, source `https://www.gcnkaa.org/events/certified-pool-operator-cpo-2026`.
+- Apartment Association of Nebraska CPO route `<director@aaneb.org>`, subject `A lighter pool-operator workflow for apartment maintenance training`, Gmail id `1a0a18d86592f631`, source `https://www.aaneb.org/`.
+- SEFAA CPO education partnerships `<partnerships@sefaa.org>`, subject `Could SplashLens support one CPO operator scenario?`, Gmail id `1a0a18d89ac1eec3`, source `https://www.sefaa.org/`.
+- PPL Group commercial pool operator support `<steve@pplgroup.com>`, subject `A Facility Assist workflow for pool-operator support calls`, Gmail id `1a0a18d8a0b22633`, source `https://pplgroup.com/`.
+- The Pool School hospitality/operator training `<tony@thepoolschool.net>`, subject `A pool-operator workflow for resort and facility staff`, Gmail id `1a0a18d8ea3171c1`, source `https://www.thepoolschool.net/`.
+
+Message strategy:
+- One-to-one plain-text emails only, no BCC.
+- Ask: `Give us one real operator call type your people struggle with. We can turn it into a conservative Facility Assist workflow and show what gets documented before escalation.`
+- Each note used a tracked Facility Assist link under campaign `facility_operator_partner_20260914`.
+- Each note used reference-only language and avoided certification, endorsement, code-compliance, diagnosis, warranty, or partnership claims.
+- Each note ended with `Talk Soon`.
+
+Files updated:
+- `docs/outreach/splashlens-drip-queue.csv`
+- `docs/outreach/splashlens-drip-run-log.md`
+- `docs/outreach/splashlens-facility-operator-partner-send-2026-09-14.md`

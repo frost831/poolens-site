@@ -50,6 +50,20 @@ test('campaign field challenge includes proof path and current proof strip', () 
   assert.match(challenge, /service_proof/);
 });
 
+test('campaign pricing matches the current SplashLens paid ladder', () => {
+  const campaign = fs.readFileSync(new URL('../campaign.html', import.meta.url), 'utf8');
+  assert.match(campaign, /Free Field Profile/);
+  assert.match(campaign, /\$0 to start/);
+  assert.match(campaign, /SplashLens Pro/);
+  assert.match(campaign, /\$29\/mo or \$249\/yr/);
+  assert.match(campaign, /Teams/);
+  assert.match(campaign, /\$149\/company\/mo/);
+  assert.match(campaign, /utm_content=partsnap_pro/);
+  assert.doesNotMatch(campaign, /\$4\.99\/mo or \$39\/yr/);
+  assert.doesNotMatch(campaign, /\$19\/mo/);
+  assert.doesNotMatch(campaign, /\$99\/mo/);
+});
+
 test('homepage pricing avoids unstable pilot target language', () => {
   assert.doesNotMatch(homepage, /pilot target/i);
   assert.doesNotMatch(homepage, /Coming soon: Route Ready/i);

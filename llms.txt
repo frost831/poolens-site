@@ -1,5 +1,14 @@
 # SplashLens
 
+## Field notes
+
+- [Pool and spa field notes](https://splashlens.com/blog/field-notes/): dated reference-only documentation prompts.
+- [Published field-note inventory](https://splashlens.com/blog/field-notes.txt): current public entries only; future notes are excluded.
+- [Editorial policy](https://splashlens.com/blog/editorial/): AI-assisted preparation, source limits, corrections, and authorship.
+- [Field-note RSS](https://splashlens.com/blog/feed.xml)
+
+These notes are not diagnosis, repair instructions, or confirmation of fit. The files are discovery aids, not crawler permissions or training controls.
+
 > Free-core field reference tool for pool service technicians. PartSnap pool parts ID, 230+ current troubleshooting entries, chemical dosing calculators, online AI scanner, saved job history, multi-day SLAM tracker, pool tech search hubs, and pool care reference guides. Manual tools work offline after first load; AI scanner requires internet.
 
 ## What SplashLens Is

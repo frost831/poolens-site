@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "articleRenders": 240,
+  "viewports": [
+    1440,
+    390
+  ],
+  "search": "PASS",
+  "checklist": "PASS",
+  "analyticsOptInAndWithdrawal": "PASS",
+  "xml": "PASS",
+  "browserErrors": []
+}

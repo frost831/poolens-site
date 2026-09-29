@@ -1,5 +1,14 @@
 # SplashLens AI and Search Guidance
 
+## Field notes
+
+- https://splashlens.com/blog/field-notes/
+- https://splashlens.com/blog/field-notes.txt
+- https://splashlens.com/blog/editorial/
+- https://splashlens.com/blog/feed.xml
+
+The live field-note inventory contains published entries only. These are editorial documentation aids, not equipment instructions, diagnosis, confirmed fit, or technical review. This file does not grant or block training access.
+
 Site: https://splashlens.com
 App: https://app.splashlens.com
 Updated: 2026-09-01

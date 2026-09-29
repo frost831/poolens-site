@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-09-29T06:34:58.420Z",
+  "base": "https://6ebe42d8.poolens-site.pages.dev",
+  "publishedCount": 0,
+  "scheduledCount": 120,
+  "checks": [
+    {
+      "path": "/blog/field-notes/",
+      "status": 200,
+      "expected": 200,
+      "cache": "no-store"
+    },
+    {
+      "path": "/blog/editorial/",
+      "status": 200,
+      "expected": 200,
+      "cache": "no-store"
+    },
+    {
+      "path": "/blog-sitemap.xml",
+      "status": 200,
+      "expected": 200,
+      "cache": "no-store"
+    },
+    {
+      "path": "/blog/feed.xml",
+      "status": 200,
+      "expected": 200,
+      "cache": "no-store"
+    },
+    {
+      "path": "/blog/field-notes.txt",
+      "status": 200,
+      "expected": 200,
+      "cache": "no-store"
+    },
+    {
+      "path": "/sitemap-index.xml",
+      "status": 200,
+      "expected": 200,
+      "cache": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/blog/",
+      "status": 200,
+      "expected": 200,
+      "cache": "public, max-age=86400, stale-while-revalidate=604800"
+    },
+    {
+      "path": "/source-pages/",
+      "status": 200,
+      "expected": 200,
+      "cache": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "expected": 200,
+      "cache": "public, max-age=300, s-maxage=300, must-revalidate"
+    },
+    {
+      "path": "/ai.txt",
+      "status": 200,
+      "expected": 200,
+      "cache": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/llms.txt",
+      "status": 200,
+      "expected": 200,
+      "cache": "public, max-age=300, s-maxage=300, must-revalidate"
+    },
+    {
+      "path": "/blog/field-notes.css",
+      "status": 200,
+      "expected": 200,
+      "cache": "public, max-age=86400, stale-while-revalidate=604800"
+    },
+    {
+      "path": "/blog/field-notes.js",
+      "status": 200,
+      "expected": 200,
+      "cache": "public, max-age=86400, stale-while-revalidate=604800"
+    },
+    {
+      "path": "/editorial/articles.mjs",
+      "status": 404,
+      "expected": 404,
+      "cache": "no-store"
+    },
+    {
+      "path": "/editorial/sources.mjs",
+      "status": 404,
+      "expected": 404,
+      "cache": "no-store"
+    },
+    {
+      "path": "/blog/pool-opening-closing/nonexistent-article/",
+      "status": 404,
+      "expected": 404,
+      "cache": "no-store"
+    },
+    {
+      "path": "/blog/pool-opening-closing/first-frost-closing-records-four-things-to-keep-separate/",
+      "status": 404,
+      "expected": 404,
+      "cache": "no-store"
+    },
+    {
+      "path": "/blog/checklists/sl-field-001.txt",
+      "status": 404,
+      "expected": 404,
+      "cache": "no-store"
+    }
+  ]
+}

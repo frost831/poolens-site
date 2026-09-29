@@ -7,5 +7,6 @@ node_modules/
 docs/
 tests/
 tools/
+editorial/
 _deploy/
 *.log

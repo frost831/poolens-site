@@ -11,6 +11,9 @@ const checks = [
   ['/blog/', 200], ['/source-pages/', 200], ['/robots.txt', 200], ['/ai.txt', 200], ['/llms.txt', 200],
   ['/blog/field-notes.css', 200], ['/blog/field-notes.js', 200],
   ['/editorial/articles.mjs', 404], ['/editorial/sources.mjs', 404],
+  ['/docs/qa/field-notes/sl-field-120-1440.png', 404], ['/docs/field-notes-operations.md', 404],
+  ['/tools/preview-field-notes.mjs', 404], ['/tests/blog-seo-regression.test.mjs', 404],
+  ['/.git', 404],
   ['/blog/pool-opening-closing/nonexistent-article/', 404]
 ];
 const next = articles.find(a => !current.includes(a));

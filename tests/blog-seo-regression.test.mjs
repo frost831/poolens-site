@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import { articles } from '../editorial/articles.mjs';
 import { clusters, sources } from '../editorial/sources.mjs';
 import { route, visible, sitemap, feed, renderArticle, json } from '../editorial/render.mjs';
+import { stage } from '../tools/stage-public-assets.mjs';
 
 const allTime = new Date('2027-01-27T00:00:00Z');
 const request = (path, options) => new Request('https://splashlens.com' + path, options);
@@ -133,4 +134,15 @@ test('source records are real HTTPS routes and private editorial content is excl
   }
   const ignore = fs.readFileSync(new URL('../.assetsignore', import.meta.url), 'utf8');
   assert.match(ignore, /editorial\//);
+});
+
+test('the actual Pages asset bundle contains no internal documents, scripts or future corpus', async () => {
+  const { output, count } = await stage();
+  assert.ok(count > 700);
+  for (const directory of ['editorial', 'tools', 'tests', 'docs', '.git', 'node_modules', 'functions']) {
+    assert.equal(fs.existsSync(`${output}/${directory}`), false, directory);
+  }
+  for (const asset of ['index.html', '404.html', 'blog/index.html', 'blog/field-notes.css', 'blog/field-notes.js', 'sitemap-index.xml', 'product-screenshots/service-proof-live-mobile.png']) {
+    assert.equal(fs.existsSync(`${output}/${asset}`), true, asset);
+  }
 });

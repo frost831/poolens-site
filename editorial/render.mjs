@@ -13,6 +13,38 @@ const dateLabel = value => new Date(value).toLocaleDateString('en-US', { timeZon
 const aLink = a => `<a href="${a.path}">${escape(a.title)}</a>`;
 const crumbs = entries => `<nav class="breadcrumbs" aria-label="Breadcrumb"><ol>${entries.map(([name, url]) => `<li>${url ? `<a href="${escape(url)}">${escape(name)}</a>` : escape(name)}</li>`).join('')}</ol></nav>`;
 
+const workflowByCluster = {
+  'pool-opening-closing': { label: 'Open closing workflow', params: { tab: 'report', workflow: 'closing', challenge: 'field60', challenge_path: 'closing' } },
+  'spa-hot-tubs': { label: 'Open spa lookup', params: { tab: 'errors', mode: 'search', search: 'spa' } },
+  'robots-cleaners': { label: 'Open cleaner lookup', params: { tab: 'errors', mode: 'search', search: 'robot cleaner' } },
+  'automation-controls': { label: 'Open automation workflow', params: { tab: 'route' } },
+  'pumps-motors': { label: 'Open pump lookup', params: { tab: 'errors', mode: 'search', search: 'pump motor' } },
+  'heaters-heat-pumps': { label: 'Open heater lookup', params: { tab: 'errors', mode: 'search', search: 'heater' } },
+  'salt-chemistry-controllers': { label: 'Open salt controller lookup', params: { tab: 'errors', mode: 'search', search: 'salt controller' } },
+  'filters-valves-plumbing': { label: 'Open PartSnap', params: { tab: 'scan', mode: 'parts' } },
+  'covers-safety-equipment': { label: 'Open service report', params: { tab: 'report' } },
+  'facility-cpo': { label: 'Open Facility Assist', params: { tab: 'facility', mode: 'facility' } },
+  'field-documentation': { label: 'Open service report', params: { tab: 'report' } },
+  'troubleshooting-reference': { label: 'Open equipment lookup', params: { tab: 'errors', mode: 'search', search: 'equipment' } },
+  'manuals-sources': { label: 'Open equipment lookup', params: { tab: 'errors', mode: 'search', search: 'manual' } },
+  'buyer-proof': { label: 'Open PartSnap', params: { tab: 'scan', mode: 'parts' } },
+  partsnap: { label: 'Open PartSnap', params: { tab: 'scan', mode: 'parts' } },
+};
+
+export function workflowForArticle(article) {
+  const workflow = workflowByCluster[article.cluster] || workflowByCluster['field-documentation'];
+  const url = new URL('https://app.splashlens.com/');
+  url.search = new URLSearchParams({
+    ...workflow.params,
+    article: article.id,
+    utm_source: 'splashlens_blog',
+    utm_medium: 'referral',
+    utm_campaign: 'blog_120d_2026q4',
+    utm_content: `${article.slug}_workflow_cta`,
+  }).toString();
+  return { label: workflow.label, href: url.href };
+}
+
 function shell({ title, description, path, body, graph, article, noindex = false }) {
   const canonical = origin + path;
   const social = origin + (article ? image : '/splashlens-share-card.png');
@@ -44,15 +76,14 @@ function graphFor(a) {
 export function renderArticle(a, inventory) {
   const related = [...inventory.filter(b => b.id !== a.id && b.cluster === a.cluster).reverse(), ...inventory.filter(b => b.id !== a.id && b.cluster !== a.cluster).reverse()].slice(0, 4);
   const refs = sourceIds(a).map(id => sources[id]);
-  const cta = new URL('https://app.splashlens.com/');
-  cta.search = new URLSearchParams({ tab: 'report', utm_source: 'splashlens_blog', utm_medium: 'referral', utm_campaign: 'blog_120d_2026q4', utm_content: `${a.slug}_footer_app_cta` }).toString();
+  const cta = workflowForArticle(a);
   const body = `${crumbs([['Home', '/'], ['Blog', '/blog/'], [clusters[a.cluster][0], `/blog/${a.cluster}/`]])}
 <article data-article-id="${a.id}" data-cluster="${a.cluster}"><header class="article-heading"><p class="eyebrow">Field notes / ${escape(clusters[a.cluster][0])}</p><h1>${escape(a.title)}</h1><p class="answer">${escape(a.answer)}</p><p class="byline">By <a href="${policy}#editorial">SplashLens Editorial</a> · Published <time datetime="${a.published}">${dateLabel(a.published)}</time>${a.modified !== a.published ? ` · Updated <time datetime="${a.modified}">${dateLabel(a.modified)}</time>` : ''}</p><p class="scope">Editorial reference; no independent technical review claimed.</p></header>
 <div class="article-layout"><div class="article-body"><section><h2>The record to assemble</h2><ul class="checklist">${a.fields.map((field, i) => `<li><label><input type="checkbox" name="field-${i}"><span>${escape(field)}</span></label></li>`).join('')}</ul><p>Keep each item with its date and origin. Distinguish an observation you made from information supplied by someone else. An unknown detail should remain explicitly unknown until it is verified.</p><p><a href="/blog/checklists/${a.id}.txt" download>Download this field card</a></p></section>
 <section><h2>What the record cannot establish</h2><p>${escape(a.boundary)}</p></section><section><h2>The handoff question</h2><p class="question">${escape(a.question)}</p><p>Record the answer with the person or official source that supplied it. Keep an unresolved question open and assign the next contact; a completed form is not the same as a resolved equipment issue.</p></section>
 <section id="sources"><h2>Sources and verification routes</h2><p>These official routes provide background and access to applicable guidance. The checklist above is an original editorial documentation aid; these links do not verify a particular installation or part.</p><ul class="sources">${refs.map(s => `<li><a href="${escape(s.url)}" rel="noopener">${escape(s.name)}</a><p>${escape(s.scope)}</p><small>Route checked <time datetime="${s.checked}">${s.checked}</time>. Check for changes before relying on the guidance.</small></li>`).join('')}</ul></section><p class="boundary">${disclaimer}</p>
 ${related.length ? `<section><h2>Related field notes</h2><ul>${related.map(b => `<li>${aLink(b)}</li>`).join('')}</ul></section>` : `<p><a href="/closing-season.html">Closing-season documentation</a> · <a href="/partsnap.html">PartSnap reference</a></p>`}</div>
-<aside><h2>Keep the visit record</h2><figure><img src="${image}" width="390" height="844" loading="lazy" alt="SplashLens visit report screen with draft and service proof controls"><figcaption>SplashLens report screen. First-party reference screenshot; interface may change. Image: SplashLens.</figcaption></figure><a class="app-link" data-blog-cta="footer_app_cta" href="${escape(cta.href)}">Open SplashLens report</a><p class="scope">Reference support, not diagnosis or confirmation of fit.</p><a href="/service-proof-passport.html">About service documentation</a></aside></div></article>`;
+<aside><h2>Use the related field tool</h2><figure><img src="${image}" width="390" height="844" loading="lazy" alt="SplashLens visit report screen with draft and service proof controls"><figcaption>SplashLens field workflow. First-party reference screenshot; interface may change. Image: SplashLens.</figcaption></figure><a class="app-link" data-blog-cta="workflow_cta" href="${escape(cta.href)}">${escape(cta.label)}</a><p class="scope">Reference support, not diagnosis or confirmation of fit.</p><a href="/service-proof-passport.html">About service documentation</a></aside></div></article>`;
   return shell({ title: a.title, description: a.answer, path: a.path, body, graph: graphFor(a), article: a });
 }
 

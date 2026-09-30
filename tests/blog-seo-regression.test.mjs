@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { articles } from '../editorial/articles.mjs';
 import { clusters, sources } from '../editorial/sources.mjs';
-import { route, visible, sitemap, feed, renderArticle, json } from '../editorial/render.mjs';
+import { route, visible, sitemap, feed, renderArticle, workflowForArticle, json } from '../editorial/render.mjs';
 import { stage } from '../tools/stage-public-assets.mjs';
 
 const allTime = new Date('2027-01-27T00:00:00Z');
@@ -74,6 +74,29 @@ test('each article has matching schema, metadata, sources, and clean URLs', () =
       assert.equal(call(target)?.status, 200, `${a.id} -> ${target}`);
     }
   }
+});
+
+test('every article opens its exact related app workflow instead of the homepage', () => {
+  const destinations = new Set();
+  for (const article of articles) {
+    const workflow = workflowForArticle(article);
+    const url = new URL(workflow.href);
+    assert.equal(url.origin, 'https://app.splashlens.com');
+    assert.ok(url.searchParams.get('tab'));
+    assert.equal(url.searchParams.get('article'), article.id);
+    assert.equal(url.searchParams.get('utm_source'), 'splashlens_blog');
+    assert.equal(url.searchParams.get('utm_content'), `${article.slug}_workflow_cta`);
+    assert.notEqual(workflow.href, 'https://app.splashlens.com/');
+    assert.ok(renderArticle(article, articles).includes(`data-blog-cta="workflow_cta"`));
+    destinations.add(`${url.searchParams.get('tab')}:${url.searchParams.get('mode') || url.searchParams.get('workflow') || ''}`);
+  }
+  assert.ok(destinations.size >= 6, `expected at least 6 workflow destinations, found ${destinations.size}`);
+  const closing = workflowForArticle(articles.find(article => article.cluster === 'pool-opening-closing'));
+  assert.match(closing.href, /workflow=closing/);
+  assert.match(closing.href, /challenge_path=closing/);
+  const partSnap = workflowForArticle(articles.find(article => article.cluster === 'partsnap'));
+  assert.match(partSnap.href, /tab=scan/);
+  assert.match(partSnap.href, /mode=parts/);
 });
 
 test('sitemap article set equals published inventory and RSS is limited to 40 stable IDs', () => {

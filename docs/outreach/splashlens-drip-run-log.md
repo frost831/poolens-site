@@ -1943,3 +1943,21 @@ Files updated:
 - `docs/outreach/splashlens-drip-queue.csv`
 - `docs/outreach/splashlens-drip-run-log.md`
 - `docs/outreach/splashlens-facility-operator-partner-send-2026-09-14.md`
+
+## 2026-09-30 - Ten-tech closing-season subscriber sprint
+
+Preflight:
+- Rechecked the ten exact Gmail histories: one prior sent message per target and no target reply.
+- Rechecked unsubscribe, remove, stop, pass, complaint, bounce, and undeliverable language for the exact cohort; found zero stop signals.
+- Rechecked current public source routes and held Splash Custom Pools when its route would not reverify. Replaced that slot with The Pool People of Ohio, whose current contact page lists the exact address and a pool-closing route.
+- Used connected Gmail sender Joshua Frost `<frost@belowzeromedia.com>` with Reply-To `hello@splashlens.com`.
+- Sent as one-to-one plain-text replies in the original threads, no BCC, with one unique `sl-close-01` through `sl-close-10` pilot link per recipient.
+- Copy asked for one real closing workflow, one optional PartSnap attempt, and one short feedback response. It kept the free core, paid saved-job/customer-summary/equipment-history offer, and reference-only/manual-verification boundary clear.
+
+Result:
+- Sent count: 10.
+- Gmail send confirmations: 10 of 10 labeled `SENT`.
+- Suppressed/skipped: 1 stale route held and replaced before send.
+- No further cold follow-up is scheduled for this cohort. Replies and pilot events now determine the next action.
+- Run evidence: `docs/outreach/splashlens-10-tech-subscriber-sprint-2026-09-30.csv`.
+- Immediate production baseline at `2026-09-30T16:39:26.549Z`: starts 0, completions 0, feedback 0, return events 0, PartSnap results 0, and checkout starts 0. This prevents pre-send activity from being credited to the sprint.

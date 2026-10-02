@@ -3,7 +3,9 @@ import path from 'node:path';
 import vm from 'node:vm';
 
 const ROOT = path.resolve(new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1'));
-const APP_ERROR_DB = path.resolve(ROOT, '..', 'poolens', 'js', 'errors.js');
+const APP_ERROR_DB = process.env.SPLASHLENS_APP_ERROR_DB
+  ? path.resolve(process.env.SPLASHLENS_APP_ERROR_DB)
+  : path.resolve(ROOT, '..', 'poolens', 'js', 'errors.js');
 const SITE_URL = 'https://splashlens.com';
 const OUT_ERROR_DIR = path.join(ROOT, 'error-codes');
 const OUT_BRAND_DIR = path.join(ROOT, 'brands');
@@ -41,6 +43,10 @@ function jsonLd(value) {
   return JSON.stringify(value).replace(/</g, '\\u003c');
 }
 
+function cleanGeneratedText(value) {
+  return String(value).replace(/[ \t]+$/gm, '').replace(/\r?\n/g, '\n');
+}
+
 function cleanDir(dir) {
   if (fs.existsSync(dir)) fs.rmSync(dir, { recursive: true, force: true });
   fs.mkdirSync(dir, { recursive: true });
@@ -52,9 +58,26 @@ function pageShell({ title, description, canonical, body, schema }) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/splashlens-icon-180.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0284c7">
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}">
   <link rel="canonical" href="${canonical}">
+  <link rel="image_src" href="https://splashlens.com/splashlens-share-card.png">
+  <meta property="og:title" content="${escapeHtml(title)}">
+  <meta property="og:description" content="${escapeHtml(description)}">
+  <meta property="og:url" content="${canonical}">
+  <meta property="og:image" content="https://splashlens.com/splashlens-share-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="SplashLens field reference for pool technicians">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://splashlens.com/splashlens-share-card.png">
   <script type="application/ld+json">${jsonLd(schema)}</script>
   <style>
     :root { --ink:#0f172a; --muted:#64748b; --line:#dbe4ee; --sky:#0284c7; --bg:#f8fafc; --panel:#fff; --amber:#d97706; }
@@ -81,6 +104,8 @@ function pageShell({ title, description, canonical, body, schema }) {
     .small { color:var(--muted); font-size:.88rem; }
     footer { padding-top:20px; padding-bottom:38px; color:var(--muted); font-size:.86rem; }
   </style>
+  <script src="/splashlens-nav.js" defer></script>
+  <script src="/ga4.js" defer></script>
 </head>
 <body>
 ${body}
@@ -90,8 +115,13 @@ ${body}
 }
 
 function codePage({ brandKey, brand, categoryName, code, urlPath }) {
-  const title = `${brand.label} ${code.code} - ${code.name || 'Pool Equipment Code'}`;
-  const description = `${brand.label} ${code.code} reference for ${categoryName}: likely causes, next checks, and manual-verification reminders for pool service techs.`;
+  const unverified = code.unverified === true;
+  const title = unverified
+    ? `${brand.label} ${categoryName} - Unverified Code Family`
+    : `${brand.label} ${code.code} - ${code.name || 'Pool Equipment Code'}`;
+  const description = unverified
+    ? `${brand.label} ${categoryName} is flagged as unverified. SplashLens withholds code meanings until a current model-specific manufacturer source is confirmed.`
+    : `${brand.label} ${code.code} reference for ${categoryName}: likely causes, next checks, and manual-verification reminders for pool service techs.`;
   const canonical = `${SITE_URL}${urlPath}`;
   const causes = code.causes || [];
   const fixes = code.fix || [];
@@ -113,7 +143,7 @@ function codePage({ brandKey, brand, categoryName, code, urlPath }) {
         {
           '@type': 'Question',
           name: `What does ${brand.label} ${code.code} mean?`,
-          acceptedAnswer: { '@type': 'Answer', text: code.name || `${brand.label} ${code.code} is a pool equipment status or fault code.` },
+          acceptedAnswer: { '@type': 'Answer', text: unverified ? 'SplashLens has not verified this meaning against a current model-specific source and does not guess.' : code.name || `${brand.label} ${code.code} is a pool equipment status or fault code.` },
         },
         {
           '@type': 'Question',
@@ -122,13 +152,13 @@ function codePage({ brandKey, brand, categoryName, code, urlPath }) {
         },
       ],
     },
-    {
+    ...(!unverified ? [{
       '@context': 'https://schema.org',
       '@type': 'HowTo',
       name: `${brand.label} ${code.code} next checks`,
       description: `Reference checks for ${brand.label} ${code.code}.`,
       step: fixes.slice(0, 8).map((text, index) => ({ '@type': 'HowToStep', position: index + 1, text })),
-    },
+    }] : []),
   ];
 
   const body = `
@@ -141,12 +171,13 @@ function codePage({ brandKey, brand, categoryName, code, urlPath }) {
     <span class="chip">${escapeHtml(categoryName)}</span>
     <span class="chip">${escapeHtml((code.severity || 'reference').toUpperCase())}</span>
     ${code.callpro ? '<span class="chip warning">Certified tech recommended</span>' : ''}
+    ${unverified ? '<span class="chip warning">Unverified - meaning withheld</span>' : ''}
   </div>
 </header>
 <main>
   <section class="panel">
     <h2>What It Means</h2>
-    <p>${escapeHtml(code.name || `${brand.label} ${code.code} is a pool equipment code in the SplashLens reference database.`)}</p>
+    <p>${escapeHtml(unverified ? 'SplashLens has not verified this code family against a current model-specific manufacturer source. The app intentionally withholds a diagnosis instead of guessing.' : code.name || `${brand.label} ${code.code} is a pool equipment code in the SplashLens reference database.`)}</p>
   </section>
   ${causes.length ? `<section class="panel"><h2>Likely Causes</h2><ul>${causes.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>` : ''}
   ${fixes.length ? `<section class="panel"><h2>Next Checks</h2><ol>${fixes.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ol></section>` : ''}
@@ -224,8 +255,17 @@ function brandPage({ brandKey, brand, entries, urlPath }) {
 
 function main() {
   const db = loadErrorDb();
+  const preservedBrandFiles = new Map(
+    ['index.html', 'robots-expanded-field-guide.html']
+      .map(file => [file, path.join(OUT_BRAND_DIR, file)])
+      .filter(([, filePath]) => fs.existsSync(filePath))
+      .map(([file, filePath]) => [file, fs.readFileSync(filePath)])
+  );
   cleanDir(OUT_ERROR_DIR);
   cleanDir(OUT_BRAND_DIR);
+  for (const [file, contents] of preservedBrandFiles) {
+    fs.writeFileSync(path.join(OUT_BRAND_DIR, file), contents);
+  }
 
   const urls = [];
   const brandEntries = new Map();
@@ -241,7 +281,7 @@ function main() {
         fs.mkdirSync(brandDir, { recursive: true });
         const urlPath = `/error-codes/${brandSlug}/${fileSlug}.html`;
         const html = codePage({ brandKey, brand, categoryName, code, urlPath });
-        fs.writeFileSync(path.join(brandDir, `${fileSlug}.html`), html);
+        fs.writeFileSync(path.join(brandDir, `${fileSlug}.html`), cleanGeneratedText(html));
         urls.push(urlPath);
         brandEntries.get(brandKey).push({ brandKey, brand, categoryName, code, urlPath });
         entryCount += 1;
@@ -253,7 +293,7 @@ function main() {
     const brand = db[brandKey];
     const brandSlug = slug(brand.label || brandKey);
     const urlPath = `/brands/${brandSlug}.html`;
-    fs.writeFileSync(path.join(OUT_BRAND_DIR, `${brandSlug}.html`), brandPage({ brandKey, brand, entries, urlPath }));
+    fs.writeFileSync(path.join(OUT_BRAND_DIR, `${brandSlug}.html`), cleanGeneratedText(brandPage({ brandKey, brand, entries, urlPath })));
     urls.push(urlPath);
   }
 
@@ -262,7 +302,7 @@ function main() {
 ${urls.sort().map(url => `  <url><loc>${SITE_URL}${url}</loc><lastmod>${GENERATED_AT}</lastmod></url>`).join('\n')}
 </urlset>
 `;
-  fs.writeFileSync(OUT_SITEMAP, sitemap);
+  fs.writeFileSync(OUT_SITEMAP, cleanGeneratedText(sitemap));
 
   console.log(`Generated ${entryCount} error-code pages, ${brandEntries.size} brand pages, and ${path.basename(OUT_SITEMAP)}.`);
 }

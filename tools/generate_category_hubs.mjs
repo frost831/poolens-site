@@ -3,7 +3,9 @@ import path from 'node:path';
 import vm from 'node:vm';
 
 const ROOT = path.resolve(new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1'));
-const APP_ERROR_DB = path.resolve(ROOT, '..', 'poolens', 'js', 'errors.js');
+const APP_ERROR_DB = process.env.SPLASHLENS_APP_ERROR_DB
+  ? path.resolve(process.env.SPLASHLENS_APP_ERROR_DB)
+  : path.resolve(ROOT, '..', 'poolens', 'js', 'errors.js');
 const SITE = 'https://splashlens.com';
 const TODAY = '2026-06-22';
 

@@ -4,7 +4,7 @@ import path from 'node:path';
 const ROOT = path.resolve(new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1'));
 const BRANDS = path.join(ROOT, 'brands');
 const SITE = 'https://splashlens.com';
-const TODAY = '2026-06-22';
+const TODAY = new Date().toISOString().slice(0, 10);
 
 function titleFromSlug(slug) {
   return slug.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase());

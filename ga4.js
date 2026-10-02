@@ -70,6 +70,19 @@
    return "";
   }
  }
+ function sessionId() {
+  try {
+   var key = "splashlens-site-session-id";
+   var id = sessionStorage.getItem(key);
+   if (!id) {
+    id = "site_session_" + Math.random().toString(36).slice(2) + Date.now().toString(36);
+    sessionStorage.setItem(key, id);
+   }
+   return id;
+  } catch (err) {
+   return "";
+  }
+ }
  function mirrorOwnerEvent(name, props) {
   var eventName = name || "site_event";
   if (!/^(app_store_download_click|google_play_download_click|checkout_click|open_app_click|partsnap_click|press_coverage_click|industry_intel_click|team_deployment_click|route_ready_notify_submit|persona_fork_click|media_landing_view|campaign_landing_view|field_tester_lead|partner_lead|field_challenge_started|field_challenge_routed|field_challenge_feedback|referral_share)$/.test(eventName)) return;
@@ -79,6 +92,7 @@
    path: window.location.pathname + window.location.search,
    props: Object.assign({
     client_id: clientId(),
+    session_id: sessionId(),
     page_location: window.location.href,
     attribution_referrer: document.referrer || "",
     attribution_source: "site",

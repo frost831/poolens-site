@@ -2656,7 +2656,7 @@ gap: 10px;
  <div class="feature-spotlight">
  <div>
  <span class="feature-badge" style="background:#ccfbf1;color:#0f766e;margin:0 0 12px">Flagship</span>
- <h3>PartSnap is the hook.</h3>
+ <h3>Start with the part in front of you.</h3>
  <p>Photo the weird part, label, plate, or component. SplashLens returns possible ID clues, what still needs to be checked, and clean details to send before anyone orders blind.</p>
  <div class="spotlight-steps">
  <div><strong>1. Photo</strong><span>part, label, display, or plate</span></div>
@@ -3119,6 +3119,22 @@ gap: 10px;
  <script>
  (function () {
  var endpoint = '/api/event';
+ function durableId(storage, key, prefix) {
+ try {
+ var existing = storage.getItem(key);
+ if (existing) return existing;
+ var randomPart = window.crypto && typeof window.crypto.randomUUID === 'function'
+ ? window.crypto.randomUUID()
+ : Math.random().toString(36).slice(2) + Date.now().toString(36);
+ var value = prefix + randomPart;
+ storage.setItem(key, value);
+ return value;
+ } catch (err) {
+ return '';
+ }
+ }
+ function clientId() { return durableId(window.localStorage, 'splashlens-site-client-id', 'site_'); }
+ function sessionId() { return durableId(window.sessionStorage, 'splashlens-site-session-id', 'site_session_'); }
  function track(eventName, props) {
  if (window.SplashLensGa4 && typeof window.SplashLensGa4.event === 'function') {
  window.SplashLensGa4.event(eventName, props || {});
@@ -3127,7 +3143,7 @@ gap: 10px;
  event: eventName,
  source: 'site',
  path: window.location.pathname + window.location.search,
- props: props || {}
+ props: Object.assign({ client_id: clientId(), session_id: sessionId() }, props || {})
  });
  try {
  if (navigator.sendBeacon) {

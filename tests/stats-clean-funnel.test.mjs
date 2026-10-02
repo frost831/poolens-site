@@ -14,6 +14,8 @@ test('owner stats exclude internal QA and smoke traffic from event totals', () =
   assert.match(statsSource, /amplitude_readiness_smoke/);
   assert.match(statsSource, /release_gate_live_custom_domain/);
   assert.match(statsSource, /COALESCE\(source, ''\) NOT IN \('qa', 'codex', 'codex_smoke', 'launch-gate-test'\)/);
+  assert.match(statsSource, /NOT LIKE 'codex%'/);
+  assert.match(statsSource, /'release_gate', 'release-gate'/);
   assert.match(statsSource, /lower\(COALESCE\(user_agent, ''\)\) NOT LIKE '%headless%'/);
   assert.match(statsSource, /COALESCE\(path, ''\) NOT LIKE '\/test\/%'/);
   assert.match(statsSource, /utm_source=qa/);

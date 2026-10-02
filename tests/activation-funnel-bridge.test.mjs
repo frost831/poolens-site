@@ -42,6 +42,13 @@ test('homepage app CTAs route visitors into measurable field challenges', () => 
   assert.match(homepage, /challenge_id: destination\.challenge_id/);
 });
 
+test('homepage events carry durable anonymous client and session ids', () => {
+  assert.match(homepage, /splashlens-site-client-id/);
+  assert.match(homepage, /splashlens-site-session-id/);
+  assert.match(homepage, /client_id:\s*clientId\(\)/);
+  assert.match(homepage, /session_id:\s*sessionId\(\)/);
+});
+
 test('campaign field challenge includes proof path and current proof strip', () => {
   const campaign = fs.readFileSync(new URL('../campaign.html', import.meta.url), 'utf8');
   assert.match(campaign, /Run one ugly stop through SplashLens/);

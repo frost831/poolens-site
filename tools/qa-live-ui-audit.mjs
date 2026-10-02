@@ -2,7 +2,8 @@ import { chromium } from 'playwright';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-const outDir = path.resolve('docs', 'qa', 'live-ui-2026-08-23');
+const runDate = new Date().toISOString().slice(0, 10);
+const outDir = path.resolve('docs', 'qa', `live-ui-${runDate}`);
 
 const surfaces = [
   { name: 'site-home', url: 'https://splashlens.com/' },
@@ -366,3 +367,7 @@ await fs.writeFile(path.join(outDir, 'live-ui-audit-results.json'), JSON.stringi
 await fs.writeFile(path.join(outDir, 'live-ui-audit-summary.json'), JSON.stringify(summary, null, 2));
 
 console.log(JSON.stringify(summary, null, 2));
+
+if (summary.failedSurfaceChecks > 0 || summary.failedFlowChecks > 0) {
+  process.exitCode = 1;
+}

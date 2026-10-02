@@ -1,0 +1,13 @@
+{
+  "name": "splashlens-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "qa:live-ui": "node tools/qa-live-ui-audit.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.55.1"
+  }
+}

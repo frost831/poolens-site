@@ -65,7 +65,7 @@ Test-HttpStatus "https://splashlens.com/docs/outreach/splashlens-drip-queue.csv?
 
 foreach ($plan in @("monthly", "yearly")) {
   $head = Get-Head "https://app.splashlens.com/api/checkout?plan=$plan"
-  $ok = $head.Status -eq 302 -and ($head.Location -like "https://buy.stripe.com/*" -or $head.Location -like "https://checkout.stripe.com/*") -and $head.Mode -match "payment_link|stripe_checkout"
+  $ok = $head.Status -eq 302 -and $head.Location -match "^https://(buy|checkout)\.stripe\.com/" -and $head.Mode -match "payment_link|stripe_checkout"
   Add-Check "Payments" "$plan checkout redirects" ($(if ($ok) { "pass" } else { "fail" })) "status=$($head.Status); mode=$($head.Mode); location=$($head.Location)"
 }
 
@@ -107,8 +107,8 @@ foreach ($url in @(
 
 $siteBody = Get-Body "https://splashlens.com/?heal=$cacheBust"
 Add-Check "Trust copy" "PoolPro proof above fold copy exists" ($(if ($siteBody.Contains("PoolPro Launch")) { "pass" } else { "fail" })) "homepage PoolPro proof strip"
-$pricingCopyOk = $siteBody.Contains("Free to Start") -and $siteBody.Contains('class="price-num">$29</div>') -and $siteBody.Contains('per month / $249 yearly target')
-Add-Check "Trust copy" "consistent pricing phrase exists" ($(if ($pricingCopyOk) { "pass" } else { "fail" })) "homepage free and Pro pricing"
+$pricingCopyOk = $siteBody.Contains("Free to Start") -and $siteBody.Contains('class="price-num">$29</div>') -and $siteBody.Contains('$249 per year')
+Add-Check "Trust copy" "live Pro pricing is consistent" ($(if ($pricingCopyOk) { "pass" } else { "fail" })) "homepage free and Pro pricing"
 Add-Check "SEO" "OG image uses SplashLens asset" ($(if ($siteBody.Contains("https://splashlens.com/splashlens-share-card.png")) { "pass" } else { "fail" })) "og/screenshot asset"
 
 $appJs = Get-Body "https://app.splashlens.com/js/app.js?heal=$cacheBust"

@@ -58,7 +58,7 @@ function Test-HttpStatus {
 Test-HttpStatus "https://splashlens.com/?heal=$cacheBust" 200 "Marketing" "homepage HTTP 200"
 Test-HttpStatus "https://app.splashlens.com/?heal=$cacheBust" 200 "App" "app shell HTTP 200"
 $pricing = Get-Head "https://splashlens.com/pricing?heal=$cacheBust"
-$pricingOk = $pricing.Status -eq 302 -and $pricing.Location -eq "/#pricing"
+$pricingOk = $pricing.Status -eq 302 -and $pricing.Location -match "^/\?(?:[^#]*&)?heal=\d+#pricing$|^/#pricing$"
 Add-Check "Marketing" "/pricing routes to the pricing section" ($(if ($pricingOk) { "pass" } else { "fail" })) "status=$($pricing.Status); location=$($pricing.Location)"
 Test-HttpStatus "https://splashlens.com/signup?heal=$cacheBust" 404 "Marketing" "/signup returns 404"
 Test-HttpStatus "https://splashlens.com/docs/outreach/splashlens-drip-queue.csv?heal=$cacheBust" 404 "Marketing" "internal docs are blocked"

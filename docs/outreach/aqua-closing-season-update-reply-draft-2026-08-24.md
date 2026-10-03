@@ -1,10 +1,8 @@
 # AQUA Closing Season Update Reply Draft - 2026-08-24
 
-Thread: `Re: Follow-Up: FREE Product Opportunity with AQUA Magazine`
+Thread: warm AQUA Magazine editorial follow-up.
 
-To: Laura Carew `<laura@aquamagazine.com>`
-
-CC: Jared Fish `<jared@aquamagazine.com>`
+Recipient names and addresses for this thread stay off the public repo.
 
 Status: Review draft only. Do not send until Joshua approves.
 
@@ -41,7 +39,7 @@ Closing Season Mode in SplashLens helps pool and spa pros document winterizing p
 
 Subject: Re: Follow-Up: FREE Product Opportunity with AQUA Magazine
 
-Hi Laura,
+Hi there,
 
 Thank you so much. I really appreciate you being open to the update.
 

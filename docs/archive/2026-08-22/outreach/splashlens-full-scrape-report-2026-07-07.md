@@ -47,13 +47,13 @@ All rows were added as `needs-verification`, not send-ready.
 
 | Target | Email | Segment | Source |
 | --- | --- | --- | --- |
-| Anderson Aquatics | `brad@andersonaquatics.com` | Training/AFO-CPO provider | `https://www.andersonaquatics.com/classes` |
-| Integrity Consultants CPO course | `cs@integrity-consultants.com` | Training/CPO provider | `https://integrity-consultants.com/certified-pool-spa-operator-course/` |
-| McCallum's Pool Service & Repair | `support@mccallumspoolservice.com` | Pool service company | `https://mccallumspoolservice.com/` |
-| P-Jay's Pools | `pjayspoolco@gmail.com` | Pool service company | `https://www.pjayspools.com/` |
-| Neptune Pools Service and Repair | `daryl@neptunepoolsaz.com` | Pool service company | `https://neptunepoolsaz.com/` |
-| Frank's Pool Services | `frank@frankspoolservices.com` | Pool service company | `https://frankspoolservicesinc.com/` |
-| Custom Pool Route | `cpr@custompoolroute.com` | Pool route / service-company network | `https://custompoolroute.com/about-us/` |
+| Anderson Aquatics | `[contact removed]` | Training/AFO-CPO provider | `https://www.andersonaquatics.com/classes` |
+| Integrity Consultants CPO course | `[contact removed]` | Training/CPO provider | `https://integrity-consultants.com/certified-pool-spa-operator-course/` |
+| McCallum's Pool Service & Repair | `[contact removed]` | Pool service company | `https://mccallumspoolservice.com/` |
+| P-Jay's Pools | `[contact removed]` | Pool service company | `https://www.pjayspools.com/` |
+| Neptune Pools Service and Repair | `[contact removed]` | Pool service company | `https://neptunepoolsaz.com/` |
+| Frank's Pool Services | `[contact removed]` | Pool service company | `https://frankspoolservicesinc.com/` |
+| Custom Pool Route | `[contact removed]` | Pool route / service-company network | `https://custompoolroute.com/about-us/` |
 
 ## Already Covered / Do Not Rehit Cold
 

@@ -196,7 +196,7 @@ The stronger monetization path is:
 
 - Free core app for goodwill and distribution.
 - $99-$299/month Field Proof Pilot for small teams.
-- $49-$199/month Facility/CPO pilot when appropriate and not ahead of Tim/Aquatic Council partner alignment.
+- $49-$199/month Facility/CPO pilot when appropriate and not ahead of Aquatic Council partner alignment.
 - $500-$2,500/month verified manufacturer/distributor cards and proof workflows.
 - Training partner licensing after real field lessons are validated.
 

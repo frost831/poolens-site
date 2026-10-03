@@ -5,7 +5,7 @@
 - Cold emails sent: 0.
 - Reason: Gmail stop-word search found no new SplashLens-specific bounce, complaint, unsubscribe, remove-me, not-interested, or delivery-failure message today, but the checked-in run log and queue still record the 2026-07-05 Fluidra WCS remove-me / not-interested request inside the required seven-day stop window.
 - Next clean cold-send recheck: 2026-07-12, after a fresh same-day Gmail hygiene sweep.
-- Sender verified: Joshua Frost `<frost@belowzeromedia.com>`.
+- Sender verified: Joshua Frost `<[contact removed]>`.
 
 ## Live checks
 

@@ -4,3 +4,12 @@ node_modules/
 _deploy/
 *.log
 docs/qa/live-ui-*/
+
+# Prospect and outreach contact lists stay local or private.
+docs/outreach/*.csv
+docs/**/outreach/*.csv
+**/*queue*.csv
+**/*roster*.csv
+**/*prospect*.csv
+**/*send-window*.csv
+**/*master-list*.csv

@@ -184,9 +184,9 @@ Current queue counts from `splashlens-drip-queue.csv`:
 
 Known hard suppressions and reply holds:
 
-- `productsupport@fluidra.com` is suppressed. Queue note says Fluidra WCS Support requested removal / was not interested on 2026-07-05. Do not contact this address or the Fluidra / Jandy / Polaris / Zodiac row unless they initiate.
-- `content@poolonomics.com` bounced on 2026-06-11. Suppress until a verified replacement contact is found.
-- `contact@poolnationawards.com` bounced on 2026-06-23 with `550 No Such User Here`. Suppress until a verified replacement route is found.
+- `[contact removed]` is suppressed. Queue note says Fluidra WCS Support requested removal / was not interested on 2026-07-05. Do not contact this address or the Fluidra / Jandy / Polaris / Zodiac row unless they initiate.
+- `[contact removed]` bounced on 2026-06-11. Suppress until a verified replacement contact is found.
+- `[contact removed]` bounced on 2026-06-23 with `550 No Such User Here`. Suppress until a verified replacement route is found.
 - `replied` rows are not cold-drip eligible. This includes warm or auto-acknowledged threads such as Aquatic Council, SpaRetailer, PoolZoom, Pool Brain, Loop-Loc, Intermatic, FSPA Education, Space Coast Pool School, and Pool Office Manager.
 
 Latest send/log status:
@@ -201,7 +201,7 @@ Do not send now. Before any future send:
 
 - Confirm current date is 2026-07-12 or later, or get an explicit user override that acknowledges the Fluidra stop-window risk.
 - Run fresh Gmail search for last-seven-days SplashLens, PartSnap, Mystery Part, Service Proof Passport, Fluidra/Jandy, app.splashlens.com, unsubscribe, remove me, do not contact, complaint, not interested, bounce, bounced, undeliverable, delivery failure, and failed terms.
-- Confirm `productsupport@fluidra.com`, Fluidra / Jandy / Polaris / Zodiac, bounced addresses, and `replied` rows are excluded.
+- Confirm `[contact removed]`, Fluidra / Jandy / Polaris / Zodiac, bounced addresses, and `replied` rows are excluded.
 - Confirm no same-day cold SplashLens sends have already used the five-email daily cap.
 - Confirm `https://splashlens.com` and `https://app.splashlens.com` return HTTP 200.
 - Pick only `queued` rows with current public contact paths.
@@ -219,10 +219,10 @@ If the 2026-07-12 recheck is clean, start with a maximum of five one-to-one mess
 
 Good-fit queued rows to review first after a clean gate:
 
-- PHTA Pool Professionals Podcast, `marketing@phta.org`, because it is podcast/association aligned and eligible 2026-07-12, but check same-organization exposure to `service@phta.org`.
-- Wake Tech Certified Pool Operator Training, `wceresources@waketech.edu`, because Service Proof Passport fits CPO/student proof capture.
-- New Jersey Pest Management Association CPO, `bonaccib@njpma.org`, because it fits operator training.
-- Anderson Aquatics, `brad@andersonaquatics.com`, because it fits AFO/CPO training.
-- Integrity Consultants CPO course, `cs@integrity-consultants.com`, because it fits CPO proof workflow.
+- PHTA Pool Professionals Podcast, `[contact removed]`, because it is podcast/association aligned and eligible 2026-07-12, but check same-organization exposure to `[contact removed]`.
+- Wake Tech Certified Pool Operator Training, `[contact removed]`, because Service Proof Passport fits CPO/student proof capture.
+- New Jersey Pest Management Association CPO, `[contact removed]`, because it fits operator training.
+- Anderson Aquatics, `[contact removed]`, because it fits AFO/CPO training.
+- Integrity Consultants CPO course, `[contact removed]`, because it fits CPO proof workflow.
 
 No email should be sent from this prep packet by itself.

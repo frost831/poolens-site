@@ -10,7 +10,7 @@ Pitch angle: "Co-market to your users. We make their techs smarter at the pad; y
 
 ## TARGET 1: SKIMMER
 
-**Contact:** partnerships@skimmerpro.com OR support@skimmerpro.com  
+**Contact:** Use the public website contact route. Do not commit inbox addresses in this repo.  
 **Decision maker:** Look for VP of Partnerships or Head of Growth on LinkedIn: https://www.linkedin.com/company/skimmer-pool-service-software/  
 **Website:** https://skimmerpro.com
 
@@ -47,7 +47,7 @@ hello@splashlens.com
 
 ## TARGET 2: POOL BRAIN
 
-**Contact:** info@poolbrain.com OR hello@poolbrain.com  
+**Contact:** Use the public website contact route. Do not commit inbox addresses in this repo.  
 **Website:** https://poolbrain.com  
 **LinkedIn:** Search "Pool Brain" on LinkedIn
 
@@ -78,7 +78,7 @@ splashlens.com | hello@splashlens.com
 
 ## TARGET 3: JOBBER
 
-**Contact:** https://getjobber.com/contact/ | partnerships@getjobber.com  
+**Contact:** https://getjobber.com/contact/  
 **Website:** https://getjobber.com  
 **Note:** Jobber is larger (serves many trades, not just pool). May be harder to reach the right person. Target their Partner Program.
 
@@ -107,7 +107,7 @@ SplashLens | splashlens.com | hello@splashlens.com
 
 ## TARGET 4: PHTA (Pool & Hot Tub Alliance)
 
-**Contact:** https://www.phta.org/contact/ | membership@phta.org  
+**Contact:** https://www.phta.org/contact/  
 **Why:** Industry association — getting mentioned in their member communications reaches pool service companies directly.
 
 **Subject:** Free tech tool for PHTA member pool service companies

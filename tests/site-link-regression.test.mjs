@@ -91,7 +91,7 @@ test('closing season launch page is crawlable, linked, and claim-safe', () => {
 test('Facility Assist pursues the operator lane without overclaiming a partner', () => {
   const page = fs.readFileSync(path.join(root, 'facility-assist.html'), 'utf8');
   const routedPage = fs.readFileSync(path.join(root, 'facility-assist-page.html'), 'utf8');
-  const strategy = fs.readFileSync(path.join(root, 'docs', 'strategy', 'splashlens-facility-assist-after-tim-2026-09-14.md'), 'utf8');
+  const strategy = fs.readFileSync(path.join(root, 'docs', 'strategy', 'splashlens-facility-assist-after-first-partner-2026-09-14.md'), 'utf8');
 
   for (const source of [page, routedPage]) {
     assert.match(source, /Service-program fit/);
@@ -105,7 +105,7 @@ test('Facility Assist pursues the operator lane without overclaiming a partner',
   }
 
   assert.match(strategy, /Responsible operator -> short wizard -> proof packet -> qualified escalation or documented closeout/);
-  assert.match(strategy, /Do not chase Tim as the only route/);
+  assert.match(strategy, /Do not chase one partner as the only route/);
   assert.match(strategy, /Facility Assist Pilot/);
 });
 

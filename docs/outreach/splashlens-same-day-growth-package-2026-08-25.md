@@ -82,13 +82,12 @@ All five require fresh day-lock, Gmail stop-signal, exact history, source, MX, a
 
 ### 1. NRPA / AFO Route
 
-To: `EGonzales@nrpa.org`
 
 Subject: Closing-season field workflow for pool operator training
 
 Body:
 
-Hi Elizabeth,
+Hi there,
 
 I am Joshua Frost, founder of SplashLens. I started in pool sales, then moved into my own service company, so SplashLens came from real field, facility, and counter lookup friction.
 
@@ -106,7 +105,6 @@ hello@splashlens.com
 
 ### 2. Wellis Support Route
 
-To: `support@wellis.com`
 
 Subject: Spa and swim-spa proof prompts for field support
 
@@ -130,7 +128,6 @@ hello@splashlens.com
 
 ### 3. Cover Valet
 
-To: `Questions@covervalet.com`
 
 Subject: Better proof before cover-lifter part questions
 
@@ -154,7 +151,6 @@ hello@splashlens.com
 
 ### 4. Leisure Concepts
 
-To: `info@leisureconcepts.com`
 
 Subject: Better proof before spa accessory part questions
 
@@ -178,7 +174,6 @@ hello@splashlens.com
 
 ### 5. Duffield Aquatics
 
-To: `ayoungblood@duffieldaquatics.com`
 
 Subject: Free field workflow for pool operator training feedback
 
@@ -202,35 +197,7 @@ hello@splashlens.com
 
 ## Five-Day Send Map
 
-Every row below is prep only. Each send date requires same-day source, MX, Gmail history, suppression, reply/bounce/unsubscribe, and day-lock checks before sending.
-
-| Date | Lane | Recipient | Slug | Angle |
-| --- | --- | --- | --- | --- |
-| 2026-08-26 | training_operator | EGonzales@nrpa.org | nrpa_afo_route | Facility/operator training feedback |
-| 2026-08-26 | spa_swim_spa | support@wellis.com | wellis_support | Spa/swim-spa proof prompts |
-| 2026-08-26 | covers_accessories | Questions@covervalet.com | cover_valet | Cover-lifter proof before support |
-| 2026-08-26 | covers_accessories | info@leisureconcepts.com | leisure_concepts | Spa accessory proof prompts |
-| 2026-08-26 | training_operator | ayoungblood@duffieldaquatics.com | duffield_aquatics | Operator training feedback |
-| 2026-08-27 | training_operator | mfrancisco@ymcasumter.org | ymca_sumter | Public-pool operator workflow |
-| 2026-08-27 | training_operator | popeandcompanyllc@gmail.com | pope_company_pool_operator | Operator training/resource feedback |
-| 2026-08-27 | training_operator | AHernandez@nespapool.org | nespapool_lipsa | Education needs and chapter feedback |
-| 2026-08-27 | service_company | info@poolpro.com | pool_pro_service | Service-owner workflow feedback |
-| 2026-08-27 | training_operator | rose@upperstate.org | upper_state_apartment | Apartment-pool operator workflow |
-| 2026-08-28 | training_operator | bodom@yorktech.edu | york_tech_operator | Public-pool operator training feedback |
-| 2026-08-28 | training_operator | mmiller@coastal.edu | coastal_operator | Facility/operator training feedback |
-| 2026-08-28 | training_operator | aquatics.program@env.nm.gov | nm_aquatics_program | Certified-operator resource feedback |
-| 2026-08-28 | service_company | thundercitypoolservices@yahoo.com | thunder_city_pool_services | Weekly service and proof workflow |
-| 2026-08-28 | service_company | poolheavenhb@gmail.com | pool_heaven_hb | Repair triage and proof workflow |
-| 2026-08-31 | service_company | TellMeMore@PoolFix.com | pool_fix | Repair proof and remodel handoff |
-| 2026-08-31 | service_company | ThePoolBoysDispatch@gmail.com | pool_boys_dispatch | Weekly service and equipment proof |
-| 2026-08-31 | service_company | info@purepoolsolutionsfl.com | pure_pool_solutions_fl | Maintenance and repair proof workflow |
-| 2026-08-31 | training_operator | jill@sai-intl.org | starfish_aquatics | Training-resource feedback |
-| 2026-08-31 | supplier_counter | info@poolsupplywarehouseinc.com | pool_supply_warehouse | Equipment-install and part-proof feedback |
-| 2026-09-01 | service_company | swimstatepoolservicellc@gmail.com | swim_state_pool_service | Cleaning, repair, renovation proof |
-| 2026-09-01 | training_operator | poolandspaassociation@yahoo.com | swimming_pool_spa_association | Facility Assist and training workflow |
-| 2026-09-01 | supplier_counter | byrdmoreton@aol.com | unicel_regional_rep | Filter/support proof feedback |
-| 2026-09-01 | supplier_counter | basales@basalesreps.com | ba_sales_reps | Rep-resource and part-proof feedback |
-| 2026-09-01 | owner_team | info@poolbuildermarketing.com | pool_builder_marketing | Business-owner workflow and newsletter route |
+The dated recipient map for this window was moved off the public repo. Do not recreate recipient addresses here.
 
 ## Lane Copy Snippets
 

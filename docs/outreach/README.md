@@ -1,24 +1,20 @@
 # SplashLens Outreach Cockpit
 
-This folder now contains only the active outreach source of truth.
+This folder holds outreach operating notes for the public site repo. Recipient queues, named rosters, send logs, and message IDs do not belong here.
+
+Keep queues, rosters, and contact lists local or in private storage. Do not commit them.
 
 ## Active Files
 
-- `splashlens-drip-queue.csv` - current recipient queue, statuses, send dates, suppression notes, and Gmail proof IDs.
 - `splashlens-drip-rules.md` - sending rules, sender-health gates, stop-signal checks, and required run order.
-- `splashlens-drip-run-log.md` - chronological audit log for sends, no-send runs, scraping, and queue updates.
-- `splashlens-outreach-templates.md` - current approved copy blocks and reusable positioning.
+- `splashlens-drip-run-log.md` - placeholder only. Real run logs were moved off this public repo.
+- `splashlens-outreach-templates.md` - approved copy blocks and reusable positioning. Do not paste recipient addresses into templates.
 - `splashlens-visibility-engine.md` - lane strategy and high-level outreach operating model.
-- `splashlens-named-pilot-roster-2026-07-23.csv` - named pilot roster referenced by the growth pilot plan.
+
+## What Stays Out Of Git
+
+`docs/outreach/*.csv` is gitignored, along with similar queue, roster, prospect, and send-window CSV patterns anywhere in the repo. That includes named pilot rosters and outreach queues.
 
 ## Archive
 
-Historical scrape outputs, screenshots, one-off send packs, press prep, and dated research notes were moved to:
-
-`docs/archive/2026-08-22/outreach/`
-
-The move manifest is:
-
-`docs/archive/2026-08-22/outreach-move-manifest.json`
-
-Do not send from archived files. Use the active queue, rules, run log, and templates above.
+Older scrape notes and dated research were moved to `docs/archive/2026-08-22/outreach/`. Contact dumps that used to live there (prospect CSVs, send transcripts, and named contact maps) have been removed from the public tree. Do not add them back.

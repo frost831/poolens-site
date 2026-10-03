@@ -4,21 +4,21 @@ Purpose: keep the expanded outreach lanes ready for the next daily send window w
 
 ## Sent today
 
-- Fluidra / Jandy / Polaris / Zodiac: `productsupport@fluidra.com`, Gmail id `19efcb802509707b`.
-- Waterway Plastics: `waterway@waterwayplastics.com`, Gmail id `19efcb8243e0c45a`.
-- AquaStar Pool Products: `Info@aquastarpoolproducts.com`, Gmail id `19efcb845263f34f`.
-- Intermatic Pool Support: `poolsupport@intermatic.com`, Gmail id `19efcb8638770632`.
-- LaMotte Technical Service: `tech@lamotte.com`, Gmail id `19efcb88070a7fdd`.
+- Fluidra / Jandy / Polaris / Zodiac: `[contact removed]`, Gmail id `[id removed]`.
+- Waterway Plastics: `[contact removed]`, Gmail id `[id removed]`.
+- AquaStar Pool Products: `[contact removed]`, Gmail id `[id removed]`.
+- Intermatic Pool Support: `[contact removed]`, Gmail id `[id removed]`.
+- LaMotte Technical Service: `[contact removed]`, Gmail id `[id removed]`.
 
 ## Next-send candidates to verify again before sending
 
-- Orenda follow-up: `info@orendatech.com`. Prior first email sent 2026-06-11; no reply found in the 90-day address history. Only send one short follow-up after suppression check.
-- Pleatco / Pentair filtration route: `Pleatco_IA_Info@Pentair.com`, source `https://www.pleatcofiltration.com/`.
-- Pool Guy Podcast / Swimming Pool Learning: `David@swimmingpoollearning.com`, source `https://www.swimmingpoollearning.com/pool-guy-podcast-show`.
-- The Deep End Pool Podcast: `deependfrank@gmail.com`, source `https://thedeependpoolpodcast.com/contact/`.
-- HASA / Orenda family: `info@hasapool.com`, source `https://www.hasapool.com/`. Avoid same-day duplicate with Orenda because HASA and Orenda are connected.
-- Intermatic media route: `contact@intermatic.com`, source `https://www.global.intermatic.com/support/contact-us`. Do not send soon after the pool-support note unless a different media-specific story angle is needed.
-- LaMotte general route: `info@lamotte.com`, source `https://help.getskimmer.com/article/285-lamotte-spin-touch-integration-faq-general`. Do not send soon after the technical-service note unless routed or needed.
+- Orenda follow-up: `[contact removed]`. Prior first email sent 2026-06-11; no reply found in the 90-day address history. Only send one short follow-up after suppression check.
+- Pleatco / Pentair filtration route: `[contact removed]`, source `https://www.pleatcofiltration.com/`.
+- Pool Guy Podcast / Swimming Pool Learning: `[contact removed]`, source `https://www.swimmingpoollearning.com/pool-guy-podcast-show`.
+- The Deep End Pool Podcast: `[contact removed]`, source `https://thedeependpoolpodcast.com/contact/`.
+- HASA / Orenda family: `[contact removed]`, source `https://www.hasapool.com/`. Avoid same-day duplicate with Orenda because HASA and Orenda are connected.
+- Intermatic media route: `[contact removed]`, source `https://www.global.intermatic.com/support/contact-us`. Do not send soon after the pool-support note unless a different media-specific story angle is needed.
+- LaMotte general route: `[contact removed]`, source `https://help.getskimmer.com/article/285-lamotte-spin-touch-integration-faq-general`. Do not send soon after the technical-service note unless routed or needed.
 
 ## Core template: manufacturer or support feedback
 

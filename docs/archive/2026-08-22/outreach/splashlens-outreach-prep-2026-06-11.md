@@ -8,15 +8,15 @@ Prepared only. Do not send emails, DMs, Reddit replies, Facebook posts, or forum
 
 Verified on 2026-06-11:
 
-- Connected Gmail sender: `Joshua Frost <frost@belowzeromedia.com>`.
+- Connected Gmail sender: `Joshua Frost <[contact removed]>`.
 - `hello@splashlens.com` inbound routing: Cloudflare Email Routing is enabled and ready.
-- `hello@splashlens.com` destination: verified and forwarding to `frost@belowzeromedia.com`.
+- `hello@splashlens.com` destination: verified and forwarding to `[contact removed]`.
 - Site/public contact references: `hello@splashlens.com`.
-- `belowzeromedia.com` outbound DNS: Google MX, SPF includes Google and SendGrid, DMARC exists with `p=none`.
+- Outbound sending-domain DNS was checked privately (Google MX, SPF includes Google and SendGrid, DMARC `p=none`). The domain is not recorded here.
 - `splashlens.com` inbound DNS: Cloudflare Email Routing MX and SPF exist.
 - `splashlens.com` DMARC: not currently present.
 
-Outreach verdict: send the first wave from `frost@belowzeromedia.com` as "Joshua Frost, SplashLens" unless a proper `hello@splashlens.com` sending identity is configured later. Replies to the outbound message will return directly to `frost@belowzeromedia.com`; separate public replies to `hello@splashlens.com` now forward there as well.
+Outreach verdict: send the first wave from `[contact removed]` as "Joshua Frost, SplashLens" unless a proper `hello@splashlens.com` sending identity is configured later. Replies to the outbound message will return directly to `[contact removed]`; separate public replies to `hello@splashlens.com` now forward there as well.
 
 ## Positioning
 
@@ -56,7 +56,7 @@ Do not say:
 4. Pool Chasers - podcast segment idea.
 5. Talking Pools Podcast - product/field workflow segment.
 6. Pool Nation - community/newsletter/podcast feedback.
-7. Pool Guy Podcast / David Van Brunt - creator feedback.
+7. Pool Guy Podcast - creator feedback.
 8. Swimming Pool Steve - technical teardown request.
 9. Poolonomics - blogger/resource pitch.
 10. Orenda Technologies Blog - technical education/resource pitch.
@@ -227,7 +227,7 @@ Eligible to send after final owner approval:
 - Service Industry News
 - Pool Magazine
 - Pool Chasers
-- Pool Guy Podcast / David Van Brunt
+- Pool Guy Podcast
 - Swim University
 - Swimming Pool Steve
 - Poolonomics

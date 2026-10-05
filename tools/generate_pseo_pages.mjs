@@ -114,6 +114,78 @@ ${body}
 `;
 }
 
+// Only these mappings were checked against the cited model-specific OEM guide.
+const HAYWARD_GUIDE = 'https://hayward.com/media/akeneo_connector/asset_files/H/e/Heat_Pump_Troubleshooting_Guide__TSG_HTPMPa__c95b.pdf';
+const REVIEWED_AT = '2026-10-05';
+const VERIFIED_HEAT_PUMP = {
+  LP: {
+    meaning: 'the low-pressure switch is open',
+    answer: 'On the Hayward/Summit heat-pump models listed in the linked guide, LP indicates an open low-pressure switch. Check the exact model plate, outdoor temperature, and whether the fan runs. A refrigerant leak or electrical fault needs qualified service. Stop if LP persists; do not open the sealed circuit or order a switch from this code alone.',
+    checks: ['Match the model plate to the models covered by the Hayward/Summit guide.', 'Record outdoor temperature and whether the fan starts when the heat pump runs.', 'Record whether LP appears immediately or only after a short run.'],
+    stop: 'Stop if LP persists. Refrigerant, switch, fan-electrical, and internal tests belong to a qualified servicer.',
+  },
+  HP: {
+    meaning: 'the high-pressure switch is open',
+    answer: 'On the Hayward/Summit heat-pump models listed in the linked guide, HP indicates an open high-pressure switch. Check the exact model plate, filter-pump operation, and whether the filter and bypass allow water flow. Stop if HP returns after these visible checks. A qualified servicer must assess the pressure switch or sealed refrigerant system; do not bypass a safety switch.',
+    checks: ['Match the model plate to the models covered by the Hayward/Summit guide.', 'Confirm the filter pump is running and record the filter condition.', 'Record the bypass-valve position and whether water flows through the heat exchanger.'],
+    stop: 'Stop if HP repeats. Pressure-switch and refrigerant-system diagnosis requires qualified service; never bypass a safety switch.',
+  },
+  HI: {
+    meaning: 'the high-pressure switch is open',
+    answer: 'On the Hayward/Summit heat-pump models listed in the linked guide, HI indicates an open high-pressure switch. Check the exact model plate, filter-pump operation, and whether the filter and bypass allow water flow. Stop if HI returns after these visible checks. A qualified servicer must assess the pressure switch or sealed refrigerant system; do not bypass a safety switch.',
+    checks: ['Match the model plate to the models covered by the Hayward/Summit guide.', 'Confirm the filter pump is running and record the filter condition.', 'Record the bypass-valve position and whether water flows through the heat exchanger.'],
+    stop: 'Stop if HI repeats. Pressure-switch and refrigerant-system diagnosis requires qualified service; never bypass a safety switch.',
+  },
+  FLO: {
+    meaning: 'the water-pressure switch is open',
+    answer: 'On the Hayward/Summit heat-pump models listed in the linked guide, FLo indicates an open water-pressure switch; low or absent flow is common, but an external controller can also display FLo when it is not calling for heat. Check the exact model, filter-pump status, and filter or bypass position. Stop if flow is confirmed but FLo persists; request qualified service.',
+    checks: ['Match the model plate to the models covered by the Hayward/Summit guide.', 'Confirm whether the filter pump is running and whether an external controller is calling for heat.', 'Record the filter condition and bypass-valve position without adjusting the pressure switch.'],
+    stop: 'Stop if FLo persists with confirmed flow. A qualified servicer must check the switch and controls; do not bypass the switch.',
+  },
+};
+
+function verifiedCodePage({ brand, categoryName, code, urlPath, related }) {
+  const reference = VERIFIED_HEAT_PUMP[code.code];
+  const title = `${brand.label} ${categoryName} error ${code.code}: what it means and what to check`;
+  const description = `${brand.label} ${categoryName} ${code.code}: guide-scoped meaning, first checks, stop rule, and proof to capture before ordering parts.`;
+  const canonical = `${SITE_URL}${urlPath}`;
+  const modelLimit = 'This Hayward guide covers only its listed Hayward/Summit models, including HP21004T; other HeatPro revisions need their own current manual.';
+  const proof = ['Photo of the complete display and when the code appeared', 'Model and serial plate, including controller revision if visible', 'Filter, pump, bypass position, and pad context'];
+  const questions = [
+    [`What does ${brand.label} ${code.code} mean on a guide-listed heat pump?`, `${code.code} indicates ${reference.meaning} on the models covered by the linked Hayward/Summit guide.`],
+    [`What should I check first for ${code.code}?`, reference.checks.join(' ')],
+    [`When should I stop checking ${code.code}?`, reference.stop],
+  ];
+  const breadcrumb = [
+    ['SplashLens', '/'],
+    [brand.label, `/brands/${slug(brand.label)}.html`],
+    [title, urlPath],
+  ];
+  const schema = [
+    { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: questions.map(([name, answer]) => ({ '@type': 'Question', name, acceptedAnswer: { '@type': 'Answer', text: answer } })) },
+    { '@context': 'https://schema.org', '@type': 'HowTo', name: `Checks for ${brand.label} ${code.code}`, step: reference.checks.map((text, index) => ({ '@type': 'HowToStep', position: index + 1, text })) },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: breadcrumb.map(([name, url], index) => ({ '@type': 'ListItem', position: index + 1, name, item: `${SITE_URL}${url}` })) },
+    { '@context': 'https://schema.org', '@type': 'Organization', name: 'SplashLens', url: SITE_URL },
+  ];
+  const body = `<header>
+  <nav class="crumb" aria-label="Breadcrumb">${breadcrumb.map(([name, url]) => `<a href="${url}">${escapeHtml(name)}</a>`).join(' / ')}</nav>
+  <h1>${escapeHtml(title)}</h1>
+  <p class="lede">${escapeHtml(modelLimit)}</p>
+</header>
+<main>
+  <section class="panel" aria-labelledby="answer-heading"><h2 id="answer-heading">Short answer</h2><p class="answer">${escapeHtml(reference.answer)}</p></section>
+  <section><h2>Checks for ${escapeHtml(brand.label)} ${escapeHtml(code.code)}</h2><ol>${reference.checks.map(step => `<li>${escapeHtml(step)}</li>`).join('')}</ol></section>
+  <section><h2>Proof to capture before ordering parts</h2><ul>${proof.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>
+  <section class="panel warning"><h2>Stop rule</h2><p>${escapeHtml(reference.stop)}</p><p>Not a diagnosis. Confirm the exact model and current manufacturer procedure before repair or parts ordering. Do not bypass safeties.</p></section>
+  <section><h2>Common questions</h2>${questions.map(([name, answer]) => `<h3>${escapeHtml(name)}</h3><p>${escapeHtml(answer)}</p>`).join('')}</section>
+  <section><h2>Related codes</h2><ul>${related.map(entry => `<li><a href="${entry.urlPath}">${escapeHtml(brand.label)} ${escapeHtml(entry.code.code)}</a></li>`).join('')}</ul></section>
+  <section><h2>Manufacturer source</h2><p><a href="${HAYWARD_GUIDE}">Hayward/Summit Heat Pump Troubleshooting Guide (PDF)</a>. Last reviewed: <time datetime="${REVIEWED_AT}">${REVIEWED_AT}</time>. Consult the guide's model list before using these checks.</p></section>
+  <section><h2>Open this code offline in SplashLens</h2><p>Manual code lookup works after the app has loaded once. Recheck the manufacturer guide for final service decisions.</p><a class="button" href="https://app.splashlens.com/?tab=errors">Open this code offline in SplashLens</a></section>
+</main>
+<footer>SplashLens is an independent field reference, not affiliated with Hayward.</footer>`;
+  return pageShell({ title, description, canonical, body, schema });
+}
+
 function codePage({ brandKey, brand, categoryName, code, urlPath }) {
   const unverified = code.unverified === true;
   const title = unverified
@@ -255,6 +327,29 @@ function brandPage({ brandKey, brand, entries, urlPath }) {
 
 function main() {
   const db = loadErrorDb();
+  if (process.argv.includes('--code-answers-only')) {
+    const brand = db.hayward;
+    const categoryName = 'HeatPro Heat Pump';
+    const category = brand.categories[categoryName];
+    if (!category) throw new Error('Hayward HeatPro Heat Pump category missing from app corpus');
+    if (!category.models?.includes('HP21004T')) throw new Error('Manual-listed HP21004T model missing from app corpus');
+    const entries = Object.keys(VERIFIED_HEAT_PUMP).map(value => {
+      const code = category.codes.find(item => item.code === value && item.unverified !== true);
+      if (!code) throw new Error(`Verified code ${value} missing or unverified in app corpus`);
+      const fileSlug = slug(`${categoryName}-${code.code}-${code.name || 'code'}`);
+      return { code, urlPath: `/error-codes/hayward/${fileSlug}.html` };
+    });
+    for (const entry of entries) {
+      const output = path.join(ROOT, entry.urlPath.slice(1));
+      if (!fs.existsSync(output)) throw new Error(`Existing code page missing: ${output}`);
+      fs.writeFileSync(output, cleanGeneratedText(verifiedCodePage({
+        brand, categoryName, code: entry.code, urlPath: entry.urlPath,
+        related: entries.filter(other => other.code.code !== entry.code.code),
+      })));
+    }
+    console.log(`Updated ${entries.length} source-reviewed error-code pages only.`);
+    return;
+  }
   const preservedBrandFiles = new Map(
     ['index.html', 'robots-expanded-field-guide.html']
       .map(file => [file, path.join(OUT_BRAND_DIR, file)])
@@ -280,7 +375,12 @@ function main() {
         const brandDir = path.join(OUT_ERROR_DIR, brandSlug);
         fs.mkdirSync(brandDir, { recursive: true });
         const urlPath = `/error-codes/${brandSlug}/${fileSlug}.html`;
-        const html = codePage({ brandKey, brand, categoryName, code, urlPath });
+        const related = (category.codes || [])
+          .filter(item => item.code !== code.code && VERIFIED_HEAT_PUMP[item.code])
+          .map(item => ({ code: item, urlPath: `/error-codes/${brandSlug}/${slug(`${categoryName}-${item.code}-${item.name || 'code'}`)}.html` }));
+        const html = brandKey === 'hayward' && categoryName === 'HeatPro Heat Pump' && category.models?.includes('HP21004T') && code.unverified !== true && VERIFIED_HEAT_PUMP[code.code]
+          ? verifiedCodePage({ brand, categoryName, code, urlPath, related })
+          : codePage({ brandKey, brand, categoryName, code, urlPath });
         fs.writeFileSync(path.join(brandDir, `${fileSlug}.html`), cleanGeneratedText(html));
         urls.push(urlPath);
         brandEntries.get(brandKey).push({ brandKey, brand, categoryName, code, urlPath });

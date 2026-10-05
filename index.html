@@ -297,9 +297,17 @@
  display: inline-flex; align-items: center; gap: 6px;
  background: rgba(255,255,255,.14); color: var(--white);
  padding: 6px 16px; border-radius: 100px;
- font-size: .82rem; font-weight: 600; letter-spacing: .04em;
- margin-bottom: 22px; border: 1px solid rgba(255,255,255,.3);
+ font-size: .82rem; font-weight: 700;
+ margin-bottom: 16px; border: 1px solid rgba(255,255,255,.3);
  backdrop-filter: blur(10px);
+ }
+ .hero-north-star {
+ color: #e0f2fe; font-size: 16px; line-height: 1.45; font-weight: 800;
+ max-width: 660px; margin: 0 0 12px;
+ }
+ .hero-offline {
+ color: #d1fae5; font-size: 14px; line-height: 1.45;
+ max-width: 660px; margin: 0 0 18px;
  }
  .hero h1 {
  font-size: clamp(3rem, 8vw, 6.3rem);
@@ -1954,6 +1962,8 @@ gap: 10px;
   max-width: none;
   text-align: center;
   }
+  .hero-badge { border-radius: 9px; }
+  .hero-north-star, .hero-offline { margin-left: auto; margin-right: auto; }
   .hero h1 {
   font-size: clamp(3.1rem, 17vw, 4.4rem);
   line-height: .92;
@@ -2307,9 +2317,11 @@ gap: 10px;
  <div class="hero-inner">
   <div class="hero-layout">
   <div class="hero-copy premium-reveal">
+   <div class="hero-badge">We don't do billing, routes, or invoices &mdash; we make the stop proveable.</div>
    <h1>Get off the pad faster.</h1>
    <p class="hero-sub">Snap the part. Check the code. Save the job. SplashLens gives pool and spa pros a cleaner next move before anyone guesses, orders blind, or has to rewrite the stop later.</p>
-   <p style="max-width:620px;color:#e0f2fe;font-size:15px;line-height:1.5;font-weight:850;margin:0 0 18px;">One wrong part order can cost a truck roll, a callback, and a customer who tells three people. SplashLens costs less than one.</p>
+   <p class="hero-north-star">Route apps run the company. OEM apps run one brand. SplashLens makes the stuck stop proveable &mdash; then ships the packet.</p>
+   <p class="hero-offline">Bad pad signal? After a first online load, cached manual code lookup, dosing calculators, guides, and checklists can work offline. PartSnap and AI scans need internet.</p>
    <div class="hero-actions">
    <a href="https://app.splashlens.com/?tab=scan&mode=parts&utm_source=site&utm_medium=hero&utm_campaign=field60_home&challenge=field60&challenge_path=partsnap&challenge_id=site_hero_partsnap" target="_blank" class="btn-primary" data-track="partsnap_click" data-source="hero_primary" data-challenge-path="partsnap" data-challenge-id="site_hero_partsnap">
    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
@@ -2729,7 +2741,7 @@ gap: 10px;
  <div class="step-num">4</div>
  <div class="step-body">
  <h3>Use it offline all day</h3>
- <p>After the first load, SplashLens caches everything to your device. Pull the error code reference at a garage panel with no signal. Run the SLAM calculator in a basement equipment room. It just works.</p>
+ <p>After an initial online load, cached manual code lookup, calculators, guides, and checklists can work without signal. Online PartSnap and AI scans still require internet.</p>
  </div>
  </div>
  </div>
@@ -2979,8 +2991,8 @@ gap: 10px;
  <div class="price-card">
  <div class="price-card-badge">SplashLens Pro</div>
  <div class="price-plan">For solo techs who want the job trail</div>
- <div class="price-num">$29</div>
- <div class="price-period">per month / $249 per year</div>
+ <div class="price-num">$19</div>
+ <div class="price-period">per month / $149 per year</div>
  <p style="margin:0 0 12px;color:#475569;font-size:13px;line-height:1.45;font-weight:750;">For the tech who wants unlimited scanning and saved job memory instead of screenshots buried in the camera roll.</p>
  <ul class="price-features">
  <li>Everything in free</li>
@@ -2997,8 +3009,8 @@ gap: 10px;
  <div class="price-card featured">
   <div class="price-card-badge">Teams</div>
   <div class="price-plan">For service companies that want proof and training visibility</div>
-  <div class="price-num" style="font-size:2.45rem">$149</div>
-  <div class="price-period">per company / month target</div>
+  <div class="price-num" style="font-size:2.45rem">$49-79</div>
+  <div class="price-period">per owner / month; techs free</div>
   <p style="margin:0 0 12px;color:#475569;font-size:13px;line-height:1.45;font-weight:750;">For owners who want the crew using the same proof habits without rebuilding their route software.</p>
  <ul class="price-features">
  <li>Everything in Pro</li>
@@ -3020,7 +3032,7 @@ gap: 10px;
  <div style="max-width:780px;margin:0 auto;text-align:center">
  <div class="section-eyebrow" style="color:#7dd3fc;text-align:center">Team deployment</div>
  <h2 class="section-title" style="color:white;text-align:center">Built for the whole crew.</h2>
- <p class="section-sub" style="color:#cbd5e1;text-align:center;margin:0 auto 32px;">Pool service companies can set SplashLens as the standard reference tool for every tech on the roster. Free for individuals. Teams starts at $99/month when a company wants owner visibility, saved proof, and repeat-miss reporting.</p>
+ <p class="section-sub" style="color:#cbd5e1;text-align:center;margin:0 auto 32px;">Pool service companies can set SplashLens as the standard reference tool for every tech on the roster. Techs stay free. Teams is $49-79/month, paid by the owner, for saved proof and crew visibility.</p>
  <a href="mailto:hello@splashlens.com?subject=SplashLens team deployment" data-track="team_deployment_click" data-source="team_section" style="background:#0284c7;color:white;padding:14px 32px;border-radius:100px;font-weight:800;font-size:15px;text-decoration:none;display:inline-block;">Contact us about team deployment -&gt;</a>
  </div>
  </div>

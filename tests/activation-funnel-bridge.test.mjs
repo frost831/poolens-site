@@ -62,12 +62,12 @@ test('campaign pricing matches the current SplashLens paid ladder', () => {
   assert.match(campaign, /Free Field Profile/);
   assert.match(campaign, /\$0 to start/);
   assert.match(campaign, /SplashLens Pro/);
-  assert.match(campaign, /\$29\/mo or \$249\/yr/);
+  assert.match(campaign, /\$19\/mo or \$149\/yr/);
   assert.match(campaign, /Teams/);
-  assert.match(campaign, /\$149\/company\/mo/);
+  assert.match(campaign, /\$49-79\/owner\/mo; techs free/);
   assert.match(campaign, /utm_content=partsnap_pro/);
   assert.doesNotMatch(campaign, /\$4\.99\/mo or \$39\/yr/);
-  assert.doesNotMatch(campaign, /\$19\/mo/);
+  assert.doesNotMatch(campaign, /\$29\/mo|\$249\/yr/);
   assert.doesNotMatch(campaign, /\$99\/mo/);
 });
 
@@ -78,8 +78,8 @@ test('homepage pricing avoids unstable pilot target language', () => {
   assert.match(homepage, /Profile required for AI scans/);
   assert.doesNotMatch(homepage, /No Account Required/);
   assert.match(homepage, /SplashLens Pro/);
-  assert.match(homepage, /\$29<\/div>[\s\S]*per month \/ \$249 per year/);
+  assert.match(homepage, /\$19<\/div>[\s\S]*per month \/ \$149 per year/);
   assert.match(homepage, /Teams/);
-  assert.match(homepage, /\$149<\/div>[\s\S]*per company \/ month target/);
+  assert.match(homepage, /\$49-79<\/div>[\s\S]*per owner \/ month; techs free/);
   assert.doesNotMatch(homepage, /Saved Job Pro/);
 });

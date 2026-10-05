@@ -80,6 +80,6 @@ test('homepage pricing avoids unstable pilot target language', () => {
   assert.match(homepage, /SplashLens Pro/);
   assert.match(homepage, /\$29<\/div>[\s\S]*per month \/ \$249 per year/);
   assert.match(homepage, /Teams/);
-  assert.match(homepage, /\$149<\/div>[\s\S]*per company \/ month target/);
+  assert.match(homepage, /\$149<\/div>[\s\S]*per company \/ month/);
   assert.doesNotMatch(homepage, /Saved Job Pro/);
 });

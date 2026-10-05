@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import test from 'node:test';
+
+const root = new URL('../', import.meta.url);
+const read = (name) => fs.readFileSync(new URL(name, root), 'utf8');
+
+test('root marketing pages do not advertise obsolete SplashLens prices', () => {
+  for (const name of fs.readdirSync(root).filter((file) => path.extname(file) === '.html')) {
+    const html = read(name);
+    assert.doesNotMatch(html, /\$99(?!\d)|\$4\.99|\$9-\$19|\$19 target/i, name);
+  }
+});
+
+test('Teams and Pro offers use the canonical site prices', () => {
+  for (const name of ['index.html', 'campaign.html', 'teams.html', 'field-learning-os.html', 'verified-field-network.html', 'partners.html']) {
+    assert.match(read(name), /\$149/, name);
+  }
+  for (const name of ['index.html', 'campaign.html', 'field-learning-os.html', 'verified-field-network.html', 'partners.html', 'paid-media.html', 'partsnap.html']) {
+    const html = read(name);
+    assert.match(html, /\$29/, name);
+    assert.match(html, /\$249/, name);
+  }
+});
+
+test('home hero and CRM companion state the product boundary', () => {
+  const home = read('index.html');
+  const hero = home.slice(home.indexOf('<div class="hero-copy premium-reveal">'), home.indexOf('<div class="hero-actions">'));
+  assert.match(hero, /Route apps run the company\. OEM apps run one brand\. SplashLens makes the stuck stop proveable/);
+  assert.match(hero, /We don't do billing, routes, or invoices/);
+  assert.match(hero, /After a first online load/);
+  assert.match(hero, /PartSnap and AI scans need internet/);
+  assert.match(read('crm-companion.html'), /We don't do billing, routes, or invoices/);
+  assert.doesNotMatch(home, /caches everything to your device/i);
+});

@@ -9,18 +9,18 @@ const read = (name) => fs.readFileSync(new URL(name, root), 'utf8');
 test('root marketing pages do not advertise obsolete SplashLens prices', () => {
   for (const name of fs.readdirSync(root).filter((file) => path.extname(file) === '.html')) {
     const html = read(name);
-    assert.doesNotMatch(html, /\$99(?!\d)|\$4\.99|\$9-\$19|\$19 target/i, name);
+    assert.doesNotMatch(html, /\$99(?!\d)|\$4\.99|\$29(?!\d)|\$249(?!\d)|\$9-\$19|\$19 target/i, name);
   }
 });
 
 test('Teams and Pro offers use the canonical site prices', () => {
   for (const name of ['index.html', 'campaign.html', 'teams.html', 'field-learning-os.html', 'verified-field-network.html', 'partners.html']) {
-    assert.match(read(name), /\$149/, name);
+    assert.match(read(name), /\$49-79/, name);
   }
   for (const name of ['index.html', 'campaign.html', 'field-learning-os.html', 'verified-field-network.html', 'partners.html', 'paid-media.html', 'partsnap.html']) {
     const html = read(name);
-    assert.match(html, /\$29/, name);
-    assert.match(html, /\$249/, name);
+    assert.match(html, /\$19/, name);
+    assert.match(html, /\$149/, name);
   }
 });
 

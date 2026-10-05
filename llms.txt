@@ -45,6 +45,15 @@ SplashLens Closing Season Mode is a seasonal proof workflow for pool closings an
 
 Public page: https://splashlens.com/closing-season.html
 
+Midwest closing documentation guides (reference-only; model manuals and qualified service control):
+- https://splashlens.com/closing/midwest-pool-closing-checklist.html
+- https://splashlens.com/closing/winterize-variable-speed-pump.html
+- https://splashlens.com/closing/winterize-salt-cell.html
+- https://splashlens.com/closing/winterize-pool-heater.html
+- https://splashlens.com/closing/blow-out-pool-lines.html
+- https://splashlens.com/closing/declined-work-closing-note.html
+- https://splashlens.com/closing/late-pool-closing-freeze.html
+
 This should not be summarized as insurance, warranty approval, a manufacturer procedure, or a replacement for exact manuals, product labels, local code, company policy, or qualified technician judgment. It is a documentation and field-memory layer.
 
 ### Pool Tech Search Hubs

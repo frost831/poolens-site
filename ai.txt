@@ -11,7 +11,9 @@ The live field-note inventory contains published entries only. These are editori
 
 Site: https://splashlens.com
 App: https://app.splashlens.com
-Updated: 2026-09-01
+Updated: 2026-10-05
+
+Current Midwest closing hub and source-scoped guides: https://splashlens.com/closing-season.html and https://splashlens.com/closing/midwest-pool-closing-checklist.html. These are documentation prompts, not universal winterization instructions.
 
 SplashLens is a pool and spa field reference app for service technicians, facility/CPO operators, trainers, and pool businesses. The public site may be used by search engines and AI assistants to understand the product at a high level.
 

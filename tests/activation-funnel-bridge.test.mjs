@@ -1,10 +1,13 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import test from 'node:test';
+import { onRequestPost } from '../functions/api/event.js';
 
 const source = fs.readFileSync(new URL('../functions/api/event.js', import.meta.url), 'utf8');
 const challenge = fs.readFileSync(new URL('../field-challenge/field-challenge.js', import.meta.url), 'utf8');
 const homepage = fs.readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+const ga4 = fs.readFileSync(new URL('../ga4.js', import.meta.url), 'utf8');
+const paidSearch = fs.readFileSync(new URL('../paid-search.js', import.meta.url), 'utf8');
 
 test('marketing events forward anonymous activation signals to the app funnel', () => {
   for (const event of [
@@ -24,6 +27,60 @@ test('the funnel bridge forwards only bounded anonymous attribution fields', () 
   assert.match(source, /const safeProps =/);
   assert.doesNotMatch(source, /safeProps\s*=\s*props/);
   assert.doesNotMatch(source, /email:\s*clean\(props/);
+});
+
+test('site pricing clicks carry one anonymous reference through the funnel bridge', () => {
+  assert.match(ga4, /function prepareCheckoutLink\(link\)/);
+  assert.match(ga4, /url\.searchParams\.set\("client_reference_id", reference\)/);
+  assert.match(ga4, /var checkoutRef = prepareCheckoutLink\(link\)/);
+  assert.match(ga4, /client_reference_id: checkoutRef/);
+  assert.match(homepage, /if \(link\.getAttribute\('data-track'\) === 'checkout_click'\) return/);
+  assert.doesNotMatch(paidSearch, /addEventListener\("click"/);
+  assert.match(source, /client_reference_id: clean\(props\.client_reference_id/);
+  assert.match(source, /safeAnalyticsProps\(body\.props\)/);
+  assert.match(source, /placement: props\.placement === 'site_pricing'/);
+  assert.match(source, /plan: \['monthly', 'yearly'\]\.includes\(props\.plan\)/);
+});
+
+test('checkout click forwarding preserves the reference and drops personal fields', async (t) => {
+  let forwarded;
+  t.mock.method(globalThis, 'fetch', async (url, options) => {
+    assert.equal(url, 'https://app.splashlens.com/api/events');
+    forwarded = JSON.parse(options.body);
+    return Response.json({ ok: true });
+  });
+  const response = await onRequestPost({
+    request: new Request('https://splashlens.com/api/event', {
+      method: 'POST',
+      body: JSON.stringify({
+        event: 'checkout_click', source: 'site', path: '/',
+        props: {
+          client_reference_id: 'sl_checkout_01234567-89ab-4cde-8f01-23456789abcd',
+          plan: 'monthly', placement: 'site_pricing', store: 'web',
+          email: 'private@example.com', href: 'https://app.splashlens.com/api/checkout',
+        },
+      }),
+    }),
+    env: { SUBSCRIBERS_DB: { prepare: () => ({ bind: () => ({ run: async () => ({}) }) }) } },
+  });
+  assert.equal(response.status, 200);
+  assert.equal(forwarded.source, 'site');
+  assert.equal(forwarded.props.client_reference_id, 'sl_checkout_01234567-89ab-4cde-8f01-23456789abcd');
+  assert.equal(forwarded.props.placement, 'site_pricing');
+  assert.equal(forwarded.props.plan, 'monthly');
+  assert.doesNotMatch(JSON.stringify(forwarded), /private@example\.com/);
+});
+
+test('the public site event route cannot forge paid proof', async () => {
+  for (const event of ['checkout_session_created', 'checkout_completed', 'subscription_created', 'entitlement_granted']) {
+    const response = await onRequestPost({
+      request: new Request('https://splashlens.com/api/event', {
+        method: 'POST', body: JSON.stringify({ event, source: 'site' }),
+      }),
+      env: {},
+    });
+    assert.equal(response.status, 403);
+  }
 });
 
 test('pilot and participant tags use canonical ids across the field challenge', () => {

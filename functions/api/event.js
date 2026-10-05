@@ -2,6 +2,7 @@
 // Env: SUBSCRIBERS_DB (D1 binding shared with the Route Ready waitlist)
 
 import { amplitudeEnabled, forwardEventToAmplitude } from '../_shared/amplitude.mjs';
+import { safeAnalyticsPath, safeAnalyticsProps, safeAnalyticsReferrer } from '../_shared/analytics-privacy.mjs';
 
 const ALLOWED_ORIGINS = new Set([
  'https://splashlens.com',
@@ -50,7 +51,6 @@ function clean(value, max = 120) {
 
 async function forwardToAppFunnel(record, props) {
  if (!APP_FUNNEL_EVENTS.has(record.event)) return { sent: false, skipped: true };
- const knownEmail = clean(props.known_email || props.contact_email || props.email || props.e || props.sl_email, 180).toLowerCase();
  const safeProps = {
   client_id: clean(props.client_id || props.clientId, 120),
   session_id: clean(props.session_id || props.sessionId, 160),
@@ -62,18 +62,14 @@ async function forwardToAppFunnel(record, props) {
   challenge_path: clean(props.challenge_path, 40),
   challenge_id: clean(props.challenge_id, 100),
   challenge_type: clean(props.challenge_type, 40),
-  pilot_id: clean(props.pilot_id || props.pilot, 80),
-  participant_id: clean(props.participant_id || props.participant, 80),
-  referral_id: clean(props.referral_id || props.ref, 80),
   audience: clean(props.audience, 80),
-  known_email: knownEmail,
-  known_name: clean(props.known_name || props.contact_name || props.name || [props.first_name, props.last_name].filter(Boolean).join(' '), 140),
-  known_company: clean(props.known_company || props.company || props.organization || props.org || props.account, 160),
   known_role: clean(props.known_role || props.role || props.audience || props.persona, 80),
-  lead_id: clean(props.lead_id || props.contact_id || props.recipient_id || props.prospect_id, 120),
   identity_source: clean(props.identity_source || props.attribution_source || record.source, 80),
-  identity_confidence: clean(knownEmail ? 'tracked-email-link' : props.lead_id || props.contact_id || props.recipient_id || props.prospect_id ? 'tracked-link' : '', 40),
   destination: clean(props.destination, 120),
+  client_reference_id: clean(props.client_reference_id, 80),
+  plan: ['monthly', 'yearly'].includes(props.plan) ? props.plan : '',
+  placement: props.placement === 'site_pricing' ? props.placement : '',
+  store: props.store === 'web' ? 'web' : '',
   demo: props.demo === true || props.demo === 'true',
   test: props.test === true || props.test === 'true',
   synthetic: props.synthetic === true || props.synthetic === 'true',
@@ -217,16 +213,19 @@ export async function onRequestPost({ request, env }) {
  }
 
  const event = clean(body.event || body.name, 80);
- if (!event) {
+ if (!/^[a-z][a-z0-9_]{0,79}$/.test(event)) {
  return new Response(JSON.stringify({ ok: false, error: 'Event name required' }), { status: 400, headers });
  }
+ if (['checkout_session_created', 'checkout_completed', 'subscription_created', 'entitlement_granted'].includes(event)) {
+  return new Response(JSON.stringify({ ok: false, error: 'Payment proof is recorded by the server.' }), { status: 403, headers });
+ }
 
- const props = body.props && typeof body.props === 'object' ? body.props : {};
- const path = clean(body.path || props.path, 300);
- const plan = clean(body.plan || props.plan, 60);
- const mode = clean(body.mode || props.mode, 60);
- const source = clean(body.source || props.source || 'unknown', 60);
- const referrer = clean(request.headers.get('Referer') || body.referrer || props.referrer, 500);
+ const props = safeAnalyticsProps(body.props);
+ const path = safeAnalyticsPath(body.path || props.path);
+ const plan = /^(monthly|yearly)$/.test(String(body.plan || props.plan || '')) ? String(body.plan || props.plan) : '';
+ const mode = /^[a-z0-9_-]{1,60}$/i.test(String(body.mode || props.mode || '')) ? String(body.mode || props.mode) : '';
+ const source = clean(body.source || props.source || 'unknown', 60).replace(/[^a-z0-9_-]/gi, '') || 'unknown';
+ const referrer = safeAnalyticsReferrer(request.headers.get('Referer') || body.referrer);
  const userAgent = clean(request.headers.get('User-Agent'), 300);
  const country = clean(request.cf?.country, 10);
  const propsJson = JSON.stringify(props).slice(0, 2000);

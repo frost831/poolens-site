@@ -34,3 +34,15 @@ test('home hero and CRM companion state the product boundary', () => {
   assert.match(read('crm-companion.html'), /We don't do billing, routes, or invoices/);
   assert.doesNotMatch(home, /caches everything to your device/i);
 });
+
+test('CRM companion page is crawlable and describes only the manual handoff', () => {
+  const page = read('pool-brain-skimmer-companion.html');
+  assert.match(page, /<link rel="canonical" href="https:\/\/splashlens\.com\/pool-brain-skimmer-companion\.html">/);
+  assert.match(page, /We don't do billing, routes, or invoices/);
+  assert.match(page, /no claimed direct Pool Brain or Skimmer integration/i);
+  assert.match(page, /SMS availability depends on the device/);
+  assert.match(page, /PartSnap and AI scans need a connection/);
+  assert.match(read('crm-companion.html'), /href="\/pool-brain-skimmer-companion\.html"/);
+  assert.match(read('sitemap.xml'), /https:\/\/splashlens\.com\/pool-brain-skimmer-companion\.html/);
+  assert.ok(fs.existsSync(new URL('product-screenshots/service-proof-live-mobile.png', root)));
+});

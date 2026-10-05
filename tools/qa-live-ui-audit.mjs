@@ -198,15 +198,15 @@ async function runFlowChecks(page) {
   const checks = [];
 
   await page.goto('https://splashlens.com/closing-season.html', { waitUntil: 'networkidle', timeout: 45000 });
-  const openClosing = page.locator('a', { hasText: 'Open Closing Mode' }).first();
+  const openClosing = page.locator('header.hero .actions a[href*="app.splashlens.com"][href*="workflow=closing"]').first();
   checks.push({
-    name: 'closing-season page exposes Open Closing Mode CTA',
+    name: 'closing-season hero exposes a Closing Mode CTA',
     pass: await openClosing.count().then((count) => count > 0),
   });
 
   const href = await openClosing.getAttribute('href').catch(() => null);
   checks.push({
-    name: 'Open Closing Mode CTA routes into app report workflow',
+    name: 'Closing Mode CTA routes into app report workflow',
     pass: typeof href === 'string' && href.includes('app.splashlens.com') && href.includes('workflow=closing'),
     evidence: href,
   });

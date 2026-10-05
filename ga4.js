@@ -4,13 +4,57 @@
  window.__splashlensGa4Loaded = true;
  window.dataLayer = window.dataLayer || [];
  window.gtag = window.gtag || function gtag(){ window.dataLayer.push(arguments); };
- var attributionKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "gclid", "gbraid", "wbraid", "participant", "participant_id", "pilot", "pilot_id", "ref", "referral_id", "contact_email", "email", "e", "sl_email", "contact_name", "name", "first_name", "last_name", "company", "organization", "org", "account", "role", "audience", "persona", "lead_id", "contact_id", "recipient_id", "prospect_id", "identity_source"];
+ var attributionKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "role", "audience", "persona"];
+ var eventKeys = ["plan", "source", "publication", "content_type", "content_id", "placement", "store", "client_reference_id", "destination", "challenge_path", "challenge_id", "challenge_type", "field_challenge", "attribution_campaign", "feature", "mode", "role", "audience", "persona", "client_id", "session_id", "test", "demo", "synthetic"];
+ function safeUrl(value) {
+  try {
+   var url = new URL(value, window.location.href);
+   return /^https?:$/.test(url.protocol) && !/@|%40/i.test(url.pathname) ? url.origin + url.pathname : "";
+  } catch (err) { return ""; }
+ }
+ function safeProps(props) {
+  var values = {};
+  eventKeys.forEach(function (key) {
+   var value = props && props[key];
+   if (typeof value !== "string" && typeof value !== "number" && typeof value !== "boolean") return;
+   var text = String(value).slice(0, 160);
+   if (/@|\+\d{7,}|\b\d{3}[-. ]\d{3}[-. ]\d{4}\b/.test(text)) return;
+   if (key === "client_reference_id" && !/^sl_checkout_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(text)) return;
+   if (!/^[a-z0-9_ .:/-]+$/i.test(text)) return;
+   values[key] = value;
+  });
+  if (props && props.href) values.href = safeUrl(props.href);
+  return values;
+ }
+ function prepareCheckoutLink(link) {
+  if (!link || link.getAttribute("data-track") !== "checkout_click") return "";
+  try {
+   var url = new URL(link.href, window.location.href);
+   var plan = link.getAttribute("data-plan");
+   if (url.origin !== "https://app.splashlens.com" || url.pathname !== "/api/checkout" || ["monthly", "yearly"].indexOf(plan) < 0) return "";
+   var reference = url.searchParams.get("client_reference_id") || "";
+   if (!/^sl_checkout_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(reference)) {
+    var bytes = new Uint8Array(16);
+    window.crypto.getRandomValues(bytes);
+    bytes[6] = (bytes[6] & 15) | 64;
+    bytes[8] = (bytes[8] & 63) | 128;
+    var hex = Array.from(bytes, function (value) { return value.toString(16).padStart(2, "0"); }).join("");
+    reference = "sl_checkout_" + [hex.slice(0, 8), hex.slice(8, 12), hex.slice(12, 16), hex.slice(16, 20), hex.slice(20)].join("-");
+   }
+   url.searchParams.set("source", "site");
+   url.searchParams.set("placement", "site_pricing");
+   url.searchParams.set("store", "web");
+   url.searchParams.set("client_reference_id", reference);
+   link.href = url.href;
+   return reference;
+  } catch (err) { return ""; }
+ }
  function readAttribution() {
   var params = new URLSearchParams(window.location.search || "");
   var values = {};
   attributionKeys.forEach(function (key) {
    var value = params.get(key);
-   if (value) values[key] = value.slice(0, 160);
+   if (value && /^[a-z0-9_ .-]{1,120}$/i.test(value)) values[key] = value;
   });
   if (Object.keys(values).length) {
    try { sessionStorage.setItem("splashlens-site-attribution", JSON.stringify(values)); } catch (err) {}
@@ -19,7 +63,7 @@
   try {
    var stored = JSON.parse(sessionStorage.getItem("splashlens-site-attribution") || "{}");
    attributionKeys.forEach(function (key) {
-    if (stored && typeof stored[key] === "string" && stored[key]) values[key] = stored[key].slice(0, 160);
+    if (stored && typeof stored[key] === "string" && /^[a-z0-9_ .-]{1,120}$/i.test(stored[key])) values[key] = stored[key];
    });
   } catch (err) {}
   return values;
@@ -89,18 +133,16 @@
   var body = JSON.stringify({
    event: eventName,
    source: "site",
-   path: window.location.pathname + window.location.search,
+   path: window.location.pathname,
    props: Object.assign({
     client_id: clientId(),
     session_id: sessionId(),
-    page_location: window.location.href,
-    attribution_referrer: document.referrer || "",
     attribution_source: "site",
-    attribution_campaign: (new URLSearchParams(window.location.search || "")).get("utm_campaign") || ""
-   }, readAttribution(), props || {})
+    attribution_campaign: readAttribution().utm_campaign || ""
+   }, readAttribution(), safeProps(props || {}))
   });
   try {
-   var endpoint = "https://app.splashlens.com/api/events";
+   var endpoint = name === "checkout_click" ? "/api/event" : "https://app.splashlens.com/api/events";
    if (navigator.sendBeacon) {
     navigator.sendBeacon(endpoint, new Blob([body], { type: "text/plain" }));
     return;
@@ -121,17 +163,17 @@
    var payload = Object.assign({
     event_category: "splashlens_growth",
     page_path: window.location.pathname,
-    page_location: window.location.href
-   }, readAttribution(), props || {});
+    page_location: safeUrl(window.location.href)
+   }, readAttribution(), safeProps(props || {}));
    window.gtag("event", eventName, payload);
-   mirrorOwnerEvent(name, props || {});
+   mirrorOwnerEvent(name, safeProps(props || {}));
   }
  };
  window.gtag("js", new Date());
  window.gtag("config", measurementId, {
   send_page_view: true,
-  page_path: window.location.pathname + window.location.search,
-  page_location: window.location.href
+  page_path: window.location.pathname,
+  page_location: safeUrl(window.location.href)
  });
  decorateAppLinks();
  if (document.body && document.body.hasAttribute("data-media-landing")) {
@@ -147,13 +189,17 @@
   var link = event.target.closest && event.target.closest("[data-track]");
   if (!link || !window.SplashLensGa4 || typeof window.SplashLensGa4.event !== "function") return;
   decorateAppLink(link, readAttribution());
+  var checkoutRef = prepareCheckoutLink(link);
   window.SplashLensGa4.event(link.getAttribute("data-track"), {
    plan: link.getAttribute("data-plan") || "",
-   source: link.getAttribute("data-source") || "",
+   source: checkoutRef ? "site" : link.getAttribute("data-source") || "",
+   placement: checkoutRef ? "site_pricing" : "",
+   store: checkoutRef ? "web" : "",
+   client_reference_id: checkoutRef,
    publication: link.getAttribute("data-publication") || "",
    content_type: link.getAttribute("data-publication") ? "industry_coverage" : "",
    content_id: link.getAttribute("data-publication") || "",
-   href: link.href || ""
+   href: safeUrl(link.href || "")
   });
  });
 })();

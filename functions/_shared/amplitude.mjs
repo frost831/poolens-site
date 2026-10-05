@@ -1,4 +1,5 @@
 const AMPLITUDE_HTTP_V2_ENDPOINT = 'https://api2.amplitude.com/2/httpapi';
+import { safeAnalyticsPath, safeAnalyticsProps } from './analytics-privacy.mjs';
 
 function clean(value, max = 120) {
  return String(value || '').replace(/[\u0000-\u001f\u007f]/g, '').trim().slice(0, max);
@@ -35,51 +36,45 @@ function pruneObject(value) {
 }
 
 function groups(props) {
- const company = clean(props.known_company || props.company || props.organization || props.org || props.account || '', 160);
  const campaign = clean(props.attribution_campaign || props.campaign || '', 120);
  const publisher = clean(props.publication || props.publisher || props.attribution_source || '', 80);
- const value = pruneObject({ company, campaign, publisher });
+ const value = pruneObject({ campaign, publisher });
  return Object.keys(value).length ? value : undefined;
 }
 
 function identity(record, props) {
- const knownEmail = clean(props.known_email || props.contact_email || props.email || props.e || props.sl_email, 180).toLowerCase();
- const leadId = clean(props.lead_id || props.contact_id || props.recipient_id || props.prospect_id || props.referral_id, 120);
  const clientId = clean(props.client_id || props.clientId || '', 120);
  const fallback = clean(record.correlationId || `${record.event}:${record.createdAt}`, 180);
- const userId = knownEmail || leadId || '';
  const deviceId = clientId || fallback || 'splashlens-site-device';
  return {
-  user_id: userId && userId.length >= 5 ? userId : undefined,
   device_id: deviceId.length >= 5 ? deviceId : 'splashlens-site-device',
  };
 }
 
 export async function forwardEventToAmplitude(env, record, props = {}) {
  if (!amplitudeEnabled(env)) return { sent: false, skipped: true, reason: 'missing_amplitude_api_key' };
+ const safeProps = safeAnalyticsProps(props);
  const payload = {
   api_key: amplitudeApiKey(env),
   events: [{
-   ...identity(record, props),
+   ...identity(record, safeProps),
    event_type: clean(record.event || 'site_event', 80),
    event_properties: pruneObject({
-    ...props,
+    ...safeProps,
     product: 'splashlens',
-    source: clean(record.source || props.source || props.attribution_source || 'site', 80),
-    path: clean(record.path || props.path || '', 300),
-    page_path: clean(record.path || props.path || '', 300),
-    plan: clean(record.plan || props.plan || '', 60),
-    mode: clean(record.mode || props.mode || '', 60),
+    source: clean(record.source || safeProps.source || safeProps.attribution_source || 'site', 80),
+    path: safeAnalyticsPath(record.path || safeProps.path),
+    page_path: safeAnalyticsPath(record.path || safeProps.path),
+    plan: clean(record.plan || safeProps.plan || '', 60),
+    mode: clean(record.mode || safeProps.mode || '', 60),
    }),
    user_properties: pruneObject({
     product: 'splashlens',
-    source: clean(record.source || props.source || props.attribution_source || 'site', 80),
-    role: clean(props.known_role || props.role || props.audience || props.persona || '', 80),
-    company: clean(props.known_company || props.company || props.organization || props.org || props.account || '', 160),
-    identity_source: clean(props.identity_source || props.attribution_source || record.source || 'site', 80),
-    identity_confidence: clean(props.identity_confidence || '', 40),
+    source: clean(record.source || safeProps.source || safeProps.attribution_source || 'site', 80),
+    role: clean(safeProps.known_role || safeProps.role || safeProps.audience || safeProps.persona || '', 80),
+    identity_source: clean(safeProps.identity_source || safeProps.attribution_source || record.source || 'site', 80),
    }),
-   groups: groups(props),
+   groups: groups(safeProps),
    time: Date.parse(record.createdAt || '') || Date.now(),
    insert_id: clean(record.correlationId || `${record.event}:${record.createdAt}`, 180),
   }],

@@ -3174,6 +3174,7 @@ gap: 10px;
  document.addEventListener('click', function (event) {
  var link = event.target.closest && event.target.closest('[data-track]');
  if (!link) return;
+ if (link.getAttribute('data-track') === 'checkout_click') return;
  var destination = {};
  try {
  var url = new URL(link.href || '', window.location.href);

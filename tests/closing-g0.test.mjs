@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
+import { stage } from '../tools/stage-public-assets.mjs';
 
 const root = path.resolve(new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1'));
 const hubPath = 'closing-season.html';
@@ -73,5 +74,12 @@ test('every local closing-page href and stylesheet resolves to a repository file
       const file = target.endsWith('/') ? `${target.slice(1)}index.html` : target.slice(1);
       assert.ok(fs.existsSync(path.join(root, file)), `${page} -> ${target}`);
     }
+  }
+});
+
+test('public deployment bundle includes every closing page and its stylesheet', async () => {
+  const { output } = await stage();
+  for (const file of [...leafPaths, 'closing/closing.css']) {
+    assert.ok(fs.existsSync(path.join(output, file)), `${file} absent from upload`);
   }
 });

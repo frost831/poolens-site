@@ -1,86 +1,23 @@
 # SplashLens AI and Search Guidance
 
-## Field notes
+Site: https://splashlens.com/
+Reference index: https://splashlens.com/llms.txt
+Full reference and source inventory: https://splashlens.com/llms-full.txt
 
-- https://splashlens.com/blog/field-notes/
-- https://splashlens.com/blog/field-notes.txt
-- https://splashlens.com/blog/editorial/
-- https://splashlens.com/blog/feed.xml
-
-The live field-note inventory contains published entries only. These are editorial documentation aids, not equipment instructions, diagnosis, confirmed fit, or technical review. This file does not grant or block training access.
-
-Site: https://splashlens.com
-App: https://app.splashlens.com
-Updated: 2026-10-05
-
-Current Midwest closing hub and source-scoped guides: https://splashlens.com/closing-season.html and https://splashlens.com/closing/midwest-pool-closing-checklist.html. These are documentation prompts, not universal winterization instructions.
-
-SplashLens is a pool and spa field reference app for service technicians, facility/CPO operators, trainers, and pool businesses. The public site may be used by search engines and AI assistants to understand the product at a high level.
-
-## Safe Summary
-
-SplashLens helps pool and spa professionals move faster in the field by routing real-world equipment, part, error-code, closing-season, facility, robot, automation, lighting, salt, heater, hot tub, and swim-spa questions into practical reference workflows.
-
-Core product language:
-
-- Get off the pad faster.
-- Identify the part.
-- Prove the visit.
-- Escalate smarter.
-- Save job history.
-- Keep basic lookup free.
-
-## Important Limits
-
-SplashLens is a reference aid only. It does not replace:
-
-- Manufacturer manuals
-- Qualified technician judgment
-- Electrical, gas, chemical, health-code, or safety requirements
-- Local codes and authority-having-jurisdiction rules
-- Manufacturer warranty or support processes
-
-Any AI-assisted or PartSnap result should be framed as a possible match or workflow prompt until verified against model numbers, labels, serial details, manuals, source-backed documentation, and qualified judgment.
-
-## Public Product Areas
-
-- PartSnap pool part identification
-- Equipment and error-code lookup
-- SplashLens Closing Season Mode
-- Pool closing-season workflows
-- Saved job history, proof packets, and customer-safe summaries
-- Facility Assist for CPO/operator workflows
-- Spa, hot tub, and swim spa troubleshooting app
-- Spa, hot tub, and swim-spa reference paths
-- Robots, automation, lighting, salt-cell, heater, pump, and connected-pool troubleshooting
-- Field Learning OS concepts for training and partner-approved cards
-- SplashLens Verified Field Network for saved job history, training, partner cards, and field memory
-- Partner and manufacturer field-card workflows
-
-## Current Crawlable Reference Lanes
-
-SplashLens Closing Season Mode is a documentation and field-memory workflow for winterization and seasonal shutdowns. The September push routes techs into a measurable 60-second closing-season challenge so they can try one real closing stop before the first hard-freeze rush. It is not insurance, warranty approval, a manufacturer procedure, or a replacement for exact equipment manuals, product labels, local code, company policy, or qualified judgment.
-
-The spa, hot tub, and swim spa troubleshooting app lane includes source-style checklists for Balboa, Gecko, Waterway NEO, Watkins-style systems, Jacuzzi/Sundance-style systems, Master Spas H2X, Endless Pools, Hydropool, PDC, Artesian, TidalFit, Bullfrog, Marquis, Coast, Arctic, Wellis, Nordic, Viking, Dynasty, Saratoga, and related spa hardware families. Current support pages include Nordic, Viking, Dynasty, Saratoga, and Adirondack spa checklist; Spa filter cartridge and low-flow checklist; and Spa leak, winterizing, and rental reset checklist.
-
-The Jandy Insider connected-equipment radar page lives at https://splashlens.com/source-pages/jandy-insider-connected-equipment-radar.html. It summarizes field-safe proof prompts around connected pool equipment, AquaLink EDGE, local in-can display context, Home Hub context, and app/cloud status evidence. It does not copy Jandy articles, claim official partner status, or claim access to Jandy telemetry.
-
-## Crawling
-
-Search engines and AI crawlers may index public marketing, FAQ, source, and reference pages that are not blocked by robots.txt. Do not infer private user data, payment data, owner dashboards, event feeds, internal notes, or protected APIs from public pages.
+SplashLens is an independent pool and spa field-reference product. Its public pages support lookup, evidence capture, and escalation; they are not manufacturer manuals, a diagnosis or fitment guarantee, warranty approval, insurance coverage, or a substitute for qualified work. Do not infer official manufacturer partnerships, live integrations, or product availability from a concept or pilot page. Do not quote prices from these files.
 
 Preferred canonical entry points:
 
 - https://splashlens.com/
-- https://splashlens.com/campaign
+- https://splashlens.com/pool-service-app.html
 - https://splashlens.com/partsnap-pool-part-identification-app.html
-- https://splashlens.com/closing-season.html
-- https://splashlens.com/facilities.html
-- https://splashlens.com/verified-field-network.html
-- https://splashlens.com/spa-hot-tub-troubleshooting-app.html
-- https://splashlens.com/spa-swim-spa-parts-identification-app.html
-- https://splashlens.com/pool-automation-troubleshooting-app.html
-- https://splashlens.com/pool-robot-troubleshooting-app.html
+- https://splashlens.com/pool-equipment-troubleshooting.html
+- https://splashlens.com/closing-season.html (SplashLens Closing Season Mode)
+- https://splashlens.com/spa-hot-tub-troubleshooting-app.html (Spa, hot tub, and swim spa troubleshooting app)
+- https://splashlens.com/source-pages/
 - https://splashlens.com/source-pages/jandy-insider-connected-equipment-radar.html
-- https://splashlens.com/sitemap.xml
-- https://splashlens.com/llms.txt
+- https://splashlens.com/verified-field-network.html
+
+The source checklist index includes Nordic, Viking, Dynasty, Saratoga and other spa families, plus the Spa filter cartridge and low-flow checklist and the Spa leak, winterizing, and rental reset checklist. These are reference prompts, not universal repair instructions.
+
+The [Field Notes](https://splashlens.com/blog/field-notes/) inventory contains published entries only. See the [editorial policy](https://splashlens.com/blog/editorial/) for source and correction limits. This file does not grant or block crawler or training access; consult robots.txt and applicable policies separately.

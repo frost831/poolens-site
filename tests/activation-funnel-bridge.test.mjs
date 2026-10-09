@@ -32,13 +32,14 @@ test('the funnel bridge forwards only bounded anonymous attribution fields', () 
 test('site pricing clicks carry one anonymous reference through the funnel bridge', () => {
   assert.match(ga4, /function prepareCheckoutLink\(link\)/);
   assert.match(ga4, /url\.searchParams\.set\("client_reference_id", reference\)/);
-  assert.match(ga4, /var checkoutRef = prepareCheckoutLink\(link\)/);
-  assert.match(ga4, /client_reference_id: checkoutRef/);
+  assert.match(ga4, /function trackCheckoutHandoff\(link\)/);
+  assert.match(ga4, /var reference = prepareCheckoutLink\(link\)/);
+  assert.match(ga4, /client_reference_id: reference/);
   assert.match(homepage, /if \(link\.getAttribute\('data-track'\) === 'checkout_click'\) return/);
   assert.doesNotMatch(paidSearch, /addEventListener\("click"/);
   assert.match(source, /client_reference_id: clean\(props\.client_reference_id/);
   assert.match(source, /safeAnalyticsProps\(body\.props\)/);
-  assert.match(source, /placement: props\.placement === 'site_pricing'/);
+  assert.match(source, /placement: \/\^site_\[a-z0-9_\]/);
   assert.match(source, /plan: \['monthly', 'yearly'\]\.includes\(props\.plan\)/);
 });
 
@@ -56,7 +57,7 @@ test('checkout click forwarding preserves the reference and drops personal field
         event: 'checkout_click', source: 'site', path: '/',
         props: {
           client_reference_id: 'sl_checkout_01234567-89ab-4cde-8f01-23456789abcd',
-          plan: 'monthly', placement: 'site_pricing', store: 'web',
+          plan: 'monthly', placement: 'site_partsnap_pricing', store: 'web',
           email: 'private@example.com', href: 'https://app.splashlens.com/api/checkout',
         },
       }),
@@ -66,7 +67,7 @@ test('checkout click forwarding preserves the reference and drops personal field
   assert.equal(response.status, 200);
   assert.equal(forwarded.source, 'site');
   assert.equal(forwarded.props.client_reference_id, 'sl_checkout_01234567-89ab-4cde-8f01-23456789abcd');
-  assert.equal(forwarded.props.placement, 'site_pricing');
+  assert.equal(forwarded.props.placement, 'site_partsnap_pricing');
   assert.equal(forwarded.props.plan, 'monthly');
   assert.doesNotMatch(JSON.stringify(forwarded), /private@example\.com/);
 });

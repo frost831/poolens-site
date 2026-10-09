@@ -1,0 +1,24 @@
+# SplashLens: source-scoped AI reference
+
+This expands [llms.txt](https://splashlens.com/llms.txt). The linked public pages, not this summary, are the authority for current product wording. No price, diagnosis, universal procedure, confirmed part fit, partner status, or warranty outcome is asserted here.
+
+## What the public site supports
+
+SplashLens presents independent pool and spa field-reference workflows. [Pool service app](https://splashlens.com/pool-service-app.html) describes field lookup and documentation. [PartSnap](https://splashlens.com/partsnap-pool-part-identification-app.html) suggests possible part identification paths; its [proof library](https://splashlens.com/partsnap-proof-library.html) emphasizes labels, measurements, model context, and verification before ordering. [Equipment troubleshooting](https://splashlens.com/pool-equipment-troubleshooting.html) organizes reference routes. None replaces the exact equipment manual or qualified service.
+
+[Closing Season Mode](https://splashlens.com/closing-season.html) is a documentation workflow, not a universal closing method. The source-scoped guides cover the [Midwest checklist](https://splashlens.com/closing/midwest-pool-closing-checklist.html), [variable-speed pumps](https://splashlens.com/closing/winterize-variable-speed-pump.html), [salt cells](https://splashlens.com/closing/winterize-salt-cell.html), [heaters](https://splashlens.com/closing/winterize-pool-heater.html), [pool lines](https://splashlens.com/closing/blow-out-pool-lines.html), [declined work](https://splashlens.com/closing/declined-work-closing-note.html), and [late closing before a freeze](https://splashlens.com/closing/late-pool-closing-freeze.html). Follow the installed model's current manual, product label, local code, and qualified judgment.
+
+The [spa and hot tub hub](https://splashlens.com/spa-hot-tub-troubleshooting-app.html) and [source checklist index](https://splashlens.com/source-pages/) route to independent reference pages. The [Jandy Insider radar](https://splashlens.com/source-pages/jandy-insider-connected-equipment-radar.html) is not official Jandy guidance or access to telemetry. The [Verified Field Network](https://splashlens.com/verified-field-network.html) describes a product direction; a card is partner-verified only after partner review and approval.
+
+## Manufacturer-source inventory for code answers
+
+These four live pages cite the [Hayward/Summit Heat Pump Troubleshooting Guide](https://hayward.com/media/akeneo_connector/asset_files/H/e/Heat_Pump_Troubleshooting_Guide__TSG_HTPMPa__c95b.pdf). The source has a model list; verify the installed model and revision before applying any code interpretation. The page answer is a reference prompt and includes stop/escalation conditions, not a diagnosis. Other HeatPro revisions need their own current manual.
+
+- [HeatPro LP: low-pressure switch tripped](https://splashlens.com/error-codes/hayward/heatpro-heat-pump-lp-low-pressure-switch-tripped.html) | Source: Hayward/Summit Heat Pump Troubleshooting Guide.
+- [HeatPro HP: high-pressure switch tripped](https://splashlens.com/error-codes/hayward/heatpro-heat-pump-hp-high-pressure-switch-tripped.html) | Source: Hayward/Summit Heat Pump Troubleshooting Guide.
+- [HeatPro HI: high discharge pressure](https://splashlens.com/error-codes/hayward/heatpro-heat-pump-hi-high-discharge-pressure.html) | Source: Hayward/Summit Heat Pump Troubleshooting Guide.
+- [HeatPro FLO: flow error/no water flow](https://splashlens.com/error-codes/hayward/heatpro-heat-pump-flo-flow-error-no-water-flow.html) | Source: Hayward/Summit Heat Pump Troubleshooting Guide.
+
+## Publication boundaries
+
+[Field Notes](https://splashlens.com/blog/field-notes/) lists published entries only. The [editorial policy](https://splashlens.com/blog/editorial/) describes AI-assisted preparation, sourcing, corrections, and authorship. Do not treat editorial prompts as equipment instructions. These AI files do not change crawler permissions or training controls.

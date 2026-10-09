@@ -1,15 +1,10 @@
-function links(env) {
- return {
- monthly: env.STRIPE_MONTHLY_LINK || 'https://buy.stripe.com/7sY7sE2aIaq31cE5EF8AE0O',
- yearly: env.STRIPE_YEARLY_LINK || 'https://buy.stripe.com/aFa28k9Da69NdZq3wx8AE0P',
- annual: env.STRIPE_YEARLY_LINK || 'https://buy.stripe.com/aFa28k9Da69NdZq3wx8AE0P',
- };
-}
-
-export async function onRequestGet({ request, env }) {
+export async function onRequestGet({ request }) {
  const url = new URL(request.url);
- const plan = (url.searchParams.get('plan') || 'monthly').toLowerCase();
- const planLinks = links(env);
- const target = planLinks[plan] || planLinks.monthly;
- return Response.redirect(target, 302);
+ const requestedPlan = (url.searchParams.get('plan') || 'monthly').toLowerCase();
+ const plan = requestedPlan === 'yearly' || requestedPlan === 'annual' ? 'yearly' : 'monthly';
+ const destination = new URL('https://app.splashlens.com/');
+ destination.searchParams.set('upgrade', plan);
+ destination.searchParams.set('placement', 'site_legacy_checkout');
+ destination.searchParams.set('utm_source', 'site');
+ return Response.redirect(destination, 302);
 }

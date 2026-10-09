@@ -31,23 +31,34 @@
   try {
    var url = new URL(link.href, window.location.href);
    var plan = link.getAttribute("data-plan");
-   if (url.origin !== "https://app.splashlens.com" || url.pathname !== "/api/checkout" || ["monthly", "yearly"].indexOf(plan) < 0) return "";
-   var reference = url.searchParams.get("client_reference_id") || "";
-   if (!/^sl_checkout_[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(reference)) {
-    var bytes = new Uint8Array(16);
-    window.crypto.getRandomValues(bytes);
-    bytes[6] = (bytes[6] & 15) | 64;
-    bytes[8] = (bytes[8] & 63) | 128;
-    var hex = Array.from(bytes, function (value) { return value.toString(16).padStart(2, "0"); }).join("");
-    reference = "sl_checkout_" + [hex.slice(0, 8), hex.slice(8, 12), hex.slice(12, 16), hex.slice(16, 20), hex.slice(20)].join("-");
-   }
+   var placement = link.getAttribute("data-checkout-placement") || "";
+   if (url.origin !== "https://app.splashlens.com" || url.pathname !== "/" || ["monthly", "yearly"].indexOf(plan) < 0 || url.searchParams.get("upgrade") !== plan || !/^site_[a-z0-9_]{1,60}$/.test(placement)) return "";
+   var bytes = new Uint8Array(16);
+   window.crypto.getRandomValues(bytes);
+   bytes[6] = (bytes[6] & 15) | 64;
+   bytes[8] = (bytes[8] & 63) | 128;
+   var hex = Array.from(bytes, function (value) { return value.toString(16).padStart(2, "0"); }).join("");
+   var reference = "sl_checkout_" + [hex.slice(0, 8), hex.slice(8, 12), hex.slice(12, 16), hex.slice(16, 20), hex.slice(20)].join("-");
    url.searchParams.set("source", "site");
-   url.searchParams.set("placement", "site_pricing");
+   url.searchParams.set("placement", placement);
    url.searchParams.set("store", "web");
+   url.searchParams.set("utm_source", url.searchParams.get("utm_source") || "site");
    url.searchParams.set("client_reference_id", reference);
    link.href = url.href;
    return reference;
   } catch (err) { return ""; }
+ }
+ function trackCheckoutHandoff(link) {
+  var reference = prepareCheckoutLink(link);
+  if (!reference) return;
+  window.SplashLensGa4.event("checkout_click", {
+   plan: link.getAttribute("data-plan"),
+   source: "site",
+   placement: link.getAttribute("data-checkout-placement"),
+   store: "web",
+   client_reference_id: reference,
+   href: link.href
+  });
  }
  function readAttribution() {
   var params = new URLSearchParams(window.location.search || "");
@@ -144,8 +155,9 @@
   try {
    var endpoint = name === "checkout_click" ? "/api/event" : "https://app.splashlens.com/api/events";
    if (navigator.sendBeacon) {
-    navigator.sendBeacon(endpoint, new Blob([body], { type: "text/plain" }));
-    return;
+    try {
+     if (navigator.sendBeacon(endpoint, new Blob([body], { type: "text/plain" }))) return;
+    } catch (err) {}
    }
    fetch(endpoint, { method: "POST", headers: { "Content-Type": "text/plain" }, body: body, keepalive: true, mode: "cors" }).catch(function () {});
   } catch (err) {}
@@ -189,13 +201,13 @@
   var link = event.target.closest && event.target.closest("[data-track]");
   if (!link || !window.SplashLensGa4 || typeof window.SplashLensGa4.event !== "function") return;
   decorateAppLink(link, readAttribution());
-  var checkoutRef = prepareCheckoutLink(link);
+  if (link.getAttribute("data-track") === "checkout_click") {
+   trackCheckoutHandoff(link);
+   return;
+  }
   window.SplashLensGa4.event(link.getAttribute("data-track"), {
    plan: link.getAttribute("data-plan") || "",
-   source: checkoutRef ? "site" : link.getAttribute("data-source") || "",
-   placement: checkoutRef ? "site_pricing" : "",
-   store: checkoutRef ? "web" : "",
-   client_reference_id: checkoutRef,
+   source: link.getAttribute("data-source") || "",
    publication: link.getAttribute("data-publication") || "",
    content_type: link.getAttribute("data-publication") ? "industry_coverage" : "",
    content_id: link.getAttribute("data-publication") || "",

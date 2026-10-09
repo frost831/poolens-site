@@ -14,7 +14,6 @@ const ALLOWED_ORIGINS = new Set([
 
 const ALERT_EVENTS = new Set([
  'app_store_download_click',
- 'checkout_click',
  'open_app_click',
 ]);
 
@@ -68,7 +67,7 @@ async function forwardToAppFunnel(record, props) {
   destination: clean(props.destination, 120),
   client_reference_id: clean(props.client_reference_id, 80),
   plan: ['monthly', 'yearly'].includes(props.plan) ? props.plan : '',
-  placement: props.placement === 'site_pricing' ? props.placement : '',
+  placement: /^site_[a-z0-9_]{1,60}$/.test(String(props.placement || '')) ? props.placement : '',
   store: props.store === 'web' ? 'web' : '',
   demo: props.demo === true || props.demo === 'true',
   test: props.test === true || props.test === 'true',

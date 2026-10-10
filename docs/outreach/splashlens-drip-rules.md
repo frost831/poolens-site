@@ -1,10 +1,13 @@
 # SplashLens Controlled Outreach Drip Rules
 
+## Public Repo Boundary
+
+Do not commit recipient queues, rosters, run-log detail, or message IDs. `docs/outreach/*.csv` is gitignored. Keep contact lists local or private.
+
 ## Sender
 
-- Send from: Joshua Frost <frost@belowzeromedia.com>
 - Public reply/contact: hello@splashlens.com
-- Reply routing: hello@splashlens.com forwards to frost@belowzeromedia.com
+- The sending mailbox identity stays in private mail configuration. Do not commit it to this repo.
 
 ## Send Boundary
 

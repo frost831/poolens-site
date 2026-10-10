@@ -27,8 +27,8 @@ No email was sent from this prep file.
 ## Hard Suppressions / Holds
 
 - Do not contact Fluidra / Jandy / Polaris / Zodiac product support unless they initiate. Remove-me/not-interested request is logged.
-- Suppress `content@poolonomics.com` until replacement is verified.
-- Suppress `contact@poolnationawards.com` until replacement is verified.
+- Suppress `[contact removed]` until replacement is verified.
+- Suppress `[contact removed]` until replacement is verified.
 - Do not cold-drip replied rows: Aquatic Council, SpaRetailer, PoolZoom, Pool Brain, Loop-Loc, Intermatic, FSPA Education, Space Coast Pool School, Pool Office Manager.
 
 ## Required Gate Before Any Send

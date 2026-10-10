@@ -70,7 +70,7 @@ hello@splashlens.com
 
 - Pool Magazine contact page lists editor and sales contact routes.
 - Pool & Spa News author page lists Joanne McClain as editor-in-chief and provides an email route.
-- PoolPro contact page lists `info@kendrickcontent.com`.
+- PoolPro contact page lists `[contact removed]`.
 - Talking Pools / CPO Class media page positions the show as a weekly pool-pro podcast.
 - Pool Nation podcast page describes interviews with industry leaders and educators.
 - Service Industry News recently covered the Pool Guy Podcast / Let's Talk About Pools.
@@ -82,14 +82,14 @@ hello@splashlens.com
 
 | Target | Segment | Route | Status | Notes |
 | --- | --- | --- | --- | --- |
-| Pool Magazine | Trade media / podcast | editor@poolmagazine.com | already sent, follow-up eligible only if no reply/suppression | Use proof-library angle, not generic launch. |
-| Pool & Spa News / Aquatics International | Trade media | jmcclain@zondahome.com | verify against prior queue before send | Editor route found publicly. Prior queue used older domain; refresh before any send. |
-| PoolPro Magazine | Trade media | info@kendrickcontent.com | already sent, follow-up eligible only if no reply/suppression | Use service-tech proof examples. |
-| Talking Pools / CPO Class | Podcast / training | talkingpools@gmail.com | already sent, follow-up eligible only if no reply/suppression | Pitch one real student/tech case. |
-| Pool Nation Podcast | Podcast / community | support@poolnation.com | already sent, follow-up eligible only if no reply/suppression | Ask for honest field test. |
-| Service Industry News / Let's Talk About Pools | Trade media / podcast | info@serviceindustrynews.net | already sent, follow-up eligible only if no reply/suppression | Tie to field proof and training. |
-| PHTA Podcasts | Association / podcast | service@phta.org | already sent, follow-up eligible only if no reply/suppression | Ask for routing to education/podcast team. |
-| Space Coast Pool School | Training / CPO | info@cpocertified.com | active reply thread | Do not cold-send; continue warm conversation only. |
+| Pool Magazine | Trade media / podcast | [contact removed] | already sent, follow-up eligible only if no reply/suppression | Use proof-library angle, not generic launch. |
+| Pool & Spa News / Aquatics International | Trade media | [contact removed] | verify against prior queue before send | Editor route found publicly. Prior queue used older domain; refresh before any send. |
+| PoolPro Magazine | Trade media | [contact removed] | already sent, follow-up eligible only if no reply/suppression | Use service-tech proof examples. |
+| Talking Pools / CPO Class | Podcast / training | [contact removed] | already sent, follow-up eligible only if no reply/suppression | Pitch one real student/tech case. |
+| Pool Nation Podcast | Podcast / community | [contact removed] | already sent, follow-up eligible only if no reply/suppression | Ask for honest field test. |
+| Service Industry News / Let's Talk About Pools | Trade media / podcast | [contact removed] | already sent, follow-up eligible only if no reply/suppression | Tie to field proof and training. |
+| PHTA Podcasts | Association / podcast | [contact removed] | already sent, follow-up eligible only if no reply/suppression | Ask for routing to education/podcast team. |
+| Space Coast Pool School | Training / CPO | [contact removed] | active reply thread | Do not cold-send; continue warm conversation only. |
 | Pool Operation Management | Training / CPO | public contact form / site route | needs verified email | Add after contact verification. |
 | The Pool Class / Tropical Aquatic Pool Education | Training / CPO | site route / phone | needs verified email | Research exact email before adding to send queue. |
 | NC Pool School | Training / CPO | site route | needs verified email | Research exact email before adding to send queue. |

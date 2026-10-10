@@ -8,27 +8,27 @@ Earliest clean recheck: 2026-07-20, after a fresh Gmail sweep and day-lock pass.
 
 ## Next 5 Cold Targets
 
-1. Pentair Pool University - `knowledge@pentair.com`
+1. Pentair Pool University - `[contact removed]`
    - Lane: manufacturer education / training.
    - Source: `https://www.pentair.com/en-us/pool-spa/education-support/professional-support/pentair-pool-university.html`
    - Angle: field proof, Service Proof Passport, training guardrails, and what techs should capture before escalation.
 
-2. Clear Comfort AOP - `info@clearcomfort.com`
+2. Clear Comfort AOP - `[contact removed]`
    - Lane: commercial water treatment / AOP.
    - Source: `https://clearcomfort.com/contact/`
    - Angle: AOP/commercial proof prompts, not diagnosis or compliance claims.
 
-3. Dimension One Spas - `service@d1spas.com`
+3. Dimension One Spas - `[contact removed]`
    - Lane: spa manufacturer.
    - Source: `https://www.d1spas.com/contact`
    - Angle: topside, heater, jet, control, and owner-manual proof prompts.
 
-4. Endless Pools - `poolhelp@endlesspools.com`
+4. Endless Pools - `[contact removed]`
    - Lane: swim spa / fitness pool manufacturer.
    - Source: `https://myendlesspool.com/s/contact`
    - Angle: swim-current, modular pool, water-quality, service-provider, and documentation proof prompts.
 
-5. Balboa Water Group - `techsupport@balboawater.com`
+5. Balboa Water Group - `[contact removed]`
    - Lane: spa controls / manufacturer support.
    - Source: `https://www.balboawater.com/contact-us/`
    - Angle: BP/VS/GS/spaTouch/TP series, spa-pack, topside, heater, control, and field-safe verification language.

@@ -18,16 +18,6 @@
    fetch(endpoint, { method: "POST", headers: { "Content-Type": "application/json" }, body: body, keepalive: true }).catch(function () {});
   } catch (err) {}
  }
- document.addEventListener("click", function (event) {
-  var link = event.target.closest && event.target.closest("[data-track]");
-  if (!link) return;
-  track(link.getAttribute("data-track"), {
-   plan: link.getAttribute("data-plan") || "",
-   source: link.getAttribute("data-source") || "",
-   intent: link.getAttribute("data-intent") || document.body.getAttribute("data-intent") || "",
-   href: link.href || ""
-  });
- });
  track("paid_landing_view", {
   title: document.title,
   intent: document.body.getAttribute("data-intent") || ""

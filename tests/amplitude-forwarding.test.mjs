@@ -44,18 +44,20 @@ test('Amplitude site forwarding preserves campaign identity', async () => {
       lead_id: 'lead-test-12345',
       attribution_campaign: 'poolpro_followup',
       known_company: 'Demo Pool Co',
+      known_email: 'private@example.com',
       publication: 'poolpro',
     });
 
     assert.equal(result.sent, true);
     assert.equal(captured.url, 'https://api2.amplitude.com/2/httpapi');
     assert.equal(captured.body.events[0].event_type, 'open_app_click');
-    assert.equal(captured.body.events[0].user_id, 'lead-test-12345');
+    assert.equal(captured.body.events[0].user_id, undefined);
     assert.equal(captured.body.events[0].device_id, 'site-client-12345');
     assert.equal(captured.body.events[0].event_properties.attribution_campaign, 'poolpro_followup');
-    assert.equal(captured.body.events[0].user_properties.company, 'Demo Pool Co');
-    assert.equal(captured.body.events[0].groups.company, 'Demo Pool Co');
+    assert.equal(captured.body.events[0].user_properties.company, undefined);
+    assert.equal(captured.body.events[0].groups.company, undefined);
     assert.equal(captured.body.events[0].groups.publisher, 'poolpro');
+    assert.doesNotMatch(JSON.stringify(captured.body), /private@example\.com|Demo Pool Co|lead-test-12345/);
   } finally {
     globalThis.fetch = originalFetch;
   }

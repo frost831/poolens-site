@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Closing Season Mode for Pool Techs | SplashLens</title>
-<meta name="description" content="SplashLens Closing Season Mode helps pool techs document winterization proof, drain plugs, covers, salt cells, heaters, robots, and callback risks before leaving the pad.">
+<title>Pool Closing Checklist & Proof | SplashLens</title>
+<meta name="description" content="Close it once. Prove it in April. Midwest closing checklist, equipment-specific winterizing guides, photo proof, and declined-work notes for pool techs.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://splashlens.com/closing-season.html">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -30,7 +30,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;color:#0f172a;background:#f8fafc;line-height:1.55}
 a{color:inherit}
-.hero{min-height:640px;display:flex;align-items:flex-end;color:#fff;background:linear-gradient(90deg,rgba(3,15,25,.92),rgba(3,15,25,.66),rgba(3,15,25,.20)),url("https://cdn.pixabay.com/photo/2016/03/27/18/58/pool-pump-1283648_1280.jpg") center/cover}
+.hero{min-height:560px;display:flex;align-items:flex-end;color:#fff;background:linear-gradient(90deg,rgba(3,15,25,.92),rgba(3,15,25,.66),rgba(3,15,25,.20)),url("https://cdn.pixabay.com/photo/2016/03/27/18/58/pool-pump-1283648_1280.jpg") center/cover}
 .hero-inner,.wrap{width:min(1120px,calc(100% - 32px));margin:auto}
 .hero-inner{padding:92px 0 58px}
 .eyebrow{font-size:12px;font-weight:950;letter-spacing:.14em;text-transform:uppercase;color:#7dd3fc}
@@ -69,9 +69,10 @@ h1{max-width:820px;margin:10px 0 16px;font-size:clamp(2.55rem,7vw,5.7rem);line-h
 .cta h2{max-width:780px;margin:0 auto 12px}
 .cta p{max-width:720px;margin:0 auto;color:#dbeafe}
 .fine{font-size:12px;color:#64748b;margin-top:12px}
+.topic-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:22px;list-style:none}.topic-list a{display:block;background:#fff;border:1px solid #cbd5e1;border-radius:8px;padding:15px 18px;text-decoration:none;font-weight:750}.topic-list a:hover,.topic-list a:focus-visible{border-color:#0369a1;outline:2px solid #7dd3fc}.sample{white-space:pre-wrap;background:#f0f9ff;border-left:4px solid #0284c7;padding:18px;margin-top:18px;font:inherit}.faq-item{border-top:1px solid #cbd5e1;padding:14px 0}.faq-item h3{font-size:1.05rem}
 footer{background:#071725;color:#bed2dd;text-align:center;padding:30px 18px;font-size:.86rem}
 footer a{color:#7dd3fc;text-decoration:none}
-@media(max-width:820px){.hero{min-height:620px;background-position:58% center}.grid,.checklist{grid-template-columns:1fr}.section{padding:44px 0}}
+@media(max-width:820px){.hero{min-height:540px;background-position:58% center}.grid,.checklist,.topic-list{grid-template-columns:1fr}.section{padding:44px 0}}
 </style>
 <script src="/ga4.js" defer></script>
 <script src="/splashlens-nav.js" defer></script>
@@ -81,10 +82,10 @@ footer a{color:#7dd3fc;text-decoration:none}
 <header class="hero">
   <div class="hero-inner">
     <p class="eyebrow">Closing-season launch</p>
-    <h1>Document the close before the freeze.</h1>
-    <p>Closing season is where rushed notes become spring callbacks. SplashLens now gives techs a closing-specific workflow for winterization proof, drain-plug photos, cover notes, salt/heater/robot checks, callback-risk flags, and customer-safe summaries.</p>
+    <h1>Close it once. Prove it in April.</h1>
+    <p>Document the close before the freeze. Run the equipment-specific checklist, photograph what was completed, and leave a customer-safe record of anything declined. SplashLens organizes proof; the exact manual and qualified technician still determine the work.</p>
     <div class="actions">
-      <a class="btn" href="https://app.splashlens.com/?tab=report&utm_source=site&utm_medium=closing_season_hero&utm_campaign=closing_season_launch_2026&workflow=closing&challenge=field60&challenge_path=closing&challenge_id=closing_page_hero" target="_blank" rel="noopener" data-track="open_app_click" data-source="closing_season_hero" data-challenge-path="closing" data-challenge-id="closing_page_hero">Open Closing Mode</a>
+      <a class="btn" href="https://app.splashlens.com/?tab=report&amp;workflow=closing&amp;mode=closing&amp;utm_source=site&amp;utm_medium=internal&amp;utm_campaign=closing_2026" target="_blank" rel="noopener" data-track="open_app_click" data-source="closing_season_hero">Run Closing Mode free</a>
       <a class="btn alt" href="https://app.splashlens.com/?tab=guide&utm_source=site&utm_medium=closing_season_hero&utm_campaign=closing_season_launch_2026&checklist=closing" target="_blank" rel="noopener" data-track="checklist_click" data-source="closing_season_hero">Use the checklist</a>
       <a class="btn dark" href="https://app.splashlens.com/?tab=report&utm_source=site&utm_medium=closing_season_hero&utm_campaign=midwest_winddown_2026&workflow=closing&challenge=field60&challenge_path=closing&challenge_id=closing_page_field_test" target="_blank" rel="noopener" data-track="field_challenge_click" data-source="closing_season_hero" data-challenge-path="closing" data-challenge-id="closing_page_field_test">60-second field test</a>
     </div>
@@ -99,6 +100,20 @@ footer a{color:#7dd3fc;text-decoration:none}
 </header>
 
 <main>
+  <section class="band"><div class="wrap section">
+    <h2>Midwest closing: the short answer</h2>
+    <p class="lede">Close before sustained freezing conditions threaten water-filled equipment and lines; use your local NWS forecast, not a fixed city date. Test and document water, follow the cover and equipment manuals, isolate and drain what can trap water, winterize every identified line, and photograph plugs, valves, cover condition, and unfinished work. A qualified pro should handle uncertain plumbing or gas and electrical equipment.</p>
+    <p class="fine">Last reviewed October 5, 2026. <a href="https://www.weather.gov/safety/cold-ww">NWS freeze alerts</a> · <a href="https://www.pentair.com/en-us/education-support/water-education-center/pool-and-spa-education/how-to-winterize-a-pool.html">Pentair pool closing overview</a></p>
+    <ul class="topic-list">
+      <li><a href="/closing/midwest-pool-closing-checklist.html">Midwest pool closing checklist →</a></li>
+      <li><a href="/closing/winterize-variable-speed-pump.html">Winterize a variable-speed pump →</a></li>
+      <li><a href="/closing/winterize-salt-cell.html">Winterize a salt cell →</a></li>
+      <li><a href="/closing/winterize-pool-heater.html">Winterize a pool heater →</a></li>
+      <li><a href="/closing/blow-out-pool-lines.html">Document a pool-line blowout →</a></li>
+      <li><a href="/closing/declined-work-closing-note.html">Write a declined-work closing note →</a></li>
+      <li><a href="/closing/late-pool-closing-freeze.html">Late closing before a freeze →</a></li>
+    </ul>
+  </div></section>
   <section class="band">
     <div class="wrap section">
       <p class="eyebrow" style="color:#0369a1">What changed</p>
@@ -149,14 +164,32 @@ footer a{color:#7dd3fc;text-decoration:none}
   <section class="cta">
     <div class="wrap section">
       <h2>Try it on one closing stop.</h2>
-      <p>Open the app, run one closing stop, and see whether it catches one thing your normal closing note would miss before the Midwest wind-down gets ugly.</p>
+      <p>Open the app and run a closing stop. The core checklist is free. Save what was completed, what remains uncertain, and what the spring crew needs to know.</p>
       <div class="actions" style="justify-content:center">
-        <a class="btn alt" href="https://app.splashlens.com/?tab=report&utm_source=site&utm_medium=closing_season_cta&utm_campaign=closing_season_launch_2026&workflow=closing&challenge=field60&challenge_path=closing&challenge_id=closing_page_bottom" target="_blank" rel="noopener">Open the free app</a>
-        <a class="btn dark" href="/field-proof-pilot.html?utm_source=site&utm_medium=closing_season_cta&utm_campaign=closing_season_launch_2026">Request a field proof pilot</a>
+        <a class="btn alt" href="https://app.splashlens.com/?tab=report&amp;workflow=closing&amp;mode=closing&amp;utm_source=site&amp;utm_medium=internal&amp;utm_campaign=closing_2026" target="_blank" rel="noopener">Run Closing Mode free</a>
+        <a class="btn dark" href="https://app.splashlens.com/?challenge=field60&amp;challenge_path=closing&amp;utm_source=site&amp;utm_medium=internal&amp;utm_campaign=closing_2026" target="_blank" rel="noopener">Try one closing field test</a>
       </div>
       <p class="fine" style="color:#dbeafe">Reference aid only. Verify exact manuals, labels, company methods, local code, safety requirements, and qualified technician judgment.</p>
     </div>
   </section>
+  <section class="band"><div class="wrap section">
+    <h2>What a closing proof packet can say</h2>
+    <p class="lede">This is a format example, not a completed service record or a customer testimonial. Replace every field with verified observations from the actual stop.</p>
+    <div class="sample">Closed: [date/time and technician]
+Equipment: [brand, model, serial or nameplate photo]
+Completed: [line-by-line winterization, drain points and plug locations]
+Photos: [before pad, drained equipment, each plugged line, cover]
+Open item: [declined repair or inaccessible component]
+Customer decision: [what was offered, decision and time]
+Spring handoff: [stored parts, valves, follow-up needed]</div>
+    <p><a href="/closing/declined-work-closing-note.html">How to write a precise declined-work note</a> · <a href="/service-proof-passport.html">Proof Passport</a></p>
+  </div></section>
+  <section class="band"><div class="wrap section"><h2>Closing questions</h2>
+    <div class="faq-item"><h3>Does SplashLens replace pool closing manuals?</h3><p>No. SplashLens is a field reference and proof workflow. The exact equipment manual, product label, local code, company policy, and qualified judgment remain the source of truth.</p></div>
+    <div class="faq-item"><h3>What does Closing Season Mode help a tech document?</h3><p>It prompts for chemistry, water level, equipment pad photos, drain plugs, skimmers, returns, heaters, salt systems, robots, covers, customer approvals, declined work, and callback-risk notes.</p></div>
+    <div class="faq-item"><h3>Is this an insurance product?</h3><p>No. SplashLens is not insurance and does not guarantee coverage. The closing proof packet can help organize documentation for customer, owner, spring-opening, dispute, or insurance conversations.</p></div>
+    <div class="faq-item"><h3>Is the core workflow free?</h3><p>Yes. Core lookup, checklists, and basic proof workflows remain free. Paid plans are for heavier scanner usage or business workflows.</p></div>
+  </div></section>
 </main>
 <footer>SplashLens is an independent field reference app. Publication coverage does not imply endorsement. <a href="/privacy.html">Privacy</a> | <a href="/terms.html">Terms</a></footer>
 </body>

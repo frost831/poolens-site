@@ -9,6 +9,7 @@
  <url><loc>https://splashlens.com/closing/winterize-variable-speed-pump.html</loc><changefreq>monthly</changefreq><priority>0.82</priority><lastmod>2026-10-05</lastmod></url>
  <url><loc>https://splashlens.com/closing/winterize-salt-cell.html</loc><changefreq>monthly</changefreq><priority>0.82</priority><lastmod>2026-10-05</lastmod></url>
  <url><loc>https://splashlens.com/closing/winterize-pool-heater.html</loc><changefreq>monthly</changefreq><priority>0.82</priority><lastmod>2026-10-05</lastmod></url>
+ <url><loc>https://splashlens.com/closing/winterize-pool-filter.html</loc><changefreq>monthly</changefreq><priority>0.84</priority><lastmod>2026-10-12</lastmod></url>
  <url><loc>https://splashlens.com/closing/blow-out-pool-lines.html</loc><changefreq>monthly</changefreq><priority>0.82</priority><lastmod>2026-10-05</lastmod></url>
  <url><loc>https://splashlens.com/closing/declined-work-closing-note.html</loc><changefreq>monthly</changefreq><priority>0.82</priority><lastmod>2026-10-05</lastmod></url>
  <url><loc>https://splashlens.com/closing/late-pool-closing-freeze.html</loc><changefreq>monthly</changefreq><priority>0.82</priority><lastmod>2026-10-05</lastmod></url>
@@ -19,6 +20,11 @@
  <url><loc>https://splashlens.com/field-testers.html</loc><changefreq>weekly</changefreq><priority>0.93</priority><lastmod>2026-07-01</lastmod></url>
  <url><loc>https://splashlens.com/crm-companion.html</loc><changefreq>weekly</changefreq><priority>0.93</priority><lastmod>2026-07-01</lastmod></url>
  <url><loc>https://splashlens.com/pool-brain-skimmer-companion.html</loc><changefreq>monthly</changefreq><priority>0.82</priority><lastmod>2026-10-05</lastmod></url>
+ <url><loc>https://splashlens.com/works-alongside-pool-brain-skimmer-jobber.html</loc><changefreq>monthly</changefreq><priority>0.84</priority><lastmod>2026-10-12</lastmod></url>
+ <url><loc>https://splashlens.com/verified-equipment-code-lookup.html</loc><changefreq>monthly</changefreq><priority>0.86</priority><lastmod>2026-10-12</lastmod></url>
+ <url><loc>https://splashlens.com/pool-parts/identify-pump-impeller-seal-basket.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-10-12</lastmod></url>
+ <url><loc>https://splashlens.com/pool-parts/identify-salt-cell.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-10-12</lastmod></url>
+ <url><loc>https://splashlens.com/pool-parts/identify-filter-element.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-10-12</lastmod></url>
  <url><loc>https://splashlens.com/partner-field-card-packet.html</loc><changefreq>weekly</changefreq><priority>0.9</priority><lastmod>2026-07-01</lastmod></url>
  <url><loc>https://splashlens.com/whats-new.html</loc><changefreq>weekly</changefreq><priority>0.91</priority><lastmod>2026-07-01</lastmod></url>
  <url><loc>https://splashlens.com/google-play-testers.html</loc><changefreq>weekly</changefreq><priority>0.88</priority><lastmod>2026-06-25</lastmod></url>
@@ -399,6 +405,15 @@
  <url><loc>https://splashlens.com/es/service-proof-passport.html</loc><changefreq>weekly</changefreq><priority>0.92</priority><lastmod>2026-07-17</lastmod></url>
  <url><loc>https://splashlens.com/es/facility-assist.html</loc><changefreq>weekly</changefreq><priority>0.92</priority><lastmod>2026-07-17</lastmod></url>
  <url><loc>https://splashlens.com/es/faq.html</loc><changefreq>weekly</changefreq><priority>0.88</priority><lastmod>2026-07-17</lastmod></url>
+ <url><loc>https://splashlens.com/es/closing/midwest-pool-closing-checklist.html</loc><changefreq>monthly</changefreq><priority>0.84</priority><lastmod>2026-10-12</lastmod></url>
+ <url><loc>https://splashlens.com/es/closing/winterize-variable-speed-pump.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-10-12</lastmod></url>
+ <url><loc>https://splashlens.com/es/closing/winterize-pool-filter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-10-12</lastmod></url>
+ <url><loc>https://splashlens.com/es/closing/winterize-pool-heater.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-10-12</lastmod></url>
+ <url><loc>https://splashlens.com/es/closing/winterize-salt-cell.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-10-12</lastmod></url>
+ <url><loc>https://splashlens.com/es/pool-parts/identify-pump-impeller-seal-basket.html</loc><changefreq>monthly</changefreq><priority>0.78</priority><lastmod>2026-10-12</lastmod></url>
+ <url><loc>https://splashlens.com/es/pool-parts/identify-salt-cell.html</loc><changefreq>monthly</changefreq><priority>0.78</priority><lastmod>2026-10-12</lastmod></url>
+ <url><loc>https://splashlens.com/es/pool-parts/identify-filter-element.html</loc><changefreq>monthly</changefreq><priority>0.78</priority><lastmod>2026-10-12</lastmod></url>
+ <url><loc>https://splashlens.com/es/verified-equipment-code-lookup.html</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2026-10-12</lastmod></url>
  <url><loc>https://splashlens.com/ca/</loc><changefreq>weekly</changefreq><priority>0.94</priority><lastmod>2026-07-17</lastmod></url>
  <url><loc>https://splashlens.com/fr-ca/</loc><changefreq>weekly</changefreq><priority>0.82</priority><lastmod>2026-07-17</lastmod></url>
  <url><loc>https://splashlens.com/languages/</loc><changefreq>weekly</changefreq><priority>0.90</priority><lastmod>2026-07-17</lastmod></url>

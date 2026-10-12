@@ -14,13 +14,14 @@ const leafPaths = [
   'closing/blow-out-pool-lines.html',
   'closing/declined-work-closing-note.html',
   'closing/late-pool-closing-freeze.html',
+  'closing/winterize-pool-filter.html',
 ];
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 const textOnly = html => html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '')
   .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, '')
   .replace(/<[^>]+>/g, ' ').replace(/&(?:amp|#38);/g, '&').replace(/\s+/g, ' ');
 
-test('closing hub links all seven substantive topics and the working app route', () => {
+test('closing hub links every substantive topic and the working app route', () => {
   const hub = read(hubPath);
   assert.match(hub, /Close it once\. Prove it in April\./);
   for (const page of leafPaths) assert.ok(hub.includes(`href="/${page}"`), page);
@@ -41,7 +42,10 @@ test('each topic has distinct answer, source, visible matching FAQ and HowTo, an
     const visible = textOnly(html);
     assert.match(html, /<meta name="robots" content="index,follow">/);
     assert.ok(html.includes(`href="https://splashlens.com/${page}"`), `${page} canonical`);
-    assert.match(html, /Last reviewed October 5, 2026/);
+    const reviewed = page.endsWith('winterize-pool-filter.html')
+      ? 'Last reviewed October 12, 2026'
+      : 'Last reviewed October 5, 2026';
+    assert.ok(html.includes(reviewed), `${page} review date`);
     assert.match(html, /href="\/closing-season\.html"/);
     assert.match(html, /tab=report&amp;workflow=closing&amp;mode=closing&amp;utm_source=site&amp;utm_medium=internal&amp;utm_campaign=closing_2026/);
     assert.match(html, /href="https:\/\/(?:www\.)?(?:weather\.gov|pentair\.com|raypak\.com)/);

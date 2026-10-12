@@ -33,6 +33,17 @@ The four Hayward HeatPro code answers below cite a Hayward/Summit troubleshootin
 - [Pool lines](https://splashlens.com/closing/blow-out-pool-lines.html)
 - [Declined-work note](https://splashlens.com/closing/declined-work-closing-note.html)
 - [Late closing and freeze](https://splashlens.com/closing/late-pool-closing-freeze.html)
+- [Pool filter](https://splashlens.com/closing/winterize-pool-filter.html)
+
+## Part identification without a published part number
+
+- [Pump impeller, seal, or basket](https://splashlens.com/pool-parts/identify-pump-impeller-seal-basket.html)
+- [Salt cell](https://splashlens.com/pool-parts/identify-salt-cell.html)
+- [Filter cartridge or DE grid](https://splashlens.com/pool-parts/identify-filter-element.html)
+- [Verified code lookup](https://splashlens.com/verified-equipment-code-lookup.html): only the four HeatPro answers above cite a manufacturer guide.
+- [Works alongside Pool Brain, Skimmer, and Jobber](https://splashlens.com/works-alongside-pool-brain-skimmer-jobber.html): export and packet only.
+- [Spanish home](https://splashlens.com/es/)
+- [Spanish Midwest closing checklist](https://splashlens.com/es/closing/midwest-pool-closing-checklist.html)
 
 ## Editorial context
 

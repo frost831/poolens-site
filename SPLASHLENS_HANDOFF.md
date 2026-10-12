@@ -46,8 +46,8 @@ SplashLens is a free-core, offline-first field reference app for pool service te
 
 ## 4. Cloudflare Infrastructure
 
-**Account ID:** `214023f3c23554a68344d77bc7a16185`  
-**splashlens.com Zone ID:** `e1ceb4ea5691b9f30f30f738a3c7e251`  
+**Account ID:** `[id removed]`  
+**splashlens.com Zone ID:** `[id removed]`  
 **Wrangler config:** `C:/Users/sales/.wrangler/config/default.toml`  
 **Python (project use):** `C:/Users/sales/AppData/Local/Programs/Python/Python311/python.exe`
 
@@ -86,7 +86,7 @@ SplashLens is a free-core, offline-first field reference app for pool service te
 
 ### Bing IndexNow
 
-- Key: `7480a549532eec74705e8f33ed2c168a`
+- Key: `[id removed]`
 - Key file: `poolens-site/7480a549532eec74705e8f33ed2c168a.txt` (deployed at `splashlens.com/7480a549532eec74705e8f33ed2c168a.txt`)
 - 304 URLs submitted 2026-05-24 (HTTP 200 confirmed)
 
@@ -128,7 +128,7 @@ SplashLens is a free-core, offline-first field reference app for pool service te
 | `robots.txt` | Crawler rules | Sitemap: `https://splashlens.com/sitemap.xml` |
 | `privacy.html` | Privacy policy | Rebranded from PoolLens, contact: `hello@splashlens.com` |
 | `terms.html` | Terms of service | Rebranded from PoolLens |
-| `7480a549532eec74705e8f33ed2c168a.txt` | IndexNow key file | Content: `7480a549532eec74705e8f33ed2c168a` |
+| `7480a549532eec74705e8f33ed2c168a.txt` | IndexNow key file | Content: `[id removed]` |
 | `automate_launch.py` | Playwright automation | Opens Chromium, handles GSC sitemap submit + CF Analytics + Reddit post fill |
 | `ROUTE_READY_CURRICULUM.md` | Training curriculum | Full 10-module outline, learning outcomes, SplashLens tie-ins, assessments, pricing, build sequence |
 | `PARTNERSHIP_OUTREACH.md` | Outreach scripts | Email copy for Skimmer, Pool Brain, Jobber, PHTA. Includes send order + follow-up rule. |
@@ -218,12 +218,14 @@ File: `poolens/js/errors.js` — 978 lines, syntax validated.
 
 ### Gmail Drafts (ready at gmail.com → Drafts)
 
-| Recipient | Address | Subject |
-|---|---|---|
-| Skimmer | `partnerships@skimmerpro.com` | Partnership idea — we built the field reference layer for your techs |
-| Pool Brain | `info@poolbrain.com` | Your techs are looking up error codes somewhere — it might as well be here |
-| Jobber | `partnerships@getjobber.com` | Partner opportunity — free offline tool for your pool service customers |
-| PHTA | `membership@phta.org` | Free tech tool for PHTA member pool service companies |
+| Recipient | Subject |
+|---|---|
+| Skimmer | Partnership idea — we built the field reference layer for your techs |
+| Pool Brain | Your techs are looking up error codes somewhere — it might as well be here |
+| Jobber | Partner opportunity — free offline tool for your pool service customers |
+| PHTA | Free tech tool for PHTA member pool service companies |
+
+Inbox addresses for these targets stay off this public repo. Use each company's public contact page.
 
 **Send order:** Skimmer first (best fit). Follow-up rule: if no reply in 7 days, send one follow-up. Template in `PARTNERSHIP_OUTREACH.md`.
 
@@ -242,7 +244,7 @@ Posts pre-written in `LAUNCH_REDDIT_POSTS.md`. `automate_launch.py` pre-fills th
 
 ### Session Part 1 (Compacted)
 
-1. **Discovered PoolLens = SplashLens** — user confirmed ownership of splashlens.com already in CF (zone ID: `e1ceb4ea5691b9f30f30f738a3c7e251`). Prior project was called PoolLens internally.
+1. **Discovered PoolLens = SplashLens** — user confirmed ownership of splashlens.com already in CF (zone ID: `[id removed]`). Prior project was called PoolLens internally.
 
 2. **Full rebrand PoolLens → SplashLens** across all files:
    - `poolens/index.html` — bulk Python replace, all URLs + brand strings
@@ -425,4 +427,3 @@ git add -A && git commit -m "your message" && git push origin master
 
 **SplashLens contact:** `hello@splashlens.com`  
 **GitHub org:** `github.com/throttleshare`  
-**CF account email:** `warmsnowman831@gmail.com`

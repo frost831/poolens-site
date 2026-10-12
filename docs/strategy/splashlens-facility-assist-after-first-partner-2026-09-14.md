@@ -1,9 +1,9 @@
-# SplashLens Facility Assist After Tim
+# SplashLens Facility Assist After The First Partner Conversation
 
 Date: 2026-09-14
 Status: Strategy and product framing. No outreach sent from this note.
 
-## What Tim Originally Validated
+## What The First Facility Conversation Validated
 
 The useful signal was not a custom Aquatic Council build. It was the lighter operator workflow:
 
@@ -14,7 +14,7 @@ The useful signal was not a custom Aquatic Council build. It was the lighter ope
 
 ## What We Should Not Do
 
-- Do not chase Tim as the only route.
+- Do not chase one partner as the only route.
 - Do not present Facility Assist as Aquatic Council-backed.
 - Do not build a full CRM or certification product from this lane.
 - Do not claim reopening decisions, code compliance, warranty authority, insurance coverage, or health-department approval.
@@ -72,9 +72,9 @@ Pilot structure:
 - Route closing-season outreach to both tech and facility audiences.
 - Use Field Learning OS to turn real facility incidents into 5-minute review cards.
 
-## Draft Follow-Up If Tim Re-Engages Later
+## Draft Follow-Up If That Partner Re-Engages Later
 
-Hi Tim,
+Hi there,
 
 I completely understand higher-priority items taking over. I did not want to build past your feedback, so I kept the facility/operator lane conservative and partner-led.
 

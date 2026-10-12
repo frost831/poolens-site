@@ -60,7 +60,7 @@ Recommended automation behavior:
 Automation guardrails:
 
 - Draft and remind by default; do not auto-publish until platform credentials, final-asset QA, and an explicit owner approval rule are documented.
-- Never send email or edit `docs/outreach/splashlens-drip-queue.csv` from the content automation.
+- Never send email or edit the local outreach queue from the content automation. That queue is gitignored and must stay off this public repo.
 - Never infer a download, completed workflow, time saved, or paid conversion from a view or click.
 - Never reuse a participant's name, company, quote, photo, or result unless the named-pilot roster shows explicit story approval.
 - Stop and report when the production workflow, tracked destination, or required disclosure does not match the clip.

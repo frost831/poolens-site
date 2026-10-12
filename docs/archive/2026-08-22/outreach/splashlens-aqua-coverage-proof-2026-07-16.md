@@ -9,7 +9,7 @@
 - PoolPro: https://poolpromag.com/splashlens-launches-free-field-reference-app/
 - Boundary: publication coverage is not an endorsement, partnership, customer relationship, or certification.
 
-Laura Carew's confirmation also states that the SplashLens item is scheduled for the AQUA Today e-newsletter on 2026-08-18. Do not describe the newsletter placement as completed before that date is verified.
+AQUA's confirmation also states that the SplashLens item is scheduled for the AQUA Today e-newsletter on 2026-08-18. Do not describe the newsletter placement as completed before that date is verified.
 
 ## Reusable One-to-One Proof Line
 

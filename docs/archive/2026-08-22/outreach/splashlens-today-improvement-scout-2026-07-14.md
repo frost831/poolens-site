@@ -70,7 +70,7 @@ Targets already aligned in the queue or prior prep:
 
 ### Facility / CPO Operator Angle
 
-Current signal: Tim/Aquatic Council feedback points toward a lighter workflow for CPOs, apartment complexes, swim schools, hotels, YMCAs, and municipal pools. Pitch angle: "first safe action, proof, and escalation packet" rather than deep tech troubleshooting.
+Current signal: Aquatic Council feedback points toward a lighter workflow for CPOs, apartment complexes, swim schools, hotels, YMCAs, and municipal pools. Pitch angle: "first safe action, proof, and escalation packet" rather than deep tech troubleshooting.
 
 Best queued lanes:
 
@@ -137,7 +137,7 @@ Pitch should ask for proof requirements and common support misses, not partnersh
 1. Do not send cold outreach while the hard-bounce gate is red.
 2. Research and verify five more robot/automation/spa/new-tech contacts.
 3. Prepare a "New Tech Radar + Service Proof" one-page pitch for AQUA-style product/news editors.
-4. Prepare a "Facility Assist pilot" email for warm Tim/Aquatic Council style conversations.
+4. Prepare a "Facility Assist pilot" email for warm Aquatic Council style conversations.
 5. Recheck Gmail for warm replies. Warm replies can be handled individually because they are not cold drip.
 
 ## Manual Verification Flags

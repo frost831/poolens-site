@@ -17,11 +17,11 @@ These are queued rows already present in `splashlens-drip-queue.csv`; verify aga
 
 | Target | Email | Lane | Recommended angle |
 | --- | --- | --- | --- |
-| Dream Maker Spas | `sales@dreammakerspas.com` | Spa manufacturer | Spa/hot tub proof prompts, Spanish/Canada demand, no warranty or fitment claim |
-| Coast Spas | `info@coastspas.com` | Spa / swim spa / cold plunge | Swim spa, cold plunge, cover/control proof prompts |
-| Wellis | `support@wellis.com` | Spa / swim spa | Swim spa, UV/ozone/control proof prompts |
-| The Pool & Spa Show / NESPA | `info@thepoolspashow.com` | Trade show / education | Education/resource route, Spanish Field Mode, Facility Assist |
-| Northeast Spa & Pool Association / NESPA | `info@nespapool.org` | Association / education | Member education and field-reference feedback |
+| Dream Maker Spas | `[contact removed]` | Spa manufacturer | Spa/hot tub proof prompts, Spanish/Canada demand, no warranty or fitment claim |
+| Coast Spas | `[contact removed]` | Spa / swim spa / cold plunge | Swim spa, cold plunge, cover/control proof prompts |
+| Wellis | `[contact removed]` | Spa / swim spa | Swim spa, UV/ozone/control proof prompts |
+| The Pool & Spa Show / NESPA | `[contact removed]` | Trade show / education | Education/resource route, Spanish Field Mode, Facility Assist |
+| Northeast Spa & Pool Association / NESPA | `[contact removed]` | Association / education | Member education and field-reference feedback |
 
 ## Suggested Copy
 

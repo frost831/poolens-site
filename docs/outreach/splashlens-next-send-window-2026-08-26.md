@@ -21,7 +21,6 @@ Before sending this packet on 2026-08-26 or later:
 Use `https://splashlens.com/campaign.html?utm_source=outreach&utm_medium=email&utm_campaign=closing_season_2026&utm_content=[slug]` as the single tracked link unless a warm context calls for the app link directly.
 
 1. NRPA / Aquatic Facility Operator route
-   - Email: `EGonzales@nrpa.org`
    - Source: `https://health.maryland.gov/phpa/oehfp/chs/documents/pool%20documents/pool%20operator%20courses%20approved%20by%20mdh_01_07_21.pdf`
    - Source status on prep: `200`
    - MX on prep: yes
@@ -29,7 +28,6 @@ Use `https://splashlens.com/campaign.html?utm_source=outreach&utm_medium=email&u
    - Slug: `nrpa_afo_route`
 
 2. Wellis support route
-   - Email: `support@wellis.com`
    - Source: `https://wellis.com/problem-and-error-reporting/`
    - Source status on prep: `200`
    - MX on prep: yes
@@ -37,7 +35,6 @@ Use `https://splashlens.com/campaign.html?utm_source=outreach&utm_medium=email&u
    - Slug: `wellis_support`
 
 3. Cover Valet
-   - Email: `Questions@covervalet.com`
    - Source: `https://covervalet.com/wp-content/uploads/2022/07/Cover-Valet-Pro-Instructions-03-2022.pdf`
    - Source status on prep: `200`
    - MX on prep: yes
@@ -45,7 +42,6 @@ Use `https://splashlens.com/campaign.html?utm_source=outreach&utm_medium=email&u
    - Slug: `cover_valet`
 
 4. Leisure Concepts
-   - Email: `info@leisureconcepts.com`
    - Source: `https://www.leisureconcepts.com/contact-us/`
    - Source status on prep: `200`
    - MX on prep: yes
@@ -53,7 +49,6 @@ Use `https://splashlens.com/campaign.html?utm_source=outreach&utm_medium=email&u
    - Slug: `leisure_concepts`
 
 5. Duffield Aquatics / operator training route
-   - Email: `ayoungblood@duffieldaquatics.com`
    - Source: `https://des.sc.gov/programs/bureau-water/recreational-waters/sc-pool-operator-record`
    - Source status on prep: `200`
    - MX on prep: yes

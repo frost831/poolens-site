@@ -44,7 +44,7 @@ test('every live site paid CTA uses the app handoff and a distinct tracked place
       count++;
     }
   }
-  assert.equal(count, 6);
+  assert.equal(count, 10);
 });
 
 test('site checkout GET is only an app handoff, never a Stripe redirect', async () => {

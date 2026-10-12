@@ -91,6 +91,31 @@
     }[ch]));
   }
 
+  function mobileMenu(items) {
+    const blocks = [];
+    for (const item of items) {
+      if (item.lang) continue;
+      if (!item.items) {
+        blocks.push(`<a href="${esc(item.href)}"><strong>${esc(item.label)}</strong><span>Open this page</span></a>`);
+        continue;
+      }
+      blocks.push(`<div class="sl-nav-menu-heading">${esc(item.label)}</div>`);
+      for (const entry of item.items) {
+        if (entry.heading) {
+          blocks.push(`<div class="sl-nav-menu-heading">${esc(entry.heading)}</div>`);
+          continue;
+        }
+        const [label, href, desc] = entry;
+        blocks.push(`<a href="${esc(href)}"${String(href).startsWith('http') ? ' target="_blank" rel="noopener"' : ''}><strong>${esc(label)}</strong><span>${esc(desc)}</span></a>`);
+      }
+    }
+    return `
+      <details class="sl-nav-menu sl-nav-mobile">
+        <summary>Menu</summary>
+        <div class="sl-nav-menu-panel">${blocks.join('')}</div>
+      </details>`;
+  }
+
   function menu(item) {
     if (!item.items) return `<a class="sl-nav-link" href="${esc(item.href)}">${esc(item.label)}</a>`;
     return `
@@ -153,13 +178,16 @@
       .sl-nav-lang .sl-nav-menu-panel{width:min(300px,calc(100vw - 40px));grid-template-columns:1fr;right:0;left:auto;transform:none}
       .sl-nav-cta{background:#0284c7;color:#fff!important;padding:8px 20px;border-radius:100px;text-decoration:none;font-size:.9rem;font-weight:750;transition:background .2s}
       .sl-nav-cta:hover{background:#0369a1}
+      .sl-nav-mobile{display:none}
       @media(max-width:1180px){.sl-nav-links{gap:6px}.sl-nav-link,.sl-nav-menu summary,.sl-nav-cta{font-size:.82rem}.sl-nav-cta{padding:8px 14px}}
-      @media(max-width:768px){.sl-global-nav{padding:0 14px}.sl-nav-inner{height:auto;min-height:60px;padding:10px 0 8px;gap:10px}.sl-nav-logo-mark{width:34px;height:34px;border-radius:9px}.sl-nav-logo-name{font-size:1rem}.sl-nav-logo-tag{font-size:.48rem}.sl-nav-links{gap:.28rem;justify-content:flex-end;flex-wrap:wrap}.sl-nav-link,.sl-nav-menu:not(.sl-nav-lang){display:none}.sl-nav-lang{display:block}.sl-nav-lang summary{font-size:0;gap:0;padding:7px 8px}.sl-nav-lang summary::before{content:'Lang';font-size:.7rem}.sl-nav-menu-panel,.sl-nav-lang .sl-nav-menu-panel{position:fixed;top:66px;left:14px;right:14px;transform:none;width:auto;max-width:calc(100vw - 28px);grid-template-columns:1fr;max-height:70vh;overflow:auto}.sl-nav-cta{padding:7px 10px;border-radius:8px;font-size:.7rem}}
+      @media(max-width:768px){.sl-global-nav{padding:0 14px}.sl-nav-inner{height:auto;min-height:60px;padding:8px 0;gap:8px}.sl-nav-logo-mark{width:34px;height:34px;border-radius:9px}.sl-nav-logo-name{font-size:1rem}.sl-nav-logo-tag{display:none}.sl-nav-links{gap:6px;justify-content:flex-end;flex-wrap:nowrap}.sl-nav-link,.sl-nav-menu:not(.sl-nav-lang):not(.sl-nav-mobile){display:none}.sl-nav-mobile{display:block}.sl-nav-mobile summary,.sl-nav-lang summary,.sl-nav-cta{min-height:44px;display:inline-flex;align-items:center;justify-content:center}.sl-nav-lang{display:block}.sl-nav-lang summary{font-size:0;gap:0;padding:0 12px}.sl-nav-lang summary::before{content:'Lang';font-size:.85rem}.sl-nav-mobile summary{font-size:.85rem;padding:0 12px}.sl-nav-menu-panel,.sl-nav-lang .sl-nav-menu-panel,.sl-nav-mobile .sl-nav-menu-panel{position:fixed;top:64px;left:14px;right:14px;transform:none;width:auto;max-width:calc(100vw - 28px);grid-template-columns:1fr;max-height:min(70vh,calc(100dvh - 80px));overflow:auto}.sl-nav-mobile .sl-nav-menu-panel a{min-height:44px}.sl-nav-cta{padding:0 12px;border-radius:8px;font-size:.85rem}}
     `;
     document.head.appendChild(tag);
   }
 
   function render() {
+    const existing = document.body.querySelector('nav');
+    if (existing && existing.hasAttribute('data-preserve-nav')) return;
     style();
     const nav = document.createElement('nav');
     nav.className = 'sl-global-nav';
@@ -174,12 +202,12 @@
           </span>
         </a>
         <div class="sl-nav-links">
+          ${mobileMenu(navItems)}
           ${navItems.map(menu).join('')}
           <a href="https://app.splashlens.com" target="_blank" rel="noopener" class="sl-nav-cta">Web App</a>
         </div>
       </div>`;
 
-    const existing = document.body.querySelector('nav');
     if (existing) existing.replaceWith(nav);
     else document.body.prepend(nav);
 

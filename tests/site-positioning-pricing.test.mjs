@@ -24,6 +24,31 @@ test('Teams and Pro offers use the canonical site prices', () => {
   }
 });
 
+test('Teams structured data uses the owner-paid range', () => {
+  const html = read('teams.html');
+  assert.match(html, /"lowPrice":"49"/);
+  assert.match(html, /"highPrice":"79"/);
+  assert.match(html, /\$19\/month or \$149\/year/);
+  assert.doesNotMatch(html, /"price":"99"/);
+});
+
+test('mobile navigation keeps primary pages reachable without replacing localized navs', () => {
+  const nav = read('splashlens-nav.js');
+  assert.match(nav, /class="sl-nav-menu sl-nav-mobile"/);
+  assert.match(nav, /Closing Season/);
+  assert.match(nav, /data-preserve-nav/);
+  for (const name of ['es/index.html', 'es/partsnap.html', 'fr-ca/index.html', 'ca/index.html', 'languages/index.html']) {
+    assert.match(read(name), /data-preserve-nav/, name);
+  }
+});
+
+test('public marketing copy does not invent a partnership or a no-account guarantee', () => {
+  assert.doesNotMatch(read('partners.html'), /Aquatic Council aligned/);
+  assert.doesNotMatch(read('field-learning-os.html'), /Tim\/Aquatic Council/);
+  assert.doesNotMatch(read('index.html'), /No signup\. No install/);
+  assert.doesNotMatch(read('es/index.html'), /no requiere cuenta/);
+});
+
 test('home hero and CRM companion state the product boundary', () => {
   const home = read('index.html');
   const hero = home.slice(home.indexOf('<div class="hero-copy premium-reveal">'), home.indexOf('<div class="hero-actions">'));

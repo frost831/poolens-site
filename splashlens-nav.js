@@ -8,6 +8,9 @@
         ['Parts ID Page', '/partsnap-pool-part-identification-app.html', 'marketing and proof path'],
         ['Job Records', '/partsnap-proof-library.html', 'what to photo before ordering'],
         ['Closing Season', '/closing-season.html', 'winterization proof and callback notes'],
+        ['Filter winterizing', '/closing/winterize-pool-filter.html', 'cartridge, sand, and DE proof'],
+        ['Verified codes', '/verified-equipment-code-lookup.html', 'guide-scoped HeatPro answers only'],
+        ['Works alongside', '/works-alongside-pool-brain-skimmer-jobber.html', 'export a packet; no integration'],
         ['Mystery Lab', '/mystery-part-lab.html', 'weird part review lane'],
         ['AI Scanning', '/#ai', 'error scan, PartSnap, strip reader'],
         ['Open Web App', 'https://app.splashlens.com', 'use the field tools now']
@@ -76,7 +79,8 @@
       items: [
         ['All Languages', '/languages/', 'choose a translated field workflow'],
         ['Canada', '/ca/', 'Canadian field-reference route'],
-        ['Espanol', '/es/', 'Spanish field workflow']
+        ['Espanol', '/es/', 'Spanish field workflow'],
+        ['Francais (Canada)', '/fr-ca/', 'French-Canadian pilot page']
       ]
     }
   ];

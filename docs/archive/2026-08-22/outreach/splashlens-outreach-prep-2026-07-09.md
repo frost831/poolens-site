@@ -46,13 +46,13 @@ Excluded from send-ready queue:
 
 Updated:
 
-- PHTA Pool Professionals Podcast -> `queued`, `marketing@phta.org`, eligible 2026-07-12, with same-organization caution because `service@phta.org` already had prior exposure.
+- PHTA Pool Professionals Podcast -> `queued`, `[contact removed]`, eligible 2026-07-12, with same-organization caution because `[contact removed]` already had prior exposure.
 
 Added:
 
-- Wake Tech Certified Pool Operator Training -> `queued`, `wceresources@waketech.edu`, eligible 2026-07-12.
-- HD Supply Pool Maintenance Training -> `needs-verification`, `customercare@hdsupply.com`, broad customer-care route; find a better training/editorial route before send.
-- New Jersey Pest Management Association CPO -> `queued`, `bonaccib@njpma.org`, eligible 2026-07-12.
+- Wake Tech Certified Pool Operator Training -> `queued`, `[contact removed]`, eligible 2026-07-12.
+- HD Supply Pool Maintenance Training -> `needs-verification`, `[contact removed]`, broad customer-care route; find a better training/editorial route before send.
+- New Jersey Pest Management Association CPO -> `queued`, `[contact removed]`, eligible 2026-07-12.
 - The Training Center Houston instructor route -> `covered-by-sent`, no further cold outreach unless they reply.
 - The Grit Game pool-podcast roundup -> `needs-contact`, use manual/form route only after review.
 
@@ -70,7 +70,7 @@ Queue snapshot after edits:
 
 ## Gmail preflight
 
-Gmail profile used: `frost@belowzeromedia.com`.
+Gmail profile used: `[contact removed]`.
 
 Fresh stop-signal query:
 
@@ -80,11 +80,11 @@ Result: no new matching message ids.
 
 Exact-recipient history checks:
 
-- `wceresources@waketech.edu` -> no messages found.
-- `customercare@hdsupply.com` -> no messages found.
-- `bonaccib@njpma.org` -> no messages found.
-- `marketing@phta.org` -> no messages found.
-- `info@thetrainingcenter.com` -> existing sent history found, including duplicate 2026-07-01 send. Do not send same-organization cold outreach again.
+- `[contact removed]` -> no messages found.
+- `[contact removed]` -> no messages found.
+- `[contact removed]` -> no messages found.
+- `[contact removed]` -> no messages found.
+- `[contact removed]` -> existing sent history found, including duplicate 2026-07-01 send. Do not send same-organization cold outreach again.
 
 ## Next clean send path
 

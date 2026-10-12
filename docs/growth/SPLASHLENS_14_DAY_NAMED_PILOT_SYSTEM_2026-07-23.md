@@ -14,7 +14,7 @@ This is an operating package, not a record of enrolled users. Every roster row b
 | Pool/spa service companies | 5 | Did the workflow improve documentation, escalation, or callback prevention across a team? |
 | Facility or training pilots | 3 | Did the guided workflow make a non-repair operator or learner more confident about the correct next step? |
 
-The source roster is `docs/outreach/splashlens-named-pilot-roster-2026-07-23.csv`.
+The named pilot roster stays local or private. Do not commit it to this public repo.
 
 ## Truth Rules
 

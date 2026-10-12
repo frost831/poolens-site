@@ -1,6 +1,6 @@
 # AQUA Closing Season Send Package - 2026-08-24
 
-Use these images for Laura Carew's requested AQUA updated product listing.
+Use these images for the requested AQUA updated product listing.
 
 ## Attach In This Order
 

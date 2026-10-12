@@ -6,11 +6,11 @@ Email: hello@splashlens.com
 Web app: https://app.splashlens.com  
 iOS: https://apps.apple.com/us/app/splashlens/id6763644905  
 
-## Reply Email To Bethany
+## Reply Email To PoolPro
 
 Subject: SplashLens press release / write-up for PoolPro news
 
-Hi Bethany,
+Hi there,
 
 Thank you for the opportunity. I appreciate you taking a look.
 

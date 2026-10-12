@@ -24,14 +24,14 @@
 
 ## Gmail and outreach truth
 
-- Joshua Frost `<frost@belowzeromedia.com>` mailbox search found no new SplashLens-specific unsubscribe/remove request, complaint, negative reply, or bounce since the previous run.
+- Joshua Frost `<[contact removed]>` mailbox search found no new SplashLens-specific unsubscribe/remove request, complaint, negative reply, or bounce since the previous run.
 - The only new SplashLens inbound thread was a Pool Brain holiday auto-reply on the July 2 PoolPro recognition email; it is not a negative reply, but that route is already hardened as `replied`.
 - A separate committed July 3 run had already spent the 5-email daily SplashLens cap before this pass finished reconciling the branch state.
-- This pass then sent a second 5-email SplashLens batch to `office@mypoolguy.com`, `customerservice@poolcoversinc.com`, `sales@riptidevac.com`, `service@pooltek.com`, and `global@pools.shop`.
+- This pass then sent a second 5-email SplashLens batch to `[contact removed]`, `[contact removed]`, `[contact removed]`, `[contact removed]`, and `[contact removed]`.
 - True July 3 total: 10 cold emails across 10 unique recipients. Treat July 3 as an over-cap coordination failure, not a clean compliant send day.
 
 ## Current blockers
 
 - No further SplashLens outreach should be sent on 2026-07-03.
-- Pentair Pool University at `knowledge@pentair.com` remains the only `queued` row and stays held until `2026-07-15`.
+- Pentair Pool University at `[contact removed]` remains the only `queued` row and stays held until `2026-07-15`.
 - The main issue to fix is same-day queue/mailbox coordination drift so the next daily loop sees already-sent work before selecting recipients.

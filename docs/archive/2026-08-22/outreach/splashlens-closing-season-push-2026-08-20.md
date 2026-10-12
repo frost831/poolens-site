@@ -22,11 +22,11 @@
 
 Send Boundary: draft/approval-ready only unless Joshua explicitly says `send`.
 
-1. PoolRx — `cs@poolrx.com` — chemical/water-care route — closing-season proof before recurring treatment questions.
-2. Jack's Magic — `jacksmagic@jacksmagic.com` — stain/chemistry specialist route — proof prompts before support escalation.
-3. Chlorine King Pool Service — `office@chlorinekingpools.com` — creator/service operator route — one ugly closing-season stop challenge.
-4. Pool Spa Patio Expo — `client.services@poolspapatio.com` — education/trade-show route — field-proof workflow for service education audience.
-5. Raypak technical training route — `warranty@raypak.com` — manufacturer training/support route — better proof before warranty/support questions.
+1. PoolRx — `[contact removed]` — chemical/water-care route — closing-season proof before recurring treatment questions.
+2. Jack's Magic — `[contact removed]` — stain/chemistry specialist route — proof prompts before support escalation.
+3. Chlorine King Pool Service — `[contact removed]` — creator/service operator route — one ugly closing-season stop challenge.
+4. Pool Spa Patio Expo — `[contact removed]` — education/trade-show route — field-proof workflow for service education audience.
+5. Raypak technical training route — `[contact removed]` — manufacturer training/support route — better proof before warranty/support questions.
 
 ## Exact Copy For Service / Creator Recipient
 

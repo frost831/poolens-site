@@ -63,7 +63,7 @@ Avoid:
 
 For now, keep support route configurable. Do not hardcode Aquatic Council as an official support provider in App Store / Play Store metadata unless Joshua confirms the agreement.
 
-If a demo build needs a route for Tim, use a configuration constant or build flag:
+If a demo build needs a partner-specific route, use a configuration constant or build flag:
 
 - `FACILITY_SUPPORT_PHONE`
 - `FACILITY_SUPPORT_LABEL`
@@ -85,7 +85,7 @@ Add lightly to update notes only after native UI exists:
 - Confirm PartSnap and scanner still work.
 - Confirm existing iOS/Android store badges and shell detection remain unchanged.
 
-## Demo Talk Track For Tim
+## Demo Talk Track For The Facility Partner
 
 "We built the light front door before you sent the full map so you can react to something concrete. The service-tech depth is still underneath, but the CPO/facility workflow starts with daily check, dose, contamination, basic equipment, manual/label, or support. The next step is mapping your real call-log categories into this flow."
 

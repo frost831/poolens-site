@@ -2,9 +2,9 @@
 
 Source of truth:
 
-- Queue: `docs/outreach/splashlens-drip-queue.csv`
+- Queue: local-only file, gitignored. Do not commit `docs/outreach/*.csv`.
 - Rules: `docs/outreach/splashlens-drip-rules.md`
-- Run log: `docs/outreach/splashlens-drip-run-log.md`
+- Run log: public placeholder only. Real send logs stay local or private.
 - Public hooks:
   - https://splashlens.com
   - https://splashlens.com/campaign.html

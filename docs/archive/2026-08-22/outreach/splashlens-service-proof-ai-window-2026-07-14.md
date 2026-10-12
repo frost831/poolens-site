@@ -6,7 +6,7 @@ Cold sends today: 0.
 
 Reason: the SplashLens send gate is blocked by the checked-in seven-day hard-bounce rule. The July 13 Wake Tech and NJPMA hard bounces are still inside the hygiene window. Earliest clean recheck is 2026-07-20 unless the rules are intentionally changed.
 
-Warm thread exception: AQUA Magazine / Laura Carew is a replied editorial thread, not a cold-send target. Use only a warm response or the requested product-submission route.
+Warm thread exception: AQUA Magazine is a replied editorial thread, not a cold-send target. Use only a warm response or the requested product-submission route.
 
 ## Best Positioning For The Next Clean Window
 
@@ -26,7 +26,7 @@ Proof lanes:
 
 ## Warm AQUA Submission Packet
 
-Use this for Laura Carew's requested AQUA new-product route.
+Use this for the requested AQUA new-product route.
 
 Product name:
 SplashLens

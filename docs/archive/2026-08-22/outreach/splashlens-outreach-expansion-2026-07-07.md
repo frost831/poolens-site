@@ -5,16 +5,16 @@
 - Parsed the dropped-in Fluidra/Jandy TruClear email and extracted service-relevant product language into `docs/product-intel/jandy-truclear-email-2026-07-07.json`.
 - Reviewed AQUA's New & Improved July 2026 page and added app-relevant items to `docs/product-intel/aqua-new-improved-july-2026-splashlens-intake.md`.
 - Updated the public app and site so SplashLens can truthfully say the current field reference now includes July product radar items, including Jandy TruClear, CCEI/Vigipool/Antea VS, SunnyWhale FinWhale, Water Tech Volt vacs, Jandy Infinite WaterColors, and a hot tub/spa troubleshooting lane.
-- Sent warm scheduling follow-ups to Tim Auerhahn and Lauren Broom.
+- Sent warm scheduling follow-ups to Aquatic Council and Space Coast Pool School.
 - Sent an AQUA editorial follow-up referencing the PoolPro article and the July New & Improved intake.
 
 ## Outreach already sent today
 
 | Lane | Contact | Status | Gmail id | Notes |
 | --- | --- | --- | --- | --- |
-| Warm meeting | Tim Auerhahn / Aquatic Council | sent | `19f3dacc243a830d` | Offered July 8, 9, or 10 Central call windows. |
-| Warm meeting | Lauren Broom / Space Coast Pool School | sent | `19f3dacc6b4711bb` | Reframed SplashLens as a free field reference plus possible training layer. |
-| Editorial | AQUA Magazine editorial | sent | `19f3db01060b65c2` | Referenced PoolPro coverage and the July product-radar app update. |
+| Warm meeting | Aquatic Council | sent | `[id removed]` | Offered July 8, 9, or 10 Central call windows. |
+| Warm meeting | Space Coast Pool School | sent | `[id removed]` | Reframed SplashLens as a free field reference plus possible training layer. |
+| Editorial | AQUA Magazine editorial | sent | `[id removed]` | Referenced PoolPro coverage and the July product-radar app update. |
 
 ## Current hard suppression
 
@@ -24,7 +24,7 @@ Do not contact Fluidra WCS / product support routes again for SplashLens outreac
 
 Primary target:
 
-- AQUA editorial: `editors@aquamagazine.com`
+- AQUA editorial: `[contact removed]`
 - Contact source: `https://www.aquamagazine.com/page/contact-us`
 - Editorial/context source: `https://www.aquamagazine.com/products/article/15828665/new-improved-july-2026`
 

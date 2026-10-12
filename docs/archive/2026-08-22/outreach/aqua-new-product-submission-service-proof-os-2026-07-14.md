@@ -2,7 +2,7 @@
 
 ## Submission Route
 
-Use Laura Carew's replied AQUA thread and the requested new-product submission route.
+Use the replied AQUA thread and the requested new-product submission route.
 
 Do not treat AQUA as cold outreach. They replied and requested a write-up/submission path.
 
@@ -63,7 +63,7 @@ SplashLens is a reference and documentation workflow. It does not diagnose equip
 
 Subject: Re: SplashLens write-up for AQUA
 
-Hi Laura,
+Hi there,
 
 Thank you again. I put together the write-up around the newest SplashLens direction: PartSnap plus Service Proof Passport and Facility Assist.
 

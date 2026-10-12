@@ -77,16 +77,14 @@ Recent verification from the 2026-09-01 deployment:
 
 ## Mail And Notification Trust
 
-Gmail sender profile checked on 2026-09-02:
-
-- Joshua Frost `<frost@belowzeromedia.com>`
+Mailbox identity checked on 2026-09-02. The sending address stays in private mail configuration.
 
 Recent official app alert evidence:
 
-- Gmail message `1a0505464bdeafa5`
+- Message IDs are not stored in this repo.
 - Subject: `[SplashLens] New marketing signup: demo-proof-gate-20260829204140@example.com`
 - From: `SplashLens Alerts <hello@splashlens.com>`
-- Delivered to: `frost+splashlens-alerts@belowzeromedia.com`
+- Delivered to the private alerts mailbox.
 - SPF: pass
 - DKIM: pass for `splashlens.com`
 - DMARC: pass for `splashlens.com`
@@ -189,29 +187,29 @@ These are overlapping keyword counts, not exclusive categories.
 Confirmed from queue notes and Gmail:
 
 1. PoolPro / Kendrick Content
-   - Bethany Branscum replied that PoolPro could include SplashLens.
+   - A PoolPro editor replied that PoolPro could include SplashLens.
    - PoolPro published SplashLens:
      `https://poolpromag.com/splashlens-launches-free-field-reference-app/`
 
 2. AQUA Magazine
-   - Laura Carew / AQUA responded and published SplashLens.
+   - AQUA responded and published SplashLens.
    - AQUA product/software coverage:
      `https://www.aquamagazine.com/products/business-software/article/15830162/splashlens-splashlens-field-reference-app-for-pool-spa-and-facility-professionals`
    - AQUA closing-season coverage:
      `https://www.aquamagazine.com/products/article/15833207/splashlens-splashlens-new-closing-season-mode`
 
 3. Service Industry News
-   - Carrie Dibrell replied that SplashLens looked interesting and wanted to discuss how Service Industry News can help market it.
+   - A Service Industry News contact replied that SplashLens looked interesting and wanted to discuss how Service Industry News can help market it.
    - Thread later moved into ad fit, niche reader alignment, part-source transparency, and performance metrics.
    - This remains a warm media/advertising opportunity, not a closed campaign.
 
-4. Aquatic Council / Tim Auerhahn
-   - Tim engaged on Facility Assist and CPO/operator workflow.
-   - He later said higher-priority projects took over and asked Joshua to reconnect in September.
-   - Current queue says do not recontact Tim before 2026-09-08.
+4. Aquatic Council
+   - A contact there engaged on Facility Assist and CPO/operator workflow.
+   - They later said higher-priority projects took over and asked Joshua to reconnect in September.
+   - Do not recontact that organization before 2026-09-08.
 
-5. Space Coast Pool School / Lauren Broom
-   - Lauren replied with interest and asked what it would include.
+5. Space Coast Pool School
+   - A contact there replied with interest and asked what it would include.
    - This is a warm training/CPO partner lane.
 
 6. App usage and alerting
@@ -223,23 +221,17 @@ Confirmed from queue notes and Gmail:
 Hard suppress:
 
 - Fluidra / product support route
-  - `productsupport@fluidra.com`
-  - Removal request received from Kapri / Fluidra WCS Support.
+  - Removal request received from Fluidra WCS Support.
   - Do not contact Fluidra/Jandy/Polaris/Zodiac through that row unless they initiate.
+  - The suppressed address is recorded outside this public repo.
 
 Known bounces:
 
-- `content@poolonomics.com`
-- `contact@poolnationawards.com`
-- `wceresources@waketech.edu`
-- `bonaccib@njpma.org`
-- `mfrancisco@ymcasumter.org`
-- `rose@upperstate.org`
-- `jjelite.poolservice@gmail.com`
+- Bounced addresses are recorded outside this public repo. Do not reconstruct them here.
 
 Operational rule:
 
-- These addresses must stay suppressed unless a fresh public replacement route is found and verified.
+- Suppressed and bounced addresses must stay suppressed unless a fresh public replacement route is found and verified, and that route must not be committed to this repo.
 
 ## What Has Actually Been Done
 
@@ -395,7 +387,7 @@ Optional Pro tools if you want heavier PartSnap, saved job history, customer-saf
 
 ## Service Industry News Strategy
 
-Carrie’s readers are niche, loyal, and tech-focused. They likely do not want a glossy AI pitch.
+Service Industry News readers are niche, loyal, and tech-focused. They likely do not want a glossy AI pitch.
 
 Best ad angle:
 
@@ -466,7 +458,7 @@ Team Field View:
 
 Facility Access:
 
-- Keep gated/request access for now because Tim originated the facility lane and it may become a partner/pilot path.
+- Keep gated/request access for now because the first facility conversation originated this lane and it may become a partner/pilot path.
 
 Partner/Manufacturer Cards:
 
@@ -521,8 +513,8 @@ Current proof:
 PoolPro published SplashLens.
 AQUA published SplashLens twice, including Closing Season Mode.
 Service Industry News is a warm marketing/ad-fit conversation.
-Tim at Aquatic Council engaged on Facility Assist/CPO workflows but asked to reconnect in September.
-Lauren at Space Coast Pool School showed interest in a training angle.
+An Aquatic Council contact engaged on Facility Assist/CPO workflows but asked to reconnect in September.
+A Space Coast Pool School contact showed interest in a training angle.
 
 Current outreach ledger:
 318 total queue rows.
@@ -539,7 +531,7 @@ Current outreach ledger:
 Additional August 28 run log shows 7 more sent.
 
 Known stop:
-Fluidra productsupport@fluidra.com requested removal. Do not contact.
+Fluidra [contact removed] requested removal. Do not contact.
 
 Current weakness:
 Awareness exists, but paid subscribers are not showing up. The bottleneck appears to be activation proof: getting named techs/companies/facilities to complete one useful workflow, return, give feedback, and then pay.
@@ -579,8 +571,8 @@ The moonshot remains:
 4. Prioritize one CTA: `Try one real thing and tell us Helpful, Saved time, Missing info, or Wrong.`
 5. Build named pilot roster: 25 techs, 5 service companies, 3 facility/training partners.
 6. Build one Service Industry News tracked landing link and QR.
-7. Offer Carrie a small test/hybrid placement measured on app opens, workflows, checkout starts, and paid conversions.
+7. Offer Service Industry News a small test/hybrid placement measured on app opens, workflows, checkout starts, and paid conversions.
 8. Do not spend meaningful PPC until the funnel dashboard shows actual workflow completion and checkout intent.
-9. Reconnect with Tim no earlier than 2026-09-08 unless he writes first.
+9. Reconnect with Aquatic Council no earlier than 2026-09-08 unless they write first.
 10. Keep all official app notices through `hello@splashlens.com`; authenticated app alerts are working.
 

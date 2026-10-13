@@ -29,10 +29,32 @@ test('closing hub links every substantive topic and the working app route', () =
     assert.ok(read('sitemap.xml').includes(`https://splashlens.com/${page}`), `${page} sitemap`);
     assert.ok(read('llms.txt').includes(`https://splashlens.com/${page}`), `${page} AI inventory`);
   }
-  assert.doesNotMatch(hub, /Closing Pro 60-day pass/);
+  assert.match(hub, /Closing Pro is a 60-day pass at \$29, paid once, with no auto-renew/);
+  assert.match(hub, /role="status">coming this week/);
+  assert.doesNotMatch(hub, /upgrade=closing|checkout\.stripe|buy\.stripe/i);
+  const closingOffers = [...hub.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+    .map((match) => JSON.parse(match[1]))
+    .find((item) => item['@type'] === 'SoftwareApplication').offers;
+  assert.deepEqual(closingOffers[0], { '@type': 'Offer', price: '0', priceCurrency: 'USD' });
+  assert.equal(closingOffers.find((offer) => offer.name === 'Closing Pro').price, '29');
   assert.match(hub, /tab=report&amp;workflow=closing&amp;mode=closing/);
   assert.match(hub, /utm_source=site&amp;utm_medium=internal&amp;utm_campaign=closing_2026/);
   assert.match(hub, /not insurance and does not guarantee coverage/);
+});
+
+test('Spanish closing pages state Closing Pro without a checkout link', () => {
+  for (const page of [
+    'es/closing/midwest-pool-closing-checklist.html',
+    'es/closing/winterize-variable-speed-pump.html',
+    'es/closing/winterize-pool-filter.html',
+    'es/closing/winterize-pool-heater.html',
+    'es/closing/winterize-salt-cell.html',
+  ]) {
+    const html = read(page);
+    assert.match(html, /Closing Pro es un pase de 60 días a \$29, pago único, sin renovación automática/, page);
+    assert.match(html, /role="status">coming this week/, page);
+    assert.doesNotMatch(html, /upgrade=closing|checkout\.stripe|buy\.stripe/i, page);
+  }
 });
 
 test('each topic has distinct answer, source, visible matching FAQ and HowTo, and bidirectional links', () => {
@@ -46,6 +68,9 @@ test('each topic has distinct answer, source, visible matching FAQ and HowTo, an
       ? 'Last reviewed October 12, 2026'
       : 'Last reviewed October 5, 2026';
     assert.ok(html.includes(reviewed), `${page} review date`);
+    assert.match(html, /Closing Pro is a 60-day pass at \$29, paid once, with no auto-renew/);
+    assert.match(html, /role="status">coming this week/);
+    assert.doesNotMatch(html, /upgrade=closing|checkout\.stripe|buy\.stripe/i);
     assert.match(html, /href="\/closing-season\.html"/);
     assert.match(html, /tab=report&amp;workflow=closing&amp;mode=closing&amp;utm_source=site&amp;utm_medium=internal&amp;utm_campaign=closing_2026/);
     assert.match(html, /href="https:\/\/(?:www\.)?(?:weather\.gov|pentair\.com|raypak\.com)/);

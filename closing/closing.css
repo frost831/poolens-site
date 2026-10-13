@@ -33,6 +33,7 @@ li{margin-bottom:11px}
 aside{align-self:start;border-top:3px solid #0d9488;padding-top:16px}
 aside ul{list-style:none;padding:0}
 aside li{margin:0;border-bottom:1px solid #cbd5e1;padding:9px 0}
+#closing-pro{border:1px solid #bae6fd;background:#f0f9ff;border-radius:10px;padding:16px 18px;margin:0 0 28px}#closing-pro h2{font-size:1.2rem}#closing-pro p{margin:0 0 8px}#closing-pro [role="status"]{display:inline-block;margin:0;background:#e0f2fe;color:#075985;font-weight:850;border-radius:999px;padding:6px 12px}
 footer{background:#071725;color:#bed2dd;padding:26px 0;font-size:.85rem}
 footer a{color:#7dd3fc}
 @media(max-width:750px){.body{display:block;padding-top:34px}.bar .wrap{align-items:flex-start}.bar nav{flex-wrap:wrap;justify-content:flex-end}.hero{padding:40px 0}aside{margin-top:44px}}

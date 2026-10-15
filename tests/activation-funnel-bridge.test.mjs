@@ -100,6 +100,13 @@ test('homepage app CTAs route visitors into measurable field challenges', () => 
   assert.match(homepage, /challenge_id: destination\.challenge_id/);
 });
 
+test('closing report CTAs are not intercepted by field challenge routing', () => {
+  for (const id of ['season_closing_mode', 'season_closing_proof']) {
+    assert.doesNotMatch(homepage, new RegExp(`challenge_id=${id}`));
+  }
+  assert.match(homepage, /tab=report[^"\n]*workflow=closing/);
+});
+
 test('homepage events carry durable anonymous client and session ids', () => {
   assert.match(homepage, /splashlens-site-client-id/);
   assert.match(homepage, /splashlens-site-session-id/);

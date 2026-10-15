@@ -14,7 +14,7 @@ const aLink = a => `<a href="${a.path}">${escape(a.title)}</a>`;
 const crumbs = entries => `<nav class="breadcrumbs" aria-label="Breadcrumb"><ol>${entries.map(([name, url]) => `<li>${url ? `<a href="${escape(url)}">${escape(name)}</a>` : escape(name)}</li>`).join('')}</ol></nav>`;
 
 const workflowByCluster = {
-  'pool-opening-closing': { label: 'Open closing workflow', params: { tab: 'report', workflow: 'closing', challenge: 'field60', challenge_path: 'closing' } },
+  'pool-opening-closing': { label: 'Open closing workflow', params: { tab: 'report', workflow: 'closing' } },
   'spa-hot-tubs': { label: 'Open spa lookup', params: { tab: 'errors', mode: 'search', search: 'spa' } },
   'robots-cleaners': { label: 'Open cleaner lookup', params: { tab: 'errors', mode: 'search', search: 'robot cleaner' } },
   'automation-controls': { label: 'Open automation workflow', params: { tab: 'route' } },

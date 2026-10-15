@@ -93,7 +93,7 @@ test('every article opens its exact related app workflow instead of the homepage
   assert.ok(destinations.size >= 6, `expected at least 6 workflow destinations, found ${destinations.size}`);
   const closing = workflowForArticle(articles.find(article => article.cluster === 'pool-opening-closing'));
   assert.match(closing.href, /workflow=closing/);
-  assert.match(closing.href, /challenge_path=closing/);
+  assert.equal(new URL(closing.href).searchParams.has('challenge'), false);
   const partSnap = workflowForArticle(articles.find(article => article.cluster === 'partsnap'));
   assert.match(partSnap.href, /tab=scan/);
   assert.match(partSnap.href, /mode=parts/);

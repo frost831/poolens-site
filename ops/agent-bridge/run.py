@@ -30,7 +30,7 @@ ALLOWED_REPOS = {
         'prompt_scope': 'PC owns this web/site repository. Mac runner jobs are not enabled for poolens-site.',
     },
 }
-REPO = 'frost831/throttleshare'
+REPO = os.environ.get('GITHUB_REPOSITORY', 'frost831/poolens-site')
 
 
 def execute(args, *, cwd=None, env=None, check=True, **kwargs):

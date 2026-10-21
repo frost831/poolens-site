@@ -66,7 +66,7 @@ async function forwardToAppFunnel(record, props) {
   identity_source: clean(props.identity_source || props.attribution_source || record.source, 80),
   destination: clean(props.destination, 120),
   client_reference_id: clean(props.client_reference_id, 80),
-  plan: ['monthly', 'yearly'].includes(props.plan) ? props.plan : '',
+  plan: ['monthly', 'yearly', 'closing_pass_60d', 'crew_monthly'].includes(props.plan) ? props.plan : '',
   placement: /^site_[a-z0-9_]{1,60}$/.test(String(props.placement || '')) ? props.placement : '',
   store: props.store === 'web' ? 'web' : '',
   demo: props.demo === true || props.demo === 'true',
@@ -221,7 +221,7 @@ export async function onRequestPost({ request, env }) {
 
  const props = safeAnalyticsProps(body.props);
  const path = safeAnalyticsPath(body.path || props.path);
- const plan = /^(monthly|yearly)$/.test(String(body.plan || props.plan || '')) ? String(body.plan || props.plan) : '';
+ const plan = ['monthly', 'yearly', 'closing_pass_60d', 'crew_monthly'].includes(String(body.plan || props.plan || '')) ? String(body.plan || props.plan) : '';
  const mode = /^[a-z0-9_-]{1,60}$/i.test(String(body.mode || props.mode || '')) ? String(body.mode || props.mode) : '';
  const source = clean(body.source || props.source || 'unknown', 60).replace(/[^a-z0-9_-]/gi, '') || 'unknown';
  const referrer = safeAnalyticsReferrer(request.headers.get('Referer') || body.referrer);

@@ -38,17 +38,22 @@ test('approved Closing Pro and Crew plans are listed without a dead checkout lin
   assert.match(pricing, /\$49-79/);
   assert.ok(pricing.includes(closingProPrice));
   assert.match(pricing, /Crew is \$39 per month for one lead plus up to 3 techs/);
-  assert.match(pricing, /coming this week/);
-  assert.doesNotMatch(pricing, /<a\b[^>]*coming this week/i);
-  assert.doesNotMatch(pricing, /upgrade=closing|upgrade=crew|checkout\.stripe|buy\.stripe|api\/checkout\?plan=(?:closing|crew)/i);
+  assert.match(pricing, /Get Closing Pro — \$29 for 60 days, no auto-renew/);
+  assert.match(pricing, /upgrade=closing_pass_60d&amp;placement=site_home_closing_pro/);
+  assert.match(pricing, /upgrade=crew_monthly&amp;placement=site_home_crew/);
+  assert.match(pricing, /Get Crew — \$39\/mo/);
+  assert.doesNotMatch(pricing, /coming this week/);
+  assert.doesNotMatch(pricing, /checkout\.stripe|buy\.stripe|api\/checkout\?plan=(?:closing|crew)/i);
   const offers = [...home.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
     .map((match) => JSON.parse(match[1]))
     .find((item) => item['@type'] === 'SoftwareApplication').offers;
   assert.deepEqual(offers[0], { '@type': 'Offer', price: '0', priceCurrency: 'USD' });
   assert.equal(offers.find((offer) => offer.name === 'Closing Pro').price, '29');
   assert.equal(offers.find((offer) => offer.name === 'Crew').price, '39');
-  assert.equal(offers.find((offer) => offer.name === 'Closing Pro').availability, 'https://schema.org/PreOrder');
-  assert.equal(offers.find((offer) => offer.name === 'Crew').availability, 'https://schema.org/PreOrder');
+  assert.equal(offers.find((offer) => offer.name === 'Closing Pro').availability, 'https://schema.org/InStock');
+  assert.equal(offers.find((offer) => offer.name === 'Crew').availability, 'https://schema.org/InStock');
+  assert.equal(offers.find((offer) => offer.name === 'Closing Pro').url, 'https://app.splashlens.com/?upgrade=closing_pass_60d');
+  assert.equal(offers.find((offer) => offer.name === 'Crew').url, 'https://app.splashlens.com/?upgrade=crew_monthly');
 });
 
 test('localized pricing pages include both plans only where a pricing section exists', () => {

@@ -44,7 +44,7 @@ test('every live site paid CTA uses the app handoff and a distinct tracked place
       count++;
     }
   }
-  assert.equal(count, 10);
+  assert.equal(count, 14);
 });
 
 test('site checkout GET is only an app handoff, never a Stripe redirect', async () => {
@@ -104,6 +104,19 @@ test('shared click helper beacons reference, plan, placement and web store befor
   assert.match(event.props.client_reference_id, /^sl_checkout_[a-f0-9-]{36}$/);
   assert.equal(destination.searchParams.get('client_reference_id'), event.props.client_reference_id);
   assert.equal(destination.pathname, '/');
+  for (const [plan, placement] of [['closing_pass_60d', 'site_closing_season_hero'], ['crew_monthly', 'site_home_crew']]) {
+    beacons.length = 0;
+    const paid = {
+      href: `https://app.splashlens.com/?upgrade=${plan}&placement=${placement}&utm_source=site`,
+      getAttribute: (key) => ({
+        'data-track': 'checkout_click', 'data-plan': plan, 'data-checkout-placement': placement,
+      })[key] || null,
+    };
+    listeners.get('click')({ target: { closest: () => paid } });
+    const paidEvent = JSON.parse(await beacons[0].body.text());
+    assert.equal(paidEvent.props.plan, plan);
+    assert.equal(new URL(paid.href).searchParams.get('upgrade'), plan);
+  }
 });
 
 test('site checkout click forwards analytics without sending a server email', async (t) => {

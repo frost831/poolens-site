@@ -32,7 +32,7 @@
    var url = new URL(link.href, window.location.href);
    var plan = link.getAttribute("data-plan");
    var placement = link.getAttribute("data-checkout-placement") || "";
-   if (url.origin !== "https://app.splashlens.com" || url.pathname !== "/" || ["monthly", "yearly"].indexOf(plan) < 0 || url.searchParams.get("upgrade") !== plan || !/^site_[a-z0-9_]{1,60}$/.test(placement)) return "";
+   if (url.origin !== "https://app.splashlens.com" || url.pathname !== "/" || ["monthly", "yearly", "closing_pass_60d", "crew_monthly"].indexOf(plan) < 0 || url.searchParams.get("upgrade") !== plan || !/^site_[a-z0-9_]{1,60}$/.test(placement)) return "";
    var bytes = new Uint8Array(16);
    window.crypto.getRandomValues(bytes);
    bytes[6] = (bytes[6] & 15) | 64;

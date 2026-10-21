@@ -40,7 +40,7 @@ test('site pricing clicks carry one anonymous reference through the funnel bridg
   assert.match(source, /client_reference_id: clean\(props\.client_reference_id/);
   assert.match(source, /safeAnalyticsProps\(body\.props\)/);
   assert.match(source, /placement: \/\^site_\[a-z0-9_\]/);
-  assert.match(source, /plan: \['monthly', 'yearly'\]\.includes\(props\.plan\)/);
+  assert.match(source, /plan: \['monthly', 'yearly', 'closing_pass_60d', 'crew_monthly'\]\.includes\(props\.plan\)/);
 });
 
 test('checkout click forwarding preserves the reference and drops personal fields', async (t) => {
@@ -70,6 +70,43 @@ test('checkout click forwarding preserves the reference and drops personal field
   assert.equal(forwarded.props.placement, 'site_partsnap_pricing');
   assert.equal(forwarded.props.plan, 'monthly');
   assert.doesNotMatch(JSON.stringify(forwarded), /private@example\.com/);
+});
+
+test('Closing Pro and Crew checkout clicks keep the plan for Amplitude', async (t) => {
+  const calls = [];
+  t.mock.method(globalThis, 'fetch', async (url, options) => {
+    calls.push({ url: String(url), body: JSON.parse(options.body) });
+    return Response.json({ ok: true, code: 200 });
+  });
+  const db = { prepare: () => ({ bind: () => ({ run: async () => ({}) }) }) };
+  for (const [plan, placement, path] of [
+    ['closing_pass_60d', 'site_closing_season_hero', '/closing-season.html'],
+    ['crew_monthly', 'site_home_crew', '/'],
+  ]) {
+    calls.length = 0;
+    const response = await onRequestPost({
+      request: new Request('https://splashlens.com/api/event', {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain', 'User-Agent': 'Mozilla/5.0 Safari/605.1' },
+        body: JSON.stringify({
+          event: 'checkout_click', source: 'site', path,
+          props: {
+            client_reference_id: 'sl_checkout_01234567-89ab-4cde-8f01-23456789abcd',
+            plan, placement, store: 'web', client_id: 'site-client-12345',
+          },
+        }),
+      }),
+      env: { AMPLITUDE_API_KEY: 'amp_test_key', SUBSCRIBERS_DB: db },
+    });
+    assert.equal(response.status, 200);
+    const funnel = calls.find((call) => call.url === 'https://app.splashlens.com/api/events');
+    const amplitude = calls.find((call) => call.url === 'https://api2.amplitude.com/2/httpapi');
+    assert.equal(funnel.body.props.plan, plan);
+    assert.equal(funnel.body.props.placement, placement);
+    assert.equal(amplitude.body.events[0].event_type, 'checkout_click');
+    assert.equal(amplitude.body.events[0].event_properties.plan, plan);
+    assert.equal(amplitude.body.events[0].event_properties.placement, placement);
+  }
 });
 
 test('the public site event route cannot forge paid proof', async () => {

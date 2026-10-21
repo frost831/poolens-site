@@ -30,8 +30,11 @@ test('closing hub links every substantive topic and the working app route', () =
     assert.ok(read('llms.txt').includes(`https://splashlens.com/${page}`), `${page} AI inventory`);
   }
   assert.match(hub, /Closing Pro is a 60-day pass at \$29, paid once, with no auto-renew/);
-  assert.match(hub, /role="status">coming this week/);
-  assert.doesNotMatch(hub, /upgrade=closing|checkout\.stripe|buy\.stripe/i);
+  assert.match(hub, /Get Closing Pro — \$29 for 60 days, no auto-renew/);
+  assert.match(hub, /href="https:\/\/app\.splashlens\.com\/\?upgrade=closing_pass_60d&amp;placement=site_closing_season_hero&amp;utm_source=site"/);
+  assert.match(hub, /data-track="checklist_click"[^>]*>Use the checklist/);
+  assert.doesNotMatch(hub, /role="status">coming this week/);
+  assert.doesNotMatch(hub, /checkout\.stripe|buy\.stripe/i);
   const closingOffers = [...hub.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
     .map((match) => JSON.parse(match[1]))
     .find((item) => item['@type'] === 'SoftwareApplication').offers;

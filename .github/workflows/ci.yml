@@ -15,11 +15,13 @@ concurrency:
 
 jobs:
   test:
-    runs-on: [self-hosted, pc]
+    runs-on: [self-hosted, pc, ci]
     timeout-minutes: 30
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -27,6 +29,10 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
+      - name: Run public artifact packaging gate
+        run: node --test tests/public-artifact-packaging.test.mjs tests/artifact-runtime-guard.test.mjs
+      - name: Stage public site assets without deployment
+        run: node tools/stage-public-assets.mjs
       - name: Run site regression suite
         run: npm test
       - name: Install Playwright Chromium

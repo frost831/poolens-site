@@ -1,6 +1,6 @@
 name = "poolens-site"
 compatibility_date = "2026-06-11"
-pages_build_output_dir = "."
+pages_build_output_dir = "_deploy/public"
 
 [[d1_databases]]
 binding = "SUBSCRIBERS_DB"

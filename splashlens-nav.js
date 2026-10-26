@@ -180,7 +180,7 @@
       .sl-nav-menu-panel a:hover{border-color:#bae6fd;background:#f0f9ff}
       .sl-nav-lang summary{border:1px solid #dbe8ef;color:#334155;background:#f8fafc;font-weight:750}
       .sl-nav-lang .sl-nav-menu-panel{width:min(300px,calc(100vw - 40px));grid-template-columns:1fr;right:0;left:auto;transform:none}
-      .sl-nav-cta{background:#0284c7;color:#fff!important;padding:8px 20px;border-radius:100px;text-decoration:none;font-size:.9rem;font-weight:750;transition:background .2s}
+      .sl-nav-cta{background:#0369a1;color:#fff!important;padding:8px 20px;border-radius:100px;text-decoration:none;font-size:.9rem;font-weight:750;transition:background .2s}
       .sl-nav-cta:hover{background:#0369a1}
       .sl-nav-mobile{display:none}
       @media(max-width:1180px){.sl-nav-links{gap:6px}.sl-nav-link,.sl-nav-menu summary,.sl-nav-cta{font-size:.82rem}.sl-nav-cta{padding:8px 14px}}

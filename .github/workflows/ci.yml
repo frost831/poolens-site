@@ -29,6 +29,10 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
+      - name: Run public artifact packaging gate
+        run: node --test tests/public-artifact-packaging.test.mjs tests/artifact-runtime-guard.test.mjs
+      - name: Stage public site assets without deployment
+        run: node tools/stage-public-assets.mjs
       - name: Run site regression suite
         run: npm test
       - name: Install Playwright Chromium

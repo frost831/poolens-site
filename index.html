@@ -44,7 +44,7 @@
 </script>
 <style>
  :root {
- --sky: #0284c7;
+ --sky: #0369a1;
  --sky-dark: #0369a1;
  --sky-light: #e0f2fe;
  --sky-xlight: #f0f9ff;
@@ -67,6 +67,8 @@
  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
  html { scroll-behavior: smooth; }
+ .skip-link { position: absolute; left: 12px; top: -60px; z-index: 10000; background: #fff; color: #075985; padding: 10px 14px; border-radius: 8px; font-weight: 800; }
+ .skip-link:focus { top: 12px; }
 
  body {
  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
@@ -268,8 +270,8 @@
  .hero {
  min-height: 720px;
  background:
- linear-gradient(180deg, rgba(2, 8, 23, .72), rgba(2, 8, 23, .58) 44%, rgba(3, 105, 161, .88)),
- url("https://cdn.pixabay.com/photo/2016/03/27/18/58/pool-pump-1283648_1280.jpg") center/cover;
+ radial-gradient(circle at 78% 24%, rgba(14, 165, 233, .36), transparent 42%),
+ linear-gradient(145deg, #020617 0%, #082f49 58%, #075985 100%);
  padding: 66px 24px 32px;
  text-align: left;
  position: relative;
@@ -763,7 +765,7 @@
  --field-position: center;
  }
  .field-photo.pad {
- --field-image: url("https://cdn.pixabay.com/photo/2016/03/27/18/58/pool-pump-1283648_1280.jpg");
+ --field-image: linear-gradient(145deg, #0f172a, #075985);
  --field-position: center;
  }
  .field-photo.scan {
@@ -950,7 +952,7 @@ color: rgba(255,255,255,.9);
 --band-position: center 48%;
 }
 .photo-band.pricing-photo-band {
---band-image: url("https://cdn.pixabay.com/photo/2016/03/27/18/58/pool-pump-1283648_1280.jpg");
+--band-image: linear-gradient(145deg, #0f172a, #075985);
 --band-position: center 58%;
 }
 
@@ -1861,6 +1863,7 @@ gap: 10px;
 
  /* TESTIMONIAL / QUOTE */
  .quote-section { background: var(--sky-xlight); padding: 42px 24px; }
+ .quote-section .section-sub { color: var(--slate-mid); }
  .quote-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
  .quote-card {
  background: white; border-radius: 10px; padding: 18px;
@@ -1904,7 +1907,7 @@ gap: 10px;
  background: var(--slate); color: #94a3b8; padding: 32px 24px;
  text-align: center; font-size: .85rem;
  }
- footer a { color: #7dd3fc; text-decoration: none; }
+ footer a { color: #7dd3fc; text-decoration: underline; text-underline-offset: 2px; }
 
  @media (max-width: 768px) {
  nav { padding: 0 14px; }
@@ -2219,6 +2222,7 @@ gap: 10px;
 <script src="/splashlens-nav.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <!-- NAV -->
 <nav>
@@ -2247,7 +2251,7 @@ gap: 10px;
  <a href="/partsnap-proof-library.html"><strong>Job Records</strong><span>what to photo before ordering</span></a>
  <a href="/mystery-part-lab.html"><strong>Mystery Lab</strong><span>weird part review lane</span></a>
  <a href="/partsnap.html"><strong>Camera Workflows</strong><span>PartSnap, error scan, strip reader</span></a>
- <a href="https://app.splashlens.com" target="_blank"><strong>Open Web App</strong><span>use the field tools now</span></a>
+ <a href="https://app.splashlens.com" target="_blank" rel="noopener"><strong>Open Web App</strong><span>use the field tools now</span></a>
  </div>
 </details>
 <details class="nav-menu equipment-menu">
@@ -2310,11 +2314,12 @@ gap: 10px;
  <a href="/es/" hreflang="es"><strong>Español</strong><span>Spanish field workflow</span></a>
  </div>
 </details>
- <a href="https://app.splashlens.com/?utm_source=site&utm_medium=nav&utm_campaign=field60_home&challenge=field60&challenge_path=app_choice&challenge_id=site_nav_webapp" target="_blank" class="nav-cta" data-track="open_app_click" data-source="nav_webapp">Web App</a>
+ <a href="https://app.splashlens.com/?utm_source=site&utm_medium=nav&utm_campaign=field60_home&challenge=field60&challenge_path=app_choice&challenge_id=site_nav_webapp" target="_blank" class="nav-cta" data-track="open_app_click" data-source="nav_webapp" rel="noopener">Web App</a>
  </div>
  </div>
 </nav>
 
+<main id="main-content">
 <!-- HERO -->
 <div class="hero">
  <div class="hero-inner">
@@ -2326,7 +2331,7 @@ gap: 10px;
    <p class="hero-north-star">Route apps run the company. OEM apps run one brand. SplashLens makes the stuck stop proveable &mdash; then ships the packet.</p>
    <p class="hero-offline">Bad pad signal? After a first online load, cached manual code lookup, dosing calculators, guides, and checklists can work offline. PartSnap and AI scans need internet.</p>
    <div class="hero-actions">
-   <a href="https://app.splashlens.com/?tab=scan&mode=parts&utm_source=site&utm_medium=hero&utm_campaign=field60_home&challenge=field60&challenge_path=partsnap&challenge_id=site_hero_partsnap" target="_blank" class="btn-primary" data-track="partsnap_click" data-source="hero_primary" data-challenge-path="partsnap" data-challenge-id="site_hero_partsnap">
+   <a href="https://app.splashlens.com/?tab=scan&mode=parts&utm_source=site&utm_medium=hero&utm_campaign=field60_home&challenge=field60&challenge_path=partsnap&challenge_id=site_hero_partsnap" target="_blank" class="btn-primary" data-track="partsnap_click" data-source="hero_primary" data-challenge-path="partsnap" data-challenge-id="site_hero_partsnap" rel="noopener">
    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
    Identify A Part
    </a>
@@ -2335,10 +2340,10 @@ gap: 10px;
    <span class="hero-download-label">Free field app</span>
    <div class="store-badges">
    <a href="https://apps.apple.com/us/app/splashlens/id6763644905" target="_blank" rel="noopener" class="store-badge apple" aria-label="Download SplashLens on the App Store" data-track="app_store_download_click" data-source="hero">
-   <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" loading="eager">
+   <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" loading="eager" width="250" height="83">
    </a>
    <a href="https://play.google.com/store/apps/details?id=com.splashlens.fieldtools" target="_blank" rel="noopener" class="store-badge google" aria-label="Get SplashLens on Google Play" data-track="google_play_download_click" data-source="hero">
-   <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" loading="eager">
+   <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" loading="eager" width="646" height="250">
    </a>
    </div>
    </div>
@@ -2357,7 +2362,7 @@ gap: 10px;
   <div class="hero-phone-card premium-reveal" aria-label="PartSnap product screenshot">
    <div class="hero-phone-kicker">PartSnap in the field</div>
    <div class="hero-phone-frame">
-   <img src="/product-screenshots/partsnap-result-proof-mobile.png" alt="SplashLens PartSnap result showing possible part matches and proof prompts" loading="eager">
+   <img src="/product-screenshots/partsnap-result-proof-mobile.png" alt="SplashLens PartSnap result showing possible part matches and proof prompts" loading="eager" fetchpriority="high" width="780" height="3172">
    </div>
    <p class="hero-phone-caption">PartSnap stays cautious: possible match, proof still needed, then cleaner details for the boss, counter, or vendor.</p>
   </div>
@@ -2523,7 +2528,7 @@ gap: 10px;
  <div class="section-eyebrow">Show, don't tell</div>
  <h2>The app should feel obvious in three seconds.</h2>
  <p>A tech sees PartSnap. The boss sees clean job details. A facility operator sees the simple wizard. That is the product story.</p>
- <a href="https://app.splashlens.com/?tab=scan&mode=parts&utm_source=site&utm_medium=showcase&utm_campaign=field60_home&challenge=field60&challenge_path=partsnap&challenge_id=site_showcase_partsnap" target="_blank" class="btn-primary" style="background:#0369a1;color:#fff;box-shadow:none" data-track="partsnap_click" data-source="product_showcase" data-challenge-path="partsnap" data-challenge-id="site_showcase_partsnap">Open PartSnap</a>
+ <a href="https://app.splashlens.com/?tab=scan&mode=parts&utm_source=site&utm_medium=showcase&utm_campaign=field60_home&challenge=field60&challenge_path=partsnap&challenge_id=site_showcase_partsnap" target="_blank" class="btn-primary" style="background:#0369a1;color:#fff;box-shadow:none" data-track="partsnap_click" data-source="product_showcase" data-challenge-path="partsnap" data-challenge-id="site_showcase_partsnap" rel="noopener">Open PartSnap</a>
  </div>
  <div class="phone-stage">
  <figure class="product-phone is-live" aria-label="Live PartSnap app screen">
@@ -2989,7 +2994,7 @@ gap: 10px;
  <li>Opening, closing, weekly, and monthly checklists</li>
  <li>Manual tools after first load, even when the pad has bad signal</li>
  </ul>
-  <a href="https://app.splashlens.com/?utm_source=site&utm_medium=pricing&utm_campaign=field60_home&challenge=field60&challenge_path=app_choice&challenge_id=site_pricing_free" target="_blank" class="btn-price primary" data-track="open_app_click" data-source="pricing_free" data-challenge-path="app_choice" data-challenge-id="site_pricing_free">Open SplashLens</a>
+  <a href="https://app.splashlens.com/?utm_source=site&utm_medium=pricing&utm_campaign=field60_home&challenge=field60&challenge_path=app_choice&challenge_id=site_pricing_free" target="_blank" class="btn-price primary" data-track="open_app_click" data-source="pricing_free" data-challenge-path="app_choice" data-challenge-id="site_pricing_free" rel="noopener">Open SplashLens</a>
  </div>
  <div class="price-card">
  <div class="price-card-badge">SplashLens Pro</div>
@@ -3124,15 +3129,15 @@ gap: 10px;
  <div class="container">
  <h2>Ready to stop Googling error codes at the equipment pad?</h2>
  <p>Open the web app in the browser. Manual lookup starts without an account. AI scans use a free field profile. For details, read the <a href="/faq.html" style="color:#fff;font-weight:900;text-decoration-thickness:2px;text-underline-offset:3px">full FAQ</a>.</p>
- <a href="https://app.splashlens.com/?utm_source=site&utm_medium=bottom_cta&utm_campaign=field60_home&challenge=field60&challenge_path=app_choice&challenge_id=site_bottom_cta" target="_blank" class="btn-primary" data-track="open_app_click" data-source="bottom_cta" data-challenge-path="app_choice" data-challenge-id="site_bottom_cta" style="display:inline-flex;gap:8px;align-items:center">
+ <a href="https://app.splashlens.com/?utm_source=site&utm_medium=bottom_cta&utm_campaign=field60_home&challenge=field60&challenge_path=app_choice&challenge_id=site_bottom_cta" target="_blank" class="btn-primary" data-track="open_app_click" data-source="bottom_cta" data-challenge-path="app_choice" data-challenge-id="site_bottom_cta" style="display:inline-flex;gap:8px;align-items:center" rel="noopener">
  Open SplashLens Free
  </a>
  <div class="store-badges" style="margin-top:18px" aria-label="Download SplashLens">
  <a href="https://apps.apple.com/us/app/splashlens/id6763644905" target="_blank" rel="noopener" class="store-badge apple" aria-label="Download SplashLens on the App Store" data-track="app_store_download_click" data-source="bottom_cta">
- <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" loading="lazy">
+ <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" loading="lazy" width="250" height="83">
  </a>
  <a href="https://play.google.com/store/apps/details?id=com.splashlens.fieldtools" target="_blank" rel="noopener" class="store-badge google" aria-label="Get SplashLens on Google Play" data-track="google_play_download_click" data-source="bottom_cta">
- <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" loading="lazy">
+ <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" loading="lazy" width="646" height="250">
  </a>
  </div>
  </div>
@@ -3151,6 +3156,7 @@ gap: 10px;
  <p id="route-ready-status" role="status" style="font-size:12px;color:#fff;margin-top:14px;min-height:18px;font-weight:800"></p>
  </div>
 </section>
+ </main>
 <footer>
  <div class="container">
  <p>Copyright 2026 SplashLens - Built for pool service professionals - <a href="https://app.splashlens.com">app.splashlens.com</a></p>

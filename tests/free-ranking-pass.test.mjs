@@ -34,7 +34,10 @@ test('new ranking pages are indexable, titled, and free of invented ratings or p
     assert.ok(html.includes(`rel="canonical" href="${url}"`), page);
     assert.match(html, /<p class="answer">/, page);
     assert.doesNotMatch(html, /aggregateRating|ratingValue|reviewCount/, page);
-    const withoutApprovedPass = html.replace(/Closing Pro (?:is a 60-day pass at \$29, paid once, with no auto-renew|es un pase de 60 días a \$29, pago único, sin renovación automática)\./g, '');
+    const withoutApprovedPass = html
+      .replace(/Closing Pro (?:is a 60-day pass at \$29, paid once, with no auto-renew|es un pase de 60 días a \$29, pago único, sin renovación automática)\./g, '')
+      .replace(/Get Closing Pro, \$29 for 60 days, no auto-renew/g, '')
+      .replace(/Obtener Closing Pro, \$29 por 60 días, sin renovación automática/g, '');
     assert.doesNotMatch(withoutApprovedPass, /\$\d/, page);
     assert.ok(sitemap.includes(url), page);
     for (const match of html.matchAll(/(?:href|src)="(\/[^"?#]+)"/g)) {

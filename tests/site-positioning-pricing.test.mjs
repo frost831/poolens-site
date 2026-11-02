@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
+import { fileURLToPath } from 'node:url';
 
 const root = new URL('../', import.meta.url);
 const read = (name) => fs.readFileSync(new URL(name, root), 'utf8');
@@ -38,10 +39,10 @@ test('approved Closing Pro and Crew plans are listed without a dead checkout lin
   assert.match(pricing, /\$49-79/);
   assert.ok(pricing.includes(closingProPrice));
   assert.match(pricing, /Crew is \$39 per month for one lead plus up to 3 techs/);
-  assert.match(pricing, /Get Closing Pro — \$29 for 60 days, no auto-renew/);
+  assert.match(pricing, /Get Closing Pro, \$29 for 60 days, no auto-renew/);
   assert.match(pricing, /upgrade=closing_pass_60d&amp;placement=site_home_closing_pro/);
   assert.match(pricing, /upgrade=crew_monthly&amp;placement=site_home_crew/);
-  assert.match(pricing, /Get Crew — \$39\/mo/);
+  assert.match(pricing, /Get Crew, \$39\/mo/);
   assert.doesNotMatch(pricing, /coming this week/);
   assert.doesNotMatch(pricing, /checkout\.stripe|buy\.stripe|api\/checkout\?plan=(?:closing|crew)/i);
   const offers = [...home.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
@@ -64,7 +65,29 @@ test('localized pricing pages include both plans only where a pricing section ex
     if (!/id="pricing"|class="price-grid"|Simple Pricing|Precios|Tarifs/.test(html)) continue;
     assert.match(html, /Closing Pro is a 60-day pass at \$29, paid once, with no auto-renew/, name);
     assert.match(html, /Crew is \$39 per month for one lead plus up to 3 techs/, name);
-    assert.match(html, /coming this week/, name);
+    assert.match(html, /upgrade=closing_pass_60d/, name);
+    assert.match(html, /upgrade=crew_monthly/, name);
+    assert.doesNotMatch(html, /coming this week|not live yet|does not open a payment page/, name);
+  }
+});
+
+test('public pages do not say Closing Pro or Crew checkout is still coming', () => {
+  const banned = /coming this week|not live yet|does not open a payment page|todavía no está activo|Checkout for both is coming this week/;
+  const skip = new Set(['node_modules', '.git', '_deploy', 'docs', 'tests']);
+  const rootPath = fileURLToPath(root);
+  const files = [];
+  const walk = (directory) => {
+    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+      if (skip.has(entry.name) || entry.name.startsWith('.')) continue;
+      const filename = path.join(directory, entry.name);
+      if (entry.isDirectory()) walk(filename);
+      else if (entry.name.endsWith('.html')) files.push(filename);
+    }
+  };
+  walk(rootPath);
+  assert.ok(files.length > 20);
+  for (const filename of files) {
+    assert.doesNotMatch(fs.readFileSync(filename, 'utf8'), banned, path.relative(rootPath, filename));
   }
 });
 

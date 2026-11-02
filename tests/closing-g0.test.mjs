@@ -30,7 +30,7 @@ test('closing hub links every substantive topic and the working app route', () =
     assert.ok(read('llms.txt').includes(`https://splashlens.com/${page}`), `${page} AI inventory`);
   }
   assert.match(hub, /Closing Pro is a 60-day pass at \$29, paid once, with no auto-renew/);
-  assert.match(hub, /Get Closing Pro — \$29 for 60 days, no auto-renew/);
+  assert.match(hub, /Get Closing Pro, \$29 for 60 days, no auto-renew/);
   assert.match(hub, /href="https:\/\/app\.splashlens\.com\/\?upgrade=closing_pass_60d&amp;placement=site_closing_season_hero&amp;utm_source=site"/);
   assert.match(hub, /data-track="checklist_click"[^>]*>Use the checklist/);
   assert.doesNotMatch(hub, /role="status">coming this week/);
@@ -40,23 +40,27 @@ test('closing hub links every substantive topic and the working app route', () =
     .find((item) => item['@type'] === 'SoftwareApplication').offers;
   assert.deepEqual(closingOffers[0], { '@type': 'Offer', price: '0', priceCurrency: 'USD' });
   assert.equal(closingOffers.find((offer) => offer.name === 'Closing Pro').price, '29');
+  assert.equal(closingOffers.find((offer) => offer.name === 'Closing Pro').availability, 'https://schema.org/InStock');
   assert.match(hub, /tab=report&amp;workflow=closing&amp;mode=closing/);
   assert.match(hub, /utm_source=site&amp;utm_medium=internal&amp;utm_campaign=closing_2026/);
   assert.match(hub, /not insurance and does not guarantee coverage/);
 });
 
-test('Spanish closing pages state Closing Pro without a checkout link', () => {
-  for (const page of [
-    'es/closing/midwest-pool-closing-checklist.html',
-    'es/closing/winterize-variable-speed-pump.html',
-    'es/closing/winterize-pool-filter.html',
-    'es/closing/winterize-pool-heater.html',
-    'es/closing/winterize-salt-cell.html',
-  ]) {
+test('Spanish closing pages link live Closing Pro checkout', () => {
+  const placements = {
+    'es/closing/midwest-pool-closing-checklist.html': 'site_closing_es_midwest',
+    'es/closing/winterize-variable-speed-pump.html': 'site_closing_es_vsp',
+    'es/closing/winterize-pool-filter.html': 'site_closing_es_filter',
+    'es/closing/winterize-pool-heater.html': 'site_closing_es_heater',
+    'es/closing/winterize-salt-cell.html': 'site_closing_es_salt',
+  };
+  for (const [page, placement] of Object.entries(placements)) {
     const html = read(page);
     assert.match(html, /Closing Pro es un pase de 60 días a \$29, pago único, sin renovación automática/, page);
-    assert.match(html, /role="status">coming this week/, page);
-    assert.doesNotMatch(html, /upgrade=closing|checkout\.stripe|buy\.stripe/i, page);
+    assert.match(html, new RegExp(`upgrade=closing_pass_60d&amp;placement=${placement}&amp;utm_source=site`), page);
+    assert.match(html, /Obtener Closing Pro, \$29 por 60 días, sin renovación automática/, page);
+    assert.doesNotMatch(html, /coming this week|todavía no está activo|not live yet|does not open a payment page/, page);
+    assert.doesNotMatch(html, /checkout\.stripe|buy\.stripe/i, page);
   }
 });
 
@@ -72,8 +76,10 @@ test('each topic has distinct answer, source, visible matching FAQ and HowTo, an
       : 'Last reviewed October 5, 2026';
     assert.ok(html.includes(reviewed), `${page} review date`);
     assert.match(html, /Closing Pro is a 60-day pass at \$29, paid once, with no auto-renew/);
-    assert.match(html, /role="status">coming this week/);
-    assert.doesNotMatch(html, /upgrade=closing|checkout\.stripe|buy\.stripe/i);
+    assert.match(html, /Get Closing Pro, \$29 for 60 days, no auto-renew/);
+    assert.match(html, /upgrade=closing_pass_60d&amp;placement=site_closing_/);
+    assert.doesNotMatch(html, /coming this week|not live yet|does not open a payment page/);
+    assert.doesNotMatch(html, /checkout\.stripe|buy\.stripe/i);
     assert.match(html, /href="\/closing-season\.html"/);
     assert.match(html, /tab=report&amp;workflow=closing&amp;mode=closing&amp;utm_source=site&amp;utm_medium=internal&amp;utm_campaign=closing_2026/);
     assert.match(html, /href="https:\/\/(?:www\.)?(?:weather\.gov|pentair\.com|raypak\.com)/);

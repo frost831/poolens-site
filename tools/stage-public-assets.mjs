@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { compileFaq, mountFaqWidgets } from './compile-splashlens-faq.mjs';
 
 const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
 const publicDirs = new Set(['blog', 'brands', 'ca', 'closing', 'error-codes', 'es', 'field-challenge', 'fr-ca', 'ht', 'languages', 'lp', 'pool-automation', 'pool-hardware', 'pool-heaters', 'pool-lighting', 'pool-parts', 'pool-pumps', 'pool-robots', 'pool-tech-training', 'product-screenshots', 'pt-br', 'salt-cells', 'source-pages', 'service-proof-passport']);
@@ -12,6 +13,7 @@ const rootFiles = new Set([
   'icon-192.png', 'icon-512.png', 'icon.png', 'site.webmanifest',
   'splashlens-icon-180.png', 'splashlens-icon-512.png', 'splashlens-share-card.png',
   'ga4.js', 'paid-search.css', 'paid-search.js', 'splashlens-nav.js',
+  'splashlens-faq-chat.css', 'splashlens-faq-guard.js', 'splashlens-faq-chat.js', 'splashlens-faq-launcher.js',
   'category-hub-sitemap.xml', 'pseo-sitemap.xml', 'seo-hub-sitemap.xml',
   'sitemap-index.xml', 'sitemap.xml', 'source-pages-sitemap.xml',
   ...[
@@ -28,15 +30,17 @@ const rootFiles = new Set([
     'pool-tech-field-reference-app', 'pool-tech-training-field-reference', 'privacy',
     'route-ready', 'salt-cell-troubleshooting-app', 'service-proof-passport',
     'spa-hot-tub-troubleshooting-app', 'spa-swim-spa-parts-identification-app', 'stats',
-    'teams', 'terms', 'verified-equipment-code-lookup', 'verified-field-network',
+    'support', 'teams', 'terms', 'verified-equipment-code-lookup', 'verified-field-network',
     'what-app-identifies-pool-parts', 'whats-new', 'works-alongside-pool-brain-skimmer-jobber',
   ].map(name => `${name}.html`),
 ]);
-const privateDirs = new Set(['editorial', 'docs', 'tools', 'tests', 'functions', 'src', 'server', 'node_modules', 'ios', 'android', '_deploy']);
+const privateDirs = new Set(['content', 'editorial', 'docs', 'tools', 'tests', 'functions', 'src', 'server', 'node_modules', 'ios', 'android', '_deploy']);
 const privateFile = /^(?:package(?:-lock)?\.json|npm-shrinkwrap\.json|composer\.(?:json|lock)|wrangler\.(?:toml|jsonc?)|config\.json|credentials\.json)$/i;
 
 export async function stage({ sourceRoot = root, publish = false } = {}) {
   sourceRoot = path.resolve(sourceRoot);
+  const siteBuild = sourceRoot === root;
+  if (siteBuild) await compileFaq({ sourceRoot });
   const staging = path.join(sourceRoot, '_deploy');
   const existing = await fs.lstat(staging).catch(error => {
     if (error.code !== 'ENOENT') throw error;
@@ -62,7 +66,11 @@ export async function stage({ sourceRoot = root, publish = false } = {}) {
     }
   }
   await copy(sourceRoot);
-  for (const forbidden of ['editorial', 'docs', 'tools', 'tests', 'functions', '.git', 'node_modules', '.wrangler', '_deploy']) {
+  if (siteBuild) {
+    await mountFaqWidgets(output, sourceRoot);
+    await compileFaq({ sourceRoot, pages: output });
+  }
+  for (const forbidden of ['content', 'editorial', 'docs', 'tools', 'tests', 'functions', '.git', 'node_modules', '.wrangler', '_deploy']) {
     if (await fs.stat(path.join(output, forbidden)).catch(() => null)) throw new Error(`Private asset staged: ${forbidden}`);
   }
   if (publish) {

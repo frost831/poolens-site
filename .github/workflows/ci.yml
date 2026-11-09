@@ -37,5 +37,7 @@ jobs:
         run: npm test
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
+      - name: Verify staged FAQ in Chromium
+        run: npm run qa:faq
       - name: Run live desktop and mobile UI audit
         run: npm run qa:live-ui

@@ -55,8 +55,14 @@
  Content-Type: text/html; charset=UTF-8
 
 /faq
- Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+ Cache-Control: no-cache, must-revalidate
  Content-Type: text/html; charset=UTF-8
+
+/support
+ Cache-Control: no-cache, must-revalidate
+
+/splashlens-faq-*
+ Cache-Control: no-cache, must-revalidate
 
 /sitemap.xml
  Cache-Control: public, max-age=3600, s-maxage=3600, must-revalidate

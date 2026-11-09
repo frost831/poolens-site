@@ -1,0 +1,340 @@
+[
+  {
+    "id": "app-overview",
+    "title": "What SplashLens does",
+    "source": "/faq.html#app-overview",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "what is splashlens",
+      "what does splashlens do",
+      "splashlens overview",
+      "what kind of app is splashlens"
+    ]
+  },
+  {
+    "id": "app-audience",
+    "title": "Who SplashLens is for",
+    "source": "/faq.html#app-audience",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "who is the app for",
+      "who is splashlens for",
+      "intended audience",
+      "who should use splashlens"
+    ]
+  },
+  {
+    "id": "free-core",
+    "title": "Free core tools",
+    "source": "/faq.html#free-core",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "is it free",
+      "is splashlens free",
+      "free core tools",
+      "which tools are free",
+      "what is free"
+    ]
+  },
+  {
+    "id": "saved-visits",
+    "title": "Saved Visit History",
+    "source": "/faq.html#saved-visits",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "what is saved visit history",
+      "what does saved visit history include",
+      "what is a service proof passport",
+      "visit history"
+    ]
+  },
+  {
+    "id": "customer-sharing",
+    "title": "Review before sharing",
+    "source": "/faq.html#customer-sharing",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "can i share a passport with a customer",
+      "can a passport be shared with a customer",
+      "share proof with a customer",
+      "what should i check before sharing a customer summary"
+    ]
+  },
+  {
+    "id": "partsnap-overview",
+    "title": "What PartSnap does",
+    "source": "/faq.html#partsnap-overview",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "what is partsnap",
+      "what does partsnap do",
+      "how does partsnap work",
+      "partsnap overview"
+    ]
+  },
+  {
+    "id": "partsnap-fit",
+    "title": "Part fit and ordering limits",
+    "source": "/faq.html#partsnap-fit",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "does partsnap guarantee the exact replacement part",
+      "does partsnap guarantee fit",
+      "can partsnap confirm fitment",
+      "does partsnap guarantee the right part",
+      "is the part match guaranteed"
+    ]
+  },
+  {
+    "id": "partsnap-evidence",
+    "title": "What to capture before ordering",
+    "source": "/faq.html#partsnap-evidence",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "what should a tech capture before ordering",
+      "what photos do i need before ordering",
+      "what proof should i capture",
+      "what evidence should i capture before buying a part"
+    ]
+  },
+  {
+    "id": "ai-summaries",
+    "title": "AI summary availability",
+    "source": "/faq.html#ai-summaries",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "are ai summaries always available",
+      "when are ai summaries available",
+      "do ai summaries need internet",
+      "can ai summaries work without internet"
+    ]
+  },
+  {
+    "id": "offline-tools",
+    "title": "Offline tools",
+    "source": "/faq.html#offline-tools",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "what works offline",
+      "what can i use offline",
+      "which tools work offline",
+      "what can i do without internet",
+      "does splashlens work offline"
+    ]
+  },
+  {
+    "id": "crm-fit",
+    "title": "Route software and CRM",
+    "source": "/faq.html#crm-fit",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "does splashlens replace route software or crm",
+      "does splashlens replace my crm",
+      "is this a route management app",
+      "can it replace dispatch software"
+    ]
+  },
+  {
+    "id": "export-first",
+    "title": "Using SplashLens with route tools",
+    "source": "/faq.html#export-first",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "can i use splashlens with skimmer",
+      "can i use splashlens with jobber",
+      "does it work alongside pool brain",
+      "how do i use splashlens beside my crm"
+    ]
+  },
+  {
+    "id": "manual-authority",
+    "title": "Manufacturer and local rules",
+    "source": "/faq.html#manual-authority",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "does splashlens replace manufacturer manuals",
+      "does it replace local code or cpo training",
+      "do i still need the manufacturer manual",
+      "can i skip the manual"
+    ]
+  },
+  {
+    "id": "escalation",
+    "title": "When to escalate field work",
+    "source": "/faq.html#escalation",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "what work should be escalated",
+      "when should i escalate a job",
+      "which field jobs need a qualified person",
+      "should i escalate unsafe work"
+    ]
+  },
+  {
+    "id": "account-help",
+    "title": "Start using SplashLens",
+    "source": "/support.html#account-help",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "how do i create an account",
+      "do i need an account",
+      "how do i sign up",
+      "how do i start using splashlens",
+      "can i look up codes without an account",
+      "do i need a profile for scans"
+    ]
+  },
+  {
+    "id": "access-help",
+    "title": "Access your profile",
+    "source": "/support.html#access-help",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "how do i sign in",
+      "how do i regain access",
+      "i cannot access my profile",
+      "i cant log in",
+      "forgot password",
+      "where do i open account",
+      "how do i get back into my profile"
+    ]
+  },
+  {
+    "id": "restore-help",
+    "title": "Restore web Pro access",
+    "source": "/support.html#restore-help",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "how do i restore pro",
+      "restore paid access",
+      "how do i restore my web purchase",
+      "i lost my pro access",
+      "restore from checkout email"
+    ]
+  },
+  {
+    "id": "deletion-help",
+    "title": "Verified account and data deletion",
+    "source": "/support.html#deletion-help",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "how do i delete my account",
+      "how do i delete my data",
+      "where is the deletion form",
+      "close my account",
+      "request data deletion",
+      "how do i remove my account",
+      "how do i remove saved server data",
+      "delete my profile"
+    ]
+  },
+  {
+    "id": "privacy-help",
+    "title": "App privacy and retention",
+    "source": "/support.html#privacy-help",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "where is my data stored",
+      "where is the privacy policy",
+      "how does splashlens use my data",
+      "what data does splashlens collect",
+      "how long is data kept",
+      "what happens to my scan photos",
+      "what is the data retention policy",
+      "app privacy"
+    ]
+  },
+  {
+    "id": "data-help",
+    "title": "Access, correct, or export data",
+    "source": "/support.html#data-help",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "how do i export my data",
+      "how do i request a data copy",
+      "how do i correct my data",
+      "how do i access my data",
+      "request a copy of my data",
+      "can i download my account data"
+    ]
+  },
+  {
+    "id": "pricing-help",
+    "title": "Current plans and pricing",
+    "source": "/support.html#pricing-help",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "where can i see current pricing",
+      "what plans are available",
+      "how much does splashlens cost",
+      "where are the paid plans",
+      "what is the current pro price",
+      "pricing"
+    ]
+  },
+  {
+    "id": "billing-help",
+    "title": "Billing, cancellation, and refunds",
+    "source": "/support.html#billing-help",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "how do i cancel my subscription",
+      "can i get a refund",
+      "who do i contact about a charge",
+      "does deleting my account cancel my subscription",
+      "how do i stop being billed",
+      "billing help"
+    ]
+  },
+  {
+    "id": "teams-help",
+    "title": "Teams and member access",
+    "source": "/support.html#teams-help",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "how do i invite a teammate",
+      "how do i remove a team member",
+      "who owns a team",
+      "how do team permissions work",
+      "where can i learn about teams",
+      "can i change team roles"
+    ]
+  },
+  {
+    "id": "terms-help",
+    "title": "Terms of Service",
+    "source": "/support.html#terms-help",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "where are the terms of service",
+      "what rules apply to the app",
+      "where are the terms and conditions",
+      "where can i read the usage rules"
+    ]
+  },
+  {
+    "id": "report-help",
+    "title": "Report a problem",
+    "source": "/support.html#report-help",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "how do i report abuse",
+      "how do i report a security issue",
+      "how do i report an accessibility problem",
+      "where can i report a vulnerability"
+    ]
+  },
+  {
+    "id": "contact-help",
+    "title": "Contact SplashLens support",
+    "source": "/support.html#contact-help",
+    "lastReviewed": "2026-11-09",
+    "queries": [
+      "how do i contact support",
+      "what is the support email",
+      "how can i get help",
+      "how can i talk to a human",
+      "contact splashlens"
+    ]
+  }
+]

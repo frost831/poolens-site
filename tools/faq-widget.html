@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="/splashlens-faq-chat.css">
+<p id="sl-faq-move-help" class="sl-faq-move-help">Drag to move. With the button focused, use arrow keys to move and Enter to open.</p>
+<button hidden type="button" class="sl-faq-launcher" id="sl-faq-launcher" aria-label="Ask SplashLens FAQ" aria-describedby="sl-faq-move-help" aria-haspopup="dialog" aria-controls="sl-faq-dialog" aria-expanded="false">
+  <img src="/splashlens-icon-180.png" width="36" height="36" alt="">
+</button>
+<dialog class="sl-faq-dialog" id="sl-faq-dialog" aria-labelledby="sl-faq-title">
+  <div class="sl-faq-dialog__bar">
+    <a href="/faq.html">Browse FAQ</a>
+    <button id="sl-faq-close" type="button" autofocus>Close</button>
+  </div>
+  <section class="sl-faq-chat" id="ask-splashlens">
+    <header class="sl-faq-chat__header">
+      <h2 id="sl-faq-title">Ask SplashLens</h2>
+      <button id="sl-faq-clear" class="sl-faq-chat__clear" type="button" disabled>Clear chat</button>
+    </header>
+    <p>Ask the public FAQ. Leave out emails, account details, and other personal information.</p>
+    <div class="sl-faq-chat__log" id="sl-faq-log" role="log" aria-label="FAQ conversation" aria-live="polite" tabindex="0">
+      <div class="sl-faq-chat__bubble">
+        <span class="sl-faq-chat__speaker">SplashLens</span>
+        <p>I can help you find verified answers about the app, PartSnap, and account options.</p>
+      </div>
+    </div>
+    <div class="sl-faq-chat__starters" aria-label="Starter questions">
+      <button type="button" data-faq-question="What works offline?" disabled>What works offline?</button>
+      <button type="button" data-faq-question="What is PartSnap?" disabled>What is PartSnap?</button>
+      <button type="button" data-faq-question="How do I delete my account?" disabled>Delete my account</button>
+    </div>
+    <form id="sl-faq-form" autocomplete="off">
+      <label for="sl-faq-question">Your question</label>
+      <input id="sl-faq-question" type="text" maxlength="240" placeholder="Ask about SplashLens" spellcheck="false" disabled>
+      <div class="sl-faq-chat__controls">
+        <button id="sl-faq-submit" type="submit" disabled>Send</button>
+        <a href="/support.html">Contact support</a>
+      </div>
+      <p id="sl-faq-status" class="sl-faq-chat__status" role="status"></p>
+    </form>
+  </section>
+</dialog>
+<script type="module" src="/splashlens-faq-launcher.js"></script>

@@ -10,6 +10,13 @@ const canonical = '<link rel="canonical" href="https://splashlens.com/faq.html">
 const answer = '<p id="offline-tools" data-faq-answer>Manual reference tools can work offline.</p>';
 const page = content => '<!doctype html><html><head>' + canonical + '</head><body><main>' + content + '</main><!-- splashlens-faq-widget --></body></html>';
 const entry = { id: 'offline-tools', title: 'Offline tools', source: '/faq.html#offline-tools', lastReviewed: '2026-11-09', queries: ['what works offline'] };
+
+test('support uses Pages clean URLs without a rewrite back to the HTML path', async () => {
+  const redirects = await readFile(new URL('../_redirects', import.meta.url), 'utf8');
+  // Pages redirects /support.html to /support, so the reverse rewrite loops.
+  assert.doesNotMatch(redirects, /^[ \t]*\/support\/?[ \t]+\/support\.html(?:[ \t]|$)/mu);
+});
+
 const fixture = async t => {
   const parent = await realpath(os.tmpdir());
   const root = await mkdtemp(path.join(parent, 'splashlens-faq-test-'));

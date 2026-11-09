@@ -5,7 +5,7 @@ export function createFaqLimiter({ clock = Date.now, perClient = 10, total = 240
   let windowStart = 0;
   let requests = 0;
   const counts = new Map();
-  const salt = crypto.getRandomValues(new Uint8Array(16));
+  let salt;
   function roll(now) {
     if (now >= windowStart + WINDOW_MS || now < windowStart) {
       counts.clear();
@@ -18,6 +18,8 @@ export function createFaqLimiter({ clock = Date.now, perClient = 10, total = 240
     let now = clock();
     roll(now);
     if (requests >= total) return retry(now);
+    // Cloudflare only permits randomness within an active request.
+    salt ??= crypto.getRandomValues(new Uint8Array(16));
     const input = new TextEncoder().encode(/^[0-9a-f.:]{1,64}$/iu.test(client ?? '') ? client : '');
     const bytes = new Uint8Array(salt.length + input.length);
     bytes.set(salt);

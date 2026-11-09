@@ -133,6 +133,15 @@ test('rejects invalid answer and citation data even if a generated index is tamp
   }
 });
 
+test('initializes the isolate salt on the first request and shares it across concurrent requests', async t => {
+  const random = t.mock.method(crypto, 'getRandomValues');
+  const limit = createFaqLimiter({ clock: () => 0, perClient: 1 });
+  assert.equal(random.mock.callCount(), 0);
+  const results = await Promise.all([limit('192.0.2.1'), limit('192.0.2.1')]);
+  assert.deepEqual(results.sort((a, b) => a - b), [0, 60]);
+  assert.equal(random.mock.callCount(), 1);
+});
+
 test('per-client and per-instance limits reset without retaining raw identities', async () => {
   let now = 0;
   const limited = createFaqHandler(createFaqLimiter({ clock: () => now, perClient: 2, total: 3 }));

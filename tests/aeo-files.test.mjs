@@ -36,9 +36,10 @@ test('AEO links target existing canonical public files', () => {
       const local = parsed.pathname === '/' ? 'index.html'
         : parsed.pathname.endsWith('/') ? `${parsed.pathname.slice(1)}index.html`
           : parsed.pathname.slice(1);
-      const absolute = path.join(root, local);
+      let absolute = path.join(root, local);
+      if (!fs.existsSync(absolute) && !path.extname(local)) absolute += '.html';
       assert.ok(fs.existsSync(absolute), `${file}: missing ${url}`);
-      if (local.endsWith('.html')) {
+      if (absolute.endsWith('.html')) {
         const html = fs.readFileSync(absolute, 'utf8');
         const canonical = parsed.pathname === '/' ? 'https://splashlens.com' : url;
         assert.ok(html.includes(`rel="canonical" href="${canonical}"`), `${file}: noncanonical ${url}`);

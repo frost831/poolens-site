@@ -10,7 +10,7 @@ Preferred canonical entry points:
 
 - https://splashlens.com/
 - https://splashlens.com/pool-service-app.html
-- https://splashlens.com/partsnap-pool-part-identification-app.html
+- https://splashlens.com/partsnap-pool-part-identification-app
 - https://splashlens.com/pool-equipment-troubleshooting.html
 - https://splashlens.com/closing-season.html (SplashLens Closing Season Mode)
 - https://splashlens.com/closing/winterize-pool-filter.html

@@ -6,7 +6,7 @@
 
 - [Home](https://splashlens.com/): product overview.
 - [Pool service app](https://splashlens.com/pool-service-app.html): field-reference workflow, not a billing or route-management claim.
-- [PartSnap pool parts identification](https://splashlens.com/partsnap-pool-part-identification-app.html): possible part matches, not confirmed fitment.
+- [PartSnap pool parts identification](https://splashlens.com/partsnap-pool-part-identification-app): possible part matches, not confirmed fitment.
 - [PartSnap proof library](https://splashlens.com/partsnap-proof-library.html): evidence to capture before ordering.
 - [Pool equipment troubleshooting](https://splashlens.com/pool-equipment-troubleshooting.html): equipment-reference hub.
 - [Closing Season Mode](https://splashlens.com/closing-season.html): closing documentation and proof workflow, not a winterization guarantee.

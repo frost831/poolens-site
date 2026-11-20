@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "checkedAt": "2026-09-29T11:50:43.047Z",
+  "checkedAt": "2026-11-20T14:12:46.171Z",
   "base": "https://splashlens.com",
-  "publishedCount": 0,
-  "scheduledCount": 120,
+  "publishedCount": 53,
+  "scheduledCount": 67,
   "checks": [
     {
       "path": "/blog/field-notes/",
@@ -132,15 +132,27 @@
       "cache": "no-store"
     },
     {
-      "path": "/blog/pool-opening-closing/first-frost-closing-records-four-things-to-keep-separate/",
+      "path": "/blog/facility-cpo/emergency-control-records-document-the-inspection-route/",
       "status": 404,
       "expected": 404,
       "cache": "no-store"
     },
     {
-      "path": "/blog/checklists/sl-field-001.txt",
+      "path": "/blog/checklists/sl-field-054.txt",
       "status": 404,
       "expected": 404,
+      "cache": "no-store"
+    },
+    {
+      "path": "/blog/buyer-proof/cartridge-orders-during-a-sale-verify-before-checkout/",
+      "status": 200,
+      "expected": 200,
+      "cache": "no-store"
+    },
+    {
+      "path": "/blog/checklists/sl-field-053.txt",
+      "status": 200,
+      "expected": 200,
       "cache": "no-store"
     }
   ]

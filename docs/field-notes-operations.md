@@ -1,5 +1,7 @@
 # Field Notes Operations
 
+Weekly content improvements, the eight-week calendar, AI-search guidance, monthly store-listing reviews and measurement rules are in [organic-growth-cadence.md](organic-growth-cadence.md). The weekly editorial process complements the daily release clock below. Run `npm run check:discovery` to detect stale public inventories and early article exposure.
+
 The series contains 120 original reference-only documentation notes, September 29, 2026 through January 26, 2027. Content lives in `editorial/articles.mjs`; official reference routes and topic metadata live in `editorial/sources.mjs`. No technical reviewer is claimed. Public editorial policy discloses AI assistance and the absence of independent technical review.
 
 ## Release behavior

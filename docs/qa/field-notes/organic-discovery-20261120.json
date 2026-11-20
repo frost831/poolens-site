@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-11-20T14:15:47.449Z",
+  "releaseClock": "2026-11-20T14:15:46.335Z",
+  "base": "https://splashlens.com",
+  "published": 53,
+  "scheduled": 67,
+  "latest": "/blog/buyer-proof/cartridge-orders-during-a-sale-verify-before-checkout/",
+  "nextRelease": "2026-11-21T08:00:00-06:00",
+  "checks": [
+    {
+      "path": "/blog-sitemap.xml",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/blog/feed.xml",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/blog/field-notes.txt",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/blog/field-notes/",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/sitemap-index.xml",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/blog/buyer-proof/cartridge-orders-during-a-sale-verify-before-checkout/",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/blog/facility-cpo/emergency-control-records-document-the-inspection-route/",
+      "status": 404,
+      "errors": []
+    }
+  ],
+  "scope": "Public delivery only. Search indexing, genuine crawler identity, AI citations, installs and purchases are not established."
+}

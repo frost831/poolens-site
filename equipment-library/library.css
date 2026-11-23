@@ -27,6 +27,7 @@ h1 { color: #0b3544; font-size: clamp(2.3rem, 6vw, 4.25rem); line-height: 1.06; 
 .filters input, .filters select, .filters button { width: 100%; min-height: 44px; border: 1px solid #7697a0; border-radius: .5rem; background: white; color: #102e39; padding: .55rem .7rem; font: inherit; }
 .filters button { cursor: pointer; font-weight: 650; padding-inline: .95rem; }
 .filters button:hover { background: #f0fbfc; }
+.scan-note { margin-top: 1rem; padding: .85rem 1rem; border-left: 4px solid #09758b; background: #e4f2f4; border-radius: .35rem; }
 #equipment-count { margin: 1.3rem 0 .75rem; color: #415d67; font-variant-numeric: tabular-nums; }
 #equipment-empty { padding: 1.25rem; border: 1px dashed #7697a0; border-radius: .7rem; }
 .models { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .9rem; }

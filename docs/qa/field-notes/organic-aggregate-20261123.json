@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-11-23T16:09:51.701Z",
+  "window": "28 days preceding query",
+  "ownerFilterSourceCommit": "d403c7dd0105051c56b8d51752e2062f76ef2543",
+  "proposedFilterRepairDeployed": false,
+  "source": "Existing production D1 events; read-only aggregate; owner EXTERNAL_EVENT_FILTER plus exclusion of explicit props traffic_class qa/bot/server and is_internal/test/synthetic/demo flags",
+  "counts": {
+    "owner_filter_records": 2712,
+    "explicit_internal_records_removed": 71,
+    "eligible_event_records": 2641,
+    "server_classified_real_records": 2530,
+    "article_referral_open_records": 83,
+    "partsnap_result_records": 0,
+    "first_value_records": 3,
+    "checkout_intent_records": 0,
+    "client_paid_state_records": 0,
+    "search_referrer_records": 0,
+    "named_answer_engine_referrer_records": 0
+  },
+  "rowsWritten": 0,
+  "limitations": "Event records are not unique people or verified customer outcomes. Classified real means the existing heuristic, not independent human verification. Unclassified legacy records remain included and consent provenance is not established. Field Notes blog_cta_click is sent only to optional GA4, not this D1 table; this query cannot measure its total. Client paid-state events are not payment-provider verification. Referrer labels do not establish indexing, recommendation or attribution."
+}

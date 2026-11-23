@@ -45,6 +45,13 @@ const EXTERNAL_EVENT_FILTER = `
  AND COALESCE(path, '') NOT LIKE '%amplitude-readiness%'
  AND COALESCE(path, '') NOT LIKE '%growth-plan%'
  AND COALESCE(path, '') NOT LIKE '%verify=%'
+ AND CASE WHEN json_valid(props) THEN COALESCE(json_extract(props, '$.traffic_class'), 'unknown') ELSE 'unknown' END NOT IN ('qa', 'bot', 'server')
+ AND NOT CASE WHEN json_valid(props) THEN (
+   COALESCE(json_extract(props, '$.is_internal'), 0) IN (1, 'true')
+   OR COALESCE(json_extract(props, '$.test'), 0) IN (1, 'true')
+   OR COALESCE(json_extract(props, '$.synthetic'), 0) IN (1, 'true')
+   OR COALESCE(json_extract(props, '$.demo'), 0) IN (1, 'true')
+ ) ELSE 0 END
 `;
 
 function authOk(request, env) {

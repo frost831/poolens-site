@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { compileFaq, mountFaqWidgets } from './compile-splashlens-faq.mjs';
 
 const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
-const publicDirs = new Set(['blog', 'brands', 'ca', 'closing', 'error-codes', 'es', 'field-challenge', 'fr-ca', 'ht', 'languages', 'lp', 'pool-automation', 'pool-hardware', 'pool-heaters', 'pool-lighting', 'pool-parts', 'pool-pumps', 'pool-robots', 'pool-tech-training', 'product-screenshots', 'pt-br', 'salt-cells', 'source-pages', 'service-proof-passport']);
+const publicDirs = new Set(['blog', 'brands', 'ca', 'closing', 'error-codes', 'equipment-library', 'es', 'field-challenge', 'fr-ca', 'ht', 'languages', 'lp', 'pool-automation', 'pool-hardware', 'pool-heaters', 'pool-lighting', 'pool-parts', 'pool-pumps', 'pool-robots', 'pool-tech-training', 'product-screenshots', 'pt-br', 'salt-cells', 'source-pages', 'service-proof-passport']);
 const extensions = new Set(['.html', '.css', '.js', '.json', '.xml', '.txt', '.png', '.jpg', '.jpeg', '.webp', '.avif', '.svg', '.ico', '.webmanifest', '.woff', '.woff2']);
 const rootFiles = new Set([
   '404.html', '_headers', '_redirects', '_routes.json', 'faq', 'service-proof-passport',

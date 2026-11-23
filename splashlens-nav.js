@@ -5,7 +5,7 @@
       label: 'Tools',
       items: [
         ['PartSnap', '/partsnap', 'photo-based part clue workflow'],
-        ['Parts ID Page', '/partsnap-pool-part-identification-app.html', 'marketing and proof path'],
+        ['Parts ID Page', '/partsnap-pool-part-identification-app', 'marketing and proof path'],
         ['Job Records', '/partsnap-proof-library.html', 'what to photo before ordering'],
         ['Closing Season', '/closing-season.html', 'winterization proof and callback notes'],
         ['Filter winterizing', '/closing/winterize-pool-filter.html', 'cartridge, sand, and DE proof'],

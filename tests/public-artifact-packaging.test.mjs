@@ -39,7 +39,7 @@ test('CI requires artifact tests and staging at the event SHA without upload byp
   const workflowRoot = path.join(root, '.github/workflows');
   const workflow = await fs.readFile(path.join(workflowRoot, 'ci.yml'), 'utf8');
   assert.match(workflow, /ref: \$\{\{ github\.sha \}\}/);
-  assert.match(workflow, /runs-on: \[self-hosted, pc, ci\]/);
+  assert.match(workflow, /^\s+runs-on: windows-latest\s*$/m);
   const gate = '      - name: Run public artifact packaging gate\n        run: node --test tests/public-artifact-packaging.test.mjs tests/artifact-runtime-guard.test.mjs';
   const staging = '      - name: Stage public site assets without deployment\n        run: node tools/stage-public-assets.mjs';
   const source = workflow.replaceAll('\r\n', '\n');

@@ -4,7 +4,8 @@ const privateNames = new Set([
 ]);
 
 export async function onRequest(context) {
-  let pathname = new URL(context.request.url).pathname;
+  const url = new URL(context.request.url);
+  let pathname = url.pathname;
   let invalid = false;
   for (let i = 0; i < 4 && /%[0-9a-f]{2}/i.test(pathname); i++) {
     try { pathname = decodeURIComponent(pathname); } catch { invalid = true; break; }
@@ -15,6 +16,10 @@ export async function onRequest(context) {
       status: 404,
       headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff' },
     });
+  }
+  if (url.hostname === 'www.splashlens.com' && ['GET', 'HEAD'].includes(context.request.method)) {
+    url.hostname = 'splashlens.com';
+    return Response.redirect(url, 301);
   }
   return context.next();
 }

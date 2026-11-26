@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-11-26T15:01:14.921Z",
+  "releaseClock": "2026-11-26T15:01:13.710Z",
+  "base": "https://splashlens.com",
+  "published": 59,
+  "scheduled": 61,
+  "latest": "/blog/facility-cpo/holiday-operations-name-the-next-required-check/",
+  "nextRelease": "2026-11-27T08:00:00-06:00",
+  "checks": [
+    {
+      "path": "/blog-sitemap.xml",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/blog/feed.xml",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/blog/field-notes.txt",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/blog/field-notes/",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/sitemap-index.xml",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/blog/facility-cpo/holiday-operations-name-the-next-required-check/",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/blog/spa-hot-tubs/after-a-busy-stay-record-the-complaint-before-treatment/",
+      "status": 404,
+      "errors": []
+    }
+  ],
+  "scope": "Public delivery only. Search indexing, genuine crawler identity, AI citations, installs and purchases are not established."
+}

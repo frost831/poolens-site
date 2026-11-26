@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-11-23T16:04:31.413Z",
+  "releaseClock": "2026-11-23T16:04:28.075Z",
+  "base": "https://splashlens.com",
+  "published": 56,
+  "scheduled": 64,
+  "latest": "/blog/heaters-heat-pumps/an-idle-heater-build-the-service-request-before-startup/",
+  "nextRelease": "2026-11-24T08:00:00-06:00",
+  "checks": [
+    {
+      "path": "/blog-sitemap.xml",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/blog/feed.xml",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/blog/field-notes.txt",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/blog/field-notes/",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/sitemap-index.xml",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/blog/heaters-heat-pumps/an-idle-heater-build-the-service-request-before-startup/",
+      "status": 200,
+      "errors": []
+    },
+    {
+      "path": "/blog/facility-cpo/chemical-room-holiday-coverage-make-the-contacts-usable/",
+      "status": 404,
+      "errors": []
+    }
+  ],
+  "scope": "Public delivery only. Search indexing, genuine crawler identity, AI citations, installs and purchases are not established."
+}

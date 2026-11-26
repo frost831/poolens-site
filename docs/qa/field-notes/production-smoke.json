@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "checkedAt": "2026-11-23T16:04:30.948Z",
+  "checkedAt": "2026-11-26T14:58:00.232Z",
   "base": "https://splashlens.com",
-  "publishedCount": 56,
-  "scheduledCount": 64,
+  "publishedCount": 59,
+  "scheduledCount": 61,
   "checks": [
     {
       "path": "/blog/field-notes/",
@@ -132,25 +132,25 @@
       "cache": "no-store"
     },
     {
-      "path": "/blog/facility-cpo/chemical-room-holiday-coverage-make-the-contacts-usable/",
+      "path": "/blog/spa-hot-tubs/after-a-busy-stay-record-the-complaint-before-treatment/",
       "status": 404,
       "expected": 404,
       "cache": "no-store"
     },
     {
-      "path": "/blog/checklists/sl-field-057.txt",
+      "path": "/blog/checklists/sl-field-060.txt",
       "status": 404,
       "expected": 404,
       "cache": "no-store"
     },
     {
-      "path": "/blog/heaters-heat-pumps/an-idle-heater-build-the-service-request-before-startup/",
+      "path": "/blog/facility-cpo/holiday-operations-name-the-next-required-check/",
       "status": 200,
       "expected": 200,
       "cache": "no-store"
     },
     {
-      "path": "/blog/checklists/sl-field-056.txt",
+      "path": "/blog/checklists/sl-field-059.txt",
       "status": 200,
       "expected": 200,
       "cache": "no-store"

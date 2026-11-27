@@ -7,7 +7,7 @@ import { blockedQuestion, faqKey, faqTerms, safeFaqPassage, safeFaqSource } from
 
 export const repoRoot = fileURLToPath(new URL('..', import.meta.url));
 const canonicalOrigin = 'https://splashlens.com';
-const routeFiles = new Map([['/faq.html', 'faq.html'], ['/support.html', 'support.html']]);
+const routeFiles = new Map([['/faq.html', 'faq.html'], ['/support.html', 'support.html'], ['/pool-robot-troubleshooting-app.html', 'pool-robot-troubleshooting-app.html']]);
 const marker = '<!-- splashlens-faq-widget -->';
 const text = (root, file) => readFile(path.join(root, file), 'utf8');
 const eol = value => value.replaceAll('\r\n', '\n');

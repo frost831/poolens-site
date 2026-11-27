@@ -362,5 +362,17 @@
       "how can i talk to a human",
       "contact splashlens"
     ]
+  },
+  {
+    "id": "robot-support-proof",
+    "title": "Robot cleaner support evidence",
+    "answer": "Before asking for robot-cleaner support, record the cleaner model and serial label, its separate power supply or charger label, the exact indicator or app message and observation time, accessible exterior photos, and the applicable manufacturer manual. Mark unreadable details as unknown. A photo, library entry or PartSnap candidate does not confirm a failed component or replacement fit. Do not open a battery or electrical enclosure to obtain evidence.",
+    "source": "/pool-robot-troubleshooting-app.html#robot-support-proof",
+    "lastReviewed": "2026-11-26",
+    "queries": [
+      "What should I record before robot cleaner support?",
+      "What evidence helps a robot cleaner support request?",
+      "How do I prepare a pool robot support request?"
+    ]
   }
 ]

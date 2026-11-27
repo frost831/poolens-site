@@ -11,6 +11,20 @@ const answer = '<p id="offline-tools" data-faq-answer>Manual reference tools can
 const page = content => '<!doctype html><html><head>' + canonical + '</head><body><main>' + content + '</main><!-- splashlens-faq-widget --></body></html>';
 const entry = { id: 'offline-tools', title: 'Offline tools', source: '/faq.html#offline-tools', lastReviewed: '2026-11-09', queries: ['what works offline'] };
 
+test('robot support is an explicitly approved source; changing its passage invalidates the index', async t => {
+  const { root, put } = await fixture(t);
+  const robotEntry = { id: 'robot-support-proof', title: 'Robot support evidence', source: '/pool-robot-troubleshooting-app.html#robot-support-proof', lastReviewed: '2026-11-26', queries: ['robot cleaner support evidence'] };
+  await put('content/faq/intents.json', JSON.stringify([robotEntry]));
+  await put('faq.html', page(answer));
+  const robotPage = value => '<html><head><link rel="canonical" href="https://splashlens.com/pool-robot-troubleshooting-app.html"></head><body><main><p id="robot-support-proof" data-faq-answer>' + value + '</p></main></body></html>';
+  await put('pool-robot-troubleshooting-app.html', robotPage('Record the exact cleaner and charger labels.'));
+  await compileFaq({ sourceRoot: root, write: true });
+  await put('pool-robot-troubleshooting-app.html', robotPage('Record the exact cleaner and charger labels and observation time.'));
+  await assert.rejects(compileFaq({ sourceRoot: root }), /FAQ index is stale/);
+  const articles = await compileFaq({ sourceRoot: root, write: true });
+  assert.match(articles[0].answer, /observation time/);
+});
+
 test('support uses Pages clean URLs without a rewrite back to the HTML path', async () => {
   const redirects = await readFile(new URL('../_redirects', import.meta.url), 'utf8');
   // Pages redirects /support.html to /support, so the reverse rewrite loops.

@@ -39,5 +39,7 @@ jobs:
         run: npx playwright install chromium
       - name: Verify staged FAQ in Chromium
         run: npm run qa:faq
+      - name: Verify equipment support requests and responsive reference pages
+        run: node --test tools/equipment-support-browser.test.mjs
       - name: Run live desktop and mobile UI audit
         run: npm run qa:live-ui

@@ -122,3 +122,73 @@ filters.addEventListener('reset', () => {
 });
 filters.hidden = false;
 updateResults();
+
+const requestDialog = document.querySelector('#support-request');
+const requestText = document.querySelector('#support-request-text');
+const requestStatus = document.querySelector('#support-request-status');
+let requestOpener = null;
+
+function referenceLinks(model) {
+  return Array.from(model.querySelectorAll('a[href]')).flatMap(link => {
+    try {
+      const url = new URL(link.getAttribute('href'));
+      return url.protocol === 'https:' && !url.username && !url.password
+        ? [`${link.textContent.replace('↗', '').trim()}: ${url.href}`] : [];
+    } catch { return []; }
+  });
+}
+
+if (requestDialog && typeof requestDialog.showModal === 'function') {
+  for (const { model } of models) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'prepare-request';
+    button.textContent = 'Prepare support request';
+    button.setAttribute('aria-label', `Prepare support request for ${model.querySelector('h2').textContent}`);
+    button.addEventListener('click', () => {
+      requestOpener = button;
+      requestStatus.textContent = '';
+      requestText.value = [
+        'Equipment support request — review before sending',
+        `Library entry (reference only): ${model.dataset.brand} / ${model.querySelector('h2').textContent}`,
+        'Installed model and revision: unknown',
+        'Serial / visible part marking: unknown',
+        'Observation time and timezone: unknown',
+        'Exact symptom / LED pattern / app message: unknown',
+        'Separate power supply / charger / controller label: unknown',
+        'Available exterior evidence and dimensions: unknown',
+        'What changed and when: unknown',
+        'Unresolved question for manufacturer or supplier: unknown',
+        'Fit and replacement authorization: unconfirmed; hold any parts order pending verification.',
+        '',
+        'Library reference routes — confirm edition and equipment applicability:',
+        ...referenceLinks(model),
+        '',
+        'Please confirm the applicable model/manual and what missing evidence is needed. No diagnosis, repair or replacement has been approved by this request.',
+      ].join('\n');
+      requestDialog.showModal();
+      requestText.focus();
+    });
+    model.append(button);
+  }
+  requestDialog.addEventListener('close', () => {
+    requestText.value = '';
+    requestStatus.textContent = '';
+    requestOpener?.focus();
+  });
+  document.querySelector('#copy-support-request').addEventListener('click', async () => {
+    if (!requestText.value.trim()) {
+      requestStatus.textContent = 'Add an equipment note before copying.';
+      requestText.focus();
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(requestText.value);
+      requestStatus.textContent = 'Copied. Review the recipient and send through your usual support workflow.';
+    } catch {
+      requestText.focus();
+      requestText.select();
+      requestStatus.textContent = 'Automatic copying is unavailable. The text is selected for manual copying.';
+    }
+  });
+}

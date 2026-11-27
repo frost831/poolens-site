@@ -28,7 +28,7 @@ export function blockedQuestion(text) {
 }
 
 export function safeFaqSource(path) {
-  return typeof path === 'string' && /^\/(?:faq|support)\.html#[a-z][a-z0-9-]{0,79}$/u.test(path);
+  return typeof path === 'string' && /^\/(?:faq|support|pool-robot-troubleshooting-app)\.html#[a-z][a-z0-9-]{0,79}$/u.test(path);
 }
 
 export function safeFaqPassage(value) {

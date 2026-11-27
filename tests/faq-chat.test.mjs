@@ -7,6 +7,7 @@ import { blockedQuestion } from '../splashlens-faq-guard.js';
 import articles from '../functions/_shared/faq-articles.json' with { type: 'json' };
 
 const direct = [
+  ['What should I record before robot cleaner support?', 'robot-support-proof'],
   ['What is SplashLens?', 'app-overview'], ['Who is SplashLens for?', 'app-audience'],
   ['Is it free?', 'free-core'], ['What is Saved Visit History?', 'saved-visits'],
   ['Can a passport be shared with a customer?', 'customer-sharing'], ['What is PartSnap?', 'partsnap-overview'],
@@ -57,7 +58,8 @@ for (const [kind, cases] of [['direct', direct], ['paraphrase', paraphrases]]) {
         articleId: id, title: article.title, answer: article.answer,
         source: article.source, contact: '/support.html',
       });
-      assert.equal(reply.source, (id.endsWith('-help') ? '/support.html#' : '/faq.html#') + id);
+      assert.equal(reply.source, (id === 'robot-support-proof' ? '/pool-robot-troubleshooting-app.html#'
+        : id.endsWith('-help') ? '/support.html#' : '/faq.html#') + id);
     });
   }
 }

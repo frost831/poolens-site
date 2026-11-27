@@ -7,8 +7,8 @@
   <meta name="description" content="Find official pool equipment manuals, videos, and parts diagrams by brand, model, or model number. Browse pumps, heaters, salt cells, filters, controls, and robots.">
   <link rel="canonical" href="https://splashlens.com/equipment-library/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./library.css?v=20261123-partsnap">
-  <script src="./library.js?v=20261123-partsnap" defer></script>
+  <link rel="stylesheet" href="./library.css?v=20261126-support">
+  <script src="./library.js?v=20261126-support" defer></script>
 </head>
 <body>
   <header class="mast"><div class="shell">
@@ -56,7 +56,9 @@
       <button type="reset">Clear</button>
     </form>
     <p id="equipment-scan-note" class="scan-note" hidden></p>
-    <p id="equipment-count" role="status" aria-live="polite">27 models and families</p>
+    <p>Preparing a support request? Choose a reference below to build an editable evidence checklist. Keep the installed model and unresolved questions separate from the library entry.</p>
+    <p><a href="/pool-robot-troubleshooting-app.html#robot-support-proof">Robot-cleaner support checklist</a></p>
+    <p id="equipment-count" role="status" aria-live="polite">28 models and families</p>
     <p id="equipment-empty" hidden>No matches. Try a shorter model number or clear the filters.</p>
     <div class="models" aria-label="Equipment references">
       <article class="model" data-brand="Hayward" data-category="Pumps" data-search="Hayward Super Pump VS Pumps SP2603VSP">
@@ -194,6 +196,12 @@
           <li><a href="https://www.pentair.com/content/dam/extranet/nam/pentair-pool/residential/parts-sheets/cleaners/pentair-prowler-930-pentair-warrior-si-cleaner-replacement-parts.pdf">Manufacturer-listed 930 / Warrior SI parts sheet <span aria-hidden="true">↗</span></a></li>
         </ul>
       </article>
+      <article class="model" data-brand="Maytronics Dolphin" data-category="Robot cleaners" data-search="Maytronics Dolphin LIBERTY 100 200 300 400 cordless inductive charger Robot cleaners">
+        <p class="model-meta">Maytronics Dolphin <span aria-hidden="true">/</span> Robot cleaners</p>
+        <h2>LIBERTY 100 / 200 / 300 / 400</h2>
+        <p>Match the exact model and applicable edition. This reference does not cover LIBERTY 600.</p>
+        <ul><li><a href="https://brand.maytronics.com/m/4affee30fc37cb11/original/User-Manual-8151995-EN.pdf#page=5">User instructions 8151995-EN, sections 1–3 and 10–11 <span aria-hidden="true">↗</span></a></li></ul>
+      </article>
       <article class="model" data-brand="Maytronics Dolphin" data-category="Robot cleaners" data-search="Maytronics Dolphin Nautilus CC Plus Wi-Fi Robot cleaners Nautilus CC Plus 99996406-PCI 99996409-PCI">
         <p class="model-meta">Maytronics Dolphin <span aria-hidden="true">/</span> Robot cleaners</p>
         <h2>Nautilus CC Plus Wi-Fi</h2>
@@ -270,6 +278,13 @@
       </article>
     </div>
   </main>
+  <dialog id="support-request" aria-labelledby="support-request-title">
+    <div class="request-heading"><h2 id="support-request-title">Prepare a support request</h2><form method="dialog"><button type="submit" aria-label="Close support request">Close</button></form></div>
+    <p id="support-request-help">Review the installed model, observations and reference applicability before copying. Keep customer names, addresses, access codes and account details out of this note. Your edits stay in this page until you copy them; closing discards them.</p>
+    <label for="support-request-text">Editable equipment evidence</label>
+    <textarea id="support-request-text" rows="14" maxlength="6000" spellcheck="false" aria-describedby="support-request-help"></textarea>
+    <div class="request-actions"><button id="copy-support-request" type="button">Copy reviewed request</button><p id="support-request-status" role="status" aria-live="polite"></p></div>
+  </dialog>
   <footer class="shell footer">SplashLens is an independent field reference. Manufacturer materials open at their original sources.</footer>
 </body>
 </html>
